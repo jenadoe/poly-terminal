@@ -1,0 +1,63 @@
+name: 1. Fetch & Analyze (No Push)
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # 10분마다 실행
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    # [중요] 쓰기 권한을 아예 안 줍니다. (스케줄러 생존 비결)
+    permissions:
+      contents: read
+
+    steps:
+      # 1. Public Repo (이전 데이터 읽기용)
+      - name: Checkout Public Repo
+        uses: actions/checkout@v4
+
+      # 2. Private Repo (엔진 가져오기)
+      - name: Checkout Private Brain
+        uses: actions/checkout@v4
+        with:
+          repository: jenadoe/poly-core  # 본인 아이디 확인
+          token: ${{ secrets.PAT_TOKEN }}
+          path: poly-core
+
+      # 3. 환경 설정
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r poly-core/requirements.txt
+
+      # 4. 이전 히스토리 복원 (Public -> Engine)
+      - name: Load Previous History
+        run: |
+          mkdir -p poly-core/data_output
+          # 이전에 저장된 파일이 있으면 엔진 폴더로 복사
+          if [ -f "docs/data/history_storage.json" ]; then
+            cp docs/data/history_storage.json poly-core/data_output/
+            echo "✅ History Loaded"
+          else
+            echo "⚠️ First run (No history)"
+          fi
+
+      # 5. 엔진 실행
+      - name: Run Engine
+        run: |
+          cd poly-core
+          python main.py
+
+      # 6. [핵심] 결과물을 Artifact(임시저장소)에 업로드
+      # 푸시하지 않고 파일만 올려둡니다.
+      - name: Upload Result Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-intelligence-data
+          path: poly-core/data_output/
+          retention-days: 1

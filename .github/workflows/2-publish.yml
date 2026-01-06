@@ -1,0 +1,54 @@
+name: 2. Publish Data (Commit)
+
+on:
+  workflow_run:
+    workflows: ["1. Fetch & Analyze (No Push)"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # 앞선 작업이 '성공'했을 때만 실행
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
+    # [중요] 여기서 Write 권한을 사용합니다.
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Public Repo 체크아웃
+      - name: Checkout Public Repo
+        uses: actions/checkout@v4
+
+      # 2. 아까 올려둔 Artifact 다운로드
+      - name: Download Data
+        uses: actions/download-artifact@v4
+        with:
+          name: market-intelligence-data
+          path: downloaded_data
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 3. 파일 이동 (Temp -> Docs/Data)
+      - name: Move Data to Docs
+        run: |
+          mkdir -p docs/data
+          cp -r downloaded_data/* docs/data/
+          rm -rf downloaded_data
+          ls -R docs/data  # 파일 잘 들어왔나 로그 확인
+
+      # 4. 커밋 & 푸시
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Poly-Nexus Bot"
+          git config --global user.email "bot@polynexus.com"
+          
+          git add docs/data/
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "⚡ Update Intelligence [$(date)]"
+            git push
+          fi

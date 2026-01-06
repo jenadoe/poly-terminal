@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,13 +63,26 @@
 <script>
     async function fetchIntelligence() {
         try {
+            // 캐시 방지용 timestamp 추가
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Data fetch failed");
             const data = await response.json();
             renderTable(data);
+            
             if (data.length > 0) {
-                const lastTime = new Date(data[0].last_updated).toLocaleString();
-                document.getElementById('last-updated').innerText = `Last Sync: ${lastTime}`;
+                const serverTime = new Date(data[0].last_updated);
+                
+                // [시간 표기 설정] 영어 + GMT 오프셋 표시
+                const timeOptions = { 
+                    year: 'numeric', month: 'short', day: 'numeric', 
+                    hour: '2-digit', minute: '2-digit', second: '2-digit',
+                    hour12: false,
+                    timeZoneName: 'shortOffset' // 예: GMT+9
+                };
+                // en-US 로케일 강제 적용
+                const timeString = serverTime.toLocaleString('en-US', timeOptions);
+                
+                document.getElementById('last-updated').innerText = `Last Sync: ${timeString}`;
             }
         } catch (error) {
             document.getElementById('app').innerHTML = `<div class="loading" style="color: var(--accent-red)">❌ System Offline: ${error.message}</div>`;
@@ -108,7 +121,7 @@
         `;
 
         markets.forEach(m => {
-            // [수정] 볼륨이 없거나 깨졌을 때 처리
+            // Volume이 없으면 하이픈(-) 처리
             const volDisplay = m.volume 
                 ? '$' + parseInt(m.volume).toLocaleString() 
                 : '-';

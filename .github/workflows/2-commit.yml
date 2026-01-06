@@ -1,0 +1,81 @@
+name: 2. Distribute & Commit
+
+on:
+  workflow_run:
+    workflows: ["1. Calculate & Analyze"]
+    types:
+      - completed
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write # Public Repo에 쓸 권한
+
+    steps:
+      # 1. 데이터(Artifact) 다운로드
+      - name: Download Data
+        uses: actions/download-artifact@v4
+        with:
+          name: nexus-data
+          path: temp_data
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ---------------------------------------------------
+      # [Mission 1] Private Repo에 비밀 장부 저장
+      # ---------------------------------------------------
+      - name: Checkout Private Brain
+        uses: actions/checkout@v4
+        with:
+          repository: jenadoe/poly-core
+          token: ${{ secrets.PAT_TOKEN }}
+          path: private-brain
+
+      - name: Push History to Private
+        run: |
+          cd private-brain
+          
+          # 아까 다운받은 데이터 중 history만 덮어쓰기
+          cp ../temp_data/history_storage.json data_output/
+          
+          git config --global user.name "Poly-Nexus Bot"
+          git config --global user.email "bot@polynexus.com"
+          
+          git add data_output/history_storage.json
+          
+          if git diff --staged --quiet; then
+            echo "No history changes."
+          else
+            git commit -m "🧠 Update History [$(date)]"
+            git push
+          fi
+
+      # ---------------------------------------------------
+      # [Mission 2] Public Repo에 요약본 배포
+      # ---------------------------------------------------
+      - name: Checkout Public Face
+        uses: actions/checkout@v4
+        with:
+          path: public-face
+
+      - name: Push Summary to Public
+        run: |
+          cd public-face
+          mkdir -p docs/data
+          
+          # 아까 다운받은 데이터 중 latest만 덮어쓰기
+          cp ../temp_data/latest_intelligence.json docs/data/
+          
+          git config --global user.name "Poly-Nexus Bot"
+          git config --global user.email "bot@polynexus.com"
+          
+          git add docs/data/latest_intelligence.json
+          
+          if git diff --staged --quiet; then
+            echo "No public changes."
+          else
+            git commit -m "📢 Update Display Data [$(date)]"
+            git push
+          fi

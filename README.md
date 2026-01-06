@@ -1,9 +1,7 @@
 ⚡ Poly-Nexus Terminal
 Advanced Market Intelligence Dashboard for Prediction Markets.
 Real-time tracking, Trend Analysis, and High-Frequency Data Aggregation.
-![alt text](https://img.shields.io/badge/license-MIT-blue.svg)
-![alt text](https://img.shields.io/badge/system-operational-green.svg)
-![alt text](https://img.shields.io/badge/data-realtime-orange.svg)
+
 🔗 Launch Terminal
 📊 Overview
 Poly-Nexus is a specialized analytics terminal designed to track and visualize data from Polymarket in real-time. Unlike standard interfaces, Poly-Nexus focuses on Market Structure and Trend Continuity.
@@ -51,3 +49,4 @@ The data displayed on Poly-Nexus is derived from public APIs and statistical ana
 <p align="center">
 &copy; 2024-2026 <b>Poly-Nexus Team</b>. All rights reserved.
 </p>
+

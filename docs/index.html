@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poly-Nexus Terminal</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-green: #2ea043;
+            --accent-red: #da3633;
+            --border: #30363d;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Consolas', 'Monaco', monospace; /* 터미널 폰트 */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 { margin: 0; font-size: 1.5rem; }
+        .status-badge {
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+        
+        /* 테이블 스타일 */
+        .market-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: #21262d;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        tr:hover { background-color: #21262d; }
+        
+        .price { font-weight: bold; color: #fff; }
+        .change-pos { color: var(--accent-green); }
+        .change-neg { color: var(--accent-red); }
+        
+        .loading { text-align: center; padding: 50px; color: var(--text-muted); }
+        
+        /* 데이터 포인트 바 (데이터 축적량 시각화) */
+        .data-bar-bg {
+            width: 100px;
+            height: 6px;
+            background: #30363d;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .data-bar-fill {
+            height: 100%;
+            background: #58a6ff;
+            width: 0%;
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div>
+            <h1>⚡ Poly-Nexus Terminal</h1>
+            <small style="color: var(--text-muted);">Institutional Grade Market Intelligence</small>
+        </div>
+        <div class="status-badge" id="last-updated">
+            Last Sync: Loading...
+        </div>
+    </header>
+
+    <div id="app">
+        <div class="loading">📡 Connecting to Nexus Feed...</div>
+    </div>
+</div>
+
+<script>
+    async function fetchIntelligence() {
+        try {
+            // 깃허브가 호스팅해주는 JSON 데이터 로드
+            const response = await fetch('./data/latest_intelligence.json');
+            
+            if (!response.ok) throw new Error("Data fetch failed");
+            
+            const data = await response.json();
+            renderTable(data);
+            
+            // 마지막 업데이트 시간 표시 (데이터 중 하나에서 가져옴)
+            if (data.length > 0) {
+                const lastTime = new Date(data[0].last_updated).toLocaleString();
+                document.getElementById('last-updated').innerText = `Last Sync: ${lastTime}`;
+            }
+            
+        } catch (error) {
+            document.getElementById('app').innerHTML = `
+                <div class="loading" style="color: var(--accent-red)">
+                    ❌ System Offline: ${error.message}<br>
+                    (데이터가 아직 생성되지 않았을 수 있습니다. 10분 뒤 새로고침 하세요.)
+                </div>
+            `;
+        }
+    }
+
+    function renderTable(markets) {
+        let html = `
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th>Market Question</th>
+                        <th>Price (Prob)</th>
+                        <th>Accumulated Data</th>
+                        <th>Alpha Signal</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        markets.forEach(m => {
+            // 변동폭 계산 (시작점 대비)
+            const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
+            const changeSign = m.change_since_start >= 0 ? '+' : '';
+            
+            // 데이터 축적량 시각화 (최대 144개 = 24시간 기준)
+            const dataPercent = Math.min((m.data_count / 144) * 100, 100);
+            
+            // 아직 데이터가 적을 때의 시그널
+            let signal = `<span style="color: #8b949e">Wait (${m.data_count} pts)</span>`;
+            
+            // 데이터가 좀 쌓이면(1시간 이상 = 6개) 분석 시작 메시지
+            if (m.data_count >= 6) {
+                if (Math.abs(m.change_since_start) > 5) signal = "🔥 High Volatility";
+                else signal = "💤 Collecting...";
+            }
+
+            html += `
+                <tr>
+                    <td style="max-width: 400px;">
+                        <div style="font-weight: 500;">${m.question}</div>
+                        <small style="color: var(--text-muted)">ID: ${m.id}</small>
+                    </td>
+                    <td>
+                        <div class="price">${(m.current_price * 100).toFixed(1)}%</div>
+                        <small class="${changeClass}">${changeSign}${m.change_since_start}%</small>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div class="data-bar-bg">
+                                <div class="data-bar-fill" style="width: ${dataPercent}%"></div>
+                            </div>
+                            <small style="color: var(--text-muted)">${m.data_count} pts</small>
+                        </div>
+                    </td>
+                    <td style="font-family: monospace;">${signal}</td>
+                </tr>
+            `;
+        });
+
+        html += `</tbody></table>`;
+        document.getElementById('app').innerHTML = html;
+    }
+
+    // 실행
+    fetchIntelligence();
+</script>
+
+</body>
+</html>

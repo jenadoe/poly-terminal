@@ -12,6 +12,7 @@
             --text-muted: #8b949e;
             --accent-green: #3fb950;
             --accent-red: #f85149;
+            --accent-orange: #d29922;
             --border: #30363d;
         }
         body {
@@ -21,7 +22,7 @@
             margin: 0;
             padding: 20px;
         }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1500px; margin: 0 auto; }
         header {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
@@ -47,6 +48,9 @@
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
         .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
         .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
+        .beta-val { font-weight: bold; font-size: 0.9rem; }
+        .beta-high { color: var(--accent-orange); } /* 상관관계 높음 */
+        .beta-low { color: var(--text-muted); } /* 상관관계 낮음 */
     </style>
 </head>
 <body>
@@ -63,7 +67,6 @@
 <script>
     async function fetchIntelligence() {
         try {
-            // 캐시 방지용 timestamp 추가
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Data fetch failed");
             const data = await response.json();
@@ -71,17 +74,12 @@
             
             if (data.length > 0) {
                 const serverTime = new Date(data[0].last_updated);
-                
-                // [시간 표기 설정] 영어 + GMT 오프셋 표시
                 const timeOptions = { 
                     year: 'numeric', month: 'short', day: 'numeric', 
                     hour: '2-digit', minute: '2-digit', second: '2-digit',
-                    hour12: false,
-                    timeZoneName: 'shortOffset' // 예: GMT+9
+                    hour12: false, timeZoneName: 'shortOffset'
                 };
-                // en-US 로케일 강제 적용
                 const timeString = serverTime.toLocaleString('en-US', timeOptions);
-                
                 document.getElementById('last-updated').innerText = `Last Sync: ${timeString}`;
             }
         } catch (error) {
@@ -113,6 +111,7 @@
                         <th>Market</th>
                         <th>Price</th>
                         <th>Trend (4H)</th>
+                        <th>BTC Beta</th> <!-- 추가된 컬럼 -->
                         <th>Volume</th>
                         <th>Signal</th>
                     </tr>
@@ -121,15 +120,19 @@
         `;
 
         markets.forEach(m => {
-            // Volume이 없으면 하이픈(-) 처리
-            const volDisplay = m.volume 
-                ? '$' + parseInt(m.volume).toLocaleString() 
-                : '-';
-                
+            const volDisplay = m.volume ? '$' + parseInt(m.volume).toLocaleString() : '-';
             const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
             const changeSign = m.change_since_start >= 0 ? '+' : '';
             const isPositive = m.change_since_start >= 0;
             
+            // Beta값 처리 (데이터 없으면 '-')
+            let betaDisplay = '-';
+            let betaClass = 'beta-low';
+            if (m.beta !== undefined && m.beta !== 0) {
+                betaDisplay = m.beta.toFixed(2);
+                if (Math.abs(m.beta) > 0.5) betaClass = 'beta-high'; // 0.5 이상이면 색깔 표시
+            }
+
             let signalBadge = `<span class="tag tag-wait">Collecting (${m.data_count})</span>`;
             if (m.data_count >= 10) {
                 if (Math.abs(m.change_since_start) > 2) signalBadge = `<span class="tag tag-hot">🔥 Volatile</span>`;
@@ -138,15 +141,18 @@
 
             html += `
                 <tr>
-                    <td style="width: 40%;">
+                    <td style="width: 35%;">
                         <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">${m.question}</div>
                         <small style="color: var(--text-muted)">ID: ${m.id}</small>
                     </td>
-                    <td style="width: 15%;">
+                    <td style="width: 10%;">
                         <div class="price">${(m.current_price * 100).toFixed(1)}¢</div>
                         <small class="${changeClass}">${changeSign}${m.change_since_start}%</small>
                     </td>
                     <td style="width: 15%;">${createSparkline(m.sparkline, isPositive)}</td>
+                    <td style="width: 10%;">
+                        <span class="beta-val ${betaClass}">${betaDisplay}</span>
+                    </td>
                     <td style="width: 15%; color: var(--text-muted);">${volDisplay}</td>
                     <td style="width: 15%;">${signalBadge}</td>
                 </tr>

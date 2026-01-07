@@ -13,6 +13,7 @@
             --accent-green: #3fb950;
             --accent-red: #f85149;
             --accent-orange: #d29922;
+            --accent-gold: #e3b341; /* LRS High Score Color */
             --border: #30363d;
         }
         body {
@@ -22,7 +23,7 @@
             margin: 0;
             padding: 20px;
         }
-        .container { max-width: 1500px; margin: 0 auto; }
+        .container { max-width: 1600px; margin: 0 auto; } /* 더 넓게 */
         header {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
@@ -39,18 +40,26 @@
         th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
         th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
         tr:hover { background-color: #21262d; }
+        
         .price { font-weight: bold; color: #fff; font-size: 1.1rem; }
         .change-pos { color: var(--accent-green); }
         .change-neg { color: var(--accent-red); }
+        
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 120px; height: 40px; }
         path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        
+        .beta-val { font-weight: bold; }
+        .beta-high { color: var(--accent-orange); } 
+        .beta-low { color: var(--text-muted); }
+        
+        /* LRS 스타일 */
+        .lrs-val { font-weight: bold; font-size: 1.0rem; }
+        .lrs-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
+        .lrs-mid { color: var(--text-main); }
+        .lrs-low { color: var(--text-muted); }
+        
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
-        .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
-        .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
-        .beta-val { font-weight: bold; font-size: 0.9rem; }
-        .beta-high { color: var(--accent-orange); } /* 상관관계 높음 */
-        .beta-low { color: var(--text-muted); } /* 상관관계 낮음 */
     </style>
 </head>
 <body>
@@ -58,11 +67,11 @@
     <header>
         <div>
             <h1><div class="live-dot"></div> Poly-Nexus Terminal</h1>
-            <small style="color: var(--text-muted);">Real-time Market Intelligence Dashboard</small>
+            <small style="color: var(--text-muted);">Institutional Grade Market Intelligence</small>
         </div>
         <div class="status-badge" id="last-updated">Syncing...</div>
     </header>
-    <div id="app"><div class="loading">📡 Connecting to Satellite Feed...</div></div>
+    <div id="app"><div class="loading">📡 Calculating Alpha...</div></div>
 </div>
 <script>
     async function fetchIntelligence() {
@@ -108,53 +117,65 @@
             <table class="market-table">
                 <thead>
                     <tr>
-                        <th>Market</th>
-                        <th>Price</th>
-                        <th>Trend (4H)</th>
-                        <th>BTC Beta</th> <!-- 추가된 컬럼 -->
-                        <th>Volume</th>
-                        <th>Signal</th>
+                        <th style="width: 30%">Market</th>
+                        <th style="width: 10%">Price</th>
+                        <th style="width: 10%">Trend (4H)</th>
+                        <th style="width: 10%">Volume</th>
+                        <th style="width: 10%">Beta (BTC)</th>
+                        <th style="width: 10%">LRS Score</th> <!-- 킬러 인덱스 -->
+                        <th style="width: 20%">Analysis</th>
                     </tr>
                 </thead>
                 <tbody>
         `;
 
         markets.forEach(m => {
-            const volDisplay = m.volume ? '$' + parseInt(m.volume).toLocaleString() : '-';
+            const volDisplay = (m.volume && m.volume > 0) ? '$' + parseInt(m.volume).toLocaleString() : '-';
             const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
             const changeSign = m.change_since_start >= 0 ? '+' : '';
             const isPositive = m.change_since_start >= 0;
             
-            // Beta값 처리 (데이터 없으면 '-')
+            // Beta Display
             let betaDisplay = '-';
             let betaClass = 'beta-low';
-            if (m.beta !== undefined && m.beta !== 0) {
+            if (m.beta !== undefined) {
                 betaDisplay = m.beta.toFixed(2);
-                if (Math.abs(m.beta) > 0.5) betaClass = 'beta-high'; // 0.5 이상이면 색깔 표시
+                if (Math.abs(m.beta) > 0.5) betaClass = 'beta-high';
+            }
+            
+            // LRS Display (핵심!)
+            let lrsDisplay = '-';
+            let lrsClass = 'lrs-low';
+            if (m.lrs !== undefined && m.lrs !== 0) {
+                lrsDisplay = m.lrs.toFixed(1);
+                if (m.lrs >= 50) lrsClass = 'lrs-high';
+                else if (m.lrs >= 20) lrsClass = 'lrs-mid';
             }
 
-            let signalBadge = `<span class="tag tag-wait">Collecting (${m.data_count})</span>`;
-            if (m.data_count >= 10) {
-                if (Math.abs(m.change_since_start) > 2) signalBadge = `<span class="tag tag-hot">🔥 Volatile</span>`;
-                else signalBadge = `<span class="tag" style="border:1px solid #30363d">Stable</span>`;
+            // Analysis Badge
+            let analysis = `<span style="color:var(--text-muted); font-size:0.8rem">Gathering Data (${m.data_count})</span>`;
+            if (m.data_count >= 100) { // 데이터 충분할 때만 분석
+                if (m.lrs > 50) analysis = `<span style="color:var(--accent-gold)">🛡️ Strong Hold</span>`;
+                else if (m.beta > 0.8) analysis = `<span style="color:var(--accent-orange)">🔗 BTC Coupled</span>`;
+                else if (Math.abs(m.change_since_start) > 5) analysis = `<span style="color:var(--accent-red)">🔥 High Volatility</span>`;
+                else analysis = `<span>⚖️ Neutral</span>`;
             }
 
             html += `
                 <tr>
-                    <td style="width: 35%;">
+                    <td>
                         <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">${m.question}</div>
                         <small style="color: var(--text-muted)">ID: ${m.id}</small>
                     </td>
-                    <td style="width: 10%;">
+                    <td>
                         <div class="price">${(m.current_price * 100).toFixed(1)}¢</div>
                         <small class="${changeClass}">${changeSign}${m.change_since_start}%</small>
                     </td>
-                    <td style="width: 15%;">${createSparkline(m.sparkline, isPositive)}</td>
-                    <td style="width: 10%;">
-                        <span class="beta-val ${betaClass}">${betaDisplay}</span>
-                    </td>
-                    <td style="width: 15%; color: var(--text-muted);">${volDisplay}</td>
-                    <td style="width: 15%;">${signalBadge}</td>
+                    <td>${createSparkline(m.sparkline, isPositive)}</td>
+                    <td style="color: var(--text-muted);">${volDisplay}</td>
+                    <td><span class="beta-val ${betaClass}">${betaDisplay}</span></td>
+                    <td><span class="lrs-val ${lrsClass}">${lrsDisplay}</span></td>
+                    <td>${analysis}</td>
                 </tr>
             `;
         });

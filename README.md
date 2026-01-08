@@ -1,48 +1,48 @@
 ⚡ Poly-Nexus Terminal
-Institutional-Grade Market Intelligence for Prediction Markets.
-Quantifying Consensus Stability, Liquidity Resilience, and Crypto-Beta.
-![alt text](https://img.shields.io/badge/system-operational-green.svg)
-![alt text](https://img.shields.io/badge/data-proprietary-blueviolet.svg)
-![alt text](https://img.shields.io/badge/access-public-orange.svg)
-🔗 Enter Terminal
-🏛️ Philosophy
-Prices lie. Structure speaks.
-Most prediction market interfaces only display the current probability. They fail to reveal the underlying market structure—liquidity depth, order book resilience, and correlation with macro assets.
-Poly-Nexus is a quantitative analysis engine designed to decompose prediction market movements into two components:
-Information-Driven Moves: Genuine shifts in public belief.
-Liquidity-Driven Moves: Artificial volatility caused by crypto-market contagion.
-We separate the Signal from the Noise.
-🧬 Core Metrics (The Nexus System)
-Our proprietary engine processes high-frequency snapshots to generate unique risk metrics. We do not provide financial advice; we provide structural clarity.
-1. Nexus Score™
-A composite index measuring the structural health of a market.
-Formula: Proprietary weighting of Volume Depth, Volatility decay, and Spread tightness.
-Interpretation:
-High Score (>80): Solid / Consolidated. The market has deep liquidity and is resilient to external shocks.
-Low Score (<30): Fragile. The price is easily manipulated by small orders or is suffering from a liquidity crunch.
-2. Crypto-Beta (
+Real-time Market Structure Analysis for Prediction Markets.
+![alt text](https://img.shields.io/badge/status-live-green.svg)
+![alt text](https://img.shields.io/badge/data-realtime-blue.svg)
+![alt text](https://img.shields.io/badge/license-MIT-grey.svg)
+🔗 [Launch Dashboard](https://jenadoe.github.io/poly-terminal/)
+<br>
+📊 Overview
+Poly-Nexus is a lightweight analytics dashboard designed to monitor Polymarket trends.
+While standard interfaces focus on current prices, this terminal focuses on Market Structure—tracking liquidity resilience, volatility trends, and correlations with the broader crypto market.
+It provides a consolidated view to help researchers and analysts distinguish between organic sentiment shifts and liquidity-driven volatility.
+<br>
+🔍 Key Metrics
+We process market data to visualize the following indicators:
+1. Nexus Score
+A composite stability metric.
+High Score: Indicates deep liquidity and price stability.
+Low Score: Indicates a fragile market structure prone to slippage or manipulation.
+2. BTC Beta (
 β
 β
 )
-Measures the sensitivity of a specific prediction market to Bitcoin (BTC) price action.
-High Beta (> 0.5): Coupled. This market is trading like a crypto-asset, not a prediction market. Movements may be noise.
-Zero Beta (≈ 0): Decoupled. This market is trading purely on its own fundamentals (News/Events).
-3. Trend Continuity
-Unlike standard charts that smooth out data, our Micro-Sparklines visualize raw tick-level volatility over the last 4 hours, exposing sudden liquidity gaps or "jump" diffusions.
-🛠️ Architecture
-Poly-Nexus operates on a "Black Box" Architecture to ensure data integrity and prevent alpha decay.
-Ingestion: The engine autonomously captures high-fidelity snapshots of the order book universe.
-Processing: Raw data is processed through our Quant Engine (Private Core) to calculate covariance matrices and resilience scores.
-Distribution: Only the finalized signals and sanitized visualizations are pushed to the public terminal.
-Note: We do not rely on standard historical APIs. All historical data displayed is organically accumulated and stored in our proprietary time-series database.
+Measures the correlation between a prediction market and Bitcoin (BTC).
+Coupled: Moves in sync with the crypto market (High Beta).
+Solid: Moves independently based on real-world events (Low Beta).
+3. Trend Sparklines
+Visualizes the price action over the last 4 hours to identify sudden momentum shifts or "jump" diffusions.
+<br>
+🛠️ How it Works
+The terminal operates on an automated pipeline that:
+Aggregates real-time data from prediction markets.
+Filters out low-volume (dead) markets to reduce noise.
+Calculates stability scores and correlations.
+Visualizes the results on a static, high-performance dashboard.
+<br>
 📉 Usage
-This tool is designed for:
-Researchers: Tracking belief dynamics in real-time.
-Risk Managers: Identifying liquidity risks in political/economic derivatives.
-Analysts: Distinguishing between macro-beta flows and idiosyncratic alpha.
+This tool is useful for:
+Trend Monitoring: Watching real-time belief dynamics.
+Risk Analysis: Identifying markets suffering from liquidity stress.
+Correlation Checks: Seeing which markets are just following Bitcoin price action.
+<br>
 ⚠️ Disclaimer
 This project is for informational and research purposes only.
-The "Nexus Score" and "Signals" are derived from statistical analysis and do not constitute financial advice or betting recommendations. Prediction markets involve significant risk.
+The data and scores displayed are derived from statistical analysis and do not constitute financial advice or betting recommendations. Prediction markets involve significant risk. Use this data at your own discretion.
+<br>
 <p align="center">
-&copy; 2024-2026 <b>Poly-Nexus Research</b>. All rights reserved.
+&copy; 2026 <b>Poly-Nexus</b>. All rights reserved.
 </p>

@@ -1,3 +1,4 @@
+<html>
 # ⚡ Poly-Nexus Terminal
 
 > **Institutional-Grade Market Intelligence for Prediction Markets.**
@@ -99,3 +100,4 @@ The "Nexus Score" and "Signals" are derived from statistical analysis and **do n
 <p align="center">
   &copy; 2026 <b>Poly-Nexus Research</b>. All rights reserved.
 </p>
+</html>

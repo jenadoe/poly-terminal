@@ -15,6 +15,7 @@
             --accent-orange: #d29922;
             --accent-gold: #e3b341;
             --border: #30363d;
+            --tooltip-bg: #2d333b;
         }
         body {
             background-color: var(--bg-color);
@@ -36,28 +37,58 @@
         }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
         .status-badge { font-size: 0.8rem; background: var(--card-bg); padding: 5px 10px; border-radius: 4px; border: 1px solid var(--border); }
-        .market-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 6px; overflow: hidden; font-size: 0.9rem; }
+        
+        /* 테이블 스타일 */
+        .market-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 6px; overflow: visible; font-size: 0.9rem; }
         th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; cursor: help; position: relative; }
+        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
         tr:hover { background-color: #21262d; }
         
-        /* 툴팁 스타일 */
-        th:hover::after {
+        /* ⓘ 아이콘 및 툴팁 스타일 (핵심 수정) */
+        .info-icon {
+            display: inline-block;
+            margin-left: 6px;
+            cursor: help;
+            color: var(--text-muted);
+            font-size: 14px;
+            position: relative;
+            vertical-align: middle;
+        }
+        .info-icon:hover { color: #fff; }
+        
+        /* 툴팁 말풍선 */
+        .info-icon:hover::after {
             content: attr(data-tooltip);
+            position: absolute;
+            bottom: 140%; /* 아이콘 위쪽에 표시 */
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--tooltip-bg);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            white-space: pre-wrap; /* 줄바꿈 허용 */
+            width: 220px; /* 말풍선 너비 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            border: 1px solid var(--border);
+            z-index: 1000;
+            text-align: left;
+            text-transform: none; /* 대문자 강제 해제 */
+            font-weight: normal;
+        }
+        /* 말풍선 꼬리 */
+        .info-icon:hover::before {
+            content: '';
             position: absolute;
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: #30363d;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            white-space: nowrap;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            pointer-events: none;
-            z-index: 100;
-            margin-bottom: 5px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: var(--tooltip-bg) transparent transparent transparent;
+            z-index: 1000;
         }
 
         .price { font-weight: bold; color: #fff; font-size: 1.1rem; }
@@ -66,13 +97,16 @@
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 120px; height: 40px; }
         path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        
         .beta-val { font-weight: bold; }
         .beta-high { color: var(--accent-orange); } 
         .beta-low { color: var(--text-muted); }
+        
         .score-val { font-weight: bold; font-size: 1.0rem; }
         .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
         .score-mid { color: var(--text-main); }
         .score-low { color: var(--text-muted); }
+        
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
         .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
         .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
@@ -131,17 +165,27 @@
     }
 
     function renderTable(markets) {
+        // [수정] 헤더에 아이콘(ⓘ)과 툴팁 내용 추가
         let html = `
             <table class="market-table">
                 <thead>
                     <tr>
                         <th style="width: 30%">Market</th>
                         <th style="width: 10%">Price</th>
-                        <th style="width: 10%" data-tooltip="Price action over last 4 hours">Trend (4H)</th>
-                        <th style="width: 10%" data-tooltip="Total Trading Volume (USDC)">Volume</th>
-                        <th style="width: 10%" data-tooltip="Correlation with Bitcoin (-1 to +1)">Beta (BTC)</th>
-                        <th style="width: 10%" data-tooltip="Structural Stability Score (0-100)">Nexus Score</th>
-                        <th style="width: 20%" data-tooltip="Current Market Regime">Status</th>
+                        <th style="width: 10%">Trend (4H)</th>
+                        <th style="width: 10%">Volume</th>
+                        <th style="width: 10%">
+                            Beta (BTC)
+                            <span class="info-icon" data-tooltip="Correlation with Bitcoin price.&#10;• > 0.5: Highly correlated (Follows BTC)&#10;• ≈ 0: Independent (News driven)">ⓘ</span>
+                        </th>
+                        <th style="width: 10%">
+                            Nexus Score
+                            <span class="info-icon" data-tooltip="Structural Integrity Score (0-100).&#10;Based on Liquidity Depth, Spread tightness, and Volatility decay.&#10;Higher is better.">ⓘ</span>
+                        </th>
+                        <th style="width: 20%">
+                            Status
+                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Solid: Safe & Deep&#10;• Fragile: Low liquidity / Risky&#10;• Coupled: Moving with Crypto">ⓘ</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>

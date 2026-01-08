@@ -13,7 +13,7 @@
             --accent-green: #3fb950;
             --accent-red: #f85149;
             --accent-orange: #d29922;
-            --accent-gold: #e3b341; /* LRS High Score Color */
+            --accent-gold: #e3b341;
             --border: #30363d;
         }
         body {
@@ -23,7 +23,7 @@
             margin: 0;
             padding: 20px;
         }
-        .container { max-width: 1600px; margin: 0 auto; } /* 더 넓게 */
+        .container { max-width: 1600px; margin: 0 auto; }
         header {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
@@ -53,13 +53,16 @@
         .beta-high { color: var(--accent-orange); } 
         .beta-low { color: var(--text-muted); }
         
-        /* LRS 스타일 */
-        .lrs-val { font-weight: bold; font-size: 1.0rem; }
-        .lrs-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
-        .lrs-mid { color: var(--text-main); }
-        .lrs-low { color: var(--text-muted); }
+        .score-val { font-weight: bold; font-size: 1.0rem; }
+        .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
+        .score-mid { color: var(--text-main); }
+        .score-low { color: var(--text-muted); }
         
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+        .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
+        .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
+        .tag-good { background: rgba(63, 185, 80, 0.2); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.4); }
+        .tag-gold { background: rgba(210, 153, 34, 0.2); color: #d29922; border: 1px solid rgba(210, 153, 34, 0.4); }
     </style>
 </head>
 <body>
@@ -71,11 +74,12 @@
         </div>
         <div class="status-badge" id="last-updated">Syncing...</div>
     </header>
-    <div id="app"><div class="loading">📡 Calculating Alpha...</div></div>
+    <div id="app"><div class="loading">📡 Connecting to Satellite Feed...</div></div>
 </div>
 <script>
     async function fetchIntelligence() {
         try {
+            // 캐시 방지용 timestamp 추가
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Data fetch failed");
             const data = await response.json();
@@ -83,6 +87,7 @@
             
             if (data.length > 0) {
                 const serverTime = new Date(data[0].last_updated);
+                // [시간 수정] 사용자 브라우저 시간대 자동 인식 + 영어 표기
                 const timeOptions = { 
                     year: 'numeric', month: 'short', day: 'numeric', 
                     hour: '2-digit', minute: '2-digit', second: '2-digit',
@@ -122,8 +127,8 @@
                         <th style="width: 10%">Trend (4H)</th>
                         <th style="width: 10%">Volume</th>
                         <th style="width: 10%">Beta (BTC)</th>
-                        <th style="width: 10%">LRS Score</th> <!-- 킬러 인덱스 -->
-                        <th style="width: 20%">Analysis</th>
+                        <th style="width: 10%">Nexus Score</th> <!-- LRS 대신 Nexus Score 사용 -->
+                        <th style="width: 20%">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -135,7 +140,7 @@
             const changeSign = m.change_since_start >= 0 ? '+' : '';
             const isPositive = m.change_since_start >= 0;
             
-            // Beta Display
+            // Beta 표시
             let betaDisplay = '-';
             let betaClass = 'beta-low';
             if (m.beta !== undefined) {
@@ -143,22 +148,28 @@
                 if (Math.abs(m.beta) > 0.5) betaClass = 'beta-high';
             }
             
-            // LRS Display (핵심!)
-            let lrsDisplay = '-';
-            let lrsClass = 'lrs-low';
-            if (m.lrs !== undefined && m.lrs !== 0) {
-                lrsDisplay = m.lrs.toFixed(1);
-                if (m.lrs >= 50) lrsClass = 'lrs-high';
-                else if (m.lrs >= 20) lrsClass = 'lrs-mid';
+            // Nexus Score (LRS) 표시
+            let scoreDisplay = '-';
+            let scoreClass = 'score-low';
+            // 백엔드에서 'nexus_score'로 보내주므로 이걸 받아야 함
+            if (m.nexus_score !== undefined) {
+                scoreDisplay = m.nexus_score; // 이미 반올림 되어 있음
+                if (m.nexus_score >= 80) scoreClass = 'score-high';
+                else if (m.nexus_score >= 50) scoreClass = 'score-mid';
             }
 
-            // Analysis Badge
-            let analysis = `<span style="color:var(--text-muted); font-size:0.8rem">Gathering Data (${m.data_count})</span>`;
-            if (m.data_count >= 100) { // 데이터 충분할 때만 분석
-                if (m.lrs > 50) analysis = `<span style="color:var(--accent-gold)">🛡️ Strong Hold</span>`;
-                else if (m.beta > 0.8) analysis = `<span style="color:var(--accent-orange)">🔗 BTC Coupled</span>`;
-                else if (Math.abs(m.change_since_start) > 5) analysis = `<span style="color:var(--accent-red)">🔥 High Volatility</span>`;
-                else analysis = `<span>⚖️ Neutral</span>`;
+            // Status 뱃지 처리 (백엔드에서 계산된 market_state 사용)
+            let statusText = m.market_state || "Collecting";
+            let statusBadge = `<span class="tag tag-wait">${statusText}</span>`;
+            
+            if (statusText === 'Solid' || statusText === 'Consolidated' || statusText === 'Strong Hold') {
+                statusBadge = `<span class="tag tag-gold">🛡️ ${statusText}</span>`;
+            } else if (statusText === 'Coupled' || statusText === 'BTC Coupled') {
+                statusBadge = `<span class="tag tag-hot">🔗 ${statusText}</span>`;
+            } else if (statusText === 'Fragile' || statusText === 'Volatile') {
+                statusBadge = `<span class="tag tag-hot">🔥 ${statusText}</span>`;
+            } else if (statusText === 'Stable') {
+                statusBadge = `<span class="tag tag-good">⚖️ ${statusText}</span>`;
             }
 
             html += `
@@ -174,8 +185,8 @@
                     <td>${createSparkline(m.sparkline, isPositive)}</td>
                     <td style="color: var(--text-muted);">${volDisplay}</td>
                     <td><span class="beta-val ${betaClass}">${betaDisplay}</span></td>
-                    <td><span class="lrs-val ${lrsClass}">${lrsDisplay}</span></td>
-                    <td>${analysis}</td>
+                    <td><span class="score-val ${scoreClass}">${scoreDisplay}</span></td>
+                    <td>${statusBadge}</td>
                 </tr>
             `;
         });

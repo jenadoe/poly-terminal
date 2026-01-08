@@ -37,14 +37,12 @@
         }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
         .status-badge { font-size: 0.8rem; background: var(--card-bg); padding: 5px 10px; border-radius: 4px; border: 1px solid var(--border); }
-        
-        /* 테이블 스타일 */
         .market-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 6px; overflow: visible; font-size: 0.9rem; }
         th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
+        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; cursor: help; position: relative; }
         tr:hover { background-color: #21262d; }
         
-        /* ⓘ 아이콘 및 툴팁 스타일 (핵심 수정) */
+        /* 툴팁 스타일 */
         .info-icon {
             display: inline-block;
             margin-left: 6px;
@@ -55,12 +53,10 @@
             vertical-align: middle;
         }
         .info-icon:hover { color: #fff; }
-        
-        /* 툴팁 말풍선 */
         .info-icon:hover::after {
             content: attr(data-tooltip);
             position: absolute;
-            bottom: 140%; /* 아이콘 위쪽에 표시 */
+            bottom: 140%;
             left: 50%;
             transform: translateX(-50%);
             background: var(--tooltip-bg);
@@ -69,16 +65,15 @@
             border-radius: 6px;
             font-size: 0.75rem;
             line-height: 1.4;
-            white-space: pre-wrap; /* 줄바꿈 허용 */
-            width: 220px; /* 말풍선 너비 */
+            white-space: pre-wrap;
+            width: 220px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
             border: 1px solid var(--border);
             z-index: 1000;
             text-align: left;
-            text-transform: none; /* 대문자 강제 해제 */
+            text-transform: none;
             font-weight: normal;
         }
-        /* 말풍선 꼬리 */
         .info-icon:hover::before {
             content: '';
             position: absolute;
@@ -97,16 +92,13 @@
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 120px; height: 40px; }
         path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
-        
         .beta-val { font-weight: bold; }
         .beta-high { color: var(--accent-orange); } 
         .beta-low { color: var(--text-muted); }
-        
         .score-val { font-weight: bold; font-size: 1.0rem; }
         .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
         .score-mid { color: var(--text-main); }
         .score-low { color: var(--text-muted); }
-        
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
         .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
         .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
@@ -165,7 +157,6 @@
     }
 
     function renderTable(markets) {
-        // [수정] 헤더에 아이콘(ⓘ)과 툴팁 내용 추가
         let html = `
             <table class="market-table">
                 <thead>
@@ -173,10 +164,10 @@
                         <th style="width: 30%">Market</th>
                         <th style="width: 10%">Price</th>
                         <th style="width: 10%">Trend (4H)</th>
-                        <th style="width: 10%">Volume</th>
+                        <th style="width: 10%" data-tooltip="Total Trading Volume (USDC)">Volume</th>
                         <th style="width: 10%">
                             Beta (BTC)
-                            <span class="info-icon" data-tooltip="Correlation with Bitcoin price.&#10;• > 0.5: Highly correlated (Follows BTC)&#10;• ≈ 0: Independent (News driven)">ⓘ</span>
+                            <span class="info-icon" data-tooltip="Correlation with Bitcoin price.&#10;• > 0.5: Highly correlated (Follows BTC)&#10;• < 0: Inverse correlation">ⓘ</span>
                         </th>
                         <th style="width: 10%">
                             Nexus Score
@@ -184,7 +175,7 @@
                         </th>
                         <th style="width: 20%">
                             Status
-                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Solid: Safe & Deep&#10;• Fragile: Low liquidity / Risky&#10;• Coupled: Moving with Crypto">ⓘ</span>
+                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Consolidated: Safe & Deep&#10;• Fragile: Low liquidity / Risky&#10;• Coupled: Moving with Crypto">ⓘ</span>
                         </th>
                     </tr>
                 </thead>

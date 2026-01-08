@@ -14,6 +14,7 @@
             --accent-red: #f85149;
             --accent-orange: #d29922;
             --accent-gold: #e3b341;
+            --accent-blue: #58a6ff;
             --border: #30363d;
             --tooltip-bg: #2d333b;
         }
@@ -37,47 +38,57 @@
         }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
         .status-badge { font-size: 0.8rem; background: var(--card-bg); padding: 5px 10px; border-radius: 4px; border: 1px solid var(--border); }
+        
+        /* 테이블 스타일 */
         .market-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 6px; overflow: visible; font-size: 0.9rem; }
+        
         th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; cursor: help; position: relative; }
+        
+        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
+        
         tr:hover { background-color: #21262d; }
         
-        /* 툴팁 스타일 */
+        /* [수정] 아이콘 스타일: 커서 변경 없음 (cursor: default) */
         .info-icon {
             display: inline-block;
-            margin-left: 6px;
-            cursor: help;
-            color: var(--text-muted);
-            font-size: 14px;
+            margin-left: 4px;
+            cursor: default; /* 마우스 올려도 커서 모양 안 바뀜 */
+            color: var(--accent-blue);
+            font-size: 12px;
             position: relative;
-            vertical-align: middle;
+            vertical-align: 1px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
         }
-        .info-icon:hover { color: #fff; }
+        .info-icon:hover { opacity: 1; }
+        
+        /* 툴팁 말풍선 */
         .info-icon:hover::after {
             content: attr(data-tooltip);
             position: absolute;
-            bottom: 140%;
+            bottom: 160%;
             left: 50%;
             transform: translateX(-50%);
             background: var(--tooltip-bg);
             color: #fff;
-            padding: 8px 12px;
+            padding: 10px 14px;
             border-radius: 6px;
             font-size: 0.75rem;
-            line-height: 1.4;
+            line-height: 1.5;
             white-space: pre-wrap;
-            width: 220px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            width: 240px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
             border: 1px solid var(--border);
             z-index: 1000;
             text-align: left;
             text-transform: none;
             font-weight: normal;
         }
+        /* 말풍선 꼬리 */
         .info-icon:hover::before {
             content: '';
             position: absolute;
-            bottom: 100%;
+            bottom: 120%;
             left: 50%;
             transform: translateX(-50%);
             border-width: 6px;
@@ -92,13 +103,16 @@
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 120px; height: 40px; }
         path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        
         .beta-val { font-weight: bold; }
         .beta-high { color: var(--accent-orange); } 
         .beta-low { color: var(--text-muted); }
+        
         .score-val { font-weight: bold; font-size: 1.0rem; }
         .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
         .score-mid { color: var(--text-main); }
         .score-low { color: var(--text-muted); }
+        
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
         .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
         .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
@@ -120,6 +134,7 @@
 <script>
     async function fetchIntelligence() {
         try {
+            // 캐시 방지용 timestamp 추가
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Data fetch failed");
             const data = await response.json();

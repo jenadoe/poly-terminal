@@ -42,28 +42,36 @@
         th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
         th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
         tr:hover { background-color: #21262d; }
+        
         .info-icon { display: inline-block; margin-left: 4px; cursor: default; color: var(--accent-blue); font-size: 12px; position: relative; vertical-align: 1px; opacity: 0.8; transition: opacity 0.2s; }
         .info-icon:hover { opacity: 1; }
         .info-icon:hover::after { content: attr(data-tooltip); position: absolute; bottom: 160%; left: 50%; transform: translateX(-50%); background: var(--tooltip-bg); color: #fff; padding: 10px 14px; border-radius: 6px; font-size: 0.75rem; line-height: 1.5; white-space: pre-wrap; width: 240px; box-shadow: 0 8px 20px rgba(0,0,0,0.6); border: 1px solid var(--border); z-index: 1000; text-align: left; text-transform: none; font-weight: normal; }
         .info-icon:hover::before { content: ''; position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%); border-width: 6px; border-style: solid; border-color: var(--tooltip-bg) transparent transparent transparent; z-index: 1000; }
+
         .price { font-weight: bold; color: #fff; font-size: 1.1rem; }
         .change-pos { color: var(--accent-green); }
         .change-neg { color: var(--accent-red); }
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 120px; height: 40px; }
         path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        
         .beta-val { font-weight: bold; }
         .beta-high { color: var(--accent-orange); } 
         .beta-low { color: var(--text-muted); }
+        
         .score-val { font-weight: bold; font-size: 1.0rem; }
         .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
         .score-mid { color: var(--text-main); }
         .score-low { color: var(--text-muted); }
-        .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
-        .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.4); }
-        .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid rgba(139, 148, 158, 0.4); }
-        .tag-good { background: rgba(63, 185, 80, 0.2); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.4); }
-        .tag-gold { background: rgba(210, 153, 34, 0.2); color: #d29922; border: 1px solid rgba(210, 153, 34, 0.4); }
+        
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid transparent; }
+        
+        /* 색상 정의 */
+        .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border-color: rgba(248, 81, 73, 0.4); } /* 빨강 */
+        .tag-orange { background: rgba(210, 153, 34, 0.2); color: #d29922; border-color: rgba(210, 153, 34, 0.4); } /* 주황 */
+        .tag-gold { background: rgba(227, 179, 65, 0.2); color: #e3b341; border-color: rgba(227, 179, 65, 0.4); } /* 금색 */
+        .tag-good { background: rgba(63, 185, 80, 0.2); color: #3fb950; border-color: rgba(63, 185, 80, 0.4); } /* 초록 */
+        .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border-color: rgba(139, 148, 158, 0.4); } /* 회색 */
     </style>
 </head>
 <body>
@@ -163,24 +171,35 @@
                 else if (m.nexus_score >= 50) scoreClass = 'score-mid';
             }
 
-            // Status 뱃지 처리 (스마트 매칭)
+            // [아이콘 및 색상 로직]
             let statusText = m.market_state || "Initializing";
-            let badgeClass = "tag-wait"; // 기본
-            let styleOverride = "";
+            let badgeClass = "tag-wait"; 
+            let icon = ""; // 기본 아이콘 없음
 
+            // 1. Fragile (가장 위험, 최우선)
             if (statusText.includes("Fragile") || statusText.includes("Volatile")) {
                 badgeClass = "tag-hot"; // 빨강
-            } else if (statusText.includes("Coupled")) {
-                // Coupled는 주황색으로 강조
-                badgeClass = "tag-hot"; 
-                styleOverride = 'style="color:var(--accent-orange); border-color:var(--accent-orange)"';
-            } else if (statusText.includes("Solid") || statusText.includes("Consolidated")) {
+                icon = "🔥 ";
+                // Fragile하면서 Coupled면 아이콘 두 개 표시
+                if (statusText.includes("Coupled")) {
+                    icon = "🔥🔗 ";
+                }
+            } 
+            // 2. Coupled (중간 위험)
+            else if (statusText.includes("Coupled")) {
+                badgeClass = "tag-orange"; // 주황
+                icon = "🔗 ";
+            } 
+            // 3. Solid / Stable (안전)
+            else if (statusText.includes("Solid") || statusText.includes("Consolidated")) {
                 badgeClass = "tag-gold"; // 금색
+                icon = "🛡️ ";
             } else if (statusText.includes("Stable") || statusText.includes("Static")) {
                 badgeClass = "tag-good"; // 초록
+                icon = "⚖️ ";
             }
 
-            let statusBadge = `<span class="tag ${badgeClass}" ${styleOverride}>${statusText}</span>`;
+            let statusBadge = `<span class="tag ${badgeClass}">${icon}${statusText}</span>`;
 
             html += `
                 <tr>

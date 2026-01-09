@@ -3,18 +3,14 @@
     "id": "601697",
     "question": "Fed decreases interest rates by 50+ bps after January 2026 meeting?",
     "current_price": 0.0045000000000000005,
-    "volume": 94922519.351971,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
-    "beta": 0.0,
-    "gravity": 12.039103400591667,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "volume": 95219063.586221,
+    "nexus_score": 62.5,
+    "market_state": "Coupled",
+    "beta": 3.34,
+    "gravity": 12.056348967995573,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.006500000000000001
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.006500000000000001
@@ -106,6 +102,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0045000000000000005
       }
     ]
   },
@@ -113,18 +113,14 @@
     "id": "601700",
     "question": "Fed increases interest rates by 25+ bps after January 2026 meeting?",
     "current_price": 0.0035,
-    "volume": 80691008.747956,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
+    "volume": 81181581.061038,
+    "nexus_score": 62.4,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 10.234108875814593,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 10.278965515757587,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0035
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0035
@@ -215,6 +211,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0035
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0035
       }
     ]
@@ -223,18 +223,14 @@
     "id": "540210",
     "question": "Will the Carolina Panthers win Super Bowl 2026?",
     "current_price": 0.006500000000000001,
-    "volume": 57993705.575175,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 57997444.665175,
+    "nexus_score": 62.2,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 7.355390720447663,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 7.343460498350759,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.006500000000000001
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.006500000000000001
@@ -325,6 +321,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.006500000000000001
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.006500000000000001
       }
     ]
@@ -333,18 +333,14 @@
     "id": "566203",
     "question": "Will Leeds win the 2025\u201326 English Premier League?",
     "current_price": 0.0015,
-    "volume": 31634360.120948,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
+    "volume": 31647237.272948,
+    "nexus_score": 61.9,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 4.012212645720706,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 4.007077176201418,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0015
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0015
@@ -435,6 +431,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0015
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0015
       }
     ]
@@ -443,18 +443,14 @@
     "id": "566174",
     "question": "Will Slavia Pragu win the 2025\u201326 Champions League?",
     "current_price": 0.0015,
-    "volume": 27059881.186063,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
+    "volume": 27069760.546063,
+    "nexus_score": 61.9,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 3.432027614003409,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 3.4274909596006715,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0015
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0015
@@ -545,6 +541,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0015
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0015
       }
     ]
@@ -553,18 +553,14 @@
     "id": "559688",
     "question": "Will Andrew Yang win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 26239308.814402,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 26245436.414402,
+    "nexus_score": 61.9,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 3.327953726189028,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 3.3231175387777943,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -655,6 +651,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -663,18 +663,14 @@
     "id": "559684",
     "question": "Will Chelsea Clinton win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 24793005.361245,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 24794383.007995,
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 3.1445178361593307,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 3.139389558476872,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -765,6 +761,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -773,18 +773,14 @@
     "id": "559687",
     "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 24775790.629283,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 24776515.934283,
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 3.142334477146961,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 3.1371272838062785,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -875,6 +871,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -883,18 +883,14 @@
     "id": "559685",
     "question": "Will MrBeast win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 23322516.393756,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 23327104.030006,
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.9580144768944385,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.9536071455252793,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -985,6 +981,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -994,17 +994,13 @@
     "question": "Will Phil Murphy win the 2028 Democratic presidential nomination?",
     "current_price": 0.0055,
     "volume": 22415739.477134,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.843007193743823,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.8382129306206485,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -1095,6 +1091,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0055
       }
     ]
@@ -1103,18 +1103,14 @@
     "id": "559683",
     "question": "Will George Clooney win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 22407053.264336,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 22407508.264336,
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.841905514029161,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.8371707194269558,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -1206,6 +1202,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0045000000000000005
       }
     ]
   },
@@ -1213,18 +1213,14 @@
     "id": "572494",
     "question": "Will Trump nominate himself as the next Fed chair?",
     "current_price": 0.0005,
-    "volume": 22357575.601,
-    "nexus_score": "-",
-    "market_state": "Initializing (129)",
+    "volume": 22358575.601,
+    "nexus_score": 61.8,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.835630220147495,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.8309750140409426,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0005
@@ -1316,6 +1312,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0005
       }
     ]
   },
@@ -1323,18 +1323,14 @@
     "id": "561251",
     "question": "Will LeBron James win the 2028 US Presidential Election?",
     "current_price": 0.0085,
-    "volume": 21315680.59855,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 21316704.316175,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.7034857959087715,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.6990564326508832,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0085
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0085
@@ -1425,6 +1421,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0085
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0085
       }
     ]
@@ -1433,18 +1433,14 @@
     "id": "559681",
     "question": "Will LeBron James win the 2028 Democratic presidential nomination?",
     "current_price": 0.0085,
-    "volume": 21308319.919606,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 21308578.274356,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.7025522347737496,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.6980275378874974,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0085
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0085
@@ -1535,6 +1531,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0085
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0085
       }
     ]
@@ -1543,18 +1543,14 @@
     "id": "559677",
     "question": "Will Hillary Clinton win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 20392838.209766,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 20399873.949766,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.586440915338091,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.5829701530176763,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -1645,6 +1641,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -1654,17 +1654,13 @@
     "question": "Will Zohran Mamdani win the 2028 Democratic presidential nomination?",
     "current_price": 0.0055,
     "volume": 20231134.93304,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.565931952006637,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.5616049306184565,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -1755,6 +1751,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0055
       }
     ]
@@ -1764,17 +1764,13 @@
     "question": "Will Trump nominate Janet Yellen as the next Fed chair?",
     "current_price": 0.0005,
     "volume": 20071765.949942,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.5457190491100166,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.541426113451616,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0005
@@ -1865,6 +1861,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0005
       }
     ]
@@ -1873,18 +1873,14 @@
     "id": "559679",
     "question": "Will Bernie Sanders win the 2028 Democratic presidential nomination?",
     "current_price": 0.0045000000000000005,
-    "volume": 19451288.570268,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 19456659.828268,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.4670233783395763,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.4635432423547274,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -1976,25 +1972,25 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0045000000000000005
       }
     ]
   },
   {
     "id": "601699",
     "question": "No change in Fed interest rates after January 2026 meeting?",
-    "current_price": 0.9675,
-    "volume": 19040098.36586,
-    "nexus_score": "-",
-    "market_state": "Initializing (112)",
-    "beta": 0.0,
-    "gravity": 2.414871776991718,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "current_price": 0.9695,
+    "volume": 19284037.893742,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
+    "beta": 0.11,
+    "gravity": 2.441686376683166,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.925
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.925
@@ -2086,6 +2082,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.9675
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.9695
       }
     ]
   },
@@ -2093,18 +2093,14 @@
     "id": "559678",
     "question": "Will Liz Cheney win the 2028 Democratic presidential nomination?",
     "current_price": 0.0055,
-    "volume": 18851554.048817,
-    "nexus_score": "-",
-    "market_state": "Initializing (173)",
+    "volume": 18851811.248817,
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.3909585418187467,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.386959150136109,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -2196,6 +2192,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0055
       }
     ]
   },
@@ -2204,17 +2204,13 @@
     "question": "Will Trump nominate Barron Trump as the next Fed chair?",
     "current_price": 0.0005,
     "volume": 18014190.329549,
-    "nexus_score": "-",
-    "market_state": "Initializing (127)",
+    "nexus_score": 61.7,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.284754993187774,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.2809021304045096,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0005
@@ -2306,6 +2302,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0005
       }
     ]
   },
@@ -2314,17 +2314,13 @@
     "question": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
     "current_price": 0.0045000000000000005,
     "volume": 17616684.357102,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
-    "beta": 0.0,
-    "gravity": 2.2343389745515934,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "nexus_score": 61.6,
+    "market_state": "Coupled",
+    "beta": -5.0,
+    "gravity": 2.2305711300755275,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0045000000000000005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0045000000000000005
@@ -2415,6 +2411,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0045000000000000005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0045000000000000005
       }
     ]
@@ -2423,18 +2423,14 @@
     "id": "559682",
     "question": "Will Hunter Biden win the 2028 Democratic presidential nomination?",
     "current_price": 0.0055,
-    "volume": 17528179.256808,
-    "nexus_score": "-",
-    "market_state": "Initializing (172)",
+    "volume": 17528271.256808,
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.223113797837012,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.219376531532541,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -2525,6 +2521,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0055
       }
     ]
@@ -2534,17 +2534,13 @@
     "question": "Will Olympiakos win the 2025\u201326 Champions League?",
     "current_price": 0.0015,
     "volume": 17485885.026079,
-    "nexus_score": "-",
-    "market_state": "Initializing (130)",
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.2177495847875575,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.2140097155835052,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0015
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0015
@@ -2635,6 +2631,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0015
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0015
       }
     ]
@@ -2644,17 +2644,13 @@
     "question": "Will Beto O\u2019Rourke win the 2028 Democratic presidential nomination?",
     "current_price": 0.0055,
     "volume": 17338038.973527,
-    "nexus_score": "-",
-    "market_state": "Initializing (172)",
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.1989981449164464,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.1952898969256216,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": -15.38,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -2745,6 +2741,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0055
       }
     ]
@@ -2753,18 +2753,14 @@
     "id": "561247",
     "question": "Will Tim Walz win the 2028 US Presidential Election?",
     "current_price": 0.0055,
-    "volume": 17330215.599544,
-    "nexus_score": "-",
-    "market_state": "Initializing (172)",
+    "volume": 17331215.599544,
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.1980058997783507,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.1944259420117644,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": -26.67,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0055
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0055
@@ -2856,25 +2852,25 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0055
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0055
       }
     ]
   },
   {
     "id": "601698",
     "question": "Fed decreases interest rates by 25 bps after January 2026 meeting?",
-    "current_price": 0.0245,
-    "volume": 16852714.093911,
-    "nexus_score": "-",
-    "market_state": "Initializing (66)",
-    "beta": 0.0,
-    "gravity": 2.1374439800200067,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
-    "change_since_start": -67.33,
+    "current_price": 0.024,
+    "volume": 17096003.422399,
+    "nexus_score": 4.9,
+    "market_state": "Fragile | Coupled",
+    "beta": -4.88,
+    "gravity": 2.1646440896979753,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
+    "change_since_start": -68.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.065
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.065
@@ -2966,6 +2962,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0245
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.024
       }
     ]
   },
@@ -2974,17 +2974,13 @@
     "question": "Will the Indiana Pacers win the 2026 NBA Finals?",
     "current_price": 0.0005,
     "volume": 15818068.860774,
-    "nexus_score": "-",
-    "market_state": "Initializing (129)",
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 2.0062190501540154,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 2.0028358923377674,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0005
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0005
@@ -3076,6 +3072,10 @@
       {
         "t": "2026-01-09T15:59:47.983347Z",
         "p": 0.0005
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
+        "p": 0.0005
       }
     ]
   },
@@ -3083,18 +3083,14 @@
     "id": "553878",
     "question": "Will the Chicago Bulls win the 2026 NBA Finals?",
     "current_price": 0.0025,
-    "volume": 15679172.544938,
-    "nexus_score": "-",
-    "market_state": "Initializing (129)",
+    "volume": 15679319.634938,
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 1.9886027129589354,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 1.9852678862818864,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": 0.0,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.0025
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.0025
@@ -3185,6 +3181,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.0025
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.0025
       }
     ]
@@ -3193,18 +3193,14 @@
     "id": "561249",
     "question": "Will Greg Abbott win the 2028 US Presidential Election?",
     "current_price": 0.006500000000000001,
-    "volume": 15513438.442807,
-    "nexus_score": "-",
-    "market_state": "Initializing (172)",
+    "volume": 15514978.732473,
+    "nexus_score": 61.6,
+    "market_state": "Solid",
     "beta": 0.0,
-    "gravity": 1.9675825166327,
-    "last_updated": "2026-01-09T15:59:47.983347Z",
+    "gravity": 1.9644595397679636,
+    "last_updated": "2026-01-09T16:40:07.930346Z",
     "change_since_start": -13.33,
     "sparkline": [
-      {
-        "t": "2026-01-09T06:45:55.906665Z",
-        "p": 0.006500000000000001
-      },
       {
         "t": "2026-01-09T06:47:52.899684Z",
         "p": 0.006500000000000001
@@ -3295,6 +3291,10 @@
       },
       {
         "t": "2026-01-09T15:59:47.983347Z",
+        "p": 0.006500000000000001
+      },
+      {
+        "t": "2026-01-09T16:40:07.930346Z",
         "p": 0.006500000000000001
       }
     ]

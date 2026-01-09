@@ -10,11 +10,11 @@
             --card-bg: #161b22;
             --text-main: #c9d1d9;
             --text-muted: #8b949e;
-            --accent-green: #3fb950;
-            --accent-red: #f85149;
-            --accent-orange: #d29922;
-            --accent-gold: #e3b341;
+            --accent-green: #238636; /* GitHub Green */
+            --accent-red: #da3633;   /* GitHub Red */
+            --accent-yellow: #d29922; /* GitHub Yellow */
             --accent-blue: #58a6ff;
+            --accent-gray: #6e7681;
             --border: #30363d;
             --tooltip-bg: #2d333b;
         }
@@ -60,18 +60,19 @@
         .beta-low { color: var(--text-muted); }
         
         .score-val { font-weight: bold; font-size: 1.0rem; }
-        .score-high { color: var(--accent-gold); text-shadow: 0 0 5px rgba(227, 179, 65, 0.3); }
+        .score-high { color: var(--accent-green); text-shadow: 0 0 5px rgba(50, 200, 50, 0.3); } /* 녹색 */
         .score-mid { color: var(--text-main); }
         .score-low { color: var(--text-muted); }
         
-        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid transparent; }
+        /* 뱃지 기본 스타일 */
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid transparent; margin-right: 4px; margin-bottom: 2px;}
         
-        /* 색상 정의 */
-        .tag-hot { background: rgba(248, 81, 73, 0.2); color: #f85149; border-color: rgba(248, 81, 73, 0.4); } /* 빨강 */
-        .tag-orange { background: rgba(210, 153, 34, 0.2); color: #d29922; border-color: rgba(210, 153, 34, 0.4); } /* 주황 */
-        .tag-gold { background: rgba(227, 179, 65, 0.2); color: #e3b341; border-color: rgba(227, 179, 65, 0.4); } /* 금색 */
-        .tag-good { background: rgba(63, 185, 80, 0.2); color: #3fb950; border-color: rgba(63, 185, 80, 0.4); } /* 초록 */
-        .tag-wait { background: rgba(139, 148, 158, 0.2); color: #8b949e; border-color: rgba(139, 148, 158, 0.4); } /* 회색 */
+        /* [색상 정의 - 신호등 시스템] */
+        .tag-red { background: rgba(218, 54, 51, 0.15); color: #f85149; border-color: rgba(218, 54, 51, 0.4); } /* 위험 */
+        .tag-yellow { background: rgba(210, 153, 34, 0.15); color: #d29922; border-color: rgba(210, 153, 34, 0.4); } /* 주의 */
+        .tag-green { background: rgba(35, 134, 54, 0.15); color: #3fb950; border-color: rgba(35, 134, 54, 0.4); } /* 안전 */
+        .tag-gray { background: rgba(110, 118, 129, 0.15); color: #8b949e; border-color: rgba(110, 118, 129, 0.4); } /* 대기 */
+
     </style>
 </head>
 <body>
@@ -124,6 +125,45 @@
         return `<svg class="sparkline-container" viewBox="0 0 ${width} ${height}"><path d="${pathD}" stroke="${color}" /></svg>`;
     }
 
+    // [핵심] 상태에 따라 뱃지 HTML을 생성하는 함수
+    function getStatusBadges(stateString, dataCount) {
+        if (!stateString || stateString === "Initializing") {
+            return `<span class="tag tag-gray">⏳ Initializing (${dataCount})</span>`;
+        }
+
+        // "Fragile | Coupled" 같은 문자열을 쪼갬
+        const states = stateString.split(' | ');
+        let badgesHtml = '';
+
+        states.forEach(state => {
+            let badgeClass = 'tag-gray';
+            let icon = '';
+
+            state = state.trim();
+
+            if (state === 'Solid' || state === 'Consolidated') {
+                badgeClass = 'tag-green';
+                icon = '🛡️ ';
+            } else if (state === 'Coupled') {
+                badgeClass = 'tag-yellow';
+                icon = '🔗 ';
+            } else if (state === 'Fragile' || state === 'Volatile') {
+                badgeClass = 'tag-red';
+                icon = '🔥 ';
+            } else if (state === 'Dormant') {
+                badgeClass = 'tag-gray';
+                icon = '💤 ';
+            } else if (state === 'Static') {
+                badgeClass = 'tag-gray'; // Static은 회색으로 처리 (안정적이지만 활성x)
+                icon = '⚖️ ';
+            }
+
+            badgesHtml += `<span class="tag ${badgeClass}">${icon}${state}</span>`;
+        });
+
+        return badgesHtml;
+    }
+
     function renderTable(markets) {
         let html = `
             <table class="market-table">
@@ -143,7 +183,7 @@
                         </th>
                         <th style="width: 20%">
                             Status
-                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Solid: Safe & Deep&#10;• Fragile: Low liquidity / Risky&#10;• Coupled: Moving with Crypto">ⓘ</span>
+                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Solid: Safe (Green)&#10;• Coupled: BTC-Linked (Yellow)&#10;• Fragile: Risky (Red)">ⓘ</span>
                         </th>
                     </tr>
                 </thead>
@@ -171,35 +211,8 @@
                 else if (m.nexus_score >= 50) scoreClass = 'score-mid';
             }
 
-            // [아이콘 및 색상 로직]
-            let statusText = m.market_state || "Initializing";
-            let badgeClass = "tag-wait"; 
-            let icon = ""; // 기본 아이콘 없음
-
-            // 1. Fragile (가장 위험, 최우선)
-            if (statusText.includes("Fragile") || statusText.includes("Volatile")) {
-                badgeClass = "tag-hot"; // 빨강
-                icon = "🔥 ";
-                // Fragile하면서 Coupled면 아이콘 두 개 표시
-                if (statusText.includes("Coupled")) {
-                    icon = "🔥🔗 ";
-                }
-            } 
-            // 2. Coupled (중간 위험)
-            else if (statusText.includes("Coupled")) {
-                badgeClass = "tag-orange"; // 주황
-                icon = "🔗 ";
-            } 
-            // 3. Solid / Stable (안전)
-            else if (statusText.includes("Solid") || statusText.includes("Consolidated")) {
-                badgeClass = "tag-gold"; // 금색
-                icon = "🛡️ ";
-            } else if (statusText.includes("Stable") || statusText.includes("Static")) {
-                badgeClass = "tag-good"; // 초록
-                icon = "⚖️ ";
-            }
-
-            let statusBadge = `<span class="tag ${badgeClass}">${icon}${statusText}</span>`;
+            // [변경] 뱃지 생성 함수 호출
+            let statusBadges = getStatusBadges(m.market_state, m.data_count);
 
             html += `
                 <tr>
@@ -215,7 +228,7 @@
                     <td style="color: var(--text-muted);">${volDisplay}</td>
                     <td><span class="beta-val ${betaClass}">${betaDisplay}</span></td>
                     <td><span class="score-val ${scoreClass}">${scoreDisplay}</span></td>
-                    <td>${statusBadge}</td>
+                    <td>${statusBadges}</td>
                 </tr>
             `;
         });

@@ -10,13 +10,15 @@
             --card-bg: #161b22;
             --text-main: #c9d1d9;
             --text-muted: #8b949e;
-            --accent-green: #238636; /* GitHub Green */
-            --accent-red: #da3633;   /* GitHub Red */
-            --accent-yellow: #d29922; /* GitHub Yellow */
             --accent-blue: #58a6ff;
-            --accent-gray: #6e7681;
             --border: #30363d;
             --tooltip-bg: #2d333b;
+            
+            /* [수정] 톤다운된 색상 (기관 스타일) */
+            --status-solid: #238636;
+            --status-coupled: #9e6a03; 
+            --status-fragile: #da3633;
+            --status-neutral: #6e7681;
         }
         body {
             background-color: var(--bg-color);
@@ -30,48 +32,53 @@
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
         }
-        h1 { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        h1 { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .live-dot {
-            width: 10px; height: 10px; background: var(--accent-green);
-            border-radius: 50%; box-shadow: 0 0 10px var(--accent-green);
-            animation: pulse 2s infinite;
+            width: 8px; height: 8px; background: var(--accent-blue);
+            border-radius: 50%; 
+            /* 애니메이션 제거 (너무 눈에 띔) */
         }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        .status-badge { font-size: 0.8rem; background: var(--card-bg); padding: 5px 10px; border-radius: 4px; border: 1px solid var(--border); }
-        .market-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 6px; overflow: visible; font-size: 0.9rem; }
-        th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        th { background-color: #21262d; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; }
+        .status-badge { font-size: 0.8rem; color: var(--text-muted); }
+        
+        .market-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        th { color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
         tr:hover { background-color: #21262d; }
         
-        .info-icon { display: inline-block; margin-left: 4px; cursor: default; color: var(--accent-blue); font-size: 12px; position: relative; vertical-align: 1px; opacity: 0.8; transition: opacity 0.2s; }
-        .info-icon:hover { opacity: 1; }
-        .info-icon:hover::after { content: attr(data-tooltip); position: absolute; bottom: 160%; left: 50%; transform: translateX(-50%); background: var(--tooltip-bg); color: #fff; padding: 10px 14px; border-radius: 6px; font-size: 0.75rem; line-height: 1.5; white-space: pre-wrap; width: 240px; box-shadow: 0 8px 20px rgba(0,0,0,0.6); border: 1px solid var(--border); z-index: 1000; text-align: left; text-transform: none; font-weight: normal; }
-        .info-icon:hover::before { content: ''; position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%); border-width: 6px; border-style: solid; border-color: var(--tooltip-bg) transparent transparent transparent; z-index: 1000; }
+        .info-icon { margin-left: 4px; color: var(--text-muted); font-size: 11px; cursor: default; }
+        .info-icon:hover { color: var(--text-main); }
+        .info-icon:hover::after {
+            content: attr(data-tooltip);
+            position: absolute; bottom: 150%; left: 50%; transform: translateX(-50%);
+            background: var(--tooltip-bg); color: #fff; padding: 8px 12px; border-radius: 4px;
+            font-size: 0.75rem; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            border: 1px solid var(--border); z-index: 1000; text-transform: none; font-weight: 400;
+        }
 
-        .price { font-weight: bold; color: #fff; font-size: 1.1rem; }
-        .change-pos { color: var(--accent-green); }
-        .change-neg { color: var(--accent-red); }
+        .price { font-weight: 600; color: #fff; }
+        .change { font-size: 0.8rem; margin-left: 5px; }
+        .change-pos { color: var(--status-solid); }
+        .change-neg { color: var(--status-fragile); }
+        
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
-        .sparkline-container { width: 120px; height: 40px; }
-        path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        .sparkline-container { width: 100px; height: 30px; }
+        /* [수정] 스파크라인 단색 처리 */
+        path { fill: none; stroke-width: 1.5; stroke: var(--text-muted); vector-effect: non-scaling-stroke; }
         
-        .beta-val { font-weight: bold; }
-        .beta-high { color: var(--accent-orange); } 
-        .beta-low { color: var(--text-muted); }
+        /* [수정] 점수 및 베타 색상 제거 (중립적) */
+        .metric-val { font-family: monospace; color: var(--text-main); }
         
-        .score-val { font-weight: bold; font-size: 1.0rem; }
-        .score-high { color: var(--accent-green); text-shadow: 0 0 5px rgba(50, 200, 50, 0.3); } /* 녹색 */
-        .score-mid { color: var(--text-main); }
-        .score-low { color: var(--text-muted); }
-        
-        /* 뱃지 기본 스타일 */
-        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid transparent; margin-right: 4px; margin-bottom: 2px;}
-        
-        /* [색상 정의 - 신호등 시스템] */
-        .tag-red { background: rgba(218, 54, 51, 0.15); color: #f85149; border-color: rgba(218, 54, 51, 0.4); } /* 위험 */
-        .tag-yellow { background: rgba(210, 153, 34, 0.15); color: #d29922; border-color: rgba(210, 153, 34, 0.4); } /* 주의 */
-        .tag-green { background: rgba(35, 134, 54, 0.15); color: #3fb950; border-color: rgba(35, 134, 54, 0.4); } /* 안전 */
-        .tag-gray { background: rgba(110, 118, 129, 0.15); color: #8b949e; border-color: rgba(110, 118, 129, 0.4); } /* 대기 */
+        /* [수정] 뱃지 스타일 (아이콘 제거, 은은하게) */
+        .tag { 
+            display: inline-block; padding: 2px 6px; border-radius: 3px; 
+            font-size: 0.7rem; font-weight: 500; letter-spacing: 0.5px;
+            border: 1px solid; 
+            margin-right: 4px;
+        }
+        .tag-solid { color: var(--status-solid); border-color: rgba(35, 134, 54, 0.3); background: rgba(35, 134, 54, 0.1); }
+        .tag-coupled { color: var(--status-coupled); border-color: rgba(158, 106, 3, 0.3); background: rgba(158, 106, 3, 0.1); }
+        .tag-fragile { color: var(--status-fragile); border-color: rgba(218, 54, 51, 0.3); background: rgba(218, 54, 51, 0.1); }
+        .tag-gray { color: var(--status-neutral); border-color: rgba(110, 118, 129, 0.3); background: rgba(110, 118, 129, 0.1); }
 
     </style>
 </head>
@@ -79,18 +86,18 @@
 <div class="container">
     <header>
         <div>
-            <h1><div class="live-dot"></div> Poly-Nexus Terminal</h1>
-            <small style="color: var(--text-muted);">Institutional Grade Market Intelligence</small>
+            <h1><div class="live-dot"></div> Poly-Nexus</h1>
+            <small style="color: var(--text-muted);">Market Structure & Liquidity Observatory</small>
         </div>
         <div class="status-badge" id="last-updated">Syncing...</div>
     </header>
-    <div id="app"><div class="loading">📡 Connecting to Satellite Feed...</div></div>
+    <div id="app"><div class="loading">Loading Data Feed...</div></div>
 </div>
 <script>
     async function fetchIntelligence() {
         try {
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
-            if (!response.ok) throw new Error("Data fetch failed");
+            if (!response.ok) throw new Error("Feed unavailable");
             const data = await response.json();
             renderTable(data);
             
@@ -102,16 +109,16 @@
                     hour12: false, timeZoneName: 'shortOffset'
                 };
                 const timeString = serverTime.toLocaleString('en-US', timeOptions);
-                document.getElementById('last-updated').innerText = `Last Sync: ${timeString}`;
+                document.getElementById('last-updated').innerText = `Updated: ${timeString}`;
             }
         } catch (error) {
-            document.getElementById('app').innerHTML = `<div class="loading" style="color: var(--accent-red)">❌ System Offline: ${error.message}</div>`;
+            document.getElementById('app').innerHTML = `<div class="loading">System Offline</div>`;
         }
     }
 
-    function createSparkline(dataPoints, isPositive) {
+    function createSparkline(dataPoints) {
         if (!dataPoints || dataPoints.length < 2) return '';
-        const width = 120; const height = 40;
+        const width = 100; const height = 30;
         const prices = dataPoints.map(d => d.p);
         const min = Math.min(...prices); const max = Math.max(...prices);
         const range = max - min || 1;
@@ -121,46 +128,26 @@
             const y = height - ((p - min) / range) * height;
             pathD += `${i === 0 ? 'M' : 'L'} ${x} ${y} `;
         });
-        const color = isPositive ? 'var(--accent-green)' : 'var(--accent-red)';
-        return `<svg class="sparkline-container" viewBox="0 0 ${width} ${height}"><path d="${pathD}" stroke="${color}" /></svg>`;
+        // 색상 로직 제거 (중립적)
+        return `<svg class="sparkline-container" viewBox="0 0 ${width} ${height}"><path d="${pathD}" /></svg>`;
     }
 
-    // [핵심] 상태에 따라 뱃지 HTML을 생성하는 함수
     function getStatusBadges(stateString, dataCount) {
         if (!stateString || stateString === "Initializing") {
-            return `<span class="tag tag-gray">⏳ Initializing (${dataCount})</span>`;
+            return `<span class="tag tag-gray">INIT (${dataCount})</span>`;
         }
-
-        // "Fragile | Coupled" 같은 문자열을 쪼갬
         const states = stateString.split(' | ');
         let badgesHtml = '';
-
         states.forEach(state => {
-            let badgeClass = 'tag-gray';
-            let icon = '';
-
             state = state.trim();
-
-            if (state === 'Solid' || state === 'Consolidated') {
-                badgeClass = 'tag-green';
-                icon = '🛡️ ';
-            } else if (state === 'Coupled') {
-                badgeClass = 'tag-yellow';
-                icon = '🔗 ';
-            } else if (state === 'Fragile' || state === 'Volatile') {
-                badgeClass = 'tag-red';
-                icon = '🔥 ';
-            } else if (state === 'Dormant') {
-                badgeClass = 'tag-gray';
-                icon = '💤 ';
-            } else if (state === 'Static') {
-                badgeClass = 'tag-gray'; // Static은 회색으로 처리 (안정적이지만 활성x)
-                icon = '⚖️ ';
-            }
-
-            badgesHtml += `<span class="tag ${badgeClass}">${icon}${state}</span>`;
+            let badgeClass = 'tag-gray';
+            // 워딩 그대로 사용하되 스타일만 매핑
+            if (state === 'Solid' || state === 'Consolidated') badgeClass = 'tag-solid';
+            else if (state === 'Coupled') badgeClass = 'tag-coupled';
+            else if (state === 'Fragile' || state === 'Volatile') badgeClass = 'tag-fragile';
+            
+            badgesHtml += `<span class="tag ${badgeClass}">${state.toUpperCase()}</span>`;
         });
-
         return badgesHtml;
     }
 
@@ -169,66 +156,41 @@
             <table class="market-table">
                 <thead>
                     <tr>
-                        <th style="width: 30%">Market</th>
+                        <th style="width: 35%">Market / ID</th>
                         <th style="width: 10%">Price</th>
-                        <th style="width: 10%">Trend (4H)</th>
-                        <th style="width: 10%" data-tooltip="Total Trading Volume (USDC)">Volume</th>
-                        <th style="width: 10%">
-                            Beta (BTC)
-                            <span class="info-icon" data-tooltip="Correlation with Bitcoin price.&#10;• > 0.5: Highly correlated (Follows BTC)&#10;• < 0: Inverse correlation">ⓘ</span>
-                        </th>
-                        <th style="width: 10%">
-                            Nexus Score
-                            <span class="info-icon" data-tooltip="Structural Integrity Score (0-100).&#10;Based on Liquidity Depth, Spread tightness, and Volatility decay.&#10;Higher is better.">ⓘ</span>
-                        </th>
-                        <th style="width: 20%">
-                            Status
-                            <span class="info-icon" data-tooltip="Current Market Regime.&#10;• Solid: Safe (Green)&#10;• Coupled: BTC-Linked (Yellow)&#10;• Fragile: Risky (Red)">ⓘ</span>
-                        </th>
+                        <th style="width: 10%">Variability (4H)<span class="info-icon" data-tooltip="Price movement trace">ⓘ</span></th>
+                        <th style="width: 10%">Volume<span class="info-icon" data-tooltip="Total Volume (USDC)">ⓘ</span></th>
+                        <th style="width: 10%">Co-movement<span class="info-icon" data-tooltip="Correlation coefficient with BTC">ⓘ</span></th>
+                        <th style="width: 10%">Score<span class="info-icon" data-tooltip="Structural Stability Index (0-100)">ⓘ</span></th>
+                        <th style="width: 15%">Regime<span class="info-icon" data-tooltip="Market State Classification">ⓘ</span></th>
                     </tr>
                 </thead>
                 <tbody>
         `;
 
         markets.forEach(m => {
-            const volDisplay = (m.volume && m.volume > 0) ? '$' + parseInt(m.volume).toLocaleString() : '-';
-            const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
+            const volDisplay = (m.volume && m.volume > 0) ? (m.volume / 1000000).toFixed(1) + 'M' : '-';
             const changeSign = m.change_since_start >= 0 ? '+' : '';
-            const isPositive = m.change_since_start >= 0;
+            const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
             
-            let betaDisplay = '-';
-            let betaClass = 'beta-low';
-            if (m.beta !== undefined) {
-                betaDisplay = m.beta.toFixed(2);
-                if (Math.abs(m.beta) > 0.5) betaClass = 'beta-high';
-            }
-            
-            let scoreDisplay = '-';
-            let scoreClass = 'score-low';
-            if (m.nexus_score !== undefined) {
-                scoreDisplay = m.nexus_score;
-                if (m.nexus_score >= 80) scoreClass = 'score-high';
-                else if (m.nexus_score >= 50) scoreClass = 'score-mid';
-            }
-
-            // [변경] 뱃지 생성 함수 호출
-            let statusBadges = getStatusBadges(m.market_state, m.data_count);
+            let betaDisplay = (m.beta !== undefined) ? m.beta.toFixed(2) : '-';
+            let scoreDisplay = (m.nexus_score !== undefined) ? m.nexus_score : '-';
 
             html += `
                 <tr>
                     <td>
-                        <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">${m.question}</div>
-                        <small style="color: var(--text-muted)">ID: ${m.id}</small>
+                        <div style="font-weight: 500; margin-bottom: 2px;">${m.question}</div>
+                        <small style="color: var(--text-muted); font-size: 0.75rem;">${m.id}</small>
                     </td>
                     <td>
-                        <div class="price">${(m.current_price * 100).toFixed(1)}¢</div>
-                        <small class="${changeClass}">${changeSign}${m.change_since_start}%</small>
+                        <span class="price">${(m.current_price * 100).toFixed(1)}¢</span>
+                        <span class="change ${changeClass}">${changeSign}${m.change_since_start}%</span>
                     </td>
-                    <td>${createSparkline(m.sparkline, isPositive)}</td>
-                    <td style="color: var(--text-muted);">${volDisplay}</td>
-                    <td><span class="beta-val ${betaClass}">${betaDisplay}</span></td>
-                    <td><span class="score-val ${scoreClass}">${scoreDisplay}</span></td>
-                    <td>${statusBadges}</td>
+                    <td>${createSparkline(m.sparkline)}</td>
+                    <td class="metric-val">${volDisplay}</td>
+                    <td class="metric-val">${betaDisplay}</td>
+                    <td class="metric-val">${scoreDisplay}</td>
+                    <td>${getStatusBadges(m.market_state, m.data_count)}</td>
                 </tr>
             `;
         });

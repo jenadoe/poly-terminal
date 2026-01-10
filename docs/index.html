@@ -10,11 +10,15 @@
             --card-bg: #161b22;
             --text-main: #c9d1d9;
             --text-muted: #8b949e;
+            --accent-green: #3fb950;
+            --accent-red: #f85149;
+            --accent-orange: #d29922;
+            --accent-gold: #e3b341;
             --accent-blue: #58a6ff;
             --border: #30363d;
             --tooltip-bg: #2d333b;
             
-            /* [수정] 톤다운된 색상 (기관 스타일) */
+            /* [Bloomberg Grey 스타일] */
             --status-solid: #238636;
             --status-coupled: #9e6a03; 
             --status-fragile: #da3633;
@@ -31,30 +35,46 @@
         header {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
+            flex-wrap: wrap; /* 모바일에서 줄바꿈 */
+            gap: 10px;
         }
         h1 { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .live-dot {
             width: 8px; height: 8px; background: var(--accent-blue);
             border-radius: 50%; 
-            /* 애니메이션 제거 (너무 눈에 띔) */
         }
         .status-badge { font-size: 0.8rem; color: var(--text-muted); }
         
-        .market-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        th { color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        /* [수정] 모바일 가로 스크롤 지원 */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .market-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.85rem; 
+            background: var(--card-bg);
+            min-width: 800px; /* 최소 너비 지정하여 찌그러짐 방지 */
+        }
+        th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        th { color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; background: #21262d; white-space: nowrap; }
         tr:hover { background-color: #21262d; }
         
-        .info-icon { margin-left: 4px; color: var(--text-muted); font-size: 11px; cursor: default; }
+        .info-icon { margin-left: 4px; color: var(--text-muted); font-size: 11px; cursor: default; display: inline-block;}
         .info-icon:hover { color: var(--text-main); }
+        /* 툴팁 위치 조정 */
         .info-icon:hover::after {
             content: attr(data-tooltip);
             position: absolute; bottom: 150%; left: 50%; transform: translateX(-50%);
             background: var(--tooltip-bg); color: #fff; padding: 8px 12px; border-radius: 4px;
-            font-size: 0.75rem; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            font-size: 0.75rem; width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
             border: 1px solid var(--border); z-index: 1000; text-transform: none; font-weight: 400;
+            white-space: pre-wrap;
         }
-
+        
         .price { font-weight: 600; color: #fff; }
         .change { font-size: 0.8rem; margin-left: 5px; }
         .change-pos { color: var(--status-solid); }
@@ -62,18 +82,16 @@
         
         .loading { text-align: center; padding: 50px; color: var(--text-muted); }
         .sparkline-container { width: 100px; height: 30px; }
-        /* [수정] 스파크라인 단색 처리 */
         path { fill: none; stroke-width: 1.5; stroke: var(--text-muted); vector-effect: non-scaling-stroke; }
         
-        /* [수정] 점수 및 베타 색상 제거 (중립적) */
         .metric-val { font-family: monospace; color: var(--text-main); }
         
-        /* [수정] 뱃지 스타일 (아이콘 제거, 은은하게) */
         .tag { 
             display: inline-block; padding: 2px 6px; border-radius: 3px; 
             font-size: 0.7rem; font-weight: 500; letter-spacing: 0.5px;
             border: 1px solid; 
-            margin-right: 4px;
+            margin-right: 4px; margin-bottom: 2px;
+            white-space: nowrap;
         }
         .tag-solid { color: var(--status-solid); border-color: rgba(35, 134, 54, 0.3); background: rgba(35, 134, 54, 0.1); }
         .tag-coupled { color: var(--status-coupled); border-color: rgba(158, 106, 3, 0.3); background: rgba(158, 106, 3, 0.1); }
@@ -91,14 +109,32 @@
         </div>
         <div class="status-badge" id="last-updated">Syncing...</div>
     </header>
-    <div id="app"><div class="loading">Loading Data Feed...</div></div>
+    
+    <!-- [수정] 테이블을 감싸는 래퍼 추가 (모바일 스크롤용) -->
+    <div id="app" class="table-wrapper">
+        <div class="loading">Loading Data Feed...</div>
+    </div>
+    
+    <!-- Footer 추가 (법적 방어용) -->
+    <footer style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.7rem; line-height: 1.5; text-align: center;">
+        <p><strong>Disclaimer:</strong> Poly-Nexus is an independent research tool and is not affiliated with Polymarket.</p>
+        <p>Metrics provided (Nexus Score, Beta) are for informational purposes only and do not constitute financial advice.</p>
+        <p>&copy; 2026 Poly-Nexus Research.</p>
+    </footer>
 </div>
+
 <script>
     async function fetchIntelligence() {
         try {
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Feed unavailable");
             const data = await response.json();
+            
+            if (!data || data.length === 0) {
+                document.getElementById('app').innerHTML = `<div class="loading">No Active Market Data Available</div>`;
+                return;
+            }
+
             renderTable(data);
             
             if (data.length > 0) {
@@ -128,7 +164,6 @@
             const y = height - ((p - min) / range) * height;
             pathD += `${i === 0 ? 'M' : 'L'} ${x} ${y} `;
         });
-        // 색상 로직 제거 (중립적)
         return `<svg class="sparkline-container" viewBox="0 0 ${width} ${height}"><path d="${pathD}" /></svg>`;
     }
 
@@ -141,10 +176,10 @@
         states.forEach(state => {
             state = state.trim();
             let badgeClass = 'tag-gray';
-            // 워딩 그대로 사용하되 스타일만 매핑
             if (state === 'Solid' || state === 'Consolidated') badgeClass = 'tag-solid';
             else if (state === 'Coupled') badgeClass = 'tag-coupled';
             else if (state === 'Fragile' || state === 'Volatile') badgeClass = 'tag-fragile';
+            else if (state === 'Static') badgeClass = 'tag-gray';
             
             badgesHtml += `<span class="tag ${badgeClass}">${state.toUpperCase()}</span>`;
         });
@@ -158,10 +193,10 @@
                     <tr>
                         <th style="width: 35%">Market / ID</th>
                         <th style="width: 10%">Price</th>
-                        <th style="width: 10%">Variability (4H)<span class="info-icon" data-tooltip="Price movement trace">ⓘ</span></th>
+                        <th style="width: 10%">Variability<span class="info-icon" data-tooltip="4H Price action trace">ⓘ</span></th>
                         <th style="width: 10%">Volume<span class="info-icon" data-tooltip="Total Volume (USDC)">ⓘ</span></th>
-                        <th style="width: 10%">Co-movement<span class="info-icon" data-tooltip="Correlation coefficient with BTC">ⓘ</span></th>
-                        <th style="width: 10%">Score<span class="info-icon" data-tooltip="Structural Stability Index (0-100)">ⓘ</span></th>
+                        <th style="width: 10%">Co-movement<span class="info-icon" data-tooltip="Beta with BTC (-1 to 1).&#10;>0.5 indicates high correlation.">ⓘ</span></th>
+                        <th style="width: 10%">Score<span class="info-icon" data-tooltip="Nexus Score (0-100).&#10;Structural stability index.">ⓘ</span></th>
                         <th style="width: 15%">Regime<span class="info-icon" data-tooltip="Market State Classification">ⓘ</span></th>
                     </tr>
                 </thead>
@@ -169,7 +204,11 @@
         `;
 
         markets.forEach(m => {
-            const volDisplay = (m.volume && m.volume > 0) ? (m.volume / 1000000).toFixed(1) + 'M' : '-';
+            // [수정] .0M 제거하고 깔끔하게 표시
+            const volDisplay = (m.volume && m.volume > 0) 
+                ? (m.volume / 1000000).toFixed(1).replace('.0', '') + 'M' 
+                : '-';
+                
             const changeSign = m.change_since_start >= 0 ? '+' : '';
             const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
             

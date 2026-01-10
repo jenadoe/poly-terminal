@@ -43,15 +43,14 @@
         }
         .status-badge { font-size: 0.8rem; color: var(--text-muted); }
         
-        /* [수정] 모바일 스크롤: 기본은 visible(보임)로 설정 */
         .table-wrapper {
             width: 100%;
-            overflow-x: visible; /* PC에서는 잘림 없이 다 보여줌 */
+            overflow-x: visible;
             border-radius: 6px;
             border: 1px solid var(--border);
+            margin-bottom: 40px;
         }
         
-        /* [수정] 화면이 작을 때만 스크롤 생성 */
         @media (max-width: 1000px) {
             .table-wrapper {
                 overflow-x: auto;
@@ -73,21 +72,19 @@
         .info-icon { margin-left: 4px; color: var(--text-muted); font-size: 11px; cursor: help; display: inline-block; position: relative; }
         .info-icon:hover { color: var(--text-main); }
         
-        /* [수정] 툴팁 위치 및 z-index 강화 */
         .info-icon:hover::after {
             content: attr(data-tooltip);
             position: absolute; 
-            top: 150%; /* 위쪽 대신 아래쪽으로 띄움 (잘림 방지) */
+            top: 150%; 
             left: 50%; transform: translateX(-50%);
             background: var(--tooltip-bg); color: #fff; padding: 8px 12px; border-radius: 4px;
             font-size: 0.75rem; width: 200px; box-shadow: 0 4px 15px rgba(0,0,0,0.8);
             border: 1px solid var(--border); z-index: 9999; text-transform: none; font-weight: 400;
             white-space: pre-wrap;
         }
-        /* 말풍선 꼬리 (위쪽을 향함) */
         .info-icon:hover::before { 
             content: ''; position: absolute; 
-            top: 110%; /* 아이콘 바로 아래 */
+            top: 110%; 
             left: 50%; transform: translateX(-50%); 
             border-width: 6px; border-style: solid; 
             border-color: transparent transparent var(--tooltip-bg) transparent; 
@@ -116,6 +113,10 @@
         .tag-fragile { color: var(--status-fragile); border-color: rgba(218, 54, 51, 0.3); background: rgba(218, 54, 51, 0.1); }
         .tag-gray { color: var(--status-neutral); border-color: rgba(110, 118, 129, 0.3); background: rgba(110, 118, 129, 0.1); }
 
+        /* 로그 테이블 스타일 */
+        .log-header { color: var(--text-main); font-weight: 500; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; }
+        .log-empty { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 30px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+
     </style>
 </head>
 <body>
@@ -128,8 +129,23 @@
         <div class="status-badge" id="last-updated">Syncing...</div>
     </header>
     
+    <!-- 메인 테이블 -->
     <div id="app" class="table-wrapper">
         <div class="loading">Loading Data Feed...</div>
+    </div>
+    
+    <!-- Regime Change Logs -->
+    <div style="margin-bottom: 60px;">
+        <h3 class="log-header">
+            Recent Structural Shifts
+            <span class="info-icon" data-tooltip="Real-time log of market regime transitions.&#10;Tracks when a market shifts structure (e.g., Stable → Fragile).">ⓘ</span>
+        </h3>
+        
+        <div id="regime-log" class="table-wrapper">
+            <div class="log-empty">
+                Initializing Regime Monitor...
+            </div>
+        </div>
     </div>
     
     <footer style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.7rem; line-height: 1.5; text-align: center;">
@@ -141,6 +157,7 @@
 
 <script>
     async function fetchIntelligence() {
+        // 메인 데이터
         try {
             const response = await fetch('./data/latest_intelligence.json?t=' + new Date().getTime());
             if (!response.ok) throw new Error("Feed unavailable");
@@ -148,23 +165,31 @@
             
             if (!data || data.length === 0) {
                 document.getElementById('app').innerHTML = `<div class="loading">No Active Market Data Available</div>`;
-                return;
-            }
-
-            renderTable(data);
-            
-            if (data.length > 0) {
-                const serverTime = new Date(data[0].last_updated);
-                const timeOptions = { 
-                    year: 'numeric', month: 'short', day: 'numeric', 
-                    hour: '2-digit', minute: '2-digit', second: '2-digit',
-                    hour12: false, timeZoneName: 'shortOffset'
-                };
-                const timeString = serverTime.toLocaleString('en-US', timeOptions);
-                document.getElementById('last-updated').innerText = `Updated: ${timeString}`;
+            } else {
+                renderTable(data);
+                if (data.length > 0) {
+                    const serverTime = new Date(data[0].last_updated);
+                    const timeOptions = { 
+                        year: 'numeric', month: 'short', day: 'numeric', 
+                        hour: '2-digit', minute: '2-digit', second: '2-digit',
+                        hour12: false, timeZoneName: 'shortOffset'
+                    };
+                    document.getElementById('last-updated').innerText = `Updated: ${serverTime.toLocaleString('en-US', timeOptions)}`;
+                }
             }
         } catch (error) {
             document.getElementById('app').innerHTML = `<div class="loading">System Offline</div>`;
+        }
+
+        // 로그 데이터
+        try {
+            const logResponse = await fetch('./data/regime_changes.json?t=' + new Date().getTime());
+            if (logResponse.ok) {
+                const logs = await logResponse.json();
+                renderRegimeLogs(logs);
+            }
+        } catch (e) {
+            console.log("Regime log not ready");
         }
     }
 
@@ -209,21 +234,11 @@
                     <tr>
                         <th style="width: 35%">Market / ID</th>
                         <th style="width: 10%">Price</th>
-                        <th style="width: 10%">Variability
-                            <span class="info-icon" title="Price movement trace over last 4 hours" data-tooltip="4H Price action trace">ⓘ</span>
-                        </th>
-                        <th style="width: 10%">Volume
-                            <span class="info-icon" title="Total Trading Volume (USDC)" data-tooltip="Total Volume (USDC)">ⓘ</span>
-                        </th>
-                        <th style="width: 10%">Co-movement
-                            <span class="info-icon" title="Correlation with Bitcoin price (>0.5 High)" data-tooltip="Beta with BTC (-1 to 1).&#10;>0.5 indicates high correlation.">ⓘ</span>
-                        </th>
-                        <th style="width: 10%">Score
-                            <span class="info-icon" title="Structural Stability Index (0-100)" data-tooltip="Nexus Score (0-100).&#10;Structural stability index.">ⓘ</span>
-                        </th>
-                        <th style="width: 15%">Regime
-                            <span class="info-icon" title="Market State Classification" data-tooltip="Market State Classification">ⓘ</span>
-                        </th>
+                        <th style="width: 10%">Variability<span class="info-icon" data-tooltip="4H Price action trace">ⓘ</span></th>
+                        <th style="width: 10%">Volume<span class="info-icon" data-tooltip="Total Volume (USDC)">ⓘ</span></th>
+                        <th style="width: 10%">Co-movement<span class="info-icon" data-tooltip="Beta with BTC (-1 to 1).&#10;>0.5 indicates high correlation.">ⓘ</span></th>
+                        <th style="width: 10%">Score<span class="info-icon" data-tooltip="Nexus Score (0-100).&#10;Structural stability index.">ⓘ</span></th>
+                        <th style="width: 15%">Regime<span class="info-icon" data-tooltip="Market State Classification">ⓘ</span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -233,7 +248,6 @@
             const volDisplay = (m.volume && m.volume > 0) 
                 ? (m.volume / 1000000).toFixed(1).replace('.0', '') + 'M' 
                 : '-';
-            
             const changeSign = m.change_since_start >= 0 ? '+' : '';
             const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
             
@@ -261,6 +275,51 @@
         html += `</tbody></table>`;
         document.getElementById('app').innerHTML = html;
     }
+
+    function renderRegimeLogs(logs) {
+        const container = document.getElementById('regime-log');
+        if (!logs || logs.length === 0) {
+            container.innerHTML = `
+                <div class="log-empty">
+                    No structural shifts detected in the last 24 hours. Monitoring active.
+                </div>`;
+            return;
+        }
+
+        let html = `
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th style="width: 15%">Time (UTC)</th>
+                        <th style="width: 40%">Market</th>
+                        <th style="width: 15%">From</th>
+                        <th style="width: 15%">To</th>
+                        <th style="width: 15%">Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        logs.slice(0, 10).forEach(log => {
+            const time = new Date(log.timestamp).toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit', hour12: false});
+            
+            html += `
+                <tr>
+                    <td style="color: var(--text-muted);">${time}</td>
+                    <td style="font-weight: 500;">${log.question}</td>
+                    <td style="color: var(--text-muted);">${log.from_regime}</td>
+                    <td style="font-weight: 600; color: var(--text-main);">${log.to_regime}</td>
+                    <td style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">
+                        S:${log.metrics_snapshot.nexus_score} β:${log.metrics_snapshot.beta}
+                    </td>
+                </tr>
+            `;
+        });
+
+        html += `</tbody></table>`;
+        container.innerHTML = html;
+    }
+
     fetchIntelligence();
     setInterval(fetchIntelligence, 60000);
 </script>

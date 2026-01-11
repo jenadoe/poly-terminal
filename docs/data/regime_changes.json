@@ -1,5 +1,65 @@
 [
   {
+    "timestamp": "2026-01-11T05:49:12.456692Z",
+    "market_id": "553878",
+    "question": "Will the Chicago Bulls win the 2026 NBA Finals?",
+    "from_regime": "Static",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "beta": 0.0,
+      "gravity": 1.9911710713085733
+    }
+  },
+  {
+    "timestamp": "2026-01-11T05:49:12.456692Z",
+    "market_id": "566167",
+    "question": "Will Olympiakos win the 2025\u201326 Champions League?",
+    "from_regime": "Static",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "beta": 0.0,
+      "gravity": 2.218158344588252
+    }
+  },
+  {
+    "timestamp": "2026-01-11T05:49:12.456692Z",
+    "market_id": "572489",
+    "question": "Will Trump nominate Janet Yellen as the next Fed chair?",
+    "from_regime": "Static",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "beta": 0.0,
+      "gravity": 2.604316692656482
+    }
+  },
+  {
+    "timestamp": "2026-01-11T05:49:12.456692Z",
+    "market_id": "566174",
+    "question": "Will Slavia Pragu win the 2025\u201326 Champions League?",
+    "from_regime": "Static",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "beta": 0.0,
+      "gravity": 3.440936496457313
+    }
+  },
+  {
+    "timestamp": "2026-01-11T05:49:12.456692Z",
+    "market_id": "566203",
+    "question": "Will Leeds win the 2025\u201326 English Premier League?",
+    "from_regime": "Static",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "beta": 0.0,
+      "gravity": 4.041938929944304
+    }
+  },
+  {
     "timestamp": "2026-01-11T05:26:51.970407Z",
     "market_id": "553878",
     "question": "Will the Chicago Bulls win the 2026 NBA Finals?",

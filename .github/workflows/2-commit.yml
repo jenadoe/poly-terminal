@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
-      contents: write # Public Repo에 쓸 권한
+      contents: write
 
     steps:
-      # 1. 데이터(Artifact) 다운로드
       - name: Download Data
         uses: actions/download-artifact@v4
         with:
@@ -24,7 +23,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       # ---------------------------------------------------
-      # [Mission 1] Private Repo에 비밀 장부 저장
+      # [Mission 1] Private Repo 업데이트 (창고 채우기)
       # ---------------------------------------------------
       - name: Checkout Private Brain
         uses: actions/checkout@v4
@@ -37,23 +36,32 @@ jobs:
         run: |
           cd private-brain
           
-          # 아까 다운받은 데이터 중 history만 덮어쓰기
-          cp ../temp_data/history_storage.json data_output/
+          # [수정] Wildcard(*) 안 쓰고, 필요한 파일만 콕 집어서 복사 (안전!)
+          # 1. 메인 데이터베이스
+          if [ -f ../temp_data/history_storage.json ]; then
+            cp ../temp_data/history_storage.json data_output/
+          fi
+          
+          # 2. 로그 파일
+          if [ -f ../temp_data/regime_changes.json ]; then
+            cp ../temp_data/regime_changes.json data_output/
+          fi
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
           
-          git add data_output/history_storage.json
+          git add data_output/
           
           if git diff --staged --quiet; then
             echo "No history changes."
           else
-            git commit -m "🧠 Update History [$(date)]"
+            git commit -m "🧠 Update Data Assets [$(date)]"
             git push
           fi
+          cd ..
 
       # ---------------------------------------------------
-      # [Mission 2] Public Repo에 요약본 배포
+      # [Mission 2] Public Repo 업데이트 (전시장 진열)
       # ---------------------------------------------------
       - name: Checkout Public Face
         uses: actions/checkout@v4
@@ -65,17 +73,25 @@ jobs:
           cd public-face
           mkdir -p docs/data
           
-          # 아까 다운받은 데이터 중 latest만 덮어쓰기
+          # [수정] 여기서도 필요한 것만 딱 복사! (보안 강화)
+          # 1. 최신 요약본
           cp ../temp_data/latest_intelligence.json docs/data/
+          
+          # 2. 로그 파일
+          if [ -f ../temp_data/regime_changes.json ]; then
+            cp ../temp_data/regime_changes.json docs/data/
+          fi
+          
+          # 주의: history_storage.json은 절대 가져오지 않음!
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
           
-          git add docs/data/latest_intelligence.json
+          git add docs/data/
           
           if git diff --staged --quiet; then
             echo "No public changes."
           else
-            git commit -m "📢 Update Display Data [$(date)]"
+            git commit -m "📢 Update Intelligence & Logs [$(date)]"
             git push
           fi

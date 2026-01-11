@@ -1,5 +1,17 @@
 [
   {
+    "timestamp": "2026-01-11T09:43:08.281565Z",
+    "market_id": "553874",
+    "question": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+    "from_regime": "Fragile",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 43.7,
+      "beta": -0.17,
+      "gravity": 2.242561118231867
+    }
+  },
+  {
     "timestamp": "2026-01-11T08:54:57.573033Z",
     "market_id": "553874",
     "question": "Will the Memphis Grizzlies win the 2026 NBA Finals?",

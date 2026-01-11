@@ -1,5 +1,17 @@
 [
   {
+    "timestamp": "2026-01-11T08:37:05.876895Z",
+    "market_id": "553874",
+    "question": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+    "from_regime": "Fragile",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 44.0,
+      "beta": -0.24,
+      "gravity": 2.245493800085937
+    }
+  },
+  {
     "timestamp": "2026-01-11T07:58:22.461151Z",
     "market_id": "559689",
     "question": "Will Beto O\u2019Rourke win the 2028 Democratic presidential nomination?",

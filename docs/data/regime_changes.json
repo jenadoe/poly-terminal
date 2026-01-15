@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T08:56:55.190396Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T07:29:58.252511Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.5,
       "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T11:54:28.741042Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued | Chaos",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 40.7,
-      "beta": -0.68
     }
   }
 ]

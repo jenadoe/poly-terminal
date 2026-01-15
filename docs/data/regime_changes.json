@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T21:43:07.914793Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 60.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T21:20:15.998932Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 44.7,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T23:23:07.868591Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.9,
       "beta": 0.0
     }
   }

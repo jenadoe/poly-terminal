@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T18:42:34.105090Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 80.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T17:58:05.598053Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 46.0,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T20:28:04.055088Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 64.8,
       "beta": 0.0
     }
   }

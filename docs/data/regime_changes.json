@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T22:45:56.196002Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Forming | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 49.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T22:20:32.609699Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -535,17 +546,6 @@
     "to_regime": "Overheated | Chaos | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 44.5,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T23:23:07.868591Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 56.1,
       "beta": 0.0
     }
   }

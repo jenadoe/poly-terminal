@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-15T07:29:58.252511Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T07:29:58.252511Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 86.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T06:27:22.609523Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -518,28 +540,6 @@
   },
   {
     "timestamp": "2026-01-14T11:54:28.741042Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued | Chaos",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 40.7,
-      "beta": -0.68
-    }
-  },
-  {
-    "timestamp": "2026-01-14T11:32:14.271156Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued | Chaos",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 40.8,
-      "beta": -0.68
-    }
-  },
-  {
-    "timestamp": "2026-01-14T11:22:52.823141Z",
     "market_id": "42365",
     "question": "Will the U.S. invade Venezuela by...?",
     "from_regime": "Undervalued | Chaos",

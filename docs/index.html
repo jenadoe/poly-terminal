@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poly-Nexus Terminal</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-green: #3fb950;
+            --accent-red: #f85149;
+            --accent-orange: #d29922;
+            --accent-gold: #e3b341;
+            --accent-blue: #58a6ff;
+            --border: #30363d;
+            --tooltip-bg: #2d333b;
+            
+            --status-solid: #238636;
+            --status-coupled: #9e6a03; 
+            --status-fragile: #da3633;
+            --status-neutral: #6e7681;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1600px; margin: 0 auto; }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
+            flex-wrap: wrap; gap: 10px;
+        }
+        h1 { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .live-dot {
+            width: 8px; height: 8px; background: var(--accent-blue);
+            border-radius: 50%; 
+        }
+        .status-badge { font-size: 0.8rem; color: var(--text-muted); }
+        
+        .table-wrapper {
+            width: 100%;
+            overflow-x: visible;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1000px) {
+            .table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        .market-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.85rem; 
+            background: var(--card-bg);
+            min-width: 800px; 
+        }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        th { color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; background: #21262d; }
+        tr:hover { background-color: #21262d; }
+        
+        .info-icon { margin-left: 4px; color: var(--text-muted); font-size: 11px; cursor: help; display: inline-block; position: relative; }
+        .info-icon:hover { color: var(--text-main); }
+        
+        .info-icon:hover::after {
+            content: attr(data-tooltip);
+            position: absolute; 
+            top: 150%; 
+            left: 50%; transform: translateX(-50%);
+            background: var(--tooltip-bg); color: #fff; padding: 8px 12px; border-radius: 4px;
+            font-size: 0.75rem; width: 200px; box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            border: 1px solid var(--border); z-index: 9999; text-transform: none; font-weight: 400;
+            white-space: pre-wrap;
+        }
+        .info-icon:hover::before { 
+            content: ''; position: absolute; 
+            top: 110%; 
+            left: 50%; transform: translateX(-50%); 
+            border-width: 6px; border-style: solid; 
+            border-color: transparent transparent var(--tooltip-bg) transparent; 
+            z-index: 9999; 
+        }
+        
+        .price { font-weight: 600; color: #fff; }
+        .change { font-size: 0.8rem; margin-left: 5px; }
+        .change-pos { color: var(--status-solid); }
+        .change-neg { color: var(--status-fragile); }
+        
+        .loading { text-align: center; padding: 50px; color: var(--text-muted); }
+        .sparkline-container { width: 100px; height: 30px; }
+        path { fill: none; stroke-width: 1.5; stroke: var(--text-muted); vector-effect: non-scaling-stroke; }
+        
+        .metric-val { font-family: monospace; color: var(--text-main); }
+        
+        .tag { 
+            display: inline-block; padding: 2px 6px; border-radius: 3px; 
+            font-size: 0.7rem; font-weight: 500; letter-spacing: 0.5px;
+            border: 1px solid; 
+            margin-right: 4px; margin-bottom: 2px; white-space: nowrap;
+        }
+        .tag-solid { color: var(--status-solid); border-color: rgba(35, 134, 54, 0.3); background: rgba(35, 134, 54, 0.1); }
+        .tag-coupled { color: var(--status-coupled); border-color: rgba(158, 106, 3, 0.3); background: rgba(158, 106, 3, 0.1); }
+        .tag-fragile { color: var(--status-fragile); border-color: rgba(218, 54, 51, 0.3); background: rgba(218, 54, 51, 0.1); }
+        .tag-gray { color: var(--status-neutral); border-color: rgba(110, 118, 129, 0.3); background: rgba(110, 118, 129, 0.1); }
+
+        /* 로그 테이블 스타일 */
+        .log-header { color: var(--text-main); font-weight: 500; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; }
+        .log-empty { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 30px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+
+        /* 대시보드 카드 스타일 */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .dashboard-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .dashboard-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .chart-container {
+            position: relative;
+            height: 200px;
+            width: 100%;
+        }
+        .alert-card {
+            border-color: var(--accent-orange);
+            background: rgba(210, 153, 34, 0.05);
+        }
+        .alert-card h3 {
+            color: var(--accent-orange);
+        }
+        .metric-large {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            font-family: monospace;
+        }
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div>
+            <h1><div class="live-dot"></div> Poly-Nexus</h1>
+            <small style="color: var(--text-muted);">Market Structure & Liquidity Observatory</small>
+        </div>
+        <div class="status-badge" id="last-updated">Syncing...</div>
+    </header>
+    
+    <!-- 대시보드 카드 -->
+    <div class="dashboard-grid" id="dashboard">
+        <div class="dashboard-card">
+            <h3>Market Health Index</h3>
+            <div class="metric-large" id="avg-nexus-score">-</div>
+            <div class="metric-label">Average Nexus Score</div>
+        </div>
+        <div class="dashboard-card alert-card" id="high-beta-alert" style="display: none;">
+            <h3>⚠️ High Beta Markets</h3>
+            <div id="high-beta-list" style="font-size: 0.85rem; color: var(--text-main);"></div>
+        </div>
+        <div class="dashboard-card">
+            <h3>Health Distribution</h3>
+            <div class="chart-container">
+                <canvas id="health-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 메인 테이블 -->
+    <div id="app" class="table-wrapper">
+        <div class="loading">Loading Data Feed...</div>
+    </div>
+    
+    <!-- Regime Change Logs -->
+    <div style="margin-bottom: 60px;">
+        <h3 class="log-header">
+            Recent Structural Shifts
+            <span class="info-icon" data-tooltip="Real-time log of market regime transitions.&#10;Tracks when a market shifts structure (e.g., Stable → Fragile).">ⓘ</span>
+        </h3>
+        
+        <div id="regime-log" class="table-wrapper">
+            <div class="log-empty">
+                Initializing Regime Monitor...
+            </div>
+        </div>
+    </div>
+    
+    <footer style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.7rem; line-height: 1.5; text-align: center;">
+        <p><strong>Disclaimer:</strong> Poly-Nexus is an independent research tool and is not affiliated with Polymarket.</p>
+        <p>Metrics provided (Nexus Score, Beta) are for informational purposes only and do not constitute financial advice.</p>
+        <p><a href="./terms.html" style="color: var(--accent-blue);">Terms of Use</a></p>
+        <p>&copy; 2026 Poly-Nexus Research.</p>
+    </footer>
+</div>
+
+<!-- Charts Library -->
+<script src="./assets/charts.js"></script>
+
+<script>
+    // 캐시 설정
+    const CACHE_KEY = 'poly_nexus_data';
+    const CACHE_DURATION = 5 * 60 * 1000; // 5분
+
+    // Fallback 데이터 (시스템 오프라인 시 사용)
+    const fallbackData = [
+        {
+            id: "demo",
+            question: "Demo Market (Data Feed Temporarily Unavailable)",
+            current_price: 0.5,
+            volume: 1000000,
+            nexus_score: 75.0,
+            market_state: "Demo",
+            beta: 0.0,
+            last_updated: new Date().toISOString(),
+            change_since_start: 0.0,
+            sparkline: []
+        }
+    ];
+
+    async function fetchIntelligence() {
+        const maxRetries = 3;
+        const timeout = 15000; // 타임아웃 증가
+
+        // 캐시 확인
+        const cached = getCachedData();
+        if (cached && isCacheValid(cached.timestamp)) {
+            console.log('✅ Using fresh cached data');
+            renderTable(cached.data);
+            renderDashboard(cached.data);
+            document.getElementById('last-updated').innerText = `Cached: ${new Date(cached.timestamp).toLocaleString()}`;
+            fetchRegimeLogs();
+            return;
+        }
+
+        for (let attempt = 1; attempt <= maxRetries; attempt++) {
+            try {
+                console.log(`🔄 Fetching data (attempt ${attempt}/${maxRetries})`);
+
+                const data = await loadJSONWithXHR('./data/latest_intelligence.json?' + Date.now());
+
+                if (!data || data.length === 0) {
+                    throw new Error("Empty data received");
+                }
+
+                // 성공: 캐시에 저장하고 UI 업데이트
+                setCachedData(data);
+                renderTable(data);
+                renderDashboard(data);
+
+                if (data.length > 0) {
+                    const serverTime = new Date(data[0].last_updated);
+                    const timeOptions = {
+                        year: 'numeric', month: 'short', day: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit',
+                        hour12: false, timeZoneName: 'shortOffset'
+                    };
+                    document.getElementById('last-updated').innerText = `Updated: ${serverTime.toLocaleString('en-US', timeOptions)}`;
+                }
+
+                fetchRegimeLogs();
+                return;
+
+            } catch (error) {
+                console.warn(`❌ Data fetch attempt ${attempt}/${maxRetries} failed:`, error.message);
+
+                if (attempt === maxRetries) {
+                    // 모든 시도 실패 - 캐시된 데이터 사용 또는 Fallback
+                    if (cached) {
+                        console.log("⚠️ Using stale cached data");
+                        renderTable(cached.data);
+                        renderDashboard(cached.data);
+                        document.getElementById('last-updated').innerText = `Stale Cache: ${new Date(cached.timestamp).toLocaleString()}`;
+                    } else {
+                        console.log("💥 All attempts failed, using fallback data");
+                        showOfflineMode();
+                    }
+                } else {
+                    await new Promise(resolve => setTimeout(resolve, 2000 * attempt));
+                }
+            }
+        }
+    }
+
+    function loadJSONWithXHR(url) {
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            const timeoutId = setTimeout(() => {
+                xhr.abort();
+                reject(new Error('Request timeout'));
+            }, 15000);
+
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Cache-Control', 'no-cache');
+
+            xhr.onload = function() {
+                clearTimeout(timeoutId);
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    try {
+                        const data = JSON.parse(xhr.responseText);
+                        console.log(`📦 Loaded ${data.length} markets`);
+                        resolve(data);
+                    } catch (e) {
+                        console.error('❌ JSON parsing error:', e);
+                        reject(new Error('JSON parsing failed'));
+                    }
+                } else {
+                    reject(new Error(`HTTP ${xhr.status}: ${xhr.statusText}`));
+                }
+            };
+
+            xhr.onerror = function() {
+                clearTimeout(timeoutId);
+                reject(new Error('Network error'));
+            };
+
+            xhr.onabort = function() {
+                clearTimeout(timeoutId);
+                reject(new Error('Request aborted'));
+            };
+
+            xhr.send();
+        });
+    }
+
+    function getCachedData() {
+        try {
+            const cached = localStorage.getItem(CACHE_KEY);
+            return cached ? JSON.parse(cached) : null;
+        } catch (e) {
+            console.warn('⚠️ Cache read error:', e);
+            return null;
+        }
+    }
+
+    function setCachedData(data) {
+        try {
+            const cacheEntry = {
+                data: data,
+                timestamp: Date.now()
+            };
+            localStorage.setItem(CACHE_KEY, JSON.stringify(cacheEntry));
+            console.log('💾 Data cached successfully');
+        } catch (e) {
+            console.warn('⚠️ Cache write error:', e);
+        }
+    }
+
+    function isCacheValid(timestamp) {
+        return Date.now() - timestamp < CACHE_DURATION;
+    }
+
+    function showOfflineMode() {
+        // Fallback 데이터로 표시
+        renderTable(fallbackData);
+        renderDashboard(fallbackData);
+        document.getElementById('last-updated').innerText = `Offline Mode - ${new Date().toLocaleTimeString()}`;
+
+        // 1분 후 자동 재시도
+        setTimeout(() => {
+            console.log("Retrying data fetch after offline mode");
+            fetchIntelligence();
+        }, 60000);
+    }
+
+    async function fetchRegimeLogs() {
+        try {
+            const logResponse = await fetch('./data/regime_changes.json?t=' + new Date().getTime(), {
+                cache: 'no-cache'
+            });
+            if (logResponse.ok) {
+                const logs = await logResponse.json();
+                renderRegimeLogs(logs);
+            }
+        } catch (e) {
+            console.log("Regime log fetch failed:", e.message);
+            // 로그가 없어도 메인 기능은 계속 작동
+        }
+    }
+
+    function createSparkline(dataPoints) {
+        if (!dataPoints || dataPoints.length < 2) return '';
+        const width = 100; const height = 30;
+        const prices = dataPoints.map(d => d.p);
+        const min = Math.min(...prices); const max = Math.max(...prices);
+        const range = max - min || 1;
+        let pathD = "";
+        prices.forEach((p, i) => {
+            const x = (i / (prices.length - 1)) * width;
+            const y = height - ((p - min) / range) * height;
+            pathD += `${i === 0 ? 'M' : 'L'} ${x} ${y} `;
+        });
+        return `<svg class="sparkline-container" viewBox="0 0 ${width} ${height}"><path d="${pathD}" /></svg>`;
+    }
+
+    function getStatusBadges(stateString) {
+        if (!stateString || stateString === "Initializing") {
+            return `<span class="tag tag-gray">INIT</span>`;
+        }
+        const states = stateString.split(' | ');
+        let badgesHtml = '';
+        states.forEach(state => {
+            state = state.trim();
+            let badgeClass = 'tag-gray';
+            if (state === 'Solid' || state === 'Consolidated') badgeClass = 'tag-solid';
+            else if (state === 'Coupled') badgeClass = 'tag-coupled';
+            else if (state === 'Fragile' || state === 'Volatile') badgeClass = 'tag-fragile';
+            else if (state === 'Static') badgeClass = 'tag-gray';
+
+            badgesHtml += `<span class="tag ${badgeClass}">${state.toUpperCase()}</span>`;
+        });
+        return badgesHtml;
+    }
+
+    function renderTable(markets) {
+        let html = `
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%">Market / ID</th>
+                        <th style="width: 10%">Price</th>
+                        <th style="width: 10%">Variability<span class="info-icon" data-tooltip="4H Price action trace">ⓘ</span></th>
+                        <th style="width: 10%">Volume<span class="info-icon" data-tooltip="Total Volume (USDC)">ⓘ</span></th>
+                        <th style="width: 10%">Co-movement<span class="info-icon" data-tooltip="Beta with BTC (-1 to 1).&#10;>0.5 indicates high correlation.">ⓘ</span></th>
+                        <th style="width: 10%">Score<span class="info-icon" data-tooltip="Nexus Score (0-100).&#10;Structural stability index.">ⓘ</span></th>
+                        <th style="width: 15%">Regime<span class="info-icon" data-tooltip="Market State Classification">ⓘ</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        markets.forEach(m => {
+            const volDisplay = (m.volume && m.volume > 0) 
+                ? (m.volume / 1000000).toFixed(1).replace('.0', '') + 'M' 
+                : '-';
+            const changeSign = m.change_since_start >= 0 ? '+' : '';
+            const changeClass = m.change_since_start >= 0 ? 'change-pos' : 'change-neg';
+            
+            let betaDisplay = (m.beta !== undefined) ? m.beta.toFixed(2) : '-';
+            let scoreDisplay = (m.nexus_score !== undefined) ? m.nexus_score : '-';
+
+            html += `
+                <tr>
+                    <td>
+                        <div style="font-weight: 500; margin-bottom: 2px;">${m.question}</div>
+                        <small style="color: var(--text-muted); font-size: 0.75rem;">${m.id}</small>
+                    </td>
+                    <td>
+                        <span class="price">${(m.current_price * 100).toFixed(1)}¢</span>
+                        <span class="change ${changeClass}">${changeSign}${m.change_since_start}%</span>
+                    </td>
+                    <td>${createSparkline(m.sparkline)}</td>
+                    <td class="metric-val">${volDisplay}</td>
+                    <td class="metric-val">${betaDisplay}</td>
+                    <td class="metric-val">${scoreDisplay}</td>
+                    <td>${getStatusBadges(m.market_state)}</td>
+                </tr>
+            `;
+        });
+        html += `</tbody></table>`;
+        document.getElementById('app').innerHTML = html;
+    }
+
+    function renderDashboard(markets) {
+        // Average Nexus Score
+        const avgScore = calculateAverageNexusScore(markets);
+        document.getElementById('avg-nexus-score').textContent = avgScore.toFixed(1);
+        
+        // High Beta Alert
+        const highBetaMarkets = getHighBetaMarkets(markets);
+        const alertCard = document.getElementById('high-beta-alert');
+        const betaList = document.getElementById('high-beta-list');
+        
+        if (highBetaMarkets.length > 0) {
+            alertCard.style.display = 'block';
+            betaList.innerHTML = highBetaMarkets.slice(0, 3).map(m => 
+                `<div style="margin-bottom: 5px;">${m.question.substring(0, 50)}... (β: ${m.beta.toFixed(2)})</div>`
+            ).join('');
+            if (highBetaMarkets.length > 3) {
+                betaList.innerHTML += `<div style="color: var(--text-muted); margin-top: 5px;">+${highBetaMarkets.length - 3} more</div>`;
+            }
+        } else {
+            alertCard.style.display = 'none';
+        }
+        
+        // Health Distribution Chart
+        if (typeof Chart !== 'undefined') {
+            createHealthDistribution(markets, 'health-chart');
+        }
+    }
+
+    function renderRegimeLogs(logs) {
+        const container = document.getElementById('regime-log');
+        if (!logs || logs.length === 0) {
+            container.innerHTML = `
+                <div class="log-empty">
+                    No structural shifts detected in the last 24 hours. Monitoring active.
+                </div>`;
+            return;
+        }
+
+        let html = `
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th style="width: 15%">Time (UTC)</th>
+                        <th style="width: 40%">Market</th>
+                        <th style="width: 15%">From</th>
+                        <th style="width: 15%">To</th>
+                        <th style="width: 15%">Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        logs.slice(0, 10).forEach(log => {
+            const time = new Date(log.timestamp).toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit', hour12: false});
+            
+            html += `
+                <tr>
+                    <td style="color: var(--text-muted);">${time}</td>
+                    <td style="font-weight: 500;">${log.question}</td>
+                    <td style="color: var(--text-muted);">${log.from_regime}</td>
+                    <td style="font-weight: 600; color: var(--text-main);">${log.to_regime}</td>
+                    <td style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">
+                        S:${log.metrics_snapshot.nexus_score} β:${log.metrics_snapshot.beta}
+                    </td>
+                </tr>
+            `;
+        });
+
+        html += `</tbody></table>`;
+        container.innerHTML = html;
+    }
+
+    // 초기 로드 및 주기적 갱신
+    fetchIntelligence();
+    setInterval(fetchIntelligence, 60000); // 1분마다 갱신 시도
+</script>
+</body>
+</html>

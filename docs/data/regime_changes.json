@@ -1,0 +1,552 @@
+[
+  {
+    "timestamp": "2026-01-15T04:47:01.931553Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 42.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T04:47:01.931553Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T03:50:22.347784Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T03:50:22.347784Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T02:05:16.002308Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Forming | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T02:05:16.002308Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 66.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T01:53:40.265053Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T01:53:40.265053Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 86.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:55:47.969332Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Chaos | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:55:47.969332Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 66.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:43:07.001237Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Chaos | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 44.5,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:23:07.868591Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 56.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:23:07.868591Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Chaos | Scatter | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 44.7,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T23:23:07.868591Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.9,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:51:19.798701Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 56.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:51:19.798701Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 60.9,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:51:19.798701Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 64.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:28:43.390962Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:28:43.390962Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 42.8,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:28:43.390962Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Chaos | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 44.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T22:28:43.390962Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T20:48:26.762548Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 86.6,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T20:28:04.055088Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Scatter | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T20:28:04.055088Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 64.8,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T19:53:34.748786Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 59.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T19:33:25.230260Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 60.2,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T19:01:56.866448Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.0,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T18:41:03.952468Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 62.9,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T18:41:03.952468Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 70.5,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T17:15:47.673468Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T17:15:47.673468Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T17:15:47.673468Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T17:15:47.673468Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Overheated | Forming | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 55.9,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T17:15:47.673468Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 87.0,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T16:43:33.262801Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 58.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T16:43:33.262801Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 86.7,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T15:58:08.178553Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 87.1,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T15:40:22.794042Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 55.6,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T15:01:18.162071Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 86.7,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T14:42:06.093958Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 86.8,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T14:31:30.749956Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Overheated",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 55.3,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T14:31:30.749956Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 86.7,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T12:53:16.821462Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Stable",
+    "to_regime": "Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T12:18:24.585611Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 42.5,
+      "beta": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-14T11:54:28.741042Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 40.7,
+      "beta": -0.68
+    }
+  },
+  {
+    "timestamp": "2026-01-14T11:32:14.271156Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 40.8,
+      "beta": -0.68
+    }
+  },
+  {
+    "timestamp": "2026-01-14T11:22:52.823141Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 40.7,
+      "beta": -0.68
+    }
+  },
+  {
+    "timestamp": "2026-01-14T11:07:06.824483Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued | Chaos",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 40.7,
+      "beta": -0.68
+    }
+  },
+  {
+    "timestamp": "2026-01-14T10:58:57.765577Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 42.3,
+      "beta": -0.52
+    }
+  },
+  {
+    "timestamp": "2026-01-14T10:58:57.765577Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 85.7,
+      "beta": 0.01
+    }
+  }
+]

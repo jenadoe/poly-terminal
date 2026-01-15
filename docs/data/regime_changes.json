@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T22:20:32.609699Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 70.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T21:43:07.914793Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 56.1,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T23:23:07.868591Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | Chaos | Scatter | High-Conflict",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 44.7,
       "beta": 0.0
     }
   }

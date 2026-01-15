@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-15T14:30:48.177144Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos | Forming",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T14:30:48.177144Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Forming | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 48.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T13:58:34.304799Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Undervalued | Chaos",
     "metrics_snapshot": {
       "nexus_score": 42.4,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T17:15:47.673468Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T17:15:47.673468Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Overheated | Forming | High-Conflict",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 55.9,
       "beta": 0.0
     }
   }

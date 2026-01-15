@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-15T19:39:29.544749Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T19:39:29.544749Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 47.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T19:14:20.886692Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Overheated | Chaos | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 44.1,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T22:28:43.390962Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.4,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T20:48:26.762548Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 86.6,
       "beta": 0.0
     }
   }

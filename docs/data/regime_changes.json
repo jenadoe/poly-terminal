@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-15T20:23:51.574190Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T20:23:51.574190Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Scatter | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T20:23:51.574190Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T19:39:29.544749Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Scatter",
     "metrics_snapshot": {
       "nexus_score": 64.1,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T22:28:43.390962Z",
-    "market_id": "146416",
-    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.2,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T22:28:43.390962Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued | Chaos",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 42.8,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T22:28:43.390962Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Chaos | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 44.1,
       "beta": 0.0
     }
   }

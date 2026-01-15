@@ -2,14 +2,20 @@
   {
     "id": "23656",
     "question": "Super Bowl Champion 2026: Will the New England Patriots win Super Bowl 2026?",
-    "current_price": 0.1295,
-    "volume": 675029856,
-    "nexus_score": 66.9,
+    "current_price": 0.129,
+    "volume": 675055691,
+    "nexus_score": 66.7,
     "market_state": "Chaos",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": 7.47,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": 7.05,
     "sparkline": [
+      {
+        "p": 0.1275
+      },
+      {
+        "p": 0.1285
+      },
       {
         "p": 0.1285
       },
@@ -17,13 +23,7 @@
         "p": 0.1295
       },
       {
-        "p": 0.1305
-      },
-      {
-        "p": 0.1295
-      },
-      {
-        "p": 0.1295
+        "p": 0.129
       }
     ]
   },
@@ -31,11 +31,11 @@
     "id": "30829",
     "question": "Democratic Presidential Nominee 2028: Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
     "current_price": 0.0035,
-    "volume": 478903330,
-    "nexus_score": 72.5,
+    "volume": 478914274,
+    "nexus_score": 72.8,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -59,11 +59,11 @@
     "id": "45883",
     "question": "Fed decision in January?: Fed increases interest rates by 25+ bps after January 2026 meeting?",
     "current_price": 0.0015,
-    "volume": 364207261,
-    "nexus_score": 86.5,
+    "volume": 364246877,
+    "nexus_score": 86.4,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -80,34 +80,6 @@
       },
       {
         "p": 0.0015
-      }
-    ]
-  },
-  {
-    "id": "31552",
-    "question": "Presidential Election Winner 2028: Will LeBron James win the 2028 US Presidential Election?",
-    "current_price": 0.0085,
-    "volume": 188944244,
-    "nexus_score": 72.4,
-    "market_state": "Solid",
-    "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": 0.0,
-    "sparkline": [
-      {
-        "p": 0.0085
-      },
-      {
-        "p": 0.0085
-      },
-      {
-        "p": 0.0085
-      },
-      {
-        "p": 0.0085
-      },
-      {
-        "p": 0.0085
       }
     ]
   },
@@ -115,11 +87,11 @@
     "id": "35908",
     "question": "Who will Trump nominate as Fed Chair?: Will Trump nominate Bill Pulte as the next Fed chair?",
     "current_price": 0.001,
-    "volume": 188875966,
-    "nexus_score": 69.2,
+    "volume": 189689443,
+    "nexus_score": 69.7,
     "market_state": "Overheated",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -140,21 +112,49 @@
     ]
   },
   {
+    "id": "31552",
+    "question": "Presidential Election Winner 2028: Will LeBron James win the 2028 US Presidential Election?",
+    "current_price": 0.0085,
+    "volume": 188949523,
+    "nexus_score": 72.6,
+    "market_state": "Solid",
+    "macro_sensitivity": 0.0,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": 0.0,
+    "sparkline": [
+      {
+        "p": 0.0085
+      },
+      {
+        "p": 0.0085
+      },
+      {
+        "p": 0.0085
+      },
+      {
+        "p": 0.0085
+      },
+      {
+        "p": 0.0085
+      }
+    ]
+  },
+  {
     "id": "31875",
     "question": "Republican Presidential Nominee 2028: Will Mike Pence win the 2028 Republican presidential nomination?",
     "current_price": 0.0055,
-    "volume": 186113578,
+    "volume": 186142515,
     "nexus_score": 58.5,
     "market_state": "Overheated | High-Conflict",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 22.22,
     "sparkline": [
       {
         "p": 0.0065
       },
       {
-        "p": 0.0065
+        "p": 0.0055
       },
       {
         "p": 0.0055
@@ -171,11 +171,11 @@
     "id": "33506",
     "question": "UEFA Champions League Winner : Will Slavia Pragu win the 2025\u201326 Champions League?",
     "current_price": 0.0015,
-    "volume": 176380667,
-    "nexus_score": 66.7,
+    "volume": 176385822,
+    "nexus_score": 66.6,
     "market_state": "Stable",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -199,11 +199,11 @@
     "id": "33507",
     "question": "English Premier League Winner : Will Leeds win the 2025\u201326 English Premier League?",
     "current_price": 0.0015,
-    "volume": 168859961,
+    "volume": 168861363,
     "nexus_score": 80.4,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -227,11 +227,11 @@
     "id": "27830",
     "question": "2026 NBA Champion: Will the Memphis Grizzlies win the 2026 NBA Finals?",
     "current_price": 0.005,
-    "volume": 162059376,
+    "volume": 162077329,
     "nexus_score": 67.1,
     "market_state": "Stable",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -255,11 +255,11 @@
     "id": "34587",
     "question": "Portugal Presidential Election: Will Raul Perestrello win the 2026 Portugal presidential election?",
     "current_price": 0.0005,
-    "volume": 109001726,
-    "nexus_score": 79.9,
+    "volume": 109035301,
+    "nexus_score": 80.7,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -283,11 +283,11 @@
     "id": "30615",
     "question": "2026 FIFA World Cup Winner : Will Jordan win the 2026 FIFA World Cup?",
     "current_price": 0.0015,
-    "volume": 66747377,
-    "nexus_score": 65.1,
+    "volume": 66765605,
+    "nexus_score": 65.2,
     "market_state": "Stable",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -311,11 +311,11 @@
     "id": "33509",
     "question": "La Liga Winner : Will Espanyol win the 2025\u201326 La Liga?",
     "current_price": 0.0015,
-    "volume": 57248566,
-    "nexus_score": 77.8,
+    "volume": 57248832,
+    "nexus_score": 77.6,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -339,24 +339,24 @@
     "id": "114242",
     "question": "US strikes Iran by...?: US strikes Iran by January 31, 2026?",
     "current_price": 0.345,
-    "volume": 53189180,
+    "volume": 53222920,
     "nexus_score": 49.3,
     "market_state": "Overheated | High-Conflict",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": -42.02,
     "sparkline": [
       {
-        "p": 0.47
-      },
-      {
-        "p": 0.355
+        "p": 0.405
       },
       {
         "p": 0.335
       },
       {
-        "p": 0.365
+        "p": 0.3
+      },
+      {
+        "p": 0.375
       },
       {
         "p": 0.345
@@ -367,11 +367,11 @@
     "id": "137338",
     "question": "What price will Bitcoin hit in January?: Will Bitcoin reach $150,000 in January?",
     "current_price": 0.0035,
-    "volume": 33883197,
-    "nexus_score": 57.9,
+    "volume": 33884246,
+    "nexus_score": 59.1,
     "market_state": "Overheated | High-Conflict",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -381,7 +381,7 @@
         "p": 0.0045
       },
       {
-        "p": 0.0035
+        "p": 0.004
       },
       {
         "p": 0.0035
@@ -395,15 +395,15 @@
     "id": "143573",
     "question": "Khamenei out as Supreme Leader of Iran by January 31?: Khamenei out as Supreme Leader of Iran by January 31?",
     "current_price": 0.095,
-    "volume": 31109750,
+    "volume": 31116413,
     "nexus_score": 74.7,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": -48.65,
     "sparkline": [
       {
-        "p": 0.175
+        "p": 0.155
       },
       {
         "p": 0.095
@@ -423,11 +423,11 @@
     "id": "59404",
     "question": "Which coalition will form the next Dutch government?: Will the next Dutch government be PVV + GL/PvdA + VVD + CDA + D66?",
     "current_price": 0.0005,
-    "volume": 26179045,
+    "volume": 26179067,
     "nexus_score": 64.7,
     "market_state": "Overheated | Consensus | High-Conflict",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -455,7 +455,7 @@
     "nexus_score": 87.8,
     "market_state": "Consensus",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -507,11 +507,11 @@
     "id": "96016",
     "question": "Which company has the best AI model end of January?: Will Meituan have the best AI model at the end of January 2026?",
     "current_price": 0.0005,
-    "volume": 14314426,
+    "volume": 14314441,
     "nexus_score": 83.1,
     "market_state": "Consensus",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -539,7 +539,7 @@
     "nexus_score": 46.6,
     "market_state": "Overheated | High-Conflict",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -562,75 +562,75 @@
   {
     "id": "90414",
     "question": "Russia x Ukraine ceasefire by January 31, 2026?: Russia x Ukraine ceasefire by January 31, 2026?",
-    "current_price": 0.0295,
-    "volume": 14097143,
-    "nexus_score": 81.0,
+    "current_price": 0.0285,
+    "volume": 14103820,
+    "nexus_score": 81.2,
     "market_state": "Consensus",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": 0.0,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": -3.39,
     "sparkline": [
       {
-        "p": 0.029
+        "p": 0.0295
       },
       {
-        "p": 0.0365
+        "p": 0.0385
       },
       {
-        "p": 0.03
+        "p": 0.0295
       },
       {
         "p": 0.0285
       },
       {
-        "p": 0.0295
+        "p": 0.0285
       }
     ]
   },
   {
     "id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?: Will Elon Musk post 580+ tweets from January 9 to January 16, 2026?",
-    "current_price": 0.0225,
-    "volume": 12824308,
-    "nexus_score": 57.8,
+    "current_price": 0.022,
+    "volume": 12835304,
+    "nexus_score": 59.2,
     "market_state": "Chaos",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": 73.08,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": 69.23,
     "sparkline": [
       {
-        "p": 0.0845
+        "p": 0.0715
       },
       {
-        "p": 0.0595
+        "p": 0.0495
       },
       {
-        "p": 0.036
+        "p": 0.0365
       },
       {
         "p": 0.025
       },
       {
-        "p": 0.0225
+        "p": 0.022
       }
     ]
   },
   {
     "id": "42365",
     "question": "Will the U.S. invade Venezuela by...?: Will the U.S. invade Venezuela by January 31, 2026?",
-    "current_price": 0.017,
-    "volume": 12603981,
-    "nexus_score": 42.3,
+    "current_price": 0.0165,
+    "volume": 12604259,
+    "nexus_score": 42.2,
     "market_state": "Undervalued | Chaos",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": -24.44,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": -26.67,
     "sparkline": [
       {
-        "p": 0.0175
+        "p": 0.018
       },
       {
-        "p": 0.0175
+        "p": 0.0185
       },
       {
         "p": 0.0185
@@ -639,7 +639,7 @@
         "p": 0.0195
       },
       {
-        "p": 0.017
+        "p": 0.0165
       }
     ]
   },
@@ -647,11 +647,11 @@
     "id": "45915",
     "question": "Brazil Presidential Election: Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential election?",
     "current_price": 0.525,
-    "volume": 11580388,
-    "nexus_score": 77.3,
+    "volume": 11583906,
+    "nexus_score": 76.8,
     "market_state": "Solid",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -674,28 +674,28 @@
   {
     "id": "84841",
     "question": "Epstein blackmail evidence released by...? : Epstein blackmail evidence released by March 31?",
-    "current_price": 0.6765,
+    "current_price": 0.675,
     "volume": 10908020,
     "nexus_score": 59.0,
     "market_state": "Chaos",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
-    "change_since_start": 1.81,
+    "last_updated": "2026-01-15T23:52:38Z",
+    "change_since_start": 1.58,
     "sparkline": [
       {
-        "p": 0.714
+        "p": 0.7095
       },
       {
         "p": 0.6995
       },
       {
-        "p": 0.7
+        "p": 0.698
       },
       {
-        "p": 0.6955
+        "p": 0.688
       },
       {
-        "p": 0.6765
+        "p": 0.675
       }
     ]
   },
@@ -703,24 +703,24 @@
     "id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?: Israel strikes Iran by January 31, 2026?",
     "current_price": 0.255,
-    "volume": 10473194,
+    "volume": 10473331,
     "nexus_score": 61.6,
-    "market_state": "Chaos | Scatter",
+    "market_state": "Chaos",
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-01-15T23:42:09Z",
+    "last_updated": "2026-01-15T23:52:38Z",
     "change_since_start": -58.87,
     "sparkline": [
       {
-        "p": 0.305
+        "p": 0.3
       },
       {
-        "p": 0.195
+        "p": 0.255
       },
       {
-        "p": 0.245
+        "p": 0.205
       },
       {
-        "p": 0.225
+        "p": 0.22
       },
       {
         "p": 0.255

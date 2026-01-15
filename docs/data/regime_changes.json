@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-15T16:33:18.895051Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos | Forming",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 62.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-15T16:33:18.895051Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 73.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T15:54:46.271012Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 60.2,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T19:01:56.866448Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 71.0,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T18:41:03.952468Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 62.9,
       "beta": 0.0
     }
   }

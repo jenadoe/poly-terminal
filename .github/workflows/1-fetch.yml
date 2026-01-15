@@ -1,0 +1,41 @@
+name: 1. Calculate & Analyze
+
+on:
+  schedule:
+    # [변경] 15분마다 실행 (데이터 부하 관리 및 안정성 확보)
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout Private Brain
+        uses: actions/checkout@v4
+        with:
+          repository: jenadoe/poly-core # [본인 ID 확인]
+          token: ${{ secrets.TOKEN1 }}
+          path: private-brain
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Libraries
+        run: pip install -r private-brain/requirements.txt
+
+      - name: Run Engine
+        run: |
+          cd private-brain
+          python main.py
+
+      - name: Upload Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-data
+          path: private-brain/data_output/
+          retention-days: 1

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-15T14:54:02.369023Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Chaos | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 61.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T14:30:48.177144Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 60.1,
-      "beta": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-14T17:15:47.673468Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 42.4,
       "beta": 0.0
     }
   }

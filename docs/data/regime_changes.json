@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-16T15:22:13.428659Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 62.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-16T15:22:13.428659Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Undervalued | Forming",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 69.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-16T14:49:44.266010Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Forming",
     "metrics_snapshot": {
       "nexus_score": 64.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T16:33:18.895051Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos | Forming",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T16:33:18.895051Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Forming",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 73.7,
       "macro_sensitivity": 0.0
     }
   }

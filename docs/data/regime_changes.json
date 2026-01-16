@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-16T16:55:05.293977Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Consensus | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 81.3,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
+    "timestamp": "2026-01-16T16:55:05.293977Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 46.6,
+      "macro_sensitivity": 3.84
+    }
+  },
+  {
     "timestamp": "2026-01-16T16:26:36.866735Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 70.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T19:39:29.544749Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T19:39:29.544749Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
       "macro_sensitivity": 0.0
     }
   }

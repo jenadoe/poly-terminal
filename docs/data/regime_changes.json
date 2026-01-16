@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-16T22:19:35.364869Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 64.5,
+      "macro_sensitivity": -2.49
+    }
+  },
+  {
     "timestamp": "2026-01-16T20:54:37.529896Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 70.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T21:43:07.914793Z",
-    "market_id": "146416",
-    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 60.8,
       "macro_sensitivity": 0.0
     }
   }

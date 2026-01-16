@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-16T20:54:37.529896Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 65.5,
+      "macro_sensitivity": -2.06
+    }
+  },
+  {
     "timestamp": "2026-01-16T18:57:52.610320Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 60.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T21:20:15.998932Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 63.4,
       "macro_sensitivity": 0.0
     }
   }

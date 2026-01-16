@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-16T04:25:04.102424Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 63.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-16T04:25:04.102424Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-16T04:25:04.102424Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 4.25
+    }
+  },
+  {
     "timestamp": "2026-01-16T03:19:07.239631Z",
     "market_id": "146416",
     "question": "Elon Musk # tweets January 9 - January 16, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 42.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T04:47:01.931553Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T03:50:22.347784Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 42.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T03:50:22.347784Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
       "macro_sensitivity": 0.0
     }
   }

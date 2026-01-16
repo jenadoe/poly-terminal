@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-16T15:46:32.439159Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 47.2,
+      "macro_sensitivity": 4.14
+    }
+  },
+  {
+    "timestamp": "2026-01-16T15:46:32.439159Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 63.2,
+      "macro_sensitivity": -1.77
+    }
+  },
+  {
     "timestamp": "2026-01-16T15:22:13.428659Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Consensus",
     "metrics_snapshot": {
       "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T17:58:05.598053Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 63.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T17:18:11.385320Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 64.8,
       "macro_sensitivity": 0.0
     }
   }

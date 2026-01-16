@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-16T01:29:14.981255Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-16T01:29:14.981255Z",
+    "market_id": "146416",
+    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 61.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-15T23:52:38.313445Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 66.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T01:53:40.265053Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 46.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T01:53:40.265053Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 86.7,
       "macro_sensitivity": 0.0
     }
   }

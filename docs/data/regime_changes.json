@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-17T17:50:41.112558Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.0,
+      "macro_sensitivity": -2.71
+    }
+  },
+  {
+    "timestamp": "2026-01-17T17:50:41.112558Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 65.6,
+      "macro_sensitivity": -2.38
+    }
+  },
+  {
     "timestamp": "2026-01-17T17:40:17.245462Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T11:41:57.352233Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-01-16T10:49:29.213428Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Solid",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.3,
-      "macro_sensitivity": 0.02
     }
   }
 ]

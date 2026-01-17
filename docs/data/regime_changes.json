@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-17T01:25:06.785949Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 63.5,
+      "macro_sensitivity": -2.49
+    }
+  },
+  {
+    "timestamp": "2026-01-17T01:25:06.785949Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 82.2,
+      "macro_sensitivity": 3.64
+    }
+  },
+  {
     "timestamp": "2026-01-16T23:42:06.032630Z",
     "market_id": "45883",
     "question": "Fed decision in January?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 62.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T01:29:14.981255Z",
-    "market_id": "146416",
-    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 61.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-15T23:52:38.313445Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 61.6,
       "macro_sensitivity": 0.0
     }
   }

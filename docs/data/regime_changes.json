@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T23:17:59.247577Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 75.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-17T20:43:00.335486Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.2,
       "macro_sensitivity": -1.77
-    }
-  },
-  {
-    "timestamp": "2026-01-16T15:22:13.428659Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

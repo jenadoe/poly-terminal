@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T13:18:22.533330Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 65.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-01-17T12:36:33.702658Z",
     "market_id": "45883",
     "question": "Fed decision in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Undervalued | Forming",
     "metrics_snapshot": {
       "nexus_score": 60.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T06:31:41.302678Z",
-    "market_id": "146416",
-    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T03:08:06.457803Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 82.0,
+      "macro_sensitivity": 3.64
+    }
+  },
+  {
     "timestamp": "2026-01-17T01:25:06.785949Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.5,
       "macro_sensitivity": -1.77
-    }
-  },
-  {
-    "timestamp": "2026-01-16T01:29:14.981255Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

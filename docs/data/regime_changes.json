@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T18:26:21.047304Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 76.0,
+      "macro_sensitivity": 1.12
+    }
+  },
+  {
     "timestamp": "2026-01-17T17:50:41.112558Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 62.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T11:52:59.278051Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
       "macro_sensitivity": 0.0
     }
   }

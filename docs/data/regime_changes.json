@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-17T09:41:09.423528Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Solid",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 75.5,
+      "macro_sensitivity": 1.21
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:41:09.423528Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Solid",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 82.1,
+      "macro_sensitivity": 1.03
+    }
+  },
+  {
     "timestamp": "2026-01-17T08:23:47.860790Z",
     "market_id": "114242",
     "question": "US strikes Iran by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 61.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T04:56:57.691785Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Overheated",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 61.8,
-      "macro_sensitivity": -1.76
-    }
-  },
-  {
-    "timestamp": "2026-01-16T04:25:04.102424Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 63.4,
       "macro_sensitivity": 0.0
     }
   }

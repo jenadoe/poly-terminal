@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T07:50:16.230746Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 45.9,
+      "macro_sensitivity": 3.62
+    }
+  },
+  {
     "timestamp": "2026-01-17T05:30:34.232581Z",
     "market_id": "45883",
     "question": "Fed decision in January?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.4,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T04:25:04.102424Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 4.25
     }
   }
 ]

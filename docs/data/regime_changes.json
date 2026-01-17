@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T11:50:12.098479Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 65.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-01-17T11:38:26.614073Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.7,
       "macro_sensitivity": 4.3
-    }
-  },
-  {
-    "timestamp": "2026-01-16T06:31:41.302678Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 82.0,
-      "macro_sensitivity": 5.0
     }
   }
 ]

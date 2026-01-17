@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-17T05:30:34.232581Z",
+    "market_id": "45883",
+    "question": "Fed decision in January?",
+    "from_regime": "Consensus",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 82.0,
+      "macro_sensitivity": 4.67
+    }
+  },
+  {
     "timestamp": "2026-01-17T04:45:17.496652Z",
     "market_id": "45883",
     "question": "Fed decision in January?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.1,
       "macro_sensitivity": 4.25
-    }
-  },
-  {
-    "timestamp": "2026-01-16T03:19:07.239631Z",
-    "market_id": "146416",
-    "question": "Elon Musk # tweets January 9 - January 16, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 59.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

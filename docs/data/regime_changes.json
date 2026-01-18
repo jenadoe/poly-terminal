@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T23:51:44.614446Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 54.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T23:18:14.755895Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 73.1,
       "macro_sensitivity": -1.07
-    }
-  },
-  {
-    "timestamp": "2026-01-17T14:42:44.237706Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
-      "macro_sensitivity": 1.07
     }
   }
 ]

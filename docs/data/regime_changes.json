@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T06:55:25.596156Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 70.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T05:32:03.312010Z",
     "market_id": "42365",
     "question": "Will the U.S. invade Venezuela by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.5,
       "macro_sensitivity": -1.72
-    }
-  },
-  {
-    "timestamp": "2026-01-16T17:47:49.784637Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 63.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

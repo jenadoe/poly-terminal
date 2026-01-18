@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-18T03:26:57.946159Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 52.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T03:26:57.946159Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Chaos | Forming",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 70.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T01:44:12.077318Z",
     "market_id": "23656",
     "question": "Super Bowl Champion 2026",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.6,
       "macro_sensitivity": 3.84
-    }
-  },
-  {
-    "timestamp": "2026-01-16T16:26:36.866735Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 63.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-16T16:26:36.866735Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | Forming | High-Conflict",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 46.6,
-      "macro_sensitivity": 3.76
     }
   }
 ]

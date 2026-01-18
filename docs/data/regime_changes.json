@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T19:41:36.896077Z",
+    "market_id": "34587",
+    "question": "Portugal Presidential Election",
+    "from_regime": "Forming",
+    "to_regime": "Consensus | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 83.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T19:29:37.546672Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 45.9,
       "macro_sensitivity": 3.62
-    }
-  },
-  {
-    "timestamp": "2026-01-17T05:30:34.232581Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 82.0,
-      "macro_sensitivity": 4.67
     }
   }
 ]

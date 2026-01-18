@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-18T21:17:25.169030Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 57.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T21:17:25.169030Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T20:43:15.590154Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.5,
       "macro_sensitivity": 1.12
-    }
-  },
-  {
-    "timestamp": "2026-01-17T09:41:09.423528Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Solid",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 75.5,
-      "macro_sensitivity": 1.21
-    }
-  },
-  {
-    "timestamp": "2026-01-17T09:41:09.423528Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 82.1,
-      "macro_sensitivity": 1.03
     }
   }
 ]

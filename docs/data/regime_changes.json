@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T11:50:36.615559Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 70.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T09:42:00.684571Z",
     "market_id": "23656",
     "question": "Super Bowl Champion 2026",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 82.1,
       "macro_sensitivity": 3.68
-    }
-  },
-  {
-    "timestamp": "2026-01-16T22:45:44.114321Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 65.5,
-      "macro_sensitivity": -2.5
     }
   }
 ]

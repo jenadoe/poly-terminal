@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T09:42:00.684571Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 68.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T08:48:39.137196Z",
     "market_id": "114242",
     "question": "US strikes Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.5,
       "macro_sensitivity": -2.5
-    }
-  },
-  {
-    "timestamp": "2026-01-16T22:45:44.114321Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 81.9,
-      "macro_sensitivity": 3.69
     }
   }
 ]

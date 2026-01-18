@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-18T21:39:25.998556Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Undervalued",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T21:39:25.998556Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T21:39:25.998556Z",
+    "market_id": "34587",
+    "question": "Portugal Presidential Election",
+    "from_regime": "Consensus | Forming",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 86.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T21:39:25.998556Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Chaos",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 71.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T21:17:25.169030Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 82.1,
       "macro_sensitivity": 1.06
-    }
-  },
-  {
-    "timestamp": "2026-01-17T11:50:12.098479Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 65.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T11:38:26.614073Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.6,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T11:16:02.460783Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T10:44:20.095706Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Forming",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 75.5,
-      "macro_sensitivity": 1.12
     }
   }
 ]

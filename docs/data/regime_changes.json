@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-18T23:18:14.755895Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 70.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-18T23:18:14.755895Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Solid",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 72.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T22:43:32.008843Z",
     "market_id": "23656",
     "question": "Super Bowl Champion 2026",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 82.2,
       "macro_sensitivity": 1.07
-    }
-  },
-  {
-    "timestamp": "2026-01-17T14:17:43.814638Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T13:46:00.304118Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 65.0,
-      "macro_sensitivity": -5.0
     }
   }
 ]

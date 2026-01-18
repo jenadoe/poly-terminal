@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T20:21:14.404546Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 63.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T19:41:36.896077Z",
     "market_id": "34587",
     "question": "Portugal Presidential Election",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.1,
       "macro_sensitivity": 3.51
-    }
-  },
-  {
-    "timestamp": "2026-01-17T07:50:16.230746Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 45.9,
-      "macro_sensitivity": 3.62
     }
   }
 ]

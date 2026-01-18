@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T15:51:18.384780Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T14:42:10.476091Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.5,
       "macro_sensitivity": -2.49
-    }
-  },
-  {
-    "timestamp": "2026-01-17T01:25:06.785949Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
-      "macro_sensitivity": 3.64
     }
   }
 ]

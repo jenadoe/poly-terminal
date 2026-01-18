@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T08:24:45.281100Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 51.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T07:50:51.055766Z",
     "market_id": "23656",
     "question": "Super Bowl Champion 2026",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.5,
       "macro_sensitivity": -2.49
-    }
-  },
-  {
-    "timestamp": "2026-01-16T20:54:37.529896Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 65.5,
-      "macro_sensitivity": -2.06
     }
   }
 ]

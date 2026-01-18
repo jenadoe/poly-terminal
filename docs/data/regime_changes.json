@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-18T13:18:24.420882Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 42.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T11:50:36.615559Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 82.0,
       "macro_sensitivity": 3.66
-    }
-  },
-  {
-    "timestamp": "2026-01-16T22:56:28.565406Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 82.1,
-      "macro_sensitivity": 3.68
     }
   }
 ]

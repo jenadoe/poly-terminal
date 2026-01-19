@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-19T05:54:22.962418Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 61.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-19T05:20:32.465535Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.6,
       "macro_sensitivity": -2.38
-    }
-  },
-  {
-    "timestamp": "2026-01-17T17:40:17.245462Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 66.6,
-      "macro_sensitivity": -4.89
     }
   }
 ]

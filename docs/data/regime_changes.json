@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-19T01:43:04.288323Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-18T23:51:44.614446Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.9,
       "macro_sensitivity": 1.47
-    }
-  },
-  {
-    "timestamp": "2026-01-17T17:16:12.212971Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 73.1,
-      "macro_sensitivity": -1.07
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-19T16:27:20.002868Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 67.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-19T09:04:17.801044Z",
     "market_id": "114242",
     "question": "US strikes Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.6,
       "macro_sensitivity": -0.54
-    }
-  },
-  {
-    "timestamp": "2026-01-17T18:50:44.405767Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

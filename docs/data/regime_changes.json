@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-19T16:56:53.836343Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 66.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-19T16:27:20.002868Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 72.0,
       "macro_sensitivity": -1.02
-    }
-  },
-  {
-    "timestamp": "2026-01-17T19:14:06.224047Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 75.6,
-      "macro_sensitivity": -0.54
     }
   }
 ]

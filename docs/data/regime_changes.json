@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-19T05:20:32.465535Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 63.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-19T05:20:32.465535Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued | Scatter",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 53.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-19T03:28:21.839017Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.6,
       "macro_sensitivity": -4.89
-    }
-  },
-  {
-    "timestamp": "2026-01-17T17:16:12.212971Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Stable",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T17:16:12.212971Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 66.1,
-      "macro_sensitivity": 0.66
     }
   }
 ]

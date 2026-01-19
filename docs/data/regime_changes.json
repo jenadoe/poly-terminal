@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-19T09:04:17.801044Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Scatter | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 50.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-19T09:04:17.801044Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-19T07:06:59.221070Z",
     "market_id": "114242",
     "question": "US strikes Iran by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-17T18:50:44.405767Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Scatter",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 74.2,
-      "macro_sensitivity": -0.78
-    }
-  },
-  {
-    "timestamp": "2026-01-17T18:26:21.047304Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 76.0,
-      "macro_sensitivity": 1.12
     }
   }
 ]

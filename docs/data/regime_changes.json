@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T22:21:27.550741Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Solid",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 78.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T21:02:58.292788Z",
     "market_id": "35908",
     "question": "Who will Trump nominate as Fed Chair?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 70.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T09:42:00.684571Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 68.6,
       "macro_sensitivity": 0.0
     }
   }

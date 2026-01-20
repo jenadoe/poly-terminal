@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-20T22:44:07.269321Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 59.0,
+      "macro_sensitivity": -3.88
+    }
+  },
+  {
+    "timestamp": "2026-01-20T22:44:07.269321Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 56.3,
+      "macro_sensitivity": -4.94
+    }
+  },
+  {
     "timestamp": "2026-01-20T22:21:27.550741Z",
     "market_id": "143573",
     "question": "Khamenei out as Supreme Leader of Iran by January 31?",
@@ -522,28 +544,6 @@
     "question": "Presidential Election Winner 2028",
     "from_regime": "Solid",
     "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 70.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T13:18:24.420882Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 42.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T11:50:36.615559Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 70.8,
       "macro_sensitivity": 0.0

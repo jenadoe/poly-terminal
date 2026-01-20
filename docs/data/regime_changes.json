@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-20T23:21:11.319704Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 74.5,
+      "macro_sensitivity": 3.45
+    }
+  },
+  {
+    "timestamp": "2026-01-20T23:21:11.319704Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued | Forming",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 71.4,
+      "macro_sensitivity": -4.89
+    }
+  },
+  {
+    "timestamp": "2026-01-20T23:21:11.319704Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 78.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T22:44:07.269321Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 58.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T19:14:49.656056Z",
-    "market_id": "34587",
-    "question": "Portugal Presidential Election",
-    "from_regime": "Solid",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T15:51:18.384780Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 71.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T14:42:10.476091Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Solid",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 70.8,
       "macro_sensitivity": 0.0
     }
   }

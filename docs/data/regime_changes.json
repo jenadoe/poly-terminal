@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T14:59:34.311571Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 75.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T14:29:31.136554Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -533,17 +544,6 @@
     "question": "US strikes Iran by...?",
     "from_regime": "Overheated | Scatter | High-Conflict",
     "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 51.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T07:18:51.123357Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 51.0,
       "macro_sensitivity": 0.0

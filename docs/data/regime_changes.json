@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T21:02:58.292788Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Solid",
+    "to_regime": "Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 66.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T20:42:10.766617Z",
     "market_id": "35908",
     "question": "Who will Trump nominate as Fed Chair?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 68.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T08:48:39.137196Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | Scatter | High-Conflict",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 51.5,
       "macro_sensitivity": 0.0
     }
   }

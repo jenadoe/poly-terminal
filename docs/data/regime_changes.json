@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T09:47:35.765607Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 74.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T09:05:03.368073Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 42.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T05:32:03.312010Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Forming",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 70.2,
       "macro_sensitivity": 0.0
     }
   }

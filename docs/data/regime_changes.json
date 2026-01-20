@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-20T07:56:43.122952Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 68.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-20T07:56:43.122952Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 66.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T07:42:31.434708Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Overheated | Forming | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 52.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T03:26:57.946159Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Chaos | Forming",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 70.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T01:44:12.077318Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 69.4,
       "macro_sensitivity": 0.0
     }
   }

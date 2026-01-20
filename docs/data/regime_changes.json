@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T23:55:56.015364Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Scatter",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 60.8,
+      "macro_sensitivity": -3.88
+    }
+  },
+  {
     "timestamp": "2026-01-20T23:44:17.156764Z",
     "market_id": "137338",
     "question": "What price will Bitcoin hit in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Scatter",
     "metrics_snapshot": {
       "nexus_score": 63.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T19:41:36.896077Z",
-    "market_id": "34587",
-    "question": "Portugal Presidential Election",
-    "from_regime": "Forming",
-    "to_regime": "Consensus | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 83.6,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-20T14:29:31.136554Z",
+    "market_id": "154572",
+    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 76.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-20T10:26:12.524621Z",
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Overheated | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 51.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T06:55:25.596156Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Solid",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 70.6,
       "macro_sensitivity": 0.0
     }
   }

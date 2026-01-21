@@ -37,50 +37,54 @@ jobs:
         run: |
           cd private-brain
           
-          # 폴더 구조 생성
+          # 폴더 구조 생성 (필요한 새 폴더들)
           mkdir -p data_output/archive
           mkdir -p data_output/api/v1/events
           mkdir -p data_output/audit_logs
           mkdir -p data_output/completed_events
           
-          # 1. 메인 DB 복사
+          echo "📂 Copying Data Assets..."
+
+          # 1. 메인 DB 복사 (덮어쓰기)
           if [ -f ../temp_data/active_events.json ]; then
-            cp ../temp_data/active_events.json data_output/
+            cp -f ../temp_data/active_events.json data_output/
           fi
           
-          # 2. Archive 복사
+          # 2. Archive 복사 (새 파일 추가)
           if [ -d ../temp_data/archive_events ]; then
-            cp -r ../temp_data/archive_events/* data_output/archive/
+            cp -rf ../temp_data/archive_events/* data_output/archive/ || true
           fi
           
-          # 3. API 데이터 복사
+          # 3. [Private Only] 상세 API 데이터 복사
           if [ -d ../temp_data/api ]; then
-            cp -r ../temp_data/api/* data_output/api/
+            cp -rf ../temp_data/api/* data_output/api/ || true
           fi
           
-          # 4. [CRITICAL] Audit 로그 복사
+          # 4. [New] Audit 로그 복사
+          # 파일이 없어도 에러나지 않도록 || true 추가
           if [ -d ../temp_data/audit_logs ]; then
-            echo "📊 Copying audit logs to poly-core..."
-            cp -r ../temp_data/audit_logs/* data_output/audit_logs/
+            cp -rf ../temp_data/audit_logs/* data_output/audit_logs/ || true
           fi
 
-          # 5. 완료된 이벤트 복사
+          # 5. [New] 완료된 이벤트 보관함 복사
           if [ -d ../temp_data/completed_events ]; then
-            cp -r ../temp_data/completed_events/* data_output/completed_events/
+            cp -rf ../temp_data/completed_events/* data_output/completed_events/ || true
           fi
           
           # 6. 상태 변화 로그 복사
           if [ -f ../temp_data/regime_changes.json ]; then
-            cp ../temp_data/regime_changes.json data_output/
+            cp -f ../temp_data/regime_changes.json data_output/
           fi
           
-          # 7. 구버전 파일 삭제
+          # 7. (청소) 구버전 DB 파일만 삭제
           if [ -f data_output/active_markets.json ]; then
             rm data_output/active_markets.json
           fi
           if [ -f data_output/history_storage.json ]; then
             rm data_output/history_storage.json
           fi
+          
+          # [유지] api/v1/markets 삭제 로직은 없음 (수동 관리)
 
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
@@ -109,25 +113,27 @@ jobs:
           cd public-face
           mkdir -p docs/data
           
-          # 1. 요약본
+          # 1. Frontend용 요약본 (필수)
           if [ -f ../temp_data/latest_intelligence.json ]; then
-            cp ../temp_data/latest_intelligence.json docs/data/
+            cp -f ../temp_data/latest_intelligence.json docs/data/
           fi
           
-          # 2. 로그
+          # 2. Regime Logs (필수)
           if [ -f ../temp_data/regime_changes.json ]; then
-            cp ../temp_data/regime_changes.json docs/data/
+            cp -f ../temp_data/regime_changes.json docs/data/
           fi
           
-          # [SECURITY CLEANUP] 민감 폴더 강제 삭제
-          echo "🔒 Security Check: Removing sensitive folders from public repo..."
+          # [SECURITY CLEANUP] 
+          # Public Repo에 api 폴더가 있다면 강제 삭제
+          if [ -d docs/data/api ]; then
+            echo "🧹 Cleaning up exposed API folder from Public Repo..."
+            rm -rf docs/data/api
+          fi
           
-          rm -rf docs/data/audit_logs
-          rm -rf docs/data/api
-          rm -rf docs/data/completed_events
-          rm -rf docs/data/archive
-          
-          echo "✅ Security check passed - public repo is clean"
+          # 기타 민감 폴더도 확인 사살
+          if [ -d docs/data/audit_logs ]; then rm -rf docs/data/audit_logs; fi
+          if [ -d docs/data/completed_events ]; then rm -rf docs/data/completed_events; fi
+          if [ -d docs/data/archive ]; then rm -rf docs/data/archive; fi
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-21T21:52:09.712510Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Overheated | Forming | High-Conflict",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 50.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-21T21:52:09.712510Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued | Scatter",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 54.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T21:27:17.890129Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Scatter",
     "metrics_snapshot": {
       "nexus_score": 78.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-20T21:02:58.292788Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Solid",
-    "to_regime": "Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 66.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-20T20:42:10.766617Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Overheated",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 70.1,
       "macro_sensitivity": 0.0
     }
   }

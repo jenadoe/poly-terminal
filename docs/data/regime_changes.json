@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-21T14:06:41.583877Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 60.8,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T12:45:14.043678Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 61.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-19T05:20:32.465535Z",
-    "market_id": "154572",
-    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 63.6,
       "macro_sensitivity": 0.0
     }
   }

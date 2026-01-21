@@ -24,7 +24,6 @@ jobs:
 
       # ---------------------------------------------------
       # [Mission 1] Private Repo 업데이트 (poly-core)
-      # 목표: 모든 데이터 자산(Full Data) 저장
       # ---------------------------------------------------
       - name: Checkout Private Brain
         uses: actions/checkout@v4
@@ -37,51 +36,47 @@ jobs:
         run: |
           cd private-brain
           
-          # 폴더 구조 생성 (필요한 새 폴더들)
+          # 폴더 생성
           mkdir -p data_output/archive
           mkdir -p data_output/api/v1/events
           mkdir -p data_output/audit_logs
           mkdir -p data_output/completed_events
           
-          # 1. 메인 DB 복사 (active_events.json)
+          echo "📂 Copying Data Assets..."
+
+          # 1. 메인 DB (덮어쓰기)
           if [ -f ../temp_data/active_events.json ]; then
-            cp ../temp_data/active_events.json data_output/
+            cp -f ../temp_data/active_events.json data_output/
           fi
           
-          # 2. Archive (과거 데이터) 폴더 동기화
+          # 2. Archive (덮어쓰기)
           if [ -d ../temp_data/archive_events ]; then
-            cp -r ../temp_data/archive_events/* data_output/archive/
+            cp -rf ../temp_data/archive_events/* data_output/archive/ || true
           fi
           
-          # 3. [Private Only] 상세 API 데이터 복사 (연구용 자산)
+          # 3. API 데이터 (덮어쓰기)
           if [ -d ../temp_data/api ]; then
-            cp -r ../temp_data/api/* data_output/api/
+            cp -rf ../temp_data/api/* data_output/api/ || true
           fi
           
-          # 4. [New] Audit 로그 복사 (관측/검증 일지)
+          # 4. [Audit] 로그 파일 복사 (여기가 핵심)
           if [ -d ../temp_data/audit_logs ]; then
-            cp -r ../temp_data/audit_logs/* data_output/audit_logs/
+            cp -rf ../temp_data/audit_logs/* data_output/audit_logs/ || true
           fi
 
-          # 5. [New] 완료된 이벤트 보관함 복사
+          # 5. Completed Events
           if [ -d ../temp_data/completed_events ]; then
-            cp -r ../temp_data/completed_events/* data_output/completed_events/
+            cp -rf ../temp_data/completed_events/* data_output/completed_events/ || true
           fi
           
-          # 6. 상태 변화 로그 복사
+          # 6. Regime Logs
           if [ -f ../temp_data/regime_changes.json ]; then
-            cp ../temp_data/regime_changes.json data_output/
+            cp -f ../temp_data/regime_changes.json data_output/
           fi
           
-          # 7. (청소) 구버전 DB 파일만 삭제 (폴더는 유지)
-          if [ -f data_output/active_markets.json ]; then
-            rm data_output/active_markets.json
-          fi
-          if [ -f data_output/history_storage.json ]; then
-            rm data_output/history_storage.json
-          fi
-          
-          # [변경] api/v1/markets 폴더 삭제 로직 제거함 (사용자 수동 관리)
+          # 구버전 파일 정리
+          if [ -f data_output/active_markets.json ]; then rm data_output/active_markets.json; fi
+          if [ -f data_output/history_storage.json ]; then rm data_output/history_storage.json; fi
 
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
@@ -89,15 +84,14 @@ jobs:
           git add data_output/
           
           if git diff --staged --quiet; then
-            echo "No private changes."
+            echo "✅ No private changes."
           else
-            git commit -m "🧠 Secure Data Assets & Audit Logs [$(date)]"
+            git commit -m "🧠 Update Data Assets & Audit [$(date)]"
             git push
           fi
 
       # ---------------------------------------------------
       # [Mission 2] Public Repo 업데이트 (poly-terminal)
-      # 목표: 요약본(Dashboard)만 배포 (API 폴더 절대 금지)
       # ---------------------------------------------------
       - name: Checkout Public Face
         uses: actions/checkout@v4
@@ -109,22 +103,21 @@ jobs:
           cd public-face
           mkdir -p docs/data
           
-          # 1. Frontend용 요약본 (필수)
+          # 1. 요약본
           if [ -f ../temp_data/latest_intelligence.json ]; then
-            cp ../temp_data/latest_intelligence.json docs/data/
+            cp -f ../temp_data/latest_intelligence.json docs/data/
           fi
           
-          # 2. Regime Logs (필수)
+          # 2. 로그
           if [ -f ../temp_data/regime_changes.json ]; then
-            cp ../temp_data/regime_changes.json docs/data/
+            cp -f ../temp_data/regime_changes.json docs/data/
           fi
           
-          # [SECURITY CLEANUP] 
-          # 혹시라도 Public Repo에 api 폴더가 남아있다면 강제 삭제 (여긴 무조건 지워야 함)
-          if [ -d docs/data/api ]; then
-            echo "🧹 Cleaning up exposed API folder from Public Repo..."
-            rm -rf docs/data/api
-          fi
+          # [보안] 민감 폴더 삭제 (Public에는 절대 노출 금지)
+          if [ -d docs/data/api ]; then rm -rf docs/data/api; fi
+          if [ -d docs/data/audit_logs ]; then rm -rf docs/data/audit_logs; fi
+          if [ -d docs/data/archive ]; then rm -rf docs/data/archive; fi
+          if [ -d docs/data/completed_events ]; then rm -rf docs/data/completed_events; fi
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
@@ -132,8 +125,8 @@ jobs:
           git add docs/data/
           
           if git diff --staged --quiet; then
-            echo "No public changes."
+            echo "✅ No public changes."
           else
-            git commit -m "📢 Update Dashboard Summary [$(date)]"
+            git commit -m "📢 Update Dashboard [$(date)]"
             git push
           fi

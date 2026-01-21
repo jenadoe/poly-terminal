@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-21T05:46:25.340583Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": -4.08
+    }
+  },
+  {
+    "timestamp": "2026-01-21T05:46:25.340583Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 71.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T05:03:27.677886Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 62.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T21:39:25.998556Z",
-    "market_id": "34587",
-    "question": "Portugal Presidential Election",
-    "from_regime": "Consensus | Forming",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 86.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T21:39:25.998556Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Chaos",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 71.3,
       "macro_sensitivity": 0.0
     }
   }

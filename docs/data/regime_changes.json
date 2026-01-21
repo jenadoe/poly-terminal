@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-21T15:51:58.170295Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Solid",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 53.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-21T15:51:58.170295Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 49.2,
+      "macro_sensitivity": -3.44
+    }
+  },
+  {
     "timestamp": "2026-01-21T14:06:41.583877Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Overheated | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 50.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-19T07:06:59.221070Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 71.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-19T05:54:22.962418Z",
-    "market_id": "154572",
-    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 61.8,
       "macro_sensitivity": 0.0
     }
   }

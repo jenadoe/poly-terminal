@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-21T07:58:02.463212Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 72.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T07:43:45.994930Z",
     "market_id": "35908",
     "question": "Who will Trump nominate as Fed Chair?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 69.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T22:18:18.380069Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Forming",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 69.6,
       "macro_sensitivity": 0.0
     }
   }

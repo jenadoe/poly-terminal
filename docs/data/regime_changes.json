@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-21T07:43:45.994930Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 71.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T07:05:47.849435Z",
     "market_id": "35908",
     "question": "Who will Trump nominate as Fed Chair?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 69.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T21:39:25.998556Z",
-    "market_id": "154572",
-    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -37,33 +37,34 @@ jobs:
         run: |
           cd private-brain
           
-          # 폴더 구조 생성 (필요한 새 폴더들)
+          # 폴더 구조 생성
           mkdir -p data_output/archive
           mkdir -p data_output/api/v1/events
           mkdir -p data_output/audit_logs
           mkdir -p data_output/completed_events
           
-          # 1. 메인 DB 복사 (active_events.json)
+          # 1. 메인 DB 복사
           if [ -f ../temp_data/active_events.json ]; then
             cp ../temp_data/active_events.json data_output/
           fi
           
-          # 2. Archive (과거 데이터) 폴더 동기화
+          # 2. Archive 복사
           if [ -d ../temp_data/archive_events ]; then
             cp -r ../temp_data/archive_events/* data_output/archive/
           fi
           
-          # 3. [Private Only] 상세 API 데이터 복사 (연구용 자산)
+          # 3. API 데이터 복사
           if [ -d ../temp_data/api ]; then
             cp -r ../temp_data/api/* data_output/api/
           fi
           
-          # 4. [New] Audit 로그 복사 (관측/검증 일지)
+          # 4. [CRITICAL] Audit 로그 복사
           if [ -d ../temp_data/audit_logs ]; then
+            echo "📊 Copying audit logs to poly-core..."
             cp -r ../temp_data/audit_logs/* data_output/audit_logs/
           fi
 
-          # 5. [New] 완료된 이벤트 보관함 복사
+          # 5. 완료된 이벤트 복사
           if [ -d ../temp_data/completed_events ]; then
             cp -r ../temp_data/completed_events/* data_output/completed_events/
           fi
@@ -73,15 +74,13 @@ jobs:
             cp ../temp_data/regime_changes.json data_output/
           fi
           
-          # 7. (청소) 구버전 DB 파일만 삭제 (폴더는 유지)
+          # 7. 구버전 파일 삭제
           if [ -f data_output/active_markets.json ]; then
             rm data_output/active_markets.json
           fi
           if [ -f data_output/history_storage.json ]; then
             rm data_output/history_storage.json
           fi
-          
-          # [변경] api/v1/markets 폴더 삭제 로직 제거함 (사용자 수동 관리)
 
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
@@ -97,7 +96,8 @@ jobs:
 
       # ---------------------------------------------------
       # [Mission 2] Public Repo 업데이트 (poly-terminal)
-      # 목표: 요약본(Dashboard)만 배포 (API 폴더 절대 금지)
+      # 목표: 요약본(Dashboard)만 배포
+      # 🚨 SECURITY: 민감 폴더 절대 노출 금지 🚨
       # ---------------------------------------------------
       - name: Checkout Public Face
         uses: actions/checkout@v4
@@ -109,22 +109,25 @@ jobs:
           cd public-face
           mkdir -p docs/data
           
-          # 1. Frontend용 요약본 (필수)
+          # 1. 요약본
           if [ -f ../temp_data/latest_intelligence.json ]; then
             cp ../temp_data/latest_intelligence.json docs/data/
           fi
           
-          # 2. Regime Logs (필수)
+          # 2. 로그
           if [ -f ../temp_data/regime_changes.json ]; then
             cp ../temp_data/regime_changes.json docs/data/
           fi
           
-          # [SECURITY CLEANUP] 
-          # 혹시라도 Public Repo에 api 폴더가 남아있다면 강제 삭제 (여긴 무조건 지워야 함)
-          if [ -d docs/data/api ]; then
-            echo "🧹 Cleaning up exposed API folder from Public Repo..."
-            rm -rf docs/data/api
-          fi
+          # [SECURITY CLEANUP] 민감 폴더 강제 삭제
+          echo "🔒 Security Check: Removing sensitive folders from public repo..."
+          
+          rm -rf docs/data/audit_logs
+          rm -rf docs/data/api
+          rm -rf docs/data/completed_events
+          rm -rf docs/data/archive
+          
+          echo "✅ Security check passed - public repo is clean"
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"

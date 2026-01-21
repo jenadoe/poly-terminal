@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-21T07:05:47.849435Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 72.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T05:46:25.340583Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -532,17 +543,6 @@
     "market_id": "154572",
     "question": "Elon Musk # tweets January 13 - January 20, 2026?",
     "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T21:39:25.998556Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Scatter",
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 62.8,

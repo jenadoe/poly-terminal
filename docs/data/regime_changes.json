@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-21T22:23:19.343684Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Undervalued | Scatter",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 51.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-21T22:23:19.343684Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Consensus",
+    "to_regime": "Consensus | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 83.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T21:52:09.712510Z",
     "market_id": "114242",
     "question": "US strikes Iran by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 59.0,
       "macro_sensitivity": -3.88
-    }
-  },
-  {
-    "timestamp": "2026-01-20T22:44:07.269321Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 56.3,
-      "macro_sensitivity": -4.94
-    }
-  },
-  {
-    "timestamp": "2026-01-20T22:21:27.550741Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 78.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

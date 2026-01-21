@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-21T12:45:14.043678Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-21T12:45:14.043678Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.1,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T11:24:00.349414Z",
     "market_id": "35908",
     "question": "Who will Trump nominate as Fed Chair?",
@@ -524,28 +546,6 @@
     "to_regime": "Forming",
     "metrics_snapshot": {
       "nexus_score": 63.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-19T05:20:32.465535Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued | Scatter",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 53.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-19T03:28:21.839017Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 71.3,
       "macro_sensitivity": 0.0
     }
   }

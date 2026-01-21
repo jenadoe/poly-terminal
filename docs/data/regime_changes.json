@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-21T09:47:34.940926Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": -4.02
+    }
+  },
+  {
     "timestamp": "2026-01-21T08:37:42.050623Z",
     "market_id": "117606",
     "question": "Israel strikes Iran by January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 70.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-18T23:18:14.755895Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Solid",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 72.2,
       "macro_sensitivity": 0.0
     }
   }

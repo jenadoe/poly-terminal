@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-22T17:54:54.818579Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 55.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T17:27:28.965511Z",
     "market_id": "90414",
     "question": "Russia x Ukraine ceasefire by January 31, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 51.4,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T20:01:52.511177Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 73.4,
-      "macro_sensitivity": 0.04
     }
   }
 ]

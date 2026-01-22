@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-22T21:21:17.313204Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Undervalued",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 68.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T21:21:17.313204Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Overheated | High-Conflict",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T20:50:35.984046Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 51.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T22:23:19.343684Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Consensus",
-    "to_regime": "Consensus | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 83.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T21:52:09.712510Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | Forming | High-Conflict",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 50.5,
       "macro_sensitivity": 0.0
     }
   }

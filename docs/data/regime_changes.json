@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-22T15:36:30.756020Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Forming",
+    "metrics_snapshot": {
+      "nexus_score": 73.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T15:36:30.756020Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Consensus",
+    "to_regime": "Consensus | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 81.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T15:36:30.756020Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued",
+    "to_regime": "Undervalued | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 57.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T14:28:46.090975Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -513,39 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 52.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T19:36:13.348161Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 46.4,
-      "macro_sensitivity": 1.43
-    }
-  },
-  {
-    "timestamp": "2026-01-21T19:36:13.348161Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued | Forming",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 50.1,
-      "macro_sensitivity": -1.77
-    }
-  },
-  {
-    "timestamp": "2026-01-21T19:00:57.343143Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 66.1,
       "macro_sensitivity": 0.0
     }
   }

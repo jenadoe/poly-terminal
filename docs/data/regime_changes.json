@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-22T07:41:41.414701Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 64.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T05:16:47.604014Z",
     "market_id": "119872",
     "question": "2026 Men's Australian Open Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.8,
       "macro_sensitivity": -2.17
-    }
-  },
-  {
-    "timestamp": "2026-01-21T17:07:29.190081Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 65.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

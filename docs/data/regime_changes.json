@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-22T16:01:47.070342Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Forming",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T16:01:47.070342Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 67.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T16:01:47.070342Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Undervalued | Forming",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 56.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T15:36:30.756020Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 77.1,
       "macro_sensitivity": -1.03
-    }
-  },
-  {
-    "timestamp": "2026-01-21T20:01:52.511177Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 49.6,
-      "macro_sensitivity": -1.73
-    }
-  },
-  {
-    "timestamp": "2026-01-21T20:01:52.511177Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Overheated",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 71.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T19:36:13.348161Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Forming",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 52.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

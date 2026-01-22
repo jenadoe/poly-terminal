@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-22T01:40:38.556937Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Undervalued | Forming",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 52.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T01:40:38.556937Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 68.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-21T23:47:29.872790Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.4,
       "macro_sensitivity": -4.25
-    }
-  },
-  {
-    "timestamp": "2026-01-21T01:42:28.217128Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 49.8,
-      "macro_sensitivity": -4.38
-    }
-  },
-  {
-    "timestamp": "2026-01-20T23:55:56.015364Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Scatter",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 60.8,
-      "macro_sensitivity": -3.88
     }
   }
 ]

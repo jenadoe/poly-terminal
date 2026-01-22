@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-22T03:27:06.695211Z",
+    "market_id": "118172",
+    "question": "Will Trump acquire Greenland before 2027?",
+    "from_regime": "Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 73.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T03:24:43.683151Z",
     "market_id": "119872",
     "question": "2026 Men's Australian Open Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.8,
       "macro_sensitivity": -4.07
-    }
-  },
-  {
-    "timestamp": "2026-01-21T10:56:13.472743Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Overheated",
-    "to_regime": "Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 71.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

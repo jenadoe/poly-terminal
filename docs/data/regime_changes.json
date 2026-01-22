@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-22T20:50:35.984046Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 65.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T20:50:35.984046Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Solid",
+    "to_regime": "Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 54.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T20:25:10.587622Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T21:52:09.712510Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued | Scatter",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 54.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T21:27:17.890129Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.9,
-      "macro_sensitivity": -2.26
     }
   }
 ]

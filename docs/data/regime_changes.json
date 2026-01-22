@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-22T17:27:28.965511Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Consensus | Scatter",
+    "to_regime": "Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 82.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T16:01:47.070342Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 73.4,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-01-21T20:01:52.511177Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Consensus",
-    "to_regime": "Consensus | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 77.1,
-      "macro_sensitivity": -1.03
     }
   }
 ]

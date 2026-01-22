@@ -1,5 +1,104 @@
 [
   {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 71.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 76.9,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 62.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 61.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 77.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "31875",
+    "question": "Republican Presidential Nominee 2028",
+    "from_regime": "Scatter",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 70.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Undervalued | Scatter",
+    "to_regime": "Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 63.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 66.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-22T05:16:47.604014Z",
+    "market_id": "23656",
+    "question": "Super Bowl Champion 2026",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 61.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-22T03:27:06.695211Z",
     "market_id": "118172",
     "question": "Will Trump acquire Greenland before 2027?",
@@ -448,105 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T15:59:36.597593Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 60.2,
-      "macro_sensitivity": -3.28
-    }
-  },
-  {
-    "timestamp": "2026-01-21T15:59:36.597593Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued | Scatter",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 49.3,
-      "macro_sensitivity": -3.42
-    }
-  },
-  {
-    "timestamp": "2026-01-21T15:51:58.170295Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Solid",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 53.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T15:51:58.170295Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 49.2,
-      "macro_sensitivity": -3.44
-    }
-  },
-  {
-    "timestamp": "2026-01-21T14:06:41.583877Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 60.8,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T12:45:14.043678Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T12:45:14.043678Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T11:24:00.349414Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 71.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-21T10:56:13.472743Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 60.8,
-      "macro_sensitivity": -4.07
     }
   }
 ]

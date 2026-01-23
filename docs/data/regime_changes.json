@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T14:03:54.870292Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | High-Conflict",
+    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 21.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T13:33:14.516517Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Fragile | Scatter",
     "metrics_snapshot": {
       "nexus_score": 35.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T03:05:06.247351Z",
-    "market_id": "84841",
-    "question": "Epstein blackmail evidence released by...? ",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Fragile | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 29.2,
       "macro_sensitivity": 0.0
     }
   }

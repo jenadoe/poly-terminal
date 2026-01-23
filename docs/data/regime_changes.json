@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T21:54:22.333394Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:54:22.333394Z",
+    "market_id": "169441",
+    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 32.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:54:22.333394Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:54:22.333394Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable | Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 41.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T21:43:24.289198Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Chaos | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 19.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Stable | Overheated",
-    "to_regime": "Stable | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 58.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "137340",
-    "question": "What price will Solana hit in January?",
-    "from_regime": "Fragile | Undervalued | Scatter",
-    "to_regime": "Fragile | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 22.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "169441",
-    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
-    "from_regime": "Solid | High-Entropy",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 85.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T08:29:25.007248Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 19.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T08:29:25.007248Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Solid",
+    "to_regime": "Fragile | Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 33.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T08:29:25.007248Z",
+    "market_id": "169441",
+    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
+    "from_regime": "Solid | High-Entropy",
+    "to_regime": "Solid | Undervalued | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T08:29:25.007248Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 37.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T07:39:20.683554Z",
     "market_id": "137341",
     "question": "What price will Ethereum hit in January?",
@@ -502,50 +546,6 @@
     "to_regime": "Undervalued",
     "metrics_snapshot": {
       "nexus_score": 56.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T15:36:30.756020Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Forming",
-    "metrics_snapshot": {
-      "nexus_score": 73.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T15:36:30.756020Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Consensus",
-    "to_regime": "Consensus | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 81.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T15:36:30.756020Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Undervalued | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 57.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T14:28:46.090975Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Undervalued | Forming",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 55.1,
       "macro_sensitivity": 0.0
     }
   }

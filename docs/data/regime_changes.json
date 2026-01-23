@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T23:20:42.160790Z",
+    "market_id": "91942",
+    "question": "Measles cases in U.S. in 2026?",
+    "from_regime": "Stable | Overheated | High-Conflict",
+    "to_regime": "Fragile | Overheated | Consensus | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 20.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T23:20:42.160790Z",
+    "market_id": "159840",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 31.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T23:20:42.160790Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable | Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 41.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T23:20:42.160790Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T22:55:35.817357Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Stable | High-Entropy",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T18:32:20.230493Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Forming | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 19.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T18:32:20.230493Z",
-    "market_id": "169441",
-    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 81.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T18:32:20.230493Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Solid | Undervalued | Scatter",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T18:32:20.230493Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Solid | Undervalued | Scatter",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

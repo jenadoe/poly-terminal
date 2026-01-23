@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T05:02:49.938881Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Chaos | Consensus",
+    "to_regime": "Fragile | Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 36.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T04:30:02.126377Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 77.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "Scatter",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 70.4,
       "macro_sensitivity": 0.0
     }
   }

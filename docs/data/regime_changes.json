@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-23T11:44:34.767692Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Solid | High-Entropy",
+    "to_regime": "Solid | High-Entropy | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T11:44:34.767692Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 69.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T11:20:53.377941Z",
     "market_id": "50386",
     "question": "Oscars 2026: Best Director Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Chaos | Consensus",
     "metrics_snapshot": {
       "nexus_score": 36.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "96016",
-    "question": "Which company has the best AI model end of January?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 85.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "23784",
-    "question": "What will happen before GTA VI?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Solid | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

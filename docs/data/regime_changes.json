@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T13:33:14.516517Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Forming | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 22.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T13:33:14.516517Z",
+    "market_id": "125868",
+    "question": "Will Silver (SI) hit__ by end of January?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T13:33:14.516517Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 61.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T13:33:14.516517Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T12:43:54.179209Z",
     "market_id": "60182",
     "question": "Nobel Peace Prize Winner 2026",
@@ -502,50 +546,6 @@
     "to_regime": "Fragile | High-Entropy",
     "metrics_snapshot": {
       "nexus_score": 29.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T03:05:06.247351Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Stable | Undervalued | High-Entropy",
-    "to_regime": "Fragile | Undervalued | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 18.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 32.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "154572",
-    "question": "Elon Musk # tweets January 13 - January 20, 2026?",
-    "from_regime": "Consensus | Forming",
-    "to_regime": "Chaos | Consensus | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 35.0,
       "macro_sensitivity": 0.0
     }
   }

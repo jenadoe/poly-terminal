@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T06:45:02.991952Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Chaos | Undervalued",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 37.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T05:59:43.121925Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 64.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Scatter",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 71.1,
       "macro_sensitivity": 0.0
     }
   }

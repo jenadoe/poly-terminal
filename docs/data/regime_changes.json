@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T03:22:16.066495Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T03:05:06.247351Z",
     "market_id": "31759",
     "question": "Russia x Ukraine ceasefire by March 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 61.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T03:27:06.695211Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Forming",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 73.2,
       "macro_sensitivity": 0.0
     }
   }

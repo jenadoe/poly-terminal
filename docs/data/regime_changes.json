@@ -1,5 +1,93 @@
 [
   {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "57057",
+    "question": "Israel x Hamas ceasefire cancelled by...?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Stable | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 61.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Solid | Overheated",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Stable",
+    "to_regime": "Fragile | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 35.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "144302",
+    "question": "Will the Iranian regime fall by January 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Fragile | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 39.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "159840",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 34.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 82.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 41.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:20:27.746918Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Solid | Undervalued | Forming",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 76.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T20:48:43.995837Z",
     "market_id": "28628",
     "question": "Israel x Iran ceasefire broken by...? ",
@@ -458,94 +546,6 @@
     "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 21.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:40:25.086172Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:40:25.086172Z",
-    "market_id": "137340",
-    "question": "What price will Solana hit in January?",
-    "from_regime": "Stable | Undervalued",
-    "to_regime": "Fragile | Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 22.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:40:25.086172Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:40:25.086172Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 75.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:00:01.704182Z",
-    "market_id": "168468",
-    "question": "Bitcoin above ___ on January 23?",
-    "from_regime": "Solid | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 21.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:00:01.704182Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Solid | Undervalued | Scatter",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T15:42:20.309053Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T15:42:20.309053Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Chaos | Forming",
-    "to_regime": "Chaos | Consensus | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 34.1,
       "macro_sensitivity": 0.0
     }
   }

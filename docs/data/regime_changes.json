@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T11:20:53.377941Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Fragile | Consensus",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T10:54:00.564754Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Stable | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

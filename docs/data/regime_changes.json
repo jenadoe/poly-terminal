@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T07:05:13.700398Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid | Undervalued | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 75.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T06:45:02.991952Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Undervalued | Forming",
     "metrics_snapshot": {
       "nexus_score": 55.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T07:41:41.414701Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 64.1,
       "macro_sensitivity": 0.0
     }
   }

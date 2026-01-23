@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-23T10:20:04.791912Z",
+    "market_id": "137340",
+    "question": "What price will Solana hit in January?",
+    "from_regime": "Fragile | Undervalued",
+    "to_regime": "Stable | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T10:20:04.791912Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Solid | Overheated",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 77.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T09:58:06.888965Z",
     "market_id": "168468",
     "question": "Bitcoin above ___ on January 23?",
@@ -524,28 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 83.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "34587",
-    "question": "Portugal Presidential Election",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 86.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Chaos",
-    "to_regime": "Solid | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
       "macro_sensitivity": 0.0
     }
   }

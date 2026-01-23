@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T10:29:00.526874Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 68.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T10:20:04.791912Z",
     "market_id": "137340",
     "question": "What price will Solana hit in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 75.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "59404",
-    "question": "Which coalition will form the next Dutch government?",
-    "from_regime": "Consensus",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
       "macro_sensitivity": 0.0
     }
   }

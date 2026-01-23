@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T22:55:35.817357Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T22:44:44.983656Z",
     "market_id": "67284",
     "question": "Fed decision in March?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

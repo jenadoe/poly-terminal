@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T11:56:18.874905Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Solid | High-Entropy | High-Conflict",
+    "to_regime": "Solid | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T11:44:34.767692Z",
     "market_id": "175976",
     "question": "Elon Musk # tweets January 23 - January 30, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable | Undervalued | High-Entropy",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Consensus",
-    "to_regime": "Chaos | Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 36.2,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-23T15:02:24.406010Z",
+    "market_id": "60182",
+    "question": "Nobel Peace Prize Winner 2026",
+    "from_regime": "Stable | Undervalued",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 76.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T15:02:24.406010Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T14:45:31.695268Z",
     "market_id": "67284",
     "question": "Fed decision in March?",
@@ -524,28 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 91.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T05:02:49.938881Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Chaos | Consensus",
-    "to_regime": "Fragile | Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 36.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T04:30:02.126377Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 28.6,
       "macro_sensitivity": 0.0
     }
   }

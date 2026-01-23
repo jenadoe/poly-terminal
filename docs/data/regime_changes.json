@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T20:24:36.102982Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T20:24:36.102982Z",
+    "market_id": "102773",
+    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 59.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T20:24:36.102982Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | Scatter",
+    "to_regime": "Stable | High-Entropy | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T20:24:36.102982Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Solid | Undervalued | Forming",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 75.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T19:52:22.940390Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 33.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T14:45:31.695268Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T14:45:31.695268Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T14:03:54.870292Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 21.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T13:33:14.516517Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Forming | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 22.7,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T14:45:31.695268Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Fragile",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T14:45:31.695268Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Solid",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 33.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T14:45:31.695268Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 39.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T14:45:31.695268Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T14:03:54.870292Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -502,50 +546,6 @@
     "to_regime": "Chaos | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 28.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T04:30:02.126377Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 90.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T04:30:02.126377Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 83.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T03:22:16.066495Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 81.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T03:05:06.247351Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Fragile | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 35.9,
       "macro_sensitivity": 0.0
     }
   }

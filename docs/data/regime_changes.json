@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T19:34:55.874481Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:34:55.874481Z",
+    "market_id": "151953",
+    "question": "US/Israel strikes Iran by...?",
+    "from_regime": "Solid | Overheated | High-Conflict",
+    "to_regime": "Stable | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 67.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:34:55.874481Z",
+    "market_id": "169441",
+    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
+    "from_regime": "Solid | Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 82.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:34:55.874481Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 80.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T19:05:03.476001Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Solid | High-Entropy",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T11:44:34.767692Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Solid | High-Entropy",
-    "to_regime": "Solid | High-Entropy | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T11:44:34.767692Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 69.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T11:20:53.377941Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Fragile | Consensus",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T10:54:00.564754Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 22.1,
       "macro_sensitivity": 0.0
     }
   }

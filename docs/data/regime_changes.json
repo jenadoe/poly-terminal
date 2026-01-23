@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-01-23T18:32:20.230493Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | Forming",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T18:32:20.230493Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Forming | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 19.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T18:32:20.230493Z",
+    "market_id": "169441",
+    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T18:32:20.230493Z",
+    "market_id": "137341",
+    "question": "What price will Ethereum hit in January?",
+    "from_regime": "Solid | Undervalued | Scatter",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T18:32:20.230493Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Solid | Undervalued | Scatter",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T17:55:34.205809Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -491,61 +546,6 @@
     "to_regime": "Solid | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:58:06.888965Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 66.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:58:06.888965Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:58:06.888965Z",
-    "market_id": "160906",
-    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
-    "from_regime": "Chaos | Forming",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 39.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:32:21.809962Z",
-    "market_id": "57057",
-    "question": "Israel x Hamas ceasefire cancelled by...?",
-    "from_regime": "Stable | Undervalued",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:14:26.919843Z",
-    "market_id": "57057",
-    "question": "Israel x Hamas ceasefire cancelled by...?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Stable | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 69.9,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T10:54:00.564754Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | High-Conflict",
+    "to_regime": "Chaos | Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 22.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T10:29:00.526874Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Undervalued",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 75.3,
       "macro_sensitivity": 0.0
     }
   }

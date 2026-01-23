@@ -1,5 +1,82 @@
 [
   {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | Forming",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 19.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "125868",
+    "question": "Will Silver (SI) hit__ by end of January?",
+    "from_regime": "Stable | Overheated",
+    "to_regime": "Stable | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 58.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "137340",
+    "question": "What price will Solana hit in January?",
+    "from_regime": "Fragile | Undervalued | Scatter",
+    "to_regime": "Fragile | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 22.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "169441",
+    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
+    "from_regime": "Solid | High-Entropy",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 85.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T17:04:28.445007Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T16:40:25.086172Z",
     "market_id": "168468",
     "question": "Bitcoin above ___ on January 23?",
@@ -469,83 +546,6 @@
     "to_regime": "Solid | High-Entropy",
     "metrics_snapshot": {
       "nexus_score": 83.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:57:52.710588Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 19.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:57:52.710588Z",
-    "market_id": "137340",
-    "question": "What price will Solana hit in January?",
-    "from_regime": "Stable | Undervalued",
-    "to_regime": "Fragile | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 23.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:57:52.710588Z",
-    "market_id": "169441",
-    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
-    "from_regime": "Solid | Undervalued | High-Entropy",
-    "to_regime": "Solid | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:57:52.710588Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:29:25.007248Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 19.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:29:25.007248Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Solid",
-    "to_regime": "Fragile | Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 33.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T08:29:25.007248Z",
-    "market_id": "169441",
-    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
-    "from_regime": "Solid | High-Entropy",
-    "to_regime": "Solid | Undervalued | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

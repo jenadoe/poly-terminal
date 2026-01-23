@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T22:44:44.983656Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Fragile | Scatter",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:44:44.983656Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Solid | Overheated",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 77.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:44:44.983656Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Stable | Overheated | High-Conflict",
+    "to_regime": "Stable | Overheated | Forming | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:44:44.983656Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 42.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T22:17:49.874545Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -502,50 +546,6 @@
     "to_regime": "Stable | Forming",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Forming | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 22.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "36173",
-    "question": "When will Bitcoin hit $150k?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Stable | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 55.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
       "macro_sensitivity": 0.0
     }
   }

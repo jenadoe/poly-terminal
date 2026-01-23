@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-23T09:32:21.809962Z",
+    "market_id": "57057",
+    "question": "Israel x Hamas ceasefire cancelled by...?",
+    "from_regime": "Stable | Undervalued",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T09:14:26.919843Z",
     "market_id": "57057",
     "question": "Israel x Hamas ceasefire cancelled by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 68.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T21:21:17.313204Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Overheated | High-Conflict",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 71.3,
       "macro_sensitivity": 0.0
     }
   }

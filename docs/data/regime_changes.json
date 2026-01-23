@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-23T05:46:09.477257Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Chaos | Undervalued",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 31.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T05:46:09.477257Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Fragile | Scatter",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 35.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T05:46:09.477257Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Solid | Forming",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 91.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T05:02:49.938881Z",
     "market_id": "90414",
     "question": "Russia x Ukraine ceasefire by January 31, 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.9,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 62.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 61.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Scatter",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 77.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

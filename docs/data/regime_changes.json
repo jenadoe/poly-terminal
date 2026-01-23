@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-23T23:43:33.694866Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | High-Conflict",
+    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 16.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T23:43:33.694866Z",
+    "market_id": "159840",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Chaos | Scatter",
+    "to_regime": "Chaos",
+    "metrics_snapshot": {
+      "nexus_score": 37.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T23:43:33.694866Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T23:20:42.160790Z",
     "market_id": "91942",
     "question": "Measles cases in U.S. in 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 18.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:05:03.476001Z",
-    "market_id": "91942",
-    "question": "Measles cases in U.S. in 2026?",
-    "from_regime": "Solid | Overheated | High-Conflict",
-    "to_regime": "Stable | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:05:03.476001Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Chaos",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T18:32:20.230493Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable | Forming",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

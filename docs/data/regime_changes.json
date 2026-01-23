@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-23T03:05:06.247351Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Fragile | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 35.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T03:05:06.247351Z",
+    "market_id": "84841",
+    "question": "Epstein blackmail evidence released by...? ",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Fragile | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 29.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T03:05:06.247351Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Stable | Undervalued | High-Entropy",
+    "to_regime": "Fragile | Undervalued | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 18.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T02:21:33.311345Z",
     "market_id": "160906",
     "question": "Elon Musk # tweets January 16 - January 23, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 73.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T03:24:43.683151Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 71.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T03:24:43.683151Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Solid",
-    "to_regime": "Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 77.0,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-01-22T03:24:43.683151Z",
-    "market_id": "59404",
-    "question": "Which coalition will form the next Dutch government?",
-    "from_regime": "Overheated | Consensus | High-Conflict",
-    "to_regime": "Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 84.2,
       "macro_sensitivity": 0.0
     }
   }

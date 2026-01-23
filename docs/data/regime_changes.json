@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-23T04:30:02.126377Z",
+    "market_id": "160906",
+    "question": "Elon Musk # tweets January 16 - January 23, 2026?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 28.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T04:30:02.126377Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 90.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T04:30:02.126377Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 83.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T03:22:16.066495Z",
     "market_id": "45915",
     "question": "Brazil Presidential Election",
@@ -513,39 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 70.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Undervalued | Scatter",
-    "to_regime": "Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 63.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "30829",
-    "question": "Democratic Presidential Nominee 2028",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 66.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-22T05:16:47.604014Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 61.1,
       "macro_sensitivity": 0.0
     }
   }

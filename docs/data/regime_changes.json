@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T22:17:49.874545Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 17.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:17:49.874545Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Solid",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 34.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:17:49.874545Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T22:17:49.874545Z",
+    "market_id": "144302",
+    "question": "Will the Iranian regime fall by January 31?",
+    "from_regime": "Fragile | Scatter",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T21:54:22.333394Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Solid | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 82.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:55:34.205809Z",
-    "market_id": "45883",
-    "question": "Fed decision in January?",
-    "from_regime": "Solid",
-    "to_regime": "Fragile | Consensus",
-    "metrics_snapshot": {
-      "nexus_score": 39.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable | Forming",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 19.7,
       "macro_sensitivity": 0.0
     }
   }

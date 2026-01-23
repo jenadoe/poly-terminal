@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable | High-Entropy | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "38900",
+    "question": "Will Russia capture all of Pokrovsk by...?",
+    "from_regime": "Solid | Undervalued | Forming",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "102773",
+    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable | High-Entropy | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 58.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Solid | Overheated | High-Entropy | High-Conflict",
+    "to_regime": "Stable | Overheated | High-Entropy | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable",
+    "to_regime": "Stable | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:52:22.940390Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid | Undervalued | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 75.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T19:34:55.874481Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -480,72 +546,6 @@
     "to_regime": "Chaos | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 22.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T13:33:14.516517Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T13:33:14.516517Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Stable | High-Entropy | Scatter",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 61.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T13:33:14.516517Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T12:43:54.179209Z",
-    "market_id": "60182",
-    "question": "Nobel Peace Prize Winner 2026",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Stable | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 69.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T12:43:54.179209Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable | High-Entropy | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 62.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T11:56:18.874905Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Solid | High-Entropy | High-Conflict",
-    "to_regime": "Solid | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

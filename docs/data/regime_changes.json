@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-23T19:05:03.476001Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable | High-Entropy | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:05:03.476001Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | High-Conflict",
+    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 18.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:05:03.476001Z",
+    "market_id": "91942",
+    "question": "Measles cases in U.S. in 2026?",
+    "from_regime": "Solid | Overheated | High-Conflict",
+    "to_regime": "Stable | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T19:05:03.476001Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Chaos",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 83.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T18:32:20.230493Z",
     "market_id": "38010",
     "question": "Will Trump meet with Putin again by...?",
@@ -502,50 +546,6 @@
     "to_regime": "Chaos | Overheated | Forming | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 22.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T10:29:00.526874Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 68.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T10:20:04.791912Z",
-    "market_id": "137340",
-    "question": "What price will Solana hit in January?",
-    "from_regime": "Fragile | Undervalued",
-    "to_regime": "Stable | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T10:20:04.791912Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Solid | Overheated",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 77.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T09:58:06.888965Z",
-    "market_id": "168468",
-    "question": "Bitcoin above ___ on January 23?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Solid | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

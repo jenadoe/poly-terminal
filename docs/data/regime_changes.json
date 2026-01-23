@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-23T21:43:24.289198Z",
+    "market_id": "38010",
+    "question": "Will Trump meet with Putin again by...?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T21:43:24.289198Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Overheated",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T21:20:27.746918Z",
     "market_id": "57057",
     "question": "Israel x Hamas ceasefire cancelled by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 85.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T17:04:28.445007Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable | Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T16:40:25.086172Z",
-    "market_id": "168468",
-    "question": "Bitcoin above ___ on January 23?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 21.5,
       "macro_sensitivity": 0.0
     }
   }

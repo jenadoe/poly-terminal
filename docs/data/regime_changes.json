@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-23T12:43:54.179209Z",
+    "market_id": "60182",
+    "question": "Nobel Peace Prize Winner 2026",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Stable | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 69.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-23T12:43:54.179209Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable | High-Entropy | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 62.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-23T11:56:18.874905Z",
     "market_id": "175976",
     "question": "Elon Musk # tweets January 23 - January 30, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Chaos | Consensus | Forming",
     "metrics_snapshot": {
       "nexus_score": 35.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "84841",
-    "question": "Epstein blackmail evidence released by...? ",
-    "from_regime": "Chaos",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 69.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T02:21:33.311345Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Undervalued | Chaos",
-    "to_regime": "Stable | Undervalued | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

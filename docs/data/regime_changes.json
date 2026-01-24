@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-24T12:38:16.868286Z",
+    "market_id": "125868",
+    "question": "Will Silver (SI) hit__ by end of January?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 58.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T11:39:36.953178Z",
     "market_id": "125868",
     "question": "Will Silver (SI) hit__ by end of January?",
@@ -535,17 +546,6 @@
     "to_regime": "Fragile | Overheated | Consensus | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 20.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T23:20:42.160790Z",
-    "market_id": "159840",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 31.5,
       "macro_sensitivity": 0.0
     }
   }

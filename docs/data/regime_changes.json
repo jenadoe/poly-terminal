@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T10:07:25.322529Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T10:07:25.322529Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T08:50:06.374434Z",
     "market_id": "149996",
     "question": "Israel nuclear weapon use against Iran by January 31?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable | Forming",
     "metrics_snapshot": {
       "nexus_score": 42.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:17:49.874545Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 17.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:17:49.874545Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Solid",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 34.9,
       "macro_sensitivity": 0.0
     }
   }

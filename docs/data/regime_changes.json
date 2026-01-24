@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-24T03:13:14.690461Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Stable | Undervalued",
+    "to_regime": "Stable | Scatter",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T03:13:14.690461Z",
+    "market_id": "159840",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Chaos",
+    "to_regime": "Chaos | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 39.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T03:13:14.690461Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T03:13:14.690461Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | High-Entropy | Scatter",
+    "to_regime": "Stable | High-Entropy",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T01:27:13.139757Z",
     "market_id": "28628",
     "question": "Israel x Iran ceasefire broken by...? ",
@@ -502,50 +546,6 @@
     "to_regime": "Solid | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:52:22.940390Z",
-    "market_id": "102773",
-    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable | High-Entropy | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 58.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:52:22.940390Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Solid | Overheated | High-Entropy | High-Conflict",
-    "to_regime": "Stable | Overheated | High-Entropy | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 62.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:52:22.940390Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T19:52:22.940390Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 75.7,
       "macro_sensitivity": 0.0
     }
   }

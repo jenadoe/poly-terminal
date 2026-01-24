@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-24T08:50:06.374434Z",
+    "market_id": "149996",
+    "question": "Israel nuclear weapon use against Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Fragile | Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 34.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T08:50:06.374434Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Fragile",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 84.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T08:50:06.374434Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Stable | Overheated | High-Conflict",
+    "to_regime": "Stable | Overheated | Scatter | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T08:50:06.374434Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 84.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T08:25:54.218636Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -502,50 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 34.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:17:49.874545Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:17:49.874545Z",
-    "market_id": "144302",
-    "question": "Will the Iranian regime fall by January 31?",
-    "from_regime": "Fragile | Scatter",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:54:22.333394Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:54:22.333394Z",
-    "market_id": "169441",
-    "question": "Elon Musk # tweets January 20 - January 27, 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 32.6,
       "macro_sensitivity": 0.0
     }
   }

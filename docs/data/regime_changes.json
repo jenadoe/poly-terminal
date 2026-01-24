@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-24T15:19:40.246039Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T14:54:46.675359Z",
     "market_id": "125868",
     "question": "Will Silver (SI) hit__ by end of January?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable | Overheated | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T23:43:33.694866Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | High-Conflict",
-    "to_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 16.2,
       "macro_sensitivity": 0.0
     }
   }

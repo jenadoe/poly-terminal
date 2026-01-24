@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-24T22:43:59.591380Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T22:43:59.591380Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T22:43:59.591380Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T22:19:36.527642Z",
     "market_id": "84575",
     "question": "Epstein client list released by...?",
@@ -511,39 +544,6 @@
     "question": "Israel strikes Iran by January 31, 2026?",
     "from_regime": "Stable | High-Entropy",
     "to_regime": "Stable | High-Entropy | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T05:20:52.214198Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Stable",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T04:49:17.318007Z",
-    "market_id": "159840",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Chaos | Forming",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T04:49:17.318007Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Stable | Scatter",
-    "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 40.0,
       "macro_sensitivity": 0.0

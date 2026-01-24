@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T21:39:59.352413Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T21:39:59.352413Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T20:20:50.290403Z",
     "market_id": "22862",
     "question": "How much revenue will the U.S. raise from tariffs in 2025?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable | Scatter",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T03:13:14.690461Z",
-    "market_id": "159840",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 39.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T03:13:14.690461Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 82.4,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T22:54:25.918166Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T22:54:25.918166Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T22:43:59.591380Z",
     "market_id": "22862",
     "question": "How much revenue will the U.S. raise from tariffs in 2025?",
@@ -524,28 +546,6 @@
     "to_regime": "Fragile | Consensus",
     "metrics_snapshot": {
       "nexus_score": 35.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T05:20:52.214198Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Stable",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 35.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T05:20:52.214198Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable | High-Entropy | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

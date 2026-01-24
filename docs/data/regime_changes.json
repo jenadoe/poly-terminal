@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T08:25:54.218636Z",
+    "market_id": "133127",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Chaos | Overheated | Forming | High-Conflict",
+    "to_regime": "Chaos | Overheated | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 17.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T08:25:54.218636Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Solid",
+    "to_regime": "Solid | Undervalued",
+    "metrics_snapshot": {
+      "nexus_score": 82.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T07:20:02.674837Z",
     "market_id": "133127",
     "question": "Will Israel strike Lebanon on...?",
@@ -524,28 +546,6 @@
     "to_regime": "Chaos",
     "metrics_snapshot": {
       "nexus_score": 32.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:54:22.333394Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable | High-Entropy | Scatter",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:54:22.333394Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Stable | Scatter",
-    "to_regime": "Stable",
-    "metrics_snapshot": {
-      "nexus_score": 41.4,
       "macro_sensitivity": 0.0
     }
   }

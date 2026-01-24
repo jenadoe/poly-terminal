@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T06:56:37.585646Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Solid | High-Entropy",
+    "to_regime": "Solid | High-Entropy | High-Conflict",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T06:56:37.585646Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 42.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T06:30:11.029309Z",
     "market_id": "119872",
     "question": "2026 Men's Australian Open Winner",
@@ -522,28 +544,6 @@
     "question": "Israel x Iran ceasefire broken by...? ",
     "from_regime": "Solid",
     "to_regime": "Solid | Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:20:27.746918Z",
-    "market_id": "57057",
-    "question": "Israel x Hamas ceasefire cancelled by...?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Stable | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 61.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:20:27.746918Z",
-    "market_id": "28628",
-    "question": "Israel x Iran ceasefire broken by...? ",
-    "from_regime": "Solid | Overheated",
-    "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 75.0,
       "macro_sensitivity": 0.0

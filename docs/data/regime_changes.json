@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T05:55:51.077923Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid",
+    "metrics_snapshot": {
+      "nexus_score": 83.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:55:51.077923Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Fragile | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 38.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T05:45:12.601560Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Fragile | Scatter",
     "metrics_snapshot": {
       "nexus_score": 35.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:20:27.746918Z",
-    "market_id": "144302",
-    "question": "Will the Iranian regime fall by January 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Fragile | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:20:27.746918Z",
-    "market_id": "159840",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Chaos | Scatter",
-    "to_regime": "Chaos",
-    "metrics_snapshot": {
-      "nexus_score": 34.4,
       "macro_sensitivity": 0.0
     }
   }

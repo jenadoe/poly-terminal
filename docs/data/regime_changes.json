@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "38900",
+    "question": "Will Russia capture all of Pokrovsk by...?",
+    "from_regime": "Solid | Undervalued",
+    "to_regime": "Solid | Undervalued | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 75.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Stable | Scatter",
+    "to_regime": "Stable",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "144302",
+    "question": "Will the Iranian regime fall by January 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Fragile | Consensus",
+    "metrics_snapshot": {
+      "nexus_score": 35.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Stable",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 35.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "117606",
+    "question": "Israel strikes Iran by January 31, 2026?",
+    "from_regime": "Stable | High-Entropy",
+    "to_regime": "Stable | High-Entropy | Forming",
+    "metrics_snapshot": {
+      "nexus_score": 40.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T05:20:52.214198Z",
+    "market_id": "143573",
+    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+    "from_regime": "Stable",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T04:49:17.318007Z",
     "market_id": "159840",
     "question": "US next strikes Iran on...?",
@@ -480,72 +546,6 @@
     "to_regime": "Solid | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 76.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:48:43.995837Z",
-    "market_id": "28628",
-    "question": "Israel x Iran ceasefire broken by...? ",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Overheated",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:48:43.995837Z",
-    "market_id": "144302",
-    "question": "Will the Iranian regime fall by January 31?",
-    "from_regime": "Stable",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:48:43.995837Z",
-    "market_id": "159840",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Chaos",
-    "to_regime": "Chaos | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 37.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:48:43.995837Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Solid | Undervalued",
-    "to_regime": "Solid | Undervalued | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 76.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:24:36.102982Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Stable | High-Entropy | Scatter",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T20:24:36.102982Z",
-    "market_id": "102773",
-    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
-    "from_regime": "Stable | High-Entropy | Scatter",
-    "to_regime": "Stable | High-Entropy",
-    "metrics_snapshot": {
-      "nexus_score": 59.1,
       "macro_sensitivity": 0.0
     }
   }

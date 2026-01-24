@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-24T17:52:16.272638Z",
+    "market_id": "84575",
+    "question": "Epstein client list released by...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T17:41:53.517854Z",
     "market_id": "22862",
     "question": "How much revenue will the U.S. raise from tariffs in 2025?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable | Undervalued",
     "metrics_snapshot": {
       "nexus_score": 60.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T01:27:13.139757Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "Stable | High-Entropy",
-    "to_regime": "Stable | High-Entropy | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

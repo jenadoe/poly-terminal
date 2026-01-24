@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T11:17:37.487753Z",
+    "market_id": "84575",
+    "question": "Epstein client list released by...?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T11:17:37.487753Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T10:45:39.314800Z",
     "market_id": "175976",
     "question": "Elon Musk # tweets January 23 - January 30, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:44:44.983656Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Fragile | Scatter",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:44:44.983656Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Solid | Overheated",
-    "to_regime": "Solid",
-    "metrics_snapshot": {
-      "nexus_score": 77.4,
       "macro_sensitivity": 0.0
     }
   }

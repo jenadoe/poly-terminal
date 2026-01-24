@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-24T10:20:45.318091Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T10:07:25.322529Z",
     "market_id": "175976",
     "question": "Elon Musk # tweets January 23 - January 30, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Stable | Overheated | Forming | High-Conflict",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T22:44:44.983656Z",
-    "market_id": "143573",
-    "question": "Khamenei out as Supreme Leader of Iran by January 31?",
-    "from_regime": "Stable",
-    "to_regime": "Stable | Forming",
-    "metrics_snapshot": {
-      "nexus_score": 42.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-24T17:41:53.517854Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-24T17:41:53.517854Z",
+    "market_id": "175976",
+    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T15:53:08.348630Z",
     "market_id": "125868",
     "question": "Will Silver (SI) hit__ by end of January?",
@@ -524,28 +546,6 @@
     "to_regime": "Stable | High-Entropy | Scatter",
     "metrics_snapshot": {
       "nexus_score": 40.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T01:27:13.139757Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Solid",
-    "to_regime": "Solid | Undervalued",
-    "metrics_snapshot": {
-      "nexus_score": 80.5,
-      "macro_sensitivity": -0.54
-    }
-  },
-  {
-    "timestamp": "2026-01-23T23:54:25.732311Z",
-    "market_id": "133127",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Chaos | Overheated | Scatter | High-Conflict",
-    "to_regime": "Chaos | Overheated | High-Conflict",
-    "metrics_snapshot": {
-      "nexus_score": 16.1,
       "macro_sensitivity": 0.0
     }
   }

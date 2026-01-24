@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-24T06:30:11.029309Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Fragile | Forming",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-24T05:55:51.077923Z",
     "market_id": "143443",
     "question": "Venezuela leader end of 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Solid",
     "metrics_snapshot": {
       "nexus_score": 75.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-23T21:20:27.746918Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Stable",
-    "to_regime": "Fragile | Scatter",
-    "metrics_snapshot": {
-      "nexus_score": 35.3,
       "macro_sensitivity": 0.0
     }
   }

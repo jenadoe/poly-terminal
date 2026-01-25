@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-25T13:50:24.084040Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T13:50:24.084040Z",
+    "market_id": "137340",
+    "question": "What price will Solana hit in January?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T13:22:25.880719Z",
     "market_id": "173743",
     "question": "What price will Bitcoin hit January 19-25?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T01:34:37.861613Z",
-    "market_id": "117606",
-    "question": "Israel strikes Iran by January 31, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T01:34:37.861613Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.8,
       "macro_sensitivity": 0.0
     }
   }

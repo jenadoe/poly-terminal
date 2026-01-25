@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-01-25T03:53:41.701432Z",
+    "market_id": "173743",
+    "question": "What price will Bitcoin hit January 19-25?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T03:53:41.701432Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T03:53:41.701432Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T03:53:41.701432Z",
+    "market_id": "31875",
+    "question": "Republican Presidential Nominee 2028",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T03:53:41.701432Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T01:48:13.233019Z",
     "market_id": "80505",
     "question": "Will there be another US government shutdown by January 31?",
@@ -491,61 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 73.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T15:53:08.348630Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 59.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T15:19:40.246039Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T14:54:46.675359Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 58.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T14:44:07.843590Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T13:21:25.154773Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.7,
       "macro_sensitivity": 0.0
     }
   }

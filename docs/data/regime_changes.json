@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-25T23:20:18.531901Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T23:20:18.531901Z",
+    "market_id": "137340",
+    "question": "What price will Solana hit in January?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T21:20:50.709952Z",
     "market_id": "23656",
     "question": "Super Bowl Champion 2026",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T05:27:56.040774Z",
-    "market_id": "22862",
-    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T05:27:56.040774Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.9,
       "macro_sensitivity": 0.0
     }
   }

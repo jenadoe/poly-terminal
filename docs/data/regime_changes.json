@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-25T23:42:45.820695Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T23:42:45.820695Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T23:20:18.531901Z",
     "market_id": "34038",
     "question": "Next Prime Minister of Hungary",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 50.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T05:51:39.198307Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T05:51:39.198307Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.4,
       "macro_sensitivity": 0.0
     }
   }

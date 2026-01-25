@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-25T01:48:13.233019Z",
+    "market_id": "80505",
+    "question": "Will there be another US government shutdown by January 31?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-25T01:48:13.233019Z",
+    "market_id": "110115",
+    "question": "2nd Largest company end of January?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 94.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T01:34:37.861613Z",
     "market_id": "23658",
     "question": "AFC Champion",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 83.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T12:38:16.868286Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 58.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-24T11:39:36.953178Z",
-    "market_id": "125868",
-    "question": "Will Silver (SI) hit__ by end of January?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 58.6,
       "macro_sensitivity": 0.0
     }
   }

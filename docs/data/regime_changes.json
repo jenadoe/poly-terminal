@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-26T07:49:08.286422Z",
+    "market_id": "84841",
+    "question": "Epstein blackmail evidence released by...? ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-26T07:27:30.519864Z",
     "market_id": "30615",
     "question": "2026 FIFA World Cup Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 81.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T13:50:24.084040Z",
-    "market_id": "22862",
-    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.2,
       "macro_sensitivity": 0.0
     }
   }

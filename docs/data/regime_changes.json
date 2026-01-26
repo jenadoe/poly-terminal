@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-26T14:05:17.749680Z",
+    "market_id": "137340",
+    "question": "What price will Solana hit in January?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 57.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-26T14:05:17.749680Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-26T12:44:40.868372Z",
     "market_id": "137340",
     "question": "What price will Solana hit in January?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T16:50:10.249150Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T16:50:10.249150Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.0,
       "macro_sensitivity": 0.0
     }
   }

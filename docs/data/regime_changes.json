@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-26T23:45:34.859952Z",
+    "market_id": "80505",
+    "question": "US government shutdown Saturday?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-26T22:48:32.730459Z",
     "market_id": "30615",
     "question": "2026 FIFA World Cup Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 83.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T20:46:13.299675Z",
-    "market_id": "23656",
-    "question": "Super Bowl Champion 2026",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
       "macro_sensitivity": 0.0
     }
   }

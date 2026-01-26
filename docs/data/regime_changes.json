@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-26T01:47:18.673492Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-26T01:47:18.673492Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-26T01:47:18.673492Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-25T23:42:45.820695Z",
     "market_id": "148292",
     "question": "Will the US acquire part of Greenland in 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 49.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T07:25:29.358294Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 45.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T06:30:07.116762Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T05:51:39.198307Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
       "macro_sensitivity": 0.0
     }
   }

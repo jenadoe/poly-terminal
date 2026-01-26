@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-26T09:01:40.658620Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-26T08:31:17.617485Z",
     "market_id": "159840",
     "question": "US next strikes Iran on...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T15:19:47.275771Z",
-    "market_id": "102773",
-    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.2,
       "macro_sensitivity": 0.0
     }
   }

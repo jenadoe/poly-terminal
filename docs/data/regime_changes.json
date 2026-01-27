@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-27T17:45:43.335549Z",
+    "market_id": "137339",
+    "question": "What price will XRP hit in January?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-27T17:05:03.389335Z",
     "market_id": "30615",
     "question": "2026 FIFA World Cup Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T10:25:27.654326Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.7,
       "macro_sensitivity": 0.0
     }
   }

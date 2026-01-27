@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-27T07:05:18.631470Z",
+    "market_id": "119872",
+    "question": "2026 Men's Australian Open Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-26T23:57:49.428506Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-25T20:46:13.299675Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.6,
       "macro_sensitivity": 0.0
     }
   }

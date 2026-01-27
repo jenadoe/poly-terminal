@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-27T19:50:20.115757Z",
+    "market_id": "71692",
+    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T19:50:20.115757Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-27T18:58:22.018911Z",
     "market_id": "149996",
     "question": "Israel nuclear weapon use against Iran by January 31?",
@@ -520,28 +542,6 @@
     "timestamp": "2026-01-26T14:05:17.749680Z",
     "market_id": "31552",
     "question": "Presidential Election Winner 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T12:44:40.868372Z",
-    "market_id": "137340",
-    "question": "What price will Solana hit in January?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 37.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T12:44:40.868372Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
     "from_regime": "High Confidence",
     "to_regime": "Active",
     "metrics_snapshot": {

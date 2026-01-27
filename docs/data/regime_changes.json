@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-27T21:43:10.640153Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-27T20:47:35.516427Z",
     "market_id": "71692",
     "question": "Khamenei out as Supreme Leader of Iran by June 30?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T15:54:36.585067Z",
-    "market_id": "27830",
-    "question": "2026 NBA Champion",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.9,
       "macro_sensitivity": 0.0
     }
   }

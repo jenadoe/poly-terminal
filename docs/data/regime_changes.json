@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-28T23:00:43.578684Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T22:35:54.351960Z",
     "market_id": "151910",
     "question": "Who will win the Beast Games: Season 2?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T14:28:02.187063Z",
-    "market_id": "128933",
-    "question": "Will Tim Walz resign by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 36.1,
       "macro_sensitivity": 0.0
     }
   }

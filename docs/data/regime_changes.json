@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-28T06:34:08.360818Z",
+    "market_id": "137339",
+    "question": "What price will XRP hit in January?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T06:34:08.360818Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T05:45:47.954770Z",
     "market_id": "102773",
     "question": "Khamenei out as Supreme Leader of Iran by March 31?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T22:48:32.730459Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-26T22:21:12.545343Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.5,
       "macro_sensitivity": 0.0
     }
   }

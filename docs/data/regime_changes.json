@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-28T20:28:31.124714Z",
+    "market_id": "125858",
+    "question": "What will Gold (GC) hit__ by end of January?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 35.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T20:28:31.124714Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T20:28:31.124714Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T20:28:31.124714Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T19:51:11.913361Z",
     "market_id": "125858",
     "question": "What will Gold (GC) hit__ by end of January?",
@@ -502,50 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:21:46.313551Z",
-    "market_id": "137339",
-    "question": "What price will XRP hit in January?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:21:46.313551Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:21:46.313551Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T10:55:11.880875Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.5,
       "macro_sensitivity": 0.0
     }
   }

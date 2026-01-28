@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-28T07:54:59.152192Z",
+    "market_id": "137339",
+    "question": "What price will XRP hit in January?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T07:39:28.397597Z",
     "market_id": "30829",
     "question": "Democratic Presidential Nominee 2028",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 50.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-27T07:56:32.437441Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
       "macro_sensitivity": 0.0
     }
   }

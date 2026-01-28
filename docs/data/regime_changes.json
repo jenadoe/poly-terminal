@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-01-28T21:35:44.297617Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T21:35:44.297617Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T21:35:44.297617Z",
+    "market_id": "20461",
+    "question": "Will GTA 6 cost $100+?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T21:35:44.297617Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 87.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T21:35:44.297617Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T20:58:37.063173Z",
     "market_id": "98374",
     "question": "SpaceX IPO Closing Market Cap",
@@ -491,61 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:56:59.670072Z",
-    "market_id": "140846",
-    "question": "US forces enter Venezuela again by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:56:59.670072Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:56:59.670072Z",
-    "market_id": "30829",
-    "question": "Democratic Presidential Nominee 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:44:31.915343Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T11:21:46.313551Z",
-    "market_id": "128933",
-    "question": "Will Tim Walz resign by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 36.1,
       "macro_sensitivity": 0.0
     }
   }

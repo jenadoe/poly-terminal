@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-28T12:54:02.782985Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T12:54:02.782985Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T11:56:59.670072Z",
     "market_id": "140846",
     "question": "US forces enter Venezuela again by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 53.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-27T21:43:10.640153Z",
-    "market_id": "145731",
-    "question": "Next leader out of power before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-27T20:47:35.516427Z",
-    "market_id": "71692",
-    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
       "macro_sensitivity": 0.0
     }
   }

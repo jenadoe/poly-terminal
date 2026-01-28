@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-28T23:57:11.254855Z",
+    "market_id": "73085",
+    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 35.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T23:57:11.254855Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T23:40:20.019742Z",
     "market_id": "140957",
     "question": "U.S. recognizes Machado as leader of Venezuela by January 31?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 34.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T15:38:39.195731Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T15:38:39.195731Z",
-    "market_id": "179320",
-    "question": "Bitcoin above ___ on January 28?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 37.2,
       "macro_sensitivity": 0.0
     }
   }

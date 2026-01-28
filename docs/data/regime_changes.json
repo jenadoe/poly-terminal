@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-28T17:35:29.767243Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T17:35:29.767243Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T16:57:39.937246Z",
     "market_id": "128933",
     "question": "Will Tim Walz resign by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 49.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T09:48:38.888791Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T09:48:38.888791Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
       "macro_sensitivity": 0.0
     }
   }

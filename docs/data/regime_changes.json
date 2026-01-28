@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-28T13:46:55.492755Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T13:46:55.492755Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T13:46:55.492755Z",
+    "market_id": "84841",
+    "question": "Epstein blackmail evidence released by...? ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T13:46:55.492755Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-28T12:54:02.782985Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -502,50 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 42.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T03:53:31.119990Z",
-    "market_id": "119872",
-    "question": "2026 Men's Australian Open Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T01:45:19.079208Z",
-    "market_id": "30829",
-    "question": "Democratic Presidential Nominee 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-27T23:21:10.739100Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-27T22:22:02.622790Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 53.0,
       "macro_sensitivity": 0.0
     }
   }

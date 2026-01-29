@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-29T04:15:13.007537Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 32.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T04:15:13.007537Z",
+    "market_id": "181471",
+    "question": "Bitcoin above ___ on January 29?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 53.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T04:15:13.007537Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T02:03:39.178139Z",
     "market_id": "33647",
     "question": "Will Russia capture Lyman by...?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 77.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T20:58:37.063173Z",
-    "market_id": "98374",
-    "question": "SpaceX IPO Closing Market Cap",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T20:58:37.063173Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T20:28:31.124714Z",
-    "market_id": "125858",
-    "question": "What will Gold (GC) hit__ by end of January?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 35.5,
       "macro_sensitivity": 0.0
     }
   }

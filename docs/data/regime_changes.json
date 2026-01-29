@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-29T17:05:42.418191Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T16:23:10.221073Z",
     "market_id": "35886",
     "question": "Will Bitcoin hit $80k or $150k first?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 90.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "41353",
-    "question": "Supreme Court rules in favor of Trump's tariffs?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
       "macro_sensitivity": 0.0
     }
   }

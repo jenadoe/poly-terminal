@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-29T10:04:50.172375Z",
+    "market_id": "138993",
+    "question": "2026 Women\u2019s Australian Open Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T10:04:50.172375Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T09:25:19.019372Z",
     "market_id": "181471",
     "question": "Bitcoin above ___ on January 29?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T21:59:12.655178Z",
-    "market_id": "151910",
-    "question": "Who will win the Beast Games: Season 2?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T21:59:12.655178Z",
-    "market_id": "20461",
-    "question": "Will GTA 6 cost $100+?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.3,
       "macro_sensitivity": 0.0
     }
   }

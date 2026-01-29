@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-29T06:01:04.708198Z",
+    "market_id": "73085",
+    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 55.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T06:01:04.708198Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T06:01:04.708198Z",
+    "market_id": "149996",
+    "question": "Israel nuclear weapon use against Iran by January 31?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 90.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T05:14:33.178605Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T21:35:44.297617Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T21:35:44.297617Z",
-    "market_id": "20461",
-    "question": "Will GTA 6 cost $100+?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T21:35:44.297617Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-29T11:35:45.866162Z",
+    "market_id": "138993",
+    "question": "2026 Women\u2019s Australian Open Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T11:35:45.866162Z",
+    "market_id": "73085",
+    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 55.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T11:35:45.866162Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T10:58:19.459103Z",
     "market_id": "138993",
     "question": "2026 Women\u2019s Australian Open Winner",
@@ -513,39 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 37.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:40:20.019742Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 55.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:40:20.019742Z",
-    "market_id": "30829",
-    "question": "Democratic Presidential Nominee 2028",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:00:43.578684Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
       "macro_sensitivity": 0.0
     }
   }

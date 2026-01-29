@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-29T23:25:00.952797Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T22:54:59.582542Z",
     "market_id": "27829",
     "question": "2026 NHL Stanley Cup Champion ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 55.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "127743",
-    "question": "Will anyone be charged over Daycare fraud in Minnesota by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 57.7,
       "macro_sensitivity": 0.0
     }
   }

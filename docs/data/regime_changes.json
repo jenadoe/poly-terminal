@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-29T13:17:21.793240Z",
+    "market_id": "91444",
+    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T13:17:21.793240Z",
+    "market_id": "138993",
+    "question": "2026 Women\u2019s Australian Open Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T13:17:21.793240Z",
+    "market_id": "149996",
+    "question": "Israel nuclear weapon use against Iran by January 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T13:17:21.793240Z",
+    "market_id": "90414",
+    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T11:59:45.485479Z",
     "market_id": "91444",
     "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
@@ -502,50 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 81.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:57:11.254855Z",
-    "market_id": "73085",
-    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 35.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:57:11.254855Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:40:20.019742Z",
-    "market_id": "140957",
-    "question": "U.S. recognizes Machado as leader of Venezuela by January 31?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-28T23:40:20.019742Z",
-    "market_id": "73085",
-    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 35.9,
       "macro_sensitivity": 0.0
     }
   }

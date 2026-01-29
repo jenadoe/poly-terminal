@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-29T14:58:46.700392Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T14:10:10.574154Z",
     "market_id": "27829",
     "question": "2026 NHL Stanley Cup Champion ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.5,
       "macro_sensitivity": 0.0
     }
   }

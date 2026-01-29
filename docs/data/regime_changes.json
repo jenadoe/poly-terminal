@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-29T21:25:18.502023Z",
+    "market_id": "189994",
+    "question": "Elon Musk # tweets January 30 - February 6, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T21:25:18.502023Z",
+    "market_id": "186375",
+    "question": "How long will the Government Shutdown last?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T19:20:43.735848Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 86.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "20461",
-    "question": "Will GTA 6 cost $100+?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
       "macro_sensitivity": 0.0
     }
   }

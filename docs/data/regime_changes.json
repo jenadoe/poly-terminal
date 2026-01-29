@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-29T15:41:53.928096Z",
+    "market_id": "181471",
+    "question": "Bitcoin above ___ on January 29?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T15:41:53.928096Z",
+    "market_id": "186375",
+    "question": "How long will the Government Shutdown last?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-29T15:41:53.928096Z",
+    "market_id": "137339",
+    "question": "What price will XRP hit in January?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-29T14:58:46.700392Z",
     "market_id": "67284",
     "question": "Fed decision in March?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T02:03:39.178139Z",
-    "market_id": "84841",
-    "question": "Epstein blackmail evidence released by...? ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
       "macro_sensitivity": 0.0
     }
   }

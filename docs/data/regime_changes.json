@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T11:51:07.479201Z",
+    "market_id": "31875",
+    "question": "Republican Presidential Nominee 2028",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T09:22:35.777143Z",
     "market_id": "133144",
     "question": "Will Israel strike Gaza on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T09:25:19.019372Z",
-    "market_id": "181471",
-    "question": "Bitcoin above ___ on January 29?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.4,
       "macro_sensitivity": 0.0
     }
   }

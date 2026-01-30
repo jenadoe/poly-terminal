@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T20:39:27.475337Z",
+    "market_id": "91942",
+    "question": "Measles cases in U.S. in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T19:59:15.181504Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -531,17 +542,6 @@
     "timestamp": "2026-01-29T13:17:21.793240Z",
     "market_id": "149996",
     "question": "Israel nuclear weapon use against Iran by January 31?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T13:17:21.793240Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
     "from_regime": "Active",
     "to_regime": "Volatile",
     "metrics_snapshot": {

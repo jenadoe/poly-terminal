@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-30T16:37:24.240722Z",
+    "market_id": "125857",
+    "question": "What will Gold (GC) settle at in January?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-30T16:37:24.240722Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T15:07:37.203858Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 82.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T11:35:45.866162Z",
-    "market_id": "73085",
-    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 55.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T11:35:45.866162Z",
-    "market_id": "90414",
-    "question": "Russia x Ukraine ceasefire by January 31, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.3,
       "macro_sensitivity": 0.0
     }
   }

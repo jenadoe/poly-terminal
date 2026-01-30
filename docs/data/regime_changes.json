@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-30T15:07:37.203858Z",
+    "market_id": "98230",
+    "question": "Who will be the first to leave the Trump Cabinet?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-30T15:07:37.203858Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T13:55:21.325757Z",
     "market_id": "144302",
     "question": "Will the Iranian regime fall by January 31?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T10:58:19.459103Z",
-    "market_id": "138993",
-    "question": "2026 Women\u2019s Australian Open Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T10:58:19.459103Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.4,
       "macro_sensitivity": 0.0
     }
   }

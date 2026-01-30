@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T17:59:28.498399Z",
+    "market_id": "98230",
+    "question": "Who will be the first to leave the Trump Cabinet?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T17:20:58.439877Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 63.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T11:59:45.485479Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.6,
       "macro_sensitivity": 0.0
     }
   }

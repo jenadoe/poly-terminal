@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T17:20:58.439877Z",
+    "market_id": "98230",
+    "question": "Who will be the first to leave the Trump Cabinet?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T16:37:24.240722Z",
     "market_id": "125857",
     "question": "What will Gold (GC) settle at in January?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T11:35:45.866162Z",
-    "market_id": "138993",
-    "question": "2026 Women\u2019s Australian Open Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.3,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T13:55:21.325757Z",
+    "market_id": "144302",
+    "question": "Will the Iranian regime fall by January 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T13:31:04.487456Z",
     "market_id": "125857",
     "question": "What will Gold (GC) settle at in January?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 86.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T10:58:19.459103Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.2,
       "macro_sensitivity": 0.0
     }
   }

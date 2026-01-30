@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-01-30T21:41:30.371446Z",
+    "market_id": "98230",
+    "question": "Who will be the first to leave the Trump Cabinet?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-30T21:41:30.371446Z",
+    "market_id": "156613",
+    "question": "Will France, UK or Germany strike Iran by January 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-30T21:41:30.371446Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-30T21:41:30.371446Z",
+    "market_id": "137338",
+    "question": "What price will Bitcoin hit in January?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 92.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T21:02:23.064167Z",
     "market_id": "86832",
     "question": "Which companies will be acquired before 2027?",
@@ -502,50 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T15:41:53.928096Z",
-    "market_id": "137339",
-    "question": "What price will XRP hit in January?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T14:58:46.700392Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T14:10:10.574154Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T13:17:21.793240Z",
-    "market_id": "91444",
-    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T22:53:25.380752Z",
+    "market_id": "140376",
+    "question": "Mar\u00eda Corina Machado enters Venezuela by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 36.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T22:24:45.923914Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 77.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T16:23:10.221073Z",
-    "market_id": "35886",
-    "question": "Will Bitcoin hit $80k or $150k first?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.5,
       "macro_sensitivity": 0.0
     }
   }

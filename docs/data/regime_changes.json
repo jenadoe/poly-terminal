@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T07:53:38.507515Z",
+    "market_id": "143642",
+    "question": "US strike on Mexico by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 55.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T07:07:55.308283Z",
     "market_id": "86832",
     "question": "Which companies will be acquired before 2027?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T06:01:04.708198Z",
-    "market_id": "149996",
-    "question": "Israel nuclear weapon use against Iran by January 31?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 90.6,
       "macro_sensitivity": 0.0
     }
   }

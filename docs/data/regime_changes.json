@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T21:55:53.692917Z",
+    "market_id": "189994",
+    "question": "Elon Musk # tweets January 30 - February 6, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T21:41:30.371446Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T15:41:53.928096Z",
-    "market_id": "186375",
-    "question": "How long will the Government Shutdown last?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
       "macro_sensitivity": 0.0
     }
   }

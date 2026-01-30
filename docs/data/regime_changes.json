@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T07:07:55.308283Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T04:08:11.516111Z",
     "market_id": "133144",
     "question": "Will Israel strike Gaza on...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 90.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T05:14:33.178605Z",
-    "market_id": "98230",
-    "question": "Who will be the first to leave the Trump Cabinet?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-30T19:59:15.181504Z",
+    "market_id": "98230",
+    "question": "Who will be the first to leave the Trump Cabinet?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-30T17:59:28.498399Z",
     "market_id": "98230",
     "question": "Who will be the first to leave the Trump Cabinet?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T11:59:45.485479Z",
-    "market_id": "91444",
-    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.9,
       "macro_sensitivity": 0.0
     }
   }

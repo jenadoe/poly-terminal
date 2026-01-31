@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T01:48:50.517526Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T01:01:02.479733Z",
     "market_id": "83173",
     "question": "Infinex FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T18:42:07.071778Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 55.2,
       "macro_sensitivity": 0.0
     }
   }

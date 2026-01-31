@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T16:27:20.526791Z",
+    "market_id": "72347",
+    "question": "Will the Iranian regime fall before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T15:55:56.538633Z",
     "market_id": "186375",
     "question": "How long will the Government Shutdown last?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 85.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T08:36:11.905690Z",
-    "market_id": "73085",
-    "question": "Gemini 3 score on FrontierMath Benchmark by January 31?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
       "macro_sensitivity": 0.0
     }
   }

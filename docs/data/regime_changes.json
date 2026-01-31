@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T08:56:00.329007Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T06:36:32.467418Z",
     "market_id": "33699",
     "question": "French Ligue 1 Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-29T19:20:43.735848Z",
-    "market_id": "98230",
-    "question": "Who will be the first to leave the Trump Cabinet?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

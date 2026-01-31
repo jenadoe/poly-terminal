@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T15:55:56.538633Z",
+    "market_id": "186375",
+    "question": "How long will the Government Shutdown last?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T14:59:13.902169Z",
     "market_id": "189609",
     "question": "Elon Musk # tweets January 29 - January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 54.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T08:36:11.905690Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.9,
       "macro_sensitivity": 0.0
     }
   }

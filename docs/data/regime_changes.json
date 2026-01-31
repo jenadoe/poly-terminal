@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T23:45:33.712983Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T23:20:39.627246Z",
     "market_id": "151910",
     "question": "Who will win the Beast Games: Season 2?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T21:55:53.692917Z",
-    "market_id": "189994",
-    "question": "Elon Musk # tweets January 30 - February 6, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

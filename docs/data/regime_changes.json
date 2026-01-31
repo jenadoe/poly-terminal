@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T11:19:16.340078Z",
+    "market_id": "75478",
+    "question": "Fed decision in April?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T10:50:42.167849Z",
     "market_id": "79654",
     "question": "ECB Interest Rates: February 2026",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 85.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T01:52:51.020519Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.6,
       "macro_sensitivity": 0.0
     }
   }

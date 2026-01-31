@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T14:02:04.354048Z",
+    "market_id": "83173",
+    "question": "Infinex FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T13:30:56.794568Z",
     "market_id": "189609",
     "question": "Elon Musk # tweets January 29 - January 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 55.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T07:07:55.308283Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

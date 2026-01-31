@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-31T19:53:22.154132Z",
+    "market_id": "56712",
+    "question": "Grammys: Song of the Year Winner",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T19:53:22.154132Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T19:24:09.941923Z",
     "market_id": "187840",
     "question": "Spurs vs. Hornets",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T17:20:58.439877Z",
-    "market_id": "98230",
-    "question": "Who will be the first to leave the Trump Cabinet?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T16:37:24.240722Z",
-    "market_id": "125857",
-    "question": "What will Gold (GC) settle at in January?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

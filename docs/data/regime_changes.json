@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T17:22:53.971865Z",
+    "market_id": "187840",
+    "question": "Spurs vs. Hornets",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T16:54:58.506927Z",
     "market_id": "56712",
     "question": "Grammys: Song of the Year Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T12:51:52.619612Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.3,
       "macro_sensitivity": 0.0
     }
   }

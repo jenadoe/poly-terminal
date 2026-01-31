@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T21:56:28.594897Z",
+    "market_id": "56712",
+    "question": "Grammys: Song of the Year Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T20:48:53.659642Z",
     "market_id": "38528",
     "question": "GPT ads by...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 92.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T21:02:23.064167Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
       "macro_sensitivity": 0.0
     }
   }

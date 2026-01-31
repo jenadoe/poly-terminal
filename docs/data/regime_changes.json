@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-31T22:22:50.577446Z",
+    "market_id": "187855",
+    "question": "Bulls vs. Heat",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T22:22:50.577446Z",
+    "market_id": "187843",
+    "question": "Hawks vs. Pacers",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T22:22:50.577446Z",
+    "market_id": "56712",
+    "question": "Grammys: Song of the Year Winner",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T21:56:28.594897Z",
     "market_id": "56712",
     "question": "Grammys: Song of the Year Winner",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T21:41:30.371446Z",
-    "market_id": "156613",
-    "question": "Will France, UK or Germany strike Iran by January 31?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T21:41:30.371446Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T21:41:30.371446Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 92.8,
       "macro_sensitivity": 0.0
     }
   }

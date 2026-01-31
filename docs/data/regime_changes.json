@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-01-31T14:59:13.902169Z",
+    "market_id": "189609",
+    "question": "Elon Musk # tweets January 29 - January 31, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T14:42:54.250625Z",
     "market_id": "79039",
     "question": "Largest Company end of March?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 80.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T08:36:11.905690Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
       "macro_sensitivity": 0.0
     }
   }

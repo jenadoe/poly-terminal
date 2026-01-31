@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-31T17:48:49.691566Z",
+    "market_id": "160183",
+    "question": "Iran Strike on Israel by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 34.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T17:48:49.691566Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 70.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T17:22:53.971865Z",
     "market_id": "187840",
     "question": "Spurs vs. Hornets",
@@ -521,28 +543,6 @@
     "market_id": "144302",
     "question": "Will the Iranian regime fall by January 31?",
     "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T13:31:04.487456Z",
-    "market_id": "125857",
-    "question": "What will Gold (GC) settle at in January?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T13:31:04.487456Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "High Confidence",
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,

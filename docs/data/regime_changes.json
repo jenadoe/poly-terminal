@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-01-31T12:42:24.099284Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T12:42:24.099284Z",
+    "market_id": "103730",
+    "question": "Thailand Legislative Election Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T11:55:14.319403Z",
     "market_id": "23940",
     "question": "NFL Offensive Rookie of the Year ",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T04:08:11.516111Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T04:08:11.516111Z",
-    "market_id": "175976",
-    "question": "Elon Musk # tweets January 23 - January 30, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

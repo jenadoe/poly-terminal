@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-01-31T16:54:58.506927Z",
+    "market_id": "56712",
+    "question": "Grammys: Song of the Year Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T16:54:58.506927Z",
+    "market_id": "151953",
+    "question": "US/Israel strikes Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 54.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-31T16:54:58.506927Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T16:27:20.526791Z",
     "market_id": "72347",
     "question": "Will the Iranian regime fall before 2027?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T11:51:07.479201Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T09:22:35.777143Z",
-    "market_id": "133144",
-    "question": "Will Israel strike Gaza on...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T09:22:35.777143Z",
-    "market_id": "137338",
-    "question": "What price will Bitcoin hit in January?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 85.8,
       "macro_sensitivity": 0.0
     }
   }

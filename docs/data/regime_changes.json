@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-01T07:06:14.173262Z",
+    "market_id": "91444",
+    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-01T07:06:14.173262Z",
+    "market_id": "145536",
+    "question": "Will the U.S. invade Greenland in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T04:59:42.530341Z",
     "market_id": "27829",
     "question": "2026 NHL Stanley Cup Champion ",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 72.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T01:48:50.517526Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T01:01:02.479733Z",
-    "market_id": "83173",
-    "question": "Infinex FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.3,
       "macro_sensitivity": 0.0
     }
   }

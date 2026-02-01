@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-01T16:33:30.114361Z",
+    "market_id": "151910",
+    "question": "Who will win the Beast Games: Season 2?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 93.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T15:40:55.951183Z",
     "market_id": "139894",
     "question": "Jerome Powell out as Fed Chair by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 71.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T16:54:58.506927Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.5,
       "macro_sensitivity": 0.0
     }
   }

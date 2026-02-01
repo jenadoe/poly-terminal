@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-01T17:42:30.070365Z",
+    "market_id": "194167",
+    "question": "Elon Musk # tweets February 3 - February 10, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T16:33:30.114361Z",
     "market_id": "151910",
     "question": "Who will win the Beast Games: Season 2?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T16:54:58.506927Z",
-    "market_id": "56712",
-    "question": "Grammys: Song of the Year Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.9,
       "macro_sensitivity": 0.0
     }
   }

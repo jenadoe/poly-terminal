@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-01T22:22:23.121928Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T21:45:55.751070Z",
     "market_id": "31875",
     "question": "Republican Presidential Nominee 2028",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 71.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T20:23:28.580144Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

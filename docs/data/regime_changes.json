@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-01T02:52:27.292403Z",
+    "market_id": "188306",
+    "question": "Bitcoin above ___ on February 1?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-01T02:52:27.292403Z",
+    "market_id": "38528",
+    "question": "GPT ads by...?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-01T02:52:27.292403Z",
+    "market_id": "79654",
+    "question": "ECB Interest Rates: February 2026",
+    "from_regime": "Volatile",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 94.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-01-31T23:58:31.154849Z",
     "market_id": "27829",
     "question": "2026 NHL Stanley Cup Champion ",
@@ -513,39 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 94.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T23:48:23.076959Z",
-    "market_id": "137341",
-    "question": "What price will Ethereum hit in January?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T23:23:48.301052Z",
-    "market_id": "98230",
-    "question": "Who will be the first to leave the Trump Cabinet?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-30T22:53:25.380752Z",
-    "market_id": "140376",
-    "question": "Mar\u00eda Corina Machado enters Venezuela by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 36.5,
       "macro_sensitivity": 0.0
     }
   }

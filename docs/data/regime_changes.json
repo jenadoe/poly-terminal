@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-01T20:50:32.849987Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-01T20:50:32.849987Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T20:24:14.460422Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 71.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T19:24:09.941923Z",
-    "market_id": "187840",
-    "question": "Spurs vs. Hornets",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T18:57:44.503377Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
       "macro_sensitivity": 0.0
     }
   }

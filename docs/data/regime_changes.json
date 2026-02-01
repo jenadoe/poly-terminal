@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-01T20:24:14.460422Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-01T19:14:40.521514Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T18:29:30.097220Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

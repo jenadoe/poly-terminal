@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-02T15:00:31.683571Z",
+    "market_id": "190673",
+    "question": "Total commitments for the Hurupay public sale on MetaDAO",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T15:00:31.683571Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T15:00:31.683571Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T14:04:53.659551Z",
     "market_id": "190673",
     "question": "Total commitments for the Hurupay public sale on MetaDAO",
@@ -513,39 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T14:45:03.439094Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T14:03:38.891525Z",
-    "market_id": "143669",
-    "question": "US strike on Cuba by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 54.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T13:32:46.306411Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.2,
       "macro_sensitivity": 0.0
     }
   }

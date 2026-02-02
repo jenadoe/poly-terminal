@@ -1,5 +1,126 @@
 [
   {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "190531",
+    "question": "Bitcoin above ___ on February 3?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Liquidity",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "33647",
+    "question": "Will Russia capture Lyman by...?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "91444",
+    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "128933",
+    "question": "Will Tim Walz resign by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "162818",
+    "question": "Khamenei out as Supreme Leader of Iran by February 28?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 84.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "57057",
+    "question": "Israel x Hamas ceasefire cancelled by...?",
+    "from_regime": "Low Liquidity",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 36.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T23:04:57.172578Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T18:04:41.514385Z",
     "market_id": "194106",
     "question": "What price will Ethereum hit in February?",
@@ -426,127 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.8,
       "macro_sensitivity": 1.63
-    }
-  },
-  {
-    "timestamp": "2026-02-02T02:00:04.078434Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T02:00:04.078434Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T23:47:55.864697Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T22:22:23.121928Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T21:45:55.751070Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T21:21:21.245548Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T20:50:32.849987Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T20:50:32.849987Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T20:24:14.460422Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T19:14:40.521514Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T19:14:40.521514Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

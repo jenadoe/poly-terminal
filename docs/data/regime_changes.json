@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-02T11:22:15.109651Z",
+    "market_id": "194106",
+    "question": "What price will Ethereum hit in February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T11:22:15.109651Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T10:28:53.186532Z",
     "market_id": "190673",
     "question": "Total commitments for the Hurupay public sale on MetaDAO",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T09:00:18.258254Z",
-    "market_id": "151910",
-    "question": "Who will win the Beast Games: Season 2?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.17
-    }
-  },
-  {
-    "timestamp": "2026-02-01T09:00:18.258254Z",
-    "market_id": "133675",
-    "question": "Opinion FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

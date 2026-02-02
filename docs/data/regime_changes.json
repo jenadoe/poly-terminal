@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-02T10:28:53.186532Z",
+    "market_id": "190673",
+    "question": "Total commitments for the Hurupay public sale on MetaDAO",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T10:28:53.186532Z",
+    "market_id": "28829",
+    "question": "Who will perform at 2026 Pro Football Championship halftime show?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T10:28:53.186532Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T09:31:27.748953Z",
     "market_id": "139894",
     "question": "Jerome Powell out as Fed Chair by...?",
@@ -513,39 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T09:00:18.258254Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T09:00:18.258254Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T08:30:32.121278Z",
-    "market_id": "79654",
-    "question": "ECB Interest Rates: February 2026",
-    "from_regime": "High Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

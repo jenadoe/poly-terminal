@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-02T16:37:30.841858Z",
+    "market_id": "190673",
+    "question": "Total commitments for the Hurupay public sale on MetaDAO",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T15:47:11.706199Z",
     "market_id": "28999",
     "question": "MegaETH market cap (FDV) one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 50.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T15:01:01.726320Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.0,
       "macro_sensitivity": 0.0
     }
   }

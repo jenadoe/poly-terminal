@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "38528",
+    "question": "GPT ads by...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T04:30:46.591555Z",
+    "market_id": "28999",
+    "question": "MegaETH market cap (FDV) one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T02:00:04.078434Z",
     "market_id": "79654",
     "question": "ECB Interest Rates: February 2026",
@@ -480,72 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 74.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T02:52:27.292403Z",
-    "market_id": "79654",
-    "question": "ECB Interest Rates: February 2026",
-    "from_regime": "Volatile",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 94.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T23:58:31.154849Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T23:45:33.712983Z",
-    "market_id": "181516",
-    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T23:20:39.627246Z",
-    "market_id": "151910",
-    "question": "Who will win the Beast Games: Season 2?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -0.71
-    }
-  },
-  {
-    "timestamp": "2026-01-31T22:22:50.577446Z",
-    "market_id": "187855",
-    "question": "Bulls vs. Heat",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-01-31T22:22:50.577446Z",
-    "market_id": "187843",
-    "question": "Hawks vs. Pacers",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.1,
       "macro_sensitivity": 0.0
     }
   }

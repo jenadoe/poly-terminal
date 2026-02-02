@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-02T09:31:27.748953Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-02T09:31:27.748953Z",
+    "market_id": "28829",
+    "question": "Who will perform at 2026 Pro Football Championship halftime show?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-02T08:42:10.022363Z",
     "market_id": "190673",
     "question": "Total commitments for the Hurupay public sale on MetaDAO",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-01T08:30:32.121278Z",
-    "market_id": "151910",
-    "question": "Who will win the Beast Games: Season 2?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": -0.49
-    }
-  },
-  {
-    "timestamp": "2026-02-01T08:30:32.121278Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
       "macro_sensitivity": 0.0
     }
   }

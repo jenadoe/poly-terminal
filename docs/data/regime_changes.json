@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-03T17:12:24.738641Z",
+    "market_id": "192742",
+    "question": "Bitcoin above ___ on February 5?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-03T17:12:24.738641Z",
+    "market_id": "91444",
+    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-03T17:12:24.738641Z",
+    "market_id": "186375",
+    "question": "How long will the Government Shutdown last?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-03T17:12:24.738641Z",
+    "market_id": "28829",
+    "question": "Who will perform at 2026 Pro Football Championship halftime show?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T16:05:33.412347Z",
     "market_id": "190522",
     "question": "Ethereum above ___ on February 3?",
@@ -502,50 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T15:00:31.683571Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T15:00:31.683571Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T15:00:31.683571Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T14:04:53.659551Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.8,
       "macro_sensitivity": 0.0
     }
   }

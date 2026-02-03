@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-03T07:41:42.638385Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T06:48:28.601122Z",
     "market_id": "190673",
     "question": "Total commitments for the Hurupay public sale on MetaDAO",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T04:30:46.591555Z",
-    "market_id": "38528",
-    "question": "GPT ads by...?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.7,
       "macro_sensitivity": 0.0
     }
   }

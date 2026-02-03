@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-03T09:50:01.379338Z",
+    "market_id": "190996",
+    "question": "Ilhan Omar town hall attack staged?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T08:58:03.645555Z",
     "market_id": "190673",
     "question": "Total commitments for the Hurupay public sale on MetaDAO",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T07:56:13.011929Z",
-    "market_id": "186375",
-    "question": "How long will the Government Shutdown last?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.0,
       "macro_sensitivity": 0.0
     }
   }

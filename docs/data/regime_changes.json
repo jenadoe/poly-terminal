@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-03T23:43:05.359919Z",
+    "market_id": "174562",
+    "question": "Nuggets vs. Grizzlies",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-03T23:43:05.359919Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T21:57:38.821086Z",
     "market_id": "174563",
     "question": "Mavericks vs. Bucks",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 61.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T18:04:41.514385Z",
-    "market_id": "63292",
-    "question": "NBA Defensive Player of the Year Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T18:04:41.514385Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 93.0,
       "macro_sensitivity": 0.0
     }
   }

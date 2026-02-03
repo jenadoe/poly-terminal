@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-03T18:07:31.804999Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T17:12:24.738641Z",
     "market_id": "192742",
     "question": "Bitcoin above ___ on February 5?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 83.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T15:47:11.706199Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.6,
       "macro_sensitivity": 0.0
     }
   }

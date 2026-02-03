@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-03T21:18:51.951866Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T18:07:31.804999Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 84.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T16:37:30.841858Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.9,
       "macro_sensitivity": 0.0
     }
   }

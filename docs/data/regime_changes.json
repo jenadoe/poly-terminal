@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-04T23:51:25.240156Z",
+    "market_id": "174562",
+    "question": "Nuggets vs. Grizzlies",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T23:51:25.240156Z",
+    "market_id": "79039",
+    "question": "Largest Company end of March?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 84.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T23:25:39.060630Z",
     "market_id": "79039",
     "question": "Largest Company end of March?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T17:12:24.738641Z",
-    "market_id": "91444",
-    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T17:12:24.738641Z",
-    "market_id": "186375",
-    "question": "How long will the Government Shutdown last?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-04T00:00:03.047874Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T00:00:03.047874Z",
+    "market_id": "36173",
+    "question": "When will Bitcoin hit $150k?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-03T23:43:05.359919Z",
     "market_id": "174562",
     "question": "Nuggets vs. Grizzlies",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "35908",
-    "question": "Who will Trump nominate as Fed Chair?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T18:04:41.514385Z",
-    "market_id": "194106",
-    "question": "What price will Ethereum hit in February?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.3,
       "macro_sensitivity": 0.0
     }
   }

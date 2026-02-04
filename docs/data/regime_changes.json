@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-04T14:02:59.250480Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T12:55:26.089740Z",
     "market_id": "89456",
     "question": "Will China invade Taiwan by March 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 68.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T08:06:08.483975Z",
-    "market_id": "160183",
-    "question": "Iran Strike on Israel by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 57.8,
       "macro_sensitivity": 0.0
     }
   }

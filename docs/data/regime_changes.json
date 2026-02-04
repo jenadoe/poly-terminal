@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-04T20:37:11.078411Z",
+    "market_id": "192924",
+    "question": "Next Country US Strikes",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T20:37:11.078411Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T19:57:06.794689Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T15:02:55.570606Z",
-    "market_id": "103730",
-    "question": "Thailand Legislative Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T15:02:55.570606Z",
-    "market_id": "84946",
-    "question": "Zama FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

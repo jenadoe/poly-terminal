@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-04T10:02:05.756947Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T09:01:09.882230Z",
     "market_id": "189845",
     "question": "US next strikes Iran on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T04:58:47.735234Z",
-    "market_id": "190996",
-    "question": "Ilhan Omar town hall attack staged?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
       "macro_sensitivity": 0.0
     }
   }

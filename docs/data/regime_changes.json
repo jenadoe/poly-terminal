@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-04T18:28:03.807092Z",
+    "market_id": "194119",
+    "question": "What price will Solana hit in February?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T17:33:31.102765Z",
     "market_id": "192924",
     "question": "Next Country US Strikes",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T14:10:43.285227Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

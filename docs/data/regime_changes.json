@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-04T12:55:26.089740Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T12:55:26.089740Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T12:55:26.089740Z",
+    "market_id": "118172",
+    "question": "Will Trump acquire Greenland before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T10:02:05.756947Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 57.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T08:06:08.483975Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 35.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T07:41:42.638385Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T06:48:28.601122Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.7,
       "macro_sensitivity": 0.0
     }
   }

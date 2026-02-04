@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-04T08:06:39.546928Z",
+    "market_id": "34889",
+    "question": "Will Hamas agree to disarm by...?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T07:33:19.317838Z",
     "market_id": "31195",
     "question": "Putin out as President of Russia by end of 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 54.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T03:12:53.740584Z",
-    "market_id": "189792",
-    "question": "What will Gold (GC) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.1,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-04T05:33:09.118996Z",
+    "market_id": "31195",
+    "question": "Putin out as President of Russia by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 84.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T05:33:09.118996Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T04:27:42.648229Z",
     "market_id": "31195",
     "question": "Putin out as President of Russia by end of 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "38901",
-    "question": "Will Russia capture Rodynske by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Liquidity",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "33647",
-    "question": "Will Russia capture Lyman by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.9,
       "macro_sensitivity": 0.0
     }
   }

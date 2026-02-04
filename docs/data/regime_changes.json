@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-04T23:25:39.060630Z",
+    "market_id": "79039",
+    "question": "Largest Company end of March?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T22:25:55.221893Z",
     "market_id": "193799",
     "question": "What will Trump say this week (February 8)?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T17:12:24.738641Z",
-    "market_id": "28829",
-    "question": "Who will perform at 2026 Pro Football Championship halftime show?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.8,
       "macro_sensitivity": 0.0
     }
   }

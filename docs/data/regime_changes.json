@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-04T04:27:42.648229Z",
+    "market_id": "31195",
+    "question": "Putin out as President of Russia by end of 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T04:27:42.648229Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-04T04:27:42.648229Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T02:46:44.294973Z",
     "market_id": "174562",
     "question": "Nuggets vs. Grizzlies",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 62.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "91444",
-    "question": "Ukraine officially agrees to a US backed ceasefire framework by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-02T23:04:57.172578Z",
-    "market_id": "128933",
-    "question": "Will Tim Walz resign by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.0,
       "macro_sensitivity": 0.0
     }
   }

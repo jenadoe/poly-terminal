@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-05T22:55:30.983210Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-05T22:24:57.711773Z",
     "market_id": "194107",
     "question": "What price will Bitcoin hit in February?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 83.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-04T21:48:02.891774Z",
-    "market_id": "174562",
-    "question": "Nuggets vs. Grizzlies",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

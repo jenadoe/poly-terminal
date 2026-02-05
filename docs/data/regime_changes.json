@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-05T22:24:57.711773Z",
+    "market_id": "194107",
+    "question": "What price will Bitcoin hit in February?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-05T22:24:57.711773Z",
+    "market_id": "33228",
+    "question": "Which party wins 2028 US Presidential Election?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-05T21:05:50.322235Z",
     "market_id": "175385",
     "question": "Portugal Presidential Election Margin of Victory: Second Round",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-04T21:48:02.891774Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 55.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-04T21:05:45.362798Z",
-    "market_id": "96070",
-    "question": "Which NBA players will be traded this season?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 51.3,
       "macro_sensitivity": 0.0
     }
   }

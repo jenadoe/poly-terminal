@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-05T23:48:31.063489Z",
+    "market_id": "175385",
+    "question": "Portugal Presidential Election Margin of Victory: Second Round",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-05T23:48:31.063489Z",
+    "market_id": "41353",
+    "question": "Supreme Court rules in favor of Trump's tariffs?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-05T23:21:33.649188Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-04T23:51:25.240156Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-04T23:25:39.060630Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.8,
       "macro_sensitivity": 0.0
     }
   }

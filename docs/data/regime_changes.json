@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-05T01:55:16.878291Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Low Liquidity",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 55.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-05T01:55:16.878291Z",
+    "market_id": "133675",
+    "question": "Opinion FDV above ___ one day after launch?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-05T01:55:16.878291Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-04T23:51:25.240156Z",
     "market_id": "174562",
     "question": "Nuggets vs. Grizzlies",
@@ -513,39 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 83.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T21:18:51.951866Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T18:07:31.804999Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-03T17:12:24.738641Z",
-    "market_id": "192742",
-    "question": "Bitcoin above ___ on February 5?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.6,
       "macro_sensitivity": 0.0
     }
   }

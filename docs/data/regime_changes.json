@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-06T10:01:13.858337Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-06T10:01:13.858337Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-06T08:24:18.944582Z",
     "market_id": "96022",
     "question": "Which company has the best AI model end of March?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 50.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T05:33:48.198957Z",
-    "market_id": "103730",
-    "question": "Thailand Legislative Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 89.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T04:14:05.570645Z",
-    "market_id": "193799",
-    "question": "What will Trump say this week (February 8)?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.6,
       "macro_sensitivity": 0.0
     }
   }

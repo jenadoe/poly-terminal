@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-06T15:51:40.967378Z",
+    "market_id": "190338",
+    "question": "Which company has the best AI model end of February?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-06T14:59:47.091585Z",
     "market_id": "79039",
     "question": "Largest Company end of March?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 40.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T07:38:51.995535Z",
-    "market_id": "197206",
-    "question": "Elon Musk # tweets February 6 - February 13, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

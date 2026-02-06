@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-06T23:49:37.487814Z",
+    "market_id": "129218",
+    "question": "Will Ilhan Omar resign by March 31?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-06T23:23:32.944505Z",
     "market_id": "119671",
     "question": "Puffpaw FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T17:46:03.517530Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.1,
       "macro_sensitivity": 0.0
     }
   }

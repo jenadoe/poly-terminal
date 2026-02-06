@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-06T16:41:42.340499Z",
+    "market_id": "129218",
+    "question": "Will Ilhan Omar resign by March 31?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-06T16:41:42.340499Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-06T15:51:40.967378Z",
     "market_id": "190338",
     "question": "Which company has the best AI model end of February?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 86.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T11:50:29.026087Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T10:02:01.102452Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 40.3,
       "macro_sensitivity": 0.0
     }
   }

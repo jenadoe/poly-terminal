@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-06T14:59:47.091585Z",
+    "market_id": "79039",
+    "question": "Largest Company end of March?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-06T14:01:33.196687Z",
     "market_id": "175385",
     "question": "Portugal Presidential Election Margin of Victory: Second Round",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T07:38:51.995535Z",
-    "market_id": "193799",
-    "question": "What will Trump say this week (February 8)?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.4,
       "macro_sensitivity": 0.0
     }
   }

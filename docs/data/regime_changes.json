@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-07T10:31:48.217261Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T09:58:11.275004Z",
     "market_id": "79987",
     "question": "Next French Presidential Election",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T01:54:19.858274Z",
-    "market_id": "175385",
-    "question": "Portugal Presidential Election Margin of Victory: Second Round",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

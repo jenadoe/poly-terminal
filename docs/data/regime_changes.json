@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-07T17:03:16.592605Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T15:01:56.814996Z",
     "market_id": "107711",
     "question": "Xi Jinping out by June 30?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T12:55:30.553922Z",
-    "market_id": "169319",
-    "question": "Will Elon Musk buy Ryanair?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.4,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-07T22:24:08.625446Z",
+    "market_id": "190420",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T21:50:50.133646Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T19:50:10.760171Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.1,
       "macro_sensitivity": 0.0
     }
   }

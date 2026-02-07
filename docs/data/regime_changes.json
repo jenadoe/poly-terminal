@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-07T14:04:20.323230Z",
+    "market_id": "129218",
+    "question": "Will Ilhan Omar resign by March 31?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T12:43:29.062988Z",
     "market_id": "195866",
     "question": "Bitcoin above ___ on February 8?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T08:24:18.944582Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
       "macro_sensitivity": 0.0
     }
   }

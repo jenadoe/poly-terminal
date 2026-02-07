@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-07T15:01:56.814996Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T14:45:27.959025Z",
     "market_id": "119671",
     "question": "Puffpaw FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 72.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T11:01:21.864984Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.9,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-07T05:57:51.949779Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-07T05:57:51.949779Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T05:12:16.048627Z",
     "market_id": "119671",
     "question": "Puffpaw FDV above ___ one day after launch?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 87.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T20:42:01.578409Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-05T19:28:03.689566Z",
-    "market_id": "193799",
-    "question": "What will Trump say this week (February 8)?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

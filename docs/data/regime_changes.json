@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-08T05:59:47.761355Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T04:55:16.380967Z",
     "market_id": "139894",
     "question": "Jerome Powell out as Fed Chair by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 78.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T05:57:51.949779Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.8,
       "macro_sensitivity": 0.0
     }
   }

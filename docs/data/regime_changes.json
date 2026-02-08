@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-08T18:47:35.614656Z",
+    "market_id": "60182",
+    "question": "Nobel Peace Prize Winner 2026",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T17:33:50.306117Z",
     "market_id": "145536",
     "question": "Will the U.S. invade Greenland in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T11:48:00.581603Z",
-    "market_id": "194106",
-    "question": "What price will Ethereum hit in February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.7,
       "macro_sensitivity": 0.0
     }
   }

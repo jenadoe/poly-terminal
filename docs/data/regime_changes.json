@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-08T23:29:25.692481Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T22:25:08.629169Z",
     "market_id": "145536",
     "question": "Will the U.S. invade Greenland in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T14:45:27.959025Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-08T11:36:11.328545Z",
+    "market_id": "95127",
+    "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T10:39:11.417393Z",
     "market_id": "38528",
     "question": "GPT ads by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T07:30:34.456088Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
       "macro_sensitivity": 0.0
     }
   }

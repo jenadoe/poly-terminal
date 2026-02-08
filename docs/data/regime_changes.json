@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-08T17:33:50.306117Z",
+    "market_id": "145536",
+    "question": "Will the U.S. invade Greenland in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-08T17:33:50.306117Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T16:59:03.453995Z",
     "market_id": "195847",
     "question": "Ethereum above ___ on February 8?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T11:29:47.142391Z",
-    "market_id": "196251",
-    "question": "What price will Ethereum hit February 2-8?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 57.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T10:31:48.217261Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.1,
       "macro_sensitivity": 0.0
     }
   }

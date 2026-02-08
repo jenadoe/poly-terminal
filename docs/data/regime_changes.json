@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-08T08:31:00.341169Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-08T08:31:00.341169Z",
+    "market_id": "133675",
+    "question": "Opinion FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 83.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-08T07:02:50.016637Z",
     "market_id": "95127",
     "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 87.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T06:48:50.444376Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T06:48:50.444376Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.4,
       "macro_sensitivity": 0.0
     }
   }

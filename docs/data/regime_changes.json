@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-08T02:44:01.310784Z",
+    "market_id": "195866",
+    "question": "Bitcoin above ___ on February 8?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-08T02:44:01.310784Z",
+    "market_id": "194119",
+    "question": "What price will Solana hit in February?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-08T02:44:01.310784Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Liquidity",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-08T02:44:01.310784Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-07T23:57:29.868030Z",
     "market_id": "95127",
     "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
@@ -502,50 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T04:07:24.531981Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T04:07:24.531981Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T04:07:24.531981Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-06T23:49:37.487814Z",
-    "market_id": "129218",
-    "question": "Will Ilhan Omar resign by March 31?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.3,
       "macro_sensitivity": 0.0
     }
   }

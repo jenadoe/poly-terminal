@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-09T07:06:35.912235Z",
+    "market_id": "96022",
+    "question": "Which company has the best AI model end of March?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 84.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T07:06:35.912235Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-09T05:57:08.265522Z",
     "market_id": "179810",
     "question": "Largest Company End of February?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T19:22:25.236741Z",
-    "market_id": "195866",
-    "question": "Bitcoin above ___ on February 8?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T19:22:25.236741Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.5,
       "macro_sensitivity": 0.0
     }
   }

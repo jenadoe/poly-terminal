@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-09T09:10:51.014765Z",
+    "market_id": "194107",
+    "question": "What price will Bitcoin hit in February?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-09T08:03:15.326136Z",
     "market_id": "149589",
     "question": "Which party will gain most seats in Russian Parliamentary Election?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 85.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-07T21:24:59.008578Z",
-    "market_id": "28829",
-    "question": "Who will perform at 2026 Sup\u00e1 Bowl halftime show?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.1,
       "macro_sensitivity": 0.0
     }
   }

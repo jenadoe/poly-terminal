@@ -1,5 +1,126 @@
 [
   {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 2.48
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "190996",
+    "question": "Ilhan Omar town hall attack staged?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "38528",
+    "question": "GPT ads by...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 84.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 49.5,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "34052",
+    "question": "Zelenskyy out as Ukraine president by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.1,
+      "macro_sensitivity": -0.13
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.5,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "20461",
+    "question": "Will GTA 6 cost $100+?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "50294",
+    "question": "Oscars 2026: Best Supporting Actor Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.4,
+      "macro_sensitivity": -0.21
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T13:48:15.690993Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": -0.22
+    }
+  },
+  {
     "timestamp": "2026-02-09T12:02:54.014907Z",
     "market_id": "179810",
     "question": "Largest Company End of February?",
@@ -426,127 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "28628",
-    "question": "Israel x Iran ceasefire broken by...? ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 38.0,
-      "macro_sensitivity": 3.76
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.0,
-      "macro_sensitivity": 0.47
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "50251",
-    "question": "Oscars 2026: Best Picture Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.92
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.4,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.1,
-      "macro_sensitivity": -3.18
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "41353",
-    "question": "Supreme Court rules in favor of Trump's tariffs?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.89
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "91942",
-    "question": "Measles cases in U.S. in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.07
     }
   }
 ]

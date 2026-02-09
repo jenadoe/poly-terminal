@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-09T12:02:54.014907Z",
+    "market_id": "179810",
+    "question": "Largest Company End of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 93.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-09T12:02:54.014907Z",
+    "market_id": "162818",
+    "question": "Khamenei out as Supreme Leader of Iran by February 28?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-02-09T11:25:00.669816Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.07
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T11:25:00.669816Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.5,
-      "macro_sensitivity": 5.0
     }
   }
 ]

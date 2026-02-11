@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-11T21:49:42.834383Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-11T21:49:42.834383Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-11T21:03:25.114991Z",
     "market_id": "106854",
     "question": "Bangladesh Parliamentary Election Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T09:12:38.617344Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T09:12:38.617344Z",
-    "market_id": "71693",
-    "question": "Khamenei out as Supreme Leader of Iran in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

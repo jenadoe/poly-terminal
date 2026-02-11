@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-11T18:40:12.778550Z",
+    "market_id": "32756",
+    "question": "NBA Western Conference Champion ",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-11T18:40:12.778550Z",
+    "market_id": "179312",
+    "question": "MLB World Series Champion 2026",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-11T18:40:12.778550Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-11T17:42:10.869904Z",
     "market_id": "174563",
     "question": "Mavericks vs. Bucks",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T23:06:05.725095Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T22:21:10.786436Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T21:44:07.482275Z",
-    "market_id": "197782",
-    "question": "US x Iran diplomatic meeting in person by...?",
-    "from_regime": "Volatile",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.6,
       "macro_sensitivity": 0.0
     }
   }

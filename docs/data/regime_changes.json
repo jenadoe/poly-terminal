@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-11T02:08:04.776465Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-11T02:08:04.776465Z",
+    "market_id": "194105",
+    "question": "What price will XRP hit in February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 59.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-10T23:49:47.982827Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T21:44:07.482275Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-09T21:44:07.482275Z",
-    "market_id": "34052",
-    "question": "Zelenskyy out as Ukraine president by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.4,
       "macro_sensitivity": 0.0
     }
   }

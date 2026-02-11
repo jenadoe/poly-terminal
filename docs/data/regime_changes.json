@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-11T20:21:28.132800Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-11T20:21:28.132800Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-11T18:40:12.778550Z",
     "market_id": "32756",
     "question": "NBA Western Conference Champion ",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T04:39:15.706005Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T02:12:05.508074Z",
-    "market_id": "16263",
-    "question": "Macron out by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
       "macro_sensitivity": 0.0
     }
   }

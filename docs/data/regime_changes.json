@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-12T14:16:47.951529Z",
+    "market_id": "194637",
+    "question": "Another US government shutdown by February 14?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T14:16:47.951529Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T11:08:12.957449Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 78.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T04:38:09.359581Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 86.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T02:08:04.776465Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

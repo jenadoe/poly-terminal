@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-12T09:06:49.483774Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T09:06:49.483774Z",
+    "market_id": "72347",
+    "question": "Will the Iranian regime fall before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T08:04:20.781498Z",
     "market_id": "33699",
     "question": "French Ligue 1 Winner ",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T23:00:17.971811Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T22:01:23.530345Z",
-    "market_id": "34889",
-    "question": "Will Hamas agree to disarm by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.6,
       "macro_sensitivity": 0.0
     }
   }

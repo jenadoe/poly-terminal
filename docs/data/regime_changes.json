@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-12T17:17:53.341092Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T17:17:53.341092Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T16:13:24.555758Z",
     "market_id": "25815",
     "question": "Israel and Syria normalize relations by...?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T08:01:59.785699Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T08:01:59.785699Z",
-    "market_id": "22862",
-    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

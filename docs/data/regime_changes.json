@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-12T04:56:08.948142Z",
+    "market_id": "203944",
+    "question": "Elon Musk # tweets February 13 - February 20, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T04:56:08.948142Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T04:56:08.948142Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T02:52:49.597224Z",
     "market_id": "174563",
     "question": "Mavericks vs. Bucks",
@@ -513,39 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T14:57:24.293215Z",
-    "market_id": "198564",
-    "question": "Bitcoin above ___ on February 11?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T14:57:24.293215Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-10T13:54:11.965985Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
       "macro_sensitivity": 0.0
     }
   }

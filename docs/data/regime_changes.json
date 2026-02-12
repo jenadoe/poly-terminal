@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-12T20:41:43.197663Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T19:29:41.139907Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 78.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T13:20:03.437980Z",
-    "market_id": "22862",
-    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
       "macro_sensitivity": 0.0
     }
   }

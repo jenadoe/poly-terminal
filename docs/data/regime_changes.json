@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-12T16:13:24.555758Z",
+    "market_id": "25815",
+    "question": "Israel and Syria normalize relations by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-12T16:13:24.555758Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-12T15:14:25.311737Z",
     "market_id": "202974",
     "question": "What price will Bitcoin hit February 9-15?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T07:11:22.781348Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T04:38:09.359581Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.3,
       "macro_sensitivity": 0.0
     }
   }

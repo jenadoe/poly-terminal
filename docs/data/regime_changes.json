@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-13T03:22:29.217728Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-13T03:22:29.217728Z",
+    "market_id": "38900",
+    "question": "Will Russia capture all of Pokrovsk by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-13T00:03:47.813758Z",
     "market_id": "33660",
     "question": "Bundesliga Winner ",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T16:43:18.115872Z",
-    "market_id": "189792",
-    "question": "What will Gold (GC) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T16:43:18.115872Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-13T05:09:29.602051Z",
+    "market_id": "194637",
+    "question": "Government shutdown on Saturday?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-13T05:09:29.602051Z",
+    "market_id": "194105",
+    "question": "What price will XRP hit in February?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-13T03:22:29.217728Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -520,28 +542,6 @@
     "timestamp": "2026-02-11T18:40:12.778550Z",
     "market_id": "22862",
     "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T17:42:10.869904Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T17:42:10.869904Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
     "from_regime": "Active",
     "to_regime": "Volatile",
     "metrics_snapshot": {

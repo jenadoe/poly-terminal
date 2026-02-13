@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-13T09:02:43.433509Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-13T08:03:42.622301Z",
     "market_id": "33659",
     "question": "Serie A League Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T20:21:28.132800Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.4,
       "macro_sensitivity": 0.0
     }
   }

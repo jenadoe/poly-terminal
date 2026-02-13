@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-13T08:03:42.622301Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-13T06:13:56.906712Z",
     "market_id": "190996",
     "question": "Ilhan Omar town hall attack staged?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T18:40:12.778550Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

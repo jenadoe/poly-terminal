@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-13T14:01:45.747701Z",
+    "market_id": "35908",
+    "question": "Who will Trump nominate as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 87.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-13T12:55:21.774894Z",
     "market_id": "33699",
     "question": "French Ligue 1 Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 74.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-11T21:03:25.114991Z",
-    "market_id": "106854",
-    "question": "Bangladesh Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.3,
       "macro_sensitivity": 0.0
     }
   }

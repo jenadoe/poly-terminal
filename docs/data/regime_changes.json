@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T20:24:25.864032Z",
+    "market_id": "71692",
+    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T19:05:13.250852Z",
     "market_id": "190420",
     "question": "Will Israel strike Lebanon on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 74.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T15:01:24.871810Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.1,
       "macro_sensitivity": 0.0
     }
   }

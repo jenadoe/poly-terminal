@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T05:42:55.827010Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T04:52:31.616546Z",
     "market_id": "143443",
     "question": "Venezuela leader end of 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 77.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T14:16:47.951529Z",
-    "market_id": "194637",
-    "question": "Another US government shutdown by February 14?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.8,
       "macro_sensitivity": 0.0
     }
   }

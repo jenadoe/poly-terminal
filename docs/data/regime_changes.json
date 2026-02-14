@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-14T23:22:28.119106Z",
+    "market_id": "189701",
+    "question": "# of views on Bad Bunny halftime show (YouTube) in week 1?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-14T23:22:28.119106Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 84.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T22:50:43.386489Z",
     "market_id": "133675",
     "question": "Opinion FDV above ___ one day after launch?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T19:24:10.671962Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T17:45:38.086828Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.6,
       "macro_sensitivity": 0.0
     }
   }

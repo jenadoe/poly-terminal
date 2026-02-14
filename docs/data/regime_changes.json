@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T14:46:01.064724Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T13:33:36.586460Z",
     "market_id": "100199",
     "question": "2026 Winter Olympics: Most Gold Medals",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T21:06:18.259013Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.6,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T07:10:19.743579Z",
+    "market_id": "151953",
+    "question": "US/Israel strikes Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 59.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T05:42:55.827010Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T15:14:25.311737Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.8,
       "macro_sensitivity": 0.0
     }
   }

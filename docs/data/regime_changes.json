@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T21:22:32.141600Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T20:50:39.996196Z",
     "market_id": "190420",
     "question": "Will Israel strike Lebanon on...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 94.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T16:00:22.992938Z",
-    "market_id": "203944",
-    "question": "Elon Musk # tweets February 13 - February 20, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

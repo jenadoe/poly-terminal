@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T09:41:06.697091Z",
+    "market_id": "201416",
+    "question": "Bitcoin above ___ on February 14?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T09:00:13.462868Z",
     "market_id": "100199",
     "question": "2026 Winter Olympics: Most Gold Medals",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T16:13:24.555758Z",
-    "market_id": "25815",
-    "question": "Israel and Syria normalize relations by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.7,
       "macro_sensitivity": 0.0
     }
   }

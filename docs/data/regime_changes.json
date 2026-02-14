@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-14T13:33:36.586460Z",
+    "market_id": "100199",
+    "question": "2026 Winter Olympics: Most Gold Medals",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 95.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-14T13:33:36.586460Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-14T13:33:36.586460Z",
+    "market_id": "59404",
+    "question": "Which coalition will form the next Dutch government?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 99.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T11:31:07.492564Z",
     "market_id": "89502",
     "question": "What price will Bitcoin hit in 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T21:06:18.259013Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T20:41:43.197663Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T19:29:41.139907Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T09:00:13.462868Z",
+    "market_id": "100199",
+    "question": "2026 Winter Olympics: Most Gold Medals",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T08:30:18.991297Z",
     "market_id": "189845",
     "question": "US next strikes Iran on...?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 49.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T16:13:24.555758Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.9,
       "macro_sensitivity": 0.0
     }
   }

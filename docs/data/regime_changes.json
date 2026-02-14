@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T16:57:30.170776Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T16:27:36.469512Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 88.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T05:09:29.602051Z",
-    "market_id": "194637",
-    "question": "Government shutdown on Saturday?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.3,
       "macro_sensitivity": 0.0
     }
   }

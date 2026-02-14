@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-14T17:28:24.086325Z",
+    "market_id": "17858",
+    "question": "Ukraine recognizes Russian sovereignty over its territory by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-14T17:28:24.086325Z",
+    "market_id": "194106",
+    "question": "What price will Ethereum hit in February?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-14T17:28:24.086325Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T16:57:30.170776Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T08:03:42.622301Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T06:13:56.906712Z",
-    "market_id": "190996",
-    "question": "Ilhan Omar town hall attack staged?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T06:13:56.906712Z",
-    "market_id": "27830",
-    "question": "2026 NBA Champion",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 88.0,
       "macro_sensitivity": 0.0
     }
   }

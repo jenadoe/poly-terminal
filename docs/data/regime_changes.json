@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-14T11:31:07.492564Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T11:00:38.341432Z",
     "market_id": "201416",
     "question": "Bitcoin above ___ on February 14?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-12T18:13:22.199548Z",
-    "market_id": "95127",
-    "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
       "macro_sensitivity": 0.0
     }
   }

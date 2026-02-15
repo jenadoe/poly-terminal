@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T10:25:02.069070Z",
+    "market_id": "202596",
+    "question": "Bitcoin above ___ on February 15?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 51.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T09:04:48.887182Z",
     "market_id": "32756",
     "question": "NBA Western Conference Champion ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T09:41:06.697091Z",
-    "market_id": "201416",
-    "question": "Bitcoin above ___ on February 14?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-15T19:38:08.278053Z",
+    "market_id": "190458",
+    "question": "Will Israel strike Gaza on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T19:38:08.278053Z",
+    "market_id": "151953",
+    "question": "US/Israel strikes Iran by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 59.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T19:06:07.376522Z",
     "market_id": "206602",
     "question": "Elon Musk # tweets February 14 - February 16, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 86.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T16:27:36.469512Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T16:27:36.469512Z",
-    "market_id": "95127",
-    "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.1,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-15T09:04:48.887182Z",
+    "market_id": "32756",
+    "question": "NBA Western Conference Champion ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T09:04:48.887182Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T08:36:34.338530Z",
     "market_id": "194107",
     "question": "What price will Bitcoin hit in February?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 71.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T09:00:13.462868Z",
-    "market_id": "100199",
-    "question": "2026 Winter Olympics: Most Gold Medals",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T08:30:18.991297Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
       "macro_sensitivity": 0.0
     }
   }

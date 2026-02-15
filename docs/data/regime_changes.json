@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T13:02:41.472352Z",
+    "market_id": "202596",
+    "question": "Bitcoin above ___ on February 15?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T11:58:31.804840Z",
     "market_id": "89502",
     "question": "What price will Bitcoin hit in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T13:33:36.586460Z",
-    "market_id": "59404",
-    "question": "Which coalition will form the next Dutch government?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 99.4,
       "macro_sensitivity": 0.0
     }
   }

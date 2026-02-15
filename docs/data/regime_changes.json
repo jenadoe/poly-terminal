@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T13:53:40.075417Z",
+    "market_id": "102774",
+    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T13:02:41.472352Z",
     "market_id": "202596",
     "question": "Bitcoin above ___ on February 15?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 95.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T13:33:36.586460Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T15:48:55.902864Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T14:26:05.126905Z",
     "market_id": "32228",
     "question": "Balance of Power: 2026 Midterms",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T15:23:36.182064Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
       "macro_sensitivity": 0.0
     }
   }

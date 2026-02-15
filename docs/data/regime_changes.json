@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T21:47:35.266054Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T19:55:30.040421Z",
     "market_id": "34436",
     "question": "The Masters - Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T17:51:59.097731Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

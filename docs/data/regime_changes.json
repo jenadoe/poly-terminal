@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-15T05:41:04.046216Z",
+    "market_id": "100300",
+    "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T05:41:04.046216Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T05:41:04.046216Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T04:30:45.542535Z",
     "market_id": "179312",
     "question": "MLB World Series Champion 2026",
@@ -513,39 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 59.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T05:42:55.827010Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T04:52:31.616546Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 94.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T03:07:28.395755Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-15T11:58:31.804840Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T11:45:12.322844Z",
     "market_id": "202985",
     "question": "What price will Ethereum hit February 9-15?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 99.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T11:31:07.492564Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
       "macro_sensitivity": 0.0
     }
   }

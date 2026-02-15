@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-15T04:30:45.542535Z",
+    "market_id": "179312",
+    "question": "MLB World Series Champion 2026",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T04:30:45.542535Z",
+    "market_id": "22863",
+    "question": "Will tariffs generate >$250b in 2025?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T04:30:45.542535Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T02:03:35.522232Z",
     "market_id": "202596",
     "question": "Bitcoin above ___ on February 15?",
@@ -513,39 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 46.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T00:02:23.995929Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T23:45:19.059833Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T22:41:18.337668Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.3,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-15T02:03:35.522232Z",
+    "market_id": "202596",
+    "question": "Bitcoin above ___ on February 15?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T02:03:35.522232Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T02:03:35.522232Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T02:03:35.522232Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-14T23:47:28.255277Z",
     "market_id": "89502",
     "question": "What price will Bitcoin hit in 2026?",
@@ -502,50 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 81.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T21:20:58.249505Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T21:20:58.249505Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T20:43:03.778248Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-13T20:43:03.778248Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.2,
       "macro_sensitivity": 0.0
     }
   }

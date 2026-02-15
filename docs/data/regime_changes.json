@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-15T11:45:12.322844Z",
+    "market_id": "202985",
+    "question": "What price will Ethereum hit February 9-15?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-15T11:45:12.322844Z",
+    "market_id": "162818",
+    "question": "Khamenei out as Supreme Leader of Iran by February 28?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 87.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-15T10:25:02.069070Z",
     "market_id": "202596",
     "question": "Bitcoin above ___ on February 15?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T11:00:38.341432Z",
-    "market_id": "201416",
-    "question": "Bitcoin above ___ on February 14?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T11:00:38.341432Z",
-    "market_id": "129218",
-    "question": "Will Ilhan Omar resign by March 31?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.4,
       "macro_sensitivity": 0.0
     }
   }

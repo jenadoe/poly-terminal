@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T20:28:26.373610Z",
+    "market_id": "128933",
+    "question": "Will Tim Walz resign by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T19:09:46.966278Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 87.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T10:25:02.069070Z",
-    "market_id": "202596",
-    "question": "Bitcoin above ___ on February 15?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 51.2,
       "macro_sensitivity": 0.0
     }
   }

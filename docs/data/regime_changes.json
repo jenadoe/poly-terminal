@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T14:08:06.694858Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T12:59:04.243444Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 51.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T02:03:35.522232Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.2,
       "macro_sensitivity": 0.0
     }
   }

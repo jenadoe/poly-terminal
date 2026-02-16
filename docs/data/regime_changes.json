@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T08:01:35.027594Z",
+    "market_id": "151953",
+    "question": "US/Israel strikes Iran by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T07:01:06.654194Z",
     "market_id": "85485",
     "question": "How high will Polymarket's mindshare go?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 84.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T22:50:43.386489Z",
-    "market_id": "133675",
-    "question": "Opinion FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 85.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-16T17:36:44.168498Z",
+    "market_id": "203944",
+    "question": "Elon Musk # tweets February 13 - February 20, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-16T17:36:44.168498Z",
+    "market_id": "38900",
+    "question": "Will Russia capture all of Pokrovsk by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-16T17:36:44.168498Z",
+    "market_id": "114242",
+    "question": "US strikes Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T16:51:32.304272Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T08:36:34.338530Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T07:57:18.042089Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 59.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T05:41:04.046216Z",
-    "market_id": "100300",
-    "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

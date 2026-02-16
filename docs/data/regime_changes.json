@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T19:09:46.966278Z",
+    "market_id": "38900",
+    "question": "Will Russia capture all of Pokrovsk by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T18:22:12.694052Z",
     "market_id": "33699",
     "question": "French Ligue 1 Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 51.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T09:04:48.887182Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.8,
       "macro_sensitivity": 0.0
     }
   }

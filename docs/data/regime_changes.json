@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T07:01:06.654194Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T05:55:50.099090Z",
     "market_id": "190338",
     "question": "Which company has the best AI model end of February?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 85.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T22:50:43.386489Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

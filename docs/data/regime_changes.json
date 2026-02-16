@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-16T05:55:50.099090Z",
+    "market_id": "190338",
+    "question": "Which company has the best AI model end of February?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-16T05:55:50.099090Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T04:31:18.644821Z",
     "market_id": "190338",
     "question": "Which company has the best AI model end of February?",
@@ -521,28 +543,6 @@
     "market_id": "33659",
     "question": "Serie A League Winner ",
     "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T22:50:43.386489Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T21:22:32.141600Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "High Confidence",
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,

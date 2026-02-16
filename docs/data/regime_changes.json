@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-16T04:31:18.644821Z",
+    "market_id": "190338",
+    "question": "Which company has the best AI model end of February?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T01:59:22.249677Z",
     "market_id": "119671",
     "question": "Puffpaw FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-14T20:50:39.996196Z",
-    "market_id": "190420",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 59.1,
       "macro_sensitivity": 0.0
     }
   }

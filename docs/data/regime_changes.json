@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-16T15:01:13.576412Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-16T15:01:13.576412Z",
+    "market_id": "41353",
+    "question": "Supreme Court rules in favor of Trump's tariffs?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T14:08:06.694858Z",
     "market_id": "89502",
     "question": "What price will Bitcoin hit in 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T04:30:45.542535Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T02:03:35.522232Z",
-    "market_id": "202596",
-    "question": "Bitcoin above ___ on February 15?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 51.3,
       "macro_sensitivity": 0.0
     }
   }

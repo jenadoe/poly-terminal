@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-17T02:51:36.999986Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-16T23:33:28.043017Z",
     "market_id": "85485",
     "question": "How high will Polymarket's mindshare go?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 81.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T14:26:05.126905Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
       "macro_sensitivity": 0.0
     }
   }

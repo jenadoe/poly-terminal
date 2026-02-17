@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-17T04:51:01.128370Z",
+    "market_id": "203944",
+    "question": "Elon Musk # tweets February 13 - February 20, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-17T04:51:01.128370Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 58.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T02:51:36.999986Z",
     "market_id": "85485",
     "question": "How high will Polymarket's mindshare go?",
@@ -524,28 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T16:28:13.322679Z",
-    "market_id": "189550",
-    "question": "Will Opinion launch a token by ___?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T15:48:55.902864Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.7,
       "macro_sensitivity": 0.0
     }
   }

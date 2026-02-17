@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-17T05:56:25.362004Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T04:51:01.128370Z",
     "market_id": "203944",
     "question": "Elon Musk # tweets February 13 - February 20, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 85.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T18:34:09.773432Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
       "macro_sensitivity": 0.0
     }
   }

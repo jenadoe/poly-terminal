@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-17T10:31:17.495055Z",
+    "market_id": "179830",
+    "question": "3rd largest company end of February?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 90.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T08:42:29.876803Z",
     "market_id": "189845",
     "question": "US next strikes Iran on...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T19:38:08.278053Z",
-    "market_id": "190458",
-    "question": "Will Israel strike Gaza on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.5,
       "macro_sensitivity": 0.0
     }
   }

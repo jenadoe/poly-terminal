@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-17T20:56:40.631737Z",
+    "market_id": "71692",
+    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T20:07:16.095910Z",
     "market_id": "102774",
     "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-16T01:59:22.249677Z",
-    "market_id": "190996",
-    "question": "Ilhan Omar town hall attack staged?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-17T08:42:29.876803Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 93.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T07:53:42.885050Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-15T19:38:08.278053Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 59.3,
       "macro_sensitivity": 0.0
     }
   }

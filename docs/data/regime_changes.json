@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-17T22:51:26.417328Z",
+    "market_id": "100300",
+    "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
+    "from_regime": "Volatile",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 89.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-17T22:51:26.417328Z",
+    "market_id": "90178",
+    "question": "Will Jesus Christ return before 2027?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-17T22:02:05.299154Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-16T05:55:50.099090Z",
-    "market_id": "190338",
-    "question": "Which company has the best AI model end of February?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-16T05:55:50.099090Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
       "macro_sensitivity": 0.0
     }
   }

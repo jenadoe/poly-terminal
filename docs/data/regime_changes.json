@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-18T21:23:29.183467Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 90.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T20:45:05.087940Z",
     "market_id": "190458",
     "question": "Will Israel strike Gaza on...?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 93.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T07:53:42.885050Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.8,
       "macro_sensitivity": 0.0
     }
   }

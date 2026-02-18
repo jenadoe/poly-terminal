@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-18T23:05:00.680966Z",
+    "market_id": "100300",
+    "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T22:34:32.354414Z",
     "market_id": "100300",
     "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T10:31:17.495055Z",
-    "market_id": "179830",
-    "question": "3rd largest company end of February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 90.0,
       "macro_sensitivity": 0.0
     }
   }

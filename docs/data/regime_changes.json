@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-18T23:45:42.862480Z",
+    "market_id": "100300",
+    "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-18T23:45:42.862480Z",
+    "market_id": "90177",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T23:05:00.680966Z",
     "market_id": "100300",
     "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 70.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T11:28:10.673295Z",
-    "market_id": "79973",
-    "question": "2026 Seoul Mayoral Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T11:28:10.673295Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.6,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-18T11:06:58.521570Z",
+    "market_id": "71693",
+    "question": "Khamenei out as Supreme Leader of Iran in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T08:27:38.453696Z",
     "market_id": "36308",
     "question": "Claude 5 released by\u2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 65.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-16T16:51:32.304272Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
       "macro_sensitivity": 0.0
     }
   }

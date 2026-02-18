@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-18T20:45:05.087940Z",
+    "market_id": "190458",
+    "question": "Will Israel strike Gaza on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 53.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-18T20:45:05.087940Z",
+    "market_id": "90177",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 85.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T19:15:43.618584Z",
     "market_id": "102774",
     "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T07:53:42.885050Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T05:56:25.362004Z",
-    "market_id": "181516",
-    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.5,
       "macro_sensitivity": 0.0
     }
   }

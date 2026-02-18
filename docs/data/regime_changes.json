@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-18T13:00:27.266974Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T11:55:08.346294Z",
     "market_id": "108633",
     "question": "Will the Iranian regime fall by March 31?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-16T16:51:32.304272Z",
-    "market_id": "38900",
-    "question": "Will Russia capture all of Pokrovsk by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
       "macro_sensitivity": 0.0
     }
   }

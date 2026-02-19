@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 49.4,
+      "macro_sensitivity": 0.84
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "208544",
+    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -2.9
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.72
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 34.3,
+      "macro_sensitivity": 0.76
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.5,
+      "macro_sensitivity": -2.87
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:51:21.558911Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 49.3,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T19:10:11.576360Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 1.3
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "129218",
-    "question": "Will Ilhan Omar resign by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "194119",
-    "question": "What price will Solana hit in February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.73
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "153721",
-    "question": "Odds Trump acquires Greenland before 2027 hit __ by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 24.9,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "97361",
-    "question": "How many 7.0 or above earthquakes by June 30?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.6
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 20.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 66.5,
-      "macro_sensitivity": 3.65
     }
   }
 ]

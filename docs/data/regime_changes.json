@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T21:01:01.099283Z",
+    "market_id": "100228",
+    "question": "Winter Games 2026: 2nd Most Gold Medals",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T21:01:01.099283Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T20:30:32.250742Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -2.91
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "153505",
-    "question": "X banned in U.K. by March 31?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.18
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "17858",
-    "question": "Ukraine recognizes Russian sovereignty over its territory by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 35.2,
-      "macro_sensitivity": -2.99
     }
   }
 ]

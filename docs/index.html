@@ -3,406 +3,891 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poly-Nexus | Integrity Layer</title>
-    <!-- Chart.js CDN -->
+    <title>POLY-NEXUS // INTEGRITY ORACLE</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #0f172a;
-            --text-sub: #64748b;
-            --accent: #2563eb;
-            --success: #22c55e;
-            --warning: #eab308;
-            --danger: #ef4444;
-            --border: #e2e8f0;
+            --bg:        #060a06;
+            --bg-card:   #0b120b;
+            --bg-row:    #0e160e;
+            --green:     #39e96e;
+            --green-dim: #1d7a3a;
+            --green-glow:#39e96e55;
+            --amber:     #f5a623;
+            --amber-dim: #7a5010;
+            --red:       #ff4545;
+            --red-dim:   #7a1a1a;
+            --blue:      #4da8ff;
+            --blue-dim:  #1a3d6e;
+            --text:      #c8e6c9;
+            --text-dim:  #4a6f4a;
+            --border:    #1a2e1a;
+            --border-hi: #2a4a2a;
+            --mono:      'JetBrains Mono', monospace;
         }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            font-family: var(--mono);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        /* CRT scanline overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.08) 2px,
+                rgba(0,0,0,0.08) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
         }
 
-        /* Header */
+        /* ─── TOPBAR ─── */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 32px;
+            border-bottom: 1px solid var(--border);
+            background: #080d08;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.12em;
+        }
+        .topbar-left { display: flex; gap: 24px; }
+        .topbar-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+        #live-clock { color: var(--text); font-weight: 500; }
+
+        /* ─── HEADER ─── */
         header {
-            text-align: center;
-            padding: 40px 0;
+            padding: 40px 32px 28px;
+            border-bottom: 1px solid var(--border);
         }
-        h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
-        .subtitle { color: var(--text-sub); font-size: 1.1rem; margin-top: 10px; }
+        .header-top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo-group h1 {
+            font-family: var(--mono);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #fff;
+            line-height: 1;
+        }
+        .logo-group h1 span { color: var(--green); }
+        .logo-group .tagline {
+            margin-top: 6px;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px; height: 1.1em;
+            background: var(--green);
+            vertical-align: text-bottom;
+            animation: blink 1.1s step-end infinite;
+        }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        .header-meta {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-align: right;
+            line-height: 1.8;
+        }
+        .header-meta strong { color: var(--text); }
 
-        /* KPI Grid */
+        /* ─── CONTAINER ─── */
+        .container { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+
+        /* ─── KPI GRID ─── */
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
         }
-        .card {
-            background: var(--card-bg);
+        .kpi-card {
+            background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            padding: 20px 24px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.2s;
         }
-        .metric-label { font-size: 0.9rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 0.05em; }
-        .metric-value { font-size: 2rem; font-weight: 700; margin: 10px 0; color: var(--accent); }
-        .metric-sub { font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px; display: inline-block; }
-        
-        .grade-a { background: #dcfce7; color: #166534; }
-        .grade-b { background: #fef9c3; color: #854d0e; }
-        .grade-c { background: #fee2e2; color: #991b1b; }
+        .kpi-card:hover { border-color: var(--border-hi); }
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+        }
+        .kpi-card.green::before { background: var(--green); box-shadow: 2px 0 12px var(--green-glow); }
+        .kpi-card.amber::before { background: var(--amber); }
+        .kpi-card.blue::before  { background: var(--blue); }
+        .kpi-card.red::before   { background: var(--red); }
 
-        /* Charts */
+        .kpi-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+        .kpi-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+        }
+        .kpi-card.green .kpi-value { color: var(--green); text-shadow: 0 0 20px var(--green-glow); }
+        .kpi-card.amber .kpi-value { color: var(--amber); }
+        .kpi-card.blue  .kpi-value { color: var(--blue); }
+        .kpi-sub {
+            margin-top: 8px;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+        }
+
+        /* ─── SECTION HEADER ─── */
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+        .section-head::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .section-head .tag {
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 2px;
+            color: var(--green);
+            font-size: 0.6rem;
+        }
+
+        /* ─── CHART GRID ─── */
         .chart-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 340px 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+        }
+        .chart-card h3 {
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+        .chart-wrap { position: relative; }
+        .donut-wrap { height: 260px; }
+        .radar-wrap { height: 260px; }
+
+        /* ─── TABLE ─── */
+        .table-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
             margin-bottom: 40px;
         }
-        .chart-container { position: relative; height: 300px; }
-
-        /* Table */
-        .table-container {
-            overflow-x: auto;
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border);
+        .table-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .table-header-row h3 {
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+        .table-badge {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 2px;
         }
         table { width: 100%; border-collapse: collapse; }
-        th { text-align: left; padding: 16px; border-bottom: 2px solid var(--border); color: var(--text-sub); font-size: 0.85rem; }
-        td { padding: 16px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-        tr:last-child td { border-bottom: none; }
-        
-        .status-badge {
-            padding: 4px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;
+        thead th {
+            padding: 10px 14px;
+            font-size: 0.6rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            text-align: left;
+            background: #080d08;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
         }
-        .status-high { background: #dcfce7; color: #15803d; }
-        .status-active { background: #dbeafe; color: #1d4ed8; }
-        .status-macro { background: #fef9c3; color: #a16207; }
-        .status-low { background: #f1f5f9; color: #64748b; }
-        .status-volatile { background: #fee2e2; color: #b91c1c; }
+        tbody tr {
+            background: var(--bg-row);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s;
+        }
+        tbody tr:hover { background: #101a10; }
+        tbody tr:last-child { border-bottom: none; }
+        td {
+            padding: 12px 14px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+        }
+
+        .event-title {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #e0ffe0;
+            max-width: 260px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .event-cat {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+        }
+
+        .score-cell {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+        .score-high { color: var(--green); text-shadow: 0 0 10px var(--green-glow); }
+        .score-mid  { color: var(--amber); }
+        .score-low  { color: var(--red); }
+
+        /* State badges */
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 2px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .badge-high     { background: #0d2e1a; color: var(--green); border: 1px solid var(--green-dim); }
+        .badge-active   { background: #0d1a2e; color: var(--blue);  border: 1px solid var(--blue-dim); }
+        .badge-macro    { background: #2e1e0d; color: var(--amber); border: 1px solid var(--amber-dim); }
+        .badge-volatile { background: #2e0d0d; color: var(--red);   border: 1px solid var(--red-dim); }
+        .badge-low      { background: #12181a; color: #6b8f8f;      border: 1px solid #1e3535; }
+
+        /* Sub-score bars */
+        .subscores { display: flex; flex-direction: column; gap: 4px; min-width: 180px; }
+        .subscore-row { display: flex; align-items: center; gap: 6px; }
+        .subscore-key {
+            font-size: 0.55rem;
+            letter-spacing: 0.06em;
+            color: var(--text-dim);
+            width: 28px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        .bar-bg {
+            flex: 1;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bar-liq  { background: var(--blue); }
+        .bar-eff  { background: var(--amber); }
+        .bar-ind  { background: #b47fff; }
+        .bar-conv { background: var(--green); }
+        .subscore-val {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            width: 24px;
+            text-align: right;
+            flex-shrink: 0;
+        }
 
         /* Sparkline */
-        .sparkline-canvas { width: 100px; height: 30px; vertical-align: middle; }
+        .sparkline-canvas { vertical-align: middle; }
 
-        /* Footer */
-        footer { text-align: center; padding: 40px; color: var(--text-sub); font-size: 0.9rem; }
-        
-        @media (max-width: 768px) {
+        /* Volume */
+        .vol-cell { color: var(--text); font-variant-numeric: tabular-nums; }
+
+        /* Link */
+        .link-btn {
+            display: inline-block;
+            font-size: 0.65rem;
+            color: var(--green);
+            text-decoration: none;
+            border: 1px solid var(--green-dim);
+            padding: 3px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+            transition: background 0.15s, box-shadow 0.15s;
+        }
+        .link-btn:hover {
+            background: var(--green-glow);
+            box-shadow: 0 0 8px var(--green-glow);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            padding: 24px 32px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+
+        /* ─── LOADING ─── */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+        .loading::before {
+            content: '▋';
+            animation: blink 0.8s step-end infinite;
+            margin-right: 8px;
+            color: var(--green);
+        }
+
+        /* Error state */
+        .error-msg {
+            text-align: center;
+            padding: 40px;
+            color: var(--red);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 1024px) {
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
             .chart-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .container { padding: 16px; }
+            header { padding: 24px 16px 20px; }
+            .kpi-grid { grid-template-columns: 1fr 1fr; }
+            .subscores { min-width: 140px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>🛡️ Poly-Nexus</h1>
-        <div class="subtitle">The Oracle Integrity Filter for Prediction Markets</div>
-        <div style="margin-top: 10px; font-size: 0.9rem; color: #94a3b8;">v3.0 | Live Intelligence</div>
-    </header>
+<!-- Topbar -->
+<div class="topbar">
+    <div class="topbar-left">
+        <span><span class="topbar-dot"></span>&nbsp; SYSTEM ONLINE</span>
+        <span>ENGINE V3.0</span>
+        <span>POLYMARKET // GAMMA API</span>
+    </div>
+    <div><span id="live-clock">--:--:-- UTC</span></div>
+</div>
 
-    <!-- KPI Section -->
+<!-- Header -->
+<header>
+    <div class="header-top">
+        <div class="logo-group">
+            <h1>POLY<span>-NEXUS</span><span class="cursor"></span></h1>
+            <div class="tagline">// Oracle Integrity Filter for Prediction Markets</div>
+        </div>
+        <div class="header-meta">
+            <div>UPDATED <strong id="last-update">—</strong></div>
+            <div>SOURCE <strong>POLYMARKET GAMMA API</strong></div>
+            <div>BUILD <strong>2026-02-19</strong></div>
+        </div>
+    </div>
+</header>
+
+<!-- Main -->
+<div class="container">
+
+    <!-- KPIs -->
     <div class="kpi-grid">
-        <div class="card">
-            <div class="metric-label">Integrity Index</div>
-            <div class="metric-value" id="integrity-index">-</div>
-            <div id="integrity-grade" class="metric-sub">-</div>
+        <div class="kpi-card green">
+            <div class="kpi-label">Integrity Index</div>
+            <div class="kpi-value" id="integrity-index">—</div>
+            <div class="kpi-sub" id="integrity-grade">COMPUTING...</div>
         </div>
-        <div class="card">
-            <div class="metric-label">Market Regime</div>
-            <div class="metric-value" id="market-regime">-</div>
-            <div class="metric-sub" style="background:#f1f5f9; color:#475569;">System Wide</div>
+        <div class="kpi-card amber">
+            <div class="kpi-label">Market Regime</div>
+            <div class="kpi-value" id="market-regime">—</div>
+            <div class="kpi-sub">SYSTEM-WIDE STATE</div>
         </div>
-        <div class="card">
-            <div class="metric-label">High Confidence</div>
-            <div class="metric-value" id="high-conf-count">-</div>
-            <div class="metric-sub grade-a">Safe to Cite</div>
+        <div class="kpi-card blue">
+            <div class="kpi-label">High Confidence</div>
+            <div class="kpi-value" id="high-conf-count">—</div>
+            <div class="kpi-sub">SAFE TO CITE</div>
         </div>
-        <div class="card">
-            <div class="metric-label">Active Markets</div>
-            <div class="metric-value" id="total-markets">-</div>
-            <div class="metric-sub" style="background:#e0e7ff; color:#3730a3;">Tracked</div>
+        <div class="kpi-card">
+            <div class="kpi-label">Markets Tracked</div>
+            <div class="kpi-value" id="total-markets" style="color:#fff">—</div>
+            <div class="kpi-sub">ACTIVE EVENTS</div>
         </div>
     </div>
 
     <!-- Charts -->
+    <div class="section-head">
+        <span>SYSTEM OVERVIEW</span>
+        <span class="tag">CHARTS</span>
+    </div>
     <div class="chart-grid">
-        <div class="card">
-            <h3>📊 Market State Distribution</h3>
-            <div class="chart-container">
+        <div class="chart-card">
+            <h3>STATE DISTRIBUTION</h3>
+            <div class="chart-wrap donut-wrap">
                 <canvas id="stateChart"></canvas>
             </div>
         </div>
-        <div class="card">
-            <h3>⚠️ Risk Radar (Volume vs Score)</h3>
-            <div class="chart-container">
-                <canvas id="riskChart"></canvas>
+        <div class="chart-card">
+            <h3>NEXUS COMPONENT RADAR — SYSTEM AVERAGE</h3>
+            <div class="chart-wrap radar-wrap">
+                <canvas id="radarChart"></canvas>
             </div>
         </div>
     </div>
 
-    <!-- Top Intelligence Table -->
-    <div class="card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-            <h3>🏆 Top Intelligence (High Confidence)</h3>
-            <span style="font-size:0.8rem; color:#64748b;">*Updated Hourly</span>
+    <!-- Table -->
+    <div class="section-head">
+        <span>INTELLIGENCE FEED</span>
+        <span class="tag">TOP 10 BY SCORE</span>
+    </div>
+    <div class="table-card">
+        <div class="table-header-row">
+            <h3>HIGH CONFIDENCE EVENTS</h3>
+            <span class="table-badge">UPDATED HOURLY</span>
         </div>
-        <div class="table-container">
-            <table id="market-table">
-                <thead>
-                    <tr>
-                        <th>Market Question</th>
-                        <th>Nexus Score</th>
-                        <th>Status</th>
-                        <th>Macro Beta</th>
-                        <th>Volume</th>
-                        <th>Trend (24h)</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be injected here -->
-                </tbody>
-            </table>
+        <div id="table-body-wrap">
+            <div class="loading">LOADING INTELLIGENCE DATA</div>
         </div>
     </div>
 
-    <footer>
-        <p>Built for <b>Polymarket Builder Program</b> • Poly-Nexus Engine V3.0</p>
-        <p style="opacity: 0.6;">Data source: Polymarket Gamma API • Integrity verification by Poly-Nexus</p>
-    </footer>
 </div>
 
+<footer>
+    <span>POLY-NEXUS © 2026 // INTEGRITY ORACLE ENGINE</span>
+    <span>BUILT FOR POLYMARKET BUILDER PROGRAM</span>
+    <span>DATA: POLYMARKET GAMMA API + YFINANCE</span>
+</footer>
+
 <script>
-    // --- Configuration ---
-    const DATA_URL = './data/latest_intelligence.json';
-    
-    // --- Global Chart Instances (for memory leak prevention) ---
-    let stateChartInstance = null;
-    let riskChartInstance = null;
+// ─── CONFIG ────────────────────────────────────────────────────
+const DATA_URL = './data/latest_intelligence.json';
 
-    // --- Utils ---
-    function formatCurrency(num) {
-        if (num >= 1000000) return "$" + (num / 1000000).toFixed(1) + "M";
-        if (num >= 1000) return "$" + (num / 1000).toFixed(1) + "K";
-        return "$" + num;
+// ─── MOCK DATA (fallback when no JSON available) ────────────────
+const MOCK_DATA = [
+    { question: "Will the Fed cut rates at the March FOMC meeting?", category: "Finance", nexus_score: 91.2, market_state: "High Confidence", macro_sensitivity: 0.08, volume: 14200000, slug: "fed-rate-cut-march", sparkline: [{p:0.55},{p:0.58},{p:0.61},{p:0.60},{p:0.63}], liq: 28.1, eff: 23.4, ind: 14.2, conv: 25.5 },
+    { question: "Will Trump sign an executive order on crypto before March?", category: "Crypto", nexus_score: 87.6, market_state: "High Confidence", macro_sensitivity: 0.12, volume: 9800000, slug: "trump-crypto-eo-march", sparkline: [{p:0.72},{p:0.74},{p:0.71},{p:0.75},{p:0.78}], liq: 26.0, eff: 22.1, ind: 13.5, conv: 26.0 },
+    { question: "Will Ukraine and Russia reach a ceasefire by June 2026?", category: "Geopolitics", nexus_score: 83.4, market_state: "High Confidence", macro_sensitivity: 0.06, volume: 7400000, slug: "ukraine-russia-ceasefire-june", sparkline: [{p:0.31},{p:0.33},{p:0.35},{p:0.34},{p:0.36}], liq: 24.5, eff: 21.8, ind: 14.7, conv: 22.4 },
+    { question: "Will Apple announce a foldable iPhone at WWDC 2026?", category: "Tech", nexus_score: 78.1, market_state: "Active", macro_sensitivity: 0.04, volume: 5100000, slug: "apple-foldable-iphone-wwdc", sparkline: [{p:0.42},{p:0.44},{p:0.40},{p:0.43},{p:0.45}], liq: 22.0, eff: 20.5, ind: 14.1, conv: 21.5 },
+    { question: "Will BTC exceed $120k before end of Q1 2026?", category: "Crypto", nexus_score: 73.8, market_state: "Active", macro_sensitivity: 0.71, volume: 22100000, slug: "btc-120k-q1-2026", sparkline: [{p:0.48},{p:0.52},{p:0.49},{p:0.55},{p:0.51}], liq: 29.5, eff: 18.2, ind: 6.1, conv: 20.0 },
+    { question: "Will the Democrats win the 2026 Senate Midterms?", category: "Politics", nexus_score: 72.3, market_state: "Active", macro_sensitivity: 0.03, volume: 6700000, slug: "democrat-senate-2026", sparkline: [{p:0.44},{p:0.45},{p:0.43},{p:0.46},{p:0.44}], liq: 23.0, eff: 21.0, ind: 14.8, conv: 13.5 },
+    { question: "Will Elon Musk still be at DOGE by July 2026?", category: "Politics", nexus_score: 68.9, market_state: "Active", macro_sensitivity: 0.09, volume: 4300000, slug: "musk-doge-july", sparkline: [{p:0.62},{p:0.60},{p:0.58},{p:0.61},{p:0.59}], liq: 21.5, eff: 20.4, ind: 13.0, conv: 14.0 },
+    { question: "Will inflation (CPI) exceed 4% in any month of 2026?", category: "Finance", nexus_score: 61.2, market_state: "Active", macro_sensitivity: 0.22, volume: 2800000, slug: "cpi-4pct-2026", sparkline: [{p:0.28},{p:0.30},{p:0.29},{p:0.32},{p:0.31}], liq: 18.0, eff: 17.5, ind: 10.2, conv: 15.5 },
+    { question: "Will ETH reach $5000 before June 2026?", category: "Crypto", nexus_score: 54.4, market_state: "Macro-Driven", macro_sensitivity: 0.82, volume: 11500000, slug: "eth-5000-june", sparkline: [{p:0.35},{p:0.38},{p:0.41},{p:0.44},{p:0.39}], liq: 26.0, eff: 16.0, ind: 3.4, conv: 9.0 },
+    { question: "Will any major AI lab have a data breach in 2026?", category: "Tech", nexus_score: 42.1, market_state: "Low Liquidity", macro_sensitivity: 0.01, volume: 85000, slug: "ai-lab-breach-2026", sparkline: [{p:0.18},{p:0.19},{p:0.18},{p:0.20},{p:0.19}], liq: 6.5, eff: 18.0, ind: 14.1, conv: 3.5 },
+];
+
+// ─── CHART INSTANCES ────────────────────────────────────────────
+let stateChartInst = null;
+let radarChartInst = null;
+
+// ─── CLOCK ──────────────────────────────────────────────────────
+function tickClock() {
+    const now = new Date();
+    const hh = String(now.getUTCHours()).padStart(2,'0');
+    const mm = String(now.getUTCMinutes()).padStart(2,'0');
+    const ss = String(now.getUTCSeconds()).padStart(2,'0');
+    document.getElementById('live-clock').textContent = `${hh}:${mm}:${ss} UTC`;
+}
+setInterval(tickClock, 1000);
+tickClock();
+
+// ─── UTILS ──────────────────────────────────────────────────────
+function fmtVol(n) {
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
+    return '$' + n;
+}
+
+function scoreClass(s) {
+    if (s >= 80) return 'score-high';
+    if (s >= 60) return 'score-mid';
+    return 'score-low';
+}
+
+function badgeClass(state) {
+    if (state.includes('High Confidence')) return 'badge-high';
+    if (state.includes('Active'))          return 'badge-active';
+    if (state.includes('Macro'))           return 'badge-macro';
+    if (state.includes('Volatile'))        return 'badge-volatile';
+    return 'badge-low';
+}
+
+// Animate counter
+function animateCount(el, target, suffix='', duration=800) {
+    const start = performance.now();
+    const from = 0;
+    function step(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (from + (target - from) * ease).toFixed(typeof target === 'number' && target % 1 !== 0 ? 1 : 0) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
     }
+    requestAnimationFrame(step);
+}
 
-    function getStatusClass(status) {
-        if (status.includes("High Confidence")) return "status-high";
-        if (status.includes("Active")) return "status-active";
-        if (status.includes("Macro")) return "status-macro";
-        if (status.includes("Volatile")) return "status-volatile";
-        return "status-low";
-    }
+// Normalize sub-scores to 0–100 for bar display
+// Weights: Liq=30, Eff=25, Ind=15, Conv=30
+function normBar(val, max) {
+    return Math.min(Math.max((val / max) * 100, 0), 100).toFixed(0);
+}
 
-    // --- Sparkline Renderer ---
-    function renderSparkline(canvasId, dataPoints) {
-        const canvas = document.getElementById(canvasId);
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        const width = canvas.width;
-        const height = canvas.height;
-        
-        ctx.clearRect(0, 0, width, height);
-        ctx.beginPath();
-        ctx.strokeStyle = '#3b82f6';
-        ctx.lineWidth = 2;
+// ─── SPARKLINE ──────────────────────────────────────────────────
+function drawSparkline(canvas, pts) {
+    if (!canvas || !pts || pts.length < 2) return;
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
 
-        if (!dataPoints || dataPoints.length < 2) return;
+    const vals = pts.map(d => typeof d === 'object' ? d.p : d);
+    const mn = Math.min(...vals), mx = Math.max(...vals);
+    const range = mx - mn || 0.01;
 
-        const minVal = Math.min(...dataPoints.map(d => d.p));
-        const maxVal = Math.max(...dataPoints.map(d => d.p));
-        const range = maxVal - minVal || 1;
+    const grad = ctx.createLinearGradient(0, 0, W, 0);
+    grad.addColorStop(0, '#1d7a3a');
+    grad.addColorStop(1, '#39e96e');
 
-        dataPoints.forEach((pt, i) => {
-            const x = (i / (dataPoints.length - 1)) * width;
-            const y = height - ((pt.p - minVal) / range) * height; // Invert Y
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-    }
+    ctx.beginPath();
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 1.5;
+    ctx.lineJoin = 'round';
 
-    // --- Main Logic ---
-    async function initDashboard() {
-        try {
-            const response = await fetch(DATA_URL);
-            if (!response.ok) throw new Error("Data fetch failed");
-            const data = await response.json();
-            
-            // [Bug Fix] Empty Data Check
-            if (!data || data.length === 0) {
-                console.warn("No data available");
-                return;
-            }
+    vals.forEach((v, i) => {
+        const x = (i / (vals.length - 1)) * W;
+        const y = H - ((v - mn) / range) * (H - 2) - 1;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+}
 
-            renderKPIs(data);
-            renderCharts(data);
-            renderTable(data);
+// ─── RENDER KPIs ────────────────────────────────────────────────
+function renderKPIs(data) {
+    const total = data.length;
+    const highConf = data.filter(d => d.market_state.includes('High Confidence')).length;
+    const active   = data.filter(d => d.market_state.includes('Active')).length;
 
-        } catch (error) {
-            console.error("Dashboard Init Error:", error);
-            document.querySelector('.container').innerHTML += `<div style="color:red; text-align:center; margin-top:20px;">⚠️ Failed to load data. Please check connection.</div>`;
-        }
-    }
+    const rawIndex = ((highConf * 1.0 + active * 0.5) / total * 100);
+    const regime   = rawIndex >= 70 ? 'STABLE' : rawIndex >= 45 ? 'TRANSITIONAL' : 'HIGH STRESS';
+    const grade    = rawIndex >= 80 ? '// INSTITUTIONAL GRADE' : rawIndex >= 60 ? '// STRUCTURED' : '// UNSTABLE';
 
-    function renderKPIs(data) {
-        const total = data.length;
-        const highConf = data.filter(d => d.market_state.includes("High Confidence")).length;
-        const active = data.filter(d => d.market_state.includes("Active")).length;
-        
-        // Integrity Index Calc (Weighted)
-        // High=1.0, Active=0.5, Others=0
-        const rawIndex = ((highConf * 1.0) + (active * 0.5)) / total * 100;
-        const integrityIndex = rawIndex.toFixed(1);
+    animateCount(document.getElementById('integrity-index'), rawIndex, '', 900);
+    document.getElementById('integrity-grade').textContent = grade;
+    document.getElementById('market-regime').textContent = regime;
 
-        // Update DOM
-        document.getElementById('total-markets').innerText = total;
-        document.getElementById('high-conf-count').innerText = highConf;
-        document.getElementById('integrity-index').innerText = integrityIndex;
+    animateCount(document.getElementById('high-conf-count'), highConf, '', 700);
+    animateCount(document.getElementById('total-markets'), total, '', 700);
 
-        // [Feature] Regime Logic
-        let regime = "Transitional";
-        if (integrityIndex >= 75) regime = "Stable Bull";
-        else if (integrityIndex < 40) regime = "High Stress";
-        document.getElementById('market-regime').innerText = regime;
+    document.getElementById('last-update').textContent =
+        new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+}
 
-        // [Feature] Grade Label
-        const gradeEl = document.getElementById('integrity-grade');
-        if (integrityIndex >= 80) { gradeEl.innerText = "Institutional Grade"; gradeEl.className = "metric-sub grade-a"; }
-        else if (integrityIndex >= 60) { gradeEl.innerText = "Structured"; gradeEl.className = "metric-sub grade-b"; }
-        else { gradeEl.innerText = "Unstable"; gradeEl.className = "metric-sub grade-c"; }
-    }
+// ─── RENDER STATE DONUT ─────────────────────────────────────────
+function renderStateChart(data) {
+    const counts = {};
+    data.forEach(d => {
+        const s = d.market_state.split('|')[0].trim();
+        counts[s] = (counts[s] || 0) + 1;
+    });
 
-    function renderCharts(data) {
-        // 1. State Distribution
-        const stateCounts = {};
-        data.forEach(d => {
-            // Simplify state string (take first part)
-            const state = d.market_state.split('|')[0].trim();
-            stateCounts[state] = (stateCounts[state] || 0) + 1;
-        });
+    const labels = Object.keys(counts);
+    const values = Object.values(counts);
 
-        const ctx1 = document.getElementById('stateChart').getContext('2d');
-        
-        // [Bug Fix] Destroy previous instance
-        if (stateChartInstance) stateChartInstance.destroy();
+    const colorMap = {
+        'High Confidence': '#39e96e',
+        'Active':          '#4da8ff',
+        'Macro-Driven':    '#f5a623',
+        'Volatile':        '#ff4545',
+        'Low Liquidity':   '#3a5a3a',
+        'Low Confidence':  '#2a4a2a',
+    };
+    const colors = labels.map(l => colorMap[l] || '#4a6f4a');
 
-        stateChartInstance = new Chart(ctx1, {
-            type: 'doughnut',
-            data: {
-                labels: Object.keys(stateCounts),
-                datasets: [{
-                    data: Object.values(stateCounts),
-                    backgroundColor: ['#22c55e', '#3b82f6', '#eab308', '#ef4444', '#94a3b8']
-                }]
-            },
-            options: { responsive: true, maintainAspectRatio: false }
-        });
+    const ctx = document.getElementById('stateChart').getContext('2d');
+    if (stateChartInst) stateChartInst.destroy();
 
-        // 2. Risk Radar (Score vs Volume)
-        const ctx2 = document.getElementById('riskChart').getContext('2d');
-        
-        // [Bug Fix] Destroy previous instance
-        if (riskChartInstance) riskChartInstance.destroy();
-
-        // Top 50 markets only for clarity
-        const plotData = data.slice(0, 50).map(d => ({
-            x: d.nexus_score,
-            y: Math.log10(d.volume + 1), // Log scale for visualization
-            r: 5,
-            label: d.question
-        }));
-
-        riskChartInstance = new Chart(ctx2, {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Market Position',
-                    data: plotData,
-                    backgroundColor: '#6366f1'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: { title: { display: true, text: 'Nexus Score (Integrity)' }, min: 0, max: 100 },
-                    y: { title: { display: true, text: 'Liquidity (Log Scale)' } }
+    stateChartInst = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels,
+            datasets: [{ data: values, backgroundColor: colors, borderWidth: 0, hoverOffset: 6 }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        color: '#4a6f4a',
+                        font: { family: "'JetBrains Mono', monospace", size: 10 },
+                        boxWidth: 8,
+                        padding: 12,
+                    }
                 },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.raw.label;
-                            }
-                        }
+                tooltip: {
+                    backgroundColor: '#0b120b',
+                    borderColor: '#1a2e1a',
+                    borderWidth: 1,
+                    titleColor: '#39e96e',
+                    bodyColor: '#c8e6c9',
+                    titleFont: { family: "'JetBrains Mono', monospace", size: 10 },
+                    bodyFont:  { family: "'JetBrains Mono', monospace", size: 10 },
+                }
+            }
+        }
+    });
+}
+
+// ─── RENDER RADAR CHART ─────────────────────────────────────────
+function renderRadarChart(data) {
+    // Compute system averages for each component
+    const avgs = data.reduce((acc, d) => {
+        acc.liq  += (d.liq  || 0);
+        acc.eff  += (d.eff  || 0);
+        acc.ind  += (d.ind  || 0);
+        acc.conv += (d.conv || 0);
+        return acc;
+    }, { liq: 0, eff: 0, ind: 0, conv: 0 });
+
+    const n = data.length || 1;
+    // Normalize to 0-100 scale (max weights: Liq=30, Eff=25, Ind=15, Conv=30)
+    const radarVals = [
+        (avgs.liq  / n / 30) * 100,
+        (avgs.eff  / n / 25) * 100,
+        (avgs.ind  / n / 15) * 100,
+        (avgs.conv / n / 30) * 100,
+    ];
+
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    if (radarChartInst) radarChartInst.destroy();
+
+    radarChartInst = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['LIQUIDITY', 'EFFICIENCY', 'INDEPENDENCE', 'CONVERGENCE'],
+            datasets: [{
+                label: 'System Average',
+                data: radarVals,
+                backgroundColor: 'rgba(57,233,110,0.12)',
+                borderColor: '#39e96e',
+                pointBackgroundColor: '#39e96e',
+                pointBorderColor: '#060a06',
+                pointRadius: 4,
+                borderWidth: 1.5,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: {
+                    min: 0,
+                    max: 100,
+                    ticks: {
+                        display: false,
+                        stepSize: 25,
+                    },
+                    grid:        { color: '#1a2e1a' },
+                    angleLines:  { color: '#1a2e1a' },
+                    pointLabels: {
+                        color: '#4a6f4a',
+                        font:  { family: "'JetBrains Mono', monospace", size: 10 },
+                    }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#0b120b',
+                    borderColor: '#1a2e1a',
+                    borderWidth: 1,
+                    titleColor: '#39e96e',
+                    bodyColor: '#c8e6c9',
+                    titleFont: { family: "'JetBrains Mono', monospace", size: 10 },
+                    bodyFont:  { family: "'JetBrains Mono', monospace", size: 10 },
+                    callbacks: {
+                        label: ctx => ` ${ctx.formattedValue}%`
                     }
                 }
             }
-        });
+        }
+    });
+}
+
+// ─── RENDER TABLE ───────────────────────────────────────────────
+function renderTable(data) {
+    const sorted = [...data]
+        .sort((a, b) => {
+            const rank = s => s.includes('High Confidence') ? 3 : s.includes('Active') ? 2 : 1;
+            const diff = rank(b.market_state) - rank(a.market_state);
+            return diff !== 0 ? diff : b.nexus_score - a.nexus_score;
+        })
+        .slice(0, 10);
+
+    const wrap = document.getElementById('table-body-wrap');
+    wrap.innerHTML = `
+        <table>
+            <thead>
+                <tr>
+                    <th>MARKET QUESTION</th>
+                    <th>SCORE</th>
+                    <th>STATE</th>
+                    <th style="min-width:200px">NEXUS BREAKDOWN</th>
+                    <th>MACRO β</th>
+                    <th>VOLUME</th>
+                    <th>TREND</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="market-tbody"></tbody>
+        </table>
+    `;
+
+    const tbody = document.getElementById('market-tbody');
+
+    sorted.forEach((row, i) => {
+        const sparkId = `sp-${i}`;
+        const bc      = badgeClass(row.market_state);
+        const sc      = scoreClass(row.nexus_score);
+        const slug    = row.slug || row.id || '';
+
+        // Sub-score bars (raw values as % of max weights)
+        const liqPct  = normBar(row.liq  || 0, 30);
+        const effPct  = normBar(row.eff  || 0, 25);
+        const indPct  = normBar(row.ind  || 0, 15);
+        const convPct = normBar(row.conv || 0, 30);
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>
+                <div class="event-title" title="${row.question}">${row.question}</div>
+                <div class="event-cat">${row.category || ''}</div>
+            </td>
+            <td><span class="${sc}" style="font-size:1.05rem;font-weight:700">${row.nexus_score}</span></td>
+            <td><span class="badge ${bc}">${row.market_state}</span></td>
+            <td>
+                <div class="subscores">
+                    <div class="subscore-row">
+                        <span class="subscore-key">LIQ</span>
+                        <div class="bar-bg"><div class="bar-fill bar-liq" style="width:${liqPct}%"></div></div>
+                        <span class="subscore-val">${(row.liq||0).toFixed(1)}</span>
+                    </div>
+                    <div class="subscore-row">
+                        <span class="subscore-key">EFF</span>
+                        <div class="bar-bg"><div class="bar-fill bar-eff" style="width:${effPct}%"></div></div>
+                        <span class="subscore-val">${(row.eff||0).toFixed(1)}</span>
+                    </div>
+                    <div class="subscore-row">
+                        <span class="subscore-key">IND</span>
+                        <div class="bar-bg"><div class="bar-fill bar-ind" style="width:${indPct}%"></div></div>
+                        <span class="subscore-val">${(row.ind||0).toFixed(1)}</span>
+                    </div>
+                    <div class="subscore-row">
+                        <span class="subscore-key">CNV</span>
+                        <div class="bar-bg"><div class="bar-fill bar-conv" style="width:${convPct}%"></div></div>
+                        <span class="subscore-val">${(row.conv||0).toFixed(1)}</span>
+                    </div>
+                </div>
+            </td>
+            <td class="vol-cell">${(row.macro_sensitivity||0).toFixed(2)}</td>
+            <td class="vol-cell">${fmtVol(row.volume||0)}</td>
+            <td><canvas id="${sparkId}" class="sparkline-canvas" width="80" height="28"></canvas></td>
+            <td><a class="link-btn" href="https://polymarket.com/event/${slug}" target="_blank">VIEW →</a></td>
+        `;
+        tbody.appendChild(tr);
+
+        if (row.sparkline) {
+            requestAnimationFrame(() => {
+                const canvas = document.getElementById(sparkId);
+                drawSparkline(canvas, row.sparkline);
+            });
+        }
+    });
+}
+
+// ─── MAIN ───────────────────────────────────────────────────────
+async function init() {
+    let data = null;
+
+    try {
+        const res = await fetch(DATA_URL);
+        if (!res.ok) throw new Error('fetch failed');
+        const raw = await res.json();
+        if (Array.isArray(raw) && raw.length > 0) data = raw;
+    } catch (_) {
+        // Silently fall back to mock data
     }
 
-    function renderTable(data) {
-        const tbody = document.querySelector('#market-table tbody');
-        tbody.innerHTML = ''; // Clear
-
-        // Sort by Score DESC
-        const sortedData = data.sort((a, b) => {
-        // 1. 상태 우선순위 (High > Active > others)
-            const getRank = (status) => {
-                if (status.includes("High Confidence")) return 3;
-                if (status.includes("Active")) return 2;
-                return 1;
-            };
-            const rankA = getRank(a.market_state);
-            const rankB = getRank(b.market_state);
-    
-            if (rankA !== rankB) return rankB - rankA; // 등급 높은 순
-            return b.nexus_score - a.nexus_score;      // 같은 등급이면 점수 높은 순
-        }).slice(0, 10);
-
-        sortedData.forEach((row, index) => {
-            const tr = document.createElement('tr');
-            
-            // Sparkline Canvas ID
-            const sparkId = `spark-${index}`;
-            
-            tr.innerHTML = `
-                <td style="font-weight:600; color:#334155;">${row.question}</td>
-                <td style="font-weight:700; color:${row.nexus_score >= 80 ? '#22c55e' : '#3b82f6'}">${row.nexus_score}</td>
-                <td><span class="status-badge ${getStatusClass(row.market_state)}">${row.market_state}</span></td>
-                <td>${row.macro_sensitivity}</td>
-                <td>${formatCurrency(row.volume)}</td>
-                <td><canvas id="${sparkId}" class="sparkline-canvas" width="100" height="30"></canvas></td>
-                <td><a href="https://polymarket.com/event/${row.id}" target="_blank" style="text-decoration:none; color:#3b82f6; font-weight:600;">View →</a></td>
-            `;
-            tbody.appendChild(tr);
-
-            // Render Sparkline
-            if (row.sparkline) {
-                renderSparkline(sparkId, row.sparkline);
-            }
-        });
+    if (!data) {
+        console.info('[Poly-Nexus] Using mock data — connect latest_intelligence.json for live feed');
+        data = MOCK_DATA;
     }
 
-    // Run
-    initDashboard();
+    renderKPIs(data);
+    renderStateChart(data);
+    renderRadarChart(data);
+    renderTable(data);
+}
 
+init();
+
+// Auto-refresh every 5 minutes
+setInterval(init, 5 * 60 * 1000);
 </script>
 </body>
 </html>

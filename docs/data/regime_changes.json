@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-02-19T19:10:11.576360Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 53.3,
+      "macro_sensitivity": 0.56
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:10:11.576360Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.7,
+      "macro_sensitivity": 0.69
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:10:11.576360Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 70.2,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:10:11.576360Z",
+    "market_id": "84575",
+    "question": "Epstein client list released by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.2,
+      "macro_sensitivity": -0.62
+    }
+  },
+  {
+    "timestamp": "2026-02-19T19:10:11.576360Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.9,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T18:06:51.790392Z",
     "market_id": "153719",
     "question": "Will Satoshi move any Bitcoin in 2026?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.5,
       "macro_sensitivity": 3.65
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "63292",
-    "question": "NBA Defensive Player of the Year Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.4,
-      "macro_sensitivity": -1.09
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.48
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 56.7,
-      "macro_sensitivity": 3.3
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": 5.0
     }
   }
 ]

@@ -8,24 +8,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --bg:        #0d1117;
-            --bg-2:      #111820;
-            --bg-card:   #161f2c;
-            --bg-row:    #111820;
+            /* Background — softer dark navy, not near-black */
+            --bg:        #111827;
+            --bg-2:      #1a2333;
+            --bg-card:   #1e2d42;
+            --bg-row:    #1a2333;
 
-            /* Blue — accent only, used sparingly */
+            /* Blue — accent only */
             --blue:      #3b82f6;
-            --blue-dim:  #1d4ed8;
-            --blue-glow: rgba(59,130,246,0.15);
+            --blue-dim:  #2563eb;
+            --blue-glow: rgba(59,130,246,0.12);
 
-            /* Text — clear hierarchy */
-            --text-hi:   #f1f5f9;   /* headings, scores, important values */
-            --text:      #94a3b8;   /* body, labels */
-            --text-mid:  #64748b;   /* secondary info */
-            --text-dim:  #475569;   /* very secondary, metadata */
+            /* Text — reduced contrast for eye comfort */
+            --text-hi:   #d1dae8;   /* was #f1f5f9 — softer white */
+            --text:      #8fa3bc;   /* was #94a3b8 */
+            --text-mid:  #6b82a0;   /* was #64748b — slightly brighter */
+            --text-dim:  #4e6280;   /* was #475569 — brighter for readability */
 
-            --border:    #1e293b;
-            --border-hi: #334155;
+            --border:    #243044;
+            --border-hi: #344d6a;
 
             --mono: 'JetBrains Mono', monospace;
         }
@@ -168,12 +169,16 @@
             display: flex; align-items: center; gap: 10px;
             margin-bottom: 14px; font-size: 0.72rem;
             letter-spacing: 0.14em; text-transform: uppercase;
-            color: var(--text);
+            color: var(--text-hi);   /* bright — was var(--text) */
+            font-weight: 500;
         }
         .section-head::after { content:''; flex:1; height:1px; background:var(--border); }
         .section-tag {
-            background: var(--border); color: var(--text-mid);
+            background: rgba(59,130,246,0.12);
+            color: #7eaee8;
+            border: 1px solid rgba(59,130,246,0.2);
             padding: 2px 8px; border-radius: 3px; font-size: 0.65rem;
+            font-weight: 500;
         }
 
         /* ── KPI GRID ── */
@@ -235,11 +240,14 @@
         }
         .table-top h3 {
             font-size: 0.7rem; letter-spacing: 0.13em;
-            text-transform: uppercase; color: var(--text);
+            text-transform: uppercase; color: var(--text-hi);
+            font-weight: 500;
         }
         .table-tag {
-            font-size: 0.65rem; color: var(--text-dim);
-            background: var(--border); padding: 2px 7px; border-radius: 3px;
+            font-size: 0.65rem; color: #7eaee8;
+            background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.18);
+            padding: 2px 8px; border-radius: 3px;
         }
 
         table { width:100%; border-collapse:collapse; }
@@ -258,8 +266,12 @@
         .event-title {
             font-size: 0.88rem; font-weight: 500;
             color: var(--text-hi);
-            max-width: 280px; white-space: nowrap;
-            overflow: hidden; text-overflow: ellipsis;
+            max-width: 320px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.45;
         }
         .event-cat {
             font-size: 0.65rem; color: var(--text-dim);
@@ -402,11 +414,11 @@
         </div>
     </div>
 
-    <div class="section-head"><span>INTELLIGENCE FEED</span><span class="section-tag">ALL TRACKED EVENTS</span></div>
+    <div class="section-head"><span>INTELLIGENCE FEED</span><span class="section-tag">TOP 15 BY VOLUME</span></div>
     <div class="table-card">
         <div class="table-top">
-            <h3>EVENTS — DATA QUALITY RANKED</h3>
-            <span class="table-tag">UPDATED HOURLY</span>
+            <h3>TOP 15 EVENTS BY VOLUME — NEXUS SCORE RANKED</h3>
+            <span class="table-tag">REFRESHED HOURLY</span>
         </div>
         <div id="table-body-wrap">
             <div style="padding:40px;text-align:center;color:var(--text-dim);font-size:0.72rem;letter-spacing:0.1em;">▋ LOADING</div>

@@ -478,7 +478,8 @@ function scoreClass(s){
     return 'score-dim';
 }
 
-function normBar(val,max){ return Math.min(Math.max(val/max*100,0),100).toFixed(1); }
+// c1~c4 already normalized 0-100, just clamp
+function normBar(val){ return Math.min(Math.max(val||0, 0), 100).toFixed(1); }
 
 function drawSparkline(canvas,pts){
     if(!canvas||!pts||pts.length<2) return;
@@ -504,18 +505,18 @@ function renderSpotlight(data){
     const grid=document.getElementById('spotlight-grid');
     if(!top.length){grid.innerHTML='<div class="hero-empty">NO HIGH CONFIDENCE EVENTS AT THIS TIME</div>';return;}
     grid.innerHTML=top.map(d=>{
-        const lp=normBar(d.liq||0,30), ep=normBar(d.eff||0,25);
-        const ip=normBar(d.ind||0,15), cp=normBar(d.conv||0,30);
+        const lp=normBar(d.c1), ep=normBar(d.c2);
+        const ip=normBar(d.c3), cp=normBar(d.c4);
         return `<div class="spotlight-card">
             <div class="spotlight-vol">${fmtVol(d.volume||0)}</div>
             <div class="spotlight-score">${d.nexus_score}</div>
             <div class="spotlight-title">${d.question}</div>
             <div class="spotlight-cat">${d.category||''}</div>
             <div class="spotlight-bars">
-                <div class="sp-bar-row"><span class="sp-bar-key">LIQ</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-liq" style="width:${lp}%"></div></div><span class="sp-bar-val">${(d.liq||0).toFixed(1)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">EFF</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-eff" style="width:${ep}%"></div></div><span class="sp-bar-val">${(d.eff||0).toFixed(1)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">IND</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-ind" style="width:${ip}%"></div></div><span class="sp-bar-val">${(d.ind||0).toFixed(1)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">CNV</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-conv" style="width:${cp}%"></div></div><span class="sp-bar-val">${(d.conv||0).toFixed(1)}</span></div>
+                <div class="sp-bar-row"><span class="sp-bar-key">LIQ</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-liq" style="width:${lp}%"></div></div><span class="sp-bar-val">${(+lp).toFixed(0)}</span></div>
+                <div class="sp-bar-row"><span class="sp-bar-key">EFF</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-eff" style="width:${ep}%"></div></div><span class="sp-bar-val">${(+ep).toFixed(0)}</span></div>
+                <div class="sp-bar-row"><span class="sp-bar-key">IND</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-ind" style="width:${ip}%"></div></div><span class="sp-bar-val">${(+ip).toFixed(0)}</span></div>
+                <div class="sp-bar-row"><span class="sp-bar-key">CNV</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-conv" style="width:${cp}%"></div></div><span class="sp-bar-val">${(+cp).toFixed(0)}</span></div>
             </div>
         </div>`;
     }).join('');
@@ -563,9 +564,15 @@ function renderStateChart(data){
 }
 
 function renderRadarChart(data){
-    const sums=data.reduce((a,d)=>({liq:a.liq+(d.liq||0),eff:a.eff+(d.eff||0),ind:a.ind+(d.ind||0),conv:a.conv+(d.conv||0)}),{liq:0,eff:0,ind:0,conv:0});
-    const n=data.length||1;
-    const vals=[(sums.liq/n/30)*100,(sums.eff/n/25)*100,(sums.ind/n/15)*100,(sums.conv/n/30)*100];
+    const n = data.length || 1;
+    const sums = data.reduce((a,d)=>({
+        c1: a.c1+(d.c1||0),
+        c2: a.c2+(d.c2||0),
+        c3: a.c3+(d.c3||0),
+        c4: a.c4+(d.c4||0)
+    }), {c1:0,c2:0,c3:0,c4:0});
+    // already 0-100, just average
+    const vals = [sums.c1/n, sums.c2/n, sums.c3/n, sums.c4/n];
     const ctx=document.getElementById('radarChart').getContext('2d');
     if(radarInst) radarInst.destroy();
     radarInst=new Chart(ctx,{
@@ -599,7 +606,7 @@ function renderTable(data){
         <thead><tr>
             <th>MARKET QUESTION</th><th>NEXUS SCORE</th><th>DATA STATE</th>
             <th style="min-width:165px">INTEGRITY BREAKDOWN</th>
-            <th>MACRO β</th><th>VOLUME</th><th>TREND</th><th></th>
+            <th style="min-width:90px">MACRO BETA</th><th>VOLUME</th><th>TREND</th><th></th>
         </tr></thead>
         <tbody id="market-tbody"></tbody>
     </table>`;
@@ -607,8 +614,8 @@ function renderTable(data){
     const tbody=document.getElementById('market-tbody');
     sorted.forEach((row,i)=>{
         const si=stateInfo(row.market_state), spId=`sp-${i}`;
-        const lp=normBar(row.liq||0,30), ep=normBar(row.eff||0,25);
-        const ip=normBar(row.ind||0,15), cp=normBar(row.conv||0,30);
+        const lp=normBar(row.c1), ep=normBar(row.c2);
+        const ip=normBar(row.c3), cp=normBar(row.c4);
         const tr=document.createElement('tr');
         if(si.rowCls) tr.className=si.rowCls;
         tr.innerHTML=`
@@ -616,10 +623,10 @@ function renderTable(data){
             <td><span class="score-cell ${scoreClass(row.nexus_score)}">${row.nexus_score}</span></td>
             <td><span class="badge ${si.cls}">${si.label}</span></td>
             <td><div class="subscores">
-                <div class="subscore-row"><span class="subscore-key">LIQ</span><div class="bar-bg"><div class="bar-fill bar-liq" style="width:${lp}%"></div></div><span class="subscore-val">${(row.liq||0).toFixed(1)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">EFF</span><div class="bar-bg"><div class="bar-fill bar-eff" style="width:${ep}%"></div></div><span class="subscore-val">${(row.eff||0).toFixed(1)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">IND</span><div class="bar-bg"><div class="bar-fill bar-ind" style="width:${ip}%"></div></div><span class="subscore-val">${(row.ind||0).toFixed(1)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">CNV</span><div class="bar-bg"><div class="bar-fill bar-conv" style="width:${cp}%"></div></div><span class="subscore-val">${(row.conv||0).toFixed(1)}</span></div>
+                <div class="subscore-row"><span class="subscore-key">LIQ</span><div class="bar-bg"><div class="bar-fill bar-liq" style="width:${lp}%"></div></div><span class="subscore-val">${(+lp).toFixed(0)}</span></div>
+                <div class="subscore-row"><span class="subscore-key">EFF</span><div class="bar-bg"><div class="bar-fill bar-eff" style="width:${ep}%"></div></div><span class="subscore-val">${(+ep).toFixed(0)}</span></div>
+                <div class="subscore-row"><span class="subscore-key">IND</span><div class="bar-bg"><div class="bar-fill bar-ind" style="width:${ip}%"></div></div><span class="subscore-val">${(+ip).toFixed(0)}</span></div>
+                <div class="subscore-row"><span class="subscore-key">CNV</span><div class="bar-bg"><div class="bar-fill bar-conv" style="width:${cp}%"></div></div><span class="subscore-val">${(+cp).toFixed(0)}</span></div>
             </div></td>
             <td class="macro-cell">${(row.macro_sensitivity||0).toFixed(2)}</td>
             <td class="vol-cell">${fmtVol(row.volume||0)}</td>

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T22:29:45.259982Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T22:29:45.259982Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -4.86
+    }
+  },
+  {
     "timestamp": "2026-02-19T21:49:22.394708Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 67.0,
       "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "98369",
-    "question": "Eurovision Winner 2026",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.46
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.1,
-      "macro_sensitivity": -0.52
     }
   }
 ]

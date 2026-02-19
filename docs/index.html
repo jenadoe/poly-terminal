@@ -8,31 +8,21 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            /* Background — softer dark navy, not near-black */
             --bg:        #111827;
             --bg-2:      #1a2333;
             --bg-card:   #1e2d42;
-            --bg-row:    #1a2333;
-
-            /* Blue — accent only */
             --blue:      #3b82f6;
             --blue-dim:  #2563eb;
             --blue-glow: rgba(59,130,246,0.12);
-
-            /* Text — reduced contrast for eye comfort */
-            --text-hi:   #d1dae8;   /* was #f1f5f9 — softer white */
-            --text:      #8fa3bc;   /* was #94a3b8 */
-            --text-mid:  #6b82a0;   /* was #64748b — slightly brighter */
-            --text-dim:  #4e6280;   /* was #475569 — brighter for readability */
-
+            --text-hi:   #d1dae8;
+            --text:      #8fa3bc;
+            --text-mid:  #6b82a0;
+            --text-dim:  #4e6280;
             --border:    #243044;
             --border-hi: #344d6a;
-
             --mono: 'JetBrains Mono', monospace;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
         body {
             font-family: var(--mono);
             background: var(--bg);
@@ -40,309 +30,232 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
         body::before {
-            content: '';
-            position: fixed; inset: 0;
-            background: repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.025) 3px,rgba(0,0,0,0.025) 4px);
-            pointer-events: none;
-            z-index: 9999;
+            content:''; position:fixed; inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.022) 3px,rgba(0,0,0,0.022) 4px);
+            pointer-events:none; z-index:9999;
         }
 
         /* ── TOPBAR ── */
         .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 32px;
-            border-bottom: 1px solid var(--border);
-            background: #0a0f18;
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            letter-spacing: 0.1em;
+            display:flex; align-items:center; justify-content:space-between;
+            padding:8px 32px; border-bottom:1px solid var(--border);
+            background:#0a0f18; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.1em;
         }
-        .topbar-left { display: flex; gap: 24px; }
+        .topbar-left { display:flex; gap:24px; }
         .live-dot {
-            display: inline-block; width: 5px; height: 5px;
-            border-radius: 50%; background: var(--blue);
-            box-shadow: 0 0 5px var(--blue);
-            animation: pulse 2.4s infinite;
-            vertical-align: middle; margin-right: 5px;
+            display:inline-block; width:5px; height:5px; border-radius:50%;
+            background:var(--blue); box-shadow:0 0 5px var(--blue);
+            animation:pulse 2.4s infinite; vertical-align:middle; margin-right:5px;
         }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
-        #live-clock { color: var(--text-mid); }
+        #live-clock { color:var(--text-mid); }
 
         /* ── HEADER ── */
         header {
-            padding: 30px 32px 22px;
-            border-bottom: 1px solid var(--border);
-            display: flex; align-items: flex-end;
-            justify-content: space-between;
-            flex-wrap: wrap; gap: 16px;
-            background: linear-gradient(180deg, #0a0f18 0%, var(--bg) 100%);
+            padding:28px 32px 20px; border-bottom:1px solid var(--border);
+            display:flex; align-items:flex-end; justify-content:space-between;
+            flex-wrap:wrap; gap:16px;
+            background:linear-gradient(180deg,#0a0f18 0%,var(--bg) 100%);
         }
-        .logo h1 {
-            font-size: 2rem; font-weight: 700;
-            letter-spacing: 0.04em;
-            color: var(--text-hi); line-height: 1;
-        }
-        .logo h1 span { color: var(--blue); }
-        .logo-sub {
-            margin-top: 6px; font-size: 0.75rem;
-            color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase;
-        }
+        .logo h1 { font-size:2rem; font-weight:700; letter-spacing:0.04em; color:var(--text-hi); line-height:1; }
+        .logo h1 span { color:var(--blue); }
+        .logo-sub { margin-top:6px; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.15em; text-transform:uppercase; }
         .cursor {
-            display: inline-block; width: 8px; height: 0.85em;
-            background: var(--blue); vertical-align: text-bottom;
-            animation: blink 1.1s step-end infinite; opacity: 0.75;
+            display:inline-block; width:8px; height:0.85em; background:var(--blue);
+            vertical-align:text-bottom; animation:blink 1.1s step-end infinite; opacity:0.75;
         }
         @keyframes blink { 0%,100%{opacity:0.75} 50%{opacity:0} }
-        .header-meta {
-            font-size: 0.75rem; color: var(--text-mid);
-            text-align: right; line-height: 2; letter-spacing: 0.07em;
-        }
-        .header-meta strong { color: var(--text); }
+        .header-meta { font-size:0.72rem; color:var(--text-mid); text-align:right; line-height:2; letter-spacing:0.07em; }
+        .header-meta strong { color:var(--text); }
 
-        /* ── HERO SPOTLIGHT ── */
-        .hero {
-            border-bottom: 1px solid var(--border);
-            padding: 28px 32px;
-            background: var(--bg-2);
+        /* ── KPI ── */
+        .container { padding:24px 32px; max-width:1440px; margin:0 auto; }
+        .kpi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:24px; }
+        .kpi-card {
+            background:var(--bg-card); border:1px solid var(--border);
+            border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
         }
-        .hero-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--text);
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-        .hero-label span { color: var(--blue); margin-right: 6px; }
+        .kpi-card.primary { border-left-color:var(--blue); }
+        .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--text-mid); margin-bottom:6px; }
+        .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); }
+        .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
+        .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-dim); }
 
-        .spotlight-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-        }
-        .spotlight-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-top: 2px solid var(--blue-dim);
-            border-radius: 6px;
-            padding: 20px;
-            position: relative;
-            transition: border-top-color 0.2s;
-        }
-        .spotlight-card:hover { border-top-color: var(--blue); }
-
-        .spotlight-score {
-            font-size: 2.4rem; font-weight: 700;
-            color: var(--text-hi);
-            line-height: 1; margin-bottom: 10px;
-        }
-        .spotlight-title {
-            font-size: 0.88rem; color: var(--text);
-            line-height: 1.55; margin-bottom: 6px; font-weight: 500;
-        }
-        .spotlight-cat {
-            font-size: 0.68rem; color: var(--text-dim);
-            letter-spacing: 0.1em; text-transform: uppercase;
-        }
-        .spotlight-vol {
-            position: absolute; top: 18px; right: 18px;
-            font-size: 0.75rem; color: var(--text-mid);
-        }
-        .spotlight-bars { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
-        .sp-bar-row { display: flex; align-items: center; gap: 6px; }
-        .sp-bar-key { font-size: 0.62rem; color: var(--text-mid); width: 28px; flex-shrink: 0; }
-        .sp-bar-bg  { flex:1; height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
-        .sp-bar-fill { height:100%; border-radius:2px; background:var(--blue); opacity:0.7; }
-        .sp-bar-val { font-size:0.62rem; color:var(--text-mid); width:24px; text-align:right; }
-
-        .hero-empty { color:var(--text-mid); font-size:0.75rem; padding:20px 0; }
-
-        /* ── CONTAINER ── */
-        .container { padding: 26px 32px; max-width: 1400px; margin: 0 auto; }
+        /* ── CHARTS ── */
+        .chart-grid { display:grid; grid-template-columns:280px 1fr; gap:12px; margin-bottom:28px; }
+        .chart-card { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:18px; }
+        .chart-card h3 { font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-mid); margin-bottom:14px; }
+        .chart-wrap { position:relative; height:210px; }
 
         /* ── SECTION HEAD ── */
         .section-head {
-            display: flex; align-items: center; gap: 10px;
-            margin-bottom: 14px; font-size: 0.72rem;
-            letter-spacing: 0.14em; text-transform: uppercase;
-            color: var(--text-hi);   /* bright — was var(--text) */
-            font-weight: 500;
+            display:flex; align-items:center; gap:10px;
+            margin-bottom:4px; font-size:0.72rem;
+            letter-spacing:0.14em; text-transform:uppercase;
+            color:var(--text-hi); font-weight:600;
         }
         .section-head::after { content:''; flex:1; height:1px; background:var(--border); }
         .section-tag {
-            background: rgba(59,130,246,0.12);
-            color: #7eaee8;
-            border: 1px solid rgba(59,130,246,0.2);
-            padding: 2px 8px; border-radius: 3px; font-size: 0.65rem;
-            font-weight: 500;
+            background:rgba(59,130,246,0.1); color:#7eaee8;
+            border:1px solid rgba(59,130,246,0.18);
+            padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
+        }
+        .section-desc {
+            font-size:0.7rem; color:var(--text-dim); margin-bottom:14px;
+            letter-spacing:0.04em; padding-left:2px;
         }
 
-        /* ── KPI GRID ── */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px; margin-bottom: 24px;
-        }
-        .kpi-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-left: 2px solid var(--border-hi);
-            border-radius: 6px;
-            padding: 18px 22px;
-        }
-        .kpi-card.primary { border-left-color: var(--blue); }
-        .kpi-label {
-            font-size: 0.68rem; letter-spacing: 0.13em;
-            text-transform: uppercase; color: var(--text-mid);
-            margin-bottom: 8px;
-        }
-        .kpi-value {
-            font-size: 2.2rem; font-weight: 700;
-            line-height: 1; color: var(--text-hi);
-        }
-        /* Only the primary card's value gets blue */
-        .kpi-card.primary .kpi-value { color: var(--blue); text-shadow: 0 0 14px var(--blue-glow); }
-        .kpi-sub { margin-top: 7px; font-size: 0.68rem; color: var(--text-dim); letter-spacing: 0.06em; }
+        /* ── STATE GROUP WRAPPER ── */
+        .state-group { margin-bottom:32px; }
 
-        /* ── CHART GRID ── */
-        .chart-grid {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 14px; margin-bottom: 24px;
-        }
-        .chart-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px; padding: 20px;
-        }
-        .chart-card h3 {
-            font-size: 0.7rem; letter-spacing: 0.13em;
-            text-transform: uppercase; color: var(--text-mid);
-            margin-bottom: 16px;
-        }
-        .chart-wrap { position:relative; height:230px; }
+        /* ── EVENT CARDS ── */
+        .event-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+        @media(max-width:1280px) { .event-grid { grid-template-columns:repeat(4,1fr); } }
+        @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } }
+        @media(max-width:640px)  { .event-grid { grid-template-columns:repeat(2,1fr); } .container,.topbar,header { padding-left:16px; padding-right:16px; } }
 
-        /* ── TABLE ── */
-        .table-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px; overflow: hidden; margin-bottom: 40px;
+        .event-card {
+            background:var(--bg-card); border:1px solid var(--border);
+            border-radius:6px; padding:14px;
+            cursor:pointer; transition:border-color 0.15s, transform 0.12s;
+            position:relative;
         }
-        .table-top {
-            display: flex; align-items: center;
-            justify-content: space-between;
-            padding: 13px 20px; border-bottom: 1px solid var(--border);
-            background: var(--bg-2);
+        .event-card:hover { border-color:var(--border-hi); transform:translateY(-2px); }
+        .event-card:active { transform:translateY(0); }
+
+        /* left accent per state */
+        .event-card.s-citable   { border-left:2px solid rgba(147,197,253,0.5); }
+        .event-card.s-active    { border-left:2px solid rgba(100,116,139,0.5); }
+        .event-card.s-macro     { border-left:2px solid rgba(251,191,36,0.35); }
+        .event-card.s-low       { border-left:2px solid rgba(71,85,105,0.35); }
+
+        .card-score {
+            font-size:1.6rem; font-weight:700; line-height:1;
+            color:var(--text-hi); margin-bottom:8px;
         }
-        .table-top h3 {
-            font-size: 0.7rem; letter-spacing: 0.13em;
-            text-transform: uppercase; color: var(--text-hi);
-            font-weight: 500;
+        .card-title {
+            font-size:0.75rem; color:var(--text); line-height:1.45;
+            display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+            overflow:hidden; margin-bottom:8px; font-weight:500;
         }
-        .table-tag {
-            font-size: 0.65rem; color: #7eaee8;
-            background: rgba(59,130,246,0.1);
-            border: 1px solid rgba(59,130,246,0.18);
-            padding: 2px 8px; border-radius: 3px;
+        .card-meta { display:flex; justify-content:space-between; align-items:center; }
+        .card-vol { font-size:0.62rem; color:var(--text-dim); }
+        .card-macro { font-size:0.6rem; color:var(--text-dim); }
+
+        .card-bars { margin-top:10px; display:flex; flex-direction:column; gap:4px; }
+        .card-bar-row { display:flex; align-items:center; gap:5px; }
+        .card-bar-key { font-size:0.5rem; color:var(--text-dim); width:24px; flex-shrink:0; }
+        .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
+        .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
+        .bar-liq { opacity:1.0; } .bar-eff { opacity:0.75; } .bar-ind { opacity:0.55; } .bar-conv { opacity:0.88; }
+
+        .card-arrow {
+            position:absolute; top:12px; right:12px;
+            font-size:0.6rem; color:var(--text-dim);
+            opacity:0; transition:opacity 0.15s;
+        }
+        .event-card:hover .card-arrow { opacity:1; }
+
+        /* ── DETAIL PANEL ── */
+        .panel-overlay {
+            position:fixed; inset:0; background:rgba(10,15,24,0.6);
+            z-index:100; opacity:0; pointer-events:none;
+            transition:opacity 0.2s;
+        }
+        .panel-overlay.open { opacity:1; pointer-events:all; }
+
+        .detail-panel {
+            position:fixed; top:0; right:0; bottom:0; width:440px;
+            background:var(--bg-2); border-left:1px solid var(--border-hi);
+            z-index:101; transform:translateX(100%);
+            transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);
+            display:flex; flex-direction:column;
+            overflow:hidden;
+        }
+        .detail-panel.open { transform:translateX(0); }
+        @media(max-width:480px) { .detail-panel { width:100%; } }
+
+        .panel-header {
+            padding:20px 24px; border-bottom:1px solid var(--border);
+            display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+            background:var(--bg-card);
+        }
+        .panel-close {
+            background:none; border:1px solid var(--border-hi); color:var(--text-mid);
+            padding:4px 10px; border-radius:4px; cursor:pointer; font-family:var(--mono);
+            font-size:0.7rem; flex-shrink:0; transition:color 0.15s, border-color 0.15s;
+        }
+        .panel-close:hover { color:var(--text-hi); border-color:var(--text-mid); }
+
+        .panel-score-row { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; }
+        .panel-score { font-size:2.8rem; font-weight:700; color:var(--text-hi); line-height:1; }
+        .panel-badge {
+            display:inline-block; padding:4px 10px; border-radius:4px;
+            font-size:0.6rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+            border:1px solid transparent;
+        }
+        .badge-citable  { color:#93c5fd; border-color:#1e3a5f; background:rgba(59,130,246,0.08); }
+        .badge-active   { color:var(--text); border-color:var(--border-hi); }
+        .badge-macro    { color:#fbbf24; border-color:rgba(251,191,36,0.3); background:rgba(251,191,36,0.06); }
+        .badge-low      { color:var(--text-dim); border-color:var(--border); }
+
+        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; }
+
+        .panel-body { flex:1; overflow-y:auto; padding:20px 24px; }
+        .panel-body::-webkit-scrollbar { width:4px; }
+        .panel-body::-webkit-scrollbar-track { background:transparent; }
+        .panel-body::-webkit-scrollbar-thumb { background:var(--border-hi); border-radius:2px; }
+
+        .panel-section { margin-bottom:22px; }
+        .panel-section-label {
+            font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase;
+            color:var(--text-dim); margin-bottom:10px; font-weight:500;
         }
 
-        table { width:100%; border-collapse:collapse; }
-        thead th {
-            padding: 10px 14px; font-size: 0.65rem;
-            letter-spacing: 0.1em; text-transform: uppercase;
-            color: var(--text-mid);
-            text-align: left; background: var(--bg-2);
-            border-bottom: 1px solid var(--border); white-space: nowrap;
+        /* Component bars in panel */
+        .panel-bars { display:flex; flex-direction:column; gap:8px; }
+        .panel-bar-row { display:flex; align-items:center; gap:10px; }
+        .panel-bar-name { font-size:0.65rem; color:var(--text-mid); width:100px; flex-shrink:0; }
+        .panel-bar-bg { flex:1; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
+        .panel-bar-fill { height:100%; border-radius:3px; background:var(--blue); transition:width 0.6s cubic-bezier(0.4,0,0.2,1); }
+        .panel-bar-val { font-size:0.65rem; color:var(--text); width:32px; text-align:right; font-variant-numeric:tabular-nums; }
+
+        /* Stat grid in panel */
+        .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+        .stat-item { background:var(--bg-card); border:1px solid var(--border); border-radius:5px; padding:10px 14px; }
+        .stat-label { font-size:0.58rem; color:var(--text-dim); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
+        .stat-value { font-size:1.1rem; font-weight:700; color:var(--text-hi); font-variant-numeric:tabular-nums; }
+
+        /* Sparkline in panel */
+        .panel-sparkline { width:100%; height:60px; border-radius:4px; background:var(--bg-card); border:1px solid var(--border); display:block; }
+
+        /* Context note */
+        .context-note {
+            background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.15);
+            border-radius:5px; padding:12px 14px;
+            font-size:0.7rem; color:var(--text-mid); line-height:1.6;
         }
-        tbody tr { border-bottom:1px solid var(--border); transition:background 0.1s; }
-        tbody tr:hover { background: rgba(30,41,59,0.6); }
-        tbody tr:last-child { border-bottom:none; }
-        td { padding:13px 14px; vertical-align:middle; }
+        .context-note strong { color:var(--text); }
 
-        .event-title {
-            font-size: 0.88rem; font-weight: 500;
-            color: var(--text-hi);
-            max-width: 320px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            line-height: 1.45;
+        .panel-footer { padding:16px 24px; border-top:1px solid var(--border); background:var(--bg-card); }
+        .view-btn {
+            display:block; text-align:center; padding:10px;
+            background:var(--blue); color:#fff; border-radius:5px;
+            text-decoration:none; font-family:var(--mono);
+            font-size:0.72rem; font-weight:600; letter-spacing:0.08em;
+            transition:background 0.15s;
         }
-        .event-cat {
-            font-size: 0.65rem; color: var(--text-dim);
-            margin-top: 3px; letter-spacing: 0.08em; text-transform: uppercase;
-        }
+        .view-btn:hover { background:var(--blue-dim); }
 
-        /* Score — white, clean. No blue. */
-        .score-cell { font-size: 1.1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-        .score-hi  { color: var(--text-hi); }
-        .score-mid { color: var(--text); }
-        .score-low { color: var(--text-mid); }
-        .score-dim { color: var(--text-dim); }
+        /* Empty state */
+        .empty-state { padding:20px; color:var(--text-dim); font-size:0.72rem; letter-spacing:0.06em; }
 
-        /* Badges — subtle, text-based differentiation */
-        .badge {
-            display: inline-block; padding: 4px 9px; border-radius: 3px;
-            font-size: 0.63rem; font-weight: 600;
-            letter-spacing: 0.09em; text-transform: uppercase;
-            white-space: nowrap; border: 1px solid transparent;
-        }
-        .badge-verified { color: #93c5fd; border-color: #1e3a5f; background: rgba(59,130,246,0.08); }
-        .badge-active   { color: var(--text); border-color: var(--border-hi); background: transparent; }
-        .badge-caution  { color: var(--text-mid); border-color: var(--border); background: transparent; }
-        .badge-low      { color: var(--text-dim); border-color: var(--border); background: transparent; }
-
-        /* Sub-score bars */
-        .subscores { display:flex; flex-direction:column; gap:5px; min-width:175px; }
-        .subscore-row { display:flex; align-items:center; gap:7px; }
-        .subscore-key { font-size:0.62rem; color:var(--text-mid); width:28px; text-transform:uppercase; flex-shrink:0; }
-        .bar-bg { flex:1; height:4px; background:var(--border); border-radius:2px; overflow:hidden; }
-        .bar-fill { height:100%; border-radius:2px; background:var(--blue); transition:width 0.6s cubic-bezier(0.4,0,0.2,1); }
-        .bar-liq  { opacity:1.0; }
-        .bar-eff  { opacity:0.75; }
-        .bar-ind  { opacity:0.55; }
-        .bar-conv { opacity:0.88; }
-        .subscore-val { font-size:0.62rem; color:var(--text-mid); width:26px; text-align:right; }
-
-        .vol-cell   { color:var(--text); font-variant-numeric:tabular-nums; font-size:0.88rem; }
-        .macro-cell { font-size:0.88rem; font-variant-numeric:tabular-nums; color:var(--text); }
-        .sparkline-canvas { vertical-align:middle; }
-
-        .link-btn {
-            display: inline-block; font-size: 0.7rem;
-            color: var(--text-mid); text-decoration: none;
-            border: 1px solid var(--border-hi); padding: 4px 10px;
-            border-radius: 3px; letter-spacing: 0.06em;
-            transition: color 0.15s, border-color 0.15s;
-        }
-        .link-btn:hover { color: var(--text-hi); border-color: var(--border-hi); }
-
-        /* Row dimming — less aggressive */
-        tr.row-caution td { opacity: 0.6; }
-        tr.row-low     td { opacity: 0.35; }
-
-        /* ── FOOTER ── */
+        /* Footer */
         footer {
-            padding: 20px 32px; border-top: 1px solid var(--border);
-            display: flex; justify-content: space-between;
-            font-size: 0.7rem; color: var(--text-dim);
-            letter-spacing: 0.08em; background: var(--bg-2);
-        }
-
-        @media (max-width:1024px) {
-            .kpi-grid { grid-template-columns:repeat(2,1fr); }
-            .chart-grid { grid-template-columns:1fr; }
-            .spotlight-grid { grid-template-columns:1fr; }
-        }
-        @media (max-width:640px) {
-            .container,.hero,header { padding-left:16px; padding-right:16px; }
-            .kpi-grid { grid-template-columns:1fr 1fr; }
-            .topbar { display:none; }
+            padding:16px 32px; border-top:1px solid var(--border);
+            display:flex; justify-content:space-between;
+            font-size:0.65rem; color:var(--text-dim); background:var(--bg-2);
         }
     </style>
 </head>
@@ -352,7 +265,6 @@
     <div class="topbar-left">
         <span><span class="live-dot"></span>SYSTEM ONLINE</span>
         <span>ENGINE V3.0</span>
-        <span>POLYMARKET // GAMMA API</span>
     </div>
     <span id="live-clock">--:--:-- UTC</span>
 </div>
@@ -364,22 +276,14 @@
     </div>
     <div class="header-meta">
         <div>UPDATED <strong id="last-update">—</strong></div>
-        <div>SOURCE <strong>POLYMARKET GAMMA API</strong></div>
         <div>ENGINE <strong>V3.0 // NEXUS SCORE™</strong></div>
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-label"><span>//</span>HIGHEST INTEGRITY MARKETS — VERIFIED &amp; CITABLE</div>
-    <div class="spotlight-grid" id="spotlight-grid">
-        <div class="hero-empty">LOADING...</div>
-    </div>
-</section>
-
 <div class="container">
 
-    <div class="section-head"><span>SYSTEM STATUS</span><span class="section-tag">LIVE</span></div>
-    <div class="kpi-grid">
+    <!-- KPIs -->
+    <div class="kpi-grid" style="margin-top:24px;">
         <div class="kpi-card primary">
             <div class="kpi-label">Integrity Index</div>
             <div class="kpi-value" id="integrity-index">—</div>
@@ -402,253 +306,355 @@
         </div>
     </div>
 
-    <div class="section-head"><span>ANALYSIS</span><span class="section-tag">SYSTEM OVERVIEW</span></div>
+    <!-- Charts -->
     <div class="chart-grid">
         <div class="chart-card">
-            <h3>DATA STATE DISTRIBUTION</h3>
+            <h3>STATE DISTRIBUTION</h3>
             <div class="chart-wrap"><canvas id="stateChart"></canvas></div>
         </div>
         <div class="chart-card">
-            <h3>NEXUS COMPONENT RADAR — SYSTEM AVERAGE</h3>
+            <h3>NEXUS COMPONENT AVERAGE — ALL MARKETS</h3>
             <div class="chart-wrap"><canvas id="radarChart"></canvas></div>
         </div>
     </div>
 
-    <div class="section-head"><span>INTELLIGENCE FEED</span><span class="section-tag">TOP 15 BY VOLUME</span></div>
-    <div class="table-card">
-        <div class="table-top">
-            <h3>TOP 15 EVENTS BY VOLUME — NEXUS SCORE RANKED</h3>
-            <span class="table-tag">REFRESHED HOURLY</span>
+    <!-- State-grouped event cards -->
+    <div id="state-groups"></div>
+
+</div>
+
+<!-- Detail Panel -->
+<div class="panel-overlay" id="overlay" onclick="closePanel()"></div>
+<div class="detail-panel" id="detail-panel">
+    <div class="panel-header">
+        <div style="flex:1">
+            <div class="panel-score-row">
+                <span class="panel-score" id="p-score">—</span>
+                <span class="panel-badge" id="p-badge">—</span>
+            </div>
+            <div class="panel-title" id="p-title">—</div>
         </div>
-        <div id="table-body-wrap">
-            <div style="padding:40px;text-align:center;color:var(--text-dim);font-size:0.72rem;letter-spacing:0.1em;">▋ LOADING</div>
+        <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
+    </div>
+    <div class="panel-body">
+        <div class="panel-section">
+            <div class="panel-section-label">INTEGRITY BREAKDOWN</div>
+            <div class="panel-bars" id="p-bars"></div>
+        </div>
+        <div class="panel-section">
+            <div class="panel-section-label">MARKET STATS</div>
+            <div class="stat-grid" id="p-stats"></div>
+        </div>
+        <div class="panel-section">
+            <div class="panel-section-label">PRICE TREND</div>
+            <canvas class="panel-sparkline" id="p-sparkline" height="60"></canvas>
+        </div>
+        <div class="panel-section">
+            <div class="panel-section-label">CONTEXT</div>
+            <div class="context-note" id="p-context"></div>
         </div>
     </div>
-
+    <div class="panel-footer">
+        <a class="view-btn" id="p-link" href="#" target="_blank">VIEW ON POLYMARKET →</a>
+    </div>
 </div>
 
 <footer>
     <span>POLY-NEXUS © 2026 // INTEGRITY ORACLE</span>
-    <span>BUILT FOR POLYMARKET BUILDER PROGRAM</span>
-    <span>DATA: POLYMARKET GAMMA API + YFINANCE</span>
+    <span id="footer-clock"></span>
 </footer>
 
 <script>
 const DATA_URL = './data/latest_intelligence.json';
 
 const MOCK = [
-    {question:"Will the Fed cut rates at the March FOMC meeting?",        category:"Finance",     nexus_score:91.2,market_state:"High Confidence",macro_sensitivity:0.08,volume:14200000,slug:"fed-rate-cut-march",        sparkline:[0.55,0.58,0.61,0.60,0.63,0.62,0.65],liq:28.1,eff:23.4,ind:14.2,conv:25.5},
-    {question:"Will Trump sign an executive order on crypto before March?",category:"Crypto",     nexus_score:87.6,market_state:"High Confidence",macro_sensitivity:0.12,volume:9800000, slug:"trump-crypto-eo-march",      sparkline:[0.72,0.74,0.71,0.75,0.78,0.76,0.79],liq:26.0,eff:22.1,ind:13.5,conv:26.0},
-    {question:"Will Ukraine and Russia reach a ceasefire by June 2026?",  category:"Geopolitics", nexus_score:83.4,market_state:"High Confidence",macro_sensitivity:0.06,volume:7400000, slug:"ukraine-russia-ceasefire",   sparkline:[0.31,0.33,0.35,0.34,0.36,0.37,0.36],liq:24.5,eff:21.8,ind:14.7,conv:22.4},
-    {question:"Will Apple announce a foldable iPhone at WWDC 2026?",      category:"Tech",        nexus_score:78.1,market_state:"Active",         macro_sensitivity:0.04,volume:5100000, slug:"apple-foldable-iphone-wwdc", sparkline:[0.42,0.44,0.40,0.43,0.45,0.44,0.46],liq:22.0,eff:20.5,ind:14.1,conv:21.5},
-    {question:"Will BTC exceed $120k before end of Q1 2026?",            category:"Crypto",      nexus_score:73.8,market_state:"Active",         macro_sensitivity:0.71,volume:22100000,slug:"btc-120k-q1-2026",           sparkline:[0.48,0.52,0.49,0.55,0.51,0.53,0.50],liq:29.5,eff:18.2,ind:6.1, conv:20.0},
-    {question:"Will the Democrats win the 2026 Senate Midterms?",         category:"Politics",    nexus_score:72.3,market_state:"Active",         macro_sensitivity:0.03,volume:6700000, slug:"democrat-senate-2026",       sparkline:[0.44,0.45,0.43,0.46,0.44,0.45,0.44],liq:23.0,eff:21.0,ind:14.8,conv:13.5},
-    {question:"Will Elon Musk still be at DOGE by July 2026?",           category:"Politics",    nexus_score:68.9,market_state:"Active",         macro_sensitivity:0.09,volume:4300000, slug:"musk-doge-july",             sparkline:[0.62,0.60,0.58,0.61,0.59,0.60,0.58],liq:21.5,eff:20.4,ind:13.0,conv:14.0},
-    {question:"Will inflation (CPI) exceed 4% in any month of 2026?",    category:"Finance",     nexus_score:61.2,market_state:"Active",         macro_sensitivity:0.22,volume:2800000, slug:"cpi-4pct-2026",              sparkline:[0.28,0.30,0.29,0.32,0.31,0.30,0.32],liq:18.0,eff:17.5,ind:10.2,conv:15.5},
-    {question:"Will ETH reach $5000 before June 2026?",                  category:"Crypto",      nexus_score:54.4,market_state:"Macro-Driven",   macro_sensitivity:0.82,volume:11500000,slug:"eth-5000-june",              sparkline:[0.35,0.38,0.41,0.44,0.39,0.42,0.38],liq:26.0,eff:16.0,ind:3.4, conv:9.0},
-    {question:"Will any major AI lab have a data breach in 2026?",        category:"Tech",        nexus_score:42.1,market_state:"Low Liquidity",  macro_sensitivity:0.01,volume:85000,   slug:"ai-lab-breach-2026",         sparkline:[0.18,0.19,0.18,0.20,0.19,0.19,0.20],liq:6.5, eff:18.0,ind:14.1,conv:3.5},
+    {id:"1",slug:"fed-rate-cut-march",       question:"Will the Fed cut rates at the March FOMC meeting?",          category:"Finance",     nexus_score:91.2,market_state:"High Confidence",macro_sensitivity:0.08,volume:14200000,sparkline:[{p:.55},{p:.58},{p:.61},{p:.60},{p:.63},{p:.62},{p:.65}],c1:93,c2:100,c3:88,c4:78},
+    {id:"2",slug:"trump-crypto-eo",           question:"Will Trump sign an executive order on crypto before March?",  category:"Crypto",     nexus_score:87.6,market_state:"High Confidence",macro_sensitivity:0.12,volume:9800000, sparkline:[{p:.72},{p:.74},{p:.71},{p:.75},{p:.78},{p:.76},{p:.79}],c1:87,c2:96,c3:82,c4:71},
+    {id:"3",slug:"ukraine-ceasefire",         question:"Will Ukraine and Russia reach a ceasefire by June 2026?",    category:"Geopolitics", nexus_score:83.4,market_state:"High Confidence",macro_sensitivity:0.06,volume:7400000, sparkline:[{p:.31},{p:.33},{p:.35},{p:.34},{p:.36},{p:.37},{p:.36}],c1:82,c2:94,c3:91,c4:65},
+    {id:"4",slug:"apple-foldable-wwdc",       question:"Will Apple announce a foldable iPhone at WWDC 2026?",        category:"Tech",       nexus_score:78.1,market_state:"Active",         macro_sensitivity:0.04,volume:5100000, sparkline:[{p:.42},{p:.44},{p:.40},{p:.43},{p:.45},{p:.44},{p:.46}],c1:74,c2:91,c3:94,c4:58},
+    {id:"5",slug:"btc-120k-q1",               question:"Will BTC exceed $120k before end of Q1 2026?",               category:"Crypto",     nexus_score:73.8,market_state:"Active",         macro_sensitivity:0.71,volume:22100000,sparkline:[{p:.48},{p:.52},{p:.49},{p:.55},{p:.51},{p:.53},{p:.50}],c1:98,c2:89,c3:41,c4:52},
+    {id:"6",slug:"democrat-senate-2026",      question:"Will the Democrats win the 2026 Senate Midterms?",           category:"Politics",   nexus_score:72.3,market_state:"Active",         macro_sensitivity:0.03,volume:6700000, sparkline:[{p:.44},{p:.45},{p:.43},{p:.46},{p:.44},{p:.45},{p:.44}],c1:77,c2:92,c3:96,c4:44},
+    {id:"7",slug:"musk-doge-july",            question:"Will Elon Musk still be at DOGE by July 2026?",              category:"Politics",   nexus_score:68.9,market_state:"Active",         macro_sensitivity:0.09,volume:4300000, sparkline:[{p:.62},{p:.60},{p:.58},{p:.61},{p:.59},{p:.60},{p:.58}],c1:71,c2:88,c3:84,c4:38},
+    {id:"8",slug:"eth-5000-june",             question:"Will ETH reach $5000 before June 2026?",                     category:"Crypto",     nexus_score:54.4,market_state:"Macro-Driven",   macro_sensitivity:0.82,volume:11500000,sparkline:[{p:.35},{p:.38},{p:.41},{p:.44},{p:.39},{p:.42},{p:.38}],c1:87,c2:84,c3:23,c4:30},
+    {id:"9",slug:"cpi-4pct-2026",             question:"Will inflation (CPI) exceed 4% in any month of 2026?",       category:"Finance",    nexus_score:61.2,market_state:"Macro-Driven",   macro_sensitivity:0.72,volume:2800000, sparkline:[{p:.28},{p:.30},{p:.29},{p:.32},{p:.31},{p:.30},{p:.32}],c1:60,c2:86,c3:32,c4:51},
+    {id:"10",slug:"ai-lab-breach-2026",       question:"Will any major AI lab have a data breach in 2026?",          category:"Tech",       nexus_score:42.1,market_state:"Low Liquidity",  macro_sensitivity:0.01,volume:85000,   sparkline:[{p:.18},{p:.19},{p:.18},{p:.20},{p:.19},{p:.19},{p:.20}],c1:22,c2:86,c3:94,c4:11},
 ];
 
-let stateInst=null, radarInst=null;
+let stateInst=null, radarInst=null, panelSparkInst=null;
+let allData=[];
 
+// ── UTILS ──────────────────────────────────────────────────
 function tickClock(){
     const n=new Date();
-    document.getElementById('live-clock').textContent=
-        [n.getUTCHours(),n.getUTCMinutes(),n.getUTCSeconds()].map(v=>String(v).padStart(2,'0')).join(':')+' UTC';
+    const t=[n.getUTCHours(),n.getUTCMinutes(),n.getUTCSeconds()].map(v=>String(v).padStart(2,'0')).join(':')+' UTC';
+    document.getElementById('live-clock').textContent=t;
+    const f=document.getElementById('footer-clock');
+    if(f) f.textContent=t;
 }
 setInterval(tickClock,1000); tickClock();
 
 function fmtVol(n){
+    if(n>=1e9) return '$'+(n/1e9).toFixed(2)+'B';
     if(n>=1e6) return '$'+(n/1e6).toFixed(1)+'M';
     if(n>=1e3) return '$'+(n/1e3).toFixed(0)+'K';
     return '$'+n;
 }
-
-function animateCount(el,target,decimals=0,ms=800){
-    const start=performance.now();
+function animateCount(el,target,dec=0,ms=800){
+    if(!el) return;
+    const s=performance.now();
     const step=now=>{
-        const p=Math.min((now-start)/ms,1), e=1-Math.pow(1-p,3);
-        el.textContent=(target*e).toFixed(decimals);
+        const p=Math.min((now-s)/ms,1),e=1-Math.pow(1-p,3);
+        el.textContent=(target*e).toFixed(dec);
         if(p<1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
 }
+function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
 
-function stateInfo(state){
-    if(state.includes('High Confidence')) return {label:'CITABLE',      cls:'badge-verified', rowCls:''};
-    if(state.includes('Active'))          return {label:'ACTIVE',       cls:'badge-active',   rowCls:''};
-    if(state.includes('Macro'))           return {label:'MACRO-DRIVEN', cls:'badge-caution',  rowCls:'row-caution'};
-    if(state.includes('Volatile'))        return {label:'VOLATILE',     cls:'badge-caution',  rowCls:'row-caution'};
-    return                                       {label:'SPARSE DATA',  cls:'badge-low',      rowCls:'row-low'};
+// ── STATE CONFIG ───────────────────────────────────────────
+const STATES = [
+    {
+        key: 'citable',
+        match: s => s.includes('High Confidence'),
+        label: 'HIGH CONFIDENCE',
+        tag: 'CITABLE',
+        cardCls: 's-citable',
+        badgeCls: 'badge-citable',
+        badgeText: 'CITABLE',
+        desc: 'Strong liquidity, efficient pricing, and low macro dependency. These markets are structurally sound for citation and research use.',
+        context: s => `This market demonstrates <strong>robust structural integrity</strong> across all four Nexus dimensions. Nexus Score ${s.nexus_score} reflects deep liquidity, efficient price formation, independence from macro factors, and stable convergence. Appropriate for institutional citation.`,
+    },
+    {
+        key: 'active',
+        match: s => s.includes('Active'),
+        label: 'ACTIVE',
+        tag: 'PRICE DISCOVERY',
+        cardCls: 's-active',
+        badgeCls: 'badge-active',
+        badgeText: 'ACTIVE',
+        desc: 'Structurally sound markets currently in active price discovery. Scores reflect real-time information aggregation.',
+        context: s => `Active price discovery in progress. Nexus Score ${s.nexus_score} indicates a functioning market with adequate liquidity and structural integrity. Macro sensitivity of ${s.macro_sensitivity?.toFixed(2)} is within acceptable range. Monitor for convergence.`,
+    },
+    {
+        key: 'macro',
+        match: s => s.includes('Macro') || s.includes('Volatile'),
+        label: 'MACRO-DRIVEN',
+        tag: 'EXTERNAL DEPENDENCY',
+        cardCls: 's-macro',
+        badgeCls: 'badge-macro',
+        badgeText: 'MACRO-DRIVEN',
+        desc: 'Market price movements are correlated with external macro factors (BTC, SPY, Rates). Independence score is suppressed. Relevant for macro research.',
+        context: s => `Macro Beta of <strong>${s.macro_sensitivity?.toFixed(2)}</strong> indicates significant external factor dependency. Price movements in this market are partially explained by macro variables rather than event-specific information. IND score of ${s.c3?.toFixed(0)}% reflects this dependency. Useful for cross-asset research.`,
+    },
+    {
+        key: 'low',
+        match: () => true,
+        label: 'LOW LIQUIDITY',
+        tag: 'INSUFFICIENT DATA',
+        cardCls: 's-low',
+        badgeCls: 'badge-low',
+        badgeText: 'SPARSE DATA',
+        desc: 'Thin liquidity or insufficient observation history. Nexus Score may not fully reflect true market quality.',
+        context: s => `Volume of ${fmtVol(s.volume||0)} is below the threshold for reliable structural analysis. Nexus Score ${s.nexus_score} should be interpreted with caution. LIQ score of ${s.c1?.toFixed(0)}% reflects limited capital depth. Structural analysis will improve as market matures.`,
+    },
+];
+
+function getState(market_state){
+    return STATES.find(st=>st.match(market_state)) || STATES[3];
 }
 
-function scoreClass(s){
-    if(s>=80) return 'score-hi';
-    if(s>=60) return 'score-mid';
-    if(s>=45) return 'score-low';
-    return 'score-dim';
-}
-
-// c1~c4 already normalized 0-100, just clamp
-function normBar(val){ return Math.min(Math.max(val||0, 0), 100).toFixed(1); }
-
-function drawSparkline(canvas,pts){
-    if(!canvas||!pts||pts.length<2) return;
-    const ctx=canvas.getContext('2d'), W=canvas.width, H=canvas.height;
-    ctx.clearRect(0,0,W,H);
-    const vals=pts.map(d=>typeof d==='object'?d.p:+d);
-    const mn=Math.min(...vals), mx=Math.max(...vals), rng=mx-mn||0.01;
-    ctx.beginPath();
-    ctx.strokeStyle='rgba(148,163,184,0.5)';  /* slate, not blue */
-    ctx.lineWidth=1.5; ctx.lineJoin='round';
-    vals.forEach((v,i)=>{
-        const x=(i/(vals.length-1))*W, y=H-((v-mn)/rng)*(H-2)-1;
-        i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
-    });
-    ctx.stroke();
-}
-
-function renderSpotlight(data){
-    const top=[...data]
-        .filter(d=>d.market_state.includes('High Confidence'))
-        .sort((a,b)=>b.nexus_score-a.nexus_score)
-        .slice(0,3);
-    const grid=document.getElementById('spotlight-grid');
-    if(!top.length){grid.innerHTML='<div class="hero-empty">NO HIGH CONFIDENCE EVENTS AT THIS TIME</div>';return;}
-    grid.innerHTML=top.map(d=>{
-        const lp=normBar(d.c1), ep=normBar(d.c2);
-        const ip=normBar(d.c3), cp=normBar(d.c4);
-        return `<div class="spotlight-card">
-            <div class="spotlight-vol">${fmtVol(d.volume||0)}</div>
-            <div class="spotlight-score">${d.nexus_score}</div>
-            <div class="spotlight-title">${d.question}</div>
-            <div class="spotlight-cat">${d.category||''}</div>
-            <div class="spotlight-bars">
-                <div class="sp-bar-row"><span class="sp-bar-key">LIQ</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-liq" style="width:${lp}%"></div></div><span class="sp-bar-val">${(+lp).toFixed(0)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">EFF</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-eff" style="width:${ep}%"></div></div><span class="sp-bar-val">${(+ep).toFixed(0)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">IND</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-ind" style="width:${ip}%"></div></div><span class="sp-bar-val">${(+ip).toFixed(0)}</span></div>
-                <div class="sp-bar-row"><span class="sp-bar-key">CNV</span><div class="sp-bar-bg"><div class="sp-bar-fill bar-conv" style="width:${cp}%"></div></div><span class="sp-bar-val">${(+cp).toFixed(0)}</span></div>
-            </div>
-        </div>`;
-    }).join('');
-}
-
+// ── KPIs ──────────────────────────────────────────────────
 function renderKPIs(data){
     const total=data.length;
-    const highConf=data.filter(d=>d.market_state.includes('High Confidence')).length;
-    const active=data.filter(d=>d.market_state.includes('Active')).length;
-    const idx=(highConf+active*0.5)/total*100;
+    const hc=data.filter(d=>d.market_state.includes('High Confidence')).length;
+    const ac=data.filter(d=>d.market_state.includes('Active')).length;
+    const idx=(hc+ac*0.5)/total*100;
     animateCount(document.getElementById('integrity-index'),idx,1);
     document.getElementById('integrity-grade').textContent=idx>=80?'INSTITUTIONAL GRADE':idx>=60?'STRUCTURED':'FRAGMENTED';
     document.getElementById('market-regime').textContent=idx>=70?'STABLE':idx>=45?'TRANSITIONAL':'STRESSED';
-    animateCount(document.getElementById('high-conf-count'),highConf,0,700);
+    animateCount(document.getElementById('high-conf-count'),hc,0,700);
     animateCount(document.getElementById('total-markets'),total,0,700);
-    document.getElementById('last-update').textContent=
-        new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
+    document.getElementById('last-update').textContent=new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
 }
 
+// ── CHARTS ────────────────────────────────────────────────
 function renderStateChart(data){
     const counts={};
-    data.forEach(d=>{const s=stateInfo(d.market_state).label; counts[s]=(counts[s]||0)+1;});
-    /* Monochrome slate palette */
+    data.forEach(d=>{
+        const label=getState(d.market_state).label;
+        counts[label]=(counts[label]||0)+1;
+    });
     const colorMap={
-        'CITABLE':      'rgba(226,232,240,0.85)',
-        'ACTIVE':       'rgba(148,163,184,0.65)',
-        'MACRO-DRIVEN': 'rgba(100,116,139,0.5)',
-        'VOLATILE':     'rgba(71,85,105,0.45)',
-        'SPARSE DATA':  'rgba(30,41,59,0.7)',
+        'HIGH CONFIDENCE':'rgba(147,197,253,0.75)',
+        'ACTIVE':         'rgba(100,116,139,0.6)',
+        'MACRO-DRIVEN':   'rgba(251,191,36,0.45)',
+        'LOW LIQUIDITY':  'rgba(71,85,105,0.4)',
     };
     const labels=Object.keys(counts);
     const ctx=document.getElementById('stateChart').getContext('2d');
     if(stateInst) stateInst.destroy();
     stateInst=new Chart(ctx,{
         type:'doughnut',
-        data:{labels,datasets:[{data:Object.values(counts),backgroundColor:labels.map(l=>colorMap[l]||'rgba(30,41,59,0.5)'),borderWidth:0,hoverOffset:4}]},
-        options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{
-            legend:{position:'right',labels:{color:'#64748b',font:{family:"'JetBrains Mono',monospace",size:9},boxWidth:8,padding:10}},
-            tooltip:{backgroundColor:'#161f2c',borderColor:'#1e293b',borderWidth:1,
-                titleColor:'#e2e8f0',bodyColor:'#94a3b8',
-                titleFont:{family:"'JetBrains Mono',monospace",size:10},
-                bodyFont:{family:"'JetBrains Mono',monospace",size:10}}
+        data:{labels,datasets:[{data:Object.values(counts),backgroundColor:labels.map(l=>colorMap[l]||'rgba(40,55,75,0.5)'),borderWidth:0,hoverOffset:4}]},
+        options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{
+            legend:{position:'right',labels:{color:'#6b82a0',font:{family:"'JetBrains Mono',monospace",size:10},boxWidth:8,padding:10}},
+            tooltip:{backgroundColor:'#1e2d42',borderColor:'#243044',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
+                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10}}
         }}
     });
 }
 
 function renderRadarChart(data){
-    const n = data.length || 1;
-    const sums = data.reduce((a,d)=>({
-        c1: a.c1+(d.c1||0),
-        c2: a.c2+(d.c2||0),
-        c3: a.c3+(d.c3||0),
-        c4: a.c4+(d.c4||0)
-    }), {c1:0,c2:0,c3:0,c4:0});
-    // already 0-100, just average
-    const vals = [sums.c1/n, sums.c2/n, sums.c3/n, sums.c4/n];
+    const n=data.length||1;
+    const s=data.reduce((a,d)=>({c1:a.c1+(d.c1||0),c2:a.c2+(d.c2||0),c3:a.c3+(d.c3||0),c4:a.c4+(d.c4||0)}),{c1:0,c2:0,c3:0,c4:0});
+    const vals=[s.c1/n,s.c2/n,s.c3/n,s.c4/n];
     const ctx=document.getElementById('radarChart').getContext('2d');
     if(radarInst) radarInst.destroy();
     radarInst=new Chart(ctx,{
         type:'radar',
         data:{labels:['LIQUIDITY','EFFICIENCY','INDEPENDENCE','CONVERGENCE'],datasets:[{data:vals,
-            backgroundColor:'rgba(59,130,246,0.07)',
-            borderColor:'rgba(59,130,246,0.35)',
-            pointBackgroundColor:'rgba(96,165,250,0.6)',
-            pointBorderColor:'transparent',
-            pointRadius:3, borderWidth:1.5}]},
+            backgroundColor:'rgba(59,130,246,0.07)',borderColor:'rgba(59,130,246,0.35)',
+            pointBackgroundColor:'rgba(96,165,250,0.6)',pointBorderColor:'transparent',pointRadius:3,borderWidth:1.5}]},
         options:{responsive:true,maintainAspectRatio:false,
-            scales:{r:{min:0,max:100,ticks:{display:false},
-                grid:{color:'#1e293b'},angleLines:{color:'#1e293b'},
-                pointLabels:{color:'#64748b',font:{family:"'JetBrains Mono',monospace",size:9}}}},
+            scales:{r:{min:0,max:100,ticks:{display:false},grid:{color:'#243044'},angleLines:{color:'#243044'},
+                pointLabels:{color:'#6b82a0',font:{family:"'JetBrains Mono',monospace",size:10}}}},
             plugins:{legend:{display:false},
-                tooltip:{backgroundColor:'#161f2c',borderColor:'#1e293b',borderWidth:1,
-                    titleColor:'#e2e8f0',bodyColor:'#94a3b8',
-                    titleFont:{family:"'JetBrains Mono',monospace",size:10},
-                    bodyFont:{family:"'JetBrains Mono',monospace",size:10},
-                    callbacks:{label:c=>` ${c.formattedValue}%`}}}}
+                tooltip:{backgroundColor:'#1e2d42',borderColor:'#243044',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
+                    titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
+                    callbacks:{label:c=>` ${(+c.formattedValue).toFixed(1)}%`}}}}
     });
 }
 
-function renderTable(data){
-    const sorted=[...data].sort((a,b)=>{
-        const r=s=>s.includes('High Confidence')?3:s.includes('Active')?2:1;
-        return r(b.market_state)-r(a.market_state)||b.nexus_score-a.nexus_score;
-    }).slice(0,15);
+// ── SPARKLINE ─────────────────────────────────────────────
+function drawSparkline(canvas, pts, color='rgba(148,163,184,0.55)'){
+    if(!canvas||!pts||pts.length<2) return;
+    const ctx=canvas.getContext('2d'), W=canvas.width, H=canvas.height;
+    ctx.clearRect(0,0,W,H);
+    const vals=pts.map(d=>typeof d==='object'?d.p:+d);
+    const mn=Math.min(...vals), mx=Math.max(...vals), rng=mx-mn||0.01;
+    ctx.beginPath();
+    ctx.strokeStyle=color; ctx.lineWidth=1.5; ctx.lineJoin='round';
+    vals.forEach((v,i)=>{
+        const x=(i/(vals.length-1))*W, y=H-((v-mn)/rng)*(H-4)-2;
+        i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+}
 
-    document.getElementById('table-body-wrap').innerHTML=`<table>
-        <thead><tr>
-            <th>MARKET QUESTION</th><th>NEXUS SCORE</th><th>DATA STATE</th>
-            <th style="min-width:165px">INTEGRITY BREAKDOWN</th>
-            <th style="min-width:90px">MACRO BETA</th><th>VOLUME</th><th>TREND</th><th></th>
-        </tr></thead>
-        <tbody id="market-tbody"></tbody>
-    </table>`;
+// ── STATE GROUPS ──────────────────────────────────────────
+function renderStateGroups(data){
+    const container=document.getElementById('state-groups');
+    container.innerHTML='';
 
-    const tbody=document.getElementById('market-tbody');
-    sorted.forEach((row,i)=>{
-        const si=stateInfo(row.market_state), spId=`sp-${i}`;
-        const lp=normBar(row.c1), ep=normBar(row.c2);
-        const ip=normBar(row.c3), cp=normBar(row.c4);
-        const tr=document.createElement('tr');
-        if(si.rowCls) tr.className=si.rowCls;
-        tr.innerHTML=`
-            <td><div class="event-title" title="${row.question}">${row.question}</div><div class="event-cat">${row.category||''}</div></td>
-            <td><span class="score-cell ${scoreClass(row.nexus_score)}">${row.nexus_score}</span></td>
-            <td><span class="badge ${si.cls}">${si.label}</span></td>
-            <td><div class="subscores">
-                <div class="subscore-row"><span class="subscore-key">LIQ</span><div class="bar-bg"><div class="bar-fill bar-liq" style="width:${lp}%"></div></div><span class="subscore-val">${(+lp).toFixed(0)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">EFF</span><div class="bar-bg"><div class="bar-fill bar-eff" style="width:${ep}%"></div></div><span class="subscore-val">${(+ep).toFixed(0)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">IND</span><div class="bar-bg"><div class="bar-fill bar-ind" style="width:${ip}%"></div></div><span class="subscore-val">${(+ip).toFixed(0)}</span></div>
-                <div class="subscore-row"><span class="subscore-key">CNV</span><div class="bar-bg"><div class="bar-fill bar-conv" style="width:${cp}%"></div></div><span class="subscore-val">${(+cp).toFixed(0)}</span></div>
-            </div></td>
-            <td class="macro-cell">${(row.macro_sensitivity||0).toFixed(2)}</td>
-            <td class="vol-cell">${fmtVol(row.volume||0)}</td>
-            <td><canvas id="${spId}" class="sparkline-canvas" width="80" height="26"></canvas></td>
-            <td><a class="link-btn" href="https://polymarket.com/event/${row.slug||row.id||''}" target="_blank">VIEW →</a></td>
+    STATES.forEach(st=>{
+        const items=data.filter(d=>st.match(d.market_state));
+        // exclude events already matched by earlier states
+        const group=st.key==='low'
+            ? data.filter(d=>!STATES.slice(0,3).some(s2=>s2.match(d.market_state)))
+            : data.filter(d=>st.match(d.market_state));
+
+        if(!group.length) return;
+
+        // sort by nexus_score desc, show top 5
+        const shown=group.sort((a,b)=>b.nexus_score-a.nexus_score).slice(0,5);
+
+        const wrap=document.createElement('div');
+        wrap.className='state-group';
+        wrap.innerHTML=`
+            <div class="section-head"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
+            <div class="section-desc">${st.desc}</div>
+            <div class="event-grid" id="grid-${st.key}"></div>
         `;
-        tbody.appendChild(tr);
-        if(row.sparkline) requestAnimationFrame(()=>drawSparkline(document.getElementById(spId),row.sparkline));
+        container.appendChild(wrap);
+
+        const grid=document.getElementById(`grid-${st.key}`);
+        shown.forEach((d,i)=>{
+            const card=document.createElement('div');
+            card.className=`event-card ${st.cardCls}`;
+            const lp=normBar(d.c1), ep=normBar(d.c2), ip=normBar(d.c3), cp=normBar(d.c4);
+            card.innerHTML=`
+                <span class="card-arrow">↗</span>
+                <div class="card-score">${d.nexus_score}</div>
+                <div class="card-title">${d.question}</div>
+                <div class="card-meta">
+                    <span class="card-vol">${fmtVol(d.volume||0)}</span>
+                    <span class="card-macro">β ${(d.macro_sensitivity||0).toFixed(2)}</span>
+                </div>
+                <div class="card-bars">
+                    <div class="card-bar-row"><span class="card-bar-key">LIQ</span><div class="card-bar-bg"><div class="card-bar-fill bar-liq" style="width:${lp}%"></div></div></div>
+                    <div class="card-bar-row"><span class="card-bar-key">EFF</span><div class="card-bar-bg"><div class="card-bar-fill bar-eff" style="width:${ep}%"></div></div></div>
+                    <div class="card-bar-row"><span class="card-bar-key">IND</span><div class="card-bar-bg"><div class="card-bar-fill bar-ind" style="width:${ip}%"></div></div></div>
+                    <div class="card-bar-row"><span class="card-bar-key">CNV</span><div class="card-bar-bg"><div class="card-bar-fill bar-conv" style="width:${cp}%"></div></div></div>
+                </div>
+            `;
+            card.addEventListener('click', ()=>openPanel(d, st));
+            grid.appendChild(card);
+
+            // draw mini sparkline after DOM
+            if(d.sparkline){
+                // sparklines on cards are bars only (no canvas for perf)
+            }
+        });
     });
 }
 
+// ── DETAIL PANEL ──────────────────────────────────────────
+function openPanel(d, st){
+    document.getElementById('p-score').textContent=d.nexus_score;
+
+    const badge=document.getElementById('p-badge');
+    badge.textContent=st.badgeText;
+    badge.className='panel-badge '+st.badgeCls;
+
+    document.getElementById('p-title').textContent=d.question;
+
+    // Component bars
+    document.getElementById('p-bars').innerHTML=[
+        {key:'LIQUIDITY',     val:d.c1, cls:'bar-liq'},
+        {key:'EFFICIENCY',    val:d.c2, cls:'bar-eff'},
+        {key:'INDEPENDENCE',  val:d.c3, cls:'bar-ind'},
+        {key:'CONVERGENCE',   val:d.c4, cls:'bar-conv'},
+    ].map(b=>`
+        <div class="panel-bar-row">
+            <span class="panel-bar-name">${b.key}</span>
+            <div class="panel-bar-bg"><div class="panel-bar-fill ${b.cls}" style="width:${normBar(b.val)}%"></div></div>
+            <span class="panel-bar-val">${(b.val||0).toFixed(0)}</span>
+        </div>
+    `).join('');
+
+    // Stats
+    document.getElementById('p-stats').innerHTML=`
+        <div class="stat-item"><div class="stat-label">VOLUME</div><div class="stat-value">${fmtVol(d.volume||0)}</div></div>
+        <div class="stat-item"><div class="stat-label">MACRO BETA</div><div class="stat-value">${(d.macro_sensitivity||0).toFixed(2)}</div></div>
+        <div class="stat-item"><div class="stat-label">CURRENT PRICE</div><div class="stat-value">${((d.current_price||0)*100).toFixed(1)}%</div></div>
+        <div class="stat-item"><div class="stat-label">CHANGE</div><div class="stat-value">${d.change_since_start>=0?'+':''}${(d.change_since_start||0).toFixed(1)}%</div></div>
+    `;
+
+    // Sparkline
+    const spCanvas=document.getElementById('p-sparkline');
+    spCanvas.width=spCanvas.offsetWidth||380;
+    if(d.sparkline) requestAnimationFrame(()=>drawSparkline(spCanvas, d.sparkline,'rgba(96,165,250,0.7)'));
+
+    // Context
+    document.getElementById('p-context').innerHTML=st.context(d);
+
+    // Link
+    document.getElementById('p-link').href=`https://polymarket.com/event/${d.slug||d.id||''}`;
+
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow='hidden';
+}
+
+function closePanel(){
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('detail-panel').classList.remove('open');
+    document.body.style.overflow='';
+}
+
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePanel(); });
+
+// ── INIT ──────────────────────────────────────────────────
 async function init(){
     let data=null;
     try{
@@ -658,8 +664,12 @@ async function init(){
         if(Array.isArray(raw)&&raw.length) data=raw;
     }catch(_){}
     if(!data) data=MOCK;
-    renderSpotlight(data); renderKPIs(data);
-    renderStateChart(data); renderRadarChart(data); renderTable(data);
+    allData=data;
+
+    renderKPIs(data);
+    renderStateChart(data);
+    renderRadarChart(data);
+    renderStateGroups(data);
 }
 
 init();

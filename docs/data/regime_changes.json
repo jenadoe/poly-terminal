@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T06:14:39.391176Z",
+    "market_id": "96022",
+    "question": "Which company has the best AI model end of March?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T06:14:39.391176Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T05:09:42.572625Z",
     "market_id": "32225",
     "question": "Which party will win the House in 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 72.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T17:42:30.600191Z",
-    "market_id": "38010",
-    "question": "Will Trump meet with Putin again by...?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T15:36:50.370093Z",
-    "market_id": "100228",
-    "question": "2026 Winter Olympics: 2nd Most Gold Medals",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.9,
       "macro_sensitivity": 0.0
     }
   }

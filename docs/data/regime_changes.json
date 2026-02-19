@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-19T16:04:03.054293Z",
+    "market_id": "194119",
+    "question": "What price will Solana hit in February?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.9,
+      "macro_sensitivity": 1.41
+    }
+  },
+  {
+    "timestamp": "2026-02-19T16:04:03.054293Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 4.41
+    }
+  },
+  {
+    "timestamp": "2026-02-19T16:04:03.054293Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 81.1,
+      "macro_sensitivity": -0.01
+    }
+  },
+  {
     "timestamp": "2026-02-19T15:09:38.674082Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 1.98
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "174562",
-    "question": "Nuggets vs. Grizzlies",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.22
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "186419",
-    "question": "Moonbirds FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 58.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "16263",
-    "question": "Macron out by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.94
     }
   }
 ]

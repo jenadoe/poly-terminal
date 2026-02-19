@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T20:30:32.250742Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.9,
+      "macro_sensitivity": 0.68
+    }
+  },
+  {
+    "timestamp": "2026-02-19T20:30:32.250742Z",
+    "market_id": "96022",
+    "question": "Which company has the best AI model end of March?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.76
+    }
+  },
+  {
     "timestamp": "2026-02-19T19:51:21.558911Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 35.2,
       "macro_sensitivity": -2.99
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "190338",
-    "question": "Which company has the best AI model end of February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 2.95
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "34889",
-    "question": "Will Hamas agree to disarm by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.3
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T21:49:22.394708Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.71
+    }
+  },
+  {
+    "timestamp": "2026-02-19T21:49:22.394708Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.7
+    }
+  },
+  {
     "timestamp": "2026-02-19T21:01:01.099283Z",
     "market_id": "100228",
     "question": "Winter Games 2026: 2nd Most Gold Medals",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 78.1,
       "macro_sensitivity": -0.52
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "194105",
-    "question": "What price will XRP hit in February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 69.4,
-      "macro_sensitivity": 2.12
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "79229",
-    "question": "US x Iran nuclear talks resume by March 31? ",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.91
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-19T23:46:03.931040Z",
+    "market_id": "33228",
+    "question": "Which party wins 2028 US Presidential Election?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T23:46:03.931040Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -2.82
+    }
+  },
+  {
+    "timestamp": "2026-02-19T23:46:03.931040Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -3.4
+    }
+  },
+  {
     "timestamp": "2026-02-19T23:01:43.227666Z",
     "market_id": "160183",
     "question": "Iran Strike on Israel by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.1,
       "macro_sensitivity": 1.53
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "208544",
-    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.8,
-      "macro_sensitivity": -3.57
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": -1.43
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.77
     }
   }
 ]

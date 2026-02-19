@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-19T03:16:25.885292Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-18T23:45:42.862480Z",
     "market_id": "100300",
     "question": "2026 Winter Olympics: Ice Hockey Gold Medal Winner",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 86.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T13:40:03.230238Z",
-    "market_id": "79973",
-    "question": "2026 Seoul Mayoral Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.9,
       "macro_sensitivity": 0.0
     }
   }

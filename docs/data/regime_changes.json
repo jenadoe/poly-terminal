@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-19T08:03:28.352323Z",
+    "market_id": "208544",
+    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T08:03:28.352323Z",
+    "market_id": "190996",
+    "question": "Ilhan Omar town hall attack staged?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T08:03:28.352323Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T08:03:28.352323Z",
+    "market_id": "60182",
+    "question": "Nobel Peace Prize Winner 2026",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T06:14:39.391176Z",
     "market_id": "96022",
     "question": "Which company has the best AI model end of March?",
@@ -502,50 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T20:07:16.095910Z",
-    "market_id": "102774",
-    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T19:36:23.971751Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T17:42:30.600191Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 83.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-17T17:42:30.600191Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 72.0,
       "macro_sensitivity": 0.0
     }
   }

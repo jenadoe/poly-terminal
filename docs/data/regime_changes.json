@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T18:06:51.790392Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.0,
+      "macro_sensitivity": 0.48
+    }
+  },
+  {
+    "timestamp": "2026-02-19T18:06:51.790392Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 33.7,
+      "macro_sensitivity": 0.79
+    }
+  },
+  {
     "timestamp": "2026-02-19T17:13:37.656115Z",
     "market_id": "96022",
     "question": "Which company has the best AI model end of March?",
@@ -524,28 +546,6 @@
     "to_regime": "Macro-Driven",
     "metrics_snapshot": {
       "nexus_score": 46.2,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "189792",
-    "question": "What will Gold (GC) hit__ by end of February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 47.2,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "160183",
-    "question": "Iran Strike on Israel by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
       "macro_sensitivity": 5.0
     }
   }

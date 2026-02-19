@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-19T13:01:25.123333Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 5.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T12:27:36.382079Z",
     "market_id": "168115",
     "question": "Israel strikes Iran by February 28, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 73.6,
       "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "63433",
-    "question": "NBA Win Totals: Over or Under?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.1,
-      "macro_sensitivity": -1.21
     }
   }
 ]

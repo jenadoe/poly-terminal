@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-19T23:01:43.227666Z",
+    "market_id": "160183",
+    "question": "Iran Strike on Israel by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
+    "timestamp": "2026-02-19T23:01:43.227666Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 1.77
+    }
+  },
+  {
     "timestamp": "2026-02-19T22:29:45.259982Z",
     "market_id": "189845",
     "question": "US next strikes Iran on...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.77
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "79973",
-    "question": "2026 Seoul Mayoral Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "29005",
-    "question": "MegaETH airdrop by...?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 67.0,
-      "macro_sensitivity": 5.0
     }
   }
 ]

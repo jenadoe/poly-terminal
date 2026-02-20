@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T15:36:15.160217Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T15:36:15.160217Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 67.1,
+      "macro_sensitivity": 0.88
+    }
+  },
+  {
     "timestamp": "2026-02-20T14:51:41.582663Z",
     "market_id": "79973",
     "question": "2026 Seoul Mayoral Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.2,
       "macro_sensitivity": -0.62
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:10:11.576360Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.9,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T18:06:51.790392Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.0,
-      "macro_sensitivity": 0.48
     }
   }
 ]

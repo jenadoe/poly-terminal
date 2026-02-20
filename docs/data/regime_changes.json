@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T09:06:00.836552Z",
+    "market_id": "194105",
+    "question": "What price will XRP hit in February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.9,
+      "macro_sensitivity": 0.7
+    }
+  },
+  {
+    "timestamp": "2026-02-20T09:06:00.836552Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": -0.64
+    }
+  },
+  {
     "timestamp": "2026-02-20T08:24:47.448061Z",
     "market_id": "90178",
     "question": "Will Jesus Christ return before 2027?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 4.41
-    }
-  },
-  {
-    "timestamp": "2026-02-19T16:04:03.054293Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": -0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.74
     }
   }
 ]

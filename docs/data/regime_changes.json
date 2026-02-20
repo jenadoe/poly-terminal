@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-20T14:51:41.582663Z",
+    "market_id": "79973",
+    "question": "2026 Seoul Mayoral Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 91.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T14:51:41.582663Z",
+    "market_id": "129218",
+    "question": "Will Ilhan Omar resign by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.88
+    }
+  },
+  {
+    "timestamp": "2026-02-20T14:51:41.582663Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.92
+    }
+  },
+  {
+    "timestamp": "2026-02-20T14:51:41.582663Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.8,
+      "macro_sensitivity": 0.67
+    }
+  },
+  {
     "timestamp": "2026-02-20T10:41:46.625278Z",
     "market_id": "194105",
     "question": "What price will XRP hit in February?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 77.0,
       "macro_sensitivity": 0.48
-    }
-  },
-  {
-    "timestamp": "2026-02-19T18:06:51.790392Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 33.7,
-      "macro_sensitivity": 0.79
-    }
-  },
-  {
-    "timestamp": "2026-02-19T17:13:37.656115Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.11
-    }
-  },
-  {
-    "timestamp": "2026-02-19T17:13:37.656115Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.6,
-      "macro_sensitivity": -0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-19T17:13:37.656115Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": -0.1
     }
   }
 ]

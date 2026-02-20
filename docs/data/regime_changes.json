@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T20:56:31.138681Z",
+    "market_id": "98369",
+    "question": "Eurovision Winner 2026",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.6,
+      "macro_sensitivity": 0.6
+    }
+  },
+  {
+    "timestamp": "2026-02-20T20:56:31.138681Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.9
+    }
+  },
+  {
     "timestamp": "2026-02-20T19:53:57.524961Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.4,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T23:46:03.931040Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.82
-    }
-  },
-  {
-    "timestamp": "2026-02-19T23:46:03.931040Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.4
     }
   }
 ]

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-20T03:50:31.109615Z",
+    "market_id": "193747",
+    "question": "Kevin Warsh formally nominated as Fed Chair by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T03:50:31.109615Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "High Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.6,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-02-20T03:50:31.109615Z",
+    "market_id": "84575",
+    "question": "Epstein client list released by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.9,
+      "macro_sensitivity": -0.63
+    }
+  },
+  {
+    "timestamp": "2026-02-20T03:50:31.109615Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 88.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-20T02:14:19.632864Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -1.25
-    }
-  },
-  {
-    "timestamp": "2026-02-19T14:15:15.240546Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -0.75
-    }
-  },
-  {
-    "timestamp": "2026-02-19T14:15:15.240546Z",
-    "market_id": "145731",
-    "question": "Next leader out of power before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T13:01:25.123333Z",
-    "market_id": "145731",
-    "question": "Next leader out of power before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "168115",
-    "question": "Israel strikes Iran by February 28, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 45.6,
-      "macro_sensitivity": 5.0
     }
   }
 ]

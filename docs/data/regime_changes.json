@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T21:49:50.883067Z",
+    "market_id": "98369",
+    "question": "Eurovision Winner 2026",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.8
+    }
+  },
+  {
     "timestamp": "2026-02-20T21:24:41.027683Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 78.9,
       "macro_sensitivity": 0.49
-    }
-  },
-  {
-    "timestamp": "2026-02-20T02:14:19.632864Z",
-    "market_id": "129218",
-    "question": "Will Ilhan Omar resign by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.1,
-      "macro_sensitivity": 0.62
     }
   }
 ]

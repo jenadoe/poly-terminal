@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T17:06:45.618022Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.82
+    }
+  },
+  {
     "timestamp": "2026-02-20T16:19:48.071720Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.9,
       "macro_sensitivity": 0.68
-    }
-  },
-  {
-    "timestamp": "2026-02-19T20:30:32.250742Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -0.76
     }
   }
 ]

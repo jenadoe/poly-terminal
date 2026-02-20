@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T23:52:41.718999Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.78
+    }
+  },
+  {
     "timestamp": "2026-02-20T23:27:26.617725Z",
     "market_id": "208544",
     "question": "Elon Musk # tweets February 17 - February 24, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.72
-    }
-  },
-  {
-    "timestamp": "2026-02-20T05:32:41.057863Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-20T19:53:57.524961Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 55.1,
+      "macro_sensitivity": 0.66
+    }
+  },
+  {
+    "timestamp": "2026-02-20T19:53:57.524961Z",
+    "market_id": "107710",
+    "question": "2026 ICC T20 Men\u2019s World Cup Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.91
+    }
+  },
+  {
+    "timestamp": "2026-02-20T19:53:57.524961Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 35.0,
+      "macro_sensitivity": 0.7
+    }
+  },
+  {
     "timestamp": "2026-02-20T19:27:12.427301Z",
     "market_id": "22863",
     "question": "Will tariffs generate >$250b in 2025?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.4
-    }
-  },
-  {
-    "timestamp": "2026-02-19T23:01:43.227666Z",
-    "market_id": "160183",
-    "question": "Iran Strike on Israel by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T23:01:43.227666Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.77
-    }
-  },
-  {
-    "timestamp": "2026-02-19T22:29:45.259982Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
     }
   }
 ]

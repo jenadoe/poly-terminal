@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T22:24:06.506501Z",
+    "market_id": "209129",
+    "question": "Bitcoin above ___ on February 21?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 55.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T22:24:06.506501Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.5,
+      "macro_sensitivity": 0.69
+    }
+  },
+  {
     "timestamp": "2026-02-20T21:49:50.883067Z",
     "market_id": "98369",
     "question": "Eurovision Winner 2026",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.9,
       "macro_sensitivity": -0.63
-    }
-  },
-  {
-    "timestamp": "2026-02-20T03:50:31.109615Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 88.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-20T02:14:19.632864Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
-      "macro_sensitivity": 0.49
     }
   }
 ]

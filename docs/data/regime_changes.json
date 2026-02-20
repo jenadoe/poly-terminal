@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-20T07:37:20.205343Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -2.25
+    }
+  },
+  {
+    "timestamp": "2026-02-20T07:37:20.205343Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 2.63
+    }
+  },
+  {
+    "timestamp": "2026-02-20T07:37:20.205343Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.72
+    }
+  },
+  {
     "timestamp": "2026-02-20T05:32:41.057863Z",
     "market_id": "34038",
     "question": "Next Prime Minister of Hungary",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.1,
       "macro_sensitivity": -0.11
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 26.5,
-      "macro_sensitivity": 2.16
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "133675",
-    "question": "Opinion FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -0.79
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.0,
-      "macro_sensitivity": 0.68
     }
   }
 ]

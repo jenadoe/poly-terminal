@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T01:55:42.418061Z",
+    "market_id": "168115",
+    "question": "Israel strikes Iran by February 28, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": -5.0
+    }
+  },
+  {
     "timestamp": "2026-02-19T23:46:03.931040Z",
     "market_id": "33228",
     "question": "Which party wins 2028 US Presidential Election?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T12:27:36.382079Z",
-    "market_id": "153927",
-    "question": "Flying Tulip FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 1.53
     }
   }
 ]

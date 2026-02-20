@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-20T08:24:47.448061Z",
+    "market_id": "90178",
+    "question": "Will Jesus Christ return before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.88
+    }
+  },
+  {
+    "timestamp": "2026-02-20T08:24:47.448061Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T08:24:47.448061Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.5,
+      "macro_sensitivity": 0.75
+    }
+  },
+  {
+    "timestamp": "2026-02-20T08:24:47.448061Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 30.6,
+      "macro_sensitivity": -1.09
+    }
+  },
+  {
     "timestamp": "2026-02-20T07:37:20.205343Z",
     "market_id": "33659",
     "question": "Serie A League Winner ",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.74
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "194119",
-    "question": "What price will Solana hit in February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.67
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.21
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.5,
-      "macro_sensitivity": -1.09
-    }
-  },
-  {
-    "timestamp": "2026-02-19T15:09:38.674082Z",
-    "market_id": "31195",
-    "question": "Putin out as President of Russia by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": -0.11
     }
   }
 ]

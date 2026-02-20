@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-20T17:55:44.012486Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 45.8,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T17:55:44.012486Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.8,
+      "macro_sensitivity": 0.6
+    }
+  },
+  {
+    "timestamp": "2026-02-20T17:55:44.012486Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 87.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-20T17:06:45.618022Z",
     "market_id": "50386",
     "question": "Oscars 2026: Best Director Winner",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.7
-    }
-  },
-  {
-    "timestamp": "2026-02-19T21:01:01.099283Z",
-    "market_id": "100228",
-    "question": "Winter Games 2026: 2nd Most Gold Medals",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T21:01:01.099283Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T20:30:32.250742Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.9,
-      "macro_sensitivity": 0.68
     }
   }
 ]

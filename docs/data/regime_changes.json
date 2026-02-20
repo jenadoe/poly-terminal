@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T23:27:26.617725Z",
+    "market_id": "208544",
+    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 47.2,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T23:27:26.617725Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.77
+    }
+  },
+  {
     "timestamp": "2026-02-20T22:54:42.436475Z",
     "market_id": "98369",
     "question": "Eurovision Winner 2026",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-20T04:14:18.508290Z",
-    "market_id": "212454",
-    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 52.7,
-      "macro_sensitivity": 0.7
-    }
-  },
-  {
-    "timestamp": "2026-02-20T03:50:31.109615Z",
-    "market_id": "193747",
-    "question": "Kevin Warsh formally nominated as Fed Chair by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

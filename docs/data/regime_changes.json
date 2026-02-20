@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T19:27:12.427301Z",
+    "market_id": "22863",
+    "question": "Will tariffs generate >$250b in 2025?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
     "timestamp": "2026-02-20T18:43:17.693923Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T22:29:45.259982Z",
-    "market_id": "145731",
-    "question": "Next leader out of power before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -4.86
     }
   }
 ]

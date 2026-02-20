@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T10:41:46.625278Z",
+    "market_id": "194105",
+    "question": "What price will XRP hit in February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.6,
+      "macro_sensitivity": -0.02
+    }
+  },
+  {
     "timestamp": "2026-02-20T09:57:58.754601Z",
     "market_id": "194105",
     "question": "What price will XRP hit in February?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.0,
       "macro_sensitivity": -0.1
-    }
-  },
-  {
-    "timestamp": "2026-02-19T16:04:03.054293Z",
-    "market_id": "194119",
-    "question": "What price will Solana hit in February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.9,
-      "macro_sensitivity": 1.41
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T22:54:42.436475Z",
+    "market_id": "98369",
+    "question": "Eurovision Winner 2026",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.1,
+      "macro_sensitivity": 0.62
+    }
+  },
+  {
+    "timestamp": "2026-02-20T22:54:42.436475Z",
+    "market_id": "145731",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
     "timestamp": "2026-02-20T22:24:06.506501Z",
     "market_id": "209129",
     "question": "Bitcoin above ___ on February 21?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-20T03:50:31.109615Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.6,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-02-20T03:50:31.109615Z",
-    "market_id": "84575",
-    "question": "Epstein client list released by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.9,
-      "macro_sensitivity": -0.63
     }
   }
 ]

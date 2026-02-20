@@ -1,5 +1,115 @@
 [
   {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.92
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.9,
+      "macro_sensitivity": -0.57
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -2.74
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 1.52
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "73835",
+    "question": "edgeX FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.9,
+      "macro_sensitivity": 0.29
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "133675",
+    "question": "Opinion FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 86.2,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "20461",
+    "question": "Will GTA 6 cost $100+?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -1.39
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.76
+    }
+  },
+  {
+    "timestamp": "2026-02-20T16:19:48.071720Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 35.5,
+      "macro_sensitivity": 0.68
+    }
+  },
+  {
     "timestamp": "2026-02-20T15:36:15.160217Z",
     "market_id": "34038",
     "question": "Next Prime Minister of Hungary",
@@ -437,116 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -0.76
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "212454",
-    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 49.4,
-      "macro_sensitivity": 0.84
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "208544",
-    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.9
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.72
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "28628",
-    "question": "Israel x Iran ceasefire broken by...? ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 34.3,
-      "macro_sensitivity": 0.76
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.5,
-      "macro_sensitivity": -2.87
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:51:21.558911Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 49.3,
-      "macro_sensitivity": 5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:10:11.576360Z",
-    "market_id": "212454",
-    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 53.3,
-      "macro_sensitivity": 0.56
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:10:11.576360Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.7,
-      "macro_sensitivity": 0.69
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:10:11.576360Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.2,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-02-19T19:10:11.576360Z",
-    "market_id": "84575",
-    "question": "Epstein client list released by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 50.2,
-      "macro_sensitivity": -0.62
     }
   }
 ]

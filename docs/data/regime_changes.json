@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-20T21:24:41.027683Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T21:24:41.027683Z",
+    "market_id": "169319",
+    "question": "Will Elon Musk buy Ryanair?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.8,
+      "macro_sensitivity": -0.32
+    }
+  },
+  {
+    "timestamp": "2026-02-20T21:24:41.027683Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 35.3,
+      "macro_sensitivity": 0.69
+    }
+  },
+  {
     "timestamp": "2026-02-20T20:56:31.138681Z",
     "market_id": "98369",
     "question": "Eurovision Winner 2026",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 68.1,
       "macro_sensitivity": 0.62
-    }
-  },
-  {
-    "timestamp": "2026-02-20T02:14:19.632864Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 84.2,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-02-20T01:55:42.418061Z",
-    "market_id": "168115",
-    "question": "Israel strikes Iran by February 28, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 45.7,
-      "macro_sensitivity": -5.0
-    }
-  },
-  {
-    "timestamp": "2026-02-19T23:46:03.931040Z",
-    "market_id": "33228",
-    "question": "Which party wins 2028 US Presidential Election?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-20T18:43:17.693923Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-20T18:43:17.693923Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.69
+    }
+  },
+  {
     "timestamp": "2026-02-20T17:55:44.012486Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -4.86
-    }
-  },
-  {
-    "timestamp": "2026-02-19T21:49:22.394708Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.71
-    }
-  },
-  {
-    "timestamp": "2026-02-19T21:49:22.394708Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.7
     }
   }
 ]

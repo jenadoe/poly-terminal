@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-20T05:32:41.057863Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
     "timestamp": "2026-02-20T04:14:18.508290Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.0,
       "macro_sensitivity": 0.68
-    }
-  },
-  {
-    "timestamp": "2026-02-19T14:15:15.240546Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.7,
-      "macro_sensitivity": 0.7
     }
   }
 ]

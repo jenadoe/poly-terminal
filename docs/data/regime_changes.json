@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-02-21T05:56:52.671078Z",
+    "market_id": "193747",
+    "question": "Kevin Warsh formally nominated as Fed Chair by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 34.5,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T05:56:52.671078Z",
+    "market_id": "34052",
+    "question": "Zelenskyy out as Ukraine president by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.3,
+      "macro_sensitivity": -0.59
+    }
+  },
+  {
+    "timestamp": "2026-02-21T05:56:52.671078Z",
+    "market_id": "89519",
+    "question": "What price will Ethereum hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.91
+    }
+  },
+  {
+    "timestamp": "2026-02-21T05:56:52.671078Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.2,
+      "macro_sensitivity": -1.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T05:56:52.671078Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -1.98
+    }
+  },
+  {
     "timestamp": "2026-02-21T05:12:17.115933Z",
     "market_id": "202857",
     "question": "NFL Champion 2027",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.2,
       "macro_sensitivity": -2.06
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -1.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -1.45
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "73236",
-    "question": "Metamask FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 55.2,
-      "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "145536",
-    "question": "Will the U.S. invade Greenland in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "35886",
-    "question": "Will Bitcoin hit $80k or $150k first?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": -3.0
     }
   }
 ]

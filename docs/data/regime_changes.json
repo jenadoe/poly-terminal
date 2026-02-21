@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-21T20:49:17.937851Z",
+    "market_id": "71692",
+    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-21T20:23:02.952289Z",
     "market_id": "100300",
     "question": "Winter Games 2026: Ice Hockey Gold Medal Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "194119",
-    "question": "What price will Solana hit in February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.4,
       "macro_sensitivity": 0.0
     }
   }

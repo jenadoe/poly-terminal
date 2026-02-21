@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-21T12:42:16.459282Z",
+    "market_id": "36173",
+    "question": "When will Bitcoin hit $150k?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T12:42:16.459282Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-21T11:09:22.493530Z",
     "market_id": "211240",
     "question": "What price will Bitcoin hit February 16-22?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 92.5,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 87.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

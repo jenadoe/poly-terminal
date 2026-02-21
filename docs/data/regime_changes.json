@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-21T06:42:36.439218Z",
+    "market_id": "211240",
+    "question": "What price will Bitcoin hit February 16-22?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 47.3,
+      "macro_sensitivity": -3.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T06:42:36.439218Z",
+    "market_id": "32756",
+    "question": "NBA Western Conference Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 70.8,
+      "macro_sensitivity": -0.24
+    }
+  },
+  {
+    "timestamp": "2026-02-21T06:42:36.439218Z",
+    "market_id": "30829",
+    "question": "Democratic Presidential Nominee 2028",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.0,
+      "macro_sensitivity": -0.09
+    }
+  },
+  {
     "timestamp": "2026-02-21T05:56:52.671078Z",
     "market_id": "193747",
     "question": "Kevin Warsh formally nominated as Fed Chair by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "33647",
-    "question": "Will Russia capture Lyman by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -0.96
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "105695",
-    "question": "Will the US officially declare war on Venezuela by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.17
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "38532",
-    "question": "UEFA Europa League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": -2.06
     }
   }
 ]

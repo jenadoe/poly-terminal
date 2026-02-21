@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-02-21T19:13:07.907180Z",
+    "market_id": "153927",
+    "question": "Flying Tulip FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.1,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-02-21T19:13:07.907180Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-02-21T19:13:07.907180Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T19:13:07.907180Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.5,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-02-21T19:13:07.907180Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-21T18:43:50.586234Z",
     "market_id": "189550",
     "question": "Will Opinion launch a token by ___?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.3,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 85.4,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "48292",
-    "question": "OpenAI IPO Closing Market Cap",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.3,
-      "macro_sensitivity": 0.01
     }
   }
 ]

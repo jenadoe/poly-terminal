@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-21T09:34:04.080303Z",
+    "market_id": "153505",
+    "question": "X banned in U.K. by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.8,
+      "macro_sensitivity": -0.42
+    }
+  },
+  {
     "timestamp": "2026-02-21T08:57:55.268725Z",
     "market_id": "160707",
     "question": "Russia x Ukraine ceasefire by June 30, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -1.77
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -1.36
     }
   }
 ]

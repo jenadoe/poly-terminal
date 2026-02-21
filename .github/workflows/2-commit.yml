@@ -54,9 +54,10 @@ jobs:
             cp -rf ../temp_data/archive_events/* data_output/archive/ || true
           fi
           
-          # 3. API 데이터 (덮어쓰기)
+          # 3. API 데이터 (삭제 후 재복사 — cp -rf는 삭제를 반영 못함)
           if [ -d ../temp_data/api ]; then
-            cp -rf ../temp_data/api/* data_output/api/ || true
+            rm -rf data_output/api/
+            cp -rf ../temp_data/api data_output/
           fi
           
           # 4. [Audit] 로그 파일 복사 (여기가 핵심)

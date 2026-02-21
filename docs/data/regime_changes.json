@@ -1,5 +1,170 @@
 [
   {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "210176",
+    "question": "LoL: Gen.G vs BNK FEARX (BO5) - LCK Cup Playoffs",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "205193",
+    "question": "Bitcoin above ___ on February 18?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 55.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "100228",
+    "question": "Winter Games 2026: 2nd Most Gold Medals",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "79229",
+    "question": "US x Iran nuclear talks resume by March 31? ",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "190338",
+    "question": "Which company has the best AI model end of February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "192924",
+    "question": "Next Country US Strikes",
+    "from_regime": "Volatile",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 95.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "190673",
+    "question": "Total commitments for the Hurupay public sale on MetaDAO",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "186419",
+    "question": "Moonbirds FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 58.4,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Low Liquidity",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.1,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "20461",
+    "question": "Will GTA 6 cost $100+?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "41353",
+    "question": "Supreme Court rules in favor of Trump's tariffs?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 91.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "121900",
+    "question": "Logan Paul\u2019s Pikachu Illustrator Sale Price",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "84841",
+    "question": "Epstein blackmail evidence released by...? ",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T17:42:03.641004Z",
+    "market_id": "31552",
+    "question": "Presidential Election Winner 2028",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-21T14:44:41.256805Z",
     "market_id": "100228",
     "question": "Winter Games 2026: 2nd Most Gold Medals",
@@ -382,171 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 91.3,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "50301",
-    "question": "Oscars 2026: Best Supporting Actress Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "25815",
-    "question": "Israel and Syria normalize relations by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "85485",
-    "question": "How high will Polymarket's mindshare go?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.5,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.8,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "75478",
-    "question": "Fed decision in April?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 87.8,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 90.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "73236",
-    "question": "Metamask FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "108634",
-    "question": "Will the Iranian regime fall by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.8,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "63433",
-    "question": "NBA Win Totals: Over or Under?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.3,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 85.6,
-      "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.2,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.3,
-      "macro_sensitivity": 0.01
     }
   }
 ]

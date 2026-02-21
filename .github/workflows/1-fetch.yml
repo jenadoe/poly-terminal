@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Private Brain
         uses: actions/checkout@v4
         with:
-          repository: jenadoe/poly-core # [본인 ID 확인]
+          repository: ${{ secrets.PRIVATE_REPO }}
           token: ${{ secrets.TOKEN1 }}
           path: private-brain
 

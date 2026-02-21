@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-21T14:44:41.256805Z",
+    "market_id": "100228",
+    "question": "Winter Games 2026: 2nd Most Gold Medals",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.4,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-02-21T14:03:10.549768Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 73.3,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "22863",
-    "question": "Will tariffs generate >$250b in 2025?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.1,
       "macro_sensitivity": 0.01
     }
   }

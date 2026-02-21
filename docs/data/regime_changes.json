@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-21T07:21:04.460608Z",
+    "market_id": "153505",
+    "question": "X banned in U.K. by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.8,
+      "macro_sensitivity": -0.33
+    }
+  },
+  {
+    "timestamp": "2026-02-21T07:21:04.460608Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 1.41
+    }
+  },
+  {
+    "timestamp": "2026-02-21T07:21:04.460608Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.88
+    }
+  },
+  {
     "timestamp": "2026-02-21T06:42:36.439218Z",
     "market_id": "211240",
     "question": "What price will Bitcoin hit February 16-22?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": -1.24
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.43
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 45.7,
-      "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "181516",
-    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
     }
   }
 ]

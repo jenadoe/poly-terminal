@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-21T07:51:29.783566Z",
+    "market_id": "85485",
+    "question": "How high will Polymarket's mindshare go?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 19.5,
+      "macro_sensitivity": 3.0
+    }
+  },
+  {
     "timestamp": "2026-02-21T07:21:04.460608Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": -1.24
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-21T10:32:02.756792Z",
+    "market_id": "50301",
+    "question": "Oscars 2026: Best Supporting Actress Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.87
+    }
+  },
+  {
     "timestamp": "2026-02-21T09:58:22.174791Z",
     "market_id": "98374",
     "question": "SpaceX IPO Closing Market Cap",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -0.99
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "102774",
-    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
     }
   }
 ]

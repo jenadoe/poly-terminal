@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-21T08:57:55.268725Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -1.71
+    }
+  },
+  {
+    "timestamp": "2026-02-21T08:57:55.268725Z",
+    "market_id": "153505",
+    "question": "X banned in U.K. by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -1.54
+    }
+  },
+  {
+    "timestamp": "2026-02-21T08:57:55.268725Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.83
+    }
+  },
+  {
     "timestamp": "2026-02-21T08:28:47.169190Z",
     "market_id": "32228",
     "question": "Balance of Power: 2026 Midterms",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -1.36
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "79229",
-    "question": "US x Iran nuclear talks resume by March 31? ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.91
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "153505",
-    "question": "X banned in U.K. by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -2.8
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "17858",
-    "question": "Ukraine recognizes Russian sovereignty over its territory by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 35.2,
-      "macro_sensitivity": -2.99
     }
   }
 ]

@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "189550",
+    "question": "Will Opinion launch a token by ___?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 90.1,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "64731",
+    "question": "Billionaire one-time wealth tax passes in California election 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "160183",
+    "question": "Iran Strike on Israel by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 61.3,
+      "macro_sensitivity": 0.32
+    }
+  },
+  {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "31195",
+    "question": "Putin out as President of Russia by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 89.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-21T18:43:50.586234Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-21T17:42:03.641004Z",
     "market_id": "210176",
     "question": "LoL: Gen.G vs BNK FEARX (BO5) - LCK Cup Playoffs",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 77.3,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "174562",
-    "question": "Nuggets vs. Grizzlies",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.5,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "186419",
-    "question": "Moonbirds FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.1,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "33647",
-    "question": "Will Russia capture Lyman by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "38532",
-    "question": "UEFA Europa League Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "38528",
-    "question": "GPT ads by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 91.3,
-      "macro_sensitivity": 0.03
     }
   }
 ]

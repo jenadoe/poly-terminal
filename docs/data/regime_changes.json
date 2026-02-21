@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-21T08:28:47.169190Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.84
+    }
+  },
+  {
+    "timestamp": "2026-02-21T08:28:47.169190Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.9
+    }
+  },
+  {
     "timestamp": "2026-02-21T07:51:29.783566Z",
     "market_id": "85485",
     "question": "How high will Polymarket's mindshare go?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 35.2,
       "macro_sensitivity": -2.99
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -1.06
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "97361",
-    "question": "How many 7.0 or above earthquakes by June 30?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-21T20:23:02.952289Z",
+    "market_id": "100300",
+    "question": "Winter Games 2026: Ice Hockey Gold Medal Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.5,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-02-21T20:23:02.952289Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 52.8,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
     "timestamp": "2026-02-21T19:37:26.573067Z",
     "market_id": "36308",
     "question": "Claude 5 released by\u2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 66.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "194107",
-    "question": "What price will Bitcoin hit in February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.5,
       "macro_sensitivity": 0.0
     }
   }

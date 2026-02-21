@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-21T09:58:22.174791Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "High Confidence",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": -0.7
+    }
+  },
+  {
+    "timestamp": "2026-02-21T09:58:22.174791Z",
+    "market_id": "133675",
+    "question": "Opinion FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.8,
+      "macro_sensitivity": -0.47
+    }
+  },
+  {
+    "timestamp": "2026-02-21T09:58:22.174791Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 94.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-21T09:34:04.080303Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 43.1,
-      "macro_sensitivity": -2.16
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "100300",
-    "question": "Winter Games 2026: Ice Hockey Gold Medal Winner ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -3.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T01:50:41.133132Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": -1.77
     }
   }
 ]

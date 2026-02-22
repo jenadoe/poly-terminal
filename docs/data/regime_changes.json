@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-22T18:47:14.319079Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 68.9,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-02-22T18:47:14.319079Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
     "timestamp": "2026-02-22T17:42:53.073983Z",
     "market_id": "202857",
     "question": "NFL Champion 2027",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "186419",
-    "question": "Moonbirds FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 58.4,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "38901",
-    "question": "Will Russia capture Rodynske by...?",
-    "from_regime": "Low Liquidity",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.1,
-      "macro_sensitivity": 0.26
     }
   }
 ]

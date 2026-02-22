@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T22:26:38.667419Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 69.2,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
     "timestamp": "2026-02-22T19:45:55.924892Z",
     "market_id": "125871",
     "question": "Will Silver (SI) hit__ by end of June?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 95.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "190673",
-    "question": "Total commitments for the Hurupay public sale on MetaDAO",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T07:54:24.825043Z",
+    "market_id": "190996",
+    "question": "Ilhan Omar town hall attack staged?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-22T07:22:31.356166Z",
     "market_id": "29005",
     "question": "MegaETH airdrop by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.3,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 59.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

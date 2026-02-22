@@ -9,17 +9,17 @@
     <style>
         :root {
             --bg:        #0d1420;
-            --bg-2:      #111827;
-            --bg-card:   #161f2e;
+            --bg-2:      #101929;
+            --bg-card:   #1a2540;
             --blue:      #60a5fa;
             --blue-dim:  #3b82f6;
             --blue-glow: rgba(96,165,250,0.15);
-            --text-hi:   #e2e8f0;
-            --text:      #94a3b8;
-            --text-mid:  #6b82a0;
-            --text-dim:  #3d5068;
-            --border:    #1e2d42;
-            --border-hi: #2d4260;
+            --text-hi:   #e8edf5;
+            --text:      #a8bcd4;
+            --text-mid:  #7a96b4;
+            --text-dim:  #526a85;
+            --border:    #1e3050;
+            --border-hi: #2d4870;
             --mono: 'JetBrains Mono', monospace;
             --sans: 'Syne', sans-serif;
         }
@@ -41,7 +41,7 @@
         .topbar {
             display:flex; align-items:center; justify-content:space-between;
             padding:8px 32px; border-bottom:1px solid var(--border);
-            background:#0a0f18; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.1em;
+            background:#0a0f18; font-size:0.72rem; color:#526a85; letter-spacing:0.1em;
         }
         .topbar-left { display:flex; gap:24px; }
         .live-dot {
@@ -78,15 +78,15 @@
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
         }
         .kpi-card.primary { border-left-color:var(--blue); }
-        .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--text-mid); margin-bottom:6px; }
+        .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
         .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); }
         .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
-        .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-dim); }
+        .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-mid); }
 
         /* ── CHARTS ── */
         .chart-grid { display:grid; grid-template-columns:280px 1fr; gap:12px; margin-bottom:28px; }
         .chart-card { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:18px; }
-        .chart-card h3 { font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-mid); margin-bottom:14px; }
+        .chart-card h3 { font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#7a96b4; margin-bottom:14px; }
         .chart-wrap { position:relative; height:210px; }
 
         /* ── SECTION HEAD ── */
@@ -103,7 +103,7 @@
             padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
         }
         .section-desc {
-            font-size:0.7rem; color:var(--text-dim); margin-bottom:14px;
+            font-size:0.7rem; color:var(--text-mid); margin-bottom:14px;
             letter-spacing:0.04em; padding-left:2px;
         }
 
@@ -137,19 +137,19 @@
             color:var(--text-hi); margin-bottom:8px;
         }
         .card-title {
-            font-size:0.75rem; color:var(--text); line-height:1.45;
+            font-size:0.75rem; color:#b8ccdf; line-height:1.45;
             display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
             line-clamp:3;
             overflow:hidden; font-weight:500;
             flex:1;
         }
         .card-meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
-        .card-vol { font-size:0.62rem; color:var(--text-dim); }
-        .card-macro { font-size:0.6rem; color:var(--text-dim); }
+        .card-vol { font-size:0.62rem; color:var(--text-mid); }
+        .card-macro { font-size:0.6rem; color:var(--text-mid); }
 
         .card-bars { margin-top:10px; display:flex; flex-direction:column; gap:4px; }
         .card-bar-row { display:flex; align-items:center; gap:5px; }
-        .card-bar-key { font-size:0.5rem; color:var(--text-dim); width:24px; flex-shrink:0; }
+        .card-bar-key { font-size:0.5rem; color:#5a7a9a; width:24px; flex-shrink:0; }
         .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
         .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
         .bar-liq { background:#60a5fa; }
@@ -160,7 +160,7 @@
         .card-cat {
             display:inline-block; font-size:0.5rem; padding:1px 5px;
             border-radius:2px; background:var(--border); color:var(--text-dim);
-            letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;
+            letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px; color:#7a96b4;
         }
 
         .card-arrow {
@@ -222,13 +222,13 @@
         .panel-section { margin-bottom:22px; }
         .panel-section-label {
             font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase;
-            color:var(--text-dim); margin-bottom:10px; font-weight:500;
+            color:#5a7a9a; margin-bottom:10px; font-weight:500;
         }
 
         /* Component bars in panel */
         .panel-bars { display:flex; flex-direction:column; gap:8px; }
         .panel-bar-row { display:flex; align-items:center; gap:10px; }
-        .panel-bar-name { font-size:0.65rem; color:var(--text-mid); width:100px; flex-shrink:0; }
+        .panel-bar-name { font-size:0.65rem; color:#7a96b2; width:100px; flex-shrink:0; }
         .panel-bar-bg { flex:1; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
         .panel-bar-fill { height:100%; border-radius:3px; background:var(--blue); transition:width 0.6s cubic-bezier(0.4,0,0.2,1); }
         .panel-bar-fill.bar-liq  { background:#60a5fa; }
@@ -240,7 +240,7 @@
         /* Stat grid in panel */
         .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
         .stat-item { background:var(--bg-card); border:1px solid var(--border); border-radius:5px; padding:10px 14px; }
-        .stat-label { font-size:0.58rem; color:var(--text-dim); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
+        .stat-label { font-size:0.58rem; color:#5a7a9a; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
         .stat-value { font-size:1.1rem; font-weight:700; color:var(--text-hi); font-variant-numeric:tabular-nums; }
 
         /* Sparkline in panel */
@@ -447,18 +447,34 @@ const STATES = [
         desc: 'Strong liquidity, efficient pricing, and low macro dependency. These markets are structurally sound for citation and research use.',
         context: d => {
             const subs = {Liquidity:d.c1||0, Efficiency:d.c2||0, Independence:d.c3||0, Convergence:d.c4||0};
-            const weakest = Object.entries(subs).sort((a,b)=>a[1]-b[1])[0];
-            const riskNote = {
-                Liquidity: 'watch for depth changes near resolution — thin liquidity can cause sharp repricing.',
-                Efficiency: 'monitor probability sum for late-stage drift.',
-                Independence: 'low-level macro correlation present — not disqualifying but watch on high-volatility days.',
-                Convergence: 'outcomes have not fully converged yet — state may upgrade further as resolution approaches.',
-            }[weakest[0]];
-            if(weakest[1] < 85){
-                return `Structural integrity verified. Weakest dimension is <strong>${weakest[0]} (${weakest[1].toFixed(0)}/100)</strong> — ${riskNote}`;
+            const sorted = Object.entries(subs).sort((a,b)=>a[1]-b[1]);
+            const weakest = sorted[0];
+            const strongest = sorted[sorted.length-1];
+            const score = parseFloat(d.nexus_score)||0;
+
+            // 약점 기반 진단
+            if(weakest[1] < 80){
+                const riskMap = {
+                    Liquidity:   `Liquidity at <strong>${weakest[1].toFixed(0)}/100</strong> is the binding constraint — capital depth is adequate but not deep. A large position or sudden news event could cause outsized price movement near resolution.`,
+                    Efficiency:  `Efficiency at <strong>${weakest[1].toFixed(0)}/100</strong> indicates the probability sum has mild drift — monitor for late-stage divergence as the market approaches its resolution date.`,
+                    Independence:`Independence at <strong>${weakest[1].toFixed(0)}/100</strong> shows residual macro correlation. Not disqualifying, but probability may temporarily distort on high-volatility BTC or equity days.`,
+                    Convergence: `Convergence at <strong>${weakest[1].toFixed(0)}/100</strong> — outcomes are still being priced in. Score will likely improve further as the resolution date approaches and informed capital consolidates.`,
+                };
+                return `Structurally verified — <strong>${strongest[0]}</strong> is the strongest dimension at ${strongest[1].toFixed(0)}/100. ${riskMap[weakest[0]]}`;
             }
-            const strongest = Object.entries(subs).sort((a,b)=>b[1]-a[1])[0];
-            return `All four integrity dimensions above threshold. Score driven by high <strong>${strongest[0].toLowerCase()}</strong> — market has reached structural maturity and is safe to cite.`;
+
+            // 전부 85+ — 어떤 게 이 마켓을 특별하게 만드는지
+            const vol = d.volume||0;
+            if(vol > 10e6){
+                return `Deep liquidity market — <strong>${(vol/1e6).toFixed(1)}M</strong> in volume provides robust price discovery. All four integrity dimensions above 85. High-volume HC markets carry the strongest signal fidelity and are appropriate for institutional citation.`;
+            }
+            if((d.c3||0) >= 99){
+                return `Independence score <strong>${(d.c3||0).toFixed(0)}/100</strong> — price movements are entirely event-driven with no detectable macro correlation. This is rare and reflects a market insulated from BTC/SPY noise.`;
+            }
+            if((d.c4||0) >= 99){
+                return `Near-perfect convergence (<strong>${(d.c4||0).toFixed(0)}/100</strong>) — the market has fully absorbed available information and outcomes are stably priced. Low repricing risk ahead of resolution.`;
+            }
+            return `All four dimensions above threshold. Score <strong>${score}</strong> reflects balanced structural integrity — no single dimension is dominant or deficient. Appropriate for citation and research use.`;
         },
     },
     {
@@ -472,13 +488,25 @@ const STATES = [
         desc: 'Structurally sound markets currently in active price discovery. Scores reflect real-time information aggregation.',
         context: d => {
             const cnv = d.c4||0;
+            const liq = d.c1||0;
+            const ind = d.c3||0;
             const score = parseFloat(d.nexus_score)||0;
+            const macro = d.macro_sensitivity||0;
+
             if(score >= 75){
-                return `Near High Confidence threshold (score <strong>${score}</strong>). Convergence at ${cnv.toFixed(0)}/100 — one strong price move toward resolution could push this to citable status.`;
-            } else if(cnv < 60){
-                return `Active price discovery ongoing — convergence at <strong>${cnv.toFixed(0)}/100</strong> indicates outcomes have not yet stabilized. Watch for HC transition as resolution date approaches.`;
+                const gap = 80 - score;
+                return `Near High Confidence threshold — <strong>${gap.toFixed(1)} pts</strong> from citable status. ${cnv < 75 ? `Convergence (${cnv.toFixed(0)}/100) is the primary blocker; a sustained price move toward resolution would push this over.` : `Liquidity (${liq.toFixed(0)}/100) is the limiting factor — volume depth needs to deepen slightly.`}`;
             }
-            return `Functional market with macro sensitivity of <strong>${(d.macro_sensitivity||0).toFixed(2)}</strong> — within acceptable range. Independence at ${(d.c3||0).toFixed(0)}/100 confirms event-driven pricing.`;
+            if(cnv < 55){
+                return `Early price discovery phase — convergence at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't yet found a stable equilibrium. Outcomes remain genuinely uncertain and are actively being repriced as new information arrives.`;
+            }
+            if(macro > 0.3){
+                return `Mild macro correlation detected (β <strong>${macro.toFixed(2)}</strong>) — not enough to trigger Macro-Driven classification, but probability may temporarily shift on high-volatility crypto or equity days. Independence at ${ind.toFixed(0)}/100.`;
+            }
+            if(liq < 65){
+                return `Liquidity at <strong>${liq.toFixed(0)}/100</strong> is below average for this tier — price discovery is occurring but with limited capital depth. Score will improve as volume accumulates closer to resolution.`;
+            }
+            return `Functional market in active price discovery. Macro sensitivity <strong>${macro.toFixed(2)}</strong> is within acceptable range — price movements are primarily event-driven. Monitor convergence trend for HC transition.`;
         },
     },
     {
@@ -493,12 +521,21 @@ const STATES = [
         context: d => {
             const cat = d.category||'';
             const financialCats = ['Crypto','Finance','Economy'];
-            const beta = (d.macro_sensitivity||0).toFixed(2);
-            const ind = (d.c3||0).toFixed(0);
-            if(financialCats.includes(cat)){
-                return `Confirmed macro dependency in a <strong>${cat}</strong> market — price is tracking external assets directly (β ${beta}). Independence at ${ind}/100. Probability reflects sentiment, not event fundamentals.`;
+            const beta = d.macro_sensitivity||0;
+            const ind = d.c3||0;
+            const liq = d.c1||0;
+            const isFinancial = financialCats.includes(cat);
+
+            if(beta > 1.0){
+                return `Extreme macro dependency — β <strong>${beta.toFixed(2)}</strong> means this market moves nearly in lockstep with external assets. ${isFinancial ? 'This is a financial instrument disguised as an event market.' : `Unusual for a ${cat} market — high probability of spurious correlation from a shared news cycle rather than genuine asset linkage.`} Independence at ${ind.toFixed(0)}/100.`;
             }
-            return `Macro signal detected in a <strong>${cat||'non-financial'}</strong> market (β ${beta}). Likely cause: correlated news cycle rather than genuine asset dependency. Independence ${ind}/100 — correlation may dissolve as event-specific information emerges.`;
+            if(isFinancial){
+                return `Confirmed macro dependency in a <strong>${cat}</strong> market (β ${beta.toFixed(2)}). Price tracks external assets directly — Independence at ${ind.toFixed(0)}/100 reflects this structural coupling. Probability reflects market sentiment, not event-specific fundamentals. Useful for cross-asset analysis.`;
+            }
+            if(ind < 30){
+                return `Independence severely suppressed at <strong>${ind.toFixed(0)}/100</strong> in a ${cat||'non-financial'} market (β ${beta.toFixed(2)}). Likely explanation: a macro event and this outcome moved simultaneously, creating a statistical correlation that may not be structurally persistent. Monitor next 48h for regime change.`;
+            }
+            return `Macro signal detected in a <strong>${cat||'non-financial'}</strong> market (β ${beta.toFixed(2)}). Most likely cause: correlated news cycle rather than genuine asset dependency — Independence at ${ind.toFixed(0)}/100 suggests the coupling may be temporary. ${liq > 70 ? 'Liquidity is solid; if macro pressure recedes, this could revert to Active.' : 'Thin liquidity amplifies the sensitivity reading.'}`;
         },
     },
     {
@@ -512,12 +549,21 @@ const STATES = [
         desc: 'Thin liquidity or insufficient observation history. Nexus Score may not fully reflect true market quality.',
         context: d => {
             const vol = d.volume||0;
-            const liq = (d.c1||0).toFixed(0);
-            const eff = (d.c2||0).toFixed(0);
-            if(vol < 100000){
-                return `Thin market: <strong>${fmtVol(vol)}</strong> total volume is below the threshold for reliable price discovery. Sub-scores are statistically unreliable at this depth — Liquidity at ${liq}/100.`;
+            const liq = d.c1||0;
+            const eff = d.c2||0;
+            const cnv = d.c4||0;
+            const score = parseFloat(d.nexus_score)||0;
+
+            if(vol < 10000){
+                return `Near-zero volume — <strong>${(vol).toFixed(0)}</strong> in total trades. Price discovery has not yet begun; current probabilities reflect initial market maker positioning, not genuine crowd intelligence. Do not cite or trade.`;
             }
-            return `Despite ${fmtVol(vol)} volume, structural integrity is insufficient. Efficiency ${eff}/100 suggests probability sum may be drifting — possible unresolved outcome ambiguity.`;
+            if(eff < 40){
+                return `Structural failure: Efficiency at <strong>${eff.toFixed(0)}/100</strong> means the probability sum has diverged significantly from 100%. The market is internally inconsistent — this is a data quality or resolution ambiguity issue, not just thin volume. Avoid.`;
+            }
+            if(liq < 30){
+                return `Extremely thin liquidity (${(vol/1e3).toFixed(0)}K volume, LIQ <strong>${liq.toFixed(0)}/100</strong>) — even small orders could move the price materially. Score ${score} is unreliable at this depth and may not reflect true market consensus.`;
+            }
+            return `Volume at <strong>${(vol/1e6).toFixed(2)}M</strong> provides some signal but insufficient depth for reliable structural scoring. Efficiency ${eff.toFixed(0)}/100 and Convergence ${cnv.toFixed(0)}/100 suggest the market is forming but hasn't matured. Check back as volume accumulates.`;
         },
     },
 ];

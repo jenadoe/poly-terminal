@@ -432,6 +432,7 @@ function cleanQuestion(q){
     const after = q.slice(sep + 3).trim();
     return after || q.slice(0, sep + 1).trim();
 }
+function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
 
 // ── STATE CONFIG ───────────────────────────────────────────
 const STATES = [

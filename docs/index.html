@@ -148,16 +148,23 @@
         .card-bar-key { font-size:0.5rem; color:var(--text-dim); width:24px; flex-shrink:0; }
         .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
         .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
-        .bar-liq { opacity:1.0; } .bar-eff { opacity:0.75; } .bar-ind { opacity:0.55; } .bar-conv { opacity:0.88; }
+        .bar-liq { background:#60a5fa; opacity:1.0; }
+        .bar-eff { background:#34d399; opacity:1.0; }
+        .bar-ind { background:#a78bfa; opacity:1.0; }
+        .bar-conv{ background:#f472b6; opacity:1.0; }
 
-        .card-arrow {
+        .card-cat {
+            display:inline-block; font-size:0.5rem; padding:1px 5px;
+            border-radius:2px; background:var(--border); color:var(--text-dim);
+            letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;
+        }
             position:absolute; top:12px; right:12px;
             font-size:0.6rem; color:var(--text-dim);
             opacity:0; transition:opacity 0.15s;
         }
         .event-card:hover .card-arrow { opacity:1; }
 
-        /* ── DETAIL PANEL ── */
+        .card-arrow {
         .panel-overlay {
             position:fixed; inset:0; background:rgba(10,15,24,0.6);
             z-index:100; opacity:0; pointer-events:none;
@@ -219,6 +226,10 @@
         .panel-bar-name { font-size:0.65rem; color:var(--text-mid); width:100px; flex-shrink:0; }
         .panel-bar-bg { flex:1; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
         .panel-bar-fill { height:100%; border-radius:3px; background:var(--blue); transition:width 0.6s cubic-bezier(0.4,0,0.2,1); }
+        .panel-bar-fill.bar-liq  { background:#60a5fa; }
+        .panel-bar-fill.bar-eff  { background:#34d399; }
+        .panel-bar-fill.bar-ind  { background:#a78bfa; }
+        .panel-bar-fill.bar-conv { background:#f472b6; }
         .panel-bar-val { font-size:0.65rem; color:var(--text); width:32px; text-align:right; font-variant-numeric:tabular-nums; }
 
         /* Stat grid in panel */
@@ -264,7 +275,7 @@
 <div class="topbar">
     <div class="topbar-left">
         <span><span class="live-dot"></span>SYSTEM ONLINE</span>
-        <span>ENGINE V3.0</span>
+        <span>ENGINE V4.1</span>
     </div>
     <span id="live-clock">--:--:-- UTC</span>
 </div>
@@ -276,7 +287,7 @@
     </div>
     <div class="header-meta">
         <div>UPDATED <strong id="last-update">—</strong></div>
-        <div>ENGINE <strong>V3.0 // NEXUS SCORE™</strong></div>
+        <div>ENGINE <strong>V4.1 // NEXUS SCORE™</strong></div>
     </div>
 </header>
 
@@ -422,7 +433,21 @@ const STATES = [
         badgeCls: 'badge-citable',
         badgeText: 'CITABLE',
         desc: 'Strong liquidity, efficient pricing, and low macro dependency. These markets are structurally sound for citation and research use.',
-        context: s => `This market demonstrates <strong>robust structural integrity</strong> across all four Nexus dimensions. Nexus Score ${s.nexus_score} reflects deep liquidity, efficient price formation, independence from macro factors, and stable convergence. Appropriate for institutional citation.`,
+        context: d => {
+            const subs = {Liquidity:d.c1||0, Efficiency:d.c2||0, Independence:d.c3||0, Convergence:d.c4||0};
+            const weakest = Object.entries(subs).sort((a,b)=>a[1]-b[1])[0];
+            const riskNote = {
+                Liquidity: 'watch for depth changes near resolution — thin liquidity can cause sharp repricing.',
+                Efficiency: 'monitor probability sum for late-stage drift.',
+                Independence: 'low-level macro correlation present — not disqualifying but watch on high-volatility days.',
+                Convergence: 'outcomes have not fully converged yet — state may upgrade further as resolution approaches.',
+            }[weakest[0]];
+            if(weakest[1] < 85){
+                return `Structural integrity verified. Weakest dimension is <strong>${weakest[0]} (${weakest[1].toFixed(0)}/100)</strong> — ${riskNote}`;
+            }
+            const strongest = Object.entries(subs).sort((a,b)=>b[1]-a[1])[0];
+            return `All four integrity dimensions above threshold. Score driven by high <strong>${strongest[0].toLowerCase()}</strong> — market has reached structural maturity and is safe to cite.`;
+        },
     },
     {
         key: 'active',
@@ -433,7 +458,16 @@ const STATES = [
         badgeCls: 'badge-active',
         badgeText: 'ACTIVE',
         desc: 'Structurally sound markets currently in active price discovery. Scores reflect real-time information aggregation.',
-        context: s => `Active price discovery in progress. Nexus Score ${s.nexus_score} indicates a functioning market with adequate liquidity and structural integrity. Macro sensitivity of ${s.macro_sensitivity?.toFixed(2)} is within acceptable range. Monitor for convergence.`,
+        context: d => {
+            const cnv = d.c4||0;
+            const score = parseFloat(d.nexus_score)||0;
+            if(score >= 75){
+                return `Near High Confidence threshold (score <strong>${score}</strong>). Convergence at ${cnv.toFixed(0)}/100 — one strong price move toward resolution could push this to citable status.`;
+            } else if(cnv < 60){
+                return `Active price discovery ongoing — convergence at <strong>${cnv.toFixed(0)}/100</strong> indicates outcomes have not yet stabilized. Watch for HC transition as resolution date approaches.`;
+            }
+            return `Functional market with macro sensitivity of <strong>${(d.macro_sensitivity||0).toFixed(2)}</strong> — within acceptable range. Independence at ${(d.c3||0).toFixed(0)}/100 confirms event-driven pricing.`;
+        },
     },
     {
         key: 'macro',
@@ -443,8 +477,17 @@ const STATES = [
         cardCls: 's-macro',
         badgeCls: 'badge-macro',
         badgeText: 'MACRO-DRIVEN',
-        desc: 'Market price movements are correlated with external macro factors (BTC, SPY, Rates). Independence score is suppressed. Relevant for macro research.',
-        context: s => `Macro Beta of <strong>${s.macro_sensitivity?.toFixed(2)}</strong> indicates significant external factor dependency. Price movements in this market are partially explained by macro variables rather than event-specific information. IND score of ${s.c3?.toFixed(0)}% reflects this dependency. Useful for cross-asset research.`,
+        desc: 'Price movements correlated with external macro factors (BTC, SPY, Rates). Independence score suppressed. Interpret probabilities as sentiment, not event signal.',
+        context: d => {
+            const cat = d.category||'';
+            const financialCats = ['Crypto','Finance','Economy'];
+            const beta = (d.macro_sensitivity||0).toFixed(2);
+            const ind = (d.c3||0).toFixed(0);
+            if(financialCats.includes(cat)){
+                return `Confirmed macro dependency in a <strong>${cat}</strong> market — price is tracking external assets directly (β ${beta}). Independence at ${ind}/100. Probability reflects sentiment, not event fundamentals.`;
+            }
+            return `Macro signal detected in a <strong>${cat||'non-financial'}</strong> market (β ${beta}). Likely cause: correlated news cycle rather than genuine asset dependency. Independence ${ind}/100 — correlation may dissolve as event-specific information emerges.`;
+        },
     },
     {
         key: 'low',
@@ -455,7 +498,15 @@ const STATES = [
         badgeCls: 'badge-low',
         badgeText: 'SPARSE DATA',
         desc: 'Thin liquidity or insufficient observation history. Nexus Score may not fully reflect true market quality.',
-        context: s => `Volume of ${fmtVol(s.volume||0)} is below the threshold for reliable structural analysis. Nexus Score ${s.nexus_score} should be interpreted with caution. LIQ score of ${s.c1?.toFixed(0)}% reflects limited capital depth. Structural analysis will improve as market matures.`,
+        context: d => {
+            const vol = d.volume||0;
+            const liq = (d.c1||0).toFixed(0);
+            const eff = (d.c2||0).toFixed(0);
+            if(vol < 100000){
+                return `Thin market: <strong>${fmtVol(vol)}</strong> total volume is below the threshold for reliable price discovery. Sub-scores are statistically unreliable at this depth — Liquidity at ${liq}/100.`;
+            }
+            return `Despite ${fmtVol(vol)} volume, structural integrity is insufficient. Efficiency ${eff}/100 suggests probability sum may be drifting — possible unresolved outcome ambiguity.`;
+        },
     },
 ];
 
@@ -467,11 +518,13 @@ function getState(market_state){
 function renderKPIs(data){
     const total=data.length;
     const hc=data.filter(d=>d.market_state.includes('High Confidence')).length;
-    const ac=data.filter(d=>d.market_state.includes('Active')).length;
-    const idx=(hc+ac*0.5)/total*100;
+    const scores=data.map(d=>parseFloat(d.nexus_score)||0);
+    const idx=scores.length ? scores.reduce((a,b)=>a+b,0)/scores.length : 0;
     animateCount(document.getElementById('integrity-index'),idx,1);
     document.getElementById('integrity-grade').textContent=idx>=80?'INSTITUTIONAL GRADE':idx>=60?'STRUCTURED':'FRAGMENTED';
-    document.getElementById('market-regime').textContent=idx>=70?'STABLE':idx>=45?'TRANSITIONAL':'STRESSED';
+    const macroCount=data.filter(d=>d.market_state.includes('Macro')||d.market_state.includes('Volatile')).length;
+    const macroPct=total ? macroCount/total : 0;
+    document.getElementById('market-regime').textContent=macroPct>=0.3?'MACRO-STRESSED':idx>=70?'STABLE':'TRANSITIONAL';
     animateCount(document.getElementById('high-conf-count'),hc,0,700);
     animateCount(document.getElementById('total-markets'),total,0,700);
     document.getElementById('last-update').textContent=new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
@@ -574,6 +627,7 @@ function renderStateGroups(data){
             const lp=normBar(d.c1), ep=normBar(d.c2), ip=normBar(d.c3), cp=normBar(d.c4);
             card.innerHTML=`
                 <span class="card-arrow">↗</span>
+                ${d.category ? `<div class="card-cat">${d.category}</div>` : ''}
                 <div class="card-score">${d.nexus_score}</div>
                 <div class="card-title">${d.question}</div>
                 <div class="card-meta">

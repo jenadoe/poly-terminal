@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLY-NEXUS // INTEGRITY ORACLE</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --bg:        #111827;
-            --bg-2:      #1a2333;
-            --bg-card:   #1e2d42;
-            --blue:      #3b82f6;
-            --blue-dim:  #2563eb;
-            --blue-glow: rgba(59,130,246,0.12);
-            --text-hi:   #d1dae8;
-            --text:      #8fa3bc;
+            --bg:        #0d1420;
+            --bg-2:      #111827;
+            --bg-card:   #161f2e;
+            --blue:      #60a5fa;
+            --blue-dim:  #3b82f6;
+            --blue-glow: rgba(96,165,250,0.15);
+            --text-hi:   #e2e8f0;
+            --text:      #94a3b8;
             --text-mid:  #6b82a0;
-            --text-dim:  #4e6280;
-            --border:    #243044;
-            --border-hi: #344d6a;
+            --text-dim:  #3d5068;
+            --border:    #1e2d42;
+            --border-hi: #2d4260;
             --mono: 'JetBrains Mono', monospace;
+            --sans: 'Syne', sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -58,7 +59,7 @@
             flex-wrap:wrap; gap:16px;
             background:linear-gradient(180deg,#0a0f18 0%,var(--bg) 100%);
         }
-        .logo h1 { font-size:2rem; font-weight:700; letter-spacing:0.04em; color:var(--text-hi); line-height:1; }
+        .logo h1 { font-family:var(--sans); font-size:2rem; font-weight:800; letter-spacing:0.02em; color:var(--text-hi); line-height:1; }
         .logo h1 span { color:var(--blue); }
         .logo-sub { margin-top:6px; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.15em; text-transform:uppercase; }
         .cursor {
@@ -126,10 +127,10 @@
         .event-card:active { transform:translateY(0); }
 
         /* left accent per state */
-        .event-card.s-citable   { border-left:2px solid rgba(147,197,253,0.5); }
-        .event-card.s-active    { border-left:2px solid rgba(100,116,139,0.5); }
-        .event-card.s-macro     { border-left:2px solid rgba(251,191,36,0.35); }
-        .event-card.s-low       { border-left:2px solid rgba(71,85,105,0.35); }
+        .event-card.s-citable   { border-left:2px solid rgba(96,165,250,0.7); }
+        .event-card.s-active    { border-left:2px solid rgba(52,211,153,0.6); }
+        .event-card.s-macro     { border-left:2px solid rgba(251,191,36,0.65); }
+        .event-card.s-low       { border-left:2px solid rgba(71,85,105,0.45); }
 
         .card-score {
             font-size:1.6rem; font-weight:700; line-height:1;
@@ -151,10 +152,10 @@
         .card-bar-key { font-size:0.5rem; color:var(--text-dim); width:24px; flex-shrink:0; }
         .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
         .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
-        .bar-liq { background:#4a7fa8; }
-        .bar-eff { background:#2d7a5e; }
-        .bar-ind { background:#6b5fa0; }
-        .bar-conv{ background:#8a4a6e; }
+        .bar-liq { background:#60a5fa; }
+        .bar-eff { background:#34d399; }
+        .bar-ind { background:#a78bfa; }
+        .bar-conv{ background:#f472b6; }
 
         .card-cat {
             display:inline-block; font-size:0.5rem; padding:1px 5px;
@@ -541,22 +542,42 @@ function renderStateChart(data){
         const label=getState(d.market_state).label;
         counts[label]=(counts[label]||0)+1;
     });
+    // 색상: 어두운 배경에서 선명하게 대비되는 4색
     const colorMap={
-        'HIGH CONFIDENCE':'rgba(147,197,253,0.75)',
-        'ACTIVE':         'rgba(100,116,139,0.6)',
-        'MACRO-DRIVEN':   'rgba(251,191,36,0.45)',
-        'LOW LIQUIDITY':  'rgba(71,85,105,0.4)',
+        'HIGH CONFIDENCE':'rgba(96,165,250,0.70)',   // 밝은 블루
+        'ACTIVE':         'rgba(52,211,153,0.60)',   // 에메랄드 그린
+        'MACRO-DRIVEN':   'rgba(251,191,36,0.70)',   // 앰버 골드
+        'LOW LIQUIDITY':  'rgba(71,85,105,0.55)',    // 슬레이트 (의도적으로 어둡게 — 중요도 낮음)
+    };
+    const borderMap={
+        'HIGH CONFIDENCE':'rgba(147,197,253,0.5)',
+        'ACTIVE':         'rgba(110,231,183,0.5)',
+        'MACRO-DRIVEN':   'rgba(253,211,77,0.5)',
+        'LOW LIQUIDITY':  'rgba(100,116,139,0.4)',
     };
     const labels=Object.keys(counts);
     const ctx=document.getElementById('stateChart').getContext('2d');
     if(stateInst) stateInst.destroy();
     stateInst=new Chart(ctx,{
         type:'doughnut',
-        data:{labels,datasets:[{data:Object.values(counts),backgroundColor:labels.map(l=>colorMap[l]||'rgba(40,55,75,0.5)'),borderWidth:0,hoverOffset:4}]},
+        data:{labels,datasets:[{
+            data:Object.values(counts),
+            backgroundColor:labels.map(l=>colorMap[l]||'rgba(40,55,75,0.6)'),
+            borderColor:labels.map(l=>borderMap[l]||'rgba(60,75,100,0.3)'),
+            borderWidth:1,
+            hoverOffset:6,
+        }]},
         options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{
-            legend:{position:'right',labels:{color:'#6b82a0',font:{family:"'JetBrains Mono',monospace",size:10},boxWidth:8,padding:10}},
-            tooltip:{backgroundColor:'#1e2d42',borderColor:'#243044',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
-                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10}}
+            legend:{position:'right',labels:{
+                color:'#8fa3bc',
+                font:{family:"'JetBrains Mono',monospace",size:10},
+                boxWidth:10, boxHeight:10, padding:12,
+                usePointStyle:true, pointStyle:'rectRounded',
+            }},
+            tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
+                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
+                callbacks:{label:c=>`  ${c.label}: ${c.raw}`}
+            }
         }}
     });
 }
@@ -570,15 +591,26 @@ function renderRadarChart(data){
     radarInst=new Chart(ctx,{
         type:'radar',
         data:{labels:['LIQUIDITY','EFFICIENCY','INDEPENDENCE','CONVERGENCE'],datasets:[{data:vals,
-            backgroundColor:'rgba(59,130,246,0.07)',borderColor:'rgba(59,130,246,0.35)',
-            pointBackgroundColor:'rgba(96,165,250,0.6)',pointBorderColor:'transparent',pointRadius:3,borderWidth:1.5}]},
+            backgroundColor:'rgba(59,130,246,0.10)',
+            borderColor:'rgba(96,165,250,0.55)',
+            pointBackgroundColor:'rgba(96,165,250,0.9)',
+            pointBorderColor:'rgba(96,165,250,0.3)',
+            pointRadius:4,
+            pointHoverRadius:5,
+            borderWidth:1.5,
+        }]},
         options:{responsive:true,maintainAspectRatio:false,
-            scales:{r:{min:0,max:100,ticks:{display:false},grid:{color:'#243044'},angleLines:{color:'#243044'},
-                pointLabels:{color:'#6b82a0',font:{family:"'JetBrains Mono',monospace",size:10}}}},
+            scales:{r:{
+                min:0, max:100,
+                ticks:{display:false},
+                grid:{color:'rgba(70,100,140,0.45)'},        // 등고선 훨씬 밝게
+                angleLines:{color:'rgba(70,100,140,0.35)'},  // 중심선도 같이
+                pointLabels:{color:'#8fa3bc',font:{family:"'JetBrains Mono',monospace",size:10}},
+            }},
             plugins:{legend:{display:false},
-                tooltip:{backgroundColor:'#1e2d42',borderColor:'#243044',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
+                tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
                     titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
-                    callbacks:{label:c=>` ${(+c.formattedValue).toFixed(1)}%`}}}}
+                    callbacks:{label:c=>` ${(+c.formattedValue).toFixed(1)}`}}}}
     });
 }
 

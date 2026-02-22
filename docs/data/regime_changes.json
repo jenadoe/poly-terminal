@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T15:58:48.529244Z",
+    "market_id": "95358",
+    "question": "Israel strikes Iran by March 31, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
     "timestamp": "2026-02-22T15:01:57.786772Z",
     "market_id": "189698",
     "question": "Will Silver (SI) hit__ by end of February?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 91.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "121900",
-    "question": "Logan Paul\u2019s Pikachu Illustrator Sale Price",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.07
     }
   }
 ]

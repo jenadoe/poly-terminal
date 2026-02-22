@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T15:01:57.786772Z",
+    "market_id": "189698",
+    "question": "Will Silver (SI) hit__ by end of February?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-22T14:45:19.966491Z",
     "market_id": "190338",
     "question": "Which company has the best AI model end of February?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.1,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "84841",
-    "question": "Epstein blackmail evidence released by...? ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

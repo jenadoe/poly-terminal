@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T05:34:54.086754Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 52.4,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
     "timestamp": "2026-02-22T04:23:29.623133Z",
     "market_id": "90178",
     "question": "Will Jesus Christ return before 2027?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 91.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "190338",
-    "question": "Which company has the best AI model end of February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.9,
       "macro_sensitivity": 0.0
     }
   }

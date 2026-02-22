@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T11:47:31.105496Z",
+    "market_id": "168115",
+    "question": "Israel strikes Iran by February 28, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.3,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-02-22T11:29:20.421933Z",
     "market_id": "210688",
     "question": "Bitcoin above ___ on February 22?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 63.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "193747",
-    "question": "Kevin Warsh formally nominated as Fed Chair by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.5,
       "macro_sensitivity": 0.0
     }
   }

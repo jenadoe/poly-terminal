@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T16:38:37.642515Z",
+    "market_id": "189845",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-22T15:58:48.529244Z",
     "market_id": "95358",
     "question": "Israel strikes Iran by March 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 77.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "41353",
-    "question": "Supreme Court rules in favor of Trump's tariffs?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 91.9,
       "macro_sensitivity": 0.0
     }
   }

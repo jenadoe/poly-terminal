@@ -453,6 +453,10 @@ const STATES = [
             const score = parseFloat(d.nexus_score)||0;
 
             // 약점 기반 진단
+            // 0값은 데이터 미수집으로 간주 — 극단 진단 스킵
+            if(weakest[1] === 0){
+                return `Structural data is still being collected for this market. Score <strong>${score}</strong> reflects available dimensions — full integrity profile will populate as observation history accumulates.`;
+            }
             if(weakest[1] < 80){
                 const riskMap = {
                     Liquidity:   `Liquidity at <strong>${weakest[1].toFixed(0)}/100</strong> is the binding constraint — capital depth is adequate but not deep. A large position or sudden news event could cause outsized price movement near resolution.`,
@@ -526,6 +530,9 @@ const STATES = [
             const liq = d.c1||0;
             const isFinancial = financialCats.includes(cat);
 
+            if(beta === 0){
+                return `No macro dependency detected — Independence at <strong>${ind.toFixed(0)}/100</strong>. Price movements in this market are entirely event-driven with no measurable BTC or SPY correlation.`;
+            }
             if(beta > 1.0){
                 return `Extreme macro dependency — β <strong>${beta.toFixed(2)}</strong> means this market moves nearly in lockstep with external assets. ${isFinancial ? 'This is a financial instrument disguised as an event market.' : `Unusual for a ${cat} market — high probability of spurious correlation from a shared news cycle rather than genuine asset linkage.`} Independence at ${ind.toFixed(0)}/100.`;
             }
@@ -555,10 +562,10 @@ const STATES = [
             const score = parseFloat(d.nexus_score)||0;
 
             if(vol < 10000){
-                return `Near-zero volume — <strong>${(vol).toFixed(0)}</strong> in total trades. Price discovery has not yet begun; current probabilities reflect initial market maker positioning, not genuine crowd intelligence. Do not cite or trade.`;
+                return `Near-zero volume — price discovery has not yet begun. Current probabilities reflect initial positioning rather than genuine crowd intelligence. Structural scoring is not yet meaningful at this stage.`;
             }
-            if(eff < 40){
-                return `Structural failure: Efficiency at <strong>${eff.toFixed(0)}/100</strong> means the probability sum has diverged significantly from 100%. The market is internally inconsistent — this is a data quality or resolution ambiguity issue, not just thin volume. Avoid.`;
+            if(eff > 0 && eff < 40){
+                return `Efficiency at <strong>${eff.toFixed(0)}/100</strong> — probability sum has diverged significantly from 100%, indicating possible outcome ambiguity or a multi-outcome market structure. Structural scoring is unreliable until this resolves.`;
             }
             if(liq < 30){
                 return `Extremely thin liquidity (${(vol/1e3).toFixed(0)}K volume, LIQ <strong>${liq.toFixed(0)}/100</strong>) — even small orders could move the price materially. Score ${score} is unreliable at this depth and may not reflect true market consensus.`;

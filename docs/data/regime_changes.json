@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T10:32:07.329889Z",
+    "market_id": "210688",
+    "question": "Bitcoin above ___ on February 22?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 53.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-22T09:58:32.386729Z",
     "market_id": "168115",
     "question": "Israel strikes Iran by February 28, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 65.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "160707",
-    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.3,
       "macro_sensitivity": 0.0
     }
   }

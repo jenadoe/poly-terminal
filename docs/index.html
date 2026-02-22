@@ -425,7 +425,13 @@ function animateCount(el,target,dec=0,ms=800){
     };
     requestAnimationFrame(step);
 }
-function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
+function cleanQuestion(q){
+    if(!q) return q;
+    const sep = q.indexOf('?: ');
+    if(sep === -1) return q;
+    const after = q.slice(sep + 3).trim();
+    return after || q.slice(0, sep + 1).trim();
+}
 
 // ── STATE CONFIG ───────────────────────────────────────────
 const STATES = [
@@ -665,7 +671,7 @@ function renderStateGroups(data){
                 <span class="card-arrow">↗</span>
                 ${d.category ? `<div class="card-cat">${d.category}</div>` : ''}
                 <div class="card-score">${d.nexus_score}</div>
-                <div class="card-title">${d.question}</div>
+                <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <span class="card-macro">β ${(d.macro_sensitivity||0).toFixed(2)}</span>
@@ -696,7 +702,7 @@ function openPanel(d, st){
     badge.textContent=st.badgeText;
     badge.className='panel-badge '+st.badgeCls;
 
-    document.getElementById('p-title').textContent=d.question;
+    document.getElementById('p-title').textContent=cleanQuestion(d.question);
 
     // Component bars
     document.getElementById('p-bars').innerHTML=[

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T19:45:55.924892Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 69.1,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-02-22T18:47:14.319079Z",
     "market_id": "80066",
     "question": "Backpack FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T17:42:03.641004Z",
-    "market_id": "181516",
-    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.7,
       "macro_sensitivity": 0.0
     }
   }

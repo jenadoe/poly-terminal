@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T12:44:35.182475Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-22T11:47:31.105496Z",
     "market_id": "168115",
     "question": "Israel strikes Iran by February 28, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 71.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "211240",
-    "question": "What price will Bitcoin hit February 16-22?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
       "macro_sensitivity": 0.0
     }
   }

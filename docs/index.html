@@ -120,6 +120,7 @@
             border-radius:6px; padding:14px;
             cursor:pointer; transition:border-color 0.15s, transform 0.12s;
             position:relative;
+            display:flex; flex-direction:column;
         }
         .event-card:hover { border-color:var(--border-hi); transform:translateY(-2px); }
         .event-card:active { transform:translateY(0); }
@@ -137,9 +138,11 @@
         .card-title {
             font-size:0.75rem; color:var(--text); line-height:1.45;
             display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
-            overflow:hidden; margin-bottom:8px; font-weight:500;
+            line-clamp:3;
+            overflow:hidden; font-weight:500;
+            flex:1;
         }
-        .card-meta { display:flex; justify-content:space-between; align-items:center; }
+        .card-meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
         .card-vol { font-size:0.62rem; color:var(--text-dim); }
         .card-macro { font-size:0.6rem; color:var(--text-dim); }
 
@@ -148,23 +151,24 @@
         .card-bar-key { font-size:0.5rem; color:var(--text-dim); width:24px; flex-shrink:0; }
         .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
         .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
-        .bar-liq { background:#60a5fa; opacity:1.0; }
-        .bar-eff { background:#34d399; opacity:1.0; }
-        .bar-ind { background:#a78bfa; opacity:1.0; }
-        .bar-conv{ background:#f472b6; opacity:1.0; }
+        .bar-liq { background:#4a7fa8; }
+        .bar-eff { background:#2d7a5e; }
+        .bar-ind { background:#6b5fa0; }
+        .bar-conv{ background:#8a4a6e; }
 
         .card-cat {
             display:inline-block; font-size:0.5rem; padding:1px 5px;
             border-radius:2px; background:var(--border); color:var(--text-dim);
             letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;
         }
+
+        .card-arrow {
             position:absolute; top:12px; right:12px;
             font-size:0.6rem; color:var(--text-dim);
             opacity:0; transition:opacity 0.15s;
         }
         .event-card:hover .card-arrow { opacity:1; }
 
-        .card-arrow {
         .panel-overlay {
             position:fixed; inset:0; background:rgba(10,15,24,0.6);
             z-index:100; opacity:0; pointer-events:none;

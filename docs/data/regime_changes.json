@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-22T08:29:46.940825Z",
+    "market_id": "203488",
+    "question": "US next strikes Iran on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-22T07:54:24.825043Z",
     "market_id": "190996",
     "question": "Ilhan Omar town hall attack staged?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 74.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T11:09:22.493530Z",
-    "market_id": "102774",
-    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.02
     }
   }
 ]

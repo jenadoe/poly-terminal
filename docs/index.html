@@ -102,6 +102,13 @@
             border:1px solid rgba(59,130,246,0.18);
             padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
         }
+        /* 섹션별 색상 차별화 */
+        .section-head.sh-active::after { background:rgba(52,211,153,0.3); }
+        .section-head.sh-active .section-tag { background:rgba(52,211,153,0.08); color:#34d399; border-color:rgba(52,211,153,0.25); }
+        .section-head.sh-macro::after  { background:rgba(251,191,36,0.3); }
+        .section-head.sh-macro .section-tag { background:rgba(251,191,36,0.1); color:#fbbf24; border-color:rgba(251,191,36,0.25); }
+        .section-head.sh-low::after    { background:rgba(71,85,105,0.4); }
+        .section-head.sh-low .section-tag   { background:rgba(71,85,105,0.15); color:#6b7f96; border-color:rgba(71,85,105,0.3); }
         .section-desc {
             font-size:0.7rem; color:var(--text-mid); margin-bottom:14px;
             letter-spacing:0.04em; padding-left:2px;
@@ -162,6 +169,17 @@
             border-radius:2px; background:var(--border); color:var(--text-dim);
             letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px; color:#7a96b4;
         }
+        .card-weak {
+            display:inline-block; font-size:0.5rem; padding:1px 6px;
+            border-radius:2px; letter-spacing:0.06em; text-transform:uppercase;
+            margin-top:6px; font-weight:600;
+        }
+        .weak-liq  { background:rgba(96,165,250,0.1);  color:#60a5fa; }
+        .weak-eff  { background:rgba(251,191,36,0.1);  color:#fbbf24; }
+        .weak-ind  { background:rgba(248,113,113,0.1); color:#f87171; }
+        .weak-conv { background:rgba(167,139,250,0.1); color:#a78bfa; }
+        .weak-macro{ background:rgba(251,191,36,0.12); color:#fbbf24; }
+        .weak-ok   { background:rgba(52,211,153,0.08); color:#34d399; }
 
         .card-arrow {
             position:absolute; top:12px; right:12px;
@@ -433,6 +451,14 @@ function cleanQuestion(q){
     return after || q.slice(0, sep + 1).trim();
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
+function hasVal(v){ return v !== null && v !== undefined && v > 0; }
+function fmtScore(v){ return hasVal(v) ? (+v).toFixed(0) : '—'; }
+function barRow(key, cls, val){
+    if(!hasVal(val)){
+        return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill" style="width:0%"></div></div><span class="card-bar-key" style="width:auto;color:#3d5068">—</span></div>`;
+    }
+    return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill ${cls}" style="width:${normBar(val)}%"></div></div></div>`;
+}
 
 // ── STATE CONFIG ───────────────────────────────────────────
 const STATES = [
@@ -709,8 +735,9 @@ function renderStateGroups(data){
 
         const wrap=document.createElement('div');
         wrap.className='state-group';
+        const shCls = st.key==='active' ? 'sh-active' : st.key==='macro' ? 'sh-macro' : st.key==='low' ? 'sh-low' : '';
         wrap.innerHTML=`
-            <div class="section-head"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
+            <div class="section-head ${shCls}"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
             <div class="section-desc">${st.desc}</div>
             <div class="event-grid" id="grid-${st.key}"></div>
         `;
@@ -720,7 +747,6 @@ function renderStateGroups(data){
         shown.forEach((d,i)=>{
             const card=document.createElement('div');
             card.className=`event-card ${st.cardCls}`;
-            const lp=normBar(d.c1), ep=normBar(d.c2), ip=normBar(d.c3), cp=normBar(d.c4);
             card.innerHTML=`
                 <span class="card-arrow">↗</span>
                 ${d.category ? `<div class="card-cat">${d.category}</div>` : ''}
@@ -731,10 +757,10 @@ function renderStateGroups(data){
                     <span class="card-macro">β ${(d.macro_sensitivity||0).toFixed(2)}</span>
                 </div>
                 <div class="card-bars">
-                    <div class="card-bar-row"><span class="card-bar-key">LIQ</span><div class="card-bar-bg"><div class="card-bar-fill bar-liq" style="width:${lp}%"></div></div></div>
-                    <div class="card-bar-row"><span class="card-bar-key">EFF</span><div class="card-bar-bg"><div class="card-bar-fill bar-eff" style="width:${ep}%"></div></div></div>
-                    <div class="card-bar-row"><span class="card-bar-key">IND</span><div class="card-bar-bg"><div class="card-bar-fill bar-ind" style="width:${ip}%"></div></div></div>
-                    <div class="card-bar-row"><span class="card-bar-key">CNV</span><div class="card-bar-bg"><div class="card-bar-fill bar-conv" style="width:${cp}%"></div></div></div>
+                    ${barRow('LIQ','bar-liq',d.c1)}
+                    ${barRow('EFF','bar-eff',d.c2)}
+                    ${barRow('IND','bar-ind',d.c3)}
+                    ${barRow('CNV','bar-conv',d.c4)}
                 </div>
             `;
             card.addEventListener('click', ()=>openPanel(d, st));
@@ -767,8 +793,8 @@ function openPanel(d, st){
     ].map(b=>`
         <div class="panel-bar-row">
             <span class="panel-bar-name">${b.key}</span>
-            <div class="panel-bar-bg"><div class="panel-bar-fill ${b.cls}" style="width:${normBar(b.val)}%"></div></div>
-            <span class="panel-bar-val">${(b.val||0).toFixed(0)}</span>
+            <div class="panel-bar-bg"><div class="panel-bar-fill ${b.cls}" style="width:${hasVal(b.val)?normBar(b.val):0}%"></div></div>
+            <span class="panel-bar-val" style="${!hasVal(b.val)?'color:#3d5068':''}">${fmtScore(b.val)}</span>
         </div>
     `).join('');
 

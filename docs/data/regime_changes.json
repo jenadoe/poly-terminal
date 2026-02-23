@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-23T07:02:38.024379Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 35.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T07:02:38.024379Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.6,
+      "macro_sensitivity": 0.5
+    }
+  },
+  {
+    "timestamp": "2026-02-23T07:02:38.024379Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
+    "timestamp": "2026-02-23T07:02:38.024379Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 91.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-23T05:53:29.584033Z",
     "market_id": "202857",
     "question": "NFL Champion 2027",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-22T07:22:31.356166Z",
-    "market_id": "29005",
-    "question": "MegaETH airdrop by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.1,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-22T07:22:31.356166Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T06:28:48.096726Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 66.7,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-02-22T06:28:48.096726Z",
-    "market_id": "145731",
-    "question": "Next leader out of power before 2027?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.7,
-      "macro_sensitivity": 0.05
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-23T17:18:40.872261Z",
+    "market_id": "73923",
+    "question": "Russia nuclear test by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-23T15:06:55.753148Z",
     "market_id": "107710",
     "question": "2026 ICC T20 Men\u2019s World Cup Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 69.1,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-02-22T18:47:14.319079Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 68.9,
-      "macro_sensitivity": 0.21
     }
   }
 ]

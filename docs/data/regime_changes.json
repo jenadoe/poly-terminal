@@ -1,5 +1,104 @@
 [
   {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "153927",
+    "question": "Flying Tulip FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 52.3,
+      "macro_sensitivity": 0.81
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "73923",
+    "question": "Russia nuclear test by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.8,
+      "macro_sensitivity": 0.43
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.99
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "78016",
+    "question": "Based FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 61.8,
+      "macro_sensitivity": 0.63
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "73835",
+    "question": "edgeX FDV above ___ one day after launch?",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.31
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.37
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "36173",
+    "question": "When will Bitcoin hit $150k?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.3,
+      "macro_sensitivity": 0.6
+    }
+  },
+  {
+    "timestamp": "2026-02-23T14:11:55.015199Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-23T08:02:22.693728Z",
     "market_id": "90178",
     "question": "Will Jesus Christ return before 2027?",
@@ -448,105 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T17:42:53.073983Z",
-    "market_id": "202857",
-    "question": "NFL Champion 2027",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T16:38:37.642515Z",
-    "market_id": "189845",
-    "question": "US next strikes Iran on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-22T15:58:48.529244Z",
-    "market_id": "95358",
-    "question": "Israel strikes Iran by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 66.3,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T15:01:57.786772Z",
-    "market_id": "189698",
-    "question": "Will Silver (SI) hit__ by end of February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.5,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-22T14:45:19.966491Z",
-    "market_id": "190338",
-    "question": "Which company has the best AI model end of February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-22T14:45:19.966491Z",
-    "market_id": "162818",
-    "question": "Khamenei out as Supreme Leader of Iran by February 28?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.6,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-22T14:45:19.966491Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-22T14:45:19.966491Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.9,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-02-22T13:33:51.893730Z",
-    "market_id": "190338",
-    "question": "Which company has the best AI model end of February?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
     }
   }
 ]

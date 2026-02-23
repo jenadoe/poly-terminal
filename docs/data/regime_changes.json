@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-02-23T05:53:29.584033Z",
+    "market_id": "202857",
+    "question": "NFL Champion 2027",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T05:53:29.584033Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T05:53:29.584033Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-23T04:31:09.503221Z",
     "market_id": "208544",
     "question": "Elon Musk # tweets February 17 - February 24, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.7,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-22T05:34:54.086754Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 52.4,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T04:23:29.623133Z",
-    "market_id": "90178",
-    "question": "Will Jesus Christ return before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T04:23:29.623133Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.3,
       "macro_sensitivity": 0.05
     }
   }

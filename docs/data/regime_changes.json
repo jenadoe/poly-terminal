@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-23T23:00:59.306005Z",
+    "market_id": "189550",
+    "question": "Will Opinion launch a token by ___?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 32.1,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
     "timestamp": "2026-02-23T19:44:57.416994Z",
     "market_id": "131586",
     "question": "Jeffrey Epstein confirmed to be alive before 2027?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-02-22T22:26:38.667419Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 69.2,
-      "macro_sensitivity": 0.17
     }
   }
 ]

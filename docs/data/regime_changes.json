@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-23T19:44:57.416994Z",
+    "market_id": "131586",
+    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.34
+    }
+  },
+  {
     "timestamp": "2026-02-23T17:18:40.872261Z",
     "market_id": "73923",
     "question": "Russia nuclear test by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 69.2,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-22T19:45:55.924892Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 69.1,
-      "macro_sensitivity": 0.18
     }
   }
 ]

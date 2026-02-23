@@ -1,5 +1,181 @@
 [
   {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "208544",
+    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "200659",
+    "question": "How long will the Government Shutdown last?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 58.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "73923",
+    "question": "Russia nuclear test by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "190420",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "190673",
+    "question": "Total commitments for the Hurupay public sale on MetaDAO",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "32565",
+    "question": "SCOTUS accepts sports event contract case by...?     ",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 43.6,
+      "macro_sensitivity": 0.39
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "189792",
+    "question": "What will Gold (GC) hit__ by end of February?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Liquidity",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "161561",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "95127",
+    "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 35.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "83173",
+    "question": "Infinex FDV above ___ one day after launch?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "78016",
+    "question": "Based FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.6,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "84946",
+    "question": "Zama FDV above ___ one day after launch?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "22862",
+    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-23T04:31:09.503221Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-23T02:00:14.844614Z",
     "market_id": "193747",
     "question": "Kevin Warsh formally nominated as Fed Chair by...?",
@@ -371,182 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.3,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-22T04:23:29.623133Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T20:49:17.937851Z",
-    "market_id": "71692",
-    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-21T20:23:02.952289Z",
-    "market_id": "100300",
-    "question": "Winter Games 2026: Ice Hockey Gold Medal Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.5,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-02-21T20:23:02.952289Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 52.8,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:37:26.573067Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:13:07.907180Z",
-    "market_id": "153927",
-    "question": "Flying Tulip FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.1,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:13:07.907180Z",
-    "market_id": "189792",
-    "question": "What will Gold (GC) hit__ by end of February?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.2,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:13:07.907180Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:13:07.907180Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.5,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T19:13:07.907180Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "189550",
-    "question": "Will Opinion launch a token by ___?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 90.1,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "64731",
-    "question": "Billionaire one-time wealth tax passes in California election 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "160183",
-    "question": "Iran Strike on Israel by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 61.3,
-      "macro_sensitivity": 0.32
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "31195",
-    "question": "Putin out as President of Russia by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 89.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-21T18:43:50.586234Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.4,
-      "macro_sensitivity": 0.01
     }
   }
 ]

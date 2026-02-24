@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-24T11:13:27.781237Z",
+    "market_id": "213046",
+    "question": "Bitcoin above ___ on February 24?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-24T11:13:27.781237Z",
+    "market_id": "50390",
+    "question": "Oscars 2026: Best Cinematography Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.1,
+      "macro_sensitivity": 0.7
+    }
+  },
+  {
     "timestamp": "2026-02-24T06:40:35.917763Z",
     "market_id": "139507",
     "question": "Will Reza Pahlavi enter Iran by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "95127",
-    "question": "Yoon Suk Yeol Insurrection Case Prison Time?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 35.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "83173",
-    "question": "Infinex FDV above ___ one day after launch?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.1,
       "macro_sensitivity": 0.0
     }
   }

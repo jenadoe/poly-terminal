@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-24T06:40:35.917763Z",
+    "market_id": "139507",
+    "question": "Will Reza Pahlavi enter Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-02-24T06:40:35.917763Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-02-24T04:20:44.399521Z",
     "market_id": "209129",
     "question": "Bitcoin above ___ on February 21?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 57.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.6,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "84946",
-    "question": "Zama FDV above ___ one day after launch?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

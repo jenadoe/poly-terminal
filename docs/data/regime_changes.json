@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-24T22:05:04.165469Z",
+    "market_id": "139507",
+    "question": "Will Reza Pahlavi enter Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.0,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-24T20:05:18.304673Z",
     "market_id": "190420",
     "question": "Will Israel strike Lebanon on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 72.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "32565",
-    "question": "SCOTUS accepts sports event contract case by...?     ",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 43.6,
-      "macro_sensitivity": 0.39
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-24T20:05:18.304673Z",
+    "market_id": "190420",
+    "question": "Will Israel strike Lebanon on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 58.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-24T15:31:04.265848Z",
     "market_id": "213046",
     "question": "Bitcoin above ___ on February 24?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.6,
       "macro_sensitivity": 0.39
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "189792",
-    "question": "What will Gold (GC) hit__ by end of February?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

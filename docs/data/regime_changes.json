@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-25T23:06:11.505966Z",
+    "market_id": "34050",
+    "question": "Russia x Ukraine ceasefire by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-25T19:55:37.266655Z",
     "market_id": "38900",
     "question": "Will Russia capture all of Pokrovsk by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.3,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-02-23T07:02:38.024379Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 91.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-25T16:49:33.981973Z",
+    "market_id": "22863",
+    "question": "Will tariffs generate >$250b in 2025?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-02-25T13:43:48.108579Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 76.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "208544",
-    "question": "Elon Musk # tweets February 17 - February 24, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

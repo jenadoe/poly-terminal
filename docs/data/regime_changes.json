@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-25T13:43:48.108579Z",
+    "market_id": "153505",
+    "question": "X banned in U.K. by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-02-25T13:43:48.108579Z",
+    "market_id": "73835",
+    "question": "edgeX FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 88.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-25T04:33:32.533288Z",
     "market_id": "34889",
     "question": "Will Hamas agree to disarm by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "200659",
-    "question": "How long will the Government Shutdown last?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 58.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T04:31:09.503221Z",
-    "market_id": "73923",
-    "question": "Russia nuclear test by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.1,
       "macro_sensitivity": 0.0
     }
   }

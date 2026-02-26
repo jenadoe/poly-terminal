@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-26T11:55:32.256762Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-26T11:07:18.361750Z",
     "market_id": "80066",
     "question": "Backpack FDV above ___ one day after launch?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 89.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T08:02:22.693728Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
       "macro_sensitivity": 0.0
     }
   }

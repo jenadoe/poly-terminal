@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-26T15:08:31.709656Z",
+    "market_id": "90178",
+    "question": "Will Jesus Christ return before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-02-26T11:55:32.256762Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T08:02:22.693728Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 89.5,
       "macro_sensitivity": 0.0
     }
   }

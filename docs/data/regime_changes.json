@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-26T11:07:18.361750Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-26T10:07:22.131845Z",
     "market_id": "220474",
     "question": "Elon Musk # tweets February 24 - March 3, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T08:02:22.693728Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.0,
       "macro_sensitivity": 0.0
     }
   }

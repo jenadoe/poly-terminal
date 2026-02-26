@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-26T21:19:27.107260Z",
+    "market_id": "212454",
+    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-26T17:18:01.346902Z",
     "market_id": "225752",
     "question": "Which crypto company will ZachXBT expose for insider trading?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 95.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T08:02:22.693728Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 86.7,
       "macro_sensitivity": 0.0
     }
   }

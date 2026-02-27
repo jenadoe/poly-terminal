@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-27T13:18:47.886367Z",
+    "market_id": "219439",
+    "question": "Bitcoin above ___ on February 27?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-27T10:50:47.963234Z",
     "market_id": "220474",
     "question": "Elon Musk # tweets February 24 - March 3, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T14:11:55.015199Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.8,
-      "macro_sensitivity": 0.43
     }
   }
 ]

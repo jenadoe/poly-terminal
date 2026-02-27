@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-27T04:56:03.263251Z",
+    "market_id": "220474",
+    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-27T04:56:03.263251Z",
+    "market_id": "60182",
+    "question": "Nobel Peace Prize Winner 2026",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.2,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-26T21:19:27.107260Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.3,
       "macro_sensitivity": 0.6
-    }
-  },
-  {
-    "timestamp": "2026-02-23T14:11:55.015199Z",
-    "market_id": "22862",
-    "question": "How much revenue will the U.S. raise from tariffs in 2025?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-23T08:02:22.693728Z",
-    "market_id": "90178",
-    "question": "Will Jesus Christ return before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 95.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

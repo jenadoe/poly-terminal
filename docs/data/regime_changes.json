@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-27T21:53:01.963382Z",
+    "market_id": "181516",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-27T17:54:15.054484Z",
     "market_id": "73236",
     "question": "Metamask FDV above ___ one day after launch?",
@@ -531,17 +542,6 @@
     "timestamp": "2026-02-24T04:20:44.399521Z",
     "market_id": "57711",
     "question": "Largest Company end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-02-24T04:20:44.399521Z",
-    "market_id": "60182",
-    "question": "Nobel Peace Prize Winner 2026",
     "from_regime": "Active",
     "to_regime": "Macro-Driven",
     "metrics_snapshot": {

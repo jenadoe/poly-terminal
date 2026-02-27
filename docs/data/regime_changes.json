@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-27T09:59:49.056286Z",
+    "market_id": "219439",
+    "question": "Bitcoin above ___ on February 27?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-27T06:51:53.521751Z",
     "market_id": "22863",
     "question": "Will tariffs generate >$250b in 2025?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.99
-    }
-  },
-  {
-    "timestamp": "2026-02-23T14:11:55.015199Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 61.8,
-      "macro_sensitivity": 0.63
     }
   }
 ]

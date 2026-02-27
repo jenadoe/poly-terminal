@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-27T06:51:53.521751Z",
+    "market_id": "22863",
+    "question": "Will tariffs generate >$250b in 2025?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 89.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-27T05:51:34.013656Z",
     "market_id": "100371",
     "question": "F1 Drivers' Champion",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.8,
       "macro_sensitivity": 0.63
-    }
-  },
-  {
-    "timestamp": "2026-02-23T14:11:55.015199Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.31
     }
   }
 ]

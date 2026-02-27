@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-27T15:43:06.883184Z",
+    "market_id": "131586",
+    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 89.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-27T15:43:06.883184Z",
+    "market_id": "97361",
+    "question": "How many 7.0 or above earthquakes by June 30?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 82.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-27T14:59:06.319543Z",
     "market_id": "219439",
     "question": "Bitcoin above ___ on February 27?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-24T04:20:44.399521Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-02-23T23:47:33.431906Z",
-    "market_id": "189550",
-    "question": "Will Opinion launch a token by ___?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 32.2,
-      "macro_sensitivity": 0.1
     }
   }
 ]

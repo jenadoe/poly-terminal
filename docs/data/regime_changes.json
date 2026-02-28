@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T16:25:28.963659Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-28T15:44:22.286094Z",
     "market_id": "79926",
     "question": "How many different countries will Israel strike in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T06:12:40.625047Z",
-    "market_id": "190420",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 57.9,
       "macro_sensitivity": 0.0
     }
   }

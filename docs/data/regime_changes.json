@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T08:53:02.621564Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 86.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T08:53:02.621564Z",
+    "market_id": "28628",
+    "question": "Israel x Iran ceasefire broken by...? ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 34.0,
+      "macro_sensitivity": 0.11
+    }
+  },
+  {
     "timestamp": "2026-02-28T07:40:33.737651Z",
     "market_id": "89456",
     "question": "Will China invade Taiwan by March 31, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 82.0,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-24T20:05:18.304673Z",
-    "market_id": "190420",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 58.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-24T15:31:04.265848Z",
-    "market_id": "213046",
-    "question": "Bitcoin above ___ on February 24?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 56.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

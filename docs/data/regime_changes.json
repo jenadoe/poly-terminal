@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T07:40:33.737651Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.46
+    }
+  },
+  {
     "timestamp": "2026-02-28T07:05:30.742463Z",
     "market_id": "51456",
     "question": "How many Fed rate cuts in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-24T15:31:04.265848Z",
-    "market_id": "98374",
-    "question": "SpaceX IPO Closing Market Cap",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.23
     }
   }
 ]

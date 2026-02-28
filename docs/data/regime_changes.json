@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T19:24:16.395096Z",
+    "market_id": "145536",
+    "question": "Will the U.S. invade Greenland in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 90.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-28T18:30:55.628803Z",
     "market_id": "45915",
     "question": "Brazil Presidential Election",
@@ -533,17 +544,6 @@
     "question": "Which crypto company will ZachXBT expose for insider trading?",
     "from_regime": "Active",
     "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T16:07:17.341174Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0

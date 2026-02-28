@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T17:44:35.314091Z",
+    "market_id": "226986",
+    "question": "Elon Musk # tweets February 27 - March 6, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T17:44:35.314091Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-02-28T16:25:28.963659Z",
     "market_id": "107009",
     "question": "Ethereum all time high by ___?",
@@ -520,28 +542,6 @@
     "timestamp": "2026-02-26T11:55:32.256762Z",
     "market_id": "212454",
     "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T11:07:18.361750Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.4,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-26T10:07:22.131845Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
     "from_regime": "Active",
     "to_regime": "Volatile",
     "metrics_snapshot": {

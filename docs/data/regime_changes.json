@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T22:47:37.904707Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 56.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T22:47:37.904707Z",
+    "market_id": "106811",
+    "question": "Bitcoin all time high by ___?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 55.4,
+      "macro_sensitivity": 0.35
+    }
+  },
+  {
     "timestamp": "2026-02-28T21:42:54.258624Z",
     "market_id": "71693",
     "question": "Khamenei out as Supreme Leader of Iran in 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 89.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T05:51:34.013656Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T05:51:34.013656Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.9,
       "macro_sensitivity": 0.0
     }
   }

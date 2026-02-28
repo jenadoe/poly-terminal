@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T23:55:53.006282Z",
+    "market_id": "57057",
+    "question": "Israel x Hamas ceasefire cancelled by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-28T23:20:25.463103Z",
     "market_id": "34038",
     "question": "Next Prime Minister of Hungary",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T09:59:49.056286Z",
-    "market_id": "219439",
-    "question": "Bitcoin above ___ on February 27?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.3,
       "macro_sensitivity": 0.0
     }
   }

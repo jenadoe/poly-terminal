@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T18:30:55.628803Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.6,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-02-28T17:55:52.075440Z",
     "market_id": "223977",
     "question": "Bitcoin above ___ on March 1?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T16:07:17.341174Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
-      "macro_sensitivity": 0.01
     }
   }
 ]

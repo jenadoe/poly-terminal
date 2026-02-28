@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-02-28T09:24:31.441008Z",
+    "market_id": "220474",
+    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T09:24:31.441008Z",
+    "market_id": "139507",
+    "question": "Will Reza Pahlavi enter Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.7,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-02-28T09:24:31.441008Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 33.1,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-02-28T09:24:31.441008Z",
+    "market_id": "38901",
+    "question": "Will Russia capture Rodynske by...?",
+    "from_regime": "Low Liquidity",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 21.0,
+      "macro_sensitivity": 0.72
+    }
+  },
+  {
     "timestamp": "2026-02-28T08:53:02.621564Z",
     "market_id": "40044",
     "question": "English Premier League - Top 4 Finish ",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-02-25T13:43:48.108579Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 88.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-25T04:33:32.533288Z",
-    "market_id": "34889",
-    "question": "Will Hamas agree to disarm by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 62.4,
-      "macro_sensitivity": 0.37
-    }
-  },
-  {
-    "timestamp": "2026-02-25T02:35:59.678298Z",
-    "market_id": "190420",
-    "question": "Will Israel strike Lebanon on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 58.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-24T22:05:04.165469Z",
-    "market_id": "139507",
-    "question": "Will Reza Pahlavi enter Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.0,
-      "macro_sensitivity": 0.01
     }
   }
 ]

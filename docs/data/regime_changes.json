@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T20:47:35.444441Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 57.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T20:47:35.444441Z",
+    "market_id": "102773",
+    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-02-28T19:24:16.395096Z",
     "market_id": "145536",
     "question": "Will the U.S. invade Greenland in 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 77.2,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-26T21:19:27.107260Z",
-    "market_id": "212454",
-    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T17:18:01.346902Z",
-    "market_id": "225752",
-    "question": "Which crypto company will ZachXBT expose for insider trading?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

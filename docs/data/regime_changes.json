@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T17:55:52.075440Z",
+    "market_id": "223977",
+    "question": "Bitcoin above ___ on March 1?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.0,
+      "macro_sensitivity": 0.92
+    }
+  },
+  {
+    "timestamp": "2026-02-28T17:55:52.075440Z",
+    "market_id": "149589",
+    "question": "Which party will gain most seats in Russian Parliamentary Election?",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-02-28T17:44:35.314091Z",
     "market_id": "226986",
     "question": "Elon Musk # tweets February 27 - March 6, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.8,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-26T15:08:31.709656Z",
-    "market_id": "90178",
-    "question": "Will Jesus Christ return before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-02-26T11:55:32.256762Z",
-    "market_id": "212454",
-    "question": "Elon Musk # tweets February 20 - February 27, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

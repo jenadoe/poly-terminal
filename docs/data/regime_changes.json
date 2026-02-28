@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T09:47:25.738820Z",
+    "market_id": "220474",
+    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-02-28T09:47:25.738820Z",
+    "market_id": "128933",
+    "question": "Will Tim Walz resign by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 26.6,
+      "macro_sensitivity": 0.52
+    }
+  },
+  {
     "timestamp": "2026-02-28T09:24:31.441008Z",
     "market_id": "220474",
     "question": "Elon Musk # tweets February 24 - March 3, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-25T16:49:33.981973Z",
-    "market_id": "22863",
-    "question": "Will tariffs generate >$250b in 2025?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-02-25T13:43:48.108579Z",
-    "market_id": "153505",
-    "question": "X banned in U.K. by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.21
     }
   }
 ]

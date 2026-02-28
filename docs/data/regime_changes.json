@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T21:42:54.258624Z",
+    "market_id": "71693",
+    "question": "Khamenei out as Supreme Leader of Iran in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-02-28T21:42:54.258624Z",
+    "market_id": "71692",
+    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-02-28T20:47:35.444441Z",
     "market_id": "36308",
     "question": "Claude 5 released by\u2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 67.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T04:56:03.263251Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T04:56:03.263251Z",
-    "market_id": "60182",
-    "question": "Nobel Peace Prize Winner 2026",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.2,
-      "macro_sensitivity": 0.01
     }
   }
 ]

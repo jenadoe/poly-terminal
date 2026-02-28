@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T23:20:25.463103Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
     "timestamp": "2026-02-28T22:47:37.904707Z",
     "market_id": "107009",
     "question": "Ethereum all time high by ___?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 52.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T06:51:53.521751Z",
-    "market_id": "22863",
-    "question": "Will tariffs generate >$250b in 2025?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 89.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-02-28T05:55:52.700492Z",
+    "market_id": "225838",
+    "question": "What price will Bitcoin hit February 23-March 1?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.4,
+      "macro_sensitivity": 0.47
+    }
+  },
+  {
+    "timestamp": "2026-02-28T05:55:52.700492Z",
+    "market_id": "73923",
+    "question": "Russia nuclear test by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.7,
+      "macro_sensitivity": 0.57
+    }
+  },
+  {
     "timestamp": "2026-02-28T03:33:32.244315Z",
     "market_id": "221594",
     "question": "Bitcoin above ___ on February 28?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-02-24T06:40:35.917763Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-02-24T04:20:44.399521Z",
-    "market_id": "209129",
-    "question": "Bitcoin above ___ on February 21?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.0,
-      "macro_sensitivity": 0.79
     }
   }
 ]

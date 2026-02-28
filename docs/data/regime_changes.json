@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-02-28T15:44:22.286094Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.9,
+      "macro_sensitivity": 0.62
+    }
+  },
+  {
     "timestamp": "2026-02-28T15:20:22.273923Z",
     "market_id": "190503",
     "question": "Fabric ($ROBO) FDV above ___ one day after launch?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-26T06:12:40.625047Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.8,
-      "macro_sensitivity": 0.01
     }
   }
 ]

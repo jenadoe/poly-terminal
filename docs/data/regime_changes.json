@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-01T02:06:17.718078Z",
+    "market_id": "193911",
+    "question": "U.S. anti-cartel ground operation in Mexico by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-01T02:06:17.718078Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.6,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-02-28T23:55:53.006282Z",
     "market_id": "57057",
     "question": "Israel x Hamas ceasefire cancelled by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 68.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T13:18:47.886367Z",
-    "market_id": "219439",
-    "question": "Bitcoin above ___ on February 27?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T10:50:47.963234Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

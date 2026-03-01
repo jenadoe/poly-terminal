@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-01T10:23:27.128725Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-01T09:53:11.515745Z",
     "market_id": "36308",
     "question": "Claude 5 released by\u2026?",
@@ -535,17 +546,6 @@
     "to_regime": "High Confidence",
     "metrics_snapshot": {
       "nexus_score": 82.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T14:59:06.319543Z",
-    "market_id": "219439",
-    "question": "Bitcoin above ___ on February 27?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.5,
       "macro_sensitivity": 0.0
     }
   }

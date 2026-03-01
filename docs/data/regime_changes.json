@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-01T21:57:13.921155Z",
+    "market_id": "237569",
+    "question": "Next Supreme Leader of Iran?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-01T21:57:13.921155Z",
+    "market_id": "149589",
+    "question": "Which party will gain most seats in Russian Parliamentary Election?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 91.0,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-01T21:57:13.921155Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-01T21:57:13.921155Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-01T21:44:44.994284Z",
     "market_id": "237569",
     "question": "Next Supreme Leader of Iran?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-02-28T06:35:57.615681Z",
-    "market_id": "151953",
-    "question": "US/Israel strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 42.2,
-      "macro_sensitivity": 0.16
-    }
-  },
-  {
-    "timestamp": "2026-02-28T06:35:57.615681Z",
-    "market_id": "114242",
-    "question": "US strikes Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 47.5,
-      "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-02-28T05:55:52.700492Z",
-    "market_id": "225838",
-    "question": "What price will Bitcoin hit February 23-March 1?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.4,
-      "macro_sensitivity": 0.47
-    }
-  },
-  {
-    "timestamp": "2026-02-28T05:55:52.700492Z",
-    "market_id": "73923",
-    "question": "Russia nuclear test by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.57
     }
   }
 ]

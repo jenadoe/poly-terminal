@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-01T22:49:49.207324Z",
+    "market_id": "107710",
+    "question": "2026 ICC T20 Men\u2019s World Cup Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-01T22:49:49.207324Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-01T22:26:37.154567Z",
     "market_id": "50298",
     "question": "Oscars 2026: Best Actress Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 34.0,
       "macro_sensitivity": 0.11
-    }
-  },
-  {
-    "timestamp": "2026-02-28T07:40:33.737651Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.46
-    }
-  },
-  {
-    "timestamp": "2026-02-28T07:05:30.742463Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

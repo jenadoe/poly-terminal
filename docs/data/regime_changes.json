@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-01T23:21:49.167952Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 58.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-01T22:49:49.207324Z",
     "market_id": "107710",
     "question": "2026 ICC T20 Men\u2019s World Cup Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 86.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T08:53:02.621564Z",
-    "market_id": "28628",
-    "question": "Israel x Iran ceasefire broken by...? ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 34.0,
-      "macro_sensitivity": 0.11
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-01T05:40:57.579839Z",
+    "market_id": "81557",
+    "question": "Who will be the next Prime Minister of Israel after the next election?",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.8,
+      "macro_sensitivity": 0.37
+    }
+  },
+  {
     "timestamp": "2026-03-01T02:06:17.718078Z",
     "market_id": "193911",
     "question": "U.S. anti-cartel ground operation in Mexico by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 75.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T14:09:05.615502Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-01T10:51:02.125495Z",
+    "market_id": "223966",
+    "question": "Bitcoin price on March 1?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-01T10:23:27.128725Z",
     "market_id": "79831",
     "question": "Highest grossing movie in 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 89.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-27T15:43:06.883184Z",
-    "market_id": "97361",
-    "question": "How many 7.0 or above earthquakes by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 82.7,
       "macro_sensitivity": 0.0
     }
   }

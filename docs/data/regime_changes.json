@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-01T21:44:44.994284Z",
+    "market_id": "237569",
+    "question": "Next Supreme Leader of Iran?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-01T21:21:11.051926Z",
     "market_id": "237569",
     "question": "Next Supreme Leader of Iran?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.7,
       "macro_sensitivity": 0.57
-    }
-  },
-  {
-    "timestamp": "2026-02-28T03:33:32.244315Z",
-    "market_id": "221594",
-    "question": "Bitcoin above ___ on February 28?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 53.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-02T09:07:55.887133Z",
+    "market_id": "236151",
+    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-02T08:25:51.944017Z",
     "market_id": "236840",
     "question": "US x Iran ceasefire by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 33.1,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-02-28T09:24:31.441008Z",
-    "market_id": "38901",
-    "question": "Will Russia capture Rodynske by...?",
-    "from_regime": "Low Liquidity",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 21.0,
-      "macro_sensitivity": 0.72
     }
   }
 ]

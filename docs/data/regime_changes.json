@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-02T15:40:51.844453Z",
+    "market_id": "225873",
+    "question": "Bitcoin price on March 2?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-02T15:40:51.844453Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.9,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-03-02T15:40:51.844453Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
     "timestamp": "2026-03-02T14:53:32.901922Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -511,39 +544,6 @@
     "question": "Ethereum all time high by ___?",
     "from_regime": "Volatile",
     "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T15:44:22.286094Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.9,
-      "macro_sensitivity": 0.62
-    }
-  },
-  {
-    "timestamp": "2026-02-28T15:20:22.273923Z",
-    "market_id": "190503",
-    "question": "Fabric ($ROBO) FDV above ___ one day after launch?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T15:20:22.273923Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 56.2,
       "macro_sensitivity": 0.0

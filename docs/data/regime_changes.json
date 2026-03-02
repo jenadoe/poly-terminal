@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-02T20:03:33.755853Z",
+    "market_id": "237347",
+    "question": "New Supreme Leader of Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 54.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-02T20:03:33.755853Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-02T20:03:33.755853Z",
+    "market_id": "102773",
+    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-02T15:40:51.844453Z",
     "market_id": "225873",
     "question": "Bitcoin price on March 2?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-02-28T17:44:35.314091Z",
-    "market_id": "226986",
-    "question": "Elon Musk # tweets February 27 - March 6, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T17:44:35.314091Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 61.7,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-02-28T16:25:28.963659Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

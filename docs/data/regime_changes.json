@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-02T14:00:10.546591Z",
+    "market_id": "162113",
+    "question": "Will US or Israel strike Iran first?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.6,
+      "macro_sensitivity": 0.48
+    }
+  },
+  {
+    "timestamp": "2026-03-02T14:00:10.546591Z",
+    "market_id": "189550",
+    "question": "Will Opinion launch a token by ___?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-02T14:00:10.546591Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.41
+    }
+  },
+  {
+    "timestamp": "2026-03-02T14:00:10.546591Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
+    "timestamp": "2026-03-02T14:00:10.546591Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-02T11:46:16.090267Z",
     "market_id": "232760",
     "question": "Elon Musk # tweets February 28 - March 2, 2026?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.7,
       "macro_sensitivity": 0.87
-    }
-  },
-  {
-    "timestamp": "2026-02-28T13:53:44.066671Z",
-    "market_id": "221582",
-    "question": "Ethereum above ___ on February 28?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 53.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T09:47:25.738820Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T09:47:25.738820Z",
-    "market_id": "128933",
-    "question": "Will Tim Walz resign by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 26.6,
-      "macro_sensitivity": 0.52
-    }
-  },
-  {
-    "timestamp": "2026-02-28T09:24:31.441008Z",
-    "market_id": "220474",
-    "question": "Elon Musk # tweets February 24 - March 3, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T09:24:31.441008Z",
-    "market_id": "139507",
-    "question": "Will Reza Pahlavi enter Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.2
     }
   }
 ]

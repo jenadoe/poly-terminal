@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-02T20:52:36.629690Z",
+    "market_id": "237347",
+    "question": "New Supreme Leader of Iran by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-02T20:03:33.755853Z",
     "market_id": "237347",
     "question": "New Supreme Leader of Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.0,
       "macro_sensitivity": 0.92
-    }
-  },
-  {
-    "timestamp": "2026-02-28T17:55:52.075440Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.19
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-02T23:50:31.484276Z",
+    "market_id": "228660",
+    "question": "What day will the Opinion token launch be?",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-02T20:52:36.629690Z",
     "market_id": "237347",
     "question": "New Supreme Leader of Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 81.6,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-02-28T17:55:52.075440Z",
-    "market_id": "223977",
-    "question": "Bitcoin above ___ on March 1?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.0,
-      "macro_sensitivity": 0.92
     }
   }
 ]

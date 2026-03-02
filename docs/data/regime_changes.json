@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-02T14:53:32.901922Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.0,
+      "macro_sensitivity": 0.41
+    }
+  },
+  {
     "timestamp": "2026-03-02T14:00:10.546591Z",
     "market_id": "162113",
     "question": "Will US or Israel strike Iran first?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T14:21:07.806521Z",
-    "market_id": "221594",
-    "question": "Bitcoin above ___ on February 28?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.7,
-      "macro_sensitivity": 0.87
     }
   }
 ]

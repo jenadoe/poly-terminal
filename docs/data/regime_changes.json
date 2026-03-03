@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-03T14:52:43.933990Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-03T14:52:43.933990Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 56.7,
+      "macro_sensitivity": 0.58
+    }
+  },
+  {
     "timestamp": "2026-03-03T13:59:13.475643Z",
     "market_id": "153505",
     "question": "X banned in U.K. by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 55.4,
       "macro_sensitivity": 0.35
-    }
-  },
-  {
-    "timestamp": "2026-02-28T21:42:54.258624Z",
-    "market_id": "71693",
-    "question": "Khamenei out as Supreme Leader of Iran in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-28T21:42:54.258624Z",
-    "market_id": "71692",
-    "question": "Khamenei out as Supreme Leader of Iran by June 30?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.02
     }
   }
 ]

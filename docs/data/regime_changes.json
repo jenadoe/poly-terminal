@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T07:30:41.812046Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.9
+    }
+  },
+  {
     "timestamp": "2026-03-03T06:31:14.509727Z",
     "market_id": "193337",
     "question": "OpenAI IPO closing market cap above ___ ?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T19:24:16.395096Z",
-    "market_id": "145536",
-    "question": "Will the U.S. invade Greenland in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 90.0,
       "macro_sensitivity": 0.0
     }
   }

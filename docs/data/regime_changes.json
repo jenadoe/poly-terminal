@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-03T15:45:14.578609Z",
+    "market_id": "230284",
+    "question": "Bitcoin above ___ on March 4?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-03T15:45:14.578609Z",
+    "market_id": "237347",
+    "question": "New Supreme Leader of Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 51.5,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-03T14:52:43.933990Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-02-28T22:47:37.904707Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 56.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T22:47:37.904707Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 55.4,
-      "macro_sensitivity": 0.35
     }
   }
 ]

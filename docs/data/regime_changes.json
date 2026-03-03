@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T21:00:10.679484Z",
+    "market_id": "237569",
+    "question": "Next Supreme Leader of Iran?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-03T16:30:16.434685Z",
     "market_id": "79831",
     "question": "Highest grossing movie in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.6,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-02-28T23:55:53.006282Z",
-    "market_id": "57057",
-    "question": "Israel x Hamas ceasefire cancelled by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

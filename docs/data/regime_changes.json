@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T16:30:16.434685Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-03T15:45:14.578609Z",
     "market_id": "230284",
     "question": "Bitcoin above ___ on March 4?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T23:20:25.463103Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.21
     }
   }
 ]

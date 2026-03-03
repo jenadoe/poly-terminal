@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T06:31:14.509727Z",
+    "market_id": "193337",
+    "question": "OpenAI IPO closing market cap above ___ ?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.0,
+      "macro_sensitivity": 0.55
+    }
+  },
+  {
     "timestamp": "2026-03-02T23:50:31.484276Z",
     "market_id": "228660",
     "question": "What day will the Opinion token launch be?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 90.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-02-28T18:30:55.628803Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.6,
-      "macro_sensitivity": 0.01
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T23:25:34.713487Z",
+    "market_id": "228660",
+    "question": "What day will the Opinion token launch be?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-03T21:00:10.679484Z",
     "market_id": "237569",
     "question": "Next Supreme Leader of Iran?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-01T02:06:17.718078Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.6,
-      "macro_sensitivity": 0.18
     }
   }
 ]

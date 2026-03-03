@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-03T13:59:13.475643Z",
+    "market_id": "153505",
+    "question": "X banned in U.K. by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 90.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-03T11:53:51.722506Z",
     "market_id": "33509",
     "question": "La Liga Winner ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-02-28T20:47:35.444441Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 57.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

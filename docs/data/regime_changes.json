@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T14:57:46.649864Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-04T14:04:56.154300Z",
     "market_id": "73236",
     "question": "Metamask FDV above ___ one day after launch?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.82
-    }
-  },
-  {
-    "timestamp": "2026-03-01T21:57:13.921155Z",
-    "market_id": "237569",
-    "question": "Next Supreme Leader of Iran?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

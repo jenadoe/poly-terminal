@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T11:40:53.283825Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-04T11:32:41.060726Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.3,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-01T21:44:44.994284Z",
-    "market_id": "237569",
-    "question": "Next Supreme Leader of Iran?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

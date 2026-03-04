@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T11:32:41.060726Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
     "timestamp": "2026-03-04T10:57:43.215279Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -533,17 +544,6 @@
     "question": "Next Supreme Leader of Iran?",
     "from_regime": "Active",
     "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-01T21:21:11.051926Z",
-    "market_id": "237569",
-    "question": "Next Supreme Leader of Iran?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0

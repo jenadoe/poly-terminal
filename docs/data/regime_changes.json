@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T04:08:34.663024Z",
+    "market_id": "236151",
+    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-04T01:53:13.896660Z",
     "market_id": "238094",
     "question": "Which countries will strike Iran by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.5,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-01T09:28:30.336100Z",
-    "market_id": "90178",
-    "question": "Will Jesus Christ return before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 96.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

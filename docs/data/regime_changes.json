@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T07:52:49.534784Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-04T07:06:14.902242Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 42.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-01T11:43:28.912657Z",
-    "market_id": "63292",
-    "question": "NBA Defensive Player of the Year Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 93.3,
       "macro_sensitivity": 0.0
     }
   }

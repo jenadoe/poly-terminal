@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T11:59:14.376656Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-04T11:40:53.283825Z",
     "market_id": "27830",
     "question": "2026 NBA Champion",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 74.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-01T21:57:13.921155Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 62.3,
-      "macro_sensitivity": 0.19
     }
   }
 ]

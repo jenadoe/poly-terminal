@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-04T14:04:56.154300Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-04T13:11:19.060620Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-01T21:57:13.921155Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 91.0,
-      "macro_sensitivity": 0.01
     }
   }
 ]

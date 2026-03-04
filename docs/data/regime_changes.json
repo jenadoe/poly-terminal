@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-04T19:38:21.373876Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-04T19:38:21.373876Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.9,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-04T18:56:57.078718Z",
     "market_id": "226986",
     "question": "Elon Musk # tweets February 27 - March 6, 2026?",
@@ -521,28 +543,6 @@
     "market_id": "232760",
     "question": "Elon Musk # tweets February 28 - March 2, 2026?",
     "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T09:07:55.887133Z",
-    "market_id": "236151",
-    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T08:25:51.944017Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Low Confidence",
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,

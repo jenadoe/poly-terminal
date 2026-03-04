@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-04T23:28:35.435481Z",
+    "market_id": "226986",
+    "question": "Elon Musk # tweets February 27 - March 6, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-04T23:28:35.435481Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 61.6,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-04T22:50:33.785747Z",
     "market_id": "232752",
     "question": "Bitcoin above ___ on March 5?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.6,
       "macro_sensitivity": 0.48
-    }
-  },
-  {
-    "timestamp": "2026-03-02T14:00:10.546591Z",
-    "market_id": "189550",
-    "question": "Will Opinion launch a token by ___?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T14:00:10.546591Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.41
     }
   }
 ]

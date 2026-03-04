@@ -29,6 +29,9 @@ jobs:
         run: pip install -r private-brain/requirements.txt
 
       - name: Run Engine
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
           cd private-brain
           python main.py

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-05T14:01:44.418659Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-05T14:01:44.418659Z",
+    "market_id": "133675",
+    "question": "Opinion FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 69.4,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-05T14:01:44.418659Z",
+    "market_id": "36173",
+    "question": "When will Bitcoin hit $150k?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 53.6,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-05T14:01:44.418659Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 90.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T12:56:32.605176Z",
     "market_id": "226986",
     "question": "Elon Musk # tweets February 27 - March 6, 2026?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T14:52:43.933990Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 56.7,
-      "macro_sensitivity": 0.58
-    }
-  },
-  {
-    "timestamp": "2026-03-03T13:59:13.475643Z",
-    "market_id": "153505",
-    "question": "X banned in U.K. by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 90.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T11:53:51.722506Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T07:30:41.812046Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.9
     }
   }
 ]

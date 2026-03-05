@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T11:01:23.333651Z",
+    "market_id": "232752",
+    "question": "Bitcoin above ___ on March 5?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 42.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T10:08:23.915151Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 54.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T20:03:33.755853Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.5,
       "macro_sensitivity": 0.0
     }
   }

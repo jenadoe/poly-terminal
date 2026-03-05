@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-05T15:05:33.829646Z",
+    "market_id": "237569",
+    "question": "Next Supreme Leader of Iran?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-05T15:05:33.829646Z",
+    "market_id": "119580",
+    "question": "2nd largest company end of March?",
+    "from_regime": "High Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T14:01:44.418659Z",
     "market_id": "139894",
     "question": "Jerome Powell out as Fed Chair by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 50.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T15:45:14.578609Z",
-    "market_id": "237347",
-    "question": "New Supreme Leader of Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.5,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-03T14:52:43.933990Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

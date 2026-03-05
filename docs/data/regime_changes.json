@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T19:42:13.697062Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T18:21:52.849387Z",
     "market_id": "33659",
     "question": "Serie A League Winner ",
@@ -533,17 +544,6 @@
     "question": "What day will the Opinion token launch be?",
     "from_regime": "Volatile",
     "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T21:00:10.679484Z",
-    "market_id": "237569",
-    "question": "Next Supreme Leader of Iran?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0

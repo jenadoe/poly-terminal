@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T12:56:32.605176Z",
+    "market_id": "226986",
+    "question": "Elon Musk # tweets February 27 - March 6, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-05T11:48:32.513153Z",
     "market_id": "232752",
     "question": "Bitcoin above ___ on March 5?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.0,
       "macro_sensitivity": 0.9
-    }
-  },
-  {
-    "timestamp": "2026-03-03T06:31:14.509727Z",
-    "market_id": "193337",
-    "question": "OpenAI IPO closing market cap above ___ ?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.0,
-      "macro_sensitivity": 0.55
     }
   }
 ]

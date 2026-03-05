@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T07:00:36.440718Z",
+    "market_id": "232752",
+    "question": "Bitcoin above ___ on March 5?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T06:07:29.813540Z",
     "market_id": "232752",
     "question": "Bitcoin above ___ on March 5?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.9,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-02T15:40:51.844453Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.27
     }
   }
 ]

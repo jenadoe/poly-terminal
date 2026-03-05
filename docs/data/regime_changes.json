@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-05T11:48:32.513153Z",
+    "market_id": "232752",
+    "question": "Bitcoin above ___ on March 5?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-05T11:48:32.513153Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-05T11:48:32.513153Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T11:01:23.333651Z",
     "market_id": "232752",
     "question": "Bitcoin above ___ on March 5?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 59.0,
       "macro_sensitivity": 0.55
-    }
-  },
-  {
-    "timestamp": "2026-03-02T23:50:31.484276Z",
-    "market_id": "228660",
-    "question": "What day will the Opinion token launch be?",
-    "from_regime": "High Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T20:52:36.629690Z",
-    "market_id": "237347",
-    "question": "New Supreme Leader of Iran by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T20:03:33.755853Z",
-    "market_id": "237347",
-    "question": "New Supreme Leader of Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

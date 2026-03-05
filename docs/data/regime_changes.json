@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T10:08:23.915151Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.43
+    }
+  },
+  {
     "timestamp": "2026-03-05T09:28:02.933460Z",
     "market_id": "240640",
     "question": "What price will Bitcoin hit March 2-8?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-02T20:03:33.755853Z",
-    "market_id": "102773",
-    "question": "Khamenei out as Supreme Leader of Iran by March 31?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.19
     }
   }
 ]

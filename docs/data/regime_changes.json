@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T09:28:02.933460Z",
+    "market_id": "240640",
+    "question": "What price will Bitcoin hit March 2-8?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T07:55:26.695462Z",
     "market_id": "189550",
     "question": "Will Opinion launch a token by ___?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-02T15:40:51.844453Z",
-    "market_id": "225873",
-    "question": "Bitcoin price on March 2?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

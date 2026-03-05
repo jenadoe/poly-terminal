@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-05T06:07:29.813540Z",
+    "market_id": "232752",
+    "question": "Bitcoin above ___ on March 5?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 44.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T01:23:44.422760Z",
     "market_id": "232752",
     "question": "Bitcoin above ___ on March 5?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-02T14:53:32.901922Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.0,
-      "macro_sensitivity": 0.41
     }
   }
 ]

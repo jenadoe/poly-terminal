@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-05T18:21:52.849387Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 90.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-05T18:21:52.849387Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-05T15:05:33.829646Z",
     "market_id": "237569",
     "question": "Next Supreme Leader of Iran?",
@@ -524,28 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-03T16:30:16.434685Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-03T15:45:14.578609Z",
-    "market_id": "230284",
-    "question": "Bitcoin above ___ on March 4?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.9,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,126 @@
 [
   {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 26.6,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "236151",
+    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 26.1,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "81557",
+    "question": "Who will be the next Prime Minister of Israel after the next election?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.2,
+      "macro_sensitivity": 0.34
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 86.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "50251",
+    "question": "Oscars 2026: Best Picture Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 86.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 96.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T18:05:59.308229Z",
+    "market_id": "30615",
+    "question": "2026 FIFA World Cup Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T17:33:58.982333Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -426,127 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "228139",
-    "question": "Ethereum above ___ on March 3?",
-    "from_regime": "Volatile",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 59.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "228660",
-    "question": "What day will the Opinion token launch be?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.57
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "237347",
-    "question": "New Supreme Leader of Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 53.7,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "236151",
-    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "238474",
-    "question": "What price will Bitcoin hit in March?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 90.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "228137",
-    "question": "Bitcoin above ___ on March 3?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 31.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "237569",
-    "question": "Next Supreme Leader of Iran?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "190746",
-    "question": "How many times will the US strike Somalia in February?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 72.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Active",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 56.9,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "69987",
-    "question": "2026 NCAA Tournament Winner",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.1,
-      "macro_sensitivity": 0.02
     }
   }
 ]

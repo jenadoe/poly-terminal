@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-06T20:58:18.930459Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T20:58:18.930459Z",
+    "market_id": "63255",
+    "question": "Which teams will make the NBA Playoffs?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T20:29:59.271546Z",
     "market_id": "240640",
     "question": "What price will Bitcoin hit March 2-8?",
@@ -524,28 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 96.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T18:05:59.308229Z",
-    "market_id": "30615",
-    "question": "2026 FIFA World Cup Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T17:33:58.982333Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.3,
       "macro_sensitivity": 0.0
     }
   }

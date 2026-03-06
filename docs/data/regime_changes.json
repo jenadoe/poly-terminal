@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.2,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-06T19:48:14.158832Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 88.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T19:04:01.709234Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -480,72 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 59.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "234434",
-    "question": "LoL: JD Gaming vs Bilibili Gaming (BO5) - LPL Playoffs",
-    "from_regime": "Volatile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "237161",
-    "question": "Elon Musk # tweets March 2 - March 4, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "216124",
-    "question": "Manchester City FC vs. Nottingham Forest FC",
-    "from_regime": "High Confidence",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 48.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "230280",
-    "question": "Ethereum above ___ on March 4?",
-    "from_regime": "Volatile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "237089",
-    "question": "Iran strikes Israel on...?",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 94.8,
       "macro_sensitivity": 0.0
     }
   }

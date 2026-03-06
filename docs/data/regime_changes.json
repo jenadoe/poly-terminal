@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-06T09:36:56.913050Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T08:51:28.696783Z",
     "market_id": "179361",
     "question": "WBC Winner 2026",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-04T07:06:14.902242Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.1,
-      "macro_sensitivity": 0.27
     }
   }
 ]

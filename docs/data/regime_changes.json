@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-06T16:00:20.891524Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.5,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-03-06T16:00:20.891524Z",
+    "market_id": "98369",
+    "question": "Eurovision Winner 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 29.5,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-06T16:00:20.891524Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 71.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-06T16:00:20.891524Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 93.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T16:00:20.891524Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T15:21:27.463214Z",
     "market_id": "79899",
     "question": "Paradex FDV above ___ one day after launch?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 78.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "103763",
-    "question": "Next Prime Minister of Thailand",
-    "from_regime": "Active",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 76.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "190503",
-    "question": "Fabric ($ROBO) FDV above ___ one day after launch?",
-    "from_regime": "Volatile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 68.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T15:21:27.463214Z",
-    "market_id": "57705",
-    "question": "Which company has best AI model end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 79.2,
-      "macro_sensitivity": 0.11
     }
   }
 ]

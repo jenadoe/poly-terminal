@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-06T08:51:28.696783Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T07:59:49.229344Z",
     "market_id": "79899",
     "question": "Paradex FDV above ___ one day after launch?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.1,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-04T06:52:51.756252Z",
-    "market_id": "236151",
-    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

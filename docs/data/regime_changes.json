@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-06T21:58:48.795691Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 34.9,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
+    "timestamp": "2026-03-06T21:58:48.795691Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.2,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-06T21:34:22.639611Z",
     "market_id": "98374",
     "question": "SpaceX IPO Closing Market Cap",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 26.1,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-06T18:05:59.308229Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.2,
-      "macro_sensitivity": 0.34
-    }
-  },
-  {
-    "timestamp": "2026-03-06T18:05:59.308229Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

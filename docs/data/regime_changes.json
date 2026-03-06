@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-06T23:41:28.529323Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-06T23:41:28.529323Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T23:01:49.037520Z",
     "market_id": "143642",
     "question": "US strike on Mexico by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.2,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-06T19:48:14.158832Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T19:04:01.709234Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

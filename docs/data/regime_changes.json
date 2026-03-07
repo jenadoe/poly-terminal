@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-07T16:06:58.280810Z",
+    "market_id": "90178",
+    "question": "Will Jesus Christ return before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 61.6,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:06:58.280810Z",
+    "market_id": "78016",
+    "question": "Based FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 67.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T15:59:13.413388Z",
     "market_id": "202857",
     "question": "NFL Champion 2027",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:53:02.153903Z",
-    "market_id": "153721",
-    "question": "Odds Trump acquires Greenland before 2027 hit __ by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
-      "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:53:02.153903Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.4,
-      "macro_sensitivity": 0.14
     }
   }
 ]

@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-07T11:54:56.434315Z",
+    "market_id": "179312",
+    "question": "Pro Baseball World Series Champion 2026",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 73.6,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:54:56.434315Z",
+    "market_id": "100394",
+    "question": "F1 Constructors' Champion",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:54:56.434315Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:54:56.434315Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:54:56.434315Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.0,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-07T11:42:50.269058Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T07:17:29.759322Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T07:17:29.759322Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T07:17:29.759322Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T06:38:18.640805Z",
-    "market_id": "237149",
-    "question": "Bitcoin above ___ on March 7?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T06:38:18.640805Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.7,
-      "macro_sensitivity": 0.08
     }
   }
 ]

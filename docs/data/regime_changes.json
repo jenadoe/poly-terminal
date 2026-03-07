@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-07T16:58:23.074332Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 83.9,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:58:23.074332Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.7,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:58:23.074332Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:58:23.074332Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:58:23.074332Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 48.2,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-07T16:36:46.424551Z",
     "market_id": "202857",
     "question": "NFL Champion 2027",
@@ -491,61 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 45.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "158299",
-    "question": "US forces enter Iran by..?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 90.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.5,
-      "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.6,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.9,
       "macro_sensitivity": 0.0
     }
   }

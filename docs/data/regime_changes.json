@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T21:55:29.804040Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 82.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T21:43:43.330210Z",
     "market_id": "48935",
     "question": "Russian strike on a NATO member by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.6,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-07T14:49:14.904148Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 33.0,
-      "macro_sensitivity": 0.12
     }
   }
 ]

@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "239295",
+    "question": "Nets vs. Pistons",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "236943",
+    "question": "Which countries will Iran strike in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T20:23:16.036439Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T19:53:25.272757Z",
     "market_id": "125871",
     "question": "Will Silver (SI) hit__ by end of June?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.32
-    }
-  },
-  {
-    "timestamp": "2026-03-07T12:42:19.454768Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:54:56.434315Z",
-    "market_id": "179312",
-    "question": "Pro Baseball World Series Champion 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 73.6,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:54:56.434315Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:54:56.434315Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:54:56.434315Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:54:56.434315Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.0,
-      "macro_sensitivity": 0.01
     }
   }
 ]

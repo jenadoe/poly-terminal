@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T17:26:26.720929Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.7,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-07T16:58:23.074332Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -535,17 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 65.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:18:50.594431Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.3,
       "macro_sensitivity": 0.0
     }
   }

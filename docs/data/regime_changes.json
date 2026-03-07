@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-07T21:43:43.330210Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-07T21:43:43.330210Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 50.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T21:19:39.971147Z",
     "market_id": "237089",
     "question": "Iran strikes Israel on...?",
@@ -524,28 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 33.0,
-      "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-07T14:22:30.370303Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.7,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-07T13:56:05.180666Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.8,
       "macro_sensitivity": 0.12
     }
   }

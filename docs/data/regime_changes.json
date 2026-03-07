@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-07T11:18:50.594431Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:18:50.594431Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:18:50.594431Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T10:48:48.799583Z",
     "market_id": "158299",
     "question": "US forces enter Iran by..?",
@@ -513,39 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 70.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:08:55.829015Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:08:55.829015Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:08:55.829015Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
       "macro_sensitivity": 0.0
     }
   }

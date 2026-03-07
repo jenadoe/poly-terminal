@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-07T15:21:48.563837Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.5,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-07T15:21:48.563837Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T14:49:14.904148Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.5,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:29:22.627465Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:56:50.918736Z",
-    "market_id": "237149",
-    "question": "Bitcoin above ___ on March 7?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 86.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

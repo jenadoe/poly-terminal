@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-06T23:58:29.494256Z",
+    "market_id": "45018",
+    "question": "Maine Democratic Senate Primary Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.1,
+      "macro_sensitivity": 0.16
+    }
+  },
+  {
+    "timestamp": "2026-03-06T23:58:29.494256Z",
+    "market_id": "34050",
+    "question": "Russia x Ukraine ceasefire by end of 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-06T23:41:28.529323Z",
     "market_id": "108634",
     "question": "Will the Iranian regime fall by June 30?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T19:48:14.158832Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T19:48:14.158832Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.2,
-      "macro_sensitivity": 0.07
     }
   }
 ]

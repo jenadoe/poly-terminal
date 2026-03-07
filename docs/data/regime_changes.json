@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-07T21:19:39.971147Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 29.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T21:19:39.971147Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.7,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-07T21:19:39.971147Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 68.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-07T21:19:39.971147Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 77.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T20:48:29.481033Z",
     "market_id": "73096",
     "question": "Will Iran close the Strait of Hormuz by...?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.8,
       "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-07T13:56:05.180666Z",
-    "market_id": "36173",
-    "question": "When will Bitcoin hit $150k?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.6,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-07T13:27:57.758173Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T13:27:57.758173Z",
-    "market_id": "179312",
-    "question": "Pro Baseball World Series Champion 2026",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.4,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-07T13:27:57.758173Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

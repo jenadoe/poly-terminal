@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T19:02:15.672267Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T18:31:11.913532Z",
     "market_id": "239593",
     "question": "Bitcoin above ___ on March 8?",
@@ -535,17 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 89.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:42:50.269058Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.3,
       "macro_sensitivity": 0.0
     }
   }

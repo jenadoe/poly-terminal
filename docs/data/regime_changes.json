@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T15:59:13.413388Z",
+    "market_id": "202857",
+    "question": "NFL Champion 2027",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T15:54:41.068514Z",
     "market_id": "236943",
     "question": "Which countries will Iran strike in March?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.4,
       "macro_sensitivity": 0.14
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:53:02.153903Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 82.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

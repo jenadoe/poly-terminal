@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-07T11:42:50.269058Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.3,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:42:50.269058Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:42:50.269058Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 89.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:42:50.269058Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T11:42:50.269058Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.5,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-07T11:18:50.594431Z",
     "market_id": "79926",
     "question": "How many different countries will Israel strike in 2026?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.7,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-07T06:38:18.640805Z",
-    "market_id": "148000",
-    "question": "Who will win a women's Calendar Grand Slam in 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 58.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:52:12.231568Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.3,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:52:12.231568Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 58.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:08:55.829015Z",
-    "market_id": "238094",
-    "question": "Which countries will strike Iran by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T05:08:55.829015Z",
-    "market_id": "50298",
-    "question": "Oscars 2026: Best Actress Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

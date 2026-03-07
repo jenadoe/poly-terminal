@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-07T16:36:46.424551Z",
+    "market_id": "202857",
+    "question": "NFL Champion 2027",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:36:46.424551Z",
+    "market_id": "179312",
+    "question": "Pro Baseball World Series Champion 2026",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 76.1,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:36:46.424551Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 32.4,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:36:46.424551Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-07T16:36:46.424551Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 84.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T16:06:58.280810Z",
     "market_id": "90178",
     "question": "Will Jesus Christ return before 2027?",
@@ -491,61 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 36.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:48:48.799583Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 74.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:21:48.251670Z",
-    "market_id": "73923",
-    "question": "Russia nuclear test by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 71.9,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:21:48.251670Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:21:48.251670Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T10:21:48.251670Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.9,
       "macro_sensitivity": 0.0
     }
   }

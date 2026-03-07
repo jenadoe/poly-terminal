@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T23:20:51.290711Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 96.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T22:48:36.775631Z",
     "market_id": "139507",
     "question": "Will Reza Pahlavi enter Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.6,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-07T15:54:41.068514Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

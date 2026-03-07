@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-07T14:49:14.904148Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.4,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-07T14:49:14.904148Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.6,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-07T14:49:14.904148Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 33.0,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
     "timestamp": "2026-03-07T14:22:30.370303Z",
     "market_id": "51456",
     "question": "How many Fed rate cuts in 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 86.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:56:50.918736Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 74.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:56:50.918736Z",
-    "market_id": "202857",
-    "question": "NFL Champion 2027",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:56:50.918736Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-07T15:45:36.366845Z",
+    "market_id": "236943",
+    "question": "Which countries will Iran strike in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 31.5,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-07T15:45:36.366845Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-07T15:21:48.563837Z",
     "market_id": "125871",
     "question": "Will Silver (SI) hit__ by end of June?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:29:22.627465Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.45
-    }
-  },
-  {
-    "timestamp": "2026-03-07T09:29:22.627465Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.5,
-      "macro_sensitivity": 0.04
     }
   }
 ]

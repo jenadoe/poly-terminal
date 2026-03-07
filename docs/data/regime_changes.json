@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "179312",
+    "question": "Pro Baseball World Series Champion 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 34.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T13:27:57.758173Z",
+    "market_id": "72347",
+    "question": "Will the Iranian regime fall before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
     "timestamp": "2026-03-07T12:42:19.454768Z",
     "market_id": "98369",
     "question": "Eurovision Winner 2026",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.5,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "34052",
-    "question": "Zelenskyy out as Ukraine president by end of 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 67.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T08:29:03.753624Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
-      "macro_sensitivity": 0.09
     }
   }
 ]

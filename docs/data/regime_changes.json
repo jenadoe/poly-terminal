@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-07T10:21:48.251670Z",
+    "market_id": "73923",
+    "question": "Russia nuclear test by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-07T10:21:48.251670Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T10:21:48.251670Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T10:21:48.251670Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T09:53:02.153903Z",
     "market_id": "153721",
     "question": "Odds Trump acquires Greenland before 2027 hit __ by March 31?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.8,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-07T04:11:54.446859Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 72.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T04:11:54.446859Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T04:11:54.446859Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.2,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-07T04:11:54.446859Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 73.4,
-      "macro_sensitivity": 0.05
     }
   }
 ]

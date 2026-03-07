@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-07T07:17:29.759322Z",
+    "market_id": "31558",
+    "question": "NBA Rookie of the Year ",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T07:17:29.759322Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T07:17:29.759322Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T06:38:18.640805Z",
     "market_id": "237149",
     "question": "Bitcoin above ___ on March 7?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.89
-    }
-  },
-  {
-    "timestamp": "2026-03-06T20:29:59.271546Z",
-    "market_id": "160366",
-    "question": "Will the US officially declare war on Iran by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-06T20:29:59.271546Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.8,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-06T20:29:59.271546Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.9,
-      "macro_sensitivity": 0.03
     }
   }
 ]

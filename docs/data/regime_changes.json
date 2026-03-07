@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T17:46:42.206652Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T17:26:26.720929Z",
     "market_id": "50282",
     "question": "Oscars 2026: Best Actor Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 42.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T11:18:50.594431Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.3,
       "macro_sensitivity": 0.0
     }
   }

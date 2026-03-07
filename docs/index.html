@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLY-NEXUS // INTEGRITY ORACLE</title>
+    <title>POLY-NEXUS // CONSENSUS ORACLE</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         :root {
             --bg:        #0d1420;
@@ -14,6 +15,11 @@
             --blue:      #60a5fa;
             --blue-dim:  #3b82f6;
             --blue-glow: rgba(96,165,250,0.15);
+            --green:     #34d399;
+            --amber:     #fbbf24;
+            --slate:     #64748b;
+            --red:       #f87171;
+            --orange:    #fb923c;
             --text-hi:   #e8edf5;
             --text:      #a8bcd4;
             --text-mid:  #7a96b4;
@@ -46,7 +52,7 @@
         .topbar-left { display:flex; gap:24px; }
         .live-dot {
             display:inline-block; width:5px; height:5px; border-radius:50%;
-            background:var(--blue); box-shadow:0 0 5px var(--blue);
+            background:var(--green); box-shadow:0 0 5px var(--green);
             animation:pulse 2.4s infinite; vertical-align:middle; margin-right:5px;
         }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
@@ -78,9 +84,15 @@
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
         }
         .kpi-card.primary { border-left-color:var(--blue); }
+        .kpi-card.k-converged { border-left-color:var(--blue); }
+        .kpi-card.k-contested { border-left-color:var(--red); }
+        .kpi-card.k-correlated { border-left-color:var(--orange); }
         .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
         .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); }
         .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
+        .kpi-card.k-converged .kpi-value { color:var(--blue); }
+        .kpi-card.k-contested .kpi-value { color:var(--red); }
+        .kpi-card.k-correlated .kpi-value { color:var(--orange); }
         .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-mid); }
 
         /* ── CHARTS ── */
@@ -102,13 +114,10 @@
             border:1px solid rgba(59,130,246,0.18);
             padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
         }
-        /* 섹션별 색상 차별화 */
-        .section-head.sh-active::after { background:rgba(52,211,153,0.3); }
-        .section-head.sh-active .section-tag { background:rgba(52,211,153,0.08); color:#34d399; border-color:rgba(52,211,153,0.25); }
-        .section-head.sh-macro::after  { background:rgba(251,191,36,0.3); }
-        .section-head.sh-macro .section-tag { background:rgba(251,191,36,0.1); color:#fbbf24; border-color:rgba(251,191,36,0.25); }
-        .section-head.sh-low::after    { background:rgba(71,85,105,0.4); }
-        .section-head.sh-low .section-tag   { background:rgba(71,85,105,0.15); color:#6b7f96; border-color:rgba(71,85,105,0.3); }
+        .section-head.sh-calibrating::after { background:rgba(52,211,153,0.3); }
+        .section-head.sh-calibrating .section-tag { background:rgba(52,211,153,0.08); color:#34d399; border-color:rgba(52,211,153,0.25); }
+        .section-head.sh-fragile::after  { background:rgba(71,85,105,0.4); }
+        .section-head.sh-fragile .section-tag { background:rgba(71,85,105,0.15); color:#6b7f96; border-color:rgba(71,85,105,0.3); }
         .section-desc {
             font-size:0.7rem; color:var(--text-mid); margin-bottom:14px;
             letter-spacing:0.04em; padding-left:2px;
@@ -122,6 +131,7 @@
         @media(max-width:1280px) { .event-grid { grid-template-columns:repeat(4,1fr); } }
         @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } }
         @media(max-width:640px)  { .event-grid { grid-template-columns:repeat(2,1fr); } .container,.topbar,header { padding-left:16px; padding-right:16px; } }
+        @media(max-width:480px)  { .event-grid { grid-template-columns:1fr; } .disclaimer-banner { padding:7px 16px; } }
 
         .event-card {
             background:var(--bg-card); border:1px solid var(--border);
@@ -134,10 +144,130 @@
         .event-card:active { transform:translateY(0); }
 
         /* left accent per state */
-        .event-card.s-citable   { border-left:2px solid rgba(96,165,250,0.7); }
-        .event-card.s-active    { border-left:2px solid rgba(52,211,153,0.6); }
-        .event-card.s-macro     { border-left:2px solid rgba(251,191,36,0.65); }
-        .event-card.s-low       { border-left:2px solid rgba(71,85,105,0.45); }
+        .event-card.s-converged {
+            border-left:2px solid rgba(96,165,250,0.9);
+            background: linear-gradient(135deg, #1a2540 0%, #1a2d4a 100%);
+            box-shadow: 0 0 0 1px rgba(96,165,250,0.08), inset 0 0 20px rgba(96,165,250,0.04);
+        }
+        .event-card.s-converged:hover {
+            border-color: rgba(96,165,250,0.7);
+            box-shadow: 0 4px 20px rgba(96,165,250,0.12), 0 0 0 1px rgba(96,165,250,0.15);
+        }
+        .event-card.s-converged .card-score {
+            color: #93c5fd;
+            text-shadow: 0 0 12px rgba(96,165,250,0.4);
+        }
+        .event-card.s-calibrating { border-left:2px solid rgba(52,211,153,0.6); }
+        .event-card.s-fragile     { border-left:2px solid rgba(71,85,105,0.45); }
+
+        /* ── NOT INVESTMENT ADVICE BANNER ── */
+        /* ── LIVE CALIBRATION TEST ── */
+        .calib-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-top: 2px solid #22c55e;
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        .calib-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+        }
+        .calib-title {
+            font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--text-hi); font-weight: 600;
+        }
+        .calib-phase {
+            font-size: 0.6rem; letter-spacing: 0.1em; background: rgba(34,197,94,0.1);
+            color: #22c55e; border: 1px solid rgba(34,197,94,0.25);
+            border-radius: 3px; padding: 2px 8px; text-transform: uppercase;
+        }
+        .calib-progress-wrap {
+            margin-bottom: 18px;
+        }
+        .calib-progress-label {
+            display: flex; justify-content: space-between;
+            font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.08em;
+            margin-bottom: 5px;
+        }
+        .calib-progress-label span:last-child { color: #22c55e; }
+        .calib-progress-bar {
+            height: 4px; background: var(--border);
+            border-radius: 2px; overflow: hidden;
+        }
+        .calib-progress-fill {
+            height: 100%; background: linear-gradient(90deg, #22c55e, #34d399);
+            border-radius: 2px; transition: width 1s cubic-bezier(.4,0,.2,1);
+            box-shadow: 0 0 8px rgba(52,211,153,0.4);
+        }
+        .calib-rows { display: flex; flex-direction: column; gap: 10px; }
+        .calib-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 100px 90px;
+            align-items: center; gap: 12px;
+        }
+        @media(max-width:640px) {
+            .calib-row {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 6px 10px;
+            }
+            .calib-state-label { grid-column: 1 / -1; }
+            .calib-bar-wrap    { grid-column: 1 / -1; }
+            .calib-variance    { text-align: left; }
+            .calib-ci          { display: block; text-align: right; }
+        }
+        @media(max-width:400px) {
+            .calib-ci { display: none; }
+        }
+        .calib-state-label {
+            display: flex; align-items: center; gap: 7px;
+            font-size: 0.65rem; color: var(--text); letter-spacing: 0.06em;
+        }
+        .calib-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .calib-dot.converged  { background: var(--green); box-shadow: 0 0 5px var(--green); }
+        .calib-dot.calibrating{ background: var(--blue); }
+        .calib-dot.fragile    { background: var(--slate); }
+        .calib-bar-wrap { position: relative; }
+        .calib-bar-bg {
+            height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+        }
+        .calib-bar-fill {
+            height: 100%; border-radius: 3px;
+            transition: width 1.2s cubic-bezier(.4,0,.2,1);
+        }
+        .calib-bar-fill.converged  { background: linear-gradient(90deg, #22c55e, #34d399); }
+        .calib-bar-fill.calibrating{ background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .calib-bar-fill.fragile    { background: #475569; }
+        .calib-variance {
+            font-size: 0.6rem; letter-spacing: 0.07em; text-align: right;
+            white-space: nowrap;
+        }
+        .calib-variance.low  { color: var(--green); }
+        .calib-variance.mid  { color: var(--blue); }
+        .calib-variance.high { color: var(--slate); }
+        .calib-ci {
+            font-size: 0.58rem; color: var(--text-dim); letter-spacing: 0.04em;
+            text-align: right; white-space: nowrap;
+        }
+        .calib-footer {
+            margin-top: 14px; padding-top: 12px;
+            border-top: 1px solid var(--border);
+            font-size: 0.58rem; color: var(--text-dim); letter-spacing: 0.06em;
+            line-height: 1.6;
+        }
+        .calib-footer strong { color: var(--text-mid); }
+
+        .disclaimer-banner {
+            background: rgba(248,113,113,0.06);
+            border-bottom: 1px solid rgba(248,113,113,0.15);
+            padding: 7px 32px;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            font-size: 0.62rem; color: rgba(248,113,113,0.75);
+            letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .disclaimer-banner span { color: rgba(248,113,113,0.5); }
 
         .card-score {
             font-size:1.6rem; font-weight:700; line-height:1;
@@ -154,6 +284,15 @@
         .card-vol { font-size:0.62rem; color:var(--text-mid); }
         .card-macro { font-size:0.6rem; color:var(--text-mid); }
 
+        /* ── FLAG BADGES on card ── */
+        .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:7px; }
+        .flag-badge {
+            font-size:0.5rem; padding:2px 6px; border-radius:2px;
+            font-weight:600; letter-spacing:0.07em; text-transform:uppercase;
+        }
+        .flag-contested  { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.25); }
+        .flag-correlated { background:rgba(251,146,60,0.12);  color:#fb923c; border:1px solid rgba(251,146,60,0.25); }
+
         .card-bars { margin-top:10px; display:flex; flex-direction:column; gap:4px; }
         .card-bar-row { display:flex; align-items:center; gap:5px; }
         .card-bar-key { font-size:0.5rem; color:#5a7a9a; width:24px; flex-shrink:0; }
@@ -169,17 +308,6 @@
             border-radius:2px; background:var(--border); color:var(--text-dim);
             letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px; color:#7a96b4;
         }
-        .card-weak {
-            display:inline-block; font-size:0.5rem; padding:1px 6px;
-            border-radius:2px; letter-spacing:0.06em; text-transform:uppercase;
-            margin-top:6px; font-weight:600;
-        }
-        .weak-liq  { background:rgba(96,165,250,0.1);  color:#60a5fa; }
-        .weak-eff  { background:rgba(251,191,36,0.1);  color:#fbbf24; }
-        .weak-ind  { background:rgba(248,113,113,0.1); color:#f87171; }
-        .weak-conv { background:rgba(167,139,250,0.1); color:#a78bfa; }
-        .weak-macro{ background:rgba(251,191,36,0.12); color:#fbbf24; }
-        .weak-ok   { background:rgba(52,211,153,0.08); color:#34d399; }
 
         .card-arrow {
             position:absolute; top:12px; right:12px;
@@ -188,6 +316,7 @@
         }
         .event-card:hover .card-arrow { opacity:1; }
 
+        /* ── DETAIL PANEL ── */
         .panel-overlay {
             position:fixed; inset:0; background:rgba(10,15,24,0.6);
             z-index:100; opacity:0; pointer-events:none;
@@ -218,19 +347,30 @@
         }
         .panel-close:hover { color:var(--text-hi); border-color:var(--text-mid); }
 
-        .panel-score-row { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; }
+        .panel-score-row { display:flex; align-items:baseline; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
         .panel-score { font-size:2.8rem; font-weight:700; color:var(--text-hi); line-height:1; }
+
+        /* state badge in panel */
         .panel-badge {
             display:inline-block; padding:4px 10px; border-radius:4px;
             font-size:0.6rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
             border:1px solid transparent;
         }
-        .badge-citable  { color:#93c5fd; border-color:#1e3a5f; background:rgba(59,130,246,0.08); }
-        .badge-active   { color:var(--text); border-color:var(--border-hi); }
-        .badge-macro    { color:#fbbf24; border-color:rgba(251,191,36,0.3); background:rgba(251,191,36,0.06); }
-        .badge-low      { color:var(--text-dim); border-color:var(--border); }
+        .badge-converged   { color:#93c5fd; border-color:#1e3a5f; background:rgba(59,130,246,0.08); }
+        .badge-calibrating { color:#6ee7b7; border-color:rgba(52,211,153,0.25); background:rgba(52,211,153,0.06); }
+        .badge-fragile     { color:var(--text-dim); border-color:var(--border); }
 
-        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; }
+        /* flag badges in panel */
+        .panel-flags { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+        .pflag {
+            display:inline-flex; align-items:center; gap:4px;
+            padding:3px 8px; border-radius:3px;
+            font-size:0.6rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+        }
+        .pflag-contested  { background:rgba(248,113,113,0.1); color:#f87171; border:1px solid rgba(248,113,113,0.2); }
+        .pflag-correlated { background:rgba(251,146,60,0.1);  color:#fb923c; border:1px solid rgba(251,146,60,0.2); }
+
+        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; margin-top:8px; }
 
         .panel-body { flex:1; overflow-y:auto; padding:20px 24px; }
         .panel-body::-webkit-scrollbar { width:4px; }
@@ -272,6 +412,19 @@
         }
         .context-note strong { color:var(--text); }
 
+        /* Flag context box */
+        .flag-context {
+            background:rgba(30,48,80,0.4); border:1px solid var(--border);
+            border-radius:5px; padding:10px 14px; margin-top:8px;
+            font-size:0.68rem; color:var(--text-mid); line-height:1.55;
+        }
+        .flag-context .fc-label {
+            font-size:0.55rem; letter-spacing:0.1em; text-transform:uppercase;
+            margin-bottom:4px; font-weight:600;
+        }
+        .fc-contested  .fc-label { color:#f87171; }
+        .fc-correlated .fc-label { color:#fb923c; }
+
         .panel-footer { padding:16px 24px; border-top:1px solid var(--border); background:var(--bg-card); }
         .view-btn {
             display:block; text-align:center; padding:10px;
@@ -298,19 +451,25 @@
 <div class="topbar">
     <div class="topbar-left">
         <span><span class="live-dot"></span>SYSTEM ONLINE</span>
-        <span>ENGINE V4.1</span>
+        <span>ENGINE V5 // CONSENSUS TRACKING</span>
     </div>
     <span id="live-clock">--:--:-- UTC</span>
+</div>
+
+<div class="disclaimer-banner">
+    <span>⚠</span>
+    Poly-Nexus measures structural integrity of market consensus — NOT a prediction of outcomes or investment advice.
+    <span>⚠</span>
 </div>
 
 <header>
     <div class="logo">
         <h1>POLY<span>-NEXUS</span><span class="cursor"></span></h1>
-        <div class="logo-sub">// Prediction Market Integrity Oracle</div>
+        <div class="logo-sub">// Prediction Market Consensus Oracle</div>
     </div>
     <div class="header-meta">
         <div>UPDATED <strong id="last-update">—</strong></div>
-        <div>ENGINE <strong>V4.1 // NEXUS SCORE™</strong></div>
+        <div>ENGINE <strong>V5 // NEXUS SCORE™</strong></div>
     </div>
 </header>
 
@@ -323,20 +482,48 @@
             <div class="kpi-value" id="integrity-index">—</div>
             <div class="kpi-sub" id="integrity-grade">—</div>
         </div>
-        <div class="kpi-card">
-            <div class="kpi-label">Market Regime</div>
-            <div class="kpi-value" id="market-regime">—</div>
-            <div class="kpi-sub">SYSTEM-WIDE</div>
+        <div class="kpi-card k-converged">
+            <div class="kpi-label">Converged Markets</div>
+            <div class="kpi-value" id="converged-count">—</div>
+            <div class="kpi-sub">CONSENSUS LOCKED</div>
         </div>
-        <div class="kpi-card">
-            <div class="kpi-label">Citable Markets</div>
-            <div class="kpi-value" id="high-conf-count">—</div>
-            <div class="kpi-sub">HIGH CONFIDENCE</div>
+        <div class="kpi-card k-contested">
+            <div class="kpi-label">Contested</div>
+            <div class="kpi-value" id="contested-count">—</div>
+            <div class="kpi-sub">HIGH VOLATILITY FLAG</div>
         </div>
-        <div class="kpi-card">
-            <div class="kpi-label">Tracked</div>
-            <div class="kpi-value" id="total-markets">—</div>
-            <div class="kpi-sub">ACTIVE EVENTS</div>
+        <div class="kpi-card k-correlated">
+            <div class="kpi-label">Correlated</div>
+            <div class="kpi-value" id="correlated-count">—</div>
+            <div class="kpi-sub">MACRO DEPENDENCY FLAG</div>
+        </div>
+    </div>
+
+    <!-- LIVE CALIBRATION TEST -->
+    <div class="calib-section">
+        <div class="calib-header">
+            <div class="calib-title">📊 LIVE CALIBRATION TEST</div>
+            <div class="calib-phase">Forward-testing Phase</div>
+        </div>
+
+        <div class="calib-progress-wrap">
+            <div class="calib-progress-label">
+                <span>Resolved markets: <span id="calib-n">—</span> / <strong id="calib-target">100</strong></span>
+                <span id="calib-progress-pct">—% to significance</span>
+            </div>
+            <div class="calib-progress-bar">
+                <div class="calib-progress-fill" id="calib-progress-fill" style="width:0%"></div>
+            </div>
+        </div>
+
+        <div class="calib-rows" id="calib-rows">
+            <!-- JS로 렌더 -->
+        </div>
+
+        <div class="calib-footer">
+            <strong>Methodology:</strong> Price-stability measured as absence of late-stage repricing (&gt;5% logit shift) in final 6h before resolution. &nbsp;|&nbsp;
+            <strong>Note:</strong> Sample size is still small. Confidence intervals will tighten as more markets resolve. &nbsp;|&nbsp;
+            Brier Score and calibration curve will be published at n≥50.
         </div>
     </div>
 
@@ -366,6 +553,7 @@
                 <span class="panel-score" id="p-score">—</span>
                 <span class="panel-badge" id="p-badge">—</span>
             </div>
+            <div class="panel-flags" id="p-flags"></div>
             <div class="panel-title" id="p-title">—</div>
         </div>
         <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
@@ -384,8 +572,9 @@
             <canvas class="panel-sparkline" id="p-sparkline" height="60"></canvas>
         </div>
         <div class="panel-section">
-            <div class="panel-section-label">CONTEXT</div>
+            <div class="panel-section-label">STRUCTURAL ANALYSIS</div>
             <div class="context-note" id="p-context"></div>
+            <div id="p-flag-context"></div>
         </div>
     </div>
     <div class="panel-footer">
@@ -394,27 +583,37 @@
 </div>
 
 <footer>
-    <span>POLY-NEXUS © 2026 // INTEGRITY ORACLE</span>
+    <span>POLY-NEXUS © 2026 // CONSENSUS ORACLE — NOT INVESTMENT ADVICE</span>
     <span id="footer-clock"></span>
 </footer>
 
 <script>
 const DATA_URL = './data/latest_intelligence.json';
 
+// ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
+const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
+
+let sbClient = null;
+if(USE_SUPABASE){
+    sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
 const MOCK = [
-    {id:"1",slug:"fed-rate-cut-march",       question:"Will the Fed cut rates at the March FOMC meeting?",          category:"Finance",     nexus_score:91.2,market_state:"High Confidence",macro_sensitivity:0.08,volume:14200000,sparkline:[{p:.55},{p:.58},{p:.61},{p:.60},{p:.63},{p:.62},{p:.65}],c1:93,c2:100,c3:88,c4:78},
-    {id:"2",slug:"trump-crypto-eo",           question:"Will Trump sign an executive order on crypto before March?",  category:"Crypto",     nexus_score:87.6,market_state:"High Confidence",macro_sensitivity:0.12,volume:9800000, sparkline:[{p:.72},{p:.74},{p:.71},{p:.75},{p:.78},{p:.76},{p:.79}],c1:87,c2:96,c3:82,c4:71},
-    {id:"3",slug:"ukraine-ceasefire",         question:"Will Ukraine and Russia reach a ceasefire by June 2026?",    category:"Geopolitics", nexus_score:83.4,market_state:"High Confidence",macro_sensitivity:0.06,volume:7400000, sparkline:[{p:.31},{p:.33},{p:.35},{p:.34},{p:.36},{p:.37},{p:.36}],c1:82,c2:94,c3:91,c4:65},
-    {id:"4",slug:"apple-foldable-wwdc",       question:"Will Apple announce a foldable iPhone at WWDC 2026?",        category:"Tech",       nexus_score:78.1,market_state:"Active",         macro_sensitivity:0.04,volume:5100000, sparkline:[{p:.42},{p:.44},{p:.40},{p:.43},{p:.45},{p:.44},{p:.46}],c1:74,c2:91,c3:94,c4:58},
-    {id:"5",slug:"btc-120k-q1",               question:"Will BTC exceed $120k before end of Q1 2026?",               category:"Crypto",     nexus_score:73.8,market_state:"Active",         macro_sensitivity:0.71,volume:22100000,sparkline:[{p:.48},{p:.52},{p:.49},{p:.55},{p:.51},{p:.53},{p:.50}],c1:98,c2:89,c3:41,c4:52},
-    {id:"6",slug:"democrat-senate-2026",      question:"Will the Democrats win the 2026 Senate Midterms?",           category:"Politics",   nexus_score:72.3,market_state:"Active",         macro_sensitivity:0.03,volume:6700000, sparkline:[{p:.44},{p:.45},{p:.43},{p:.46},{p:.44},{p:.45},{p:.44}],c1:77,c2:92,c3:96,c4:44},
-    {id:"7",slug:"musk-doge-july",            question:"Will Elon Musk still be at DOGE by July 2026?",              category:"Politics",   nexus_score:68.9,market_state:"Active",         macro_sensitivity:0.09,volume:4300000, sparkline:[{p:.62},{p:.60},{p:.58},{p:.61},{p:.59},{p:.60},{p:.58}],c1:71,c2:88,c3:84,c4:38},
-    {id:"8",slug:"eth-5000-june",             question:"Will ETH reach $5000 before June 2026?",                     category:"Crypto",     nexus_score:54.4,market_state:"Macro-Driven",   macro_sensitivity:0.82,volume:11500000,sparkline:[{p:.35},{p:.38},{p:.41},{p:.44},{p:.39},{p:.42},{p:.38}],c1:87,c2:84,c3:23,c4:30},
-    {id:"9",slug:"cpi-4pct-2026",             question:"Will inflation (CPI) exceed 4% in any month of 2026?",       category:"Finance",    nexus_score:61.2,market_state:"Macro-Driven",   macro_sensitivity:0.72,volume:2800000, sparkline:[{p:.28},{p:.30},{p:.29},{p:.32},{p:.31},{p:.30},{p:.32}],c1:60,c2:86,c3:32,c4:51},
-    {id:"10",slug:"ai-lab-breach-2026",       question:"Will any major AI lab have a data breach in 2026?",          category:"Tech",       nexus_score:42.1,market_state:"Low Liquidity",  macro_sensitivity:0.01,volume:85000,   sparkline:[{p:.18},{p:.19},{p:.18},{p:.20},{p:.19},{p:.19},{p:.20}],c1:22,c2:86,c3:94,c4:11},
+    {id:"1", slug:"fed-rate-cut-march",    question:"Will the Fed cut rates at the March FOMC meeting?",         category:"Finance",     nexus_score:91.2, market_state:"Converged",   flags:[],                      macro_sensitivity:0.08, volume:14200000, sparkline:[{p:.55},{p:.58},{p:.61},{p:.60},{p:.63},{p:.62},{p:.65}], c1:93,c2:100,c3:88,c4:78},
+    {id:"2", slug:"trump-crypto-eo",       question:"Will Trump sign an executive order on crypto before March?", category:"Crypto",      nexus_score:87.6, market_state:"Converged",   flags:[],                      macro_sensitivity:0.12, volume:9800000,  sparkline:[{p:.72},{p:.74},{p:.71},{p:.75},{p:.78},{p:.76},{p:.79}], c1:87,c2:96,c3:82,c4:71},
+    {id:"3", slug:"ukraine-ceasefire",     question:"Will Ukraine and Russia reach a ceasefire by June 2026?",   category:"Geopolitics", nexus_score:83.4, market_state:"Converged",   flags:[],                      macro_sensitivity:0.06, volume:7400000,  sparkline:[{p:.31},{p:.33},{p:.35},{p:.34},{p:.36},{p:.37},{p:.36}], c1:82,c2:94,c3:91,c4:65},
+    {id:"4", slug:"apple-foldable-wwdc",   question:"Will Apple announce a foldable iPhone at WWDC 2026?",       category:"Tech",        nexus_score:78.1, market_state:"Calibrating", flags:[],                      macro_sensitivity:0.04, volume:5100000,  sparkline:[{p:.42},{p:.44},{p:.40},{p:.43},{p:.45},{p:.44},{p:.46}], c1:74,c2:91,c3:94,c4:58},
+    {id:"5", slug:"btc-120k-q1",           question:"Will BTC exceed $120k before end of Q1 2026?",              category:"Crypto",      nexus_score:66.2, market_state:"Calibrating", flags:["Correlated"],          macro_sensitivity:0.71, volume:22100000, sparkline:[{p:.48},{p:.52},{p:.49},{p:.55},{p:.51},{p:.53},{p:.50}], c1:98,c2:89,c3:41,c4:52},
+    {id:"6", slug:"democrat-senate-2026",  question:"Will the Democrats win the 2026 Senate Midterms?",          category:"Politics",    nexus_score:72.3, market_state:"Calibrating", flags:[],                      macro_sensitivity:0.03, volume:6700000,  sparkline:[{p:.44},{p:.45},{p:.43},{p:.46},{p:.44},{p:.45},{p:.44}], c1:77,c2:92,c3:96,c4:44},
+    {id:"7", slug:"musk-doge-july",        question:"Will Elon Musk still be at DOGE by July 2026?",             category:"Politics",    nexus_score:61.4, market_state:"Calibrating", flags:["Contested"],           macro_sensitivity:0.09, volume:4300000,  sparkline:[{p:.62},{p:.60},{p:.58},{p:.61},{p:.59},{p:.60},{p:.58}], c1:71,c2:88,c3:84,c4:38},
+    {id:"8", slug:"eth-5000-june",         question:"Will ETH reach $5000 before June 2026?",                    category:"Crypto",      nexus_score:48.8, market_state:"Calibrating", flags:["Correlated","Contested"],macro_sensitivity:0.82,volume:11500000, sparkline:[{p:.35},{p:.38},{p:.41},{p:.44},{p:.39},{p:.42},{p:.38}], c1:87,c2:84,c3:23,c4:30},
+    {id:"9", slug:"cpi-4pct-2026",         question:"Will inflation (CPI) exceed 4% in any month of 2026?",      category:"Finance",     nexus_score:55.1, market_state:"Calibrating", flags:["Correlated"],          macro_sensitivity:0.72, volume:2800000,  sparkline:[{p:.28},{p:.30},{p:.29},{p:.32},{p:.31},{p:.30},{p:.32}], c1:60,c2:86,c3:32,c4:51},
+    {id:"10",slug:"ai-lab-breach-2026",    question:"Will any major AI lab have a data breach in 2026?",         category:"Tech",        nexus_score:42.1, market_state:"Fragile",     flags:[],                      macro_sensitivity:0.01, volume:85000,    sparkline:[{p:.18},{p:.19},{p:.18},{p:.20},{p:.19},{p:.19},{p:.20}], c1:22,c2:86,c3:94,c4:11},
 ];
 
-let stateInst=null, radarInst=null, panelSparkInst=null;
+let stateInst=null, radarInst=null;
 let allData=[];
 
 // ── UTILS ──────────────────────────────────────────────────
@@ -445,179 +644,287 @@ function animateCount(el,target,dec=0,ms=800){
 }
 function cleanQuestion(q){
     if(!q) return q;
-    const sep = q.indexOf('?: ');
-    if(sep === -1) return q;
-    const after = q.slice(sep + 3).trim();
-    return after || q.slice(0, sep + 1).trim();
+    const sep=q.indexOf('?: ');
+    if(sep===-1) return q;
+    const after=q.slice(sep+3).trim();
+    return after||q.slice(0,sep+1).trim();
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
-function hasVal(v){ return v !== null && v !== undefined && v > 0; }
-function fmtScore(v){ return hasVal(v) ? (+v).toFixed(0) : '—'; }
-function barRow(key, cls, val){
+function hasVal(v){ return v!==null&&v!==undefined&&v>0; }
+function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
+function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
+
+function barRow(key,cls,val){
     if(!hasVal(val)){
         return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill" style="width:0%"></div></div><span class="card-bar-key" style="width:auto;color:#3d5068">—</span></div>`;
     }
     return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill ${cls}" style="width:${normBar(val)}%"></div></div></div>`;
 }
 
+// ── LIVE CALIBRATION TEST ──────────────────────────────────
+// Wilson Score Interval (단측 근사) — n 작을 때 CI 계산
+function wilsonCI(k, n, z=1.96) {
+    if (n === 0) return [0, 1];
+    const p = k / n;
+    const denom = 1 + z*z/n;
+    const center = (p + z*z/(2*n)) / denom;
+    const margin = (z * Math.sqrt(p*(1-p)/n + z*z/(4*n*n))) / denom;
+    return [Math.max(0, center - margin), Math.min(1, center + margin)];
+}
+
+function varianceLabel(rate) {
+    if (rate >= 0.75) return { text: 'Low Variance',  cls: 'low'  };
+    if (rate >= 0.45) return { text: 'Mid Variance',  cls: 'mid'  };
+    return                   { text: 'High Noise',    cls: 'high' };
+}
+
+// MOCK 트랙 레코드 (Supabase hc_track_record 없을 때 fallback)
+const MOCK_TRACK_RECORD = [
+    { state: 'Converged',   n: 7, stable: 6 },   // 6/7 price-stable at resolution
+    { state: 'Calibrating', n: 9, stable: 5 },   // 5/9
+    { state: 'Fragile',     n: 3, stable: 1 },   // 1/3
+];
+const CALIB_TARGET = 100;
+
+async function loadTrackRecord() {
+    if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
+    try {
+        const { data, error } = await sbClient
+            .from('hc_track_record')
+            .select('market_state, stable_resolution')
+            .not('resolved_at', 'is', null);
+        if (error || !data?.length) return MOCK_TRACK_RECORD;
+
+        const agg = {};
+        data.forEach(r => {
+            const s = r.market_state;  // ← hc_track_record 실제 컬럼명
+            if (!agg[s]) agg[s] = { n: 0, stable: 0 };
+            agg[s].n++;
+            if (r.stable_resolution) agg[s].stable++;
+        });
+        return ['Converged','Calibrating','Fragile'].map(s => ({
+            state: s,
+            n:      agg[s]?.n      ?? 0,
+            stable: agg[s]?.stable ?? 0,
+        }));
+    } catch(e) {
+        console.warn('Track record fetch failed:', e);
+        return MOCK_TRACK_RECORD;
+    }
+}
+
+// Realtime subscription — hc_track_record 변경 시 자동 갱신
+function subscribeCalibration() {
+    if (!USE_SUPABASE) return;
+    sbClient.channel('calib_live')
+        .on('postgres_changes', {
+            event: '*',
+            schema: 'public',
+            table: 'hc_track_record'
+        }, () => {
+            loadTrackRecord().then(renderCalibration);
+        })
+        .subscribe();
+}
+
+function renderCalibration(rows) {
+    const totalN = rows.reduce((s, r) => s + r.n, 0);
+    const pct = Math.min(totalN / CALIB_TARGET * 100, 100);
+
+    document.getElementById('calib-n').textContent = totalN;
+    document.getElementById('calib-target').textContent = CALIB_TARGET;
+    document.getElementById('calib-progress-pct').textContent =
+        pct >= 100 ? '✓ Significance reached' : `${pct.toFixed(0)}% to significance`;
+
+    setTimeout(() => {
+        document.getElementById('calib-progress-fill').style.width = pct + '%';
+    }, 300);
+
+    const stateConfig = {
+        'Converged':   { dot: 'converged',   barCls: 'converged',   label: '🟢 Converged' },
+        'Calibrating': { dot: 'calibrating', barCls: 'calibrating', label: '🔵 Calibrating' },
+        'Fragile':     { dot: 'fragile',      barCls: 'fragile',     label: '⚪ Fragile' },
+    };
+
+    const container = document.getElementById('calib-rows');
+    container.innerHTML = rows.map(r => {
+        const cfg = stateConfig[r.state] || { dot: 'fragile', barCls: 'fragile', label: r.state };
+        const rate = r.n > 0 ? r.stable / r.n : 0;
+        const vl = varianceLabel(rate);
+        const [ciLow, ciHigh] = wilsonCI(r.stable, r.n);
+        const barPct = (rate * 100).toFixed(0);
+        const nLabel = r.n > 0 ? `n=${r.n}` : 'n=0';
+        const stableLabel = r.n > 0 ? `${r.stable}/${r.n} price-stable` : 'awaiting data';
+
+        return `
+        <div class="calib-row">
+            <div class="calib-state-label">
+                <div class="calib-dot ${cfg.dot}"></div>
+                <div>
+                    <div>${r.state}</div>
+                    <div style="font-size:0.55rem;color:var(--text-dim);margin-top:2px">${nLabel} · ${stableLabel}</div>
+                </div>
+            </div>
+            <div class="calib-bar-wrap">
+                <div class="calib-bar-bg">
+                    <div class="calib-bar-fill ${cfg.barCls}" style="width:0%" data-target="${barPct}"></div>
+                </div>
+            </div>
+            <div class="calib-variance ${vl.cls}">${r.n > 0 ? vl.text : '—'}</div>
+            <div class="calib-ci">
+                ${r.n >= 3
+                    ? `95% CI [${(ciLow*100).toFixed(0)}%–${(ciHigh*100).toFixed(0)}%]`
+                    : '<span style="color:#3d5068">CI: n too small</span>'}
+            </div>
+        </div>`;
+    }).join('');
+
+    // 바 애니메이션 (DOM 삽입 후)
+    setTimeout(() => {
+        container.querySelectorAll('.calib-bar-fill').forEach(el => {
+            el.style.width = el.dataset.target + '%';
+        });
+    }, 400);
+}
+
 // ── STATE CONFIG ───────────────────────────────────────────
 const STATES = [
     {
-        key: 'citable',
-        match: s => s.includes('High Confidence'),
-        label: 'HIGH CONFIDENCE',
-        tag: 'CITABLE',
-        cardCls: 's-citable',
-        badgeCls: 'badge-citable',
-        badgeText: 'CITABLE',
-        desc: 'Strong liquidity, efficient pricing, and low macro dependency. These markets are structurally sound for citation and research use.',
+        key: 'converged',
+        match: s => s === 'Converged',
+        label: 'CONVERGED',
+        tag: 'CONSENSUS LOCKED',
+        cardCls: 's-converged',
+        badgeCls: 'badge-converged',
+        badgeText: 'CONVERGED',
+        desc: 'Crowd consensus has fully stabilized. Capital depth is strong, entropy is low, and price discovery has reached equilibrium. These markets carry the highest structural integrity for research and citation.',
         context: d => {
             const subs = {Liquidity:d.c1||0, Efficiency:d.c2||0, Independence:d.c3||0, Convergence:d.c4||0};
             const sorted = Object.entries(subs).sort((a,b)=>a[1]-b[1]);
             const weakest = sorted[0];
             const strongest = sorted[sorted.length-1];
             const score = parseFloat(d.nexus_score)||0;
-
-            // 약점 기반 진단
-            // 0값은 데이터 미수집으로 간주 — 극단 진단 스킵
-            if(weakest[1] === 0){
-                return `Structural data is still being collected for this market. Score <strong>${score}</strong> reflects available dimensions — full integrity profile will populate as observation history accumulates.`;
+            const vol = d.volume||0;
+            if(weakest[1]===0){
+                return `Structural data is still accumulating. Score <strong>${score}</strong> reflects available dimensions — full consensus profile will populate as observation history deepens.`;
             }
-            if(weakest[1] < 80){
+            if(weakest[1]<80){
                 const riskMap = {
                     Liquidity:   `Liquidity at <strong>${weakest[1].toFixed(0)}/100</strong> is the binding constraint — capital depth is adequate but not deep. A large position or sudden news event could cause outsized price movement near resolution.`,
-                    Efficiency:  `Efficiency at <strong>${weakest[1].toFixed(0)}/100</strong> indicates the probability sum has mild drift — monitor for late-stage divergence as the market approaches its resolution date.`,
+                    Efficiency:  `Efficiency at <strong>${weakest[1].toFixed(0)}/100</strong> indicates mild probability drift — monitor for late-stage divergence as the market approaches resolution.`,
                     Independence:`Independence at <strong>${weakest[1].toFixed(0)}/100</strong> shows residual macro correlation. Not disqualifying, but probability may temporarily distort on high-volatility BTC or equity days.`,
-                    Convergence: `Convergence at <strong>${weakest[1].toFixed(0)}/100</strong> — outcomes are still being priced in. Score will likely improve further as the resolution date approaches and informed capital consolidates.`,
+                    Convergence: `Convergence at <strong>${weakest[1].toFixed(0)}/100</strong> — crowd agreement is still solidifying. Score will likely improve as the resolution date approaches and informed capital consolidates.`,
                 };
-                return `Structurally verified — <strong>${strongest[0]}</strong> is the strongest dimension at ${strongest[1].toFixed(0)}/100. ${riskMap[weakest[0]]}`;
+                return `Consensus verified — <strong>${strongest[0]}</strong> is the strongest dimension at ${strongest[1].toFixed(0)}/100. ${riskMap[weakest[0]]}`;
             }
-
-            // 전부 85+ — 어떤 게 이 마켓을 특별하게 만드는지
-            const vol = d.volume||0;
-            if(vol > 10e6){
-                return `Deep liquidity market — <strong>${(vol/1e6).toFixed(1)}M</strong> in volume provides robust price discovery. All four integrity dimensions above 85. High-volume HC markets carry the strongest signal fidelity and are appropriate for institutional citation.`;
+            if(vol>10e6){
+                return `Deep liquidity market — <strong>${(vol/1e6).toFixed(1)}M</strong> in volume provides robust price discovery. All four integrity dimensions above 85. High-volume Converged markets carry the strongest signal fidelity.`;
             }
-            if((d.c3||0) >= 99){
+            if((d.c3||0)>=99){
                 return `Independence score <strong>${(d.c3||0).toFixed(0)}/100</strong> — price movements are entirely event-driven with no detectable macro correlation. This is rare and reflects a market insulated from BTC/SPY noise.`;
             }
-            if((d.c4||0) >= 99){
+            if((d.c4||0)>=99){
                 return `Near-perfect convergence (<strong>${(d.c4||0).toFixed(0)}/100</strong>) — the market has fully absorbed available information and outcomes are stably priced. Low repricing risk ahead of resolution.`;
             }
             return `All four dimensions above threshold. Score <strong>${score}</strong> reflects balanced structural integrity — no single dimension is dominant or deficient. Appropriate for citation and research use.`;
         },
     },
     {
-        key: 'active',
-        match: s => s.includes('Active'),
-        label: 'ACTIVE',
+        key: 'calibrating',
+        match: s => s === 'Calibrating',
+        label: 'CALIBRATING',
         tag: 'PRICE DISCOVERY',
-        cardCls: 's-active',
-        badgeCls: 'badge-active',
-        badgeText: 'ACTIVE',
-        desc: 'Structurally sound markets currently in active price discovery. Scores reflect real-time information aggregation.',
+        cardCls: 's-calibrating',
+        badgeCls: 'badge-calibrating',
+        badgeText: 'CALIBRATING',
+        desc: 'Market is actively processing new information and calibrating probabilities. Structural integrity is functional — consensus is forming but has not yet locked. Normal operating state for most active markets.',
         context: d => {
             const cnv = d.c4||0;
             const liq = d.c1||0;
             const ind = d.c3||0;
             const score = parseFloat(d.nexus_score)||0;
             const macro = d.macro_sensitivity||0;
-
-            if(score >= 75){
-                const gap = 80 - score;
-                return `Near High Confidence threshold — <strong>${gap.toFixed(1)} pts</strong> from citable status. ${cnv < 75 ? `Convergence (${cnv.toFixed(0)}/100) is the primary blocker; a sustained price move toward resolution would push this over.` : `Liquidity (${liq.toFixed(0)}/100) is the limiting factor — volume depth needs to deepen slightly.`}`;
+            const flags = getFlags(d);
+            if(score>=75){
+                const gap=80-score;
+                return `Near Converged threshold — <strong>${gap.toFixed(1)} pts</strong> from consensus lock. ${cnv<75?`Convergence (${cnv.toFixed(0)}/100) is the primary blocker; a sustained price move toward resolution would push this over.`:`Liquidity (${liq.toFixed(0)}/100) is the limiting factor — volume depth needs to deepen slightly.`}`;
             }
-            if(cnv < 55){
-                return `Early price discovery phase — convergence at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't yet found a stable equilibrium. Outcomes remain genuinely uncertain and are actively being repriced as new information arrives.`;
+            if(cnv<55){
+                return `Early calibration phase — convergence at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't yet found a stable equilibrium. Outcomes remain genuinely uncertain and are actively being repriced as new information arrives.`;
             }
-            if(macro > 0.3){
-                return `Mild macro correlation detected (β <strong>${macro.toFixed(2)}</strong>) — not enough to trigger Macro-Driven classification, but probability may temporarily shift on high-volatility crypto or equity days. Independence at ${ind.toFixed(0)}/100.`;
+            if(macro>0.3&&!flags.includes('Correlated')){
+                return `Mild macro correlation detected (β <strong>${macro.toFixed(2)}</strong>) — not yet at threshold for Correlated flag, but probability may temporarily shift on high-volatility days. Independence at ${ind.toFixed(0)}/100.`;
             }
-            if(liq < 65){
-                return `Liquidity at <strong>${liq.toFixed(0)}/100</strong> is below average for this tier — price discovery is occurring but with limited capital depth. Score will improve as volume accumulates closer to resolution.`;
+            if(liq<65){
+                return `Liquidity at <strong>${liq.toFixed(0)}/100</strong> is below average — calibration is occurring but with limited capital depth. Score will improve as volume accumulates closer to resolution.`;
             }
-            return `Functional market in active price discovery. Macro sensitivity <strong>${macro.toFixed(2)}</strong> is within acceptable range — price movements are primarily event-driven. Monitor convergence trend for HC transition.`;
+            return `Functional market in active calibration. Macro sensitivity <strong>${macro.toFixed(2)}</strong> is within acceptable range — price movements are primarily event-driven. Monitor convergence trend for transition to Converged.`;
         },
     },
     {
-        key: 'macro',
-        match: s => s.includes('Macro') || s.includes('Volatile'),
-        label: 'MACRO-DRIVEN',
-        tag: 'EXTERNAL DEPENDENCY',
-        cardCls: 's-macro',
-        badgeCls: 'badge-macro',
-        badgeText: 'MACRO-DRIVEN',
-        desc: 'Price movements correlated with external macro factors (BTC, SPY, Rates). Independence score suppressed. Interpret probabilities as sentiment, not event signal.',
-        context: d => {
-            const cat = d.category||'';
-            const financialCats = ['Crypto','Finance','Economy'];
-            const beta = d.macro_sensitivity||0;
-            const ind = d.c3||0;
-            const liq = d.c1||0;
-            const isFinancial = financialCats.includes(cat);
-
-            if(beta === 0){
-                return `No macro dependency detected — Independence at <strong>${ind.toFixed(0)}/100</strong>. Price movements in this market are entirely event-driven with no measurable BTC or SPY correlation.`;
-            }
-            if(beta > 1.0){
-                return `Extreme macro dependency — β <strong>${beta.toFixed(2)}</strong> means this market moves nearly in lockstep with external assets. ${isFinancial ? 'This is a financial instrument disguised as an event market.' : `Unusual for a ${cat} market — high probability of spurious correlation from a shared news cycle rather than genuine asset linkage.`} Independence at ${ind.toFixed(0)}/100.`;
-            }
-            if(isFinancial){
-                return `Confirmed macro dependency in a <strong>${cat}</strong> market (β ${beta.toFixed(2)}). Price tracks external assets directly — Independence at ${ind.toFixed(0)}/100 reflects this structural coupling. Probability reflects market sentiment, not event-specific fundamentals. Useful for cross-asset analysis.`;
-            }
-            if(ind < 30){
-                return `Independence severely suppressed at <strong>${ind.toFixed(0)}/100</strong> in a ${cat||'non-financial'} market (β ${beta.toFixed(2)}). Likely explanation: a macro event and this outcome moved simultaneously, creating a statistical correlation that may not be structurally persistent. Monitor next 48h for regime change.`;
-            }
-            return `Macro signal detected in a <strong>${cat||'non-financial'}</strong> market (β ${beta.toFixed(2)}). Most likely cause: correlated news cycle rather than genuine asset dependency — Independence at ${ind.toFixed(0)}/100 suggests the coupling may be temporary. ${liq > 70 ? 'Liquidity is solid; if macro pressure recedes, this could revert to Active.' : 'Thin liquidity amplifies the sensitivity reading.'}`;
-        },
-    },
-    {
-        key: 'low',
-        match: () => true,
-        label: 'LOW LIQUIDITY',
-        tag: 'INSUFFICIENT DATA',
-        cardCls: 's-low',
-        badgeCls: 'badge-low',
-        badgeText: 'SPARSE DATA',
-        desc: 'Thin liquidity or insufficient observation history. Nexus Score may not fully reflect true market quality.',
+        key: 'fragile',
+        match: s => s === 'Fragile' || (!['Converged','Calibrating'].includes(s)),
+        label: 'FRAGILE',
+        tag: 'STRUCTURAL WEAKNESS',
+        cardCls: 's-fragile',
+        badgeCls: 'badge-fragile',
+        badgeText: 'FRAGILE',
+        desc: 'Thin liquidity or structural instability detected. Nexus Score reflects insufficient capital depth or observation history. Consensus cannot be reliably assessed at this stage.',
         context: d => {
             const vol = d.volume||0;
             const liq = d.c1||0;
             const eff = d.c2||0;
             const cnv = d.c4||0;
             const score = parseFloat(d.nexus_score)||0;
-
-            if(vol < 10000){
-                return `Near-zero volume — price discovery has not yet begun. Current probabilities reflect initial positioning rather than genuine crowd intelligence. Structural scoring is not yet meaningful at this stage.`;
+            if(vol<10000){
+                return `Near-zero volume — crowd consensus has not yet formed. Current probabilities reflect initial positioning rather than genuine collective intelligence. Structural scoring is not yet meaningful.`;
             }
-            if(eff > 0 && eff < 40){
-                return `Efficiency at <strong>${eff.toFixed(0)}/100</strong> — probability sum has diverged significantly from 100%, indicating possible outcome ambiguity or a multi-outcome market structure. Structural scoring is unreliable until this resolves.`;
+            if(eff>0&&eff<40){
+                return `Efficiency at <strong>${eff.toFixed(0)}/100</strong> — probability sum has diverged significantly from 100%, indicating possible outcome ambiguity or multi-outcome market structure. Structural scoring is unreliable until this resolves.`;
             }
-            if(liq < 30){
-                return `Extremely thin liquidity (${(vol/1e3).toFixed(0)}K volume, LIQ <strong>${liq.toFixed(0)}/100</strong>) — even small orders could move the price materially. Score ${score} is unreliable at this depth and may not reflect true market consensus.`;
+            if(liq<30){
+                return `Extremely thin liquidity (${(vol/1e3).toFixed(0)}K volume, LIQ <strong>${liq.toFixed(0)}/100</strong>) — even small orders could move the price materially. Score ${score} is unreliable at this depth and may not reflect genuine market consensus.`;
             }
-            return `Volume at <strong>${(vol/1e6).toFixed(2)}M</strong> provides some signal but insufficient depth for reliable structural scoring. Efficiency ${eff.toFixed(0)}/100 and Convergence ${cnv.toFixed(0)}/100 suggest the market is forming but hasn't matured. Check back as volume accumulates.`;
+            return `Volume at <strong>${(vol/1e6).toFixed(2)}M</strong> provides some signal but insufficient depth for reliable consensus assessment. Efficiency ${eff.toFixed(0)}/100 and Convergence ${cnv.toFixed(0)}/100 suggest the market is forming but hasn't matured.`;
         },
     },
 ];
 
-function getState(market_state){
-    return STATES.find(st=>st.match(market_state)) || STATES[3];
+// ── FLAG CONTEXT ───────────────────────────────────────────
+const FLAG_CONTEXT = {
+    Contested: d => {
+        const beta = d.macro_sensitivity||0;
+        const cnv = d.c4||0;
+        return `YES and NO sides are actively competing — capital from both camps is flowing in simultaneously, causing elevated price volatility. Entropy is rising. This is not structural failure; it reflects genuine disagreement in crowd consensus. Monitor convergence (currently ${cnv.toFixed(0)}/100) for directional resolution.`;
+    },
+    Correlated: d => {
+        const beta = d.macro_sensitivity||0;
+        const ind = d.c3||0;
+        const cat = d.category||'';
+        if(beta>0.7){
+            return `Strong macro dependency detected — β <strong>${beta.toFixed(2)}</strong>. This market's probability is significantly co-moving with external assets (BTC/SPY/Rates). Independence at ${ind.toFixed(0)}/100. Interpret probability as sentiment-adjusted, not purely event-driven. ${cat==='Crypto'?'Expected for Crypto markets.':'Unusual for a '+cat+' market — may reflect a shared news cycle.'}`;
+        }
+        return `Macro correlation present — β <strong>${beta.toFixed(2)}</strong>. Price movements partially reflect external asset dynamics rather than pure event-specific information. Independence at ${ind.toFixed(0)}/100. Structural integrity is intact but consensus signal is mixed with macro noise.`;
+    },
+};
+
+function getState(s){
+    return STATES.find(st=>st.match(s))||STATES[2];
 }
 
 // ── KPIs ──────────────────────────────────────────────────
 function renderKPIs(data){
     const total=data.length;
-    const hc=data.filter(d=>d.market_state.includes('High Confidence')).length;
+    const converged=data.filter(d=>d.market_state==='Converged').length;
+    const contested=data.filter(d=>getFlags(d).includes('Contested')).length;
+    const correlated=data.filter(d=>getFlags(d).includes('Correlated')).length;
     const scores=data.map(d=>parseFloat(d.nexus_score)||0);
-    const idx=scores.length ? scores.reduce((a,b)=>a+b,0)/scores.length : 0;
+    const idx=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:0;
     animateCount(document.getElementById('integrity-index'),idx,1);
     document.getElementById('integrity-grade').textContent=idx>=80?'INSTITUTIONAL GRADE':idx>=60?'STRUCTURED':'FRAGMENTED';
-    const macroCount=data.filter(d=>d.market_state.includes('Macro')||d.market_state.includes('Volatile')).length;
-    const macroPct=total ? macroCount/total : 0;
-    document.getElementById('market-regime').textContent=macroPct>=0.3?'MACRO-STRESSED':idx>=70?'STABLE':'TRANSITIONAL';
-    animateCount(document.getElementById('high-conf-count'),hc,0,700);
-    animateCount(document.getElementById('total-markets'),total,0,700);
+    animateCount(document.getElementById('converged-count'),converged,0,700);
+    animateCount(document.getElementById('contested-count'),contested,0,700);
+    animateCount(document.getElementById('correlated-count'),correlated,0,700);
     document.getElementById('last-update').textContent=new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
 }
 
@@ -628,18 +935,15 @@ function renderStateChart(data){
         const label=getState(d.market_state).label;
         counts[label]=(counts[label]||0)+1;
     });
-    // 색상: 어두운 배경에서 선명하게 대비되는 4색
     const colorMap={
-        'HIGH CONFIDENCE':'rgba(96,165,250,0.70)',   // 밝은 블루
-        'ACTIVE':         'rgba(52,211,153,0.60)',   // 에메랄드 그린
-        'MACRO-DRIVEN':   'rgba(251,191,36,0.70)',   // 앰버 골드
-        'LOW LIQUIDITY':  'rgba(71,85,105,0.55)',    // 슬레이트 (의도적으로 어둡게 — 중요도 낮음)
+        'CONVERGED':          'rgba(96,165,250,0.70)',
+        'CALIBRATING':        'rgba(52,211,153,0.60)',
+        'FRAGILE':            'rgba(71,85,105,0.55)',
     };
     const borderMap={
-        'HIGH CONFIDENCE':'rgba(147,197,253,0.5)',
-        'ACTIVE':         'rgba(110,231,183,0.5)',
-        'MACRO-DRIVEN':   'rgba(253,211,77,0.5)',
-        'LOW LIQUIDITY':  'rgba(100,116,139,0.4)',
+        'CONVERGED':          'rgba(147,197,253,0.5)',
+        'CALIBRATING':        'rgba(110,231,183,0.5)',
+        'FRAGILE':            'rgba(100,116,139,0.4)',
     };
     const labels=Object.keys(counts);
     const ctx=document.getElementById('stateChart').getContext('2d');
@@ -657,8 +961,8 @@ function renderStateChart(data){
             legend:{position:'right',labels:{
                 color:'#8fa3bc',
                 font:{family:"'JetBrains Mono',monospace",size:10},
-                boxWidth:10, boxHeight:10, padding:12,
-                usePointStyle:true, pointStyle:'rectRounded',
+                boxWidth:10,boxHeight:10,padding:12,
+                usePointStyle:true,pointStyle:'rectRounded',
             }},
             tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
                 titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
@@ -681,16 +985,14 @@ function renderRadarChart(data){
             borderColor:'rgba(96,165,250,0.55)',
             pointBackgroundColor:'rgba(96,165,250,0.9)',
             pointBorderColor:'rgba(96,165,250,0.3)',
-            pointRadius:4,
-            pointHoverRadius:5,
-            borderWidth:1.5,
+            pointRadius:4,pointHoverRadius:5,borderWidth:1.5,
         }]},
         options:{responsive:true,maintainAspectRatio:false,
             scales:{r:{
-                min:0, max:100,
+                min:0,max:100,
                 ticks:{display:false},
-                grid:{color:'rgba(70,100,140,0.45)'},        // 등고선 훨씬 밝게
-                angleLines:{color:'rgba(70,100,140,0.35)'},  // 중심선도 같이
+                grid:{color:'rgba(70,100,140,0.45)'},
+                angleLines:{color:'rgba(70,100,140,0.35)'},
                 pointLabels:{color:'#8fa3bc',font:{family:"'JetBrains Mono',monospace",size:10}},
             }},
             plugins:{legend:{display:false},
@@ -703,39 +1005,46 @@ function renderRadarChart(data){
 // ── SPARKLINE ─────────────────────────────────────────────
 function drawSparkline(canvas, pts, color='rgba(148,163,184,0.55)'){
     if(!canvas||!pts||pts.length<2) return;
-    const ctx=canvas.getContext('2d'), W=canvas.width, H=canvas.height;
+    const ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height;
     ctx.clearRect(0,0,W,H);
     const vals=pts.map(d=>typeof d==='object'?d.p:+d);
-    const mn=Math.min(...vals), mx=Math.max(...vals), rng=mx-mn||0.01;
+    const mn=Math.min(...vals),mx=Math.max(...vals),rng=mx-mn||0.01;
     ctx.beginPath();
-    ctx.strokeStyle=color; ctx.lineWidth=1.5; ctx.lineJoin='round';
+    ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.lineJoin='round';
     vals.forEach((v,i)=>{
-        const x=(i/(vals.length-1))*W, y=H-((v-mn)/rng)*(H-4)-2;
+        const x=(i/(vals.length-1))*W,y=H-((v-mn)/rng)*(H-4)-2;
         i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
     });
     ctx.stroke();
 }
 
 // ── STATE GROUPS ──────────────────────────────────────────
+function renderFlagBadges(flags){
+    if(!flags||!flags.length) return '';
+    return flags.map(f=>{
+        const cls=f==='Contested'?'flag-contested':'flag-correlated';
+        const icon=f==='Contested'?'🚩':'🔗';
+        return `<span class="flag-badge ${cls}">${icon} ${f}</span>`;
+    }).join('');
+}
+
 function renderStateGroups(data){
     const container=document.getElementById('state-groups');
     container.innerHTML='';
 
     STATES.forEach(st=>{
-        const items=data.filter(d=>st.match(d.market_state));
-        // exclude events already matched by earlier states
-        const group=st.key==='low'
-            ? data.filter(d=>!STATES.slice(0,3).some(s2=>s2.match(d.market_state)))
+        // fragile is catch-all
+        const group=st.key==='fragile'
+            ? data.filter(d=>!STATES.slice(0,2).some(s2=>s2.match(d.market_state)))
             : data.filter(d=>st.match(d.market_state));
 
         if(!group.length) return;
 
-        // sort by nexus_score desc, show top 5
         const shown=group.sort((a,b)=>b.nexus_score-a.nexus_score).slice(0,5);
 
         const wrap=document.createElement('div');
         wrap.className='state-group';
-        const shCls = st.key==='active' ? 'sh-active' : st.key==='macro' ? 'sh-macro' : st.key==='low' ? 'sh-low' : '';
+        const shCls=st.key==='calibrating'?'sh-calibrating':st.key==='fragile'?'sh-fragile':'';
         wrap.innerHTML=`
             <div class="section-head ${shCls}"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
             <div class="section-desc">${st.desc}</div>
@@ -744,18 +1053,20 @@ function renderStateGroups(data){
         container.appendChild(wrap);
 
         const grid=document.getElementById(`grid-${st.key}`);
-        shown.forEach((d,i)=>{
+        shown.forEach(d=>{
+            const flags=getFlags(d);
             const card=document.createElement('div');
             card.className=`event-card ${st.cardCls}`;
             card.innerHTML=`
                 <span class="card-arrow">↗</span>
-                ${d.category ? `<div class="card-cat">${d.category}</div>` : ''}
+                ${d.category?`<div class="card-cat">${d.category}</div>`:''}
                 <div class="card-score">${d.nexus_score}</div>
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <span class="card-macro">β ${(d.macro_sensitivity||0).toFixed(2)}</span>
                 </div>
+                ${flags.length?`<div class="card-flags">${renderFlagBadges(flags)}</div>`:''}
                 <div class="card-bars">
                     ${barRow('LIQ','bar-liq',d.c1)}
                     ${barRow('EFF','bar-eff',d.c2)}
@@ -763,13 +1074,8 @@ function renderStateGroups(data){
                     ${barRow('CNV','bar-conv',d.c4)}
                 </div>
             `;
-            card.addEventListener('click', ()=>openPanel(d, st));
+            card.addEventListener('click',()=>openPanel(d,st));
             grid.appendChild(card);
-
-            // draw mini sparkline after DOM
-            if(d.sparkline){
-                // sparklines on cards are bars only (no canvas for perf)
-            }
         });
     });
 }
@@ -782,14 +1088,23 @@ function openPanel(d, st){
     badge.textContent=st.badgeText;
     badge.className='panel-badge '+st.badgeCls;
 
+    // flags in panel header
+    const flags=getFlags(d);
+    const pflagsEl=document.getElementById('p-flags');
+    pflagsEl.innerHTML=flags.map(f=>{
+        const cls=f==='Contested'?'pflag-contested':'pflag-correlated';
+        const icon=f==='Contested'?'🚩':'🔗';
+        return `<span class="pflag ${cls}">${icon} ${f.toUpperCase()}</span>`;
+    }).join('');
+
     document.getElementById('p-title').textContent=cleanQuestion(d.question);
 
     // Component bars
     document.getElementById('p-bars').innerHTML=[
-        {key:'LIQUIDITY',     val:d.c1, cls:'bar-liq'},
-        {key:'EFFICIENCY',    val:d.c2, cls:'bar-eff'},
-        {key:'INDEPENDENCE',  val:d.c3, cls:'bar-ind'},
-        {key:'CONVERGENCE',   val:d.c4, cls:'bar-conv'},
+        {key:'LIQUIDITY',    val:d.c1, cls:'bar-liq'},
+        {key:'EFFICIENCY',   val:d.c2, cls:'bar-eff'},
+        {key:'INDEPENDENCE', val:d.c3, cls:'bar-ind'},
+        {key:'CONVERGENCE',  val:d.c4, cls:'bar-conv'},
     ].map(b=>`
         <div class="panel-bar-row">
             <span class="panel-bar-name">${b.key}</span>
@@ -809,12 +1124,20 @@ function openPanel(d, st){
     // Sparkline
     const spCanvas=document.getElementById('p-sparkline');
     spCanvas.width=spCanvas.offsetWidth||380;
-    if(d.sparkline) requestAnimationFrame(()=>drawSparkline(spCanvas, d.sparkline,'rgba(96,165,250,0.7)'));
+    if(d.sparkline) requestAnimationFrame(()=>drawSparkline(spCanvas,d.sparkline,'rgba(96,165,250,0.7)'));
 
-    // Context
+    // State context
     document.getElementById('p-context').innerHTML=st.context(d);
 
-    // Link
+    // Flag context boxes
+    const fcEl=document.getElementById('p-flag-context');
+    fcEl.innerHTML=flags.map(f=>{
+        if(!FLAG_CONTEXT[f]) return '';
+        const cls=f==='Contested'?'fc-contested':'fc-correlated';
+        const icon=f==='Contested'?'🚩':'🔗';
+        return `<div class="flag-context ${cls}"><div class="fc-label">${icon} ${f} — FLAG ACTIVE</div>${FLAG_CONTEXT[f](d)}</div>`;
+    }).join('');
+
     document.getElementById('p-link').href=`https://polymarket.com/event/${d.slug||d.id||''}`;
 
     document.getElementById('overlay').classList.add('open');
@@ -828,28 +1151,92 @@ function closePanel(){
     document.body.style.overflow='';
 }
 
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePanel(); });
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closePanel();});
 
 // ── INIT ──────────────────────────────────────────────────
-async function init(){
-    let data=null;
-    try{
-        const r=await fetch(DATA_URL);
-        if(!r.ok) throw new Error();
-        const raw=await r.json();
-        if(Array.isArray(raw)&&raw.length) data=raw;
-    }catch(_){}
-    if(!data) data=MOCK;
-    allData=data;
+function showLoading(on){
+    let el=document.getElementById('loading-bar');
+    if(!el){
+        el=document.createElement('div');
+        el.id='loading-bar';
+        el.style.cssText='position:fixed;top:0;left:0;height:2px;background:var(--blue);z-index:10000;transition:width 0.4s;width:0;';
+        document.body.prepend(el);
+    }
+    el.style.width=on?'60%':'100%';
+    if(!on) setTimeout(()=>{ el.style.opacity='0'; setTimeout(()=>el.remove(),300); },200);
+}
 
+async function loadFromSupabase(){
+    if(!sbClient) return null;
+    try{
+        const {data, error}=await sbClient
+            .from('event_log')
+            .select('event_id,score,state,flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,hc_flag,snapshot_at')
+            .order('snapshot_at',{ascending:false})
+            .limit(500);
+        if(error||!data||!data.length) return null;
+
+        // 이벤트별 최신 스냅샷만 남기기
+        const seen=new Set();
+        const latest=data.filter(r=>{ if(seen.has(r.event_id)) return false; seen.add(r.event_id); return true; });
+
+        return latest.map(r=>({
+            id:           r.event_id,
+            slug:         r.market_slug||r.event_id,
+            question:     r.market_slug||r.event_id,
+            category:     r.category||'',
+            nexus_score:  r.score||0,
+            market_state: r.state||'Fragile',
+            flags:        Array.isArray(r.flags)?r.flags:[],
+            macro_sensitivity: 0,
+            volume:       r.volume||0,
+            current_price:r.current_price||0,
+            change_since_start: 0,
+            sparkline:    [],
+            c1: r.capital_score||0,
+            c2: r.stability_score||0,
+            c3: r.purity_score||0,
+            c4: r.convergence_score||0,
+        }));
+    }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
+}
+
+async function init(){
+    showLoading(true);
+    let data=null;
+
+    // 1순위: Supabase
+    if(USE_SUPABASE) data=await loadFromSupabase();
+
+    // 2순위: JSON 파일
+    if(!data){
+        try{
+            const r=await fetch(DATA_URL);
+            if(r.ok){
+                const raw=await r.json();
+                if(Array.isArray(raw)&&raw.length) data=raw;
+            }
+        }catch(_){}
+    }
+
+    // 3순위: MOCK
+    if(!data) data=MOCK;
+
+    showLoading(false);
+    allData=data;
     renderKPIs(data);
+
+    // Track Record (비동기 별도 로드)
+    loadTrackRecord().then(renderCalibration);
+    subscribeCalibration();  // realtime — hc_track_record 변경 시 자동 갱신
+
     renderStateChart(data);
     renderRadarChart(data);
     renderStateGroups(data);
 }
 
 init();
-setInterval(init, 5*60*1000);
+setInterval(init,5*60*1000);
 </script>
 </body>
 </html>

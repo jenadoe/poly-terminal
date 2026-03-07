@@ -60,7 +60,7 @@ jobs:
             cp -rf ../temp_data/api data_output/
           fi
           
-          # 4. [Audit] 로그 파일 복사 (여기가 핵심)
+          # 4. [Audit] 로그 파일 복사
           if [ -d ../temp_data/audit_logs ]; then
             cp -rf ../temp_data/audit_logs/* data_output/audit_logs/ || true
           fi
@@ -119,11 +119,15 @@ jobs:
           if [ -d docs/data/audit_logs ]; then rm -rf docs/data/audit_logs; fi
           if [ -d docs/data/archive ]; then rm -rf docs/data/archive; fi
           if [ -d docs/data/completed_events ]; then rm -rf docs/data/completed_events; fi
+
+          # ✅ Supabase 키 주입 (소스엔 빈 값, 배포본에만 실제 값 들어감)
+          sed -i "s|const SUPABASE_URL = '';|const SUPABASE_URL = '${{ secrets.SUPABASE_URL }}';|" docs/index.html
+          sed -i "s|const SUPABASE_ANON_KEY = '';|const SUPABASE_ANON_KEY = '${{ secrets.SUPABASE_KEY }}';|" docs/index.html
           
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
           
-          git add docs/data/
+          git add docs/
           
           if git diff --staged --quiet; then
             echo "✅ No public changes."

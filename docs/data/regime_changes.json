@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-07T09:53:02.153903Z",
+    "market_id": "153721",
+    "question": "Odds Trump acquires Greenland before 2027 hit __ by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-07T09:53:02.153903Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.4,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-03-07T09:53:02.153903Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 82.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-07T09:53:02.153903Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 86.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T09:29:22.627465Z",
     "market_id": "174563",
     "question": "Mavericks vs. Bucks",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 73.4,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-07T02:23:27.354502Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 33.8,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-07T02:23:27.354502Z",
-    "market_id": "139507",
-    "question": "Will Reza Pahlavi enter Iran by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.14
-    }
-  },
-  {
-    "timestamp": "2026-03-07T02:23:27.354502Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T02:23:27.354502Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-08T16:52:35.499921Z",
+    "market_id": "38532",
+    "question": "UEFA Europa League: Winner ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.2,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
     "timestamp": "2026-03-08T16:26:11.493941Z",
     "market_id": "32756",
     "question": "NBA Western Conference Champion ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:44:46.544337Z",
-    "market_id": "158299",
-    "question": "US forces enter Iran by..?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.3,
-      "macro_sensitivity": 0.06
     }
   }
 ]

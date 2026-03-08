@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 40.5,
+      "macro_sensitivity": 0.37
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "69987",
+    "question": "2026 NCAA Tournament Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.9,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "202857",
+    "question": "NFL Champion 2027",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 63.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:29:12.083508Z",
+    "market_id": "34050",
+    "question": "Russia x Ukraine ceasefire by end of 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T21:58:11.945945Z",
     "market_id": "131586",
     "question": "Jeffrey Epstein confirmed to be alive before 2027?",
@@ -480,72 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 38.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:29:09.319460Z",
-    "market_id": "240640",
-    "question": "What price will Bitcoin hit March 2-8?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:29:09.319460Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.2,
-      "macro_sensitivity": 0.29
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:29:09.319460Z",
-    "market_id": "63255",
-    "question": "Which teams will make the NBA Playoffs?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:29:09.319460Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.45
-    }
-  },
-  {
-    "timestamp": "2026-03-08T14:58:23.535127Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.4,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-08T14:58:23.535127Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.1,
       "macro_sensitivity": 0.0
     }
   }

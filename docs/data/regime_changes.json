@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-08T17:21:40.542899Z",
+    "market_id": "29005",
+    "question": "MegaETH airdrop by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.1,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-08T16:52:35.499921Z",
     "market_id": "38532",
     "question": "UEFA Europa League: Winner ",
@@ -531,17 +542,6 @@
     "timestamp": "2026-03-08T09:59:45.202663Z",
     "market_id": "79987",
     "question": "Next French Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:44:46.544337Z",
-    "market_id": "236943",
-    "question": "Which countries will Iran strike in March?",
     "from_regime": "Fragile",
     "to_regime": "Calibrating",
     "metrics_snapshot": {

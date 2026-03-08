@@ -78,7 +78,8 @@
 
         /* ── KPI ── */
         .container { padding:24px 32px; max-width:1440px; margin:0 auto; }
-        .kpi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:24px; }
+        .kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:8px; }
+        .kpi-grid-signals { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:0; }
         .kpi-card {
             background:var(--bg-card); border:1px solid var(--border);
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
@@ -86,13 +87,29 @@
         .kpi-card.primary { border-left-color:var(--blue); }
         .kpi-card.k-converged { border-left-color:var(--blue); }
         .kpi-card.k-contested { border-left-color:var(--red); }
-        .kpi-card.k-correlated { border-left-color:var(--orange); }
+        .kpi-card.k-correlated   { border-left-color:var(--orange); }
+        .kpi-card.k-calibrating  { border-left-color:rgba(52,211,153,0.7); }
+        .kpi-card.k-fragile-kpi  { border-left-color:rgba(100,116,139,0.6); }
         .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
         .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); }
         .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
         .kpi-card.k-converged .kpi-value { color:var(--blue); }
         .kpi-card.k-contested .kpi-value { color:var(--red); }
-        .kpi-card.k-correlated .kpi-value { color:var(--orange); }
+        .kpi-card.k-correlated .kpi-value  { color:var(--orange); }
+        .kpi-card.k-calibrating .kpi-value  { color:rgba(52,211,153,1); }
+        .kpi-card.k-fragile-kpi .kpi-value  { color:rgba(148,163,184,0.9); }
+        .kpi-flags-note { font-size:0.58rem; color:var(--text-dim); margin-top:4px; padding-left:2px; letter-spacing:0.05em; }
+        .kpi-init-bar {
+            margin:10px 0 20px;
+            padding:7px 14px;
+            background:rgba(71,85,105,0.12);
+            border:1px dashed rgba(71,85,105,0.3);
+            border-radius:5px;
+            font-size:0.62rem;
+            color:var(--text-dim);
+            letter-spacing:0.06em;
+        }
+        .kpi-init-bar strong { color:var(--text-mid); }
         .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-mid); }
 
         /* ── CHARTS ── */
@@ -129,7 +146,7 @@
         /* ── EVENT CARDS ── */
         .event-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
         @media(max-width:1280px) { .event-grid { grid-template-columns:repeat(4,1fr); } }
-        @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } }
+        @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } .kpi-grid-signals { grid-template-columns:repeat(2,1fr); } }
         @media(max-width:640px)  { .event-grid { grid-template-columns:repeat(2,1fr); } .container,.topbar,header { padding-left:16px; padding-right:16px; } }
         @media(max-width:480px)  { .event-grid { grid-template-columns:1fr; } .disclaimer-banner { padding:7px 16px; } }
 
@@ -163,6 +180,11 @@
             border-left: 2px solid rgba(71,85,105,0.3);
             opacity: 0.65;
             filter: grayscale(20%);
+        }
+        .event-card.s-initializing .card-score {
+            color: var(--text-dim);
+            font-size: 1.4rem;
+            letter-spacing: 0.05em;
         }
 
         /* ── NOT INVESTMENT ADVICE BANNER ── */
@@ -482,17 +504,37 @@
 <div class="container">
 
     <!-- KPIs -->
+    <!-- KPI Row 1 — MARKET STATES -->
     <div class="kpi-grid" style="margin-top:24px;">
+        <div class="kpi-card primary">
+            <div class="kpi-label">Total Markets</div>
+            <div class="kpi-value" id="total-count">—</div>
+            <div class="kpi-sub">TRACKED BY POLY-NEXUS</div>
+        </div>
         <div class="kpi-card primary">
             <div class="kpi-label">Integrity Index</div>
             <div class="kpi-value" id="integrity-index">—</div>
-            <div class="kpi-sub" id="integrity-grade">—</div>
+            <div class="kpi-sub" id="integrity-coverage">— / — markets</div>
         </div>
         <div class="kpi-card k-converged">
-            <div class="kpi-label">Converged Markets</div>
+            <div class="kpi-label">Converged</div>
             <div class="kpi-value" id="converged-count">—</div>
             <div class="kpi-sub">CONSENSUS LOCKED</div>
         </div>
+        <div class="kpi-card k-calibrating">
+            <div class="kpi-label">Calibrating</div>
+            <div class="kpi-value" id="calibrating-count">—</div>
+            <div class="kpi-sub">PRICE DISCOVERY</div>
+        </div>
+        <div class="kpi-card k-fragile-kpi">
+            <div class="kpi-label">Fragile</div>
+            <div class="kpi-value" id="fragile-count">—</div>
+            <div class="kpi-sub">STRUCTURAL WEAKNESS</div>
+        </div>
+    </div>
+
+    <!-- KPI Row 2 — MARKET SIGNALS -->
+    <div class="kpi-grid-signals" style="margin-top:8px;">
         <div class="kpi-card k-contested">
             <div class="kpi-label">Contested</div>
             <div class="kpi-value" id="contested-count">—</div>
@@ -503,6 +545,13 @@
             <div class="kpi-value" id="correlated-count">—</div>
             <div class="kpi-sub">MACRO DEPENDENCY FLAG</div>
         </div>
+    </div>
+    <div class="kpi-flags-note">* Flags are independent overlays — a market may carry both simultaneously.</div>
+
+    <!-- Initializing status bar -->
+    <div class="kpi-init-bar">
+        INITIALIZING &nbsp;·&nbsp; <strong id="initializing-count">—</strong> markets &nbsp;·&nbsp; data accumulating · evaluation starts after ~1–2h
+        <span id="init-warning" style="color:#f97316; margin-left:8px;"></span>
     </div>
 
     <!-- LIVE CALIBRATION TEST -->
@@ -931,18 +980,41 @@ function getState(s){
 
 // ── KPIs ──────────────────────────────────────────────────
 function renderKPIs(data){
-    const total=data.length;
-    const converged=data.filter(d=>d.market_state==='Converged').length;
-    const contested=data.filter(d=>getFlags(d).includes('Contested')).length;
-    const correlated=data.filter(d=>getFlags(d).includes('Correlated')).length;
-    const scores=data.map(d=>parseFloat(d.nexus_score)||0);
-    const idx=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:0;
-    animateCount(document.getElementById('integrity-index'),idx,1);
-    document.getElementById('integrity-grade').textContent=idx>=80?'INSTITUTIONAL GRADE':idx>=60?'STRUCTURED':'FRAGMENTED';
-    animateCount(document.getElementById('converged-count'),converged,0,700);
-    animateCount(document.getElementById('contested-count'),contested,0,700);
-    animateCount(document.getElementById('correlated-count'),correlated,0,700);
-    document.getElementById('last-update').textContent=new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
+    const total       = data.length;
+    const initializing= data.filter(d=>d.market_state==='Initializing').length;
+    const converged   = data.filter(d=>d.market_state==='Converged').length;
+    const calibrating = data.filter(d=>d.market_state==='Calibrating').length;
+    const fragile     = data.filter(d=>d.market_state==='Fragile'||
+                            (!['Converged','Calibrating','Initializing'].includes(d.market_state))).length;
+    const contested   = data.filter(d=>getFlags(d).includes('Contested')).length;
+    const correlated  = data.filter(d=>getFlags(d).includes('Correlated')).length;
+
+    // Integrity Index: mean across analyzed (non-Initializing) markets only
+    const analyzed = data.filter(d=>d.market_state!=='Initializing'&&d.nexus_score!=null);
+    const idx = analyzed.length
+        ? analyzed.reduce((a,d)=>a+(parseFloat(d.nexus_score)||0),0) / analyzed.length
+        : 0;
+
+    animateCount(document.getElementById('total-count'),      total,       0, 700);
+    animateCount(document.getElementById('integrity-index'),  idx,         1);
+    document.getElementById('integrity-coverage').textContent =
+        analyzed.length + ' / ' + total + ' markets';
+    animateCount(document.getElementById('converged-count'),   converged,   0, 700);
+    animateCount(document.getElementById('calibrating-count'), calibrating, 0, 700);
+    animateCount(document.getElementById('fragile-count'),     fragile,     0, 700);
+    animateCount(document.getElementById('contested-count'),   contested,   0, 700);
+    animateCount(document.getElementById('correlated-count'),  correlated,  0, 700);
+    animateCount(document.getElementById('initializing-count'),initializing,0, 700);
+
+    // Initializing 경고 (30% 이상이면 주황색)
+    const initWarn = document.getElementById('init-warning');
+    if(initWarn){
+        const ratio = total>0 ? initializing/total : 0;
+        initWarn.textContent = ratio>=0.3 ? '⚠ '+Math.round(ratio*100)+'% pending' : '';
+    }
+
+    document.getElementById('last-update').textContent=
+        new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
 }
 
 // ── CHARTS ────────────────────────────────────────────────
@@ -1077,7 +1149,7 @@ function renderStateGroups(data){
             card.innerHTML=`
                 <span class="card-arrow">↗</span>
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
-                <div class="card-score">${d.nexus_score}</div>
+                <div class="card-score">${fmtScore(d.nexus_score)}</div>
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
@@ -1210,10 +1282,10 @@ async function loadFromSupabase(){
             current_price:r.current_price||0,
             change_since_start: 0,
             sparkline:    [],
-            c1: r.capital_score||0,
-            c2: r.stability_score||0,
-            c3: r.purity_score||0,
-            c4: r.convergence_score||0,
+            c1: r.capital_score??null,
+            c2: r.stability_score??null,
+            c3: r.purity_score??null,
+            c4: r.convergence_score??null,
         }));
     }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
 }

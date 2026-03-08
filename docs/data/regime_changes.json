@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-08T12:45:56.170605Z",
+    "market_id": "236943",
+    "question": "Which countries will Iran strike in March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T12:45:56.170605Z",
+    "market_id": "236827",
+    "question": "US/Israel strikes Iran on...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 73.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T12:45:56.170605Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T12:45:56.170605Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.9,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
     "timestamp": "2026-03-08T11:56:25.192515Z",
     "market_id": "32228",
     "question": "Balance of Power: 2026 Midterms",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 79.7,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:43:10.562514Z",
-    "market_id": "25815",
-    "question": "Israel and Syria normalize relations by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 72.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:43:10.562514Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.3,
-      "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.5,
-      "macro_sensitivity": 0.04
     }
   }
 ]

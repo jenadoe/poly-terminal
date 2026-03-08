@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 31.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "29005",
+    "question": "MegaETH airdrop by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 85.4,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "106811",
+    "question": "Bitcoin all time high by ___?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.1,
+      "macro_sensitivity": 0.11
+    }
+  },
+  {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T03:01:15.793601Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T02:24:29.323235Z",
     "market_id": "239593",
     "question": "Bitcoin above ___ on March 8?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.7,
       "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:58:23.074332Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:58:23.074332Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:58:23.074332Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 48.2,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:36:46.424551Z",
-    "market_id": "202857",
-    "question": "NFL Champion 2027",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:36:46.424551Z",
-    "market_id": "179312",
-    "question": "Pro Baseball World Series Champion 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 76.1,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:36:46.424551Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 32.4,
-      "macro_sensitivity": 0.03
     }
   }
 ]

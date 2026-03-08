@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-08T11:56:25.192515Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 68.2,
+      "macro_sensitivity": 0.43
+    }
+  },
+  {
+    "timestamp": "2026-03-08T11:56:25.192515Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 96.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T11:44:11.609428Z",
     "market_id": "79987",
     "question": "Next French Presidential Election",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.5,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

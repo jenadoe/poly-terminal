@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-08T02:24:29.323235Z",
+    "market_id": "239593",
+    "question": "Bitcoin above ___ on March 8?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T02:24:29.323235Z",
+    "market_id": "158299",
+    "question": "US forces enter Iran by..?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T02:24:29.323235Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.6,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-08T02:24:29.323235Z",
+    "market_id": "50294",
+    "question": "Oscars 2026: Best Supporting Actor Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 40.6,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-08T02:24:29.323235Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 38.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-07T23:57:43.893175Z",
     "market_id": "238094",
     "question": "Which countries will strike Iran by March 31?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 32.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:36:46.424551Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.3,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:36:46.424551Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:06:58.280810Z",
-    "market_id": "90178",
-    "question": "Will Jesus Christ return before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.6,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-07T16:06:58.280810Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 67.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T15:59:13.413388Z",
-    "market_id": "202857",
-    "question": "NFL Champion 2027",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

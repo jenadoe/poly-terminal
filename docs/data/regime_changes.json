@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-08T14:58:23.535127Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-08T14:58:23.535127Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T14:42:36.689160Z",
     "market_id": "131586",
     "question": "Jeffrey Epstein confirmed to be alive before 2027?",
@@ -524,28 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 72.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:59:04.417102Z",
-    "market_id": "237347",
-    "question": "New Supreme Leader of Iran by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:59:04.417102Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.1,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-08T11:30:36.798002Z",
+    "market_id": "239593",
+    "question": "Bitcoin above ___ on March 8?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 82.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T11:30:36.798002Z",
+    "market_id": "240640",
+    "question": "What price will Bitcoin hit March 2-8?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T11:25:22.408728Z",
     "market_id": "238094",
     "question": "Which countries will strike Iran by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.8,
       "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.7,
-      "macro_sensitivity": 0.11
-    }
-  },
-  {
-    "timestamp": "2026-03-08T05:28:44.000635Z",
-    "market_id": "50298",
-    "question": "Oscars 2026: Best Actress Winner",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

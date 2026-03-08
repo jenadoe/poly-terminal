@@ -79,7 +79,7 @@
         /* ── KPI ── */
         .container { padding:24px 32px; max-width:1440px; margin:0 auto; }
         .kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:8px; }
-        .kpi-grid-signals { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:0; }
+        .kpi-grid-signals { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:0; max-width:calc(40% - 6px); }
         .kpi-card {
             background:var(--bg-card); border:1px solid var(--border);
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
@@ -1137,7 +1137,7 @@ function renderStateGroups(data){
         const shCls=st.key==='calibrating'?'sh-calibrating':st.key==='fragile'?'sh-fragile':'';
         wrap.innerHTML=`
             <div class="section-head ${shCls}"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
-            <div class="section-desc">${st.key==='initializing'?'':st.desc}</div>
+            ${st.key==='initializing'?'':"<div class=\"section-desc\">" + st.desc + "</div>"}
             <div class="event-grid" id="grid-${st.key}"></div>
         `;
         container.appendChild(wrap);
@@ -1277,7 +1277,7 @@ async function loadFromSupabase(){
             category:     r.category||'',
             nexus_score:  r.score,
             market_state: (r.score===null||r.score===undefined) ? 'Initializing' : (r.state||'Fragile'),
-            flags:        Array.isArray(r.flags)?r.flags:[],
+            flags:        Array.isArray(r.market_flags)?r.market_flags:[],
             macro_sensitivity: 0,
             volume:       r.volume||0,
             current_price:r.current_price||0,

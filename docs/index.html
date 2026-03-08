@@ -84,6 +84,7 @@
             background:var(--bg-card); border:1px solid var(--border);
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
         }
+        .kpi-card { min-height:76px; }
         .kpi-card.primary { border-left-color:var(--blue); }
         .kpi-card.k-converged { border-left-color:var(--blue); }
         .kpi-card.k-contested { border-left-color:var(--red); }
@@ -91,7 +92,7 @@
         .kpi-card.k-calibrating  { border-left-color:rgba(52,211,153,0.7); }
         .kpi-card.k-fragile-kpi  { border-left-color:rgba(100,116,139,0.6); }
         .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
-        .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); }
+        .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); min-height:2rem; }
         .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
         .kpi-card.k-converged .kpi-value { color:var(--blue); }
         .kpi-card.k-contested .kpi-value { color:var(--red); }
@@ -646,8 +647,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -1129,14 +1130,14 @@ function renderStateGroups(data){
 
         if(!group.length) return;
 
-        const shown=group.sort((a,b)=>b.nexus_score-a.nexus_score).slice(0,5);
+        const shown=group.sort((a,b)=>(b.nexus_score??-1)-(a.nexus_score??-1)).slice(0,5);
 
         const wrap=document.createElement('div');
         wrap.className='state-group';
         const shCls=st.key==='calibrating'?'sh-calibrating':st.key==='fragile'?'sh-fragile':'';
         wrap.innerHTML=`
             <div class="section-head ${shCls}"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
-            <div class="section-desc">${st.desc}</div>
+            <div class="section-desc">${st.key==='initializing'?'':st.desc}</div>
             <div class="event-grid" id="grid-${st.key}"></div>
         `;
         container.appendChild(wrap);

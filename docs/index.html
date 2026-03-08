@@ -1129,6 +1129,7 @@ function renderStateGroups(data){
             : data.filter(d=>st.match(d.market_state));
 
         if(!group.length) return;
+        if(st.key==='initializing') return;
 
         const shown=group.sort((a,b)=>(b.nexus_score??-1)-(a.nexus_score??-1)).slice(0,5);
 
@@ -1261,7 +1262,7 @@ async function loadFromSupabase(){
     try{
         const {data, error}=await sbClient
             .from('event_log')
-            .select('event_id,score,state,flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,hc_flag,snapshot_at')
+            .select('event_id,score,state,market_flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,snapshot_at')
             .order('snapshot_at',{ascending:false})
             .limit(500);
         if(error||!data||!data.length) return null;

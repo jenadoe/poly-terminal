@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-08T19:35:08.735847Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 31.5,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-08T19:35:08.735847Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T19:35:08.735847Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T19:03:40.002451Z",
     "market_id": "241560",
     "question": "Knicks vs. Lakers",
@@ -513,39 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 96.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T11:44:11.609428Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T11:30:36.798002Z",
-    "market_id": "239593",
-    "question": "Bitcoin above ___ on March 8?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 82.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T11:30:36.798002Z",
-    "market_id": "240640",
-    "question": "What price will Bitcoin hit March 2-8?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

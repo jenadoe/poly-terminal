@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-08T14:14:52.488159Z",
+    "market_id": "79973",
+    "question": "2026 Seoul Mayoral Election Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 94.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T14:14:52.488159Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 85.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T14:01:25.738402Z",
     "market_id": "193337",
     "question": "OpenAI IPO closing market cap above ___ ?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.16
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:44:23.575746Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 79.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:44:23.575746Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 75.2,
-      "macro_sensitivity": 0.05
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-08T13:59:37.055171Z",
+    "market_id": "193337",
+    "question": "OpenAI IPO closing market cap above ___ ?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T13:59:37.055171Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.43
+    }
+  },
+  {
+    "timestamp": "2026-03-08T13:59:37.055171Z",
+    "market_id": "50294",
+    "question": "Oscars 2026: Best Supporting Actor Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-08T13:31:15.938671Z",
     "market_id": "191798",
     "question": " Iran agrees to end enrichment of uranium by March 31?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.2,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:44:23.575746Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 78.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:44:23.575746Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T07:01:19.252803Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

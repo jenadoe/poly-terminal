@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-07T23:57:43.893175Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.1,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-07T23:20:51.290711Z",
     "market_id": "32754",
     "question": "NBA MVP ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T15:54:41.068514Z",
-    "market_id": "236943",
-    "question": "Which countries will Iran strike in March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.6,
-      "macro_sensitivity": 0.03
     }
   }
 ]

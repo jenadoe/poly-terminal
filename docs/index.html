@@ -591,8 +591,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';   // e.g. 'https://xxxx.supabase.co'
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA'; // e.g. 'eyJ...'
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -650,7 +650,7 @@ function cleanQuestion(q){
     return after||q.slice(0,sep+1).trim();
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
-function hasVal(v){ return v!==null&&v!==undefined&&v>0; }
+function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
 function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
 function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
 
@@ -1180,12 +1180,12 @@ async function loadFromSupabase(){
         const seen=new Set();
         const latest=data.filter(r=>{ if(seen.has(r.event_id)) return false; seen.add(r.event_id); return true; });
 
-        return latest.map(r=>({
+        return latest.filter(r=>r.score!==null&&r.score!==undefined).map(r=>({
             id:           r.event_id,
             slug:         r.market_slug||r.event_id,
             question:     r.market_slug||r.event_id,
             category:     r.category||'',
-            nexus_score:  r.score||0,
+            nexus_score:  r.score,
             market_state: r.state||'Fragile',
             flags:        Array.isArray(r.flags)?r.flags:[],
             macro_sensitivity: 0,

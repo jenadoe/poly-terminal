@@ -159,6 +159,11 @@
         }
         .event-card.s-calibrating { border-left:2px solid rgba(52,211,153,0.6); }
         .event-card.s-fragile     { border-left:2px solid rgba(71,85,105,0.45); }
+        .event-card.s-initializing {
+            border-left: 2px solid rgba(71,85,105,0.3);
+            opacity: 0.65;
+            filter: grayscale(20%);
+        }
 
         /* ── NOT INVESTMENT ADVICE BANNER ── */
         /* ── LIVE CALIBRATION TEST ── */
@@ -359,6 +364,7 @@
         .badge-converged   { color:#93c5fd; border-color:#1e3a5f; background:rgba(59,130,246,0.08); }
         .badge-calibrating { color:#6ee7b7; border-color:rgba(52,211,153,0.25); background:rgba(52,211,153,0.06); }
         .badge-fragile     { color:var(--text-dim); border-color:var(--border); }
+        .badge-initializing { color:rgba(71,85,105,0.7); border-color:rgba(71,85,105,0.3); font-style:italic; }
 
         /* flag badges in panel */
         .panel-flags { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
@@ -591,8 +597,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -700,7 +706,7 @@ async function loadTrackRecord() {
             const s = r.market_state;  // ← hc_track_record 실제 컬럼명
             if (!agg[s]) agg[s] = { n: 0, stable: 0 };
             agg[s].n++;
-            if (r.stable_resolution) agg[s].stable++;
+            if (r.stable_resolution === true || r.stable_resolution === 'true' || r.stable_resolution === 1) agg[s].stable++;
         });
         return ['Converged','Calibrating','Fragile'].map(s => ({
             state: s,
@@ -862,8 +868,19 @@ const STATES = [
         },
     },
     {
+        key: 'initializing',
+        match: s => s === 'Initializing',
+        label: 'INITIALIZING',
+        tag: 'DATA ACCUMULATING',
+        cardCls: 's-initializing',
+        badgeCls: 'badge-initializing',
+        badgeText: 'INITIALIZING',
+        desc: 'Observation history is insufficient for structural evaluation. Score and state will populate within 1–2 hours as data accumulates.',
+        context: d => `Data collection in progress. Nexus Score will be available once sufficient observation history has accumulated.`,
+    },
+    {
         key: 'fragile',
-        match: s => s === 'Fragile' || (!['Converged','Calibrating'].includes(s)),
+        match: s => s === 'Fragile' || (!['Converged','Calibrating','Initializing'].includes(s)),
         label: 'FRAGILE',
         tag: 'STRUCTURAL WEAKNESS',
         cardCls: 's-fragile',
@@ -1180,13 +1197,13 @@ async function loadFromSupabase(){
         const seen=new Set();
         const latest=data.filter(r=>{ if(seen.has(r.event_id)) return false; seen.add(r.event_id); return true; });
 
-        return latest.filter(r=>r.score!==null&&r.score!==undefined).map(r=>({
+        return latest.map(r=>({
             id:           r.event_id,
             slug:         r.market_slug||r.event_id,
             question:     r.market_slug||r.event_id,
             category:     r.category||'',
             nexus_score:  r.score,
-            market_state: r.state||'Fragile',
+            market_state: (r.score===null||r.score===undefined) ? 'Initializing' : (r.state||'Fragile'),
             flags:        Array.isArray(r.flags)?r.flags:[],
             macro_sensitivity: 0,
             volume:       r.volume||0,

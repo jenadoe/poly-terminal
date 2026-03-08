@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-08T05:28:44.000635Z",
+    "market_id": "50298",
+    "question": "Oscars 2026: Best Actress Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T04:23:09.907919Z",
     "market_id": "143669",
     "question": "US strike on Cuba by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T17:26:26.720929Z",
-    "market_id": "50282",
-    "question": "Oscars 2026: Best Actor Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.7,
-      "macro_sensitivity": 0.03
     }
   }
 ]

@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-08T16:26:11.493941Z",
+    "market_id": "32756",
+    "question": "NBA Western Conference Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 90.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T16:26:11.493941Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 31.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T16:26:11.493941Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.6,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-08T16:26:11.493941Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T16:26:11.493941Z",
+    "market_id": "73835",
+    "question": "edgeX FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 66.8,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-08T15:48:46.689976Z",
     "market_id": "240640",
     "question": "What price will Bitcoin hit March 2-8?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.3,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:44:46.544337Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 83.9,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:44:46.544337Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 72.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:44:46.544337Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 51.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:01:58.615392Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 94.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:01:58.615392Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.2,
-      "macro_sensitivity": 0.37
     }
   }
 ]

@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-08T22:51:59.572137Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:51:59.572137Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 88.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:51:59.572137Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 84.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:51:59.572137Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T22:51:59.572137Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-08T22:29:12.083508Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -491,61 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 69.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T16:26:11.493941Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.8,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:48:46.689976Z",
-    "market_id": "240640",
-    "question": "What price will Bitcoin hit March 2-8?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:48:46.689976Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 74.1,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:48:46.689976Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T15:29:09.319460Z",
-    "market_id": "241960",
-    "question": "# of views of next MrBeast video on day 1?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 38.0,
       "macro_sensitivity": 0.0
     }
   }

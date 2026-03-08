@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-08T15:48:46.689976Z",
+    "market_id": "240640",
+    "question": "What price will Bitcoin hit March 2-8?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T15:48:46.689976Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 74.1,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-08T15:48:46.689976Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T15:29:09.319460Z",
     "market_id": "241960",
     "question": "# of views of next MrBeast video on day 1?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.2,
       "macro_sensitivity": 0.37
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:01:58.615392Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T08:39:21.006836Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 83.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T08:39:21.006836Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.1,
-      "macro_sensitivity": 0.16
     }
   }
 ]

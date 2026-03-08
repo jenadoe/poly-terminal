@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-08T07:44:23.575746Z",
+    "market_id": "236151",
+    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.16
+    }
+  },
+  {
+    "timestamp": "2026-03-08T07:44:23.575746Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T07:44:23.575746Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 75.2,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-08T07:44:23.575746Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 78.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T07:44:23.575746Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T07:01:19.252803Z",
     "market_id": "79223",
     "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
@@ -491,61 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T20:48:29.481033Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T20:48:29.481033Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T20:48:29.481033Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 71.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T20:48:29.481033Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 48.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-07T20:48:29.481033Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
       "macro_sensitivity": 0.0
     }
   }

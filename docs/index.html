@@ -1263,7 +1263,7 @@ async function loadFromSupabase(){
     try{
         const {data, error}=await sbClient
             .from('event_log')
-            .select('event_id,score,state,market_flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,snapshot_at')
+            .select('event_id,score,state,flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,snapshot_at')
             .order('snapshot_at',{ascending:false})
             .limit(500);
         if(error||!data||!data.length) return null;
@@ -1279,7 +1279,7 @@ async function loadFromSupabase(){
             category:     r.category||'',
             nexus_score:  r.score,
             market_state: (r.score===null||r.score===undefined) ? 'Initializing' : (r.state||'Fragile'),
-            flags:        Array.isArray(r.market_flags)?r.market_flags:[],
+            flags:        Array.isArray(r.flags)?r.flags:[],
             macro_sensitivity: 0,
             volume:       r.volume||0,
             current_price:r.current_price||0,

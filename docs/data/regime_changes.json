@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-08T17:48:07.651782Z",
+    "market_id": "131586",
+    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.31
+    }
+  },
+  {
+    "timestamp": "2026-03-08T17:48:07.651782Z",
+    "market_id": "29005",
+    "question": "MegaETH airdrop by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 82.7,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-08T17:48:07.651782Z",
+    "market_id": "50298",
+    "question": "Oscars 2026: Best Actress Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T17:21:40.542899Z",
     "market_id": "29005",
     "question": "MegaETH airdrop by...?",
@@ -513,39 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 42.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:59:45.202663Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:59:45.202663Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-08T09:59:45.202663Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
       "macro_sensitivity": 0.0
     }
   }

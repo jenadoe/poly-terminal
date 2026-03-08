@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-08T20:49:29.975412Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-08T20:49:29.975412Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T20:24:02.427581Z",
     "market_id": "237347",
     "question": "New Supreme Leader of Iran by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.6,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-08T13:31:15.938671Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T13:31:15.938671Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

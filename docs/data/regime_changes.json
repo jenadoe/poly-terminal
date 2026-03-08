@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-08T11:44:11.609428Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-08T11:30:36.798002Z",
     "market_id": "239593",
     "question": "Bitcoin above ___ on March 8?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 36.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T06:04:43.560600Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.8,
-      "macro_sensitivity": 0.12
     }
   }
 ]

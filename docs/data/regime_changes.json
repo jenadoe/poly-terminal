@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-09T20:33:06.776991Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 79.0,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-09T20:33:06.776991Z",
+    "market_id": "139507",
+    "question": "Will Reza Pahlavi enter Iran by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T20:33:06.776991Z",
+    "market_id": "64731",
+    "question": "Billionaire one-time wealth tax passes in California election 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T20:33:06.776991Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.4,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-09T19:52:10.982310Z",
     "market_id": "238094",
     "question": "Which countries will strike Iran by March 31?",
@@ -502,50 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 50.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "57705",
-    "question": "Which company has best AI model end of June?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.6,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 79.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "63255",
-    "question": "Which teams will make the NBA Playoffs?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 85.1,
       "macro_sensitivity": 0.0
     }
   }

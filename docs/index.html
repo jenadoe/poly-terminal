@@ -317,6 +317,29 @@
         }
         .card-pm-link:hover { color:#7ab3d4; opacity:1; }
 
+        /* ── OUTCOME PROBABILITY ROW ── */
+        .card-outcomes {
+            display:flex; align-items:center; gap:6px;
+            font-size:0.65rem; margin:5px 0 4px;
+            line-height:1.2;
+        }
+        .co-fav  { color:#b8ccdf; }
+        .co-fav strong { color:#d1dae8; }
+        .co-sep  { color:#3d5068; }
+        .co-und  { color:#5a7a9a; }
+
+        /* ── MARKET INSIGHT ── */
+        .insight-primary {
+            font-size:0.78rem; color:#b8ccdf; line-height:1.6;
+            margin-bottom:6px;
+        }
+        .insight-risk {
+            font-size:0.74rem; color:#c07a3a; line-height:1.5;
+        }
+        .insight-risk-label {
+            margin-right:4px; opacity:0.85;
+        }
+
         /* ── FLAG BADGES on card ── */
         .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:7px; }
         .flag-badge {
@@ -331,6 +354,7 @@
         .card-bar-key { font-size:0.5rem; color:#5a7a9a; width:24px; flex-shrink:0; }
         .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
         .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
+        .bar-weak { background:#c0392b !important; opacity:0.85; }
         .bar-liq { background:#60a5fa; }
         .bar-eff { background:#34d399; }
         .bar-ind { background:#a78bfa; }
@@ -637,6 +661,11 @@
             <div class="context-note" id="p-context"></div>
             <div id="p-flag-context"></div>
         </div>
+        <div class="panel-section" id="p-insight-section" style="display:none">
+            <div class="panel-section-label">MARKET INSIGHT</div>
+            <div class="insight-primary" id="p-insight-primary"></div>
+            <div class="insight-risk" id="p-insight-risk"></div>
+        </div>
     </div>
     <div class="panel-footer">
         <a class="view-btn" id="p-link" href="#" target="_blank">VIEW ON POLYMARKET →</a>
@@ -721,11 +750,80 @@ function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
 function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
 function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
 
-function barRow(key,cls,val){
+// ── OUTCOME PROBABILITY ROW ───────────────────────────────
+function renderOutcomes(d){
+    const outcomes = d.outcomes;
+    if(!outcomes || outcomes.length < 2) return '';
+    const sorted = [...outcomes].sort((a,b) => b.price - a.price);
+    const t1 = sorted[0], t2 = sorted[1];
+    const p1 = Math.round(t1.price * 100);
+    const p2 = Math.round(t2.price * 100);
+    const extra = sorted.length > 2 ? ` <span style="color:#3d5068">+${sorted.length-2}</span>` : '';
+    return `<div class="card-outcomes">
+        <span class="co-fav">${t1.name} <strong>${p1}%</strong></span>
+        <span class="co-sep">vs</span>
+        <span class="co-und">${p2}% ${t2.name}</span>${extra}
+    </div>`;
+}
+
+// ── RULE-BASED 2-LINE INSIGHT ──────────────────────────────
+function generateInsight(d){
+    const liq = d.c1 || 0, eff = d.c2 || 0, ind = d.c3 || 0, cnv = d.c4 || 0;
+    const state = d.market_state || '';
+    const flags = getFlags(d);
+    const price = d.current_price || 0;
+    const vol   = d.volume || 0;
+
+    // 최저 pillar
+    const pillars = {Liquidity:liq, Efficiency:eff, Independence:ind, Convergence:cnv};
+    const validPillars = Object.entries(pillars).filter(([,v]) => v > 0);
+    const lowest  = validPillars.length ? validPillars.reduce((a,b) => a[1]<b[1]?a:b) : null;
+    const highest = validPillars.length ? validPillars.reduce((a,b) => a[1]>b[1]?a:b) : null;
+
+    let primary = '', risk = '';
+
+    // ── Primary: tension 감지 우선, 없으면 최저 pillar ──
+    if(liq >= 75 && cnv <= 45){
+        primary = `Heavy trading activity, but crowd consensus is still fragmented — convergence at <strong>${cnv.toFixed(0)}/100</strong>.`;
+    } else if(cnv >= 80 && liq <= 40){
+        primary = `Probability has strongly converged, but thin capital depth (<strong>${liq.toFixed(0)}/100</strong>) leaves it exposed to price shocks.`;
+    } else if(liq >= 80 && cnv >= 80){
+        primary = `Both capital depth and consensus are exceptionally strong — highest signal fidelity available.`;
+    } else if(state === 'Fragile'){
+        primary = `Structural data is still accumulating. Reliability improves as observation history deepens.`;
+    } else if(lowest && lowest[1] < 50){
+        primary = `<strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100 is the primary limiting factor for this market's reliability.`;
+    } else if(highest){
+        primary = `<strong>${highest[0]}</strong> is the dominant strength at ${highest[1].toFixed(0)}/100 — market structure is stable.`;
+    } else {
+        primary = `Structural profile is balanced with no dominant strength or weakness detected.`;
+    }
+
+    // ── Risk: flags 우선, 가격 편향, 볼륨 ──
+    if(flags.includes('Contested')){
+        risk = `Contested: conflicting capital flows are actively repricing — short-term volatility elevated.`;
+    } else if(flags.includes('Correlated')){
+        risk = `Correlated: price is coupled with external macro assets — independent signal quality reduced.`;
+    } else if(price > 0.85){
+        risk = `Outcome is heavily favored at <strong>${Math.round(price*100)}%</strong> — monitor for late-stage divergence near resolution.`;
+    } else if(price < 0.15 && price > 0){
+        risk = `Outcome is near-dismissed at <strong>${Math.round(price*100)}%</strong> — small new information could cause outsized repricing.`;
+    } else if(price >= 0.44 && price <= 0.56 && state === 'Calibrating'){
+        risk = `Dead heat at ~50% — active price discovery ongoing, outcome remains genuinely uncertain.`;
+    } else if(vol < 100000 && state === 'Fragile'){
+        risk = `Very low volume — single large trades may move price significantly.`;
+    }
+
+    return { primary, risk };
+}
+
+function barRow(key,cls,val,highlight=false){
     if(!hasVal(val)){
         return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill" style="width:0%"></div></div><span class="card-bar-key" style="width:auto;color:#3d5068">—</span></div>`;
     }
-    return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill ${cls}" style="width:${normBar(val)}%"></div></div></div>`;
+    const hlStyle = highlight ? 'color:#e05a5a;font-weight:700;' : '';
+    const fillCls = highlight ? 'bar-weak' : cls;
+    return `<div class="card-bar-row"><span class="card-bar-key" style="${hlStyle}">${key}</span><div class="card-bar-bg"><div class="card-bar-fill ${fillCls}" style="width:${normBar(val)}%"></div></div></div>`;
 }
 
 // ── LIVE CALIBRATION TEST ──────────────────────────────────
@@ -1165,17 +1263,21 @@ function renderStateGroups(data){
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
                 <div class="card-score">${fmtScore(d.nexus_score)}</div>
                 <div class="card-title">${cleanQuestion(d.question)}</div>
+                ${renderOutcomes(d)}
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>
                 </div>
                 ${flags.length?`<div class="card-flags">${renderFlagBadges(flags)}</div>`:''}
-                <div class="card-bars">
-                    ${barRow('LIQ','bar-liq',d.c1)}
-                    ${barRow('EFF','bar-eff',d.c2)}
-                    ${barRow('IND','bar-ind',d.c3)}
-                    ${barRow('CNV','bar-conv',d.c4)}
-                </div>
+                <div class="card-bars">${(()=>{
+                    const pv={LIQ:d.c1||0,EFF:d.c2||0,IND:d.c3||0,CNV:d.c4||0};
+                    const valid=Object.entries(pv).filter(([,v])=>v>0);
+                    const wk=valid.length?valid.reduce((a,b)=>a[1]<b[1]?a:b):null;
+                    return barRow('LIQ','bar-liq',d.c1,wk&&wk[0]==='LIQ')
+                          +barRow('EFF','bar-eff',d.c2,wk&&wk[0]==='EFF')
+                          +barRow('IND','bar-ind',d.c3,wk&&wk[0]==='IND')
+                          +barRow('CNV','bar-conv',d.c4,wk&&wk[0]==='CNV');
+                })()}</div>
             `;
             card.addEventListener('click',()=>openPanel(d,st));
             grid.appendChild(card);
@@ -1232,6 +1334,19 @@ function openPanel(d, st){
     // State context
     document.getElementById('p-context').innerHTML=st.context(d);
 
+    // ── MARKET INSIGHT (rule-based) ──
+    const insight = generateInsight(d);
+    const insightSection = document.getElementById('p-insight-section');
+    if(insight.primary){
+        document.getElementById('p-insight-primary').innerHTML = insight.primary;
+        document.getElementById('p-insight-risk').innerHTML = insight.risk
+            ? `<span class="insight-risk-label">⚠</span> ${insight.risk}` : '';
+        document.getElementById('p-insight-risk').style.display = insight.risk ? 'block' : 'none';
+        insightSection.style.display = 'block';
+    } else {
+        insightSection.style.display = 'none';
+    }
+
     // Flag context boxes
     const fcEl=document.getElementById('p-flag-context');
     fcEl.innerHTML=flags.map(f=>{
@@ -1275,7 +1390,7 @@ async function loadFromSupabase(){
         // markets_registry: is_active=true인 마켓만 (좀비 마켓 필터링)
         const {data, error}=await sbClient
             .from('markets_registry')
-            .select('event_id,nexus_score,market_state,flags,market_slug,title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,last_seen_at')
+            .select('event_id,nexus_score,market_state,flags,market_slug,title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at')
             .eq('is_active', true)
             .order('last_seen_at',{ascending:false})
             .limit(500);
@@ -1298,6 +1413,7 @@ async function loadFromSupabase(){
             c2: r.stability_score??null,
             c3: r.purity_score??null,
             c4: r.convergence_score??null,
+            outcomes: (() => { try { return typeof r.outcomes === 'string' ? JSON.parse(r.outcomes) : (r.outcomes||[]); } catch(e){ return []; } })(),
         }));
     }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
 }

@@ -302,15 +302,20 @@
             color:var(--text-hi); margin-bottom:8px;
         }
         .card-title {
-            font-size:0.75rem; color:#b8ccdf; line-height:1.45;
-            display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
-            line-clamp:3;
+            font-size:0.76rem; color:#b8ccdf; line-height:1.5;
+            display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
+            line-clamp:4;
             overflow:hidden; font-weight:500;
             flex:1;
         }
         .card-meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
         .card-vol { font-size:0.62rem; color:var(--text-mid); }
         .card-macro { font-size:0.6rem; color:var(--text-mid); }
+        .card-pm-link {
+            font-size:0.6rem; color:#4a7fa5; text-decoration:none;
+            letter-spacing:0.03em; opacity:0.8;
+        }
+        .card-pm-link:hover { color:#7ab3d4; opacity:1; }
 
         /* ── FLAG BADGES on card ── */
         .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:7px; }
@@ -647,8 +652,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -699,11 +704,8 @@ function animateCount(el,target,dec=0,ms=800){
     requestAnimationFrame(step);
 }
 function cleanQuestion(q){
-    if(!q) return q;
-    const sep=q.indexOf('?: ');
-    if(sep===-1) return q;
-    const after=q.slice(sep+3).trim();
-    return after||q.slice(0,sep+1).trim();
+    if(!q) return '—';
+    return q;
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
 function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
@@ -1156,7 +1158,7 @@ function renderStateGroups(data){
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
-                    <span class="card-macro">β ${(d.macro_sensitivity||0).toFixed(2)}</span>
+                    <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>
                 </div>
                 ${flags.length?`<div class="card-flags">${renderFlagBadges(flags)}</div>`:''}
                 <div class="card-bars">

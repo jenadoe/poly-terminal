@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-09T10:07:19.582609Z",
+    "market_id": "238486",
+    "question": "What price will Solana hit in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 35.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T10:07:19.582609Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 85.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T10:07:19.582609Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 53.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T09:08:11.179632Z",
     "market_id": "248138",
     "question": "Elon Musk # tweets March 7 - March 9, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 63.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T05:39:53.617787Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 37.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T05:39:53.617787Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 96.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T05:39:53.617787Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
       "macro_sensitivity": 0.0
     }
   }

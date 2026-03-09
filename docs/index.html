@@ -301,10 +301,15 @@
             font-size:1.6rem; font-weight:700; line-height:1;
             color:var(--text-hi); margin-bottom:8px;
         }
+        .card-event-sub {
+            font-size:0.58rem; color:#4a6a88; letter-spacing:0.04em;
+            text-transform:uppercase; margin-bottom:2px;
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+        }
         .card-title {
             font-size:0.76rem; color:#b8ccdf; line-height:1.5;
-            display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
-            line-clamp:4;
+            display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+            line-clamp:3;
             overflow:hidden; font-weight:500;
             flex:1;
         }
@@ -429,7 +434,8 @@
         .pflag-contested  { background:rgba(248,113,113,0.1); color:#f87171; border:1px solid rgba(248,113,113,0.2); }
         .pflag-correlated { background:rgba(251,146,60,0.1);  color:#fb923c; border:1px solid rgba(251,146,60,0.2); }
 
-        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; margin-top:8px; }
+        .panel-event-sub { font-size:0.65rem; color:#4a6a88; letter-spacing:0.04em; text-transform:uppercase; margin-top:6px; }
+        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; margin-top:4px; }
 
         .panel-body { flex:1; overflow-y:auto; padding:20px 24px; }
         .panel-body::-webkit-scrollbar { width:4px; }
@@ -461,6 +467,9 @@
         .outcome-bar-bg { width:90px; flex-shrink:0; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
         .outcome-bar-fill { height:100%; border-radius:3px; background:var(--blue); opacity:0.75; }
         .outcome-pct { font-size:0.68rem; color:var(--text); width:34px; text-align:right; font-variant-numeric:tabular-nums; flex-shrink:0; }
+        .outcome-row.top-outcome .outcome-name { color:#e2eaf4; font-weight:600; }
+        .outcome-row.top-outcome .outcome-bar-fill { opacity:1; }
+        .outcome-row.top-outcome .outcome-pct { color:#e2eaf4; font-weight:600; }
 
         /* Stat grid in panel */
         .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -648,6 +657,7 @@
                 <span class="panel-badge" id="p-badge">—</span>
             </div>
             <div class="panel-flags" id="p-flags"></div>
+            <div class="panel-event-sub" id="p-event-sub"></div>
             <div class="panel-title" id="p-title">—</div>
         </div>
         <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
@@ -764,17 +774,25 @@ function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
 function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
 function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
 
-// ── OUTCOME PROBABILITY ROW ───────────────────────────────
-function shortOutcomeName(name, maxLen=18){
-    if(!name) return '?';
-    // YES/NO 정규화
-    const u = name.trim().toUpperCase();
+// ── OUTCOME NAME EXTRACTION ───────────────────────────────
+// "Will Delcy Rodríguez be the leader of..." → "Delcy Rodríguez"
+// YES / NO → 그대로
+function shortOutcomeName(raw, maxLen=28){
+    if(!raw) return '?';
+    let name = raw.trim();
+    const u = name.toUpperCase();
     if(u === 'YES') return 'YES';
     if(u === 'NO')  return 'NO';
-    // 콜론 뒤 suffix 제거 (e.g. "Nuggets vs Grizzlies: 0/U 217.5" → "Nuggets vs Grizzlies")
+    // "Will [SUBJECT] verb..." 패턴 → SUBJECT 추출
+    const willMatch = name.match(
+        /^(?:Will|Does|Is|Are|Did|Has|Can|Could|Would)\s+(.+?)\s+(?:be|win|become|get|stay|remain|take|leave|reach|exceed|pass|sign|buy|sell|lose|lead|run|serve|hold|join)/i
+    );
+    if(willMatch) name = willMatch[1].trim();
+    // "Team A vs Team B: Over/Under 217.5" → "Team A vs Team B"
     const colonIdx = name.indexOf(': ');
     if(colonIdx > 0) name = name.slice(0, colonIdx).trim();
-    // 물음표로 시작하는 풀 문장은 스킵 → 사용 안 함 표시
+    // 물음표 제거
+    name = name.replace(/\?$/, '').trim();
     if(name.length > maxLen) name = name.slice(0, maxLen - 1) + '…';
     return name;
 }
@@ -1325,6 +1343,7 @@ function renderStateGroups(data){
                 <span class="card-arrow">↗</span>
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
                 <div class="card-score">${fmtScore(d.nexus_score)}</div>
+                ${d.event_title && d.event_title !== d.question ? `<div class="card-event-sub">${d.event_title}</div>` : ''}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
@@ -1361,7 +1380,15 @@ function openPanel(d, st){
         return `<span class="pflag ${cls}">${icon} ${f.toUpperCase()}</span>`;
     }).join('');
 
-    document.getElementById('p-title').textContent=cleanQuestion(d.question);
+    // 이벤트 서브타이틀 (마켓 제목과 다를 때만 표시)
+    const evtSub = document.getElementById('p-event-sub');
+    if(d.event_title && d.event_title !== d.question){
+        evtSub.textContent = d.event_title;
+        evtSub.style.display = 'block';
+    } else {
+        evtSub.style.display = 'none';
+    }
+    document.getElementById('p-title').textContent = cleanQuestion(d.question);
 
     // Outcomes
     const outSection = document.getElementById('p-outcomes-section');
@@ -1370,8 +1397,10 @@ function openPanel(d, st){
     if(outcomes.length >= 2){
         outEl.innerHTML = outcomes.map(o=>{
             const pct = Math.round((o.price||0)*100);
-            return `<div class="outcome-row">
-                <span class="outcome-name">${o.name}</span>
+            const label = o.name || '?';   // shortOutcomeName은 이미 fetcher/main에서 처리됨
+            const isTracked = o.is_tracked ? ' top-outcome' : '';
+            return `<div class="outcome-row${isTracked}">
+                <span class="outcome-name">${label}${o.is_tracked ? ' <span style="font-size:0.55rem;color:#4a9eff;letter-spacing:0.05em;margin-left:4px;">TRACKED</span>' : ''}</span>
                 <div class="outcome-bar-bg"><div class="outcome-bar-fill" style="width:${pct}%"></div></div>
                 <span class="outcome-pct">${pct}%</span>
             </div>`;
@@ -1467,7 +1496,7 @@ async function loadFromSupabase(){
         // markets_registry: is_active=true인 마켓만 (좀비 마켓 필터링)
         const {data, error}=await sbClient
             .from('markets_registry')
-            .select('event_id,nexus_score,market_state,flags,market_slug,title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at')
+            .select('event_id,nexus_score,market_state,flags,market_slug,title,event_title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at')
             .eq('is_active', true)
             .order('last_seen_at',{ascending:false})
             .limit(500);
@@ -1477,6 +1506,7 @@ async function loadFromSupabase(){
             id:           r.event_id,
             slug:         r.market_slug||r.event_id,
             question:     r.title||r.market_slug||r.event_id,
+            event_title:  r.event_title||null,
             category:     r.category||'',
             nexus_score:  r.nexus_score,
             market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.market_state||'Fragile'),

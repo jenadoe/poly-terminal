@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-09T02:02:07.808242Z",
+    "market_id": "241765",
+    "question": "Bitcoin above ___ on March 9?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 33.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T01:58:49.476702Z",
     "market_id": "48292",
     "question": "OpenAI IPO Closing Market Cap",
@@ -535,17 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 63.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T19:54:38.857797Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 50.6,
       "macro_sensitivity": 0.0
     }
   }

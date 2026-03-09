@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-09T22:27:12.030048Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T22:27:12.030048Z",
+    "market_id": "236827",
+    "question": "US/Israel strikes Iran on...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T22:27:12.030048Z",
+    "market_id": "81557",
+    "question": "Who will be the next Prime Minister of Israel after the next election?",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-09T22:27:12.030048Z",
+    "market_id": "174562",
+    "question": "Nuggets vs. Grizzlies",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 40.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T22:27:12.030048Z",
+    "market_id": "143642",
+    "question": "US strike on Mexico by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T21:47:12.547732Z",
     "market_id": "238486",
     "question": "What price will Solana hit in March?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 41.9,
       "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "28999",
-    "question": "MegaETH market cap (FDV) one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.34
-    }
-  },
-  {
-    "timestamp": "2026-03-09T15:11:05.719693Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 68.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T15:11:05.719693Z",
-    "market_id": "236884",
-    "question": "Iran x Israel/US conflict ends by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 25.4,
-      "macro_sensitivity": 0.01
     }
   }
 ]

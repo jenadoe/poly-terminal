@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-09T23:51:41.192087Z",
+    "market_id": "139507",
+    "question": "Will Reza Pahlavi enter Iran by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 68.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:51:41.192087Z",
+    "market_id": "174562",
+    "question": "Nuggets vs. Grizzlies",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 93.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:51:41.192087Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 78.8,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:51:41.192087Z",
+    "market_id": "28999",
+    "question": "MegaETH market cap (FDV) one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-09T23:26:49.223377Z",
     "market_id": "32756",
     "question": "NBA Western Conference Champion ",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 41.9,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "158299",
-    "question": "US forces enter Iran by..?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "108634",
-    "question": "Will the Iranian regime fall by June 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.8,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,104 @@
 [
   {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "73096",
+    "question": "Will Iran close the Strait of Hormuz by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 78.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "97361",
+    "question": "How many 7.0 or above earthquakes by June 30?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.7,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "50301",
+    "question": "Oscars 2026: Best Supporting Actress Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.9,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "28999",
+    "question": "MegaETH market cap (FDV) one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T16:13:26.876009Z",
+    "market_id": "118172",
+    "question": "Will Trump acquire Greenland before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.34
+    }
+  },
+  {
     "timestamp": "2026-03-09T15:11:05.719693Z",
     "market_id": "238486",
     "question": "What price will Solana hit in March?",
@@ -447,105 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 85.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 83.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 75.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "36173",
-    "question": "When will Bitcoin hit $150k?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 81.0,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 96.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T08:50:36.948732Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T08:50:36.948732Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 38.2,
-      "macro_sensitivity": 0.11
-    }
-  },
-  {
-    "timestamp": "2026-03-09T08:50:36.948732Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T08:50:36.948732Z",
-    "market_id": "63255",
-    "question": "Which teams will make the NBA Playoffs?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T08:50:36.948732Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-09T11:34:48.408106Z",
+    "market_id": "158299",
+    "question": "US forces enter Iran by..?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 61.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T11:34:48.408106Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-09T11:04:25.474504Z",
     "market_id": "31558",
     "question": "NBA Rookie of the Year ",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T06:41:50.342808Z",
-    "market_id": "50251",
-    "question": "Oscars 2026: Best Picture Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T06:41:50.342808Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.5,
-      "macro_sensitivity": 0.03
     }
   }
 ]

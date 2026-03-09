@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-09T18:01:02.235881Z",
+    "market_id": "238486",
+    "question": "What price will Solana hit in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T18:01:02.235881Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 59.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T18:01:02.235881Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T18:01:02.235881Z",
+    "market_id": "73096",
+    "question": "Will Iran close the Strait of Hormuz by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T18:01:02.235881Z",
+    "market_id": "31875",
+    "question": "Republican Presidential Nominee 2028",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T17:10:50.625881Z",
     "market_id": "243883",
     "question": "Bitcoin price on March 10?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 40.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 90.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.01
     }
   }
 ]

@@ -704,8 +704,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -757,17 +757,7 @@ function animateCount(el,target,dec=0,ms=800){
 }
 function cleanQuestion(q){
     if(!q) return '—';
-    const sep = q.indexOf('?: ');
-    if(sep === -1) return q;
-    const before = q.slice(0, sep + 1).trim();  // 이벤트 요약 (더 짧고 명확)
-    const after  = q.slice(sep + 3).trim();      // 풀 질문 (길 수 있음)
-    if(!after) return before;
-    const norm = s => s.toLowerCase().replace(/\s+/g,' ').trim();
-    // 순수 중복 → before
-    if(norm(after) === norm(before)) return before;
-    // after가 before보다 현저히 길면 before 사용 (카드 공간 절약)
-    if(after.length > before.length * 1.5 && before.length > 10) return before;
-    return after;
+    return q;
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
 function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
@@ -1343,7 +1333,7 @@ function renderStateGroups(data){
                 <span class="card-arrow">↗</span>
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
                 <div class="card-score">${fmtScore(d.nexus_score)}</div>
-                ${d.event_title && d.event_title !== d.question ? `<div class="card-event-sub">${d.event_title}</div>` : ''}
+                ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
@@ -1382,7 +1372,7 @@ function openPanel(d, st){
 
     // 이벤트 서브타이틀 (마켓 제목과 다를 때만 표시)
     const evtSub = document.getElementById('p-event-sub');
-    if(d.event_title && d.event_title !== d.question){
+    if(d.event_title && d.event_title !== d.question && !d.question.toLowerCase().includes(d.event_title.toLowerCase())){
         evtSub.textContent = d.event_title;
         evtSub.style.display = 'block';
     } else {
@@ -1396,13 +1386,15 @@ function openPanel(d, st){
     const outcomes = Array.isArray(d.outcomes) ? d.outcomes.filter(o=>o&&o.name&&o.price!=null) : [];
     if(outcomes.length >= 2){
         outEl.innerHTML = outcomes.map(o=>{
-            const pct = Math.round((o.price||0)*100);
-            const label = o.name || '?';   // shortOutcomeName은 이미 fetcher/main에서 처리됨
+            const raw = (o.price||0)*100;
+            const barW = Math.min(raw, 100).toFixed(1);
+            const pctLabel = raw < 0.5 ? '<1%' : raw < 10 ? raw.toFixed(1)+'%' : Math.round(raw)+'%';
+            const label = o.name || '?';
             const isTracked = o.is_tracked ? ' top-outcome' : '';
             return `<div class="outcome-row${isTracked}">
                 <span class="outcome-name">${label}${o.is_tracked ? ' <span style="font-size:0.55rem;color:#4a9eff;letter-spacing:0.05em;margin-left:4px;">TRACKED</span>' : ''}</span>
-                <div class="outcome-bar-bg"><div class="outcome-bar-fill" style="width:${pct}%"></div></div>
-                <span class="outcome-pct">${pct}%</span>
+                <div class="outcome-bar-bg"><div class="outcome-bar-fill" style="width:${barW}%"></div></div>
+                <span class="outcome-pct">${pctLabel}</span>
             </div>`;
         }).join('');
         outSection.style.display = 'block';

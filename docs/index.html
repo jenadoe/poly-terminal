@@ -327,6 +327,7 @@
         .co-fav strong { color:#d1dae8; }
         .co-sep  { color:#3d5068; }
         .co-und  { color:#5a7a9a; }
+        .co-extra{ color:#3d5068; margin-left:2px; }
 
         /* ── MARKET INSIGHT ── */
         .insight-primary {
@@ -452,6 +453,14 @@
         .panel-bar-fill.bar-ind  { background:#a78bfa; }
         .panel-bar-fill.bar-conv { background:#f472b6; }
         .panel-bar-val { font-size:0.65rem; color:var(--text); width:32px; text-align:right; font-variant-numeric:tabular-nums; }
+
+        /* Outcomes in panel */
+        .panel-outcomes { display:flex; flex-direction:column; gap:7px; }
+        .outcome-row { display:flex; align-items:center; gap:10px; }
+        .outcome-name { font-size:0.68rem; color:var(--text-hi); flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .outcome-bar-bg { width:90px; flex-shrink:0; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
+        .outcome-bar-fill { height:100%; border-radius:3px; background:var(--blue); opacity:0.75; }
+        .outcome-pct { font-size:0.68rem; color:var(--text); width:34px; text-align:right; font-variant-numeric:tabular-nums; flex-shrink:0; }
 
         /* Stat grid in panel */
         .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -644,6 +653,10 @@
         <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
     </div>
     <div class="panel-body">
+        <div class="panel-section" id="p-outcomes-section" style="display:none">
+            <div class="panel-section-label">OUTCOMES</div>
+            <div class="panel-outcomes" id="p-outcomes"></div>
+        </div>
         <div class="panel-section">
             <div class="panel-section-label">INTEGRITY BREAKDOWN</div>
             <div class="panel-bars" id="p-bars"></div>
@@ -681,8 +694,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -736,13 +749,14 @@ function cleanQuestion(q){
     if(!q) return '—';
     const sep = q.indexOf('?: ');
     if(sep === -1) return q;
-    const before = q.slice(0, sep + 1).trim();
-    const after  = q.slice(sep + 3).trim();
+    const before = q.slice(0, sep + 1).trim();  // 이벤트 요약 (더 짧고 명확)
+    const after  = q.slice(sep + 3).trim();      // 풀 질문 (길 수 있음)
     if(!after) return before;
-    // 앞뒤가 동일한 순수 중복이면 before만 표시
     const norm = s => s.toLowerCase().replace(/\s+/g,' ').trim();
+    // 순수 중복 → before
     if(norm(after) === norm(before)) return before;
-    // 다른 경우: after가 실제 질문, before는 이벤트 요약 → after 표시
+    // after가 before보다 현저히 길면 before 사용 (카드 공간 절약)
+    if(after.length > before.length * 1.5 && before.length > 10) return before;
     return after;
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
@@ -751,6 +765,20 @@ function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
 function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
 
 // ── OUTCOME PROBABILITY ROW ───────────────────────────────
+function shortOutcomeName(name, maxLen=18){
+    if(!name) return '?';
+    // YES/NO 정규화
+    const u = name.trim().toUpperCase();
+    if(u === 'YES') return 'YES';
+    if(u === 'NO')  return 'NO';
+    // 콜론 뒤 suffix 제거 (e.g. "Nuggets vs Grizzlies: 0/U 217.5" → "Nuggets vs Grizzlies")
+    const colonIdx = name.indexOf(': ');
+    if(colonIdx > 0) name = name.slice(0, colonIdx).trim();
+    // 물음표로 시작하는 풀 문장은 스킵 → 사용 안 함 표시
+    if(name.length > maxLen) name = name.slice(0, maxLen - 1) + '…';
+    return name;
+}
+
 function renderOutcomes(d){
     const outcomes = d.outcomes;
     if(!outcomes || outcomes.length < 2) return '';
@@ -758,11 +786,15 @@ function renderOutcomes(d){
     const t1 = sorted[0], t2 = sorted[1];
     const p1 = Math.round(t1.price * 100);
     const p2 = Math.round(t2.price * 100);
-    const extra = sorted.length > 2 ? ` <span style="color:#3d5068">+${sorted.length-2}</span>` : '';
+    const n1 = shortOutcomeName(t1.name);
+    const n2 = shortOutcomeName(t2.name);
+    // 이름이 너무 길거나 풀 문장이면 숨김
+    if(n1.length > 20 || n2.length > 20) return '';
+    const extra = sorted.length > 2 ? ` <span class="co-extra">+${sorted.length-2}</span>` : '';
     return `<div class="card-outcomes">
-        <span class="co-fav">${t1.name} <strong>${p1}%</strong></span>
-        <span class="co-sep">vs</span>
-        <span class="co-und">${p2}% ${t2.name}</span>${extra}
+        <span class="co-fav"><strong>${p1}%</strong> ${n1}</span>
+        <span class="co-sep">·</span>
+        <span class="co-und">${n2} ${p2}%</span>${extra}
     </div>`;
 }
 
@@ -773,45 +805,76 @@ function generateInsight(d){
     const flags = getFlags(d);
     const price = d.current_price || 0;
     const vol   = d.volume || 0;
+    const score = parseFloat(d.nexus_score) || 0;
 
-    // 최저 pillar
     const pillars = {Liquidity:liq, Efficiency:eff, Independence:ind, Convergence:cnv};
-    const validPillars = Object.entries(pillars).filter(([,v]) => v > 0);
-    const lowest  = validPillars.length ? validPillars.reduce((a,b) => a[1]<b[1]?a:b) : null;
-    const highest = validPillars.length ? validPillars.reduce((a,b) => a[1]>b[1]?a:b) : null;
+    const valid = Object.entries(pillars).filter(([,v]) => v > 0);
+    const lowest  = valid.length ? valid.reduce((a,b) => a[1]<b[1]?a:b) : null;
+    const highest = valid.length ? valid.reduce((a,b) => a[1]>b[1]?a:b) : null;
+    const avg = valid.length ? valid.reduce((s,[,v])=>s+v,0)/valid.length : 0;
+
+    // outcomes top1
+    const outs = d.outcomes ? [...d.outcomes].sort((a,b)=>b.price-a.price) : [];
+    const topOut = outs[0];
+    const topPct = topOut ? Math.round(topOut.price*100) : Math.round(price*100);
 
     let primary = '', risk = '';
 
-    // ── Primary: tension 감지 우선, 없으면 최저 pillar ──
+    // ── TENSION 감지 (가장 인사이트 강함) ──────────────────
     if(liq >= 75 && cnv <= 45){
-        primary = `Heavy trading activity, but crowd consensus is still fragmented — convergence at <strong>${cnv.toFixed(0)}/100</strong>.`;
+        primary = `<strong>$${(vol/1e6).toFixed(1)}M</strong> volume but crowd hasn't converged — LIQ ${liq.toFixed(0)} vs CNV ${cnv.toFixed(0)} gap signals active repricing, not stability.`;
     } else if(cnv >= 80 && liq <= 40){
-        primary = `Probability has strongly converged, but thin capital depth (<strong>${liq.toFixed(0)}/100</strong>) leaves it exposed to price shocks.`;
-    } else if(liq >= 80 && cnv >= 80){
-        primary = `Both capital depth and consensus are exceptionally strong — highest signal fidelity available.`;
+        primary = `Consensus has converged to <strong>${cnv.toFixed(0)}/100</strong> but capital depth is thin at LIQ ${liq.toFixed(0)} — a single large order could break the price.`;
+    } else if(ind <= 30 && vol > 500000){
+        primary = `Independence at <strong>${ind.toFixed(0)}/100</strong> — traders are moving together, not independently. Price may reflect correlated sentiment rather than true crowd wisdom.`;
+    } else if(eff <= 35 && eff > 0){
+        primary = `Efficiency <strong>${eff.toFixed(0)}/100</strong> — probability sum has drifted from 100%, indicating possible outcome imbalance or stale pricing.`;
+
+    // ── STATE-SPECIFIC ──────────────────────────────────────
+    } else if(state === 'Converged'){
+        if(lowest && lowest[1] >= 80){
+            primary = `All four pillars above 80 — LIQ ${liq.toFixed(0)} · EFF ${eff.toFixed(0)} · IND ${ind.toFixed(0)} · CNV ${cnv.toFixed(0)}. Structurally the strongest tier on this dashboard.`;
+        } else if(lowest){
+            primary = `Converged with one soft spot: <strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100. All other pillars clear threshold — this is the only remaining risk factor.`;
+        } else {
+            primary = `Structural consensus locked at score <strong>${score}</strong>. No pillar below threshold.`;
+        }
+    } else if(state === 'Calibrating'){
+        const gap = 80 - score;
+        if(gap <= 8){
+            primary = `<strong>${gap.toFixed(1)} pts</strong> from Converged threshold. ${cnv < 75 ? `Convergence (${cnv.toFixed(0)}/100) is the final blocker.` : `Liquidity (${liq.toFixed(0)}/100) needs marginal deepening.`}`;
+        } else if(cnv < 50){
+            primary = `Calibration phase — CNV at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't found equilibrium yet. Current pricing reflects active discovery, not settled consensus.`;
+        } else {
+            primary = `Score <strong>${score}</strong> with balanced pillars (avg ${avg.toFixed(0)}/100). Market is functional but hasn't matured enough to lock consensus.`;
+        }
     } else if(state === 'Fragile'){
-        primary = `Structural data is still accumulating. Reliability improves as observation history deepens.`;
-    } else if(lowest && lowest[1] < 50){
-        primary = `<strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100 is the primary limiting factor for this market's reliability.`;
-    } else if(highest){
-        primary = `<strong>${highest[0]}</strong> is the dominant strength at ${highest[1].toFixed(0)}/100 — market structure is stable.`;
+        if(vol < 50000){
+            primary = `Near-zero activity — <strong>${(vol/1e3).toFixed(0)}K</strong> volume. Prices reflect initial positioning, not crowd intelligence. Structural scoring is not yet meaningful.`;
+        } else if(lowest){
+            primary = `Fragile primarily due to <strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100. Needs sustained volume and tighter spreads before signals become reliable.`;
+        } else {
+            primary = `Structural weakness detected at score <strong>${score}</strong>. Data accumulation in progress.`;
+        }
     } else {
-        primary = `Structural profile is balanced with no dominant strength or weakness detected.`;
+        primary = lowest
+            ? `<strong>${lowest[0]}</strong> (${lowest[1].toFixed(0)}/100) is the binding constraint — other pillars average ${avg.toFixed(0)}/100.`
+            : `Structural profile balanced — no single dominant weakness.`;
     }
 
-    // ── Risk: flags 우선, 가격 편향, 볼륨 ──
+    // ── RISK NOTE ───────────────────────────────────────────
     if(flags.includes('Contested')){
-        risk = `Contested: conflicting capital flows are actively repricing — short-term volatility elevated.`;
+        risk = `Contested — YES/NO capital actively competing. Expect elevated repricing until one side dominates.`;
     } else if(flags.includes('Correlated')){
-        risk = `Correlated: price is coupled with external macro assets — independent signal quality reduced.`;
-    } else if(price > 0.85){
-        risk = `Outcome is heavily favored at <strong>${Math.round(price*100)}%</strong> — monitor for late-stage divergence near resolution.`;
-    } else if(price < 0.15 && price > 0){
-        risk = `Outcome is near-dismissed at <strong>${Math.round(price*100)}%</strong> — small new information could cause outsized repricing.`;
-    } else if(price >= 0.44 && price <= 0.56 && state === 'Calibrating'){
-        risk = `Dead heat at ~50% — active price discovery ongoing, outcome remains genuinely uncertain.`;
-    } else if(vol < 100000 && state === 'Fragile'){
-        risk = `Very low volume — single large trades may move price significantly.`;
+        risk = `Correlated — price coupled to macro assets. Check BTC/SPY on high-volatility days before trusting this signal.`;
+    } else if(topPct >= 88){
+        risk = `Near-certainty at <strong>${topPct}%</strong> — late-stage divergence risk if resolution is delayed or ambiguous.`;
+    } else if(topPct <= 12 && topPct > 0){
+        risk = `Near-zero at <strong>${topPct}%</strong> — small information shock could trigger outsized repricing.`;
+    } else if(topPct >= 45 && topPct <= 55 && state === 'Calibrating'){
+        risk = `Dead heat (~50%) — outcome is genuinely uncertain. Active discovery ongoing, no structural edge either way.`;
+    } else if(vol < 80000 && state !== 'Initializing'){
+        risk = `Thin market — <strong>${(vol/1e3).toFixed(0)}K</strong> volume means individual trades can move price materially.`;
     }
 
     return { primary, risk };
@@ -1263,21 +1326,17 @@ function renderStateGroups(data){
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
                 <div class="card-score">${fmtScore(d.nexus_score)}</div>
                 <div class="card-title">${cleanQuestion(d.question)}</div>
-                ${renderOutcomes(d)}
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>
                 </div>
                 ${flags.length?`<div class="card-flags">${renderFlagBadges(flags)}</div>`:''}
-                <div class="card-bars">${(()=>{
-                    const pv={LIQ:d.c1||0,EFF:d.c2||0,IND:d.c3||0,CNV:d.c4||0};
-                    const valid=Object.entries(pv).filter(([,v])=>v>0);
-                    const wk=valid.length?valid.reduce((a,b)=>a[1]<b[1]?a:b):null;
-                    return barRow('LIQ','bar-liq',d.c1,wk&&wk[0]==='LIQ')
-                          +barRow('EFF','bar-eff',d.c2,wk&&wk[0]==='EFF')
-                          +barRow('IND','bar-ind',d.c3,wk&&wk[0]==='IND')
-                          +barRow('CNV','bar-conv',d.c4,wk&&wk[0]==='CNV');
-                })()}</div>
+                <div class="card-bars">
+                    ${barRow('LIQ','bar-liq',d.c1)}
+                    ${barRow('EFF','bar-eff',d.c2)}
+                    ${barRow('IND','bar-ind',d.c3)}
+                    ${barRow('CNV','bar-conv',d.c4)}
+                </div>
             `;
             card.addEventListener('click',()=>openPanel(d,st));
             grid.appendChild(card);
@@ -1303,6 +1362,24 @@ function openPanel(d, st){
     }).join('');
 
     document.getElementById('p-title').textContent=cleanQuestion(d.question);
+
+    // Outcomes
+    const outSection = document.getElementById('p-outcomes-section');
+    const outEl = document.getElementById('p-outcomes');
+    const outcomes = Array.isArray(d.outcomes) ? d.outcomes.filter(o=>o&&o.name&&o.price!=null) : [];
+    if(outcomes.length >= 2){
+        outEl.innerHTML = outcomes.map(o=>{
+            const pct = Math.round((o.price||0)*100);
+            return `<div class="outcome-row">
+                <span class="outcome-name">${o.name}</span>
+                <div class="outcome-bar-bg"><div class="outcome-bar-fill" style="width:${pct}%"></div></div>
+                <span class="outcome-pct">${pct}%</span>
+            </div>`;
+        }).join('');
+        outSection.style.display = 'block';
+    } else {
+        outSection.style.display = 'none';
+    }
 
     // Component bars
     document.getElementById('p-bars').innerHTML=[

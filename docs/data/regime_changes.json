@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-09T23:26:49.223377Z",
+    "market_id": "32756",
+    "question": "NBA Western Conference Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 90.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:26:49.223377Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.9,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:26:49.223377Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 75.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T23:26:49.223377Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 95.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T22:55:22.754372Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -502,50 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 45.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 56.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "73096",
-    "question": "Will Iran close the Strait of Hormuz by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T16:13:26.876009Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.7,
       "macro_sensitivity": 0.0
     }
   }

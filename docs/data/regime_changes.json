@@ -1,5 +1,82 @@
 [
   {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "243883",
+    "question": "Bitcoin price on March 10?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 33.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.9,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "158299",
+    "question": "US forces enter Iran by..?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.8,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T17:10:50.625881Z",
+    "market_id": "149589",
+    "question": "Which party will gain most seats in Russian Parliamentary Election?",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 56.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T16:13:26.876009Z",
     "market_id": "73096",
     "question": "Will Iran close the Strait of Hormuz by...?",
@@ -470,83 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T11:04:25.474504Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 96.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T10:07:19.582609Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 35.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T10:07:19.582609Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 85.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T10:07:19.582609Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 53.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "248138",
-    "question": "Elon Musk # tweets March 7 - March 9, 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 77.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T09:08:11.179632Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 85.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

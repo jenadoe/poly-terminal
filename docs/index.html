@@ -68,6 +68,7 @@
         .logo h1 { font-family:var(--sans); font-size:2rem; font-weight:800; letter-spacing:0.02em; color:var(--text-hi); line-height:1; }
         .logo h1 span { color:var(--blue); }
         .logo-sub { margin-top:6px; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.15em; text-transform:uppercase; }
+        .logo-tagline { margin-top:5px; font-size:0.75rem; color:#7ab3d4; letter-spacing:0.03em; font-style:italic; }
         .cursor {
             display:inline-block; width:8px; height:0.85em; background:var(--blue);
             vertical-align:text-bottom; animation:blink 1.1s step-end infinite; opacity:0.75;
@@ -315,6 +316,7 @@
         }
         .card-meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
         .card-vol { font-size:0.62rem; color:var(--text-mid); }
+        .card-price { font-size:0.72rem; color:#7ab3d4; font-weight:600; margin:3px 0 2px; letter-spacing:0.02em; }
         .card-macro { font-size:0.6rem; color:var(--text-mid); }
         .card-pm-link {
             font-size:0.6rem; color:#4a7fa5; text-decoration:none;
@@ -542,6 +544,7 @@
     <div class="logo">
         <h1>POLY<span>-NEXUS</span><span class="cursor"></span></h1>
         <div class="logo-sub">// Prediction Market Consensus Oracle</div>
+        <div class="logo-tagline">An integrity layer for Polymarket — measuring how reliable market consensus actually is.</div>
     </div>
     <div class="header-meta">
         <div>UPDATED <strong id="last-update">—</strong></div>
@@ -562,7 +565,7 @@
         <div class="kpi-card primary">
             <div class="kpi-label">Integrity Index</div>
             <div class="kpi-value" id="integrity-index">—</div>
-            <div class="kpi-sub" id="integrity-coverage">— / — markets</div>
+            <div class="kpi-sub" id="integrity-coverage">— / — markets · 80+ = High Integrity</div>
         </div>
         <div class="kpi-card k-converged">
             <div class="kpi-label">Converged</div>
@@ -605,8 +608,8 @@
     <!-- LIVE CALIBRATION TEST -->
     <div class="calib-section">
         <div class="calib-header">
-            <div class="calib-title">📊 LIVE CALIBRATION TEST</div>
-            <div class="calib-phase">Forward-testing Phase</div>
+            <div class="calib-title">📊 MODEL VALIDATION — LIVE CALIBRATION TEST</div>
+            <div class="calib-phase">Forward-testing: does Nexus Score predict real stability?</div>
         </div>
 
         <div class="calib-progress-wrap">
@@ -1033,7 +1036,7 @@ const STATES = [
         cardCls: 's-converged',
         badgeCls: 'badge-converged',
         badgeText: 'CONVERGED',
-        desc: 'Crowd consensus has fully stabilized. Capital depth is strong, entropy is low, and price discovery has reached equilibrium. These markets carry the highest structural integrity for research and citation.',
+        desc: 'These markets have locked in a stable price. Late-stage repricing risk is minimal — suitable for research, citation, and high-confidence position-taking.',
         context: d => {
             const subs = {Liquidity:d.c1||0, Efficiency:d.c2||0, Independence:d.c3||0, Convergence:d.c4||0};
             const sorted = Object.entries(subs).sort((a,b)=>a[1]-b[1]);
@@ -1073,7 +1076,7 @@ const STATES = [
         cardCls: 's-calibrating',
         badgeCls: 'badge-calibrating',
         badgeText: 'CALIBRATING',
-        desc: 'Market is actively processing new information and calibrating probabilities. Structural integrity is functional — consensus is forming but has not yet locked. Normal operating state for most active markets.',
+        desc: 'Price discovery is ongoing. Consensus exists but has not stabilized yet. Monitor for transition to Converged before treating price as final.',
         context: d => {
             const cnv = d.c4||0;
             const liq = d.c1||0;
@@ -1116,7 +1119,7 @@ const STATES = [
         cardCls: 's-fragile',
         badgeCls: 'badge-fragile',
         badgeText: 'FRAGILE',
-        desc: 'Thin liquidity or structural instability detected. Nexus Score reflects insufficient capital depth or observation history. Consensus cannot be reliably assessed at this stage.',
+        desc: 'Market structure is weak. Low liquidity means a single large order could move this price significantly. Do not treat current price as reliable consensus.',
         context: d => {
             const vol = d.volume||0;
             const liq = d.c1||0;
@@ -1335,6 +1338,7 @@ function renderStateGroups(data){
                 <div class="card-score">${fmtScore(d.nexus_score)}</div>
                 ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
+                ${d.current_price!=null ? `<div class="card-price">${((d.current_price)*100)<0.5?'<1%':((d.current_price)*100)<10?((d.current_price)*100).toFixed(1)+'%':Math.round((d.current_price)*100)+'%'}</div>` : ''}
                 <div class="card-meta">
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-09T11:50:04.907128Z",
+    "market_id": "248032",
+    "question": "Will the Iranian regime fall by April 30?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T11:50:04.907128Z",
+    "market_id": "236827",
+    "question": "US/Israel strikes Iran on...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 77.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T11:50:04.907128Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 39.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T11:34:48.408106Z",
     "market_id": "158299",
     "question": "US forces enter Iran by..?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.4,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 50.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T06:41:50.342808Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 56.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

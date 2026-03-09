@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 66.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "84921",
+    "question": "USD.AI FDV above ___ one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.6,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 79.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "63255",
+    "question": "Which teams will make the NBA Playoffs?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 85.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "32225",
+    "question": "Which party will win the House in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 89.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T13:28:17.211803Z",
+    "market_id": "89502",
+    "question": "What price will Bitcoin hit in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.8,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-09T12:58:50.593923Z",
     "market_id": "79831",
     "question": "Highest grossing movie in 2026?",
@@ -480,72 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 60.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:39:15.291364Z",
-    "market_id": "31552",
-    "question": "Presidential Election Winner 2028",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.3,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.6,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 73.8,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "29005",
-    "question": "MegaETH airdrop by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.6,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-09T07:14:46.474599Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
       "macro_sensitivity": 0.0
     }
   }

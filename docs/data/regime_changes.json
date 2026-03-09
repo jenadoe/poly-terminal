@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-09T01:58:49.476702Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 34.6,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-09T01:58:49.476702Z",
+    "market_id": "50251",
+    "question": "Oscars 2026: Best Picture Winner",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 50.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-09T01:53:56.472667Z",
     "market_id": "116025",
     "question": "Bank of Japan Decision in March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T19:54:38.857797Z",
-    "market_id": "60182",
-    "question": "Nobel Peace Prize Winner 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 85.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-08T19:35:08.735847Z",
-    "market_id": "143669",
-    "question": "US strike on Cuba by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 31.5,
-      "macro_sensitivity": 0.08
     }
   }
 ]

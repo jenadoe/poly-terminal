@@ -705,7 +705,16 @@ function animateCount(el,target,dec=0,ms=800){
 }
 function cleanQuestion(q){
     if(!q) return '—';
-    return q;
+    const sep = q.indexOf('?: ');
+    if(sep === -1) return q;
+    const before = q.slice(0, sep + 1).trim();
+    const after  = q.slice(sep + 3).trim();
+    if(!after) return before;
+    // 앞뒤가 동일한 순수 중복이면 before만 표시
+    const norm = s => s.toLowerCase().replace(/\s+/g,' ').trim();
+    if(norm(after) === norm(before)) return before;
+    // 다른 경우: after가 실제 질문, before는 이벤트 요약 → after 표시
+    return after;
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
 function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }

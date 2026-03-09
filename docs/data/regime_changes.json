@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-09T19:52:10.982310Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-09T19:52:10.982310Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 24.8,
+      "macro_sensitivity": 0.42
+    }
+  },
+  {
+    "timestamp": "2026-03-09T19:52:10.982310Z",
+    "market_id": "84921",
+    "question": "USD.AI FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-09T19:52:10.982310Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 66.9,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-09T19:52:10.982310Z",
+    "market_id": "34050",
+    "question": "Russia x Ukraine ceasefire by end of 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.7,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
     "timestamp": "2026-03-09T19:04:50.378344Z",
     "market_id": "242849",
     "question": "Elon Musk # tweets March 6 - March 13, 2026?",
@@ -491,61 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 85.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 89.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T13:28:17.211803Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-09T12:58:50.593923Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 35.6,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-09T12:58:50.593923Z",
-    "market_id": "50294",
-    "question": "Oscars 2026: Best Supporting Actor Winner",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.7,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-09T12:58:50.593923Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.6,
       "macro_sensitivity": 0.0
     }
   }

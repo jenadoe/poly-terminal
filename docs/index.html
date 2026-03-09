@@ -647,8 +647,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -1261,34 +1261,32 @@ function showLoading(on){
 async function loadFromSupabase(){
     if(!sbClient) return null;
     try{
+        // markets_registry: is_active=true인 마켓만 (좀비 마켓 필터링)
         const {data, error}=await sbClient
-            .from('event_log')
-            .select('event_id,score,state,flags,current_price,volume,market_slug,category,capital_score,purity_score,convergence_score,stability_score,snapshot_at')
-            .order('snapshot_at',{ascending:false})
+            .from('markets_registry')
+            .select('event_id,nexus_score,market_state,flags,market_slug,category,last_seen_at')
+            .eq('is_active', true)
+            .order('last_seen_at',{ascending:false})
             .limit(500);
         if(error||!data||!data.length) return null;
 
-        // 이벤트별 최신 스냅샷만 남기기
-        const seen=new Set();
-        const latest=data.filter(r=>{ if(seen.has(r.event_id)) return false; seen.add(r.event_id); return true; });
-
-        return latest.map(r=>({
+        return data.map(r=>({
             id:           r.event_id,
             slug:         r.market_slug||r.event_id,
             question:     r.market_slug||r.event_id,
             category:     r.category||'',
-            nexus_score:  r.score,
-            market_state: (r.score===null||r.score===undefined) ? 'Initializing' : (r.state||'Fragile'),
+            nexus_score:  r.nexus_score,
+            market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.market_state||'Fragile'),
             flags:        Array.isArray(r.flags)?r.flags:[],
             macro_sensitivity: 0,
-            volume:       r.volume||0,
-            current_price:r.current_price||0,
+            volume:       0,
+            current_price:0,
             change_since_start: 0,
             sparkline:    [],
-            c1: r.capital_score??null,
-            c2: r.stability_score??null,
-            c3: r.purity_score??null,
-            c4: r.convergence_score??null,
+            c1: null,
+            c2: null,
+            c3: null,
+            c4: null,
         }));
     }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
 }

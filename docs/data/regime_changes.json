@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-10T22:33:32.183518Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T22:33:32.183518Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T22:33:32.183518Z",
+    "market_id": "90177",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
     "timestamp": "2026-03-10T21:58:25.124033Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.2,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-10T18:01:03.634453Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 31.9,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-10T18:01:03.634453Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T17:09:47.669305Z",
-    "market_id": "235025",
-    "question": "Newcastle United FC vs. FC Barcelona",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

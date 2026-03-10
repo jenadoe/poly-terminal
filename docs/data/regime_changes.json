@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-10T05:15:54.243675Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T05:15:54.243675Z",
+    "market_id": "29005",
+    "question": "MegaETH airdrop by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 88.5,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-10T05:15:54.243675Z",
+    "market_id": "90177",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T05:15:54.243675Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.0,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
     "timestamp": "2026-03-10T04:36:57.477547Z",
     "market_id": "107009",
     "question": "Ethereum all time high by ___?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.3,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-09T22:27:12.030048Z",
-    "market_id": "174562",
-    "question": "Nuggets vs. Grizzlies",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 40.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T22:27:12.030048Z",
-    "market_id": "143642",
-    "question": "US strike on Mexico by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T21:47:12.547732Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T21:47:12.547732Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 31.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

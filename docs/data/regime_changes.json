@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-10T07:09:10.191185Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-10T07:05:07.434349Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 32.9,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-10T01:51:22.037154Z",
-    "market_id": "34050",
-    "question": "Russia x Ukraine ceasefire by end of 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": 0.1
     }
   }
 ]

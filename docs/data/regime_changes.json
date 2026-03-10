@@ -1,5 +1,93 @@
 [
   {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "236827",
+    "question": "US/Israel strikes Iran on...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 78.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "64731",
+    "question": "Billionaire one-time wealth tax passes in California election 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 83.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "50294",
+    "question": "Oscars 2026: Best Supporting Actor Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 32.9,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-10T01:51:22.037154Z",
+    "market_id": "34050",
+    "question": "Russia x Ukraine ceasefire by end of 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
     "timestamp": "2026-03-09T23:51:41.192087Z",
     "market_id": "139507",
     "question": "Will Reza Pahlavi enter Iran by...?",
@@ -459,94 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.4,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-09T19:04:50.378344Z",
-    "market_id": "60182",
-    "question": "Nobel Peace Prize Winner 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 81.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T18:01:02.235881Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T18:01:02.235881Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 59.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T18:01:02.235881Z",
-    "market_id": "238094",
-    "question": "Which countries will strike Iran by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T18:01:02.235881Z",
-    "market_id": "73096",
-    "question": "Will Iran close the Strait of Hormuz by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T18:01:02.235881Z",
-    "market_id": "31875",
-    "question": "Republican Presidential Nominee 2028",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "243883",
-    "question": "Bitcoin price on March 10?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 33.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T17:10:50.625881Z",
-    "market_id": "160366",
-    "question": "Will the US officially declare war on Iran by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.9,
-      "macro_sensitivity": 0.05
     }
   }
 ]

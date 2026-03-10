@@ -690,7 +690,7 @@
         </div>
         <div class="panel-section">
             <div class="panel-section-label" style="display:flex;justify-content:space-between;align-items:center;">
-                <span>NEXUS SCORE TREND</span>
+                <span>PRICE TREND</span>
                 <span id="p-trend-range" style="font-size:0.58rem;color:#4a6a88;letter-spacing:0.05em;font-weight:400;text-transform:none;">loading...</span>
             </div>
             <canvas class="panel-sparkline" id="p-sparkline" height="60"></canvas>
@@ -1456,9 +1456,9 @@ function openPanel(d, st){
         try{
             const {data,error}=await sbClient
                 .from('event_log')
-                .select('score,snapshot_at')
-                .eq('event_id', d.id)
-                .not('score','is',null)
+                .select('current_price,snapshot_at')
+                .eq('event_id', String(d.id))
+                .not('current_price','is',null)
                 .order('snapshot_at',{ascending:true})
                 .limit(30);
             if(error||!data||data.length<2){
@@ -1466,7 +1466,7 @@ function openPanel(d, st){
                 return;
             }
             document.getElementById('p-trend-range').textContent=`${data.length} snapshots`;
-            const pts=data.map(r=>({p:+r.score/100}));
+            const pts=data.map(r=>({p:+r.current_price}));
             requestAnimationFrame(()=>drawSparkline(spCanvas,pts,'rgba(96,165,250,0.7)'));
         }catch(e){ document.getElementById('p-trend-range').textContent='—'; }
     })();

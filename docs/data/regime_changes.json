@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-10T04:15:42.542483Z",
+    "market_id": "107009",
+    "question": "Ethereum all time high by ___?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 33.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T04:15:42.542483Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-10T04:00:54.401500Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.9,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-09T21:47:12.547732Z",
-    "market_id": "48292",
-    "question": "OpenAI IPO Closing Market Cap",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T21:47:12.547732Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.3,
-      "macro_sensitivity": 0.12
     }
   }
 ]

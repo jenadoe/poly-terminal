@@ -977,10 +977,11 @@ function subscribeCalibration() {
 
 function renderCalibration(rows) {
     const totalN = rows.reduce((s, r) => s + r.n, 0);
-    const pct = Math.min(totalN / CALIB_TARGET * 100, 100);
+    const liveTotal = allData.length || CALIB_TARGET;
+    const pct = Math.min(totalN / liveTotal * 100, 100);
 
     document.getElementById('calib-n').textContent = totalN;
-    document.getElementById('calib-target').textContent = CALIB_TARGET;
+    document.getElementById('calib-target').textContent = liveTotal;
     document.getElementById('calib-progress-pct').textContent =
         pct >= 100 ? '✓ Significance reached' : `${pct.toFixed(0)}% to significance`;
 
@@ -1256,9 +1257,12 @@ function renderStateChart(data){
 }
 
 function renderRadarChart(data){
-    const n=data.length||1;
-    const s=data.reduce((a,d)=>({c1:a.c1+(d.c1||0),c2:a.c2+(d.c2||0),c3:a.c3+(d.c3||0),c4:a.c4+(d.c4||0)}),{c1:0,c2:0,c3:0,c4:0});
-    const vals=[s.c1/n,s.c2/n,s.c3/n,s.c4/n];
+    const analyzed=data.filter(d=>d.market_state!=='Initializing'&&d.nexus_score!=null);
+    const n=analyzed.length||1;
+    const vals=['c1','c2','c3','c4'].map(k=>{
+        const vld=analyzed.filter(d=>d[k]!=null);
+        return vld.length?vld.reduce((s,d)=>s+d[k],0)/vld.length:0;
+    });
     const ctx=document.getElementById('radarChart').getContext('2d');
     if(radarInst) radarInst.destroy();
     radarInst=new Chart(ctx,{

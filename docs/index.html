@@ -350,7 +350,7 @@
         }
 
         /* ── FLAG BADGES on card ── */
-        .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:7px; }
+        .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:0; }
         .flag-badge {
             font-size:0.5rem; padding:2px 6px; border-radius:2px;
             font-weight:600; letter-spacing:0.07em; text-transform:uppercase;
@@ -689,7 +689,10 @@
             <div class="stat-grid" id="p-stats"></div>
         </div>
         <div class="panel-section">
-            <div class="panel-section-label">PRICE TREND</div>
+            <div class="panel-section-label" style="display:flex;justify-content:space-between;align-items:center;">
+                <span>NEXUS SCORE TREND</span>
+                <span id="p-trend-range" style="font-size:0.58rem;color:#4a6a88;letter-spacing:0.05em;font-weight:400;text-transform:none;">loading...</span>
+            </div>
             <canvas class="panel-sparkline" id="p-sparkline" height="60"></canvas>
         </div>
         <div class="panel-section">
@@ -717,8 +720,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -1349,7 +1352,10 @@ function renderStateGroups(data){
             card.innerHTML=`
                 <span class="card-arrow">↗</span>
                 ${d.category?`<div class="card-cat">${d.category}</div>`:''}
-                <div class="card-score">${fmtScore(d.nexus_score)}</div>
+                <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;">
+                    <div class="card-score">${fmtScore(d.nexus_score)}</div>
+                    ${flags.length?`<div class="card-flags" style="margin-top:0;">${renderFlagBadges(flags)}</div>`:''}
+                </div>
                 <div style="font-size:0.52rem; letter-spacing:0.1em; margin-top:-4px; margin-bottom:4px; color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#64748b'}">${st.key==='converged'?'HIGH INTEGRITY':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
                 ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
@@ -1358,7 +1364,6 @@ function renderStateGroups(data){
                     <span class="card-vol">${fmtVol(d.volume||0)}</span>
                     <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>
                 </div>
-                ${flags.length?`<div class="card-flags">${renderFlagBadges(flags)}</div>`:''}
                 <div class="card-bars">
                     ${barRow('LIQ','bar-liq',d.c1)}
                     ${barRow('EFF','bar-eff',d.c2)}
@@ -1443,10 +1448,28 @@ function openPanel(d, st){
         <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null?d.days_to_close+'d':(()=>{try{const oc=JSON.parse(d.outcomes||'[]');return oc.length?oc.length+' opts':'—'}catch(e){return'—'}})()}</div></div>
     `;
 
-    // Sparkline
+    // Nexus Score Trend — event_log 최근 30 스냅샷 lazy query
     const spCanvas=document.getElementById('p-sparkline');
     spCanvas.width=spCanvas.offsetWidth||380;
-    if(d.sparkline) requestAnimationFrame(()=>drawSparkline(spCanvas,d.sparkline,'rgba(96,165,250,0.7)'));
+    spCanvas.getContext('2d').clearRect(0,0,spCanvas.width,spCanvas.height);
+    (async()=>{
+        try{
+            const {data,error}=await sbClient
+                .from('event_log')
+                .select('score,snapshot_at')
+                .eq('event_id', d.id)
+                .not('score','is',null)
+                .order('snapshot_at',{ascending:true})
+                .limit(30);
+            if(error||!data||data.length<2){
+                document.getElementById('p-trend-range').textContent='insufficient history';
+                return;
+            }
+            document.getElementById('p-trend-range').textContent=`${data.length} snapshots`;
+            const pts=data.map(r=>({p:+r.score/100}));
+            requestAnimationFrame(()=>drawSparkline(spCanvas,pts,'rgba(96,165,250,0.7)'));
+        }catch(e){ document.getElementById('p-trend-range').textContent='—'; }
+    })();
 
     // State context
     document.getElementById('p-context').innerHTML=st.context(d);

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-10T08:56:21.072523Z",
+    "market_id": "238486",
+    "question": "What price will Solana hit in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T08:56:21.072523Z",
+    "market_id": "179312",
+    "question": "Pro Baseball World Series Champion 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T08:56:21.072523Z",
+    "market_id": "174562",
+    "question": "Nuggets vs. Grizzlies",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 40.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-10T08:39:21.457789Z",
     "market_id": "243889",
     "question": "Ethereum price on March 10?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 81.7,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-10T02:35:26.249131Z",
-    "market_id": "48292",
-    "question": "OpenAI IPO Closing Market Cap",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 78.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T02:35:26.249131Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.6,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-10T02:35:26.249131Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

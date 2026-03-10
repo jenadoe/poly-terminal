@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 32.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 35.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "84921",
+    "question": "USD.AI FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 76.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 74.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 32.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T16:14:37.126935Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-10T15:11:02.535079Z",
     "market_id": "238486",
     "question": "What price will Solana hit in March?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 33.0,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-10T10:08:03.581894Z",
-    "market_id": "236151",
-    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T10:08:03.581894Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.4,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-10T10:08:03.581894Z",
-    "market_id": "199763",
-    "question": "Next UK Prime Minister in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.1,
-      "macro_sensitivity": 0.16
-    }
-  },
-  {
-    "timestamp": "2026-03-10T09:28:23.199764Z",
-    "market_id": "235025",
-    "question": "Newcastle United FC vs. FC Barcelona",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T09:28:23.199764Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T09:28:23.199764Z",
-    "market_id": "242849",
-    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -776,6 +776,17 @@ function cleanQuestion(q){
     return q;
 }
 function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
+function spreadColor(sp){
+    if(sp==null) return '#3d5068';
+    if(sp>0.05) return '#f87171';
+    if(sp>0.02) return '#fbbf24';
+    return '#34d399';
+}
+function spreadLabel(sp, price){
+    if(sp!=null) return (sp*100).toFixed(2)+'%';
+    if(price!=null && (price>=0.99||price<=0.01)) return 'SETTLED';
+    return '—';
+}
 function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
 function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
 function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
@@ -1444,8 +1455,8 @@ function openPanel(d, st){
     document.getElementById('p-stats').innerHTML=`
         <div class="stat-item"><div class="stat-label">VOLUME</div><div class="stat-value">${fmtVol(d.volume||0)}</div></div>
         <div class="stat-item"><div class="stat-label">CURRENT PRICE</div><div class="stat-value">${((d.current_price||0)*100).toFixed(1)}%</div></div>
-        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${d.spread!=null?(d.spread>0.05?'#f87171':d.spread>0.02?'#fbbf24':'#34d399'):(d.current_price>=0.99||d.current_price<=0.01?'#3d5068':'#3d5068')}">${d.spread!=null?(d.spread*100).toFixed(2)+'%':(d.current_price>=0.99||d.current_price<=0.01?'<span style="color:#3d5068;font-size:10px">SETTLED</span>':'—')}</div></div>
-        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null?d.days_to_close+'d':(()=>{try{const oc=JSON.parse(d.outcomes||'[]');return oc.length?oc.length+' opts':'—'}catch(e){return'—'}})()}</div></div>
+        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${spreadColor(d.spread)}">${spreadLabel(d.spread, d.current_price)}</div></div>
+        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null ? d.days_to_close+'d' : '—'}</div></div>
     `;
 
     // Nexus Score Trend — event_log 최근 30 스냅샷 lazy query
@@ -1545,8 +1556,8 @@ async function loadFromSupabase(){
             nexus_score:  r.nexus_score,
             market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.market_state||'Fragile'),
             flags:        Array.isArray(r.flags)?r.flags:[],
-            spread:       r.spread||null,
-            days_to_close: r.time_to_close_days||null,
+            spread:       r.spread??null,
+            days_to_close: r.time_to_close_days??null,
             close_time:   r.close_time||null,
             volume:       r.volume||0,
             current_price:r.current_price||0,

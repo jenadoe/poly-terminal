@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-10T23:42:15.678984Z",
+    "market_id": "214405",
+    "question": "Predict.fun FDV above ___ one day after launch?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T23:42:15.678984Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.33
+    }
+  },
+  {
+    "timestamp": "2026-03-10T23:42:15.678984Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.9,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
     "timestamp": "2026-03-10T23:01:32.557156Z",
     "market_id": "242849",
     "question": "Elon Musk # tweets March 6 - March 13, 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 37.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T19:02:58.936831Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-10T19:02:58.936831Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 71.6,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-10T19:02:58.936831Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.0,
-      "macro_sensitivity": 0.03
     }
   }
 ]

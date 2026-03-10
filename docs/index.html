@@ -213,6 +213,25 @@
             color: #22c55e; border: 1px solid rgba(34,197,94,0.25);
             border-radius: 3px; padding: 2px 8px; text-transform: uppercase;
         }
+        .calib-early-data {
+            margin: 8px 0 4px;
+            padding: 8px 12px;
+            background: rgba(248,113,113,0.06);
+            border: 1px solid rgba(248,113,113,0.15);
+            border-radius: 4px;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+        }
+        .calib-early-title {
+            color: #f87171;
+            font-size: 0.58rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .calib-early-metrics {
+            color: #64748b;
+        }
         .calib-progress-wrap {
             margin-bottom: 18px;
         }
@@ -607,16 +626,16 @@
         <span id="init-warning" style="color:#f97316; margin-left:8px;"></span>
     </div>
 
-    <!-- LIVE CALIBRATION TEST -->
+    <!-- MODEL VALIDATION — FORWARD TESTING PHASE -->
     <div class="calib-section">
         <div class="calib-header">
-            <div class="calib-title">📊 MODEL VALIDATION — LIVE CALIBRATION TEST</div>
-            <div class="calib-phase">Forward-testing: does Nexus Score predict real stability?</div>
+            <div class="calib-title">📊 MODEL VALIDATION — FORWARD TESTING PHASE</div>
+            <div class="calib-phase">Does Nexus Score predict real market outcomes?</div>
         </div>
 
         <div class="calib-progress-wrap">
             <div class="calib-progress-label">
-                <span>Resolved markets: <span id="calib-n">—</span> / <strong id="calib-target">100</strong></span>
+                <span>Resolved markets: <span id="calib-n">—</span> / <strong id="calib-target">30</strong> required for significance</span>
                 <span id="calib-progress-pct">—% to significance</span>
             </div>
             <div class="calib-progress-bar">
@@ -628,10 +647,15 @@
             <!-- JS로 렌더 -->
         </div>
 
+        <div class="calib-early-data" id="calib-early-data" style="display:none">
+            <div class="calib-early-title">Early Data (n=<span id="calib-early-n">—</span>) — not yet statistically interpretable</div>
+            <div class="calib-early-metrics" id="calib-early-metrics"></div>
+        </div>
+
         <div class="calib-footer">
-            <strong>Methodology:</strong> Price-stability measured as absence of late-stage repricing (&gt;5% logit shift) in final 6h before resolution. &nbsp;|&nbsp;
-            <strong>Note:</strong> Sample size is still small. Confidence intervals will tighten as more markets resolve. &nbsp;|&nbsp;
-            Brier Score and calibration curve will be published at n≥50.
+            <strong>Methodology:</strong> Direction accuracy and Brier Score measured on Converged markets at resolution. &nbsp;|&nbsp;
+            <strong>Note:</strong> Sample size is still too small for statistical inference. &nbsp;|&nbsp;
+            Full metrics (Brier Score, Wilson CI, Calibration Curve) will publish at n≥30 — expected mid-April 2026.
         </div>
     </div>
 
@@ -720,8 +744,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -953,20 +977,22 @@ let totalMarketsCount = CALIB_TARGET; // get_dashboard_kpis에서 갱신됨
 async function loadTrackRecord() {
     if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
     try {
+        // track_record: 실제 종료된 마켓의 direction_correct 기반 집계
         const { data, error } = await sbClient
-            .from('convergence_log')
-            .select('state')
-            
+            .from('track_record')
+            .select('market_state, direction_correct');
+
         if (error || !data?.length) return MOCK_TRACK_RECORD;
 
         const agg = {};
         data.forEach(r => {
-            const s = r.state;
+            const s = r.market_state || 'Converged';
             if (!agg[s]) agg[s] = { n: 0, stable: 0 };
             agg[s].n++;
+            if (r.direction_correct === true) agg[s].stable++;
         });
         return ['Converged','Calibrating','Fragile'].map(s => ({
-            state: s,
+            state:  s,
             n:      agg[s]?.n      ?? 0,
             stable: agg[s]?.stable ?? 0,
         }));
@@ -990,65 +1016,92 @@ function subscribeCalibration() {
         .subscribe();
 }
 
+const SIGNIFICANCE_THRESHOLD = 30; // n≥30 → 통계 유의성
+
 function renderCalibration(rows) {
     const totalN = rows.reduce((s, r) => s + r.n, 0);
-    const liveTotal = totalMarketsCount || allData.length || CALIB_TARGET;
-    const pct = Math.min(totalN / liveTotal * 100, 100);
+    const pct = Math.min(totalN / SIGNIFICANCE_THRESHOLD * 100, 100);
+    const significanceReached = totalN >= SIGNIFICANCE_THRESHOLD;
 
     document.getElementById('calib-n').textContent = totalN;
-    document.getElementById('calib-target').textContent = liveTotal;
+    document.getElementById('calib-target').textContent = SIGNIFICANCE_THRESHOLD;
     document.getElementById('calib-progress-pct').textContent =
-        pct >= 100 ? '✓ Significance reached' : `${pct.toFixed(0)}% to significance`;
+        significanceReached ? '✓ Significance reached' : `${pct.toFixed(0)}% to significance`;
 
     setTimeout(() => {
         document.getElementById('calib-progress-fill').style.width = pct + '%';
     }, 300);
 
-    const stateConfig = {
-        'Converged':   { dot: 'converged',   barCls: 'converged',   label: '🟢 Converged' },
-        'Calibrating': { dot: 'calibrating', barCls: 'calibrating', label: '🔵 Calibrating' },
-        'Fragile':     { dot: 'fragile',      barCls: 'fragile',     label: '⚪ Fragile' },
-    };
-
     const container = document.getElementById('calib-rows');
-    container.innerHTML = rows.map(r => {
-        const cfg = stateConfig[r.state] || { dot: 'fragile', barCls: 'fragile', label: r.state };
-        const rate = r.n > 0 ? r.stable / r.n : 0;
-        const vl = varianceLabel(rate);
-        const [ciLow, ciHigh] = wilsonCI(r.stable, r.n);
-        const barPct = (rate * 100).toFixed(0);
-        const nLabel = r.n > 0 ? `n=${r.n}` : 'n=0';
-        const stableLabel = r.n > 0 ? `${r.stable}/${r.n} price-stable` : 'awaiting data';
 
-        return `
-        <div class="calib-row">
-            <div class="calib-state-label">
-                <div class="calib-dot ${cfg.dot}"></div>
-                <div>
-                    <div>${r.state}</div>
-                    <div style="font-size:0.55rem;color:var(--text-dim);margin-top:2px">${nLabel} · ${stableLabel}</div>
+    if (significanceReached) {
+        // n≥30: 정식 메트릭 표시
+        const stateConfig = {
+            'Converged':   { dot: 'converged',   barCls: 'converged' },
+            'Calibrating': { dot: 'calibrating', barCls: 'calibrating' },
+            'Fragile':     { dot: 'fragile',      barCls: 'fragile' },
+        };
+        container.innerHTML = rows.map(r => {
+            const cfg = stateConfig[r.state] || { dot: 'fragile', barCls: 'fragile' };
+            const rate = r.n > 0 ? r.stable / r.n : 0;
+            const vl = varianceLabel(rate);
+            const [ciLow, ciHigh] = wilsonCI(r.stable, r.n);
+            const barPct = (rate * 100).toFixed(0);
+            const nLabel = r.n > 0 ? `n=${r.n}` : 'n=0';
+            const stableLabel = r.n > 0 ? `${r.stable}/${r.n} direction correct` : 'awaiting data';
+            return `
+            <div class="calib-row">
+                <div class="calib-state-label">
+                    <div class="calib-dot ${cfg.dot}"></div>
+                    <div>
+                        <div>${r.state}</div>
+                        <div style="font-size:0.55rem;color:var(--text-dim);margin-top:2px">${nLabel} · ${stableLabel}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="calib-bar-wrap">
-                <div class="calib-bar-bg">
-                    <div class="calib-bar-fill ${cfg.barCls}" style="width:0%" data-target="${barPct}"></div>
+                <div class="calib-bar-wrap">
+                    <div class="calib-bar-bg">
+                        <div class="calib-bar-fill ${cfg.barCls}" style="width:0%" data-target="${barPct}"></div>
+                    </div>
                 </div>
+                <div class="calib-variance ${vl.cls}">${r.n > 0 ? vl.text : '—'}</div>
+                <div class="calib-ci">
+                    ${r.n >= 3
+                        ? `95% CI [${(ciLow*100).toFixed(0)}%–${(ciHigh*100).toFixed(0)}%]`
+                        : '<span style="color:#3d5068">CI: n too small</span>'}
+                </div>
+            </div>`;
+        }).join('');
+        setTimeout(() => {
+            container.querySelectorAll('.calib-bar-fill').forEach(el => {
+                el.style.width = el.dataset.target + '%';
+            });
+        }, 400);
+        document.getElementById('calib-early-data').style.display = 'none';
+    } else {
+        // n<30: 수집 중 상태 표시
+        container.innerHTML = `
+        <div style="padding:10px 0; color:var(--text-dim); font-size:0.65rem; line-height:1.8">
+            <div style="margin-bottom:6px">
+                <span style="color:#22c55e">●</span> Converged &nbsp;
+                <span style="color:#60a5fa">●</span> Calibrating &nbsp;
+                <span style="color:#64748b">●</span> Fragile
             </div>
-            <div class="calib-variance ${vl.cls}">${r.n > 0 ? vl.text : '—'}</div>
-            <div class="calib-ci">
-                ${r.n >= 3
-                    ? `95% CI [${(ciLow*100).toFixed(0)}%–${(ciHigh*100).toFixed(0)}%]`
-                    : '<span style="color:#3d5068">CI: n too small</span>'}
-            </div>
+            <div>Full Direction Accuracy and Brier Score will unlock at n≥30.</div>
+            <div style="color:#3d5068; margin-top:4px">Expected: mid-April 2026 &nbsp;·&nbsp; 25+ resolutions scheduled for March 31</div>
         </div>`;
-    }).join('');
 
-    // 바 애니메이션 (DOM 삽입 후)
-    setTimeout(() => {
-        container.querySelectorAll('.calib-bar-fill').forEach(el => {
-            el.style.width = el.dataset.target + '%';
-        });
-    }, 400);
+        // Early data (n>0이면 작게 표시)
+        if (totalN > 0) {
+            const converged = rows.find(r => r.state === 'Converged') || { n: 0, stable: 0 };
+            document.getElementById('calib-early-data').style.display = 'block';
+            document.getElementById('calib-early-n').textContent = totalN;
+            document.getElementById('calib-early-metrics').innerHTML = `
+                <span>Converged direction accuracy: ${converged.n > 0 ? converged.stable + '/' + converged.n : '—'}</span>
+                <span style="color:#3d5068; margin-left:12px">· statistically uninterpretable at this sample size</span>`;
+        } else {
+            document.getElementById('calib-early-data').style.display = 'none';
+        }
+    }
 }
 
 // ── STATE CONFIG ───────────────────────────────────────────

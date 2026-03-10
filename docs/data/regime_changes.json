@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-10T04:00:54.401500Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 68.3,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-10T03:53:28.087683Z",
     "market_id": "236151",
     "question": "Elon Musk # tweets March 3 - March 10, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.3,
       "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-09T21:04:51.652217Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.6,
-      "macro_sensitivity": 0.04
     }
   }
 ]

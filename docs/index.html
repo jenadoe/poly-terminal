@@ -717,8 +717,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -939,17 +939,16 @@ async function loadTrackRecord() {
     if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
     try {
         const { data, error } = await sbClient
-            .from('track_record')
-            .select('market_state, stable_resolution')
-            .not('resolved_at', 'is', null);
+            .from('convergence_log')
+            .select('state')
+            
         if (error || !data?.length) return MOCK_TRACK_RECORD;
 
         const agg = {};
         data.forEach(r => {
-            const s = r.market_state;  // ← hc_track_record 실제 컬럼명
+            const s = r.state;
             if (!agg[s]) agg[s] = { n: 0, stable: 0 };
             agg[s].n++;
-            if (r.stable_resolution === true || r.stable_resolution === 'true' || r.stable_resolution === 1) agg[s].stable++;
         });
         return ['Converged','Calibrating','Fragile'].map(s => ({
             state: s,
@@ -969,7 +968,7 @@ function subscribeCalibration() {
         .on('postgres_changes', {
             event: '*',
             schema: 'public',
-            table: 'track_record'
+            table: 'convergence_log'
         }, () => {
             loadTrackRecord().then(renderCalibration);
         })
@@ -1504,7 +1503,7 @@ async function loadFromSupabase(){
         // markets_registry: is_active=true인 마켓만 (좀비 마켓 필터링)
         const {data, error}=await sbClient
             .from('markets_registry')
-            .select('event_id,nexus_score,market_state,flags,market_slug,title,event_title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at')
+            .select('event_id,nexus_score,market_state,flags,market_slug,title,event_title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at,spread,time_to_close_days,close_time')
             .eq('is_active', true)
             .order('last_seen_at',{ascending:false})
             .limit(500);

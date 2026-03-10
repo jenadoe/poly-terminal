@@ -306,7 +306,7 @@
         .card-event-sub {
             font-size:0.58rem; color:#4a6a88; letter-spacing:0.04em;
             text-transform:uppercase; margin-bottom:2px;
-            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            overflow:hidden; text-overflow:ellipsis; white-space:normal;
         }
         .card-title {
             font-size:0.76rem; color:#b8ccdf; line-height:1.5;
@@ -717,8 +717,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -939,7 +939,7 @@ async function loadTrackRecord() {
     if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
     try {
         const { data, error } = await sbClient
-            .from('hc_track_record')
+            .from('track_record')
             .select('market_state, stable_resolution')
             .not('resolved_at', 'is', null);
         if (error || !data?.length) return MOCK_TRACK_RECORD;
@@ -969,7 +969,7 @@ function subscribeCalibration() {
         .on('postgres_changes', {
             event: '*',
             schema: 'public',
-            table: 'hc_track_record'
+            table: 'track_record'
         }, () => {
             loadTrackRecord().then(renderCalibration);
         })
@@ -1435,9 +1435,9 @@ function openPanel(d, st){
     // Stats
     document.getElementById('p-stats').innerHTML=`
         <div class="stat-item"><div class="stat-label">VOLUME</div><div class="stat-value">${fmtVol(d.volume||0)}</div></div>
-        <div class="stat-item"><div class="stat-label">MACRO BETA</div><div class="stat-value">${(d.macro_sensitivity||0).toFixed(2)}</div></div>
         <div class="stat-item"><div class="stat-label">CURRENT PRICE</div><div class="stat-value">${((d.current_price||0)*100).toFixed(1)}%</div></div>
-        <div class="stat-item"><div class="stat-label">CHANGE</div><div class="stat-value">${d.change_since_start>=0?'+':''}${(d.change_since_start||0).toFixed(1)}%</div></div>
+        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${d.spread==null?'#3d5068':d.spread>0.05?'#f87171':d.spread>0.02?'#fbbf24':'#34d399'}">${d.spread!=null?(d.spread*100).toFixed(2)+'%':'—'}</div></div>
+        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null?d.days_to_close+'d':'—'}</div></div>
     `;
 
     // Sparkline
@@ -1519,10 +1519,11 @@ async function loadFromSupabase(){
             nexus_score:  r.nexus_score,
             market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.market_state||'Fragile'),
             flags:        Array.isArray(r.flags)?r.flags:[],
-            macro_sensitivity: 0,
+            spread:       r.spread||null,
+            days_to_close: r.time_to_close_days||null,
+            close_time:   r.close_time||null,
             volume:       r.volume||0,
             current_price:r.current_price||0,
-            change_since_start: 0,
             sparkline:    [],
             c1: r.capital_score??null,
             c2: r.stability_score??null,

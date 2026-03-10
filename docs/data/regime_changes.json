@@ -1,5 +1,137 @@
 [
   {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "238486",
+    "question": "What price will Solana hit in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 35.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "236151",
+    "question": "Elon Musk # tweets March 3 - March 10, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 34.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "79973",
+    "question": "2026 Seoul Mayoral Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 59.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "64731",
+    "question": "Billionaire one-time wealth tax passes in California election 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.0,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 43.0,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 54.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "90177",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 40.5,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 36.2,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-10T15:11:02.535079Z",
+    "market_id": "31875",
+    "question": "Republican Presidential Nominee 2028",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-10T13:50:50.027413Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -415,138 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T09:28:23.199764Z",
-    "market_id": "90177",
-    "question": "Will the US confirm that aliens exist before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 86.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T09:28:23.199764Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 77.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:56:21.072523Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:56:21.072523Z",
-    "market_id": "179312",
-    "question": "Pro Baseball World Series Champion 2026",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:56:21.072523Z",
-    "market_id": "174562",
-    "question": "Nuggets vs. Grizzlies",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 40.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:39:21.457789Z",
-    "market_id": "243889",
-    "question": "Ethereum price on March 10?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:39:21.457789Z",
-    "market_id": "242849",
-    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:39:21.457789Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 86.3,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-10T08:39:21.457789Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T07:55:25.062802Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 63.9,
-      "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-10T07:55:25.062802Z",
-    "market_id": "78016",
-    "question": "Based FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 38.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T07:55:25.062802Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": 0.04
     }
   }
 ]

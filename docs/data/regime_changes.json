@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-10T03:42:54.476016Z",
+    "market_id": "248032",
+    "question": "Will the Iranian regime fall by April 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
+    "timestamp": "2026-03-10T03:42:54.476016Z",
+    "market_id": "32755",
+    "question": "NBA Eastern Conference Champion ",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.8,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-10T03:42:54.476016Z",
+    "market_id": "104392",
+    "question": "What will SpaceX's public ticker be?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-10T03:42:54.476016Z",
+    "market_id": "143642",
+    "question": "US strike on Mexico by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-10T03:30:43.538647Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 45.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T20:33:06.776991Z",
-    "market_id": "64731",
-    "question": "Billionaire one-time wealth tax passes in California election 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 44.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T20:33:06.776991Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-09T19:52:10.982310Z",
-    "market_id": "238094",
-    "question": "Which countries will strike Iran by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-09T19:52:10.982310Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 24.8,
-      "macro_sensitivity": 0.42
     }
   }
 ]

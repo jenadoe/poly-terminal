@@ -948,6 +948,7 @@ const MOCK_TRACK_RECORD = [
     { state: 'Fragile',     n: 3, stable: 1 },   // 1/3
 ];
 const CALIB_TARGET = 100;
+let totalMarketsCount = CALIB_TARGET; // get_dashboard_kpis에서 갱신됨
 
 async function loadTrackRecord() {
     if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
@@ -991,7 +992,7 @@ function subscribeCalibration() {
 
 function renderCalibration(rows) {
     const totalN = rows.reduce((s, r) => s + r.n, 0);
-    const liveTotal = allData.length || CALIB_TARGET;
+    const liveTotal = totalMarketsCount || allData.length || CALIB_TARGET;
     const pct = Math.min(totalN / liveTotal * 100, 100);
 
     document.getElementById('calib-n').textContent = totalN;
@@ -1227,6 +1228,7 @@ function renderKPIs(data){
 
 // ── CHARTS ────────────────────────────────────────────────
 function renderKPIsFromRPC(kpis, visibleCount){
+    totalMarketsCount = +kpis.total_markets || CALIB_TARGET;
     // KPI는 전체 집계(RPC), 카드 수는 top5 필터링 후 실제 표시 수
     animateCount(document.getElementById('total-count'),      +kpis.total_markets||0,      0, 700);
     animateCount(document.getElementById('integrity-index'),  +kpis.avg_nexus_score||0,    1);

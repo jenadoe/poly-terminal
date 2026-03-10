@@ -720,8 +720,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -1226,6 +1226,28 @@ function renderKPIs(data){
 }
 
 // ── CHARTS ────────────────────────────────────────────────
+function renderKPIsFromRPC(kpis, visibleCount){
+    // KPI는 전체 집계(RPC), 카드 수는 top5 필터링 후 실제 표시 수
+    animateCount(document.getElementById('total-count'),      +kpis.total_markets||0,      0, 700);
+    animateCount(document.getElementById('integrity-index'),  +kpis.avg_nexus_score||0,    1);
+    document.getElementById('integrity-coverage').textContent =
+        (+kpis.total_markets - (+kpis.initializing_count||0)) + ' / ' + (+kpis.total_markets||0) + ' markets';
+    animateCount(document.getElementById('converged-count'),   +kpis.converged_count||0,   0, 700);
+    animateCount(document.getElementById('calibrating-count'), +kpis.calibrating_count||0, 0, 700);
+    animateCount(document.getElementById('fragile-count'),     +kpis.fragile_count||0,     0, 700);
+    animateCount(document.getElementById('contested-count'),   +kpis.contested_count||0,   0, 700);
+    animateCount(document.getElementById('correlated-count'),  +kpis.correlated_count||0,  0, 700);
+    animateCount(document.getElementById('initializing-count'),+kpis.initializing_count||0,0, 700);
+    document.getElementById('last-update').textContent=
+        new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
+    const initWarn = document.getElementById('init-warning');
+    if(initWarn){
+        const total = +kpis.total_markets||1;
+        const ratio = (+kpis.initializing_count||0)/total;
+        initWarn.textContent = ratio>=0.3 ? '⚠ '+Math.round(ratio*100)+'% pending' : '';
+    }
+}
+
 function renderStateChart(data){
     const counts={};
     data.forEach(d=>{
@@ -1538,13 +1560,8 @@ function showLoading(on){
 async function loadFromSupabase(){
     if(!sbClient) return null;
     try{
-        // markets_registry: is_active=true인 마켓만 (좀비 마켓 필터링)
-        const {data, error}=await sbClient
-            .from('markets_registry')
-            .select('event_id,nexus_score,market_state,flags,market_slug,title,event_title,category,current_price,volume,capital_score,purity_score,convergence_score,stability_score,outcomes,last_seen_at,spread,time_to_close_days,close_time')
-            .eq('is_active', true)
-            .order('last_seen_at',{ascending:false})
-            .limit(500);
+        // get_top_markets(): state별 top 5 (SECURITY DEFINER)
+        const {data, error}=await sbClient.rpc('get_top_markets');
         if(error||!data||!data.length) return null;
 
         return data.map(r=>({
@@ -1571,11 +1588,20 @@ async function loadFromSupabase(){
     }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
 }
 
+async function loadKPIsFromSupabase(){
+    if(!sbClient) return null;
+    try{
+        const {data, error}=await sbClient.rpc('get_dashboard_kpis');
+        if(error||!data) return null;
+        return data;
+    }catch(e){ console.warn('KPI fetch failed:',e); return null; }
+}
+
 async function init(){
     showLoading(true);
     let data=null;
 
-    // 1순위: Supabase
+    // 1순위: Supabase RPC
     if(USE_SUPABASE) data=await loadFromSupabase();
 
     // 2순위: JSON 파일
@@ -1593,12 +1619,23 @@ async function init(){
     if(!data) data=MOCK;
 
     showLoading(false);
-    allData=data;
-    renderKPIs(data);
+    const now = new Date();
+    allData = data.filter(d => {
+        if(!d.close_time) return true;
+        return new Date(d.close_time) > now;
+    });
 
-    // Track Record (비동기 별도 로드)
+    // KPI: RPC로 전체 집계 (정확도 보장)
+    if(USE_SUPABASE){
+        const kpis = await loadKPIsFromSupabase();
+        if(kpis) renderKPIsFromRPC(kpis, allData.length);
+        else renderKPIs(allData);
+    } else {
+        renderKPIs(allData);
+    }
+
     loadTrackRecord().then(renderCalibration);
-    subscribeCalibration();  // realtime — hc_track_record 변경 시 자동 갱신
+    subscribeCalibration();
 
     renderStateChart(data);
     renderRadarChart(data);

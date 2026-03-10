@@ -717,8 +717,8 @@
 const DATA_URL = './data/latest_intelligence.json';
 
 // ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
+const SUPABASE_URL = '';   // e.g. 'https://xxxx.supabase.co'
+const SUPABASE_ANON_KEY = ''; // e.g. 'eyJ...'
 const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
 
 let sbClient = null;
@@ -1439,8 +1439,8 @@ function openPanel(d, st){
     document.getElementById('p-stats').innerHTML=`
         <div class="stat-item"><div class="stat-label">VOLUME</div><div class="stat-value">${fmtVol(d.volume||0)}</div></div>
         <div class="stat-item"><div class="stat-label">CURRENT PRICE</div><div class="stat-value">${((d.current_price||0)*100).toFixed(1)}%</div></div>
-        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${d.spread==null?'#3d5068':d.spread>0.05?'#f87171':d.spread>0.02?'#fbbf24':'#34d399'}">${d.spread!=null?(d.spread*100).toFixed(2)+'%':'—'}</div></div>
-        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null?d.days_to_close+'d':'—'}</div></div>
+        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${d.spread!=null?(d.spread>0.05?'#f87171':d.spread>0.02?'#fbbf24':'#34d399'):(d.current_price>=0.99||d.current_price<=0.01?'#3d5068':'#3d5068')}">${d.spread!=null?(d.spread*100).toFixed(2)+'%':(d.current_price>=0.99||d.current_price<=0.01?'<span style="color:#3d5068;font-size:10px">SETTLED</span>':'—')}</div></div>
+        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null?d.days_to_close+'d':(()=>{try{const oc=JSON.parse(d.outcomes||'[]');return oc.length?oc.length+' opts':'—'}catch(e){return'—'}})()}</div></div>
     `;
 
     // Sparkline

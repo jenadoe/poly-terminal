@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-11T08:06:35.775197Z",
+    "market_id": "252316",
+    "question": "Elon Musk # tweets March 9 - March 11, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T08:06:35.775197Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 52.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T08:06:35.775197Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 30.4,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-11T08:06:35.775197Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T08:06:35.775197Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
     "timestamp": "2026-03-11T07:32:30.097050Z",
     "market_id": "203716",
     "question": "Pro Football: 2027 NFC Champion ",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T21:58:25.124033Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.4,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-10T21:58:25.124033Z",
-    "market_id": "32225",
-    "question": "Which party will win the House in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 69.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T21:42:09.439516Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T21:42:09.439516Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 35.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T21:42:09.439516Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 79.3,
-      "macro_sensitivity": 0.04
     }
   }
 ]

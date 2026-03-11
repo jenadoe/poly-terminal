@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-11T12:56:46.012788Z",
+    "market_id": "203716",
+    "question": "Pro Football: 2027 NFC Champion ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.4,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-11T12:56:46.012788Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T12:29:43.128119Z",
     "market_id": "237089",
     "question": "Iran strikes Israel on...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 41.8,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "33506",
-    "question": "UEFA Champions League Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:00:52.219122Z",
-    "market_id": "160707",
-    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

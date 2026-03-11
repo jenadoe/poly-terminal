@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-11T13:07:40.247951Z",
+    "market_id": "98369",
+    "question": "Eurovision Winner 2026",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 71.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T12:56:46.012788Z",
     "market_id": "203716",
     "question": "Pro Football: 2027 NFC Champion ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 69.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.8,
-      "macro_sensitivity": 0.04
     }
   }
 ]

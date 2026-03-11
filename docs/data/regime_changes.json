@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-11T22:50:21.831773Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T22:50:21.831773Z",
+    "market_id": "50386",
+    "question": "Oscars 2026: Best Director Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 65.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T22:50:21.831773Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 80.0,
+      "macro_sensitivity": 0.11
+    }
+  },
+  {
     "timestamp": "2026-03-11T22:25:51.589609Z",
     "market_id": "69987",
     "question": "2026 NCAA Tournament Winner",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T18:03:55.894202Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 72.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "237598",
-    "question": "Iran leader end of 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 53.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "248032",
-    "question": "Will the Iranian regime fall by April 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.03
     }
   }
 ]

@@ -1,5 +1,148 @@
 [
   {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "238477",
+    "question": "What price will Ethereum hit in March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 89.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "100371",
+    "question": "F1 Drivers' Champion",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 64.0,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "50294",
+    "question": "Oscars 2026: Best Supporting Actor Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 61.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "50282",
+    "question": "Oscars 2026: Best Actor Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.8,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-11T09:56:06.244086Z",
+    "market_id": "33506",
+    "question": "UEFA Champions League Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T09:00:52.219122Z",
     "market_id": "160707",
     "question": "Russia x Ukraine ceasefire by June 30, 2026?",
@@ -404,149 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 31.6,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-11T02:24:53.897989Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T02:24:53.897989Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.5,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-11T02:24:53.897989Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T02:24:53.897989Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 42.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T02:24:53.897989Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:42:15.678984Z",
-    "market_id": "214405",
-    "question": "Predict.fun FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:42:15.678984Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.33
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:42:15.678984Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.9,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:01:32.557156Z",
-    "market_id": "242849",
-    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:01:32.557156Z",
-    "market_id": "73096",
-    "question": "Will Iran close the Strait of Hormuz by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 65.9,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:01:32.557156Z",
-    "market_id": "179312",
-    "question": "Pro Baseball World Series Champion 2026",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:01:32.557156Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 71.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-10T23:01:32.557156Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

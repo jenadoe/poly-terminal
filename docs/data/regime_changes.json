@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-11T15:04:45.662909Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T15:04:45.662909Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 47.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T15:04:45.662909Z",
+    "market_id": "179312",
+    "question": "Pro Baseball World Series Champion 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T15:04:45.662909Z",
+    "market_id": "64731",
+    "question": "Billionaire one-time wealth tax passes in California election 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-11T15:04:45.662909Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 42.2,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-11T14:06:24.400859Z",
     "market_id": "119580",
     "question": "2nd largest company end of March?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 89.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "100371",
-    "question": "F1 Drivers' Champion",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T09:56:06.244086Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.0,
-      "macro_sensitivity": 0.06
     }
   }
 ]

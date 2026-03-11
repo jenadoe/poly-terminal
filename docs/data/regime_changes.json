@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-11T12:07:09.639220Z",
+    "market_id": "160707",
+    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 79.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T12:07:09.639220Z",
+    "market_id": "202857",
+    "question": "NFL Champion 2027",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 84.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T11:57:46.604747Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -524,28 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 44.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T08:06:35.775197Z",
-    "market_id": "252316",
-    "question": "Elon Musk # tweets March 9 - March 11, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T08:06:35.775197Z",
-    "market_id": "237598",
-    "question": "Iran leader end of 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 52.5,
       "macro_sensitivity": 0.0
     }
   }

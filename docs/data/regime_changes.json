@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-11T23:24:13.768414Z",
+    "market_id": "106811",
+    "question": "Bitcoin all time high by ___?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 81.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T22:50:21.831773Z",
     "market_id": "237598",
     "question": "Iran leader end of 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Fragile",
     "metrics_snapshot": {
       "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T18:03:55.894202Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
       "macro_sensitivity": 0.0
     }
   }

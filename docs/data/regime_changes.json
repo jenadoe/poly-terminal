@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-11T22:25:51.589609Z",
+    "market_id": "69987",
+    "question": "2026 NCAA Tournament Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 69.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-11T22:25:51.589609Z",
+    "market_id": "73096",
+    "question": "Will Iran close the Strait of Hormuz by...?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 67.7,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-11T22:25:51.589609Z",
+    "market_id": "98374",
+    "question": "SpaceX IPO Closing Market Cap",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 93.1,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-11T22:25:51.589609Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T21:48:23.634166Z",
     "market_id": "248032",
     "question": "Will the Iranian regime fall by April 30?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.9,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "242849",
-    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 39.3,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "69987",
-    "question": "2026 NCAA Tournament Winner",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 34.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-11T17:11:05.403118Z",
-    "market_id": "160707",
-    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 41.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

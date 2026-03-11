@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-11T23:49:41.408486Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 79.4,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-11T23:49:41.408486Z",
+    "market_id": "79973",
+    "question": "2026 Seoul Mayoral Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 59.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T23:24:13.768414Z",
     "market_id": "106811",
     "question": "Bitcoin all time high by ___?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.5,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "45915",
-    "question": "Brazil Presidential Election",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.5,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-11T18:03:55.894202Z",
-    "market_id": "50294",
-    "question": "Oscars 2026: Best Supporting Actor Winner",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

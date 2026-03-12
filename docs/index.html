@@ -85,21 +85,21 @@
             background:var(--bg-card); border:1px solid var(--border);
             border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
         }
-        .kpi-card { min-height:76px; }
-        .kpi-card.primary { border-left-color:var(--blue); }
-        .kpi-card.k-converged { border-left-color:var(--blue); }
-        .kpi-card.k-contested { border-left-color:var(--red); }
-        .kpi-card.k-correlated   { border-left-color:var(--orange); }
-        .kpi-card.k-calibrating  { border-left-color:rgba(52,211,153,0.7); }
-        .kpi-card.k-fragile-kpi  { border-left-color:rgba(100,116,139,0.6); }
+        .kpi-card { min-height:90px; }
+        .kpi-card.primary { border-left-color:var(--border-hi); }
+        .kpi-card.k-converged   { border-left-color:var(--green); }
+        .kpi-card.k-calibrating { border-left-color:var(--blue); }
+        .kpi-card.k-fragile-kpi { border-left-color:var(--amber); }
+        .kpi-card.k-contested   { border-left-color:var(--red); }
+        .kpi-card.k-correlated  { border-left-color:var(--orange); }
         .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
         .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); min-height:2rem; }
-        .kpi-card.primary .kpi-value { color:var(--blue); }
-        .kpi-card.k-converged .kpi-value { color:var(--blue); }
-        .kpi-card.k-contested .kpi-value { color:var(--red); }
+        .kpi-card.primary .kpi-value       { color:var(--text-hi); }
+        .kpi-card.k-converged .kpi-value   { color:var(--green); }
+        .kpi-card.k-calibrating .kpi-value { color:var(--blue); }
+        .kpi-card.k-fragile-kpi .kpi-value { color:var(--amber); }
+        .kpi-card.k-contested .kpi-value   { color:var(--red); }
         .kpi-card.k-correlated .kpi-value  { color:var(--orange); }
-        .kpi-card.k-calibrating .kpi-value  { color:rgba(52,211,153,1); }
-        .kpi-card.k-fragile-kpi .kpi-value  { color:rgba(148,163,184,0.9); }
         .kpi-flags-note { font-size:0.58rem; color:var(--text-dim); margin-top:4px; padding-left:2px; letter-spacing:0.05em; }
         .kpi-init-bar {
             margin:10px 0 20px;
@@ -133,10 +133,10 @@
             border:1px solid rgba(59,130,246,0.18);
             padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
         }
-        .section-head.sh-calibrating::after { background:rgba(52,211,153,0.3); }
-        .section-head.sh-calibrating .section-tag { background:rgba(52,211,153,0.08); color:#34d399; border-color:rgba(52,211,153,0.25); }
-        .section-head.sh-fragile::after  { background:rgba(71,85,105,0.4); }
-        .section-head.sh-fragile .section-tag { background:rgba(71,85,105,0.15); color:#6b7f96; border-color:rgba(71,85,105,0.3); }
+        .section-head.sh-calibrating::after { background:rgba(96,165,250,0.3); }
+        .section-head.sh-calibrating .section-tag { background:rgba(96,165,250,0.08); color:#60a5fa; border-color:rgba(96,165,250,0.25); }
+        .section-head.sh-fragile::after  { background:rgba(251,191,36,0.25); }
+        .section-head.sh-fragile .section-tag { background:rgba(251,191,36,0.08); color:#fbbf24; border-color:rgba(251,191,36,0.25); }
         .section-desc {
             font-size:0.7rem; color:var(--text-mid); margin-bottom:14px;
             letter-spacing:0.04em; padding-left:2px;
@@ -174,8 +174,8 @@
         .event-card.s-converged .card-score {
             color: #6ee7b7;
         }
-        .event-card.s-calibrating { border-left:2px solid rgba(52,211,153,0.6); }
-        .event-card.s-fragile     { border-left:2px solid rgba(71,85,105,0.45); }
+        .event-card.s-calibrating { border-left:2px solid rgba(96,165,250,0.6); }
+        .event-card.s-fragile     { border-left:2px solid rgba(251,191,36,0.5); }
         .event-card.s-initializing {
             border-left: 2px solid rgba(71,85,105,0.3);
             opacity: 0.65;
@@ -1308,14 +1308,14 @@ function renderStateChart(data){
         counts[label]=(counts[label]||0)+1;
     });
     const colorMap={
-        'CONVERGED':          'rgba(96,165,250,0.70)',
-        'CALIBRATING':        'rgba(52,211,153,0.60)',
-        'FRAGILE':            'rgba(71,85,105,0.55)',
+        'CONVERGED':          'rgba(52,211,153,0.70)',
+        'CALIBRATING':        'rgba(96,165,250,0.60)',
+        'FRAGILE':            'rgba(251,191,36,0.55)',
     };
     const borderMap={
-        'CONVERGED':          'rgba(147,197,253,0.5)',
-        'CALIBRATING':        'rgba(110,231,183,0.5)',
-        'FRAGILE':            'rgba(100,116,139,0.4)',
+        'CONVERGED':          'rgba(52,211,153,0.5)',
+        'CALIBRATING':        'rgba(96,165,250,0.5)',
+        'FRAGILE':            'rgba(251,191,36,0.4)',
     };
     const labels=Object.keys(counts);
     const ctx=document.getElementById('stateChart').getContext('2d');
@@ -1445,7 +1445,7 @@ function renderStateGroups(data){
                     <div class="card-score">${fmtScore(d.nexus_score)}</div>
                     ${flags.length?`<div class="card-flags" style="margin-top:0;">${renderFlagBadges(flags)}</div>`:''}
                 </div>
-                <div style="font-size:0.52rem; letter-spacing:0.1em; margin-top:-4px; margin-bottom:4px; color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#64748b'}">${st.key==='converged'?'HIGH INTEGRITY':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
+                <div style="font-size:0.52rem; letter-spacing:0.1em; margin-top:-4px; margin-bottom:4px; color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#fbbf24'}">${st.key==='converged'?'HIGH INTEGRITY':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
                 ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 ${d.current_price!=null ? `<div class="card-price">${((d.current_price)*100)<0.5?'<1%':((d.current_price)*100)<10?((d.current_price)*100).toFixed(1)+'%':Math.round((d.current_price)*100)+'%'}</div>` : ''}

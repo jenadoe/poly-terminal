@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-12T02:42:51.694318Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T02:42:51.694318Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 58.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T02:42:51.694318Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 71.1,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-12T02:42:51.694318Z",
+    "market_id": "100394",
+    "question": "F1 Constructors' Champion",
+    "from_regime": "Fragile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 82.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T01:57:09.992658Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.0,
       "macro_sensitivity": 0.11
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "90177",
-    "question": "Will the US confirm that aliens exist before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "50294",
-    "question": "Oscars 2026: Best Supporting Actor Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 84.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:00:49.492831Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 62.5,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:00:49.492831Z",
-    "market_id": "248032",
-    "question": "Will the Iranian regime fall by April 30?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 66.5,
-      "macro_sensitivity": 0.03
     }
   }
 ]

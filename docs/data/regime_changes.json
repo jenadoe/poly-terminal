@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T21:31:17.266562Z",
+    "market_id": "251243",
+    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T21:01:31.420367Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 58.3,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "251243",
-    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

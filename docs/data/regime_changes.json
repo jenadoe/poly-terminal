@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T08:38:20.295448Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T08:31:10.346489Z",
     "market_id": "63292",
     "question": "NBA Defensive Player of the Year Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 71.1,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-12T02:42:51.694318Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 82.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

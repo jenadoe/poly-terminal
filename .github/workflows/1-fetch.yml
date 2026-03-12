@@ -1,10 +1,9 @@
 name: 1. Calculate & Analyze
 
 on:
-  schedule:
-    # [변경] 15분마다 실행 (데이터 부하 관리 및 안정성 확보)
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+  repository_dispatch:
+    types: [poly-nexus-run]  # Cloudflare Workers가 보내는 신호
+  workflow_dispatch:  # 수동 실행도 유지
 
 jobs:
   calculate:
@@ -32,9 +31,6 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
         run: |
           cd private-brain
           python main.py

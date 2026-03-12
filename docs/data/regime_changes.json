@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T08:31:10.346489Z",
+    "market_id": "63292",
+    "question": "NBA Defensive Player of the Year Winner",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T07:55:34.780677Z",
     "market_id": "237598",
     "question": "Iran leader end of 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 82.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T01:57:09.992658Z",
-    "market_id": "57705",
-    "question": "Which company has best AI model end of June?",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 59.4,
       "macro_sensitivity": 0.0
     }
   }

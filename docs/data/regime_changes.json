@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T23:01:13.718801Z",
+    "market_id": "203722",
+    "question": "Pro Football: 2027 AFC Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 79.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T21:31:17.266562Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "255195",
-    "question": "Iran leadership change by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 58.3,
-      "macro_sensitivity": 0.19
     }
   }
 ]

@@ -1344,6 +1344,39 @@ function renderStateChart(data){
     });
 }
 
+
+function renderStateChartFromKPIs(kpis){
+    const counts={
+        'CONVERGED':   +kpis.converged_count   ||0,
+        'CALIBRATING': +kpis.calibrating_count ||0,
+        'FRAGILE':     +kpis.fragile_count      ||0,
+    };
+    const colorMap ={'CONVERGED':'rgba(52,211,153,0.70)','CALIBRATING':'rgba(96,165,250,0.60)','FRAGILE':'rgba(251,191,36,0.55)'};
+    const borderMap={'CONVERGED':'rgba(52,211,153,0.5)', 'CALIBRATING':'rgba(96,165,250,0.5)', 'FRAGILE':'rgba(251,191,36,0.4)'};
+    const labels=Object.keys(counts);
+    const ctx=document.getElementById('stateChart').getContext('2d');
+    if(stateInst) stateInst.destroy();
+    stateInst=new Chart(ctx,{
+        type:'doughnut',
+        data:{labels,datasets:[{
+            data:Object.values(counts),
+            backgroundColor:labels.map(l=>colorMap[l]),
+            borderColor:labels.map(l=>borderMap[l]),
+            borderWidth:1,hoverOffset:6,
+        }]},
+        options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{
+            legend:{position:'right',labels:{
+                color:'#8fa3bc',font:{family:"'JetBrains Mono',monospace",size:10},
+                boxWidth:10,boxHeight:10,padding:12,usePointStyle:true,pointStyle:'rectRounded',
+            }},
+            tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
+                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
+                callbacks:{label:c=>`  ${c.label}: ${c.raw}`}
+            }
+        }}
+    });
+}
+
 function renderRadarChart(data){
     const analyzed=data.filter(d=>d.market_state!=='Initializing'&&d.nexus_score!=null);
     const n=analyzed.length||1;
@@ -1691,8 +1724,9 @@ async function init(){
     });
 
     // KPI: RPC로 전체 집계 (정확도 보장)
+    let kpis = null;
     if(USE_SUPABASE){
-        const kpis = await loadKPIsFromSupabase();
+        kpis = await loadKPIsFromSupabase();
         if(kpis) renderKPIsFromRPC(kpis, allData.length);
         else renderKPIs(allData);
     } else {
@@ -1702,7 +1736,8 @@ async function init(){
     loadTrackRecord().then(renderCalibration);
     subscribeCalibration();
 
-    renderStateChart(data);
+    if(kpis) renderStateChartFromKPIs(kpis);
+    else renderStateChart(data);
     renderRadarChart(data);
     renderStateGroups(data);
 }

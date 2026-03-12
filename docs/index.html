@@ -9,9 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         :root {
-            --bg:        #0d1420;
-            --bg-2:      #101929;
-            --bg-card:   #1a2540;
+            --bg:        #0f1720;
+            --bg-2:      #111b2a;
+            --bg-card:   #1a2538;
             --blue:      #60a5fa;
             --blue-dim:  #3b82f6;
             --blue-glow: rgba(96,165,250,0.15);
@@ -47,7 +47,7 @@
         .topbar {
             display:flex; align-items:center; justify-content:space-between;
             padding:8px 32px; border-bottom:1px solid var(--border);
-            background:#0a0f18; font-size:0.72rem; color:#526a85; letter-spacing:0.1em;
+            background:#0c1520; font-size:0.72rem; color:#526a85; letter-spacing:0.1em;
         }
         .topbar-left { display:flex; gap:24px; }
         .live-dot {
@@ -63,7 +63,7 @@
             padding:28px 32px 20px; border-bottom:1px solid var(--border);
             display:flex; align-items:flex-end; justify-content:space-between;
             flex-wrap:wrap; gap:16px;
-            background:linear-gradient(180deg,#0a0f18 0%,var(--bg) 100%);
+            background:linear-gradient(180deg,#0c1520 0%,var(--bg) 100%);
         }
         .logo h1 { font-family:var(--sans); font-size:2rem; font-weight:800; letter-spacing:0.02em; color:var(--text-hi); line-height:1; }
         .logo h1 span { color:var(--blue); }
@@ -94,7 +94,7 @@
         .kpi-card.k-fragile-kpi  { border-left-color:rgba(100,116,139,0.6); }
         .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
         .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); min-height:2rem; }
-        .kpi-card.primary .kpi-value { color:var(--blue); text-shadow:0 0 14px var(--blue-glow); }
+        .kpi-card.primary .kpi-value { color:var(--blue); }
         .kpi-card.k-converged .kpi-value { color:var(--blue); }
         .kpi-card.k-contested .kpi-value { color:var(--red); }
         .kpi-card.k-correlated .kpi-value  { color:var(--orange); }
@@ -146,7 +146,7 @@
         .state-group { margin-bottom:32px; }
 
         /* ── EVENT CARDS ── */
-        .event-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+        .event-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
         @media(max-width:1280px) { .event-grid { grid-template-columns:repeat(4,1fr); } }
         @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } .kpi-grid-signals { grid-template-columns:repeat(2,1fr); } }
         @media(max-width:640px)  { .event-grid { grid-template-columns:repeat(2,1fr); } .container,.topbar,header { padding-left:16px; padding-right:16px; } }
@@ -154,28 +154,25 @@
 
         .event-card {
             background:var(--bg-card); border:1px solid var(--border);
-            border-radius:6px; padding:14px;
-            cursor:pointer; transition:border-color 0.15s, transform 0.12s;
+            border-radius:6px; padding:16px;
+            cursor:pointer; transition:border-color 0.15s;
             position:relative;
             display:flex; flex-direction:column;
             min-height:220px;
         }
-        .event-card:hover { border-color:var(--border-hi); transform:translateY(-2px); }
-        .event-card:active { transform:translateY(0); }
+        .event-card:hover { border-color:var(--border-hi); }
+        .event-card:active { }
 
         /* left accent per state */
         .event-card.s-converged {
-            border-left:2px solid rgba(96,165,250,0.9);
-            background: linear-gradient(135deg, #1a2540 0%, #1a2d4a 100%);
-            box-shadow: 0 0 0 1px rgba(96,165,250,0.08), inset 0 0 20px rgba(96,165,250,0.04);
+            border-left:2px solid rgba(52,211,153,0.8);
+            background: linear-gradient(135deg, #1a2538 0%, #1a2d40 100%);
         }
         .event-card.s-converged:hover {
-            border-color: rgba(96,165,250,0.7);
-            box-shadow: 0 4px 20px rgba(96,165,250,0.12), 0 0 0 1px rgba(96,165,250,0.15);
+            border-color: rgba(52,211,153,0.6);
         }
         .event-card.s-converged .card-score {
-            color: #93c5fd;
-            text-shadow: 0 0 12px rgba(96,165,250,0.4);
+            color: #6ee7b7;
         }
         .event-card.s-calibrating { border-left:2px solid rgba(52,211,153,0.6); }
         .event-card.s-fragile     { border-left:2px solid rgba(71,85,105,0.45); }
@@ -319,8 +316,8 @@
         .disclaimer-banner span { color: rgba(248,113,113,0.5); }
 
         .card-score {
-            font-size:1.6rem; font-weight:700; line-height:1;
-            color:var(--text-hi); margin-bottom:8px;
+            font-size:2.4rem; font-weight:700; line-height:1.1;
+            color:var(--text-hi); margin-bottom:6px;
         }
         .card-event-sub {
             font-size:0.58rem; color:#4a6a88; letter-spacing:0.04em;
@@ -328,7 +325,7 @@
             overflow:hidden; text-overflow:ellipsis; white-space:normal;
         }
         .card-title {
-            font-size:0.76rem; color:#b8ccdf; line-height:1.5;
+            font-size:0.76rem; color:#b8ccdf; line-height:1.6;
             display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
             line-clamp:3;
             overflow:hidden; font-weight:500;
@@ -358,7 +355,7 @@
 
         /* ── MARKET INSIGHT ── */
         .insight-primary {
-            font-size:0.78rem; color:#b8ccdf; line-height:1.6;
+            font-size:0.78rem; color:#b8ccdf; line-height:1.7;
             margin-bottom:6px;
         }
         .insight-risk {

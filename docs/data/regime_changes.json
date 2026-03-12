@@ -1,5 +1,104 @@
 [
   {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Calibrating",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.3,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "251243",
+    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "203722",
+    "question": "Pro Football: 2027 AFC Champion ",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.3,
+      "macro_sensitivity": 0.3
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Fragile",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.3,
+      "macro_sensitivity": 0.35
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "146829",
+    "question": "Nothing Ever Happens: MicroStrategy",
+    "from_regime": "Fragile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-12T04:12:20.159206Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.3,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
     "timestamp": "2026-03-12T03:31:14.436726Z",
     "market_id": "79973",
     "question": "2026 Seoul Mayoral Election Winner",
@@ -448,105 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 78.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.9,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 92.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "31195",
-    "question": "Putin out as President of Russia by end of 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 81.7,
-      "macro_sensitivity": 0.14
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "89502",
-    "question": "What price will Bitcoin hit in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "214405",
-    "question": "Predict.fun FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 67.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 87.8,
-      "macro_sensitivity": 0.05
     }
   }
 ]

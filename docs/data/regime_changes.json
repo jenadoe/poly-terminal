@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T12:31:57.457968Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
     "timestamp": "2026-03-12T12:05:45.742218Z",
     "market_id": "75478",
     "question": "Fed decision in April?",
@@ -535,17 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 68.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T03:31:14.436726Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.2,
       "macro_sensitivity": 0.0
     }
   }

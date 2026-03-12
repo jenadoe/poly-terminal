@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "248032",
+    "question": "Will the Iranian regime fall by April 30?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 66.4,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 19.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 44.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 37.2,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-12T01:14:16.006735Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 41.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-11T23:49:41.408486Z",
     "market_id": "179361",
     "question": "WBC Winner 2026",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:51:45.899122Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.5,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Converged",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 59.3,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "214405",
-    "question": "Predict.fun FDV above ___ one day after launch?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 45.8,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "237089",
-    "question": "Iran strikes Israel on...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 47.3,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-11T19:11:21.295341Z",
-    "market_id": "73096",
-    "question": "Will Iran close the Strait of Hormuz by...?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 46.5,
-      "macro_sensitivity": 0.01
     }
   }
 ]

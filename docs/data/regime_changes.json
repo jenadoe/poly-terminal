@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-12T07:31:08.724976Z",
+    "market_id": "81557",
+    "question": "Who will be the next Prime Minister of Israel after the next election?",
+    "from_regime": "Active",
+    "to_regime": "High Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T07:31:08.724976Z",
+    "market_id": "75478",
+    "question": "Fed decision in April?",
+    "from_regime": "High Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-12T07:01:08.079018Z",
     "market_id": "236884",
     "question": "Iran x Israel/US conflict ends by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:48:23.634166Z",
-    "market_id": "248032",
-    "question": "Will the Iranian regime fall by April 30?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 36.5,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:48:23.634166Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 86.0,
-      "macro_sensitivity": 0.02
     }
   }
 ]

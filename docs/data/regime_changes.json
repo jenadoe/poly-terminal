@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-12T03:31:14.436726Z",
+    "market_id": "79973",
+    "question": "2026 Seoul Mayoral Election Winner",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 68.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T03:31:14.436726Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Calibrating",
+    "to_regime": "Fragile",
+    "metrics_snapshot": {
+      "nexus_score": 45.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T03:01:08.093363Z",
     "market_id": "23792",
     "question": "GTA VI released before June 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 87.8,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "64731",
-    "question": "Billionaire one-time wealth tax passes in California election 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 79.7,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 64.3,
-      "macro_sensitivity": 0.04
     }
   }
 ]

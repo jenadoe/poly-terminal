@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T19:01:49.857068Z",
+    "market_id": "73096",
+    "question": "Will Iran close the Strait of Hormuz by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T16:01:59.418138Z",
     "market_id": "40044",
     "question": "English Premier League - Top 4 Finish ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 59.3,
       "macro_sensitivity": 0.35
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "146829",
-    "question": "Nothing Ever Happens: MicroStrategy",
-    "from_regime": "Fragile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
-      "macro_sensitivity": 0.19
     }
   }
 ]

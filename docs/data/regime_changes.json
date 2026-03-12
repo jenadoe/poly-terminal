@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T03:01:08.093363Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-03-12T02:56:47.917867Z",
     "market_id": "79223",
     "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.3,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "48292",
-    "question": "OpenAI IPO Closing Market Cap",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 43.1,
-      "macro_sensitivity": 0.07
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T02:56:47.917867Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Fragile",
+    "to_regime": "Calibrating",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-12T02:42:51.694318Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.1,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-11T20:32:45.080883Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 61.0,
-      "macro_sensitivity": 0.11
     }
   }
 ]

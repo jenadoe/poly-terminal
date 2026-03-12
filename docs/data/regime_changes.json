@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T16:01:59.418138Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
     "timestamp": "2026-03-12T13:31:54.616848Z",
     "market_id": "86832",
     "question": "Which companies will be acquired before 2027?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.1,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Calibrating",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.3,
-      "macro_sensitivity": 0.24
     }
   }
 ]

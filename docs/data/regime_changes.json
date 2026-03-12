@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-12T12:05:45.742218Z",
+    "market_id": "75478",
+    "question": "Fed decision in April?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 89.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-12T12:05:45.742218Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-12T09:01:06.988223Z",
     "market_id": "236992",
     "question": "Trump announces end of military operations against Iran by ...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 45.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T03:01:08.093363Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-12T02:56:47.917867Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Fragile",
-    "to_regime": "Calibrating",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
-      "macro_sensitivity": 0.01
     }
   }
 ]

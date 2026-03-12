@@ -1445,7 +1445,7 @@ function renderStateGroups(data){
                     <div class="card-score">${fmtScore(d.nexus_score)}</div>
                     ${flags.length?`<div class="card-flags" style="margin-top:0;">${renderFlagBadges(flags)}</div>`:''}
                 </div>
-                <div style="font-size:0.52rem; letter-spacing:0.1em; margin-top:-4px; margin-bottom:4px; color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#fbbf24'}">${st.key==='converged'?'HIGH INTEGRITY':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
+                <div style="font-size:0.52rem; letter-spacing:0.1em; margin-top:-4px; margin-bottom:4px; color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#fbbf24'}">${st.key==='converged'?'STRUCTURALLY TRUSTED':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
                 ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
                 <div class="card-title">${cleanQuestion(d.question)}</div>
                 ${d.current_price!=null ? `<div class="card-price">${((d.current_price)*100)<0.5?'<1%':((d.current_price)*100)<10?((d.current_price)*100).toFixed(1)+'%':Math.round((d.current_price)*100)+'%'}</div>` : ''}

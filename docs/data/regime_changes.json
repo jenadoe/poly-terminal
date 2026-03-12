@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-12T19:31:49.209022Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-03-12T19:31:49.209022Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T19:01:49.857068Z",
     "market_id": "73096",
     "question": "Will Iran close the Strait of Hormuz by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "237089",
-    "question": "Iran strikes Israel on...?",
-    "from_regime": "Fragile",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-12T04:12:20.159206Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Calibrating",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.3,
-      "macro_sensitivity": 0.35
     }
   }
 ]

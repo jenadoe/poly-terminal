@@ -1623,7 +1623,7 @@ async function loadFromSupabase(){
             event_title:  r.event_title||null,
             category:     r.category||'',
             nexus_score:  r.nexus_score,
-            market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.market_state||'Fragile'),
+            market_state: (r.nexus_score===null||r.nexus_score===undefined) ? 'Initializing' : (r.display_state||r.market_state||'Fragile'),
             flags:        Array.isArray(r.flags)?r.flags:[],
             spread:       r.spread??null,
             days_to_close: r.time_to_close_days??null,

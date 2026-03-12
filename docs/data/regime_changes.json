@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-12T05:31:12.494254Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.0,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
     "timestamp": "2026-03-12T04:18:52.136863Z",
     "market_id": "38532",
     "question": "UEFA Europa League: Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Calibrating",
     "metrics_snapshot": {
       "nexus_score": 67.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-11T21:04:31.446213Z",
-    "market_id": "199763",
-    "question": "Next UK Prime Minister in 2026?",
-    "from_regime": "Calibrating",
-    "to_regime": "Fragile",
-    "metrics_snapshot": {
-      "nexus_score": 40.1,
       "macro_sensitivity": 0.0
     }
   }

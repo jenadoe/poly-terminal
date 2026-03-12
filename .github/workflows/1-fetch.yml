@@ -2,7 +2,7 @@ name: 1. Calculate & Analyze
 
 on:
   repository_dispatch:
-    types: [1. Calculate & Analyze]  # Cloudflare Workers가 보내는 신호
+    types: [calculate-and-analyze]  # Cloudflare Workers가 보내는 신호
   workflow_dispatch:  # 수동 실행도 유지
 
 jobs:

@@ -603,7 +603,7 @@
     </div>
 
     <!-- KPI Row 2 — MARKET SIGNALS -->
-    <div class="kpi-grid-signals" style="margin-top:8px;">
+    <div class="kpi-grid" style="margin-top:8px; grid-template-columns:repeat(2,1fr);">
         <div class="kpi-card k-contested">
             <div class="kpi-label">Contested</div>
             <div class="kpi-value" id="contested-count">—</div>
@@ -1413,7 +1413,7 @@ function renderStateGroups(data){
             ? data.filter(d=>!STATES.slice(0,2).some(s2=>s2.match(d.market_state)))
             : data.filter(d=>st.match(d.market_state));
 
-        if(!group.length) return;
+        if(!group.length && st.key !== 'calibrating') return;
         if(st.key==='initializing') return;
 
         const shown=group.sort((a,b)=>(b.nexus_score??-1)-(a.nexus_score??-1)).slice(0,5);
@@ -1430,6 +1430,10 @@ function renderStateGroups(data){
         container.appendChild(wrap);
 
         const grid=document.getElementById(`grid-${st.key}`);
+        if(!group.length){
+            grid.innerHTML=`<div style="grid-column:1/-1;font-size:0.62rem;color:var(--text-dim);letter-spacing:0.06em;padding:12px 2px;">No markets currently in price discovery phase.</div>`;
+            return;
+        }
         shown.forEach(d=>{
             const flags=getFlags(d);
             const card=document.createElement('div');

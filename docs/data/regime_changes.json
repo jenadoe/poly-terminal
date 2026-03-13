@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T15:31:32.852347Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 48.7,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-13T15:03:03.857084Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 68.9,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-12T19:31:49.209022Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.24
     }
   }
 ]

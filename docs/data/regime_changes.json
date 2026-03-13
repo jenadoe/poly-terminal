@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T10:01:27.268891Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.6,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
     "timestamp": "2026-03-13T08:01:33.602758Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T08:31:10.346489Z",
-    "market_id": "63292",
-    "question": "NBA Defensive Player of the Year Winner",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

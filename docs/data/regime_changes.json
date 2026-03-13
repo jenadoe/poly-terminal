@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T02:31:19.689959Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "Fragile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 56.9,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-13T02:01:14.556309Z",
     "market_id": "238094",
     "question": "Which countries will strike Iran by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 90.6,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 89.9,
-      "macro_sensitivity": 0.01
     }
   }
 ]

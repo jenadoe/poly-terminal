@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-13T13:01:31.012210Z",
+    "market_id": "236992",
+    "question": "Trump announces end of military operations against Iran by ...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.1,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-03-13T13:01:31.012210Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.0,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-13T13:01:31.012210Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-13T12:31:28.360082Z",
     "market_id": "242849",
     "question": "Elon Musk # tweets March 6 - March 13, 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-03-12T12:05:45.742218Z",
-    "market_id": "75478",
-    "question": "Fed decision in April?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 89.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T12:05:45.742218Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-12T09:01:06.988223Z",
-    "market_id": "236992",
-    "question": "Trump announces end of military operations against Iran by ...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 49.3,
-      "macro_sensitivity": 0.3
     }
   }
 ]

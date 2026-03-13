@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-13T21:01:38.336236Z",
+    "market_id": "143669",
+    "question": "US strike on Cuba by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T21:01:38.336236Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-13T19:31:37.495655Z",
     "market_id": "241951",
     "question": "# of views of next MrBeast video on week 1?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T23:31:21.388858Z",
-    "market_id": "50390",
-    "question": "Oscars 2026: Best Cinematography Winner",
-    "from_regime": "Fragile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T23:31:21.388858Z",
-    "market_id": "38532",
-    "question": "UEFA Europa League: Winner ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.44
     }
   }
 ]

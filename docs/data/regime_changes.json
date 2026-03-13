@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T14:01:28.430373Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.9,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-13T13:01:31.012210Z",
     "market_id": "236992",
     "question": "Trump announces end of military operations against Iran by ...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 69.8,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-12T12:31:57.457968Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.25
     }
   }
 ]

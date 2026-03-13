@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T01:01:18.885833Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-12T23:31:21.388858Z",
     "market_id": "50390",
     "question": "Oscars 2026: Best Cinematography Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 51.5,
       "macro_sensitivity": 0.33
-    }
-  },
-  {
-    "timestamp": "2026-03-12T06:31:14.705393Z",
-    "market_id": "31195",
-    "question": "Putin out as President of Russia by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
     }
   }
 ]

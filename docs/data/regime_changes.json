@@ -1,5 +1,181 @@
 [
   {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 47.9,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "251243",
+    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 40.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "203716",
+    "question": "Pro Football: 2027 NFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.2,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "116025",
+    "question": "Bank of Japan Decision in March?",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 59.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "236943",
+    "question": "Which countries will Iran strike in March?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.3,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.4,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.6,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "146829",
+    "question": "Nothing Ever Happens: MicroStrategy",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "50298",
+    "question": "Oscars 2026: Best Actress Winner",
+    "from_regime": "Calibrating",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.3,
+      "macro_sensitivity": 0.32
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "143642",
+    "question": "US strike on Mexico by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.7,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-13T01:31:14.668636Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.0,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-13T01:01:18.885833Z",
     "market_id": "85299",
     "question": "AI bubble burst by...?",
@@ -371,182 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 97.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 89.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "98374",
-    "question": "SpaceX IPO Closing Market Cap",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 91.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 89.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "50386",
-    "question": "Oscars 2026: Best Director Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 90.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "50251",
-    "question": "Oscars 2026: Best Picture Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 94.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 96.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 92.9,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 94.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 97.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:31:08.724976Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Active",
-    "to_regime": "High Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:31:08.724976Z",
-    "market_id": "75478",
-    "question": "Fed decision in April?",
-    "from_regime": "High Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:01:08.079018Z",
-    "market_id": "236884",
-    "question": "Iran x Israel/US conflict ends by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.1,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:01:08.079018Z",
-    "market_id": "174563",
-    "question": "Mavericks vs. Bucks",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T06:31:14.705393Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T06:31:14.705393Z",
-    "market_id": "238094",
-    "question": "Which countries will strike Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.1,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-12T06:31:14.705393Z",
-    "market_id": "73096",
-    "question": "Will Iran close the Strait of Hormuz by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.5,
-      "macro_sensitivity": 0.33
     }
   }
 ]

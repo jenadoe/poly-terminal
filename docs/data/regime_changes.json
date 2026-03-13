@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-13T04:01:34.396757Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-13T04:01:34.396757Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-13T03:01:18.469931Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "63292",
-    "question": "NBA Defensive Player of the Year Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 86.1,
       "macro_sensitivity": 0.0
     }
   }

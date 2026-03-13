@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T07:01:33.670742Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-13T06:31:38.361350Z",
     "market_id": "241951",
     "question": "# of views of next MrBeast video on week 1?",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 85.2,
       "macro_sensitivity": 0.0
     }
   }

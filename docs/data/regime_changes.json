@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T22:31:37.457897Z",
+    "market_id": "203722",
+    "question": "Pro Football: 2027 AFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-13T21:01:38.336236Z",
     "market_id": "143669",
     "question": "US strike on Cuba by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 74.0,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:01:18.885833Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

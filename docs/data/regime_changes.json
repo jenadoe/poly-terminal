@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T05:31:37.488877Z",
+    "market_id": "31195",
+    "question": "Putin out as President of Russia by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
     "timestamp": "2026-03-13T05:01:46.303106Z",
     "market_id": "211821",
     "question": "Will France, UK, or Germany strike Iran by March 31?",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 85.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "119580",
-    "question": "2nd largest company end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 90.7,
       "macro_sensitivity": 0.0
     }
   }

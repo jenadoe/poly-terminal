@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-13T12:31:28.360082Z",
+    "market_id": "242849",
+    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T12:31:28.360082Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.2,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-13T12:01:35.559455Z",
     "market_id": "48292",
     "question": "OpenAI IPO Closing Market Cap",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.3,
       "macro_sensitivity": 0.3
-    }
-  },
-  {
-    "timestamp": "2026-03-12T09:01:06.988223Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T09:01:06.988223Z",
-    "market_id": "193337",
-    "question": "OpenAI IPO closing market cap above ___ ?",
-    "from_regime": "Fragile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T19:31:37.495655Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 48.9,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-13T16:31:34.463025Z",
     "market_id": "236992",
     "question": "Trump announces end of military operations against Iran by ...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.44
-    }
-  },
-  {
-    "timestamp": "2026-03-12T23:31:21.388858Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.18
     }
   }
 ]

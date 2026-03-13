@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T05:01:46.303106Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-13T04:31:36.827734Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 90.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "79973",
-    "question": "2026 Seoul Mayoral Election Winner",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 92.1,
       "macro_sensitivity": 0.0
     }
   }

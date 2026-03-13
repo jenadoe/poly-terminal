@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T07:31:32.947475Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.7,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-13T07:01:33.670742Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 84.6,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "116025",
-    "question": "Bank of Japan Decision in March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

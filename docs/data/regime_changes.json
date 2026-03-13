@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-13T02:01:14.556309Z",
+    "market_id": "238094",
+    "question": "Which countries will strike Iran by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.2,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
     "timestamp": "2026-03-13T01:31:14.668636Z",
     "market_id": "241951",
     "question": "# of views of next MrBeast video on week 1?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 89.9,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-12T07:55:34.780677Z",
-    "market_id": "79039",
-    "question": "Largest Company end of March?",
-    "from_regime": "High Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 97.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

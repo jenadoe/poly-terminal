@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-13T16:01:40.873843Z",
+    "market_id": "241951",
+    "question": "# of views of next MrBeast video on week 1?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.5,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-13T16:01:40.873843Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-13T16:01:40.873843Z",
+    "market_id": "50301",
+    "question": "Oscars 2026: Best Supporting Actress Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-13T15:31:32.852347Z",
     "market_id": "241951",
     "question": "# of views of next MrBeast video on week 1?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 79.3,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T21:31:17.266562Z",
-    "market_id": "251243",
-    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T21:01:31.420367Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-12T21:01:31.420367Z",
-    "market_id": "50301",
-    "question": "Oscars 2026: Best Supporting Actress Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 68.9,
-      "macro_sensitivity": 0.19
     }
   }
 ]

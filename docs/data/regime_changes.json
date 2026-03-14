@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T14:02:14.620304Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 54.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-14T13:32:08.683961Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.2,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "241951",
-    "question": "# of views of next MrBeast video on week 1?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.09
     }
   }
 ]

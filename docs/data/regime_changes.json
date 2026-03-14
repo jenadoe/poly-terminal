@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-14T04:31:36.422760Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-14T04:31:36.422760Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 94.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-14T02:01:27.814958Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "146829",
-    "question": "Nothing Ever Happens: MicroStrategy",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
-      "macro_sensitivity": 0.19
     }
   }
 ]

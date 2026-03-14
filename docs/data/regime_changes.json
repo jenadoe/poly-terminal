@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-14T12:32:02.455300Z",
+    "market_id": "81557",
+    "question": "Who will be the next Prime Minister of Israel after the next election?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.2,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-03-14T12:32:02.455300Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.5,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
     "timestamp": "2026-03-14T11:31:57.236249Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 59.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "236884",
-    "question": "Iran x Israel/US conflict ends by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.3,
       "macro_sensitivity": 0.0
     }
   }

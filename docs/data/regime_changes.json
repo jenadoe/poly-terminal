@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T02:01:27.814958Z",
+    "market_id": "257217",
+    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-14T00:31:32.436508Z",
     "market_id": "252326",
     "question": "Bitcoin above ___ on March 14?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.1,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

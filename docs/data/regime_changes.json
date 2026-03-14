@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T16:32:11.565915Z",
+    "market_id": "148292",
+    "question": "Will the US acquire part of Greenland in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 65.6,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
     "timestamp": "2026-03-14T15:02:09.326692Z",
     "market_id": "237089",
     "question": "Iran strikes Israel on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.9,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-13T02:31:19.689959Z",
-    "market_id": "36308",
-    "question": "Claude 5 released by\u2026?",
-    "from_regime": "Fragile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 56.9,
-      "macro_sensitivity": 0.2
     }
   }
 ]

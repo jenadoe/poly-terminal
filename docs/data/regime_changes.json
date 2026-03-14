@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T08:31:35.724481Z",
+    "market_id": "256460",
+    "question": "Elon Musk # tweets March 12 - March 14, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-14T04:31:36.422760Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.6,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "160366",
-    "question": "Will the US officially declare war on Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

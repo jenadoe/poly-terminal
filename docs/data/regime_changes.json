@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T10:01:38.702556Z",
+    "market_id": "252326",
+    "question": "Bitcoin above ___ on March 14?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 42.7,
+      "macro_sensitivity": 0.42
+    }
+  },
+  {
     "timestamp": "2026-03-14T08:31:35.724481Z",
     "market_id": "256460",
     "question": "Elon Musk # tweets March 12 - March 14, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.4,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-13T01:31:14.668636Z",
-    "market_id": "238094",
-    "question": "Which countries will strike Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.6,
-      "macro_sensitivity": 0.06
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-14T17:02:21.543409Z",
+    "market_id": "236943",
+    "question": "Which countries will Iran strike in March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-14T16:32:11.565915Z",
     "market_id": "148292",
     "question": "Will the US acquire part of Greenland in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.6,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-13T03:01:18.469931Z",
-    "market_id": "242849",
-    "question": "Elon Musk # tweets March 6 - March 13, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
-      "macro_sensitivity": 0.07
     }
   }
 ]

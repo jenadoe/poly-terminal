@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T19:02:04.144003Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T18:02:05.407529Z",
     "market_id": "256483",
     "question": "Bitcoin above ___ on March 16?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-14T04:31:36.422760Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 94.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

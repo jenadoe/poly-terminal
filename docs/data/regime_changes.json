@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T10:32:04.971408Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T09:02:06.609993Z",
     "market_id": "139894",
     "question": "Jerome Powell out as Fed Chair by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 51.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T12:31:28.360082Z",
-    "market_id": "48292",
-    "question": "OpenAI IPO Closing Market Cap",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.2,
-      "macro_sensitivity": 0.08
     }
   }
 ]

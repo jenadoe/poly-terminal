@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T02:02:13.466136Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T00:02:16.117386Z",
     "market_id": "106884",
     "question": "Fed rate cut by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 48.2,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-13T05:31:37.488877Z",
-    "market_id": "31195",
-    "question": "Putin out as President of Russia by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.12
     }
   }
 ]

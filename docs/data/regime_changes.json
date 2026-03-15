@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-15T15:32:02.414965Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.8,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-15T15:32:02.414965Z",
+    "market_id": "69987",
+    "question": "2026 NCAA Tournament Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.5,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-15T15:32:02.414965Z",
+    "market_id": "199763",
+    "question": "Next UK Prime Minister in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.5,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-15T15:32:02.414965Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-15T15:32:02.414965Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 55.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T15:02:06.322896Z",
     "market_id": "148292",
     "question": "Will the US acquire part of Greenland in 2026?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T19:31:37.495655Z",
-    "market_id": "241951",
-    "question": "# of views of next MrBeast video on week 1?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 48.9,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-13T16:31:34.463025Z",
-    "market_id": "236992",
-    "question": "Trump announces end of military operations against Iran by ...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-13T16:01:40.873843Z",
-    "market_id": "241951",
-    "question": "# of views of next MrBeast video on week 1?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 48.5,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-13T16:01:40.873843Z",
-    "market_id": "46859",
-    "question": "Will Trump visit China by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T16:01:40.873843Z",
-    "market_id": "50301",
-    "question": "Oscars 2026: Best Supporting Actress Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.3,
-      "macro_sensitivity": 0.22
     }
   }
 ]

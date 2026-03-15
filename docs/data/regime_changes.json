@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-15T13:02:03.577818Z",
+    "market_id": "230516",
+    "question": "Russia strike impacts Kyiv municipality during week of___?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 88.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-15T13:02:03.577818Z",
+    "market_id": "89519",
+    "question": "What price will Ethereum hit in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T12:32:12.710372Z",
     "market_id": "116025",
     "question": "Bank of Japan Decision in March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 79.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T14:31:37.722402Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 86.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T14:01:28.430373Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.9,
-      "macro_sensitivity": 0.08
     }
   }
 ]

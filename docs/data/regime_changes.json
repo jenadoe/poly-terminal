@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T22:32:13.591215Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 39.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T22:02:13.816150Z",
     "market_id": "237089",
     "question": "Iran strikes Israel on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T10:01:38.702556Z",
-    "market_id": "252326",
-    "question": "Bitcoin above ___ on March 14?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 42.7,
-      "macro_sensitivity": 0.42
     }
   }
 ]

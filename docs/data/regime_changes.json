@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T05:32:10.405210Z",
+    "market_id": "203722",
+    "question": "Pro Football: 2027 AFC Champion ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T03:32:03.369139Z",
     "market_id": "42365",
     "question": "Will the U.S. invade Venezuela by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.6,
       "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-13T08:01:33.602758Z",
-    "market_id": "251243",
-    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

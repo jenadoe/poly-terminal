@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T22:02:13.816150Z",
+    "market_id": "237089",
+    "question": "Iran strikes Israel on...?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 96.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T21:02:02.197807Z",
     "market_id": "215193",
     "question": "Will the U.S. invade Iran by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.7,
       "macro_sensitivity": 0.42
-    }
-  },
-  {
-    "timestamp": "2026-03-14T08:31:35.724481Z",
-    "market_id": "256460",
-    "question": "Elon Musk # tweets March 12 - March 14, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 50.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T17:01:57.225239Z",
+    "market_id": "100394",
+    "question": "F1 Constructors' Champion",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.7,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-15T16:32:13.161549Z",
     "market_id": "80066",
     "question": "Backpack FDV above ___ one day after launch?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 38.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T23:01:34.535702Z",
-    "market_id": "215193",
-    "question": "Will the U.S. invade Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.03
     }
   }
 ]

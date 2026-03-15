@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T03:32:03.369139Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.7,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
     "timestamp": "2026-03-15T02:32:09.577289Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 44.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T07:31:32.947475Z",
-    "market_id": "215193",
-    "question": "Will the U.S. invade Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.7,
-      "macro_sensitivity": 0.08
     }
   }
 ]

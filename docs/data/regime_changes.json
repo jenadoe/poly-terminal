@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-15T02:32:09.577289Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 68.5,
+      "macro_sensitivity": 0.33
+    }
+  },
+  {
+    "timestamp": "2026-03-15T02:32:09.577289Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T02:02:13.466136Z",
     "market_id": "211821",
     "question": "Will France, UK, or Germany strike Iran by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.7,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-13T07:01:33.670742Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 52.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-13T06:31:38.361350Z",
-    "market_id": "241951",
-    "question": "# of views of next MrBeast video on week 1?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 48.2,
-      "macro_sensitivity": 0.09
     }
   }
 ]

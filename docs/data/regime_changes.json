@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T23:32:11.113913Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 37.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T22:32:13.591215Z",
     "market_id": "255195",
     "question": "Iran leadership change by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 42.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T11:01:38.237917Z",
-    "market_id": "252326",
-    "question": "Bitcoin above ___ on March 14?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.0,
       "macro_sensitivity": 0.0
     }
   }

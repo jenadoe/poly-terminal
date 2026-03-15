@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-15T17:32:00.781521Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-15T17:01:57.225239Z",
     "market_id": "100394",
     "question": "F1 Constructors' Champion",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 43.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T00:31:32.436508Z",
-    "market_id": "252326",
-    "question": "Bitcoin above ___ on March 14?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 38.7,
       "macro_sensitivity": 0.0
     }
   }

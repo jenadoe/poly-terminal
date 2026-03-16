@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T09:02:24.535941Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 56.8,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-16T08:53:55.387822Z",
     "market_id": "96022",
     "question": "Which company has the best AI model end of March?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 86.9,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-15T12:32:12.710372Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 55.4,
-      "macro_sensitivity": 0.22
     }
   }
 ]

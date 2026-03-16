@@ -3,22 +3,22 @@
     "id": "30829",
     "question": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
     "current_price": 0.2425,
-    "volume": 833290174,
+    "volume": 833317255,
     "nexus_score": 88.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -2.02,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -2.22,
     "sparkline": [
       {
         "p": 0.245
       },
       {
-        "p": 0.2465
+        "p": 0.2475
       },
       {
-        "p": 0.2405
+        "p": 0.2415
       },
       {
         "p": 0.2415
@@ -37,14 +37,14 @@
     "id": "67284",
     "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
     "current_price": 0.9945,
-    "volume": 426523805,
+    "volume": 426707725,
     "nexus_score": 60.0,
     "market_state": "Volatile",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.91,
     "sparkline": [
       {
@@ -57,14 +57,14 @@
         "p": 0.9955
       },
       {
-        "p": 0.9955
+        "p": 0.9945
       },
       {
         "p": 0.9945
       }
     ],
     "c1": 96.0,
-    "c2": 5.6,
+    "c2": 5.4,
     "c3": 100.0,
     "c4": 41.7,
     "slug": "fed-decision-in-march-885"
@@ -73,16 +73,16 @@
     "id": "31875",
     "question": "Will J.D. Vance win the 2028 Republican presidential nomination?",
     "current_price": 0.393,
-    "volume": 419538745,
+    "volume": 419605622,
     "nexus_score": 87.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -5.76,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -5.64,
     "sparkline": [
       {
-        "p": 0.389
+        "p": 0.3815
       },
       {
         "p": 0.3945
@@ -91,7 +91,7 @@
         "p": 0.3915
       },
       {
-        "p": 0.3945
+        "p": 0.392
       },
       {
         "p": 0.393
@@ -106,29 +106,29 @@
   {
     "id": "31552",
     "question": "Will JD Vance win the 2028 US Presidential Election?",
-    "current_price": 0.2075,
-    "volume": 412036875,
+    "current_price": 0.2065,
+    "volume": 412070198,
     "nexus_score": 87.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -1.43,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -1.9,
     "sparkline": [
       {
         "p": 0.2095
       },
       {
-        "p": 0.2095
+        "p": 0.21
       },
       {
         "p": 0.2035
       },
       {
-        "p": 0.2045
+        "p": 0.204
       },
       {
-        "p": 0.2075
+        "p": 0.2065
       }
     ],
     "c1": 95.7,
@@ -141,12 +141,12 @@
     "id": "30615",
     "question": "Will Spain win the 2026 FIFA World Cup?",
     "current_price": 0.1545,
-    "volume": 308975139,
+    "volume": 309226053,
     "nexus_score": 87.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -175,12 +175,12 @@
     "id": "27830",
     "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
     "current_price": 0.355,
-    "volume": 256755772,
+    "volume": 256793030,
     "nexus_score": 86.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 2.9,
     "sparkline": [
       {
@@ -209,13 +209,13 @@
     "id": "33507",
     "question": "Will Arsenal win the 2025\u201326 English Premier League?",
     "current_price": 0.895,
-    "volume": 146525991,
+    "volume": 146526981,
     "nexus_score": 94.8,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 9.82,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 11.18,
     "sparkline": [
       {
         "p": 0.895
@@ -243,12 +243,12 @@
     "id": "33506",
     "question": "Will Arsenal win the 2025\u201326 Champions League?",
     "current_price": 0.255,
-    "volume": 126273754,
-    "nexus_score": 83.6,
+    "volume": 126280332,
+    "nexus_score": 83.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -7.27,
     "sparkline": [
       {
@@ -268,7 +268,7 @@
       }
     ],
     "c1": 90.0,
-    "c2": 21.6,
+    "c2": 21.5,
     "c3": 100.0,
     "c4": 42.9,
     "slug": "uefa-champions-league-winner"
@@ -278,11 +278,11 @@
     "question": "Will Delcy Rodr\u00edguez be the leader of Venezuela end of 2026?",
     "current_price": 0.595,
     "volume": 74684665,
-    "nexus_score": 60.8,
+    "nexus_score": 92.1,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.48,
     "sparkline": [
       {
@@ -302,25 +302,25 @@
       }
     ],
     "c1": 87.3,
-    "c2": 11.3,
+    "c2": 22.6,
     "c3": 100.0,
-    "c4": 23.7,
+    "c4": 66.6,
     "slug": "venezuela-leader-end-of-2026"
   },
   {
     "id": "32754",
     "question": "Will Shai Gilgeous-Alexander win the 2025\u20132026 NBA MVP?",
     "current_price": 0.875,
-    "volume": 66876497,
-    "nexus_score": 80.2,
+    "volume": 66879441,
+    "nexus_score": 74.5,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 11.46,
     "sparkline": [
       {
-        "p": 0.86
+        "p": 0.875
       },
       {
         "p": 0.875
@@ -336,22 +336,22 @@
       }
     ],
     "c1": 87.0,
-    "c2": 15.5,
+    "c2": 15.1,
     "c3": 100.0,
-    "c4": 53.1,
+    "c4": 52.3,
     "slug": "nba-mvp-694"
   },
   {
     "id": "33509",
     "question": "Will Barcelona win the 2025\u201326 La Liga?",
     "current_price": 0.825,
-    "volume": 60062028,
+    "volume": 60063236,
     "nexus_score": 91.3,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -0.6,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 0.0,
     "sparkline": [
       {
         "p": 0.82
@@ -379,32 +379,32 @@
     "id": "27829",
     "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
     "current_price": 0.2095,
-    "volume": 49613069,
-    "nexus_score": 90.6,
+    "volume": 49615773,
+    "nexus_score": 90.5,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -10.66,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -3.23,
     "sparkline": [
-      {
-        "p": 0.223
-      },
       {
         "p": 0.2235
       },
       {
-        "p": 0.2245
+        "p": 0.2265
       },
       {
-        "p": 0.2115
+        "p": 0.221
+      },
+      {
+        "p": 0.2095
       },
       {
         "p": 0.2095
       }
     ],
     "c1": 85.7,
-    "c2": 21.1,
+    "c2": 21.0,
     "c3": 100.0,
     "c4": 68.3,
     "slug": "2026-nhl-stanley-cup-champion"
@@ -413,12 +413,12 @@
     "id": "90178",
     "question": "Will Jesus Christ return before 2027?",
     "current_price": 0.0385,
-    "volume": 45287181,
+    "volume": 45288825,
     "nexus_score": 96.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -447,12 +447,12 @@
     "id": "34436",
     "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
     "current_price": 0.205,
-    "volume": 45092092,
-    "nexus_score": 59.5,
+    "volume": 45095907,
+    "nexus_score": 59.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.11,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -462,7 +462,7 @@
         "p": 0.195
       },
       {
-        "p": 0.195
+        "p": 0.205
       },
       {
         "p": 0.205
@@ -474,59 +474,59 @@
     "c1": 85.0,
     "c2": 12.5,
     "c3": 89.3,
-    "c4": 22.9,
+    "c4": 22.6,
     "slug": "the-masters-winner"
   },
   {
     "id": "238474",
     "question": "Will Bitcoin reach $75,000 in March?",
-    "current_price": 0.755,
-    "volume": 43616046,
-    "nexus_score": 88.9,
+    "current_price": 0.775,
+    "volume": 43650160,
+    "nexus_score": 89.7,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 93.59,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 101.3,
     "sparkline": [
       {
-        "p": 0.735
-      },
-      {
-        "p": 0.83
+        "p": 0.745
       },
       {
         "p": 0.855
       },
       {
-        "p": 0.805
+        "p": 0.835
       },
       {
-        "p": 0.755
+        "p": 0.835
+      },
+      {
+        "p": 0.775
       }
     ],
     "c1": 85.0,
-    "c2": 21.4,
+    "c2": 22.2,
     "c3": 100.0,
-    "c4": 62.9,
+    "c4": 63.1,
     "slug": "what-price-will-bitcoin-hit-in-march-2026"
   },
   {
     "id": "108633",
     "question": "Will the Iranian regime fall by March 31?",
     "current_price": 0.03,
-    "volume": 34480347,
-    "nexus_score": 65.0,
+    "volume": 34481517,
+    "nexus_score": 64.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -66.1,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -65.91,
     "sparkline": [
       {
-        "p": 0.038
+        "p": 0.0375
       },
       {
         "p": 0.0365
@@ -542,7 +542,7 @@
       }
     ],
     "c1": 83.7,
-    "c2": 13.0,
+    "c2": 12.7,
     "c3": 98.7,
     "c4": 34.6,
     "slug": "will-the-iranian-regime-fall-by-march-31"
@@ -550,35 +550,35 @@
   {
     "id": "237260",
     "question": "Will Crude Oil (CL) hit (HIGH) $100 by end of March?",
-    "current_price": 0.919,
-    "volume": 32496853,
-    "nexus_score": 54.3,
+    "current_price": 0.918,
+    "volume": 32513032,
+    "nexus_score": 54.0,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 0.05,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -2.44,
     "sparkline": [
       {
-        "p": 0.8555
+        "p": 0.8665
       },
       {
-        "p": 0.8875
+        "p": 0.8925
       },
       {
-        "p": 0.878
+        "p": 0.874
       },
       {
-        "p": 0.9285
+        "p": 0.9225
       },
       {
-        "p": 0.919
+        "p": 0.918
       }
     ],
     "c1": 83.3,
-    "c2": 7.7,
+    "c2": 7.5,
     "c3": 100.0,
     "c4": 18.6,
     "slug": "will-crude-oil-cl-hit-by-end-of-march"
@@ -587,22 +587,22 @@
     "id": "34038",
     "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
     "current_price": 0.625,
-    "volume": 31577142,
-    "nexus_score": 69.4,
+    "volume": 31577615,
+    "nexus_score": 68.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 0.0,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 1.63,
     "sparkline": [
       {
-        "p": 0.635
-      },
-      {
         "p": 0.63
       },
       {
         "p": 0.63
+      },
+      {
+        "p": 0.625
       },
       {
         "p": 0.625
@@ -612,31 +612,31 @@
       }
     ],
     "c1": 83.3,
-    "c2": 14.4,
+    "c2": 14.2,
     "c3": 100.0,
-    "c4": 42.9,
+    "c4": 41.7,
     "slug": "next-prime-minister-of-hungary"
   },
   {
     "id": "118172",
     "question": "Will Trump acquire Greenland before 2027?",
     "current_price": 0.0895,
-    "volume": 30382048,
-    "nexus_score": 84.9,
+    "volume": 30382676,
+    "nexus_score": 84.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.02,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -20.44,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -20.8,
     "sparkline": [
       {
         "p": 0.092
       },
       {
-        "p": 0.092
+        "p": 0.0925
       },
       {
-        "p": 0.0925
+        "p": 0.0935
       },
       {
         "p": 0.0925
@@ -646,25 +646,25 @@
       }
     ],
     "c1": 83.0,
-    "c2": 21.1,
+    "c2": 21.0,
     "c3": 98.7,
-    "c4": 54.3,
+    "c4": 53.7,
     "slug": "will-trump-acquire-greenland-before-2027"
   },
   {
     "id": "100371",
     "question": "Will George Russell be the 2026 F1 Drivers' Champion?",
     "current_price": 0.595,
-    "volume": 29806759,
-    "nexus_score": 61.6,
+    "volume": 29822380,
+    "nexus_score": 60.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 33.71,
     "sparkline": [
       {
-        "p": 0.585
+        "p": 0.59
       },
       {
         "p": 0.595
@@ -680,21 +680,21 @@
       }
     ],
     "c1": 83.0,
-    "c2": 12.5,
+    "c2": 12.3,
     "c3": 100.0,
-    "c4": 26.3,
+    "c4": 24.9,
     "slug": "2026-f1-drivers-champion"
   },
   {
     "id": "45915",
     "question": "Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential election?",
     "current_price": 0.455,
-    "volume": 26356978,
-    "nexus_score": 90.1,
+    "volume": 26358762,
+    "nexus_score": 90.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -723,12 +723,12 @@
     "id": "31759",
     "question": "Russia x Ukraine ceasefire by March 31, 2026?",
     "current_price": 0.0175,
-    "volume": 25489980,
-    "nexus_score": 72.6,
+    "volume": 25492322,
+    "nexus_score": 71.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -2.78,
     "sparkline": [
       {
@@ -748,30 +748,30 @@
       }
     ],
     "c1": 82.3,
-    "c2": 14.7,
+    "c2": 14.4,
     "c3": 100.0,
-    "c4": 52.0,
+    "c4": 50.6,
     "slug": "russia-x-ukraine-ceasefire-by-march-31-2026"
   },
   {
     "id": "89502",
     "question": "Will Bitcoin reach $75,000 by December 31, 2026?",
     "current_price": 0.935,
-    "volume": 22052441,
-    "nexus_score": 74.2,
+    "volume": 22256238,
+    "nexus_score": 74.5,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 10.65,
     "sparkline": [
       {
         "p": 0.895
       },
       {
-        "p": 0.93
+        "p": 0.94
       },
       {
         "p": 0.945
@@ -784,43 +784,43 @@
       }
     ],
     "c1": 81.7,
-    "c2": 15.5,
+    "c2": 15.9,
     "c3": 100.0,
-    "c4": 40.6,
+    "c4": 40.3,
     "slug": "what-price-will-bitcoin-hit-before-2027"
   },
   {
     "id": "98369",
     "question": "Will Finland win Eurovision 2026?",
     "current_price": 0.401,
-    "volume": 19227151,
-    "nexus_score": 82.7,
+    "volume": 19228355,
+    "nexus_score": 82.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.03,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 12.48,
     "sparkline": [
       {
-        "p": 0.389
+        "p": 0.3885
       },
       {
-        "p": 0.399
+        "p": 0.402
+      },
+      {
+        "p": 0.397
       },
       {
         "p": 0.4025
-      },
-      {
-        "p": 0.4045
       },
       {
         "p": 0.401
       }
     ],
     "c1": 81.0,
-    "c2": 19.6,
+    "c2": 19.5,
     "c3": 97.3,
-    "c4": 55.1,
+    "c4": 54.6,
     "slug": "eurovision-winner-2026"
   },
   {
@@ -828,17 +828,17 @@
     "question": "Will Drake release Iceman before GTA VI?",
     "current_price": 0.9025,
     "volume": 19127354,
-    "nexus_score": 74.6,
+    "nexus_score": 75.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -3.78,
     "sparkline": [
       {
-        "p": 0.901
+        "p": 0.9015
       },
       {
         "p": 0.9025
@@ -847,14 +847,14 @@
         "p": 0.9025
       },
       {
-        "p": 0.902
+        "p": 0.9015
       },
       {
         "p": 0.9025
       }
     ],
     "c1": 81.0,
-    "c2": 15.3,
+    "c2": 15.9,
     "c3": 100.0,
     "c4": 42.9,
     "slug": "what-will-happen-before-gta-vi"
@@ -863,12 +863,12 @@
     "id": "34051",
     "question": "Netanyahu out by end of 2026?",
     "current_price": 0.425,
-    "volume": 18328813,
-    "nexus_score": 45.9,
+    "volume": 18339770,
+    "nexus_score": 45.7,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -15.84,
     "sparkline": [
       {
@@ -888,7 +888,7 @@
       }
     ],
     "c1": 80.7,
-    "c2": 6.8,
+    "c2": 6.6,
     "c3": 99.3,
     "c4": 0.0,
     "slug": "netanyahu-out-before-2027"
@@ -897,12 +897,12 @@
     "id": "108634",
     "question": "Will the Iranian regime fall by June 30?",
     "current_price": 0.285,
-    "volume": 17499483,
-    "nexus_score": 66.3,
+    "volume": 17499589,
+    "nexus_score": 65.9,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -9.52,
     "sparkline": [
       {
@@ -922,21 +922,21 @@
       }
     ],
     "c1": 80.3,
-    "c2": 13.0,
+    "c2": 12.8,
     "c3": 100.0,
-    "c4": 26.3,
+    "c4": 25.4,
     "slug": "will-the-iranian-regime-fall-by-june-30"
   },
   {
     "id": "90177",
     "question": "Will the US confirm that aliens exist before 2027?",
     "current_price": 0.145,
-    "volume": 17119986,
-    "nexus_score": 76.0,
+    "volume": 17119991,
+    "nexus_score": 75.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -17.14,
     "sparkline": [
       {
@@ -946,7 +946,7 @@
         "p": 0.155
       },
       {
-        "p": 0.155
+        "p": 0.145
       },
       {
         "p": 0.145
@@ -956,30 +956,30 @@
       }
     ],
     "c1": 80.3,
-    "c2": 14.5,
+    "c2": 14.3,
     "c3": 100.0,
-    "c4": 49.7,
+    "c4": 49.1,
     "slug": "will-the-us-confirm-that-aliens-exist-before-2027"
   },
   {
     "id": "86832",
     "question": "Will Caesars Entertainment, Inc. be acquired before 2027?",
     "current_price": 0.58,
-    "volume": 17106545,
-    "nexus_score": 43.6,
+    "volume": 17106761,
+    "nexus_score": 43.0,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
-        "p": 0.575
+        "p": 0.565
       },
       {
-        "p": 0.68
+        "p": 0.685
       },
       {
         "p": 0.58
@@ -992,55 +992,55 @@
       }
     ],
     "c1": 80.3,
-    "c2": 3.0,
+    "c2": 2.9,
     "c3": 100.0,
-    "c4": 4.3,
+    "c4": 2.6,
     "slug": "which-companies-will-be-acquired-before-2027"
   },
   {
     "id": "63766",
     "question": "Will Emmanuel Gr\u00e9goire win the Paris mayor election?",
-    "current_price": 0.955,
-    "volume": 16823620,
-    "nexus_score": 61.2,
+    "current_price": 0.93,
+    "volume": 16839492,
+    "nexus_score": 58.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 41.48,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 37.78,
     "sparkline": [
       {
-        "p": 0.905
+        "p": 0.93
       },
       {
         "p": 0.945
       },
       {
-        "p": 0.94
+        "p": 0.95
       },
       {
         "p": 0.955
       },
       {
-        "p": 0.955
+        "p": 0.93
       }
     ],
     "c1": 80.3,
-    "c2": 9.8,
+    "c2": 7.6,
     "c3": 100.0,
-    "c4": 35.4,
+    "c4": 34.3,
     "slug": "paris-mayoral-election"
   },
   {
     "id": "32756",
     "question": "Will the Oklahoma City Thunder win the NBA Western Conference Finals?",
     "current_price": 0.495,
-    "volume": 15722970,
-    "nexus_score": 64.8,
+    "volume": 15799668,
+    "nexus_score": 64.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 5.32,
     "sparkline": [
       {
@@ -1060,43 +1060,43 @@
       }
     ],
     "c1": 80.0,
-    "c2": 13.8,
+    "c2": 13.6,
     "c3": 100.0,
-    "c4": 34.3,
+    "c4": 33.1,
     "slug": "nba-western-conference-champion-933"
   },
   {
     "id": "106614",
     "question": "Will TISZA \u2013 Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
-    "current_price": 0.625,
-    "volume": 15118606,
-    "nexus_score": 51.6,
+    "current_price": 0.62,
+    "volume": 15118729,
+    "nexus_score": 51.4,
     "market_state": "Volatile",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -0.79,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -1.59,
     "sparkline": [
       {
         "p": 0.645
       },
       {
-        "p": 0.65
+        "p": 0.655
       },
       {
         "p": 0.655
       },
       {
-        "p": 0.625
+        "p": 0.63
       },
       {
-        "p": 0.625
+        "p": 0.62
       }
     ],
     "c1": 79.7,
-    "c2": 3.5,
+    "c2": 3.3,
     "c3": 100.0,
     "c4": 26.0,
     "slug": "hungary-parliamentary-election-winner"
@@ -1106,15 +1106,15 @@
     "question": "Will PSG win the 2025\u201326 French Ligue 1?",
     "current_price": 0.88,
     "volume": 14677561,
-    "nexus_score": 62.1,
+    "nexus_score": 61.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 4.14,
     "sparkline": [
       {
-        "p": 0.91
+        "p": 0.88
       },
       {
         "p": 0.875
@@ -1130,7 +1130,7 @@
       }
     ],
     "c1": 79.7,
-    "c2": 9.9,
+    "c2": 9.6,
     "c3": 100.0,
     "c4": 38.0,
     "slug": "french-ligue-1-winner"
@@ -1139,14 +1139,14 @@
     "id": "236840",
     "question": "US x Iran ceasefire by December 31?",
     "current_price": 0.705,
-    "volume": 14504086,
-    "nexus_score": 56.0,
+    "volume": 14512425,
+    "nexus_score": 54.9,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -1166,21 +1166,21 @@
       }
     ],
     "c1": 79.7,
-    "c2": 11.2,
+    "c2": 10.5,
     "c3": 100.0,
-    "c4": 16.9,
+    "c4": 16.0,
     "slug": "us-x-iran-ceasefire-by"
   },
   {
     "id": "79987",
     "question": "Will Jordan Bardella win the 2027 French presidential election?",
     "current_price": 0.265,
-    "volume": 13816582,
-    "nexus_score": 59.0,
+    "volume": 13818515,
+    "nexus_score": 58.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -3.64,
     "sparkline": [
       {
@@ -1200,7 +1200,7 @@
       }
     ],
     "c1": 79.3,
-    "c2": 15.6,
+    "c2": 15.3,
     "c3": 100.0,
     "c4": 13.4,
     "slug": "next-french-presidential-election"
@@ -1209,14 +1209,14 @@
     "id": "28999",
     "question": "MegaETH market cap (FDV) >$600M one day after launch?",
     "current_price": 0.68,
-    "volume": 13207094,
-    "nexus_score": 75.6,
+    "volume": 13208584,
+    "nexus_score": 75.0,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -1226,7 +1226,7 @@
         "p": 0.685
       },
       {
-        "p": 0.675
+        "p": 0.68
       },
       {
         "p": 0.68
@@ -1236,21 +1236,21 @@
       }
     ],
     "c1": 79.0,
-    "c2": 13.5,
+    "c2": 13.1,
     "c3": 100.0,
-    "c4": 52.6,
+    "c4": 52.0,
     "slug": "megaeth-market-cap-fdv-one-day-after-launch"
   },
   {
     "id": "237089",
     "question": "Will Iran strike Israel on March 10?",
     "current_price": 0.9975,
-    "volume": 12617134,
+    "volume": 12633134,
     "nexus_score": 97.3,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 14.0,
     "sparkline": [
       {
@@ -1278,69 +1278,69 @@
   {
     "id": "32755",
     "question": "Will the Boston Celtics win the NBA Eastern Conference Finals?",
-    "current_price": 0.3265,
-    "volume": 12371345,
-    "nexus_score": 63.5,
+    "current_price": 0.3245,
+    "volume": 12373681,
+    "nexus_score": 63.9,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 1.87,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 1.25,
     "sparkline": [
       {
-        "p": 0.33
+        "p": 0.331
       },
       {
         "p": 0.3355
       },
       {
-        "p": 0.33
+        "p": 0.3345
       },
       {
-        "p": 0.3145
+        "p": 0.311
       },
       {
-        "p": 0.3265
+        "p": 0.3245
       }
     ],
     "c1": 78.7,
-    "c2": 12.3,
+    "c2": 13.1,
     "c3": 100.0,
-    "c4": 35.7,
+    "c4": 34.9,
     "slug": "nba-eastern-conference-champion-442"
   },
   {
     "id": "23792",
     "question": "GTA VI released before June 2026?",
-    "current_price": 0.0265,
-    "volume": 12298681,
-    "nexus_score": 66.8,
+    "current_price": 0.027,
+    "volume": 12301229,
+    "nexus_score": 65.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 29.27,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 31.71,
     "sparkline": [
       {
-        "p": 0.028
+        "p": 0.0255
+      },
+      {
+        "p": 0.0275
       },
       {
         "p": 0.027
       },
       {
-        "p": 0.0265
-      },
-      {
         "p": 0.027
       },
       {
-        "p": 0.0265
+        "p": 0.027
       }
     ],
     "c1": 78.7,
-    "c2": 13.3,
+    "c2": 12.6,
     "c3": 100.0,
-    "c4": 42.6,
+    "c4": 40.6,
     "slug": "gta-vi-released-before-june-2026"
   },
   {
@@ -1348,11 +1348,11 @@
     "question": "Russia x Ukraine ceasefire by end of 2026?",
     "current_price": 0.385,
     "volume": 11713841,
-    "nexus_score": 72.3,
+    "nexus_score": 72.1,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -2.53,
     "sparkline": [
       {
@@ -1372,9 +1372,9 @@
       }
     ],
     "c1": 78.7,
-    "c2": 15.8,
+    "c2": 15.7,
     "c3": 100.0,
-    "c4": 36.9,
+    "c4": 36.6,
     "slug": "russia-x-ukraine-ceasefire-before-2027"
   },
   {
@@ -1382,21 +1382,21 @@
     "question": "Will China invade Taiwan by end of 2026?",
     "current_price": 0.1105,
     "volume": 11108428,
-    "nexus_score": 77.9,
+    "nexus_score": 77.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 6.25,
     "sparkline": [
       {
-        "p": 0.114
+        "p": 0.1145
       },
       {
-        "p": 0.1085
+        "p": 0.1135
       },
       {
-        "p": 0.115
+        "p": 0.1155
       },
       {
         "p": 0.114
@@ -1406,21 +1406,21 @@
       }
     ],
     "c1": 78.3,
-    "c2": 19.4,
+    "c2": 19.2,
     "c3": 100.0,
-    "c4": 42.9,
+    "c4": 41.7,
     "slug": "will-china-invade-taiwan-before-2027"
   },
   {
     "id": "79039",
     "question": "Will NVIDIA be the largest company in the world by market cap on March 31?",
     "current_price": 0.987,
-    "volume": 10636939,
-    "nexus_score": 96.5,
+    "volume": 10655133,
+    "nexus_score": 96.6,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 6.7,
     "sparkline": [
       {
@@ -1449,14 +1449,17 @@
     "id": "31889",
     "question": "Will John Cornyn win the 2026 Texas Republican Primary?",
     "current_price": 0.595,
-    "volume": 10424722,
-    "nexus_score": 75.1,
+    "volume": 10426871,
+    "nexus_score": 72.9,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -1.65,
     "sparkline": [
+      {
+        "p": 0.595
+      },
       {
         "p": 0.59
       },
@@ -1465,30 +1468,27 @@
       },
       {
         "p": 0.595
-      },
-      {
-        "p": 0.59
       },
       {
         "p": 0.595
       }
     ],
     "c1": 78.0,
-    "c2": 15.9,
+    "c2": 14.1,
     "c3": 100.0,
-    "c4": 45.4,
+    "c4": 44.0,
     "slug": "texas-republican-senate-primary-winner"
   },
   {
     "id": "72347",
     "question": "Will the Iranian regime fall before 2027?",
     "current_price": 0.395,
-    "volume": 10363637,
-    "nexus_score": 67.6,
+    "volume": 10363650,
+    "nexus_score": 67.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -2.47,
     "sparkline": [
       {
@@ -1501,50 +1501,50 @@
         "p": 0.385
       },
       {
-        "p": 0.375
+        "p": 0.395
       },
       {
         "p": 0.395
       }
     ],
     "c1": 78.0,
-    "c2": 13.8,
+    "c2": 13.7,
     "c3": 100.0,
-    "c4": 29.7,
+    "c4": 29.4,
     "slug": "will-the-iranian-regime-fall-by-the-end-of-2026"
   },
   {
     "id": "238477",
     "question": "Will Ethereum reach $2,400 in March?",
-    "current_price": 0.605,
-    "volume": 10040838,
-    "nexus_score": 85.8,
+    "current_price": 0.595,
+    "volume": 10054694,
+    "nexus_score": 85.4,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 128.3,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 124.53,
     "sparkline": [
       {
-        "p": 0.465
+        "p": 0.485
       },
       {
-        "p": 0.63
+        "p": 0.66
       },
       {
-        "p": 0.665
+        "p": 0.655
       },
       {
-        "p": 0.635
+        "p": 0.62
       },
       {
-        "p": 0.605
+        "p": 0.595
       }
     ],
     "c1": 77.7,
-    "c2": 21.7,
+    "c2": 21.2,
     "c3": 100.0,
     "c4": 59.4,
     "slug": "what-price-will-ethereum-hit-in-march-2026"
@@ -1553,12 +1553,12 @@
     "id": "51456",
     "question": "Will 1 Fed rate cut happen in 2026?",
     "current_price": 0.29,
-    "volume": 9787117,
-    "nexus_score": 68.1,
+    "volume": 9787523,
+    "nexus_score": 67.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 9.43,
     "sparkline": [
       {
@@ -1571,48 +1571,48 @@
         "p": 0.305
       },
       {
-        "p": 0.295
+        "p": 0.285
       },
       {
         "p": 0.29
       }
     ],
     "c1": 77.7,
-    "c2": 15.4,
+    "c2": 15.1,
     "c3": 100.0,
-    "c4": 27.1,
+    "c4": 25.4,
     "slug": "how-many-fed-rate-cuts-in-2026"
   },
   {
     "id": "96022",
     "question": "Will Anthropic have the best AI model at the end of March 2026?",
-    "current_price": 0.907,
-    "volume": 9600085,
-    "nexus_score": 62.1,
+    "current_price": 0.9065,
+    "volume": 9602806,
+    "nexus_score": 62.0,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 18.1,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 18.03,
     "sparkline": [
       {
-        "p": 0.8975
+        "p": 0.8985
       },
       {
-        "p": 0.898
+        "p": 0.905
       },
       {
         "p": 0.902
       },
       {
-        "p": 0.9065
+        "p": 0.907
       },
       {
-        "p": 0.907
+        "p": 0.9065
       }
     ],
     "c1": 77.7,
-    "c2": 11.4,
+    "c2": 11.3,
     "c3": 100.0,
     "c4": 35.4,
     "slug": "which-company-has-the-best-ai-model-end-of-march-751"
@@ -1621,12 +1621,12 @@
     "id": "34584",
     "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
     "current_price": 0.385,
-    "volume": 9596529,
-    "nexus_score": 89.4,
+    "volume": 9597102,
+    "nexus_score": 89.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -14.44,
     "sparkline": [
       {
@@ -1646,7 +1646,7 @@
       }
     ],
     "c1": 77.7,
-    "c2": 22.7,
+    "c2": 22.6,
     "c3": 100.0,
     "c4": 66.9,
     "slug": "colombia-presidential-election"
@@ -1655,24 +1655,24 @@
     "id": "251243",
     "question": "Will Elon Musk post 280-299 tweets from March 10 to March 17, 2026?",
     "current_price": 0.355,
-    "volume": 9249480,
-    "nexus_score": 47.4,
+    "volume": 9268100,
+    "nexus_score": 47.3,
     "market_state": "Volatile",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 373.33,
     "sparkline": [
       {
         "p": 0.335
       },
       {
-        "p": 0.335
+        "p": 0.345
       },
       {
-        "p": 0.345
+        "p": 0.355
       },
       {
         "p": 0.345
@@ -1682,21 +1682,21 @@
       }
     ],
     "c1": 77.3,
-    "c2": 2.1,
+    "c2": 1.9,
     "c3": 100.0,
-    "c4": 20.3,
+    "c4": 20.6,
     "slug": "elon-musk-of-tweets-march-10-march-17"
   },
   {
     "id": "60182",
     "question": "Will Volodymyr Zelenskyy win the Nobel Peace Prize in 2026?",
     "current_price": 0.138,
-    "volume": 9132235,
+    "volume": 9135785,
     "nexus_score": 86.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 14.52,
     "sparkline": [
       {
@@ -1725,12 +1725,12 @@
     "id": "148292",
     "question": "Will the US acquire part of Greenland in 2026?",
     "current_price": 0.165,
-    "volume": 8939968,
+    "volume": 8940301,
     "nexus_score": 81.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 6.45,
     "sparkline": [
       {
@@ -1759,19 +1759,19 @@
     "id": "75478",
     "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
     "current_price": 0.945,
-    "volume": 8153904,
-    "nexus_score": 81.3,
+    "volume": 8154804,
+    "nexus_score": 80.8,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 13.17,
     "sparkline": [
       {
         "p": 0.945
       },
       {
-        "p": 0.945
+        "p": 0.935
       },
       {
         "p": 0.935
@@ -1784,21 +1784,21 @@
       }
     ],
     "c1": 76.7,
-    "c2": 16.7,
+    "c2": 16.5,
     "c3": 100.0,
-    "c4": 61.4,
+    "c4": 60.6,
     "slug": "fed-decision-in-april"
   },
   {
     "id": "202857",
     "question": "Will the Seattle Seahawks win the 2027 NFL league championship?",
     "current_price": 0.115,
-    "volume": 7835286,
-    "nexus_score": 74.1,
+    "volume": 7835634,
+    "nexus_score": 73.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -1818,21 +1818,21 @@
       }
     ],
     "c1": 76.7,
-    "c2": 19.2,
+    "c2": 19.1,
     "c3": 100.0,
-    "c4": 34.0,
+    "c4": 33.7,
     "slug": "big-game-champion-2027"
   },
   {
     "id": "238094",
     "question": "Will Saudi Arabia strike Iran by March 31?",
     "current_price": 0.155,
-    "volume": 7458514,
-    "nexus_score": 55.4,
+    "volume": 7459565,
+    "nexus_score": 54.9,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -53.73,
     "sparkline": [
       {
@@ -1845,14 +1845,14 @@
         "p": 0.155
       },
       {
-        "p": 0.145
+        "p": 0.155
       },
       {
         "p": 0.155
       }
     ],
     "c1": 76.3,
-    "c2": 12.3,
+    "c2": 11.8,
     "c3": 100.0,
     "c4": 14.9,
     "slug": "which-countries-will-strike-iran-by-march-31"
@@ -1861,16 +1861,16 @@
     "id": "73968",
     "question": "Trump out as President by March 31?",
     "current_price": 0.008,
-    "volume": 7298044,
-    "nexus_score": 62.6,
+    "volume": 7306514,
+    "nexus_score": 62.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -44.83,
     "sparkline": [
       {
-        "p": 0.007
+        "p": 0.0075
       },
       {
         "p": 0.0075
@@ -1886,7 +1886,7 @@
       }
     ],
     "c1": 76.3,
-    "c2": 10.7,
+    "c2": 10.4,
     "c3": 100.0,
     "c4": 40.0,
     "slug": "trump-out-as-president-by-march-31"
@@ -1895,32 +1895,32 @@
     "id": "30828",
     "question": "Xi Jinping out before 2027?",
     "current_price": 0.088,
-    "volume": 7241358,
-    "nexus_score": 86.7,
+    "volume": 7241365,
+    "nexus_score": 86.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 1.15,
     "sparkline": [
       {
-        "p": 0.086
+        "p": 0.087
+      },
+      {
+        "p": 0.0875
+      },
+      {
+        "p": 0.0885
       },
       {
         "p": 0.087
       },
       {
         "p": 0.088
-      },
-      {
-        "p": 0.0885
-      },
-      {
-        "p": 0.088
       }
     ],
     "c1": 76.3,
-    "c2": 21.6,
+    "c2": 21.5,
     "c3": 100.0,
     "c4": 63.4,
     "slug": "xi-jinping-out-before-2027"
@@ -1928,16 +1928,16 @@
   {
     "id": "255195",
     "question": "Iran leadership change by December 31?",
-    "current_price": 0.655,
-    "volume": 7218823,
-    "nexus_score": 42.7,
+    "current_price": 0.66,
+    "volume": 7219651,
+    "nexus_score": 42.1,
     "market_state": "Volatile",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 8.26,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 9.09,
     "sparkline": [
       {
         "p": 0.675
@@ -1949,14 +1949,14 @@
         "p": 0.675
       },
       {
-        "p": 0.67
+        "p": 0.665
       },
       {
-        "p": 0.655
+        "p": 0.66
       }
     ],
     "c1": 76.3,
-    "c2": 4.8,
+    "c2": 4.3,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "iran-leadership-change-by"
@@ -1965,14 +1965,14 @@
     "id": "91942",
     "question": "Will there be at least 2000 measles cases in the U.S. in 2026?",
     "current_price": 0.9905,
-    "volume": 7144760,
-    "nexus_score": 54.2,
+    "volume": 7144765,
+    "nexus_score": 53.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
-    "macro_sensitivity": 0.07,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "macro_sensitivity": 0.08,
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 1.64,
     "sparkline": [
       {
@@ -1992,28 +1992,28 @@
       }
     ],
     "c1": 76.0,
-    "c2": 6.1,
+    "c2": 5.7,
     "c3": 92.7,
-    "c4": 32.6,
+    "c4": 30.6,
     "slug": "measles-cases-in-us-in-2026"
   },
   {
     "id": "139507",
     "question": "Will Reza Pahlavi enter Iran by December 31?",
     "current_price": 0.245,
-    "volume": 7110736,
-    "nexus_score": 58.4,
+    "volume": 7111747,
+    "nexus_score": 57.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -22.22,
     "sparkline": [
       {
         "p": 0.245
       },
       {
-        "p": 0.255
+        "p": 0.25
       },
       {
         "p": 0.25
@@ -2026,41 +2026,43 @@
       }
     ],
     "c1": 76.0,
-    "c2": 13.1,
+    "c2": 12.9,
     "c3": 100.0,
-    "c4": 21.1,
+    "c4": 20.0,
     "slug": "will-reza-pahlavi-enter-iran-by-june-30"
   },
   {
     "id": "89456",
     "question": "Will China invade Taiwan by March 31, 2026?",
-    "current_price": 0.0135,
-    "volume": 6937113,
-    "nexus_score": 57.2,
-    "market_state": "Low Confidence",
-    "flags": [],
+    "current_price": 0.013,
+    "volume": 6938780,
+    "nexus_score": 56.8,
+    "market_state": "Volatile",
+    "flags": [
+      "Contested"
+    ],
     "macro_sensitivity": 0.03,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 17.39,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 13.04,
     "sparkline": [
       {
-        "p": 0.016
+        "p": 0.0145
       },
       {
-        "p": 0.0125
+        "p": 0.0155
       },
       {
-        "p": 0.022
+        "p": 0.0205
       },
       {
-        "p": 0.0135
+        "p": 0.0155
       },
       {
-        "p": 0.0135
+        "p": 0.013
       }
     ],
     "c1": 76.0,
-    "c2": 6.3,
+    "c2": 5.9,
     "c3": 97.3,
     "c4": 38.6,
     "slug": "will-china-invade-taiwan-by-march-31-2026"
@@ -2068,47 +2070,47 @@
   {
     "id": "246219",
     "question": "Will Kevin Warsh be confirmed as Fed Chair?",
-    "current_price": 0.9485,
-    "volume": 6935341,
-    "nexus_score": 82.9,
+    "current_price": 0.9495,
+    "volume": 6935483,
+    "nexus_score": 82.3,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 0.64,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 0.74,
     "sparkline": [
       {
-        "p": 0.948
+        "p": 0.949
+      },
+      {
+        "p": 0.9515
+      },
+      {
+        "p": 0.949
       },
       {
         "p": 0.9495
       },
       {
         "p": 0.9495
-      },
-      {
-        "p": 0.9495
-      },
-      {
-        "p": 0.9485
       }
     ],
     "c1": 76.0,
-    "c2": 19.2,
+    "c2": 19.0,
     "c3": 100.0,
-    "c4": 59.7,
+    "c4": 58.6,
     "slug": "who-will-be-confirmed-as-fed-chair"
   },
   {
     "id": "248032",
     "question": "Will the Iranian regime fall by April 30?",
     "current_price": 0.155,
-    "volume": 5786090,
-    "nexus_score": 63.6,
+    "volume": 5786168,
+    "nexus_score": 62.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -16.22,
     "sparkline": [
       {
@@ -2128,21 +2130,21 @@
       }
     ],
     "c1": 75.0,
-    "c2": 12.8,
+    "c2": 12.6,
     "c3": 100.0,
-    "c4": 23.7,
+    "c4": 22.0,
     "slug": "will-the-iranian-regime-fall-by-april-30"
   },
   {
     "id": "179312",
     "question": "Will the Los Angeles Dodgers win the 2026 World Series?",
     "current_price": 0.285,
-    "volume": 5635956,
-    "nexus_score": 55.6,
+    "volume": 5636700,
+    "nexus_score": 54.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.64,
     "sparkline": [
       {
@@ -2162,23 +2164,23 @@
       }
     ],
     "c1": 75.0,
-    "c2": 13.3,
+    "c2": 13.1,
     "c3": 100.0,
-    "c4": 13.7,
+    "c4": 12.0,
     "slug": "pro-baseball-world-series-champion-2026"
   },
   {
     "id": "236884",
     "question": "Iran x Israel/US conflict ends by December 31?",
     "current_price": 0.845,
-    "volume": 5540709,
-    "nexus_score": 42.8,
+    "volume": 5540793,
+    "nexus_score": 42.6,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2198,7 +2200,7 @@
       }
     ],
     "c1": 75.0,
-    "c2": 5.3,
+    "c2": 5.1,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "iran-x-israelus-conflict-ends-by"
@@ -2208,13 +2210,13 @@
     "question": "Puffpaw FDV above $50M one day after launch?",
     "current_price": 0.635,
     "volume": 4950209,
-    "nexus_score": 61.1,
+    "nexus_score": 60.8,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -3.79,
     "sparkline": [
       {
@@ -2236,21 +2238,21 @@
     "c1": 74.3,
     "c2": 9.6,
     "c3": 100.0,
-    "c4": 40.6,
+    "c4": 39.4,
     "slug": "puffpaw-fdv-above-one-day-after-launch"
   },
   {
     "id": "73835",
     "question": "EdgeX FDV above $300M one day after launch?",
     "current_price": 0.905,
-    "volume": 4842781,
-    "nexus_score": 68.9,
+    "volume": 4842792,
+    "nexus_score": 68.4,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2260,7 +2262,7 @@
         "p": 0.895
       },
       {
-        "p": 0.91
+        "p": 0.905
       },
       {
         "p": 0.905
@@ -2270,21 +2272,21 @@
       }
     ],
     "c1": 74.3,
-    "c2": 12.3,
+    "c2": 12.1,
     "c3": 100.0,
-    "c4": 55.1,
+    "c4": 54.3,
     "slug": "edgex-fdv-above-one-day-after-launch"
   },
   {
     "id": "79973",
     "question": "Will Chong Won-oh win the 2026 Seoul Mayoral Election",
     "current_price": 0.835,
-    "volume": 4725556,
-    "nexus_score": 90.5,
+    "volume": 4726098,
+    "nexus_score": 90.6,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2304,7 +2306,7 @@
       }
     ],
     "c1": 74.0,
-    "c2": 22.9,
+    "c2": 23.0,
     "c3": 100.0,
     "c4": 72.3,
     "slug": "2026-seoul-mayoral-election-winner"
@@ -2313,12 +2315,12 @@
     "id": "106811",
     "question": "Bitcoin all time high by December 31, 2026?",
     "current_price": 0.19,
-    "volume": 4644243,
-    "nexus_score": 55.2,
+    "volume": 4644279,
+    "nexus_score": 54.6,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 15.15,
     "sparkline": [
       {
@@ -2338,24 +2340,24 @@
       }
     ],
     "c1": 74.0,
-    "c2": 9.8,
+    "c2": 9.6,
     "c3": 100.0,
-    "c4": 23.4,
+    "c4": 22.3,
     "slug": "bitcoin-all-time-high-by"
   },
   {
     "id": "174562",
     "question": "Nuggets vs. Grizzlies: O/U 222.5",
-    "current_price": 0.9345,
-    "volume": 4626763,
-    "nexus_score": 63.9,
+    "current_price": 0.9365,
+    "volume": 4627248,
+    "nexus_score": 63.7,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 36.42,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 36.72,
     "sparkline": [
       {
         "p": 0.915
@@ -2364,19 +2366,19 @@
         "p": 0.915
       },
       {
-        "p": 0.96
+        "p": 0.938
       },
       {
-        "p": 0.936
+        "p": 0.9365
       },
       {
-        "p": 0.9345
+        "p": 0.9365
       }
     ],
     "c1": 74.0,
     "c2": 0.0,
     "c3": 100.0,
-    "c4": 61.7,
+    "c4": 61.4,
     "slug": "nba-den-mem-2026-01-25"
   },
   {
@@ -2388,7 +2390,7 @@
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2418,13 +2420,13 @@
     "question": "Opensea FDV above $100M one day after launch?",
     "current_price": 0.905,
     "volume": 4553273,
-    "nexus_score": 72.9,
+    "nexus_score": 72.7,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.06,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -2.69,
     "sparkline": [
       {
@@ -2444,41 +2446,41 @@
       }
     ],
     "c1": 74.0,
-    "c2": 10.0,
+    "c2": 9.9,
     "c3": 100.0,
-    "c4": 59.1,
+    "c4": 58.9,
     "slug": "opensea-fdv-above-one-day-after-launch"
   },
   {
     "id": "79223",
     "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "current_price": 0.755,
-    "volume": 4400787,
-    "nexus_score": 43.5,
+    "current_price": 0.76,
+    "volume": 4403328,
+    "nexus_score": 41.6,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 22.76,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 23.58,
     "sparkline": [
       {
         "p": 0.635
       },
       {
-        "p": 0.655
+        "p": 0.66
       },
       {
-        "p": 0.725
+        "p": 0.735
       },
       {
-        "p": 0.75
+        "p": 0.765
       },
       {
-        "p": 0.755
+        "p": 0.76
       }
     ],
     "c1": 73.7,
-    "c2": 6.4,
+    "c2": 4.4,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "will-israel-launch-a-major-ground-offensive-in-lebanon-by-march-31"
@@ -2487,14 +2489,14 @@
     "id": "80066",
     "question": "Backpack FDV above $100M one day after launch?",
     "current_price": 0.9855,
-    "volume": 4331738,
-    "nexus_score": 45.3,
+    "volume": 4332002,
+    "nexus_score": 45.0,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.92,
     "sparkline": [
       {
@@ -2507,7 +2509,7 @@
         "p": 0.9865
       },
       {
-        "p": 0.9855
+        "p": 0.986
       },
       {
         "p": 0.9855
@@ -2516,31 +2518,31 @@
     "c1": 73.7,
     "c2": 7.9,
     "c3": 100.0,
-    "c4": 0.9,
+    "c4": 0.0,
     "slug": "backpack-fdv-above-one-day-after-launch"
   },
   {
     "id": "256483",
     "question": "Will the price of Bitcoin be above $66,000 on March 16?",
     "current_price": 0.9995,
-    "volume": 4099019,
-    "nexus_score": 44.5,
+    "volume": 4121885,
+    "nexus_score": 44.3,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 1.52,
     "sparkline": [
       {
-        "p": 0.9975
+        "p": 0.9985
       },
       {
-        "p": 0.9995
+        "p": 0.9985
       },
       {
-        "p": 0.9995
+        "p": 0.9985
       },
       {
         "p": 0.9995
@@ -2549,8 +2551,8 @@
         "p": 0.9995
       }
     ],
-    "c1": 73.3,
-    "c2": 7.4,
+    "c1": 73.7,
+    "c2": 7.2,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "bitcoin-above-on-march-16"
@@ -2560,11 +2562,11 @@
     "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "current_price": 0.845,
     "volume": 3838404,
-    "nexus_score": 67.3,
+    "nexus_score": 66.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2574,7 +2576,7 @@
         "p": 0.835
       },
       {
-        "p": 0.84
+        "p": 0.835
       },
       {
         "p": 0.835
@@ -2584,21 +2586,21 @@
       }
     ],
     "c1": 73.0,
-    "c2": 13.8,
+    "c2": 13.6,
     "c3": 100.0,
-    "c4": 33.1,
+    "c4": 31.7,
     "slug": "which-party-will-win-the-house-in-2026"
   },
   {
     "id": "100394",
     "question": "Will Mercedes be the 2026 F1 Constructors' Champion?",
     "current_price": 0.805,
-    "volume": 3795264,
-    "nexus_score": 59.0,
+    "volume": 3796457,
+    "nexus_score": 58.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 22.9,
     "sparkline": [
       {
@@ -2618,7 +2620,7 @@
       }
     ],
     "c1": 73.0,
-    "c2": 10.8,
+    "c2": 10.5,
     "c3": 100.0,
     "c4": 32.3,
     "slug": "f1-constructors-champion"
@@ -2626,49 +2628,49 @@
   {
     "id": "211821",
     "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "current_price": 0.066,
-    "volume": 3793407,
-    "nexus_score": 76.9,
+    "current_price": 0.0635,
+    "volume": 3793882,
+    "nexus_score": 76.6,
     "market_state": "Active",
     "flags": [],
-    "macro_sensitivity": 0.03,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -67.88,
+    "macro_sensitivity": 0.05,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -69.1,
     "sparkline": [
       {
-        "p": 0.0835
+        "p": 0.0825
       },
       {
-        "p": 0.0725
+        "p": 0.073
       },
       {
         "p": 0.0695
       },
       {
-        "p": 0.0685
+        "p": 0.0675
       },
       {
-        "p": 0.066
+        "p": 0.0635
       }
     ],
     "c1": 73.0,
-    "c2": 16.8,
-    "c3": 96.7,
-    "c4": 53.4,
+    "c2": 16.3,
+    "c3": 95.3,
+    "c4": 54.3,
     "slug": "will-france-uk-or-germany-strike-iran-by-march-31-929"
   },
   {
     "id": "69987",
     "question": "Will Duke win the 2026 NCAA Tournament?",
     "current_price": 0.205,
-    "volume": 3783884,
-    "nexus_score": 71.9,
+    "volume": 3791907,
+    "nexus_score": 71.3,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -2.38,
     "sparkline": [
       {
@@ -2678,19 +2680,19 @@
         "p": 0.195
       },
       {
-        "p": 0.205
+        "p": 0.2
       },
       {
-        "p": 0.21
+        "p": 0.205
       },
       {
         "p": 0.205
       }
     ],
     "c1": 73.0,
-    "c2": 15.9,
+    "c2": 15.6,
     "c3": 100.0,
-    "c4": 40.6,
+    "c4": 39.4,
     "slug": "2026-ncaa-tournament-winner"
   },
   {
@@ -2698,11 +2700,11 @@
     "question": "2026 Balance of Power: D Senate, D House",
     "current_price": 0.475,
     "volume": 3620670,
-    "nexus_score": 77.4,
+    "nexus_score": 77.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 9.2,
     "sparkline": [
       {
@@ -2722,21 +2724,21 @@
       }
     ],
     "c1": 73.0,
-    "c2": 18.3,
+    "c2": 18.2,
     "c3": 100.0,
-    "c4": 49.4,
+    "c4": 49.1,
     "slug": "balance-of-power-2026-midterms"
   },
   {
     "id": "160707",
     "question": "Russia x Ukraine ceasefire by June 30, 2026?",
     "current_price": 0.185,
-    "volume": 3339979,
-    "nexus_score": 74.0,
+    "volume": 3339980,
+    "nexus_score": 74.6,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 15.62,
     "sparkline": [
       {
@@ -2756,23 +2758,23 @@
       }
     ],
     "c1": 72.3,
-    "c2": 15.3,
+    "c2": 15.6,
     "c3": 100.0,
-    "c4": 48.6,
+    "c4": 49.4,
     "slug": "russia-x-ukraine-ceasefire-by-june-30-2026"
   },
   {
     "id": "79048",
     "question": "Cerebras IPO before 2027?",
     "current_price": 0.945,
-    "volume": 3257491,
-    "nexus_score": 47.2,
+    "volume": 3257581,
+    "nexus_score": 46.6,
     "market_state": "Low Confidence",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 9.88,
     "sparkline": [
       {
@@ -2794,7 +2796,7 @@
     "c1": 72.3,
     "c2": 4.6,
     "c3": 100.0,
-    "c4": 17.1,
+    "c4": 15.1,
     "slug": "ipos-before-2027"
   },
   {
@@ -2802,11 +2804,11 @@
     "question": "Will the US officially declare war on Iran by December 31, 2026?",
     "current_price": 0.105,
     "volume": 3180181,
-    "nexus_score": 45.4,
+    "nexus_score": 45.1,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -8.7,
     "sparkline": [
       {
@@ -2826,7 +2828,7 @@
       }
     ],
     "c1": 72.3,
-    "c2": 8.8,
+    "c2": 8.4,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "will-the-us-officially-declare-war-on-iran-by"
@@ -2836,31 +2838,31 @@
     "question": "Will Seattle Seahawks win the 2027 NFL NFC Championship?",
     "current_price": 0.195,
     "volume": 3125465,
-    "nexus_score": 44.4,
+    "nexus_score": 44.2,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 25.81,
     "sparkline": [
       {
         "p": 0.19
       },
       {
-        "p": 0.2
+        "p": 0.195
+      },
+      {
+        "p": 0.19
       },
       {
         "p": 0.19
       },
       {
         "p": 0.195
-      },
-      {
-        "p": 0.195
       }
     ],
     "c1": 72.0,
-    "c2": 7.8,
+    "c2": 7.6,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "pro-football-2027-nfc-champion"
@@ -2868,14 +2870,14 @@
   {
     "id": "78016",
     "question": "Based FDV above $100M one day after launch?",
-    "current_price": 0.365,
+    "current_price": 0.37,
     "volume": 3054900,
-    "nexus_score": 75.2,
+    "nexus_score": 74.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -19.78,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -18.68,
     "sparkline": [
       {
         "p": 0.395
@@ -2884,41 +2886,41 @@
         "p": 0.375
       },
       {
+        "p": 0.375
+      },
+      {
+        "p": 0.355
+      },
+      {
         "p": 0.37
-      },
-      {
-        "p": 0.36
-      },
-      {
-        "p": 0.365
       }
     ],
     "c1": 72.0,
-    "c2": 15.2,
+    "c2": 14.5,
     "c3": 100.0,
-    "c4": 52.6,
+    "c4": 52.3,
     "slug": "based-fdv-above-one-day-after-launch"
   },
   {
     "id": "257217",
     "question": "Will Elon Musk post 260-279 tweets from March 13 to March 20, 2026?",
     "current_price": 0.155,
-    "volume": 3006369,
-    "nexus_score": 50.1,
+    "volume": 3008240,
+    "nexus_score": 49.1,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 106.67,
     "sparkline": [
       {
         "p": 0.115
       },
       {
-        "p": 0.115
+        "p": 0.12
       },
       {
-        "p": 0.115
+        "p": 0.125
       },
       {
         "p": 0.145
@@ -2928,10 +2930,46 @@
       }
     ],
     "c1": 72.0,
-    "c2": 11.9,
+    "c2": 11.5,
     "c3": 100.0,
-    "c4": 4.6,
+    "c4": 2.9,
     "slug": "elon-musk-of-tweets-march-13-march-20"
+  },
+  {
+    "id": "263375",
+    "question": "Will Elon Musk post 40-64 tweets from March 14 to March 16, 2026?",
+    "current_price": 0.85,
+    "volume": 2896285,
+    "nexus_score": 49.5,
+    "market_state": "Volatile",
+    "flags": [
+      "Contested"
+    ],
+    "macro_sensitivity": 0.0,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 54.55,
+    "sparkline": [
+      {
+        "p": 0.67
+      },
+      {
+        "p": 0.665
+      },
+      {
+        "p": 0.75
+      },
+      {
+        "p": 0.835
+      },
+      {
+        "p": 0.85
+      }
+    ],
+    "c1": 71.7,
+    "c2": 2.8,
+    "c3": 100.0,
+    "c4": 28.9,
+    "slug": "elon-musk-of-tweets-march-14-march-16"
   },
   {
     "id": "42365",
@@ -2942,7 +2980,7 @@
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -2972,33 +3010,33 @@
     "question": "Will Elon Musk buy Ryanair?",
     "current_price": 0.0125,
     "volume": 2829261,
-    "nexus_score": 66.9,
+    "nexus_score": 66.0,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
-        "p": 0.0125
-      },
-      {
-        "p": 0.0135
-      },
-      {
-        "p": 0.0135
+        "p": 0.012
       },
       {
         "p": 0.013
+      },
+      {
+        "p": 0.0135
+      },
+      {
+        "p": 0.0125
       },
       {
         "p": 0.0125
       }
     ],
     "c1": 71.7,
-    "c2": 15.1,
+    "c2": 14.9,
     "c3": 100.0,
-    "c4": 43.7,
+    "c4": 41.7,
     "slug": "will-elon-musk-buy-ryanair"
   },
   {
@@ -3006,31 +3044,31 @@
     "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
     "current_price": 0.465,
     "volume": 2819604,
-    "nexus_score": 58.4,
+    "nexus_score": 58.0,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -23.14,
     "sparkline": [
       {
-        "p": 0.535
-      },
-      {
-        "p": 0.575
+        "p": 0.55
       },
       {
         "p": 0.565
       },
       {
-        "p": 0.5
+        "p": 0.565
+      },
+      {
+        "p": 0.48
       },
       {
         "p": 0.465
       }
     ],
     "c1": 71.7,
-    "c2": 13.6,
+    "c2": 13.2,
     "c3": 100.0,
     "c4": 23.7,
     "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
@@ -3039,32 +3077,32 @@
     "id": "79926",
     "question": "Will Israel strike 4 countries in 2026?",
     "current_price": 0.326,
-    "volume": 2812059,
-    "nexus_score": 59.7,
+    "volume": 2812066,
+    "nexus_score": 59.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 38.14,
     "sparkline": [
       {
         "p": 0.3385
       },
       {
-        "p": 0.338
-      },
-      {
         "p": 0.3385
       },
       {
-        "p": 0.3355
+        "p": 0.3295
+      },
+      {
+        "p": 0.335
       },
       {
         "p": 0.326
       }
     ],
     "c1": 71.7,
-    "c2": 14.2,
+    "c2": 14.0,
     "c3": 99.3,
     "c4": 26.0,
     "slug": "how-many-different-countries-will-israel-strike-in-2026"
@@ -3074,11 +3112,11 @@
     "question": "Will another country strike Iran by March 31?",
     "current_price": 0.235,
     "volume": 2803730,
-    "nexus_score": 48.1,
+    "nexus_score": 47.9,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -58.04,
     "sparkline": [
       {
@@ -3098,46 +3136,10 @@
       }
     ],
     "c1": 71.7,
-    "c2": 11.7,
+    "c2": 11.5,
     "c3": 99.3,
     "c4": 0.0,
     "slug": "will-another-country-strike-iran-by-march-31"
-  },
-  {
-    "id": "263375",
-    "question": "Will Elon Musk post 40-64 tweets from March 14 to March 16, 2026?",
-    "current_price": 0.85,
-    "volume": 2747851,
-    "nexus_score": 49.4,
-    "market_state": "Volatile",
-    "flags": [
-      "Contested"
-    ],
-    "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 54.55,
-    "sparkline": [
-      {
-        "p": 0.655
-      },
-      {
-        "p": 0.655
-      },
-      {
-        "p": 0.715
-      },
-      {
-        "p": 0.815
-      },
-      {
-        "p": 0.85
-      }
-    ],
-    "c1": 71.7,
-    "c2": 2.9,
-    "c3": 100.0,
-    "c4": 28.9,
-    "slug": "elon-musk-of-tweets-march-14-march-16"
   },
   {
     "id": "31195",
@@ -3148,7 +3150,7 @@
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 9.52,
     "sparkline": [
       {
@@ -3178,18 +3180,18 @@
     "question": "Billionaire one-time wealth tax passes in California election 2026?",
     "current_price": 0.295,
     "volume": 2701257,
-    "nexus_score": 69.7,
+    "nexus_score": 69.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -16.9,
     "sparkline": [
       {
         "p": 0.305
       },
       {
-        "p": 0.305
+        "p": 0.295
       },
       {
         "p": 0.295
@@ -3202,9 +3204,9 @@
       }
     ],
     "c1": 71.3,
-    "c2": 16.3,
+    "c2": 16.2,
     "c3": 100.0,
-    "c4": 34.0,
+    "c4": 33.7,
     "slug": "billionaire-one-time-wealth-tax-passes-in-california-election-2026"
   },
   {
@@ -3212,23 +3214,23 @@
     "question": "Will Silver (SI) hit (LOW) $70 by end of June?",
     "current_price": 0.6215,
     "volume": 2681973,
-    "nexus_score": 74.0,
+    "nexus_score": 73.9,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 18.27,
     "sparkline": [
       {
-        "p": 0.61
+        "p": 0.609
       },
       {
         "p": 0.627
       },
       {
-        "p": 0.6345
+        "p": 0.633
       },
       {
         "p": 0.6215
@@ -3238,60 +3240,60 @@
       }
     ],
     "c1": 71.3,
-    "c2": 13.3,
+    "c2": 13.2,
     "c3": 100.0,
-    "c4": 55.1,
+    "c4": 54.9,
     "slug": "si-hit-jun-2026"
   },
   {
     "id": "203722",
     "question": "Will Baltimore Ravens win the 2027 NFL AFC Championship?",
-    "current_price": 0.16,
+    "current_price": 0.155,
     "volume": 2627766,
-    "nexus_score": 66.5,
+    "nexus_score": 66.8,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -3.03,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -6.06,
     "sparkline": [
       {
         "p": 0.175
       },
       {
-        "p": 0.16
+        "p": 0.175
       },
       {
-        "p": 0.16
+        "p": 0.165
       },
       {
         "p": 0.155
       },
       {
-        "p": 0.16
+        "p": 0.155
       }
     ],
     "c1": 71.3,
-    "c2": 10.8,
+    "c2": 11.2,
     "c3": 100.0,
-    "c4": 40.9,
+    "c4": 40.6,
     "slug": "pro-football-2027-afc-champion"
   },
   {
     "id": "89519",
     "question": "Will Ethereum dip to $1,500 by December 31, 2026?",
-    "current_price": 0.605,
-    "volume": 2620203,
-    "nexus_score": 67.5,
+    "current_price": 0.615,
+    "volume": 2620707,
+    "nexus_score": 67.0,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -16.55,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -15.17,
     "sparkline": [
       {
         "p": 0.635
@@ -3306,45 +3308,45 @@
         "p": 0.605
       },
       {
-        "p": 0.605
+        "p": 0.615
       }
     ],
     "c1": 71.3,
-    "c2": 12.3,
+    "c2": 12.1,
     "c3": 100.0,
-    "c4": 39.4,
+    "c4": 38.6,
     "slug": "what-price-will-ethereum-hit-before-2027"
   },
   {
     "id": "46859",
     "question": "Will Trump visit China by April 30?",
-    "current_price": 0.68,
-    "volume": 2570585,
-    "nexus_score": 39.8,
+    "current_price": 0.69,
+    "volume": 2575231,
+    "nexus_score": 40.0,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -21.39,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -20.23,
     "sparkline": [
       {
-        "p": 0.685
-      },
-      {
-        "p": 0.695
-      },
-      {
-        "p": 0.695
-      },
-      {
-        "p": 0.685
+        "p": 0.725
       },
       {
         "p": 0.68
+      },
+      {
+        "p": 0.69
+      },
+      {
+        "p": 0.685
+      },
+      {
+        "p": 0.69
       }
     ],
     "c1": 71.3,
-    "c2": 3.6,
+    "c2": 3.9,
     "c3": 98.7,
     "c4": 0.0,
     "slug": "will-trump-visit-china-by"
@@ -3354,18 +3356,18 @@
     "question": "Will Rafael L\u00f3pez Aliaga win the 2026 Peruvian presidential election?",
     "current_price": 0.405,
     "volume": 2538064,
-    "nexus_score": 55.0,
+    "nexus_score": 54.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.05,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.85,
     "sparkline": [
       {
         "p": 0.4
       },
       {
-        "p": 0.4
+        "p": 0.405
       },
       {
         "p": 0.405
@@ -3378,8 +3380,8 @@
       }
     ],
     "c1": 71.0,
-    "c2": 11.2,
-    "c3": 95.3,
+    "c2": 11.0,
+    "c3": 94.7,
     "c4": 23.4,
     "slug": "peru-presidential-election-winner"
   },
@@ -3387,16 +3389,16 @@
     "id": "102774",
     "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
     "current_price": 0.0125,
-    "volume": 2454877,
-    "nexus_score": 78.9,
+    "volume": 2454881,
+    "nexus_score": 73.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 47.06,
     "sparkline": [
       {
-        "p": 0.012
+        "p": 0.0125
       },
       {
         "p": 0.012
@@ -3412,26 +3414,23 @@
       }
     ],
     "c1": 71.0,
-    "c2": 16.4,
+    "c2": 16.1,
     "c3": 100.0,
-    "c4": 60.6,
+    "c4": 59.7,
     "slug": "will-putin-meet-with-zelenskyy-by-march-31-2026"
   },
   {
     "id": "104392",
     "question": "Will SpaceX's public ticker be $X?",
     "current_price": 0.455,
-    "volume": 2454021,
-    "nexus_score": 54.8,
+    "volume": 2454024,
+    "nexus_score": 54.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -15.74,
     "sparkline": [
-      {
-        "p": 0.465
-      },
       {
         "p": 0.475
       },
@@ -3442,59 +3441,62 @@
         "p": 0.48
       },
       {
+        "p": 0.485
+      },
+      {
         "p": 0.455
       }
     ],
     "c1": 71.0,
     "c2": 8.4,
     "c3": 100.0,
-    "c4": 28.9,
+    "c4": 27.1,
     "slug": "what-will-spacexs-public-ticker-be"
   },
   {
     "id": "237598",
     "question": "Will Mojtaba Khamenei be head of state in Iran end of 2026?",
-    "current_price": 0.322,
-    "volume": 2408430,
-    "nexus_score": 80.1,
+    "current_price": 0.3215,
+    "volume": 2412831,
+    "nexus_score": 80.2,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 10.27,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 10.1,
     "sparkline": [
       {
         "p": 0.3095
       },
       {
-        "p": 0.312
+        "p": 0.3165
       },
       {
-        "p": 0.3195
-      },
-      {
-        "p": 0.321
+        "p": 0.3205
       },
       {
         "p": 0.322
+      },
+      {
+        "p": 0.3215
       }
     ],
     "c1": 71.0,
-    "c2": 17.5,
+    "c2": 17.7,
     "c3": 100.0,
-    "c4": 60.9,
+    "c4": 60.6,
     "slug": "iran-leader-end-of-2026"
   },
   {
     "id": "57711",
     "question": "Will NVIDIA be the largest company in the world by market cap on June 30?",
     "current_price": 0.825,
-    "volume": 2408212,
-    "nexus_score": 81.4,
+    "volume": 2409174,
+    "nexus_score": 80.8,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 7.14,
     "sparkline": [
       {
@@ -3514,59 +3516,59 @@
       }
     ],
     "c1": 71.0,
-    "c2": 17.9,
+    "c2": 17.6,
     "c3": 99.3,
-    "c4": 63.7,
+    "c4": 62.9,
     "slug": "largest-company-end-of-june-712"
   },
   {
     "id": "238486",
     "question": "Will Solana reach $100 in March?",
-    "current_price": 0.62,
-    "volume": 2407912,
-    "nexus_score": 58.0,
+    "current_price": 0.625,
+    "volume": 2407990,
+    "nexus_score": 57.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 93.75,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 95.31,
     "sparkline": [
       {
-        "p": 0.575
-      },
-      {
-        "p": 0.625
+        "p": 0.6
       },
       {
         "p": 0.655
       },
       {
+        "p": 0.645
+      },
+      {
         "p": 0.65
       },
       {
-        "p": 0.62
+        "p": 0.625
       }
     ],
     "c1": 71.0,
-    "c2": 11.8,
+    "c2": 11.3,
     "c3": 100.0,
-    "c4": 28.3,
+    "c4": 27.4,
     "slug": "what-price-will-solana-hit-in-march-2026"
   },
   {
     "id": "73236",
     "question": "Metamask FDV above $300M one day after launch?",
-    "current_price": 0.715,
-    "volume": 2350615,
-    "nexus_score": 67.0,
+    "current_price": 0.625,
+    "volume": 2351161,
+    "nexus_score": 66.7,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -3576,19 +3578,19 @@
         "p": 0.62
       },
       {
-        "p": 0.6
+        "p": 0.745
       },
       {
         "p": 0.54
       },
       {
-        "p": 0.715
+        "p": 0.625
       }
     ],
     "c1": 70.7,
-    "c2": 3.8,
+    "c2": 3.6,
     "c3": 100.0,
-    "c4": 62.6,
+    "c4": 62.3,
     "slug": "metamask-fdv-above-one-day-after-launch"
   },
   {
@@ -3596,11 +3598,11 @@
     "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
     "current_price": 0.745,
     "volume": 2321926,
-    "nexus_score": 80.8,
+    "nexus_score": 80.3,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.02,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -6.29,
     "sparkline": [
       {
@@ -3620,9 +3622,9 @@
       }
     ],
     "c1": 70.7,
-    "c2": 18.9,
+    "c2": 18.7,
     "c3": 98.0,
-    "c4": 60.0,
+    "c4": 58.9,
     "slug": "which-party-will-gain-most-seats-in-russian-parliamentary-election"
   },
   {
@@ -3630,33 +3632,33 @@
     "question": "Will Trump and Putin not meet?",
     "current_price": 0.706,
     "volume": 2307164,
-    "nexus_score": 84.0,
+    "nexus_score": 83.6,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 7.46,
     "sparkline": [
       {
-        "p": 0.6995
+        "p": 0.699
       },
       {
         "p": 0.6995
       },
       {
-        "p": 0.6955
+        "p": 0.6965
       },
       {
-        "p": 0.7035
+        "p": 0.704
       },
       {
         "p": 0.706
       }
     ],
     "c1": 70.7,
-    "c2": 19.9,
+    "c2": 19.7,
     "c3": 100.0,
-    "c4": 65.4,
+    "c4": 64.9,
     "slug": "where-will-trump-and-putin-meet-next-584"
   },
   {
@@ -3664,13 +3666,13 @@
     "question": "Spread: Bucks (-2.5)",
     "current_price": 0.615,
     "volume": 2270572,
-    "nexus_score": 61.5,
+    "nexus_score": 61.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 10.81,
     "sparkline": [
       {
@@ -3692,41 +3694,41 @@
     "c1": 70.7,
     "c2": 0.0,
     "c3": 100.0,
-    "c4": 58.0,
+    "c4": 57.1,
     "slug": "nba-dal-mil-2026-01-25"
   },
   {
     "id": "153505",
     "question": "X banned in U.K. by March 31?",
     "current_price": 0.02,
-    "volume": 2190190,
-    "nexus_score": 61.3,
+    "volume": 2190322,
+    "nexus_score": 60.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -18.37,
     "sparkline": [
       {
-        "p": 0.024
+        "p": 0.0235
       },
       {
-        "p": 0.024
+        "p": 0.025
       },
       {
         "p": 0.0225
       },
       {
-        "p": 0.0205
+        "p": 0.02
       },
       {
         "p": 0.02
       }
     ],
     "c1": 70.3,
-    "c2": 11.9,
+    "c2": 11.7,
     "c3": 100.0,
-    "c4": 37.7,
+    "c4": 36.9,
     "slug": "x-banned-in-uk-by-march-31"
   },
   {
@@ -3734,13 +3736,13 @@
     "question": "Predict.fun FDV above $50M one day after launch?",
     "current_price": 0.915,
     "volume": 2176043,
-    "nexus_score": 66.7,
+    "nexus_score": 66.8,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -1.08,
     "sparkline": [
       {
@@ -3750,7 +3752,7 @@
         "p": 0.915
       },
       {
-        "p": 0.915
+        "p": 0.92
       },
       {
         "p": 0.915
@@ -3760,43 +3762,43 @@
       }
     ],
     "c1": 70.3,
-    "c2": 13.0,
+    "c2": 13.3,
     "c3": 100.0,
-    "c4": 36.0,
+    "c4": 35.4,
     "slug": "predictfun-fdv-above-one-day-after-launch"
   },
   {
     "id": "215193",
     "question": "Will the U.S. invade Iran by March 31?",
-    "current_price": 0.1845,
-    "volume": 2076189,
-    "nexus_score": 61.1,
+    "current_price": 0.1865,
+    "volume": 2076846,
+    "nexus_score": 60.6,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 53.11,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 54.77,
     "sparkline": [
       {
-        "p": 0.1635
+        "p": 0.163
       },
       {
-        "p": 0.175
+        "p": 0.1725
       },
       {
         "p": 0.1755
       },
       {
-        "p": 0.184
+        "p": 0.186
       },
       {
-        "p": 0.1845
+        "p": 0.1865
       }
     ],
     "c1": 70.3,
-    "c2": 14.3,
+    "c2": 14.1,
     "c3": 100.0,
-    "c4": 30.6,
+    "c4": 29.7,
     "slug": "will-the-us-invade-iran-by-march-31"
   },
   {
@@ -3804,13 +3806,13 @@
     "question": "Will the Oklahoma City Thunder make the NBA Playoffs?",
     "current_price": 0.9975,
     "volume": 2070368,
-    "nexus_score": 70.6,
+    "nexus_score": 70.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.05,
     "sparkline": [
       {
@@ -3830,7 +3832,7 @@
       }
     ],
     "c1": 70.3,
-    "c2": 14.7,
+    "c2": 14.3,
     "c3": 100.0,
     "c4": 42.6,
     "slug": "which-teams-will-make-the-nba-playoffs-138"
@@ -3840,21 +3842,21 @@
     "question": "Will the Slovenian Democratic Party (SDS) win the most seats in the 2026 Slovenian parliamentary election?",
     "current_price": 0.865,
     "volume": 2046840,
-    "nexus_score": 57.5,
+    "nexus_score": 57.3,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.59,
     "sparkline": [
       {
-        "p": 0.87
+        "p": 0.875
       },
       {
         "p": 0.855
       },
       {
-        "p": 0.865
+        "p": 0.87
       },
       {
         "p": 0.87
@@ -3864,7 +3866,7 @@
       }
     ],
     "c1": 70.0,
-    "c2": 8.4,
+    "c2": 8.3,
     "c3": 100.0,
     "c4": 37.1,
     "slug": "slovenian-parliamentary-election-winner-791"
@@ -3872,14 +3874,14 @@
   {
     "id": "85299",
     "question": "AI Industry Downturn by December 31, 2026?",
-    "current_price": 0.183,
-    "volume": 2016110,
-    "nexus_score": 86.8,
+    "current_price": 0.1825,
+    "volume": 2016166,
+    "nexus_score": 86.1,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -5.67,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -5.93,
     "sparkline": [
       {
         "p": 0.177
@@ -3888,19 +3890,19 @@
         "p": 0.183
       },
       {
-        "p": 0.1835
-      },
-      {
         "p": 0.183
       },
       {
         "p": 0.183
+      },
+      {
+        "p": 0.1825
       }
     ],
     "c1": 70.0,
-    "c2": 20.2,
+    "c2": 19.7,
     "c3": 100.0,
-    "c4": 73.1,
+    "c4": 72.6,
     "slug": "ai-bubble-burst-by"
   },
   {
@@ -3908,18 +3910,18 @@
     "question": "Nothing Ever Happens: MicroStrategy",
     "current_price": 0.0135,
     "volume": 2007069,
-    "nexus_score": 66.1,
+    "nexus_score": 65.6,
     "market_state": "Active",
     "flags": [],
-    "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "macro_sensitivity": 0.02,
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -97.24,
     "sparkline": [
       {
-        "p": 0.0195
+        "p": 0.0185
       },
       {
-        "p": 0.0135
+        "p": 0.013
       },
       {
         "p": 0.013
@@ -3932,91 +3934,57 @@
       }
     ],
     "c1": 70.0,
-    "c2": 12.0,
+    "c2": 11.8,
     "c3": 100.0,
-    "c4": 51.7,
+    "c4": 50.9,
     "slug": "nothing-ever-happens-microstrategy"
-  },
-  {
-    "id": "98374",
-    "question": "Will SpaceX's market cap be greater than $1T at market close on IPO day?",
-    "current_price": 0.92,
-    "volume": 2002410,
-    "nexus_score": 77.4,
-    "market_state": "Converged",
-    "flags": [],
-    "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 0.55,
-    "sparkline": [
-      {
-        "p": 0.905
-      },
-      {
-        "p": 0.915
-      },
-      {
-        "p": 0.925
-      },
-      {
-        "p": 0.92
-      },
-      {
-        "p": 0.92
-      }
-    ],
-    "c1": 70.0,
-    "c2": 15.1,
-    "c3": 100.0,
-    "c4": 60.9,
-    "slug": "spacex-ipo-closing-market-cap"
   },
   {
     "id": "125865",
     "question": "Will Gold (GC) hit (HIGH) $5,500 by end of June?",
     "current_price": 0.5635,
-    "volume": 1917652,
-    "nexus_score": 69.1,
+    "volume": 1917894,
+    "nexus_score": 68.5,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
-    "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "macro_sensitivity": 0.0,
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -19.38,
     "sparkline": [
       {
-        "p": 0.59
+        "p": 0.595
       },
       {
-        "p": 0.581
+        "p": 0.583
       },
       {
-        "p": 0.59
+        "p": 0.5925
       },
       {
-        "p": 0.569
+        "p": 0.5695
       },
       {
         "p": 0.5635
       }
     ],
     "c1": 69.7,
-    "c2": 12.7,
+    "c2": 12.5,
     "c3": 99.3,
-    "c4": 44.3,
+    "c4": 43.1,
     "slug": "gc-hit-jun-2026"
   },
   {
     "id": "34052",
     "question": "Zelenskyy out as Ukraine president by end of 2026?",
     "current_price": 0.235,
-    "volume": 1909786,
-    "nexus_score": 70.0,
+    "volume": 1910419,
+    "nexus_score": 69.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -4036,33 +4004,69 @@
       }
     ],
     "c1": 69.7,
-    "c2": 16.6,
+    "c2": 16.5,
     "c3": 100.0,
-    "c4": 35.7,
+    "c4": 35.4,
     "slug": "zelenskyy-out-as-ukraine-president-before-2027"
+  },
+  {
+    "id": "236992",
+    "question": "Trump announces end of military operations against Iran by June 30th?",
+    "current_price": 0.71,
+    "volume": 1908479,
+    "nexus_score": 42.7,
+    "market_state": "Low Confidence",
+    "flags": [
+      "Contested"
+    ],
+    "macro_sensitivity": 0.05,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -15.48,
+    "sparkline": [
+      {
+        "p": 0.805
+      },
+      {
+        "p": 0.73
+      },
+      {
+        "p": 0.735
+      },
+      {
+        "p": 0.705
+      },
+      {
+        "p": 0.71
+      }
+    ],
+    "c1": 69.7,
+    "c2": 7.5,
+    "c3": 95.3,
+    "c4": 0.0,
+    "slug": "trump-announces-end-of-military-operations-against-iran-by"
   },
   {
     "id": "226988",
     "question": "Will Elon Musk post 1560-1599 tweets in April 2026?",
     "current_price": 0.0785,
     "volume": 1907979,
-    "nexus_score": 68.4,
+    "nexus_score": 68.2,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 121.13,
     "sparkline": [
       {
-        "p": 0.039
+        "p": 0.0365
       },
       {
-        "p": 0.0395
+        "p": 0.0375
       },
       {
-        "p": 0.037
+        "p": 0.035
       },
       {
         "p": 0.079
@@ -4072,9 +4076,9 @@
       }
     ],
     "c1": 69.7,
-    "c2": 16.3,
+    "c2": 16.4,
     "c3": 100.0,
-    "c4": 31.7,
+    "c4": 31.1,
     "slug": "elon-musk-of-tweets-april-2026"
   },
   {
@@ -4082,11 +4086,11 @@
     "question": "Will Eric Swalwell win the California Governor Election in 2026?",
     "current_price": 0.56,
     "volume": 1906997,
-    "nexus_score": 67.5,
+    "nexus_score": 66.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 8.74,
     "sparkline": [
       {
@@ -4106,9 +4110,9 @@
       }
     ],
     "c1": 69.7,
-    "c2": 17.1,
+    "c2": 16.9,
     "c3": 100.0,
-    "c4": 27.1,
+    "c4": 25.4,
     "slug": "california-governor-election-2026"
   },
   {
@@ -4116,15 +4120,15 @@
     "question": "Will Anthropic have the best AI model at the end of June 2026?",
     "current_price": 0.502,
     "volume": 1901399,
-    "nexus_score": 81.6,
+    "nexus_score": 81.5,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 35.86,
     "sparkline": [
       {
-        "p": 0.5055
+        "p": 0.505
       },
       {
         "p": 0.5015
@@ -4142,55 +4146,19 @@
     "c1": 69.7,
     "c2": 18.5,
     "c3": 100.0,
-    "c4": 63.4,
+    "c4": 63.1,
     "slug": "which-company-has-best-ai-model-end-of-june"
-  },
-  {
-    "id": "236992",
-    "question": "Trump announces end of military operations against Iran by June 30th?",
-    "current_price": 0.71,
-    "volume": 1893502,
-    "nexus_score": 43.9,
-    "market_state": "Low Confidence",
-    "flags": [
-      "Contested"
-    ],
-    "macro_sensitivity": 0.05,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -15.48,
-    "sparkline": [
-      {
-        "p": 0.805
-      },
-      {
-        "p": 0.735
-      },
-      {
-        "p": 0.735
-      },
-      {
-        "p": 0.715
-      },
-      {
-        "p": 0.71
-      }
-    ],
-    "c1": 69.7,
-    "c2": 8.7,
-    "c3": 95.3,
-    "c4": 0.0,
-    "slug": "trump-announces-end-of-military-operations-against-iran-by"
   },
   {
     "id": "258891",
     "question": "Military action against Iran continues through March 31, 2026?",
     "current_price": 0.825,
-    "volume": 1881490,
-    "nexus_score": 73.3,
+    "volume": 1882392,
+    "nexus_score": 72.9,
     "market_state": "Converged",
     "flags": [],
-    "macro_sensitivity": 0.13,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "macro_sensitivity": 0.14,
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.61,
     "sparkline": [
       {
@@ -4211,27 +4179,27 @@
     ],
     "c1": 69.7,
     "c2": 18.5,
-    "c3": 86.7,
-    "c4": 59.4,
+    "c3": 85.3,
+    "c4": 59.1,
     "slug": "military-action-against-iran-ends-on"
   },
   {
     "id": "79905",
     "question": "Will 2026 be the second-hottest year on record?",
     "current_price": 0.415,
-    "volume": 1875273,
-    "nexus_score": 52.9,
+    "volume": 1875292,
+    "nexus_score": 52.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 13.7,
     "sparkline": [
       {
         "p": 0.41
       },
       {
-        "p": 0.41
+        "p": 0.415
       },
       {
         "p": 0.415
@@ -4244,77 +4212,77 @@
       }
     ],
     "c1": 69.7,
-    "c2": 12.3,
+    "c2": 12.0,
     "c3": 100.0,
-    "c4": 13.4,
+    "c4": 12.3,
     "slug": "where-will-2026-rank-among-the-hottest-years-on-record"
   },
   {
     "id": "149812",
     "question": "Human moon landing in 2026?",
-    "current_price": 0.056,
+    "current_price": 0.0555,
     "volume": 1862950,
-    "nexus_score": 81.4,
+    "nexus_score": 80.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.01,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": -3.45,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": -4.31,
     "sparkline": [
       {
-        "p": 0.0585
-      },
-      {
         "p": 0.058
       },
       {
         "p": 0.058
       },
       {
-        "p": 0.055
+        "p": 0.058
       },
       {
-        "p": 0.056
+        "p": 0.0545
+      },
+      {
+        "p": 0.0555
       }
     ],
     "c1": 69.7,
-    "c2": 18.3,
+    "c2": 17.5,
     "c3": 98.7,
-    "c4": 63.7,
+    "c4": 63.4,
     "slug": "human-moon-landing-in-2026"
   },
   {
     "id": "116025",
     "question": "No change in Bank of Japan's interest rates after March 2026 meeting?",
     "current_price": 0.99,
-    "volume": 1855245,
-    "nexus_score": 69.9,
+    "volume": 1856812,
+    "nexus_score": 69.0,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.34,
     "sparkline": [
       {
-        "p": 0.983
+        "p": 0.981
       },
       {
         "p": 0.98
       },
       {
-        "p": 0.981
+        "p": 0.982
       },
       {
-        "p": 0.9835
+        "p": 0.9855
       },
       {
         "p": 0.99
       }
     ],
     "c1": 69.7,
-    "c2": 14.5,
+    "c2": 14.2,
     "c3": 100.0,
-    "c4": 55.4,
+    "c4": 54.0,
     "slug": "bank-of-japan-decision-in-march"
   },
   {
@@ -4322,11 +4290,11 @@
     "question": " Iran agrees to end enrichment of uranium by March 31?",
     "current_price": 0.0295,
     "volume": 1854209,
-    "nexus_score": 82.9,
+    "nexus_score": 83.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -46.36,
     "sparkline": [
       {
@@ -4336,19 +4304,19 @@
         "p": 0.031
       },
       {
-        "p": 0.031
+        "p": 0.0295
       },
       {
-        "p": 0.0295
+        "p": 0.0285
       },
       {
         "p": 0.0295
       }
     ],
     "c1": 69.7,
-    "c2": 19.0,
+    "c2": 19.3,
     "c3": 100.0,
-    "c4": 65.7,
+    "c4": 66.6,
     "slug": "iran-agrees-to-end-enrichment-of-uranium-by-march-31"
   },
   {
@@ -4356,11 +4324,11 @@
     "question": "Will Iga \u015awi\u0105tek win the 2026 Women\u2019s French Open?",
     "current_price": 0.295,
     "volume": 1817109,
-    "nexus_score": 82.4,
+    "nexus_score": 82.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 9.26,
     "sparkline": [
       {
@@ -4382,7 +4350,7 @@
     "c1": 69.7,
     "c2": 20.9,
     "c3": 100.0,
-    "c4": 58.9,
+    "c4": 58.6,
     "slug": "2026-womens-french-open-winner"
   },
   {
@@ -4390,11 +4358,11 @@
     "question": "US strike on Mexico by December 31?",
     "current_price": 0.295,
     "volume": 1801946,
-    "nexus_score": 73.5,
+    "nexus_score": 73.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.05,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.51,
     "sparkline": [
       {
@@ -4416,7 +4384,7 @@
     "c1": 69.7,
     "c2": 19.8,
     "c3": 95.3,
-    "c4": 38.6,
+    "c4": 38.3,
     "slug": "us-strike-on-mexico-by"
   },
   {
@@ -4424,11 +4392,11 @@
     "question": "Russia strike impacts Kyiv municipality during week of March 2, 2026?",
     "current_price": 0.9995,
     "volume": 1775659,
-    "nexus_score": 82.4,
+    "nexus_score": 83.0,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 0.0,
     "sparkline": [
       {
@@ -4448,7 +4416,7 @@
       }
     ],
     "c1": 69.3,
-    "c2": 11.8,
+    "c2": 12.4,
     "c3": 100.0,
     "c4": 85.1,
     "slug": "russia-strike-impacts-kyiv-municipality-during-week-of"
@@ -4462,7 +4430,7 @@
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 237.93,
     "sparkline": [
       {
@@ -4475,7 +4443,7 @@
         "p": 0.485
       },
       {
-        "p": 0.49
+        "p": 0.485
       },
       {
         "p": 0.49
@@ -4492,11 +4460,11 @@
     "question": "Will Graham Platner be the Democratic nominee for Senate in Maine?",
     "current_price": 0.725,
     "volume": 1758794,
-    "nexus_score": 76.2,
+    "nexus_score": 75.7,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -3.33,
     "sparkline": [
       {
@@ -4516,31 +4484,65 @@
       }
     ],
     "c1": 69.3,
-    "c2": 14.5,
+    "c2": 14.4,
     "c3": 100.0,
-    "c4": 59.7,
+    "c4": 58.6,
     "slug": "maine-democratic-senate-primary-winner"
+  },
+  {
+    "id": "98374",
+    "question": "Will SpaceX's market cap be greater than $1T at market close on IPO day?",
+    "current_price": 0.92,
+    "volume": 1726133,
+    "nexus_score": 77.4,
+    "market_state": "Converged",
+    "flags": [],
+    "macro_sensitivity": 0.0,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 0.55,
+    "sparkline": [
+      {
+        "p": 0.905
+      },
+      {
+        "p": 0.925
+      },
+      {
+        "p": 0.925
+      },
+      {
+        "p": 0.92
+      },
+      {
+        "p": 0.92
+      }
+    ],
+    "c1": 69.3,
+    "c2": 14.8,
+    "c3": 100.0,
+    "c4": 62.3,
+    "slug": "spacex-ipo-closing-market-cap"
   },
   {
     "id": "31558",
     "question": "Will Kon Knueppel win the 2025\u201326 NBA Rookie of the Year award?",
     "current_price": 0.645,
     "volume": 1717570,
-    "nexus_score": 67.1,
+    "nexus_score": 66.3,
     "market_state": "Converged",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -0.77,
     "sparkline": [
       {
         "p": 0.6425
       },
       {
-        "p": 0.6455
+        "p": 0.6405
       },
       {
-        "p": 0.643
+        "p": 0.646
       },
       {
         "p": 0.6495
@@ -4550,43 +4552,43 @@
       }
     ],
     "c1": 69.3,
-    "c2": 13.7,
+    "c2": 13.4,
     "c3": 100.0,
-    "c4": 50.3,
+    "c4": 48.9,
     "slug": "nba-rookie-of-the-year-873"
   },
   {
     "id": "236943",
     "question": "Will Iran strike Turkey in March?",
-    "current_price": 0.1235,
+    "current_price": 0.123,
     "volume": 1706815,
-    "nexus_score": 52.4,
+    "nexus_score": 51.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
-    "change_since_start": 27.98,
+    "last_updated": "2026-03-16T09:02:24Z",
+    "change_since_start": 27.46,
     "sparkline": [
       {
-        "p": 0.1435
+        "p": 0.144
       },
       {
-        "p": 0.15
+        "p": 0.1315
       },
       {
         "p": 0.117
       },
       {
-        "p": 0.125
+        "p": 0.123
       },
       {
-        "p": 0.1235
+        "p": 0.123
       }
     ],
     "c1": 69.3,
-    "c2": 9.6,
+    "c2": 9.0,
     "c3": 100.0,
-    "c4": 20.3,
+    "c4": 20.0,
     "slug": "which-countries-will-iran-strike-in-march"
   },
   {
@@ -4594,11 +4596,11 @@
     "question": "Will Elon Musk post 320-339 tweets from March 17 to March 24, 2026?",
     "current_price": 0.135,
     "volume": 1697762,
-    "nexus_score": 76.7,
+    "nexus_score": 77.0,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 8.0,
     "sparkline": [
       {
@@ -4618,7 +4620,7 @@
       }
     ],
     "c1": 69.3,
-    "c2": 21.0,
+    "c2": 21.2,
     "c3": 100.0,
     "c4": 42.9,
     "slug": "elon-musk-of-tweets-march-17-march-24"
@@ -4628,13 +4630,13 @@
     "question": "USD.AI FDV above $150M one day after launch?",
     "current_price": 0.845,
     "volume": 1675743,
-    "nexus_score": 75.9,
+    "nexus_score": 75.6,
     "market_state": "Active",
     "flags": [
       "Contested"
     ],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 3.68,
     "sparkline": [
       {
@@ -4654,9 +4656,9 @@
       }
     ],
     "c1": 69.0,
-    "c2": 13.7,
+    "c2": 13.6,
     "c3": 100.0,
-    "c4": 61.1,
+    "c4": 60.9,
     "slug": "usdai-fdv-above-one-day-after-launch"
   },
   {
@@ -4664,11 +4666,11 @@
     "question": "Will The Super Mario Galaxy Movie be the top grossing movie of 2026?",
     "current_price": 0.425,
     "volume": 1664230,
-    "nexus_score": 51.9,
+    "nexus_score": 51.3,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 37.1,
     "sparkline": [
       {
@@ -4688,7 +4690,7 @@
       }
     ],
     "c1": 69.0,
-    "c2": 10.9,
+    "c2": 10.4,
     "c3": 100.0,
     "c4": 15.1,
     "slug": "highest-grossing-movie-in-2026"
@@ -4697,12 +4699,12 @@
     "id": "199763",
     "question": "Will no next Prime Minister of the United Kingdom be appointed in 2026?",
     "current_price": 0.36,
-    "volume": 1628016,
-    "nexus_score": 76.8,
+    "volume": 1628377,
+    "nexus_score": 76.4,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 4.35,
     "sparkline": [
       {
@@ -4722,21 +4724,21 @@
       }
     ],
     "c1": 69.0,
-    "c2": 18.2,
+    "c2": 18.1,
     "c3": 100.0,
-    "c4": 51.1,
+    "c4": 50.6,
     "slug": "next-uk-prime-minister-in-2026-122"
   },
   {
     "id": "153719",
     "question": "Will Satoshi move any Bitcoin in 2026?",
     "current_price": 0.0865,
-    "volume": 1622535,
+    "volume": 1622575,
     "nexus_score": 88.5,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 2.37,
     "sparkline": [
       {
@@ -4766,11 +4768,11 @@
     "question": "Will Ilhan Omar resign by March 31?",
     "current_price": 0.0065,
     "volume": 1599972,
-    "nexus_score": 74.0,
+    "nexus_score": 73.7,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 18.18,
     "sparkline": [
       {
@@ -4790,9 +4792,9 @@
       }
     ],
     "c1": 69.0,
-    "c2": 16.2,
+    "c2": 16.1,
     "c3": 100.0,
-    "c4": 48.9,
+    "c4": 48.3,
     "slug": "will-ilhan-omar-resign-by-march-31"
   },
   {
@@ -4800,11 +4802,11 @@
     "question": "Jeffrey Epstein confirmed to be alive before 2027?",
     "current_price": 0.0615,
     "volume": 1578212,
-    "nexus_score": 83.3,
+    "nexus_score": 83.1,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 4.24,
     "sparkline": [
       {
@@ -4824,9 +4826,9 @@
       }
     ],
     "c1": 69.0,
-    "c2": 20.6,
+    "c2": 20.5,
     "c3": 100.0,
-    "c4": 62.9,
+    "c4": 62.6,
     "slug": "is-jeffrey-epstein-alive-498"
   },
   {
@@ -4834,11 +4836,11 @@
     "question": "Jerome Powell out as Fed Chair by May 14, 2026?",
     "current_price": 0.0135,
     "volume": 1573069,
-    "nexus_score": 45.1,
+    "nexus_score": 44.8,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -41.3,
     "sparkline": [
       {
@@ -4851,14 +4853,14 @@
         "p": 0.014
       },
       {
-        "p": 0.0145
+        "p": 0.0135
       },
       {
         "p": 0.0135
       }
     ],
     "c1": 69.0,
-    "c2": 9.4,
+    "c2": 9.1,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "jerome-powell-out-as-fed-chair-by"
@@ -4868,11 +4870,11 @@
     "question": "US strike on Cuba by December 31?",
     "current_price": 0.38,
     "volume": 1534672,
-    "nexus_score": 56.6,
+    "nexus_score": 55.8,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -32.74,
     "sparkline": [
       {
@@ -4882,7 +4884,7 @@
         "p": 0.39
       },
       {
-        "p": 0.38
+        "p": 0.375
       },
       {
         "p": 0.38
@@ -4892,23 +4894,23 @@
       }
     ],
     "c1": 68.7,
-    "c2": 10.0,
+    "c2": 9.8,
     "c3": 100.0,
-    "c4": 31.4,
+    "c4": 29.7,
     "slug": "us-strike-on-cuba-by"
   },
   {
     "id": "101772",
     "question": "Will there be no change in Fed interest rates after the June 2026 meeting?",
     "current_price": 0.63,
-    "volume": 1533826,
+    "volume": 1534252,
     "nexus_score": 50.0,
     "market_state": "Macro-Driven",
     "flags": [
       "Correlated"
     ],
     "macro_sensitivity": 0.73,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -1.56,
     "sparkline": [
       {
@@ -4928,9 +4930,9 @@
       }
     ],
     "c1": 68.7,
-    "c2": 16.5,
+    "c2": 16.4,
     "c3": 27.3,
-    "c4": 47.4,
+    "c4": 46.9,
     "slug": "fed-decision-in-june-825"
   },
   {
@@ -4938,15 +4940,15 @@
     "question": "Will Bayern Munich win the 2025\u201326 Bundesliga?",
     "current_price": 0.982,
     "volume": 1510712,
-    "nexus_score": 58.9,
+    "nexus_score": 58.6,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -0.05,
     "sparkline": [
       {
-        "p": 0.9825
+        "p": 0.982
       },
       {
         "p": 0.982
@@ -4962,7 +4964,7 @@
       }
     ],
     "c1": 68.7,
-    "c2": 9.5,
+    "c2": 9.2,
     "c3": 100.0,
     "c4": 39.1,
     "slug": "bundesliga-winner-527"
@@ -4972,11 +4974,11 @@
     "question": "Ethereum all time high by December 31, 2026?",
     "current_price": 0.195,
     "volume": 1497098,
-    "nexus_score": 42.7,
+    "nexus_score": 42.4,
     "market_state": "Low Confidence",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 14.71,
     "sparkline": [
       {
@@ -4996,7 +4998,7 @@
       }
     ],
     "c1": 68.7,
-    "c2": 7.1,
+    "c2": 6.9,
     "c3": 100.0,
     "c4": 0.0,
     "slug": "ethereum-all-time-high-by"
@@ -5006,21 +5008,21 @@
     "question": "Xi Jinping out by June 30?",
     "current_price": 0.0385,
     "volume": 1489832,
-    "nexus_score": 80.3,
+    "nexus_score": 79.9,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.1,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 4.05,
     "sparkline": [
-      {
-        "p": 0.0355
-      },
       {
         "p": 0.035
       },
       {
-        "p": 0.0375
+        "p": 0.0345
+      },
+      {
+        "p": 0.037
       },
       {
         "p": 0.0395
@@ -5030,27 +5032,27 @@
       }
     ],
     "c1": 68.7,
-    "c2": 18.3,
+    "c2": 18.1,
     "c3": 90.0,
-    "c4": 65.4,
+    "c4": 64.9,
     "slug": "xi-jinping-out-by"
   },
   {
     "id": "48292",
     "question": "Will OpenAI not IPO by December 31, 2026?",
     "current_price": 0.64,
-    "volume": 1487871,
-    "nexus_score": 47.3,
+    "volume": 1487890,
+    "nexus_score": 47.1,
     "market_state": "Macro-Driven",
     "flags": [
       "Correlated"
     ],
     "macro_sensitivity": 0.22,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": 4.92,
     "sparkline": [
       {
-        "p": 0.625
+        "p": 0.61
       },
       {
         "p": 0.63
@@ -5066,9 +5068,9 @@
       }
     ],
     "c1": 68.7,
-    "c2": 8.2,
+    "c2": 7.8,
     "c3": 78.7,
-    "c4": 19.4,
+    "c4": 19.7,
     "slug": "openai-ipo-closing-market-cap"
   },
   {
@@ -5076,15 +5078,15 @@
     "question": "Russian strike on a NATO member by March 31?",
     "current_price": 0.0105,
     "volume": 1479061,
-    "nexus_score": 65.1,
+    "nexus_score": 64.2,
     "market_state": "Active",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -74.7,
     "sparkline": [
       {
-        "p": 0.013
+        "p": 0.0125
       },
       {
         "p": 0.0115
@@ -5100,9 +5102,9 @@
       }
     ],
     "c1": 68.7,
-    "c2": 13.3,
+    "c2": 13.0,
     "c3": 100.0,
-    "c4": 46.3,
+    "c4": 44.6,
     "slug": "russian-strike-on-a-nato-member-by-october-31"
   },
   {
@@ -5114,7 +5116,7 @@
     "market_state": "Initializing",
     "flags": [],
     "macro_sensitivity": 0.0,
-    "last_updated": "2026-03-16T08:53:55Z",
+    "last_updated": "2026-03-16T09:02:24Z",
     "change_since_start": -1.75,
     "sparkline": [
       {

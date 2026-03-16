@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T09:32:24.316188Z",
+    "market_id": "263375",
+    "question": "Elon Musk # tweets March 14 - March 16, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 88.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T09:02:24.535941Z",
     "market_id": "89456",
     "question": "Will China invade Taiwan by March 31, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T12:32:12.710372Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 86.9,
-      "macro_sensitivity": 0.03
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T05:39:38.526848Z",
+    "market_id": "72960",
+    "question": "Fed decisions (Dec-Mar)",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T05:02:14.302261Z",
     "market_id": "255195",
     "question": "Iran leadership change by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 58.9,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-14T14:02:14.620304Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T23:32:06.899345Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-16T20:32:35.842024Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.1,
       "macro_sensitivity": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-03-16T06:51:42.490539Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

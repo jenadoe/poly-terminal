@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T03:32:18.131638Z",
+    "market_id": "226988",
+    "question": "Elon Musk musk # tweets in April 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T00:32:13.642191Z",
     "market_id": "236992",
     "question": "Trump announces end of military operations against Iran by ...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.2,
       "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-14T12:32:02.455300Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 48.5,
-      "macro_sensitivity": 0.06
     }
   }
 ]

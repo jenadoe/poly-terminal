@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T15:32:30.771041Z",
+    "market_id": "34584",
+    "question": "Colombia Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T15:02:34.305338Z",
     "market_id": "236884",
     "question": "Iran x Israel/US conflict ends by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 39.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T22:02:13.816150Z",
-    "market_id": "237089",
-    "question": "Iran strikes Israel on...?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 96.9,
       "macro_sensitivity": 0.0
     }
   }

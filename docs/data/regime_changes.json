@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-16T16:02:33.429427Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T16:02:33.429427Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 54.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T15:32:30.771041Z",
     "market_id": "34584",
     "question": "Colombia Presidential Election",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 47.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T23:32:11.113913Z",
-    "market_id": "46859",
-    "question": "Will Trump visit China by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 37.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T22:32:13.591215Z",
-    "market_id": "255195",
-    "question": "Iran leadership change by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 39.5,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T05:02:14.302261Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T04:02:31.973038Z",
     "market_id": "160366",
     "question": "Will the US officially declare war on Iran by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 54.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T13:32:08.683961Z",
-    "market_id": "251243",
-    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.7,
       "macro_sensitivity": 0.0
     }
   }

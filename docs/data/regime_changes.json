@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T19:32:34.033433Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 99.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T18:32:29.107938Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 46.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T05:39:38.526848Z",
-    "market_id": "72960",
-    "question": "Fed decisions (Dec-Mar)",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.4,
       "macro_sensitivity": 0.0
     }
   }

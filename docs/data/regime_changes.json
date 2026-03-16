@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-16T06:32:16.295697Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T06:32:16.295697Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 53.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T05:46:30.915785Z",
     "market_id": "256483",
     "question": "Bitcoin above ___ on March 16?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.1,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-14T17:02:21.543409Z",
-    "market_id": "236943",
-    "question": "Which countries will Iran strike in March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T16:32:11.565915Z",
-    "market_id": "148292",
-    "question": "Will the US acquire part of Greenland in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.6,
-      "macro_sensitivity": 0.27
     }
   }
 ]

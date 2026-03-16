@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-16T04:02:31.973038Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T04:02:31.973038Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T04:02:31.973038Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T03:32:18.131638Z",
     "market_id": "226988",
     "question": "Elon Musk musk # tweets in April 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 43.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T13:32:08.683961Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Converged",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T13:02:11.514499Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T12:32:02.455300Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.1
     }
   }
 ]

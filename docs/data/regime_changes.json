@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-16T14:39:23.624350Z",
+    "market_id": "255195",
+    "question": "Iran leadership change by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 42.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T14:39:23.624350Z",
+    "market_id": "67284",
+    "question": "Fed decision in March?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T14:02:33.838425Z",
     "market_id": "107420",
     "question": "Slovenian Parliamentary Election Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 61.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T19:02:04.144003Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-15T18:02:05.407529Z",
-    "market_id": "256483",
-    "question": "Bitcoin above ___ on March 16?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 38.1,
       "macro_sensitivity": 0.0
     }
   }

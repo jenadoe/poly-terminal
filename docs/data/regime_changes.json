@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T11:32:17.584385Z",
+    "market_id": "89456",
+    "question": "Will China invade Taiwan by March 31, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.5,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-16T11:02:15.034559Z",
     "market_id": "238486",
     "question": "What price will Solana hit in March?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.2,
       "macro_sensitivity": 0.43
-    }
-  },
-  {
-    "timestamp": "2026-03-15T14:31:57.515356Z",
-    "market_id": "199763",
-    "question": "Next UK Prime Minister in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.1,
-      "macro_sensitivity": 0.28
     }
   }
 ]

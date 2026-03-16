@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T07:02:21.398652Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 52.1,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
     "timestamp": "2026-03-16T06:51:42.490539Z",
     "market_id": "203716",
     "question": "Pro Football: 2027 NFC Champion ",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 55.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T23:32:07.463004Z",
-    "market_id": "237089",
-    "question": "Iran strikes Israel on...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

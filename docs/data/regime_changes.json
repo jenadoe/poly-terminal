@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-16T18:32:29.107938Z",
+    "market_id": "257217",
+    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 41.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T16:32:36.147052Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 61.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T05:02:14.302261Z",
-    "market_id": "255195",
-    "question": "Iran leadership change by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.9,
       "macro_sensitivity": 0.0
     }
   }

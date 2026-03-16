@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-16T06:51:42.490539Z",
+    "market_id": "203716",
+    "question": "Pro Football: 2027 NFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-16T06:51:42.490539Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-16T06:32:16.295697Z",
     "market_id": "236840",
     "question": "US x Iran ceasefire by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-14T23:32:07.463004Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.9,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-14T19:32:17.389870Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.23
     }
   }
 ]

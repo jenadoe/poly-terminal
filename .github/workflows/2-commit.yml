@@ -91,6 +91,9 @@ jobs:
             echo "✅ No private changes."
           else
             git commit -m "🧠 Update Data Assets & Audit [$(date)]"
+            # [PUSH FIX] remote에 먼저 push된 커밋이 있으면 rebase 후 push
+            # 동일 파이프라인이 중복 실행될 때 "fetch first" 에러 방지
+            git pull --rebase origin main
             git push
           fi
 
@@ -138,5 +141,8 @@ jobs:
             echo "✅ No public changes."
           else
             git commit -m "📢 Update Dashboard [$(date)]"
+            # [PUSH FIX] remote에 먼저 push된 커밋이 있으면 rebase 후 push
+            # 동일 파이프라인이 중복 실행될 때 "fetch first" 에러 방지
+            git pull --rebase origin main
             git push
           fi

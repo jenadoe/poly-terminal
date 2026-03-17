@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T15:02:32.562455Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T13:32:22.742006Z",
     "market_id": "67284",
     "question": "Fed decision in March?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 42.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T14:39:23.624350Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

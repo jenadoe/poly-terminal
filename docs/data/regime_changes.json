@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T03:32:17.655824Z",
+    "market_id": "96022",
+    "question": "Which company has the best AI model end of March?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 94.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T02:02:19.271637Z",
     "market_id": "106811",
     "question": "Bitcoin all time high by ___?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.3,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T07:50:11.057074Z",
-    "market_id": "101772",
-    "question": "Fed Decision in June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 0.79
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-17T08:32:09.829606Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:32:09.829606Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T08:02:09.855370Z",
     "market_id": "101772",
     "question": "Fed Decision in June?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.4,
       "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-16T13:02:25.846367Z",
-    "market_id": "160707",
-    "question": "Russia x Ukraine ceasefire by June 30, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.4,
-      "macro_sensitivity": 0.26
-    }
-  },
-  {
-    "timestamp": "2026-03-16T13:02:25.846367Z",
-    "market_id": "102774",
-    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 68.2,
-      "macro_sensitivity": 0.31
     }
   }
 ]

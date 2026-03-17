@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-17T17:32:50.945895Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T17:32:50.945895Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T17:02:43.745024Z",
     "market_id": "79048",
     "question": "IPOs before 2027?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 56.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T16:02:33.429427Z",
-    "market_id": "255195",
-    "question": "Iran leadership change by...?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 42.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T16:02:33.429427Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.7,
       "macro_sensitivity": 0.0
     }
   }

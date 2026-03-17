@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T23:32:03.209730Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.2,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-17T23:02:39.746932Z",
     "market_id": "203716",
     "question": "Pro Football: 2027 NFC Champion ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.4,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T00:32:08.529197Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.9,
-      "macro_sensitivity": 0.06
     }
   }
 ]

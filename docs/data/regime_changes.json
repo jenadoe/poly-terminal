@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-17T06:16:52.629511Z",
+    "market_id": "251243",
+    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.2,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-17T06:16:52.629511Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 41.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T06:16:52.629511Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 45.6,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-17T06:07:45.303998Z",
     "market_id": "179361",
     "question": "WBC Winner 2026",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-16T09:32:24.316188Z",
-    "market_id": "263375",
-    "question": "Elon Musk # tweets March 14 - March 16, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T09:02:24.535941Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 56.8,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-16T08:53:55.387822Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

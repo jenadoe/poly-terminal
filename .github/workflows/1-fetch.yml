@@ -5,6 +5,15 @@ on:
     types: [poly-nexus-run]  # Cloudflare Workers가 보내는 신호
   workflow_dispatch:  # 수동 실행도 유지
 
+# ── [C-1 FIX] 동시 실행 방지 ─────────────────────────────────────
+# cancel-in-progress: false → 현재 실행 중인 job은 끝까지 완료 보장
+# 새 트리거는 현재 job이 끝날 때까지 큐에서 대기
+# 주의: 두 workflow가 동일한 group명을 써야 파이프라인 전체가 직렬화됨
+concurrency:
+  group: poly-nexus-pipeline
+  cancel-in-progress: false
+# ─────────────────────────────────────────────────────────────────
+
 jobs:
   calculate:
     runs-on: ubuntu-latest

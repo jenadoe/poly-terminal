@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T22:02:39.149167Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T21:02:48.168667Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 62.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T20:02:47.639421Z",
-    "market_id": "257217",
-    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.4,
       "macro_sensitivity": 0.0
     }
   }

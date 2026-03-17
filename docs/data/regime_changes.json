@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T20:32:41.137630Z",
+    "market_id": "107420",
+    "question": "Slovenian Parliamentary Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T20:02:51.082651Z",
     "market_id": "38532",
     "question": "UEFA Europa League: Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 80.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T19:32:34.033433Z",
-    "market_id": "67284",
-    "question": "Fed decision in March?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 99.9,
       "macro_sensitivity": 0.0
     }
   }

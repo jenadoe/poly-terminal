@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T22:32:31.703811Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 67.0,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-17T22:02:39.149167Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Volatile",
     "metrics_snapshot": {
       "nexus_score": 41.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T20:32:35.842024Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.4,
       "macro_sensitivity": 0.0
     }
   }

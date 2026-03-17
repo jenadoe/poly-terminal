@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T04:02:15.219227Z",
+    "market_id": "42365",
+    "question": "Will the U.S. invade Venezuela by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T03:32:17.655824Z",
     "market_id": "96022",
     "question": "Which company has the best AI model end of March?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-16T08:40:25.626503Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

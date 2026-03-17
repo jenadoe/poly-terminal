@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T09:32:14.143556Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.2,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-17T09:02:13.708090Z",
     "market_id": "251243",
     "question": "Elon Musk # tweets March 10 - March 17, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 44.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T14:02:33.838425Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.5,
       "macro_sensitivity": 0.0
     }
   }

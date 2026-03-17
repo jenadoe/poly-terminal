@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T04:41:44.321016Z",
+    "market_id": "34051",
+    "question": "Netanyahu out by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T04:02:15.219227Z",
     "market_id": "42365",
     "question": "Will the U.S. invade Venezuela by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T08:40:25.626503Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 56.4,
-      "macro_sensitivity": 0.03
     }
   }
 ]

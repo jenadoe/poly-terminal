@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T07:01:48.315667Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
     "timestamp": "2026-03-17T06:31:44.983655Z",
     "market_id": "143443",
     "question": "Venezuela leader end of 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T10:19:14.915488Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 56.8,
-      "macro_sensitivity": 0.03
     }
   }
 ]

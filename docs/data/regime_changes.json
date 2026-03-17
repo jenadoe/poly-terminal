@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T06:01:49.043001Z",
+    "market_id": "179361",
+    "question": "WBC Winner 2026",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-17T05:30:16.304543Z",
     "market_id": "179361",
     "question": "WBC Winner 2026",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T08:53:55.387822Z",
-    "market_id": "89456",
-    "question": "Will China invade Taiwan by March 31, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.2,
-      "macro_sensitivity": 0.03
     }
   }
 ]

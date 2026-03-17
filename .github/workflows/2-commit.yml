@@ -6,11 +6,11 @@ on:
     types:
       - completed
 
-# ── [C-1 FIX] 동시 실행 방지 ─────────────────────────────────────
-# 1-fetch.yml과 동일한 group명 사용 → 파이프라인 전체가 직렬화됨
-# 1번 job이 실행 중이면 2번 job도 동일 group이라 대기열에 쌓임
+# ── [C-1 FIX] push conflict 방지 ────────────────────────────────
+# 1-fetch와 group 분리 → 1-fetch 중복 취소와 독립적으로 동작
+# cancel-in-progress: false → 커밋 중인 job은 반드시 완료 보장
 concurrency:
-  group: poly-nexus-pipeline
+  group: poly-nexus-commit
   cancel-in-progress: false
 # ─────────────────────────────────────────────────────────────────
 

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-17T21:02:48.168667Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-17T20:32:41.137630Z",
     "market_id": "107420",
     "question": "Slovenian Parliamentary Election Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 65.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-16T20:02:47.639421Z",
-    "market_id": "31558",
-    "question": "NBA Rookie of the Year ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
       "macro_sensitivity": 0.0
     }
   }

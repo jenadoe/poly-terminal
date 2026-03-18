@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-18T01:27:37.753608Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
+    "timestamp": "2026-03-18T01:27:37.753608Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T01:02:38.962224Z",
     "market_id": "73236",
     "question": "Metamask FDV above ___ one day after launch?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 47.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T03:32:17.655824Z",
-    "market_id": "96022",
-    "question": "Which company has the best AI model end of March?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 94.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T02:02:19.271637Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 39.7,
       "macro_sensitivity": 0.0
     }
   }

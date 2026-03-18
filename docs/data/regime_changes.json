@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-18T18:32:07.306653Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T18:32:07.306653Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 41.2,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
     "timestamp": "2026-03-18T18:02:00.604206Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T11:32:01.688746Z",
-    "market_id": "73236",
-    "question": "Metamask FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.3,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-18T11:01:52.707210Z",
-    "market_id": "269739",
-    "question": "Elon Musk # tweets March 16 - March 18, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-18T22:01:51.893373Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.9,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-18T22:01:51.893373Z",
+    "market_id": "33660",
+    "question": "Bundesliga Winner ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 84.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T21:31:50.383881Z",
     "market_id": "101772",
     "question": "Fed Decision in June?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.6,
       "macro_sensitivity": 0.52
-    }
-  },
-  {
-    "timestamp": "2026-03-18T13:02:04.163650Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.32
-    }
-  },
-  {
-    "timestamp": "2026-03-18T12:31:53.723765Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.5,
-      "macro_sensitivity": 0.02
     }
   }
 ]

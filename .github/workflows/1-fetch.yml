@@ -35,6 +35,16 @@ jobs:
         with:
           python-version: '3.10'
 
+      # [PIP CACHE] 2-resolve.yml과 동일한 방식 — 30분마다 실행되는 파이프라인에서
+      # scipy/pandas/numpy 매번 풀 설치 방지 (약 60~90초/회 절감)
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('private-brain/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install Libraries
         run: pip install -r private-brain/requirements.txt
 

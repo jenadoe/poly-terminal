@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T07:02:36.985618Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.5,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-18T06:02:25.660756Z",
     "market_id": "203716",
     "question": "Pro Football: 2027 NFC Champion ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 68.4,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-17T08:02:09.855370Z",
-    "market_id": "236943",
-    "question": "Which countries will Iran strike in March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.1,
-      "macro_sensitivity": 0.06
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T18:02:00.604206Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 46.9,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-18T17:31:57.896857Z",
     "market_id": "257216",
     "question": "Elon Musk # tweets March 17 - March 24, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T11:01:52.707210Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 55.8,
-      "macro_sensitivity": 0.2
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-18T05:32:19.122539Z",
+    "market_id": "236943",
+    "question": "Iran military action against ___ by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T05:32:19.122539Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.5,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-18T05:32:19.122539Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T05:02:36.407718Z",
     "market_id": "73236",
     "question": "Metamask FDV above ___ one day after launch?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-03-17T06:31:44.983655Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T06:16:52.629511Z",
-    "market_id": "251243",
-    "question": "Elon Musk # tweets March 10 - March 17, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.2,
-      "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-17T06:16:52.629511Z",
-    "market_id": "236884",
-    "question": "Iran x Israel/US conflict ends by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 41.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

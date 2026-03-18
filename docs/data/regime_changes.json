@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "269739",
+    "question": "Elon Musk # tweets March 16 - March 18, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 55.8,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "169319",
+    "question": "Will Elon Musk buy Ryanair?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.8,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 69.8,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:01:52.707210Z",
+    "market_id": "31759",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 91.6,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-18T10:31:57.231620Z",
     "market_id": "153719",
     "question": "Will Satoshi move any Bitcoin in 2026?",
@@ -480,72 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 45.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T21:02:48.168667Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T20:32:41.137630Z",
-    "market_id": "107420",
-    "question": "Slovenian Parliamentary Election Winner",
-    "from_regime": "Converged",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T20:02:51.082651Z",
-    "market_id": "38532",
-    "question": "UEFA Europa League: Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.3,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-17T20:02:51.082651Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Volatile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T20:02:51.082651Z",
-    "market_id": "33659",
-    "question": "Serie A League Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 55.4,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-17T19:32:37.598070Z",
-    "market_id": "107009",
-    "question": "Ethereum all time high by ___?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.4,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-18T11:32:01.688746Z",
+    "market_id": "261299",
+    "question": "Bitcoin above ___ on March 18?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:32:01.688746Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.8,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:32:01.688746Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.3,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:32:01.688746Z",
+    "market_id": "48292",
+    "question": "OpenAI IPO Closing Market Cap",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T11:32:01.688746Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.3,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-18T11:01:52.707210Z",
     "market_id": "269739",
     "question": "Elon Musk # tweets March 16 - March 18, 2026?",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.2,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-17T23:02:39.746932Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 56.4,
-      "macro_sensitivity": 0.46
-    }
-  },
-  {
-    "timestamp": "2026-03-17T23:02:39.746932Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 41.1,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-17T23:02:39.746932Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T22:32:31.703811Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 67.0,
-      "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-17T22:02:39.149167Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 45.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

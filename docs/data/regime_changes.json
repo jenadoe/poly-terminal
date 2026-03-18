@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T23:01:56.388633Z",
+    "market_id": "86357",
+    "question": "LoL: LCK 2026 Season Winner",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 41.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T22:32:05.083787Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.7,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-18T13:02:04.163650Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
-      "macro_sensitivity": 0.04
     }
   }
 ]

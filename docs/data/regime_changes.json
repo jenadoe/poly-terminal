@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T04:02:31.167433Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
     "timestamp": "2026-03-18T02:32:24.553537Z",
     "market_id": "36308",
     "question": "Claude 5 released by\u2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 81.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T04:44:53.713977Z",
-    "market_id": "34051",
-    "question": "Netanyahu out by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.9,
       "macro_sensitivity": 0.0
     }
   }

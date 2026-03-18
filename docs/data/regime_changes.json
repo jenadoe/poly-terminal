@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-18T15:02:03.042863Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 51.5,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-18T15:02:03.042863Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.4,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-18T15:02:03.042863Z",
+    "market_id": "45018",
+    "question": "Maine Democratic Senate Primary Winner",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.4,
+      "macro_sensitivity": 0.11
+    }
+  },
+  {
     "timestamp": "2026-03-18T14:31:57.680204Z",
     "market_id": "269739",
     "question": "Elon Musk # tweets March 16 - March 18, 2026?",
@@ -513,39 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 84.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T09:02:25.757651Z",
-    "market_id": "257217",
-    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 46.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T09:02:25.757651Z",
-    "market_id": "255195",
-    "question": "Iran leadership change by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T09:02:25.757651Z",
-    "market_id": "238486",
-    "question": "What price will Solana hit in March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
       "macro_sensitivity": 0.0
     }
   }

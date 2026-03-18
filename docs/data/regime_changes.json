@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-18T21:31:50.383881Z",
+    "market_id": "101772",
+    "question": "Fed Decision in June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-18T21:31:50.383881Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.8,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-03-18T21:31:50.383881Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 65.2,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-18T20:01:58.696709Z",
     "market_id": "236943",
     "question": "Iran military action against ___ by March 31?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.5,
       "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-18T12:01:57.311735Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-18T12:01:57.311735Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 58.8,
-      "macro_sensitivity": 0.45
-    }
-  },
-  {
-    "timestamp": "2026-03-18T12:01:57.311735Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 85.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

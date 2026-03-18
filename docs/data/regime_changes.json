@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T04:13:59.198177Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T04:02:31.167433Z",
     "market_id": "79987",
     "question": "Next French Presidential Election",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.3,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-17T05:30:16.304543Z",
-    "market_id": "100394",
-    "question": "F1 Constructors' Champion",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 81.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

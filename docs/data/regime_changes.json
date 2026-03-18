@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T05:02:36.407718Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.1,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-18T04:32:22.205754Z",
     "market_id": "236943",
     "question": "Iran military action against ___ by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 41.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T06:16:52.629511Z",
-    "market_id": "179361",
-    "question": "WBC Winner 2026",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 45.6,
-      "macro_sensitivity": 0.01
     }
   }
 ]

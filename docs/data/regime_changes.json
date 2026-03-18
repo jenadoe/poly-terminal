@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T02:32:24.553537Z",
+    "market_id": "36308",
+    "question": "Claude 5 released by\u2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-18T01:27:37.753608Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 66.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T04:02:15.219227Z",
-    "market_id": "42365",
-    "question": "Will the U.S. invade Venezuela by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.4,
       "macro_sensitivity": 0.0
     }
   }

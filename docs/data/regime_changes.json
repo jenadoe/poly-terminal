@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-18T12:31:53.723765Z",
+    "market_id": "52130",
+    "question": "Opensea FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.5,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-18T12:01:57.311735Z",
     "market_id": "211821",
     "question": "Will France, UK, or Germany strike Iran by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T05:02:36.407718Z",
-    "market_id": "73236",
-    "question": "Metamask FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.1,
-      "macro_sensitivity": 0.07
     }
   }
 ]

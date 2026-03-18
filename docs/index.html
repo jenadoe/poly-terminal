@@ -161,7 +161,6 @@
             min-height:220px;
         }
         .event-card:hover { border-color:var(--border-hi); }
-        .event-card:active { }
 
         /* left accent per state */
         .event-card.s-converged {
@@ -737,6 +736,9 @@
     <span>POLY-NEXUS © 2026 // CONSENSUS ORACLE — NOT INVESTMENT ADVICE</span>
     <span id="footer-clock"></span>
 </footer>
+
+<!-- Supabase 설정: CI가 매 배포마다 생성, git에는 올라가지 않음 -->
+<script src="./data/config.js"></script>
 
 <script>
 const DATA_URL = './data/latest_intelligence.json';
@@ -1738,8 +1740,7 @@ async function init(){
     }
 
     loadTrackRecord().then(renderCalibration);
-    subscribeCalibration();
-
+    
     if(kpis) renderStateChartFromKPIs(kpis);
     else renderStateChart(data);
     renderRadarChart(data);
@@ -1747,6 +1748,7 @@ async function init(){
 }
 
 init();
+subscribeCalibration();
 setInterval(init,5*60*1000);
 </script>
 </body>

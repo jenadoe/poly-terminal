@@ -743,10 +743,11 @@
 <script>
 const DATA_URL = './data/latest_intelligence.json';
 
-// ── SUPABASE CONFIG (실제 배포 시 본인 값으로 교체) ──────
-const SUPABASE_URL = 'https://xqqryopjiqfmjohsmavd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxcXJ5b3BqaXFmbWpvaHNtYXZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MDM3MjQsImV4cCI6MjA4ODE3OTcyNH0.JGV3LB0Qjs7wZaCEruGmsERKQhfmQJaPk6SYZVCbGEA';
-const USE_SUPABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
+// ── SUPABASE CONFIG: config.js에서 주입 (CI 생성, git 미포함) ──
+const _cfg          = window.POLY_NEXUS_CONFIG || {};
+const SUPABASE_URL  = _cfg.supabaseUrl      || '';
+const SUPABASE_ANON_KEY = _cfg.supabaseAnonKey || '';
+const USE_SUPABASE  = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
 
 let sbClient = null;
 if(USE_SUPABASE){

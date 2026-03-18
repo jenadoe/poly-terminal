@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-18T10:31:57.231620Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.31
+    }
+  },
+  {
+    "timestamp": "2026-03-18T10:31:57.231620Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 68.7,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-18T09:02:25.757651Z",
     "market_id": "107420",
     "question": "Slovenian Parliamentary Election Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 63.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T18:32:46.195369Z",
-    "market_id": "107420",
-    "question": "Slovenian Parliamentary Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 86.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-17T18:32:46.195369Z",
-    "market_id": "102774",
-    "question": "Will Putin meet with Zelenskyy by March 31, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "34051",
+    "question": "Netanyahu out by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "32754",
+    "question": "NBA MVP ",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 43.3,
+      "macro_sensitivity": 0.11
+    }
+  },
+  {
+    "timestamp": "2026-03-19T06:01:54.067009Z",
+    "market_id": "33509",
+    "question": "La Liga Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T05:31:57.263370Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.2,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-18T20:01:58.696709Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.1,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:31:57.283366Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.7,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:31:57.283366Z",
-    "market_id": "125871",
-    "question": "Will Silver (SI) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.7,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:31:57.283366Z",
-    "market_id": "75478",
-    "question": "Fed decision in April?",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:31:57.283366Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:01:59.326323Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
     }
   }
 ]

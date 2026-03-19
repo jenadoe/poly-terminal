@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T01:31:56.226449Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 55.4,
+      "macro_sensitivity": 0.35
+    }
+  },
+  {
     "timestamp": "2026-03-19T01:01:54.392991Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 73.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-18T15:02:03.042863Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.4,
-      "macro_sensitivity": 0.11
     }
   }
 ]

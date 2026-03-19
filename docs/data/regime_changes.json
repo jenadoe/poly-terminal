@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T23:01:45.214628Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 37.5,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-19T22:31:54.770231Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.2,
       "macro_sensitivity": 0.68
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:31:24.654189Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.38
     }
   }
 ]

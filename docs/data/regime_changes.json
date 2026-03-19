@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T05:01:52.026170Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-19T04:31:59.084749Z",
     "market_id": "214405",
     "question": "Predict.fun FDV above ___ one day after launch?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.8,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:01:59.326323Z",
-    "market_id": "73835",
-    "question": "edgeX FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.3,
-      "macro_sensitivity": 0.07
     }
   }
 ]

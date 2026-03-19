@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T15:31:28.937156Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.9,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-19T15:01:50.832097Z",
     "market_id": "107726",
     "question": "Will China invade Taiwan by June 30, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 73.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T11:32:00.321390Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.3,
       "macro_sensitivity": 0.0
     }
   }

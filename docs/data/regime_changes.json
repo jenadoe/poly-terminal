@@ -1,5 +1,82 @@
 [
   {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 47.2,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.7,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-19T14:01:24.259350Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T13:31:24.654189Z",
     "market_id": "263385",
     "question": "Bitcoin above ___ on March 19?",
@@ -469,83 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 63.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T10:01:55.286060Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T10:01:55.286060Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T10:01:55.286060Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 56.4,
-      "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:31:51.034990Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 52.3,
-      "macro_sensitivity": 0.3
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:31:51.034990Z",
-    "market_id": "104392",
-    "question": "What will SpaceX's public ticker be?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.9,
-      "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:31:51.034990Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:01:54.728994Z",
-    "market_id": "257217",
-    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.8,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T20:31:44.267133Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 51.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T20:31:44.267133Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T20:01:34.089979Z",
     "market_id": "101772",
     "question": "Fed Decision in June?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.8,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 58.2,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "63255",
-    "question": "Which teams will make the NBA Playoffs?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

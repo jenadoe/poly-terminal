@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T10:31:50.863006Z",
+    "market_id": "78016",
+    "question": "Based FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T10:01:55.286060Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-19T00:01:55.613842Z",
-    "market_id": "211821",
-    "question": "Will France, UK, or Germany strike Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.22
     }
   }
 ]

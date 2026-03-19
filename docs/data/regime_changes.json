@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T00:01:55.613842Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-18T23:31:55.034553Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 59.1,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-18T13:02:04.163650Z",
-    "market_id": "101772",
-    "question": "Fed Decision in June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 68.7,
-      "macro_sensitivity": 0.33
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-19T20:01:34.089979Z",
+    "market_id": "101772",
+    "question": "Fed Decision in June?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T20:01:34.089979Z",
+    "market_id": "125865",
+    "question": "What will Gold (GC) hit__ by end of June?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-19T20:01:34.089979Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 43.1,
+      "macro_sensitivity": 0.5
+    }
+  },
+  {
     "timestamp": "2026-03-19T19:31:31.279059Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.9,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "72347",
-    "question": "Will the Iranian regime fall before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.8,
-      "macro_sensitivity": 0.46
     }
   }
 ]

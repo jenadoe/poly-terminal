@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T23:31:21.418927Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 40.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T23:01:45.214628Z",
     "market_id": "108633",
     "question": "Will the Iranian regime fall by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.2,
       "macro_sensitivity": 0.36
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:31:24.654189Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.2,
-      "macro_sensitivity": 0.68
     }
   }
 ]

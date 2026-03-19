@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T06:08:06.096357Z",
+    "market_id": "106811",
+    "question": "Bitcoin all time high by ___?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T06:01:54.067009Z",
     "market_id": "34051",
     "question": "Netanyahu out by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 54.9,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T20:01:58.696709Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.2,
-      "macro_sensitivity": 0.23
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T17:31:25.804223Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T17:31:25.804223Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 39.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T17:01:34.054107Z",
     "market_id": "40044",
     "question": "English Premier League - Top 4 Finish ",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 61.3,
       "macro_sensitivity": 0.36
-    }
-  },
-  {
-    "timestamp": "2026-03-19T12:01:50.193364Z",
-    "market_id": "52130",
-    "question": "Opensea FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.6,
-      "macro_sensitivity": 0.31
-    }
-  },
-  {
-    "timestamp": "2026-03-19T11:32:00.321390Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

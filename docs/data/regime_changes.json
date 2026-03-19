@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-19T04:31:59.084749Z",
+    "market_id": "214405",
+    "question": "Predict.fun FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-19T04:31:59.084749Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T04:31:59.084749Z",
+    "market_id": "107711",
+    "question": "Xi Jinping out by June 30?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-19T04:31:59.084749Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T04:01:52.237543Z",
     "market_id": "34436",
     "question": "The Masters - Winner ",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 77.3,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-18T18:32:07.306653Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T18:32:07.306653Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 41.2,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-18T18:02:00.604206Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-18T17:31:57.896857Z",
-    "market_id": "257216",
-    "question": "Elon Musk # tweets March 17 - March 24, 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

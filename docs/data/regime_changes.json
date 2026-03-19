@@ -1,5 +1,82 @@
 [
   {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "263385",
+    "question": "Bitcoin above ___ on March 19?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "34051",
+    "question": "Netanyahu out by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 37.9,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "257217",
+    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 49.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "203722",
+    "question": "Pro Football: 2027 AFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.2,
+      "macro_sensitivity": 0.36
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "203716",
+    "question": "Pro Football: 2027 NFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.2,
+      "macro_sensitivity": 0.68
+    }
+  },
+  {
+    "timestamp": "2026-03-19T13:31:24.654189Z",
+    "market_id": "85299",
+    "question": "AI bubble burst by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.38
+    }
+  },
+  {
     "timestamp": "2026-03-19T13:01:22.691429Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -469,83 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 50.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:01:54.728994Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T09:01:54.728994Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Low Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 89.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T08:31:50.118198Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.2,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-19T08:01:57.099474Z",
-    "market_id": "79831",
-    "question": "Highest grossing movie in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
-      "macro_sensitivity": 0.47
-    }
-  },
-  {
-    "timestamp": "2026-03-19T08:01:57.099474Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Converged",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T06:31:47.376763Z",
-    "market_id": "73969",
-    "question": "Trump out as President before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.0,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-19T06:08:06.096357Z",
-    "market_id": "106811",
-    "question": "Bitcoin all time high by ___?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 67.5,
       "macro_sensitivity": 0.0
     }
   }

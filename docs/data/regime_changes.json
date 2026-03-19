@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T19:01:36.923700Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 45.2,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-19T19:01:36.923700Z",
+    "market_id": "48935",
+    "question": "Russian strike on a NATO member by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 51.8,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
     "timestamp": "2026-03-19T18:31:29.344883Z",
     "market_id": "200782",
     "question": "MLS Cup Winner 2026",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.9,
       "macro_sensitivity": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-03-19T12:31:20.905762Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T12:01:50.193364Z",
-    "market_id": "139182",
-    "question": "2026 Women's Wimbledon Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

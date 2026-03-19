@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T04:01:52.237543Z",
+    "market_id": "34436",
+    "question": "The Masters - Winner ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.8,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-19T03:31:57.977301Z",
     "market_id": "33659",
     "question": "Serie A League Winner ",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 47.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T17:31:57.896857Z",
-    "market_id": "57705",
-    "question": "Which company has best AI model end of June?",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.2,
       "macro_sensitivity": 0.0
     }
   }

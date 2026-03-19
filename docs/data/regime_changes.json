@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T16:01:44.641847Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 49.3,
+      "macro_sensitivity": 0.33
+    }
+  },
+  {
     "timestamp": "2026-03-19T15:31:28.937156Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 74.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T11:32:00.321390Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.2,
       "macro_sensitivity": 0.0
     }
   }

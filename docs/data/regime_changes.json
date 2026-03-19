@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T08:01:57.099474Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 54.8,
+      "macro_sensitivity": 0.47
+    }
+  },
+  {
+    "timestamp": "2026-03-19T08:01:57.099474Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 56.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T06:31:47.376763Z",
     "market_id": "73969",
     "question": "Trump out as President before 2027?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T21:31:50.383881Z",
-    "market_id": "57096",
-    "question": "California Governor Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-18T21:31:50.383881Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.2,
-      "macro_sensitivity": 0.23
     }
   }
 ]

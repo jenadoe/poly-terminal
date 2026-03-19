@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T05:31:57.263370Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 57.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T05:31:57.263370Z",
+    "market_id": "75478",
+    "question": "Fed decision in April?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 82.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T05:01:52.026170Z",
     "market_id": "211821",
     "question": "Will France, UK, or Germany strike Iran by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:01:59.326323Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T19:01:59.326323Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.8,
-      "macro_sensitivity": 0.01
     }
   }
 ]

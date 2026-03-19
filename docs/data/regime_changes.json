@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-19T12:31:20.905762Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 65.1,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
+    "timestamp": "2026-03-19T12:31:20.905762Z",
+    "market_id": "73236",
+    "question": "Metamask FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.9,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
+    "timestamp": "2026-03-19T12:31:20.905762Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T12:01:50.193364Z",
     "market_id": "139182",
     "question": "2026 Women's Wimbledon Winner",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T04:31:59.084749Z",
-    "market_id": "107711",
-    "question": "Xi Jinping out by June 30?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-19T04:31:59.084749Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T04:01:52.237543Z",
-    "market_id": "34436",
-    "question": "The Masters - Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.8,
-      "macro_sensitivity": 0.22
     }
   }
 ]

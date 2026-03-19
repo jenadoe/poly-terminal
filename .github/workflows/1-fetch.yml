@@ -2,13 +2,10 @@ name: 1. Calculate & Analyze
 
 on:
   repository_dispatch:
-    types: [poly-nexus-run]  # Cloudflare Workers가 보내는 신호
-  workflow_dispatch:  # 수동 실행도 유지
+    types: [poly-nexus-run]
+  workflow_dispatch:
 
 # ── [C-1 FIX] 중복 트리거 방지 ──────────────────────────────────
-# cancel-in-progress: true → 30분 내 중복 트리거 시 대기 중인 것 취소
-# 이미 실행 중인 job은 끝까지 완료, 그 다음 트리거는 버림
-# 2-commit과 group 분리 → 불필요한 2번째 사이클 방지
 concurrency:
   group: poly-nexus-fetch
   cancel-in-progress: true
@@ -17,6 +14,14 @@ concurrency:
 jobs:
   calculate:
     runs-on: ubuntu-latest
+    # [P2-2 FIX] timeout 추가
+    # 기존: timeout-minutes 미설정 → GitHub Actions 기본 6시간
+    # 문제: CLOB API hang, Polymarket API 무응답 시 6시간 점유
+    #       concurrency cancel-in-progress: true 설정이 있으나,
+    #       해당 run이 완료되지 않으면 다음 트리거가 취소됨 → 파이프라인 공백
+    # 수정: 25분 (30분 cadence 기준 여유 5분)
+    #       파이프라인 정상 실행 시간이 25분 초과하면 이 값을 올릴 것
+    timeout-minutes: 25
     permissions:
       contents: read
     env:
@@ -35,8 +40,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      # [PIP CACHE] 2-resolve.yml과 동일한 방식 — 30분마다 실행되는 파이프라인에서
-      # scipy/pandas/numpy 매번 풀 설치 방지 (약 60~90초/회 절감)
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:

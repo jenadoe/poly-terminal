@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T02:31:50.697686Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-19T02:31:50.697686Z",
+    "market_id": "27829",
+    "question": "2026 NHL Stanley Cup Champion ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 72.9,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-19T02:01:48.572138Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 53.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-18T17:02:01.976976Z",
-    "market_id": "31759",
-    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 88.6,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-18T15:02:03.042863Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.5,
-      "macro_sensitivity": 0.18
     }
   }
 ]

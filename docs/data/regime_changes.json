@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T03:01:54.137191Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 84.4,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
     "timestamp": "2026-03-19T02:31:50.697686Z",
     "market_id": "51456",
     "question": "How many Fed rate cuts in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.5,
       "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-18T17:02:01.976976Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 53.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

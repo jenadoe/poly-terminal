@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T17:01:34.054107Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 42.7,
+      "macro_sensitivity": 0.5
+    }
+  },
+  {
     "timestamp": "2026-03-19T16:31:29.197606Z",
     "market_id": "125871",
     "question": "Will Silver (SI) hit__ by end of June?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 82.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T11:32:00.321390Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.7,
       "macro_sensitivity": 0.0
     }
   }

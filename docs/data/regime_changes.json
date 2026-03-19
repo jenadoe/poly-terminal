@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-19T21:01:46.653058Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 42.8,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-03-19T21:01:46.653058Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-19T20:31:44.267133Z",
     "market_id": "125865",
     "question": "What will Gold (GC) hit__ by end of June?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 31.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.31
-    }
-  },
-  {
-    "timestamp": "2026-03-19T13:01:22.691429Z",
-    "market_id": "48935",
-    "question": "Russian strike on a NATO member by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 52.8,
-      "macro_sensitivity": 0.2
     }
   }
 ]

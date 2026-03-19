@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-19T06:31:47.376763Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 65.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-19T06:08:06.096357Z",
     "market_id": "106811",
     "question": "Bitcoin all time high by ___?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.2,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-18T20:01:58.696709Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

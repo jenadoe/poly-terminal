@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-20T23:02:00.584747Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.5,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-20T22:31:57.720019Z",
     "market_id": "106811",
     "question": "Bitcoin all time high by ___?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.2,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-20T11:31:49.138177Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 55.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

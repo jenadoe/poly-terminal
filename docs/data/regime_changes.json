@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T02:01:29.361890Z",
+    "market_id": "40044",
+    "question": "English Premier League - Top 4 Finish ",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T02:01:29.361890Z",
+    "market_id": "89519",
+    "question": "What price will Ethereum hit in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.5,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
     "timestamp": "2026-03-20T01:31:28.991407Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-19T14:01:24.259350Z",
-    "market_id": "160366",
-    "question": "Will the US officially declare war on Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T14:01:24.259350Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Converged",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 51.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

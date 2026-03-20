@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-20T20:31:50.903602Z",
+    "market_id": "79048",
+    "question": "IPOs before 2027?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-20T20:02:09.411114Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 51.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T10:31:51.038381Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 36.7,
       "macro_sensitivity": 0.0
     }
   }

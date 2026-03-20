@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-20T10:31:51.038381Z",
+    "market_id": "178011",
+    "question": "Which countries will join the Board of Peace by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 68.5,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-20T10:31:51.038381Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 51.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T10:31:51.038381Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 36.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-20T10:01:51.390688Z",
     "market_id": "34044",
     "question": "Will China invade Taiwan by end of 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.0,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-19T19:31:31.279059Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T19:31:31.279059Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.1,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-19T19:01:36.923700Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 45.2,
-      "macro_sensitivity": 0.03
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-20T15:01:55.793049Z",
+    "market_id": "178011",
+    "question": "Which countries will join the Board of Peace by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 55.1,
+      "macro_sensitivity": 0.41
+    }
+  },
+  {
+    "timestamp": "2026-03-20T15:01:55.793049Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-20T15:01:55.793049Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-20T14:31:54.979664Z",
     "market_id": "257217",
     "question": "Elon Musk # tweets March 13 - March 20, 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:01:47.988531Z",
-    "market_id": "27829",
-    "question": "2026 NHL Stanley Cup Champion ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.0,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:01:47.988531Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 54.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T03:01:20.038366Z",
-    "market_id": "86357",
-    "question": "LoL: LCK 2026 Season Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.4,
-      "macro_sensitivity": 0.06
     }
   }
 ]

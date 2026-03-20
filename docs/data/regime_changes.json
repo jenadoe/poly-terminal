@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T14:31:54.979664Z",
+    "market_id": "257217",
+    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 42.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T14:31:54.979664Z",
+    "market_id": "46859",
+    "question": "Will Trump visit China by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 53.8,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-20T14:01:52.190314Z",
     "market_id": "73835",
     "question": "edgeX FDV above ___ one day after launch?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 71.4,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-20T03:01:20.038366Z",
-    "market_id": "52166",
-    "question": "Where will Trump and Putin meet next?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T03:01:20.038366Z",
-    "market_id": "57096",
-    "question": "California Governor Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.14
     }
   }
 ]

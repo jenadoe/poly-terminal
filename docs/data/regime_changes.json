@@ -1,5 +1,93 @@
 [
   {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "139182",
+    "question": "2026 Women's Wimbledon Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.45
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "107726",
+    "question": "Will China invade Taiwan by June 30, 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.9,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.0,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "125871",
+    "question": "Will Silver (SI) hit__ by end of June?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-03-20T12:01:45.747562Z",
+    "market_id": "72347",
+    "question": "Will the Iranian regime fall before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 73.6,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-20T11:31:49.138177Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -458,94 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 40.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T23:01:45.214628Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 37.5,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-19T22:31:54.770231Z",
-    "market_id": "257217",
-    "question": "Elon Musk # tweets March 13 - March 20, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T22:02:04.158134Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": 0.51
-    }
-  },
-  {
-    "timestamp": "2026-03-19T22:02:04.158134Z",
-    "market_id": "85299",
-    "question": "AI bubble burst by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 84.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T21:01:46.653058Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 42.8,
-      "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-19T21:01:46.653058Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T20:31:44.267133Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T20:31:44.267133Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.7,
       "macro_sensitivity": 0.0
     }
   }

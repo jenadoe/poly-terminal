@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T11:01:47.813262Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T11:01:47.813262Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
     "timestamp": "2026-03-20T10:31:51.038381Z",
     "market_id": "178011",
     "question": "Which countries will join the Board of Peace by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.6,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-19T20:01:34.089979Z",
-    "market_id": "40044",
-    "question": "English Premier League - Top 4 Finish ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 43.1,
-      "macro_sensitivity": 0.5
-    }
-  },
-  {
-    "timestamp": "2026-03-19T19:31:31.279059Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.0,
-      "macro_sensitivity": 0.06
     }
   }
 ]

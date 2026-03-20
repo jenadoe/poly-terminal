@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-20T17:31:56.192064Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-20T17:02:02.343756Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:31:45.552506Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.08
     }
   }
 ]

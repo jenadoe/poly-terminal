@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "86357",
+    "question": "LoL: LCK 2026 Season Winner",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 71.4,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 84.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 77.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T03:01:20.038366Z",
+    "market_id": "89519",
+    "question": "What price will Ethereum hit in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.1,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-20T02:31:20.806486Z",
     "market_id": "108634",
     "question": "Will the Iranian regime fall by June 30?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 68.0,
       "macro_sensitivity": 0.31
-    }
-  },
-  {
-    "timestamp": "2026-03-19T15:01:50.832097Z",
-    "market_id": "84921",
-    "question": "USD.AI FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 64.6,
-      "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-19T15:01:50.832097Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T15:01:50.832097Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T15:01:50.832097Z",
-    "market_id": "73236",
-    "question": "Metamask FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 58.9,
-      "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-19T15:01:50.832097Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-19T14:31:26.941204Z",
-    "market_id": "125865",
-    "question": "What will Gold (GC) hit__ by end of June?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 45.0,
-      "macro_sensitivity": 0.3
     }
   }
 ]

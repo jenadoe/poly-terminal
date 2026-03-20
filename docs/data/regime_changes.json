@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-20T22:02:02.809810Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 79.6,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
     "timestamp": "2026-03-20T21:31:52.139648Z",
     "market_id": "79223",
     "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-20T10:31:51.038381Z",
-    "market_id": "178011",
-    "question": "Which countries will join the Board of Peace by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.5,
-      "macro_sensitivity": 0.02
     }
   }
 ]

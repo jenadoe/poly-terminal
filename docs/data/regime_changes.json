@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T19:31:58.626745Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 55.1,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-20T19:31:58.626745Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 90.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-20T19:02:02.218608Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.3,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:31:45.552506Z",
-    "market_id": "265578",
-    "question": "Bitcoin above ___ on March 20?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:31:45.552506Z",
-    "market_id": "178011",
-    "question": "Which countries will join the Board of Peace by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 65.5,
-      "macro_sensitivity": 0.15
     }
   }
 ]

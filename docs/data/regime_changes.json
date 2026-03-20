@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T20:02:09.411114Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 78.6,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-20T20:02:09.411114Z",
+    "market_id": "236992",
+    "question": "Trump announces end of military operations against Iran by ...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-20T19:31:58.626745Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 36.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T10:01:51.390688Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-20T10:01:51.390688Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 47.3,
-      "macro_sensitivity": 0.18
     }
   }
 ]

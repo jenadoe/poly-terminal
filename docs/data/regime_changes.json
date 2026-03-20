@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-20T15:31:57.720508Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-20T15:31:57.720508Z",
+    "market_id": "34044",
+    "question": "Will China invade Taiwan by end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-20T15:01:55.793049Z",
     "market_id": "178011",
     "question": "Which countries will join the Board of Peace by March 31?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 83.1,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:01:47.988531Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T09:01:47.988531Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.24
     }
   }
 ]

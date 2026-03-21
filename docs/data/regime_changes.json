@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T18:01:29.351378Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 58.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-21T18:01:29.351378Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.7,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
     "timestamp": "2026-03-21T17:31:23.093338Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T07:01:21.792404Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 56.8,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 34.6,
-      "macro_sensitivity": 0.1
     }
   }
 ]

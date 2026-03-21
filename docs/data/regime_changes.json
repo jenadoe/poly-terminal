@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T06:01:28.742018Z",
+    "market_id": "257216",
+    "question": "Elon Musk # tweets March 17 - March 24, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-21T06:01:28.742018Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 58.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T04:31:25.405413Z",
     "market_id": "257216",
     "question": "Elon Musk # tweets March 17 - March 24, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Macro-Driven",
     "metrics_snapshot": {
       "nexus_score": 53.6,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-20T13:01:51.334125Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T12:31:43.839861Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.3,
       "macro_sensitivity": 0.2
     }
   }

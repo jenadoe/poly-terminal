@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-21T15:31:24.378886Z",
+    "market_id": "236943",
+    "question": "Iran military action against ___ by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T15:01:31.059534Z",
     "market_id": "267102",
     "question": "Kharg Island no longer under Iranian control by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 32.4,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-21T03:01:08.105439Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 34.1,
-      "macro_sensitivity": 0.06
     }
   }
 ]

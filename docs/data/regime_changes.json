@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-21T14:01:29.903687Z",
+    "market_id": "267102",
+    "question": "Kharg Island no longer under Iranian control by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 46.4,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-03-21T14:01:29.903687Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.1,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-21T14:01:29.903687Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.6,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-21T14:01:29.903687Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.8,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-21T14:01:29.903687Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-21T13:31:37.361993Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -492,61 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 56.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T00:31:10.649161Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 42.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T23:31:50.662827Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-20T23:31:50.662827Z",
-    "market_id": "34436",
-    "question": "Augusta National Invitational - Winner ",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-20T23:31:50.662827Z",
-    "market_id": "33660",
-    "question": "Bundesliga Winner ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T23:02:00.584747Z",
-    "market_id": "108634",
-    "question": "Will the Iranian regime fall by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 77.5,
-      "macro_sensitivity": 0.02
     }
   }
 ]

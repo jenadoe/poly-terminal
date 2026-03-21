@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T13:01:28.555639Z",
+    "market_id": "108634",
+    "question": "Will the Iranian regime fall by June 30?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-21T13:01:28.555639Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.68
+    }
+  },
+  {
     "timestamp": "2026-03-21T12:31:31.678229Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 79.6,
       "macro_sensitivity": 0.12
-    }
-  },
-  {
-    "timestamp": "2026-03-20T21:31:52.139648Z",
-    "market_id": "79223",
-    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 55.9,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-20T20:31:50.903602Z",
-    "market_id": "79048",
-    "question": "IPOs before 2027?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

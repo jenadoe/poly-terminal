@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-21T08:01:23.265730Z",
+    "market_id": "178011",
+    "question": "Which countries will join the Board of Peace by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T07:31:08.337400Z",
     "market_id": "81557",
     "question": "Who will be the next Prime Minister of Israel after the next election?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 83.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T15:01:55.793049Z",
-    "market_id": "178011",
-    "question": "Which countries will join the Board of Peace by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 55.1,
-      "macro_sensitivity": 0.41
     }
   }
 ]

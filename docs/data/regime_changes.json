@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T12:01:25.138025Z",
+    "market_id": "79905",
+    "question": "Where will 2026 rank among the hottest years on record?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 62.4,
+      "macro_sensitivity": 0.49
+    }
+  },
+  {
+    "timestamp": "2026-03-21T12:01:25.138025Z",
+    "market_id": "149589",
+    "question": "Which party will gain most seats in Russian Parliamentary Election?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
     "timestamp": "2026-03-21T11:01:23.146786Z",
     "market_id": "52166",
     "question": "Where will Trump and Putin meet next?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 55.1,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-20T19:31:58.626745Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 90.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T19:02:02.218608Z",
-    "market_id": "57096",
-    "question": "California Governor Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 62.6,
-      "macro_sensitivity": 0.21
     }
   }
 ]

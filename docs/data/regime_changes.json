@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T16:31:23.594013Z",
+    "market_id": "238094",
+    "question": "Which countries will conduct military action against Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 59.4,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-21T16:31:23.594013Z",
+    "market_id": "79987",
+    "question": "Next French Presidential Election",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 80.6,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-03-21T16:01:31.477572Z",
     "market_id": "81557",
     "question": "Who will be the next Prime Minister of Israel after the next election?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:01:28.742018Z",
-    "market_id": "257216",
-    "question": "Elon Musk # tweets March 17 - March 24, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:01:28.742018Z",
-    "market_id": "57096",
-    "question": "California Governor Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 58.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-21T09:31:20.204868Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.3,
+      "macro_sensitivity": 0.16
+    }
+  },
+  {
+    "timestamp": "2026-03-21T09:31:20.204868Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 49.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T08:01:23.265730Z",
     "market_id": "178011",
     "question": "Which countries will join the Board of Peace by March 31?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 64.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T15:31:57.720508Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-20T15:31:57.720508Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.1,
       "macro_sensitivity": 0.0
     }
   }

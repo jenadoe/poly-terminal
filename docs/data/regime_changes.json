@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-21T20:31:23.138006Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.4,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-21T20:31:23.138006Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-21T20:31:23.138006Z",
+    "market_id": "236992",
+    "question": "Trump announces end of military operations against Iran by ...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-21T20:31:23.138006Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 70.6,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-21T19:01:14.028958Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 65.8,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-21T12:01:25.138025Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 62.4,
-      "macro_sensitivity": 0.49
-    }
-  },
-  {
-    "timestamp": "2026-03-21T12:01:25.138025Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-21T11:01:23.146786Z",
-    "market_id": "52166",
-    "question": "Where will Trump and Putin meet next?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 78.0,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-21T11:01:23.146786Z",
-    "market_id": "199763",
-    "question": "Next UK Prime Minister in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.08
     }
   }
 ]

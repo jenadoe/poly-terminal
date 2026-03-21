@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-21T02:31:10.055045Z",
+    "market_id": "33659",
+    "question": "Serie A League Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T02:01:11.432064Z",
     "market_id": "237260",
     "question": "Will Crude Oil (CL) hit__ by end of March?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-20T12:01:45.747562Z",
-    "market_id": "139182",
-    "question": "2026 Women's Wimbledon Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 66.3,
-      "macro_sensitivity": 0.45
     }
   }
 ]

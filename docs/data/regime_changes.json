@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 56.8,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "23792",
+    "question": "GTA VI released before June 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.45
+    }
+  },
+  {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "79831",
+    "question": "Highest grossing movie in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 76.4,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "34052",
+    "question": "Zelenskyy out as Ukraine president by end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.7,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-21T17:31:23.093338Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.6,
+      "macro_sensitivity": 0.67
+    }
+  },
+  {
     "timestamp": "2026-03-21T17:01:25.244181Z",
     "market_id": "149812",
     "question": "Human moon landing in 2026?",
@@ -481,72 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 34.6,
       "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "139507",
-    "question": "Will Reza Pahlavi enter Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "32756",
-    "question": "NBA Western Conference Champion ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "98369",
-    "question": "Eurovision Winner 2026",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 92.7,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "32755",
-    "question": "NBA Eastern Conference Champion ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "32228",
-    "question": "Balance of Power: 2026 Midterms",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 85.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T06:44:31.792210Z",
-    "market_id": "34584",
-    "question": "Colombia Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 92.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

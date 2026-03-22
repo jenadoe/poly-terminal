@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T01:31:14.665669Z",
+    "market_id": "149589",
+    "question": "Which party will gain most seats in Russian Parliamentary Election?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.8,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-22T01:01:16.739892Z",
     "market_id": "149589",
     "question": "Which party will gain most seats in Russian Parliamentary Election?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.8,
       "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-21T14:01:29.903687Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.19
     }
   }
 ]

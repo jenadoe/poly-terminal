@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T05:31:41.188371Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T04:01:45.922218Z",
     "market_id": "34051",
     "question": "Netanyahu out by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T14:31:25.450862Z",
-    "market_id": "139507",
-    "question": "Will Reza Pahlavi enter Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 66.5,
-      "macro_sensitivity": 0.24
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T15:01:28.284375Z",
+    "market_id": "178011",
+    "question": "Which countries will join the Board of Peace by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 47.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T14:01:32.153541Z",
     "market_id": "199763",
     "question": "Next UK Prime Minister in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.4,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-21T17:31:23.093338Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.26
     }
   }
 ]

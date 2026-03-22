@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-22T20:31:33.566280Z",
+    "market_id": "107420",
+    "question": "Slovenian Parliamentary Election Winner",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T20:31:33.566280Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T20:01:27.888315Z",
     "market_id": "107420",
     "question": "Slovenian Parliamentary Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 78.8,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "238094",
-    "question": "Which countries will conduct military action against Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.0,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "160366",
-    "question": "Will the US officially declare war on Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

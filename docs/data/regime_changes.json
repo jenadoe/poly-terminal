@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T17:01:32.176495Z",
+    "market_id": "79223",
+    "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 52.9,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-22T16:31:28.635460Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.32
-    }
-  },
-  {
-    "timestamp": "2026-03-21T18:31:23.230689Z",
-    "market_id": "108634",
-    "question": "Will the Iranian regime fall by June 30?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

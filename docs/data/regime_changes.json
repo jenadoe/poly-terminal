@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T11:01:26.324638Z",
+    "market_id": "34051",
+    "question": "Netanyahu out by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 39.6,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-22T10:31:30.018136Z",
     "market_id": "106193",
     "question": "Republican Senate seats after the 2026 midterm elections?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 83.1,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-21T16:31:23.594013Z",
-    "market_id": "238094",
-    "question": "Which countries will conduct military action against Iran by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 59.4,
-      "macro_sensitivity": 0.18
     }
   }
 ]

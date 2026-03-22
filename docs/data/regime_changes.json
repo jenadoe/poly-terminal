@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T14:01:32.153541Z",
+    "market_id": "199763",
+    "question": "Next UK Prime Minister in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 87.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T13:01:36.571760Z",
     "market_id": "273112",
     "question": "Bitcoin above ___ on March 22?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.26
-    }
-  },
-  {
-    "timestamp": "2026-03-21T17:31:23.093338Z",
-    "market_id": "34052",
-    "question": "Zelenskyy out as Ukraine president by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.7,
-      "macro_sensitivity": 0.17
     }
   }
 ]

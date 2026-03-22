@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-22T10:31:30.018136Z",
+    "market_id": "106193",
+    "question": "Republican Senate seats after the 2026 midterm elections?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T10:01:31.312525Z",
     "market_id": "52166",
     "question": "Where will Trump and Putin meet next?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 59.4,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-21T16:31:23.594013Z",
-    "market_id": "79987",
-    "question": "Next French Presidential Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.04
     }
   }
 ]

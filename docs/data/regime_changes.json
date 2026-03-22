@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-22T00:01:16.666961Z",
+    "market_id": "203716",
+    "question": "Pro Football: 2027 NFC Champion ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 79.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T00:01:16.666961Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Volatile",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 83.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-21T22:31:14.536067Z",
     "market_id": "63766",
     "question": "Paris Mayoral Election",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-21T13:01:28.555639Z",
-    "market_id": "79905",
-    "question": "Where will 2026 rank among the hottest years on record?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.6,
-      "macro_sensitivity": 0.68
-    }
-  },
-  {
-    "timestamp": "2026-03-21T12:31:31.678229Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 37.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-22T11:31:25.162316Z",
+    "market_id": "274809",
+    "question": "What price will Bitcoin hit March 16-22?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 41.1,
+      "macro_sensitivity": 0.83
+    }
+  },
+  {
+    "timestamp": "2026-03-22T11:31:25.162316Z",
+    "market_id": "241861",
+    "question": "Next leader out of power before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 88.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T11:01:26.324638Z",
     "market_id": "34051",
     "question": "Netanyahu out by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 58.6,
       "macro_sensitivity": 0.67
-    }
-  },
-  {
-    "timestamp": "2026-03-21T17:01:25.244181Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 75.0,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-21T17:01:25.244181Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.1,
-      "macro_sensitivity": 0.01
     }
   }
 ]

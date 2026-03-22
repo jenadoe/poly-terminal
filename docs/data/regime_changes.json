@@ -1,5 +1,60 @@
 [
   {
+    "timestamp": "2026-03-22T20:01:27.888315Z",
+    "market_id": "107420",
+    "question": "Slovenian Parliamentary Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T20:01:27.888315Z",
+    "market_id": "257216",
+    "question": "Elon Musk # tweets March 17 - March 24, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 43.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T20:01:27.888315Z",
+    "market_id": "238474",
+    "question": "What price will Bitcoin hit in March?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T20:01:27.888315Z",
+    "market_id": "118172",
+    "question": "Will Trump acquire Greenland before 2027?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T20:01:27.888315Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 92.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T18:31:26.237435Z",
     "market_id": "79223",
     "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
@@ -491,61 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "23792",
-    "question": "GTA VI released before June 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 83.9,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 84.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "34052",
-    "question": "Zelenskyy out as Ukraine president by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T19:01:14.028958Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.2,
       "macro_sensitivity": 0.0
     }
   }

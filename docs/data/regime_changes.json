@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-22T10:01:31.312525Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 85.7,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-22T10:01:31.312525Z",
+    "market_id": "174563",
+    "question": "Mavericks vs. Bucks",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-22T10:01:31.312525Z",
+    "market_id": "63766",
+    "question": "Paris Mayoral Election",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T08:31:24.450296Z",
     "market_id": "34051",
     "question": "Netanyahu out by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.6,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-21T16:01:31.477572Z",
-    "market_id": "81557",
-    "question": "Who will be the next Prime Minister of Israel after the next election?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 90.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T16:01:31.477572Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.3
-    }
-  },
-  {
-    "timestamp": "2026-03-21T16:01:31.477572Z",
-    "market_id": "51456",
-    "question": "How many Fed rate cuts in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

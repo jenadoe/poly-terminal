@@ -75,9 +75,11 @@ function eid(id) { return document.getElementById(id); }
 /* ── CLOCK ── */
 function tickClock() {
     const d = new Date();
-    const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    const tzName = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const short = new Intl.DateTimeFormat([], { timeZoneName: 'short' })
+    const timeStr = d.toLocaleTimeString('en-GB', {
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false
+    });
+    const short = new Intl.DateTimeFormat('en', { timeZoneName: 'short' })
         .formatToParts(d).find(p => p.type === 'timeZoneName')?.value || '';
     const display = `${timeStr} ${short}`;
     const c = eid('live-clock'), f = eid('footer-clock');
@@ -123,11 +125,12 @@ function renderKPIs(k) {
     const lu = eid('last-update');
     if (lu) {
         const now = new Date();
-        const short = new Intl.DateTimeFormat([], { timeZoneName: 'short' })
+        const short = new Intl.DateTimeFormat('en', { timeZoneName: 'short' })
             .formatToParts(now).find(p => p.type === 'timeZoneName')?.value || '';
-        lu.textContent = now.toLocaleString([], {
+        lu.textContent = now.toLocaleString('en-GB', {
             month: '2-digit', day: '2-digit',
-            hour: '2-digit', minute: '2-digit'
+            hour: '2-digit', minute: '2-digit',
+            hour12: false
         }) + ' ' + short;
     }
 

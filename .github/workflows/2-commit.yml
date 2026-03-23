@@ -6,11 +6,9 @@ on:
     types:
       - completed
 
-# ── [C-1 FIX] push conflict 방지 ────────────────────────────────
 concurrency:
   group: poly-nexus-commit
   cancel-in-progress: false
-# ─────────────────────────────────────────────────────────────────
 
 jobs:
   distribute:
@@ -114,6 +112,10 @@ jobs:
 
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
+
+          # [SECURITY FIX] config.js tracked 상태 영구 차단
+          # git rm --cached로 1회 처리했지만 워크플로우 레벨에서도 방어
+          git rm --cached docs/data/config.js 2>/dev/null || true
 
           git add docs/
 

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-23T18:31:40.306564Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 44.4,
+      "macro_sensitivity": 0.36
+    }
+  },
+  {
+    "timestamp": "2026-03-23T18:31:40.306564Z",
+    "market_id": "238474",
+    "question": "What price will Bitcoin hit in March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T18:31:40.306564Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 51.4,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-23T18:01:40.330959Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.0,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-23T11:31:26.186613Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 45.1,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-23T11:31:26.186613Z",
-    "market_id": "236884",
-    "question": "Iran x Israel/US conflict ends by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T11:31:26.186613Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 26.4,
-      "macro_sensitivity": 0.01
     }
   }
 ]

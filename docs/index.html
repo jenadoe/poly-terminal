@@ -1,1756 +1,374 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLY-NEXUS // CONSENSUS ORACLE</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <style>
-        :root {
-            --bg:        #0f1720;
-            --bg-2:      #111b2a;
-            --bg-card:   #1a2538;
-            --blue:      #60a5fa;
-            --blue-dim:  #3b82f6;
-            --blue-glow: rgba(96,165,250,0.15);
-            --green:     #34d399;
-            --amber:     #fbbf24;
-            --slate:     #64748b;
-            --red:       #f87171;
-            --orange:    #fb923c;
-            --text-hi:   #e8edf5;
-            --text:      #a8bcd4;
-            --text-mid:  #7a96b4;
-            --text-dim:  #526a85;
-            --border:    #1e3050;
-            --border-hi: #2d4870;
-            --mono: 'JetBrains Mono', monospace;
-            --sans: 'Syne', sans-serif;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: var(--mono);
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        body::before {
-            content:''; position:fixed; inset:0;
-            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.022) 3px,rgba(0,0,0,0.022) 4px);
-            pointer-events:none; z-index:9999;
-        }
+<!--
+  ===================================================================
+  POLY-NEXUS index.html — 최종 삽입 섹션 v2
+  ===================================================================
+  변경 내역 (v1 → v2):
+  - hex 컬러 전부 제거 → CSS 변수 또는 신규 :root 변수로 교체
+  - 기존 .kpi-card, .kpi-label, .kpi-value, .section-head,
+    .section-tag, .section-desc, .live-dot 클래스 최대 재사용
+  - Why 문장 추가 (GPT 제안 반영)
+  - hero 수치 JS 연동 완성 (주석 → 실제 코드)
+  - track_record count JS 연동 완성
+  - 신규 CSS 클래스 최소화 (hero-grid, hero-left/right, 4개 pillar 색상 변수만)
+  ===================================================================
 
-        /* ── TOPBAR ── */
-        .topbar {
-            display:flex; align-items:center; justify-content:space-between;
-            padding:8px 32px; border-bottom:1px solid var(--border);
-            background:#0c1520; font-size:0.72rem; color:#526a85; letter-spacing:0.1em;
-        }
-        .topbar-left { display:flex; gap:24px; }
-        .live-dot {
-            display:inline-block; width:5px; height:5px; border-radius:50%;
-            background:var(--green); box-shadow:0 0 5px var(--green);
-            animation:pulse 2.4s infinite; vertical-align:middle; margin-right:5px;
-        }
-        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
-        #live-clock { color:var(--text-mid); }
+  [삽입 1] :root CSS 변수 추가
+  → 기존 <style> 블록 :root { } 안에 추가
 
-        /* ── HEADER ── */
-        header {
-            padding:28px 32px 20px; border-bottom:1px solid var(--border);
-            display:flex; align-items:flex-end; justify-content:space-between;
-            flex-wrap:wrap; gap:16px;
-            background:linear-gradient(180deg,#0c1520 0%,var(--bg) 100%);
-        }
-        .logo h1 { font-family:var(--sans); font-size:2rem; font-weight:800; letter-spacing:0.02em; color:var(--text-hi); line-height:1; }
-        .logo h1 span { color:var(--blue); }
-        .logo-sub { margin-top:6px; font-size:0.72rem; color:var(--text-dim); letter-spacing:0.15em; text-transform:uppercase; }
-        .logo-tagline { margin-top:5px; font-size:0.75rem; color:#7ab3d4; letter-spacing:0.03em; font-style:italic; }
-        .cursor {
-            display:inline-block; width:8px; height:0.85em; background:var(--blue);
-            vertical-align:text-bottom; animation:blink 1.1s step-end infinite; opacity:0.75;
-        }
-        @keyframes blink { 0%,100%{opacity:0.75} 50%{opacity:0} }
-        .header-meta { font-size:0.72rem; color:var(--text-mid); text-align:right; line-height:2; letter-spacing:0.07em; }
-        .header-meta strong { color:var(--text); }
+  [삽입 2] HERO SECTION
+  → <header>...</header> 닫힌 직후, <div class="disclaimer-banner"> 전
 
-        /* ── KPI ── */
-        .container { padding:24px 32px; max-width:1440px; margin:0 auto; }
-        .kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:8px; }
-        .kpi-grid-signals { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:0; max-width:calc(40% - 6px); }
-        .kpi-card {
-            background:var(--bg-card); border:1px solid var(--border);
-            border-left:2px solid var(--border-hi); border-radius:6px; padding:16px 20px;
-        }
-        .kpi-card { min-height:90px; }
-        .kpi-card.primary { border-left-color:var(--border-hi); }
-        .kpi-card.k-converged   { border-left-color:var(--green); }
-        .kpi-card.k-calibrating { border-left-color:var(--blue); }
-        .kpi-card.k-fragile-kpi { border-left-color:var(--amber); }
-        .kpi-card.k-contested   { border-left-color:var(--red); }
-        .kpi-card.k-correlated  { border-left-color:var(--orange); }
-        .kpi-label { font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; color:#7a96b4; margin-bottom:6px; }
-        .kpi-value { font-size:2rem; font-weight:700; line-height:1; color:var(--text-hi); min-height:2rem; }
-        .kpi-card.primary .kpi-value       { color:var(--text-hi); }
-        .kpi-card.k-converged .kpi-value   { color:var(--green); }
-        .kpi-card.k-calibrating .kpi-value { color:var(--blue); }
-        .kpi-card.k-fragile-kpi .kpi-value { color:var(--amber); }
-        .kpi-card.k-contested .kpi-value   { color:var(--red); }
-        .kpi-card.k-correlated .kpi-value  { color:var(--orange); }
-        .kpi-flags-note { font-size:0.58rem; color:var(--text-dim); margin-top:4px; padding-left:2px; letter-spacing:0.05em; }
-        .kpi-init-bar {
-            margin:10px 0 20px;
-            padding:7px 14px;
-            background:rgba(71,85,105,0.12);
-            border:1px dashed rgba(71,85,105,0.3);
-            border-radius:5px;
-            font-size:0.62rem;
-            color:var(--text-dim);
-            letter-spacing:0.06em;
-        }
-        .kpi-init-bar strong { color:var(--text-mid); }
-        .kpi-sub { margin-top:6px; font-size:0.62rem; color:var(--text-mid); }
+  [삽입 3] HOW IT WORKS SECTION
+  → <div id="state-groups"></div> 직후, <footer> 전
 
-        /* ── CHARTS ── */
-        .chart-grid { display:grid; grid-template-columns:280px 1fr; gap:12px; margin-bottom:28px; }
-        .chart-card { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:18px; }
-        .chart-card h3 { font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#7a96b4; margin-bottom:14px; }
-        .chart-wrap { position:relative; height:210px; }
+  [삽입 4] JS 수정
+  → renderKPIsFromRPC() 함수 끝에 추가
+  → init() 함수 끝에 추가
+  ===================================================================
+-->
 
-        /* ── SECTION HEAD ── */
-        .section-head {
-            display:flex; align-items:center; gap:10px;
-            margin-bottom:4px; font-size:0.72rem;
-            letter-spacing:0.14em; text-transform:uppercase;
-            color:var(--text-hi); font-weight:600;
-        }
-        .section-head::after { content:''; flex:1; height:1px; background:var(--border); }
-        .section-tag {
-            background:rgba(59,130,246,0.1); color:#7eaee8;
-            border:1px solid rgba(59,130,246,0.18);
-            padding:2px 8px; border-radius:3px; font-size:0.62rem; font-weight:500;
-        }
-        .section-head.sh-calibrating::after { background:rgba(96,165,250,0.3); }
-        .section-head.sh-calibrating .section-tag { background:rgba(96,165,250,0.08); color:#60a5fa; border-color:rgba(96,165,250,0.25); }
-        .section-head.sh-fragile::after  { background:rgba(251,191,36,0.25); }
-        .section-head.sh-fragile .section-tag { background:rgba(251,191,36,0.08); color:#fbbf24; border-color:rgba(251,191,36,0.25); }
-        .section-desc {
-            font-size:0.7rem; color:var(--text-mid); margin-bottom:14px;
-            letter-spacing:0.04em; padding-left:2px;
-        }
 
-        /* ── STATE GROUP WRAPPER ── */
-        .state-group { margin-bottom:32px; }
+<!-- ================================================================
+     [삽입 1] :root 에 추가할 CSS 변수
+     기존 :root { } 블록 안에 아래 4줄 추가
+     ================================================================ -->
+<!--
+  :root 블록 안에 추가:
 
-        /* ── EVENT CARDS ── */
-        .event-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
-        @media(max-width:1280px) { .event-grid { grid-template-columns:repeat(4,1fr); } }
-        @media(max-width:1024px) { .event-grid { grid-template-columns:repeat(3,1fr); } .chart-grid { grid-template-columns:1fr; } .kpi-grid { grid-template-columns:repeat(2,1fr); } .kpi-grid-signals { grid-template-columns:repeat(2,1fr); } }
-        @media(max-width:640px)  { .event-grid { grid-template-columns:repeat(2,1fr); } .container,.topbar,header { padding-left:16px; padding-right:16px; } }
-        @media(max-width:480px)  { .event-grid { grid-template-columns:1fr; } .disclaimer-banner { padding:7px 16px; } }
+  --pillar-liq:  #60a5fa;   /* = var(--blue) 동일값 — 명시적 alias */
+  --pillar-eff:  #34d399;   /* = var(--green) 동일값 */
+  --pillar-ind:  #a78bfa;   /* 기존에 없던 purple — 신규 추가 */
+  --pillar-conv: #f472b6;   /* 기존에 없던 pink — 신규 추가 */
+-->
 
-        .event-card {
-            background:var(--bg-card); border:1px solid var(--border);
-            border-radius:6px; padding:16px;
-            cursor:pointer; transition:border-color 0.15s;
-            position:relative;
-            display:flex; flex-direction:column;
-            min-height:220px;
-        }
-        .event-card:hover { border-color:var(--border-hi); }
 
-        /* left accent per state */
-        .event-card.s-converged {
-            border-left:2px solid rgba(52,211,153,0.8);
-            background: linear-gradient(135deg, #1a2538 0%, #1a2d40 100%);
-        }
-        .event-card.s-converged:hover {
-            border-color: rgba(52,211,153,0.6);
-        }
-        .event-card.s-converged .card-score {
-            color: #6ee7b7;
-        }
-        .event-card.s-calibrating { border-left:2px solid rgba(96,165,250,0.6); }
-        .event-card.s-fragile     { border-left:2px solid rgba(251,191,36,0.5); }
-        .event-card.s-initializing {
-            border-left: 2px solid rgba(71,85,105,0.3);
-            opacity: 0.65;
-            filter: grayscale(20%);
-        }
-        .event-card.s-initializing .card-score {
-            color: var(--text-dim);
-            font-size: 1.4rem;
-            letter-spacing: 0.05em;
-        }
 
-        /* ── NOT INVESTMENT ADVICE BANNER ── */
-        /* ── LIVE CALIBRATION TEST ── */
-        .calib-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-top: 2px solid #22c55e;
-            border-radius: 6px;
-            padding: 20px 24px;
-            margin-bottom: 24px;
-        }
-        .calib-header {
-            display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
-        }
-        .calib-title {
-            font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
-            color: var(--text-hi); font-weight: 600;
-        }
-        .calib-phase {
-            font-size: 0.6rem; letter-spacing: 0.1em; background: rgba(34,197,94,0.1);
-            color: #22c55e; border: 1px solid rgba(34,197,94,0.25);
-            border-radius: 3px; padding: 2px 8px; text-transform: uppercase;
-        }
-        .calib-early-data {
-            margin: 8px 0 4px;
-            padding: 8px 12px;
-            background: rgba(248,113,113,0.06);
-            border: 1px solid rgba(248,113,113,0.15);
-            border-radius: 4px;
-            font-size: 0.6rem;
-            color: var(--text-dim);
-        }
-        .calib-early-title {
-            color: #f87171;
-            font-size: 0.58rem;
-            letter-spacing: 0.04em;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-        .calib-early-metrics {
-            color: #64748b;
-        }
-        .calib-progress-wrap {
-            margin-bottom: 18px;
-        }
-        .calib-progress-label {
-            display: flex; justify-content: space-between;
-            font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.08em;
-            margin-bottom: 5px;
-        }
-        .calib-progress-label span:last-child { color: #22c55e; }
-        .calib-progress-bar {
-            height: 4px; background: var(--border);
-            border-radius: 2px; overflow: hidden;
-        }
-        .calib-progress-fill {
-            height: 100%; background: linear-gradient(90deg, #22c55e, #34d399);
-            border-radius: 2px; transition: width 1s cubic-bezier(.4,0,.2,1);
-            box-shadow: 0 0 8px rgba(52,211,153,0.4);
-        }
-        .calib-rows { display: flex; flex-direction: column; gap: 10px; }
-        .calib-row {
-            display: grid;
-            grid-template-columns: 140px 1fr 100px 90px;
-            align-items: center; gap: 12px;
-        }
-        @media(max-width:640px) {
-            .calib-row {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-                gap: 6px 10px;
-            }
-            .calib-state-label { grid-column: 1 / -1; }
-            .calib-bar-wrap    { grid-column: 1 / -1; }
-            .calib-variance    { text-align: left; }
-            .calib-ci          { display: block; text-align: right; }
-        }
-        @media(max-width:400px) {
-            .calib-ci { display: none; }
-        }
-        .calib-state-label {
-            display: flex; align-items: center; gap: 7px;
-            font-size: 0.65rem; color: var(--text); letter-spacing: 0.06em;
-        }
-        .calib-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-        .calib-dot.converged  { background: var(--green); box-shadow: 0 0 5px var(--green); }
-        .calib-dot.calibrating{ background: var(--blue); }
-        .calib-dot.fragile    { background: var(--slate); }
-        .calib-bar-wrap { position: relative; }
-        .calib-bar-bg {
-            height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
-        }
-        .calib-bar-fill {
-            height: 100%; border-radius: 3px;
-            transition: width 1.2s cubic-bezier(.4,0,.2,1);
-        }
-        .calib-bar-fill.converged  { background: linear-gradient(90deg, #22c55e, #34d399); }
-        .calib-bar-fill.calibrating{ background: linear-gradient(90deg, #3b82f6, #60a5fa); }
-        .calib-bar-fill.fragile    { background: #475569; }
-        .calib-variance {
-            font-size: 0.6rem; letter-spacing: 0.07em; text-align: right;
-            white-space: nowrap;
-        }
-        .calib-variance.low  { color: var(--green); }
-        .calib-variance.mid  { color: var(--blue); }
-        .calib-variance.high { color: var(--slate); }
-        .calib-ci {
-            font-size: 0.58rem; color: var(--text-dim); letter-spacing: 0.04em;
-            text-align: right; white-space: nowrap;
-        }
-        .calib-footer {
-            margin-top: 14px; padding-top: 12px;
-            border-top: 1px solid var(--border);
-            font-size: 0.58rem; color: var(--text-dim); letter-spacing: 0.06em;
-            line-height: 1.6;
-        }
-        .calib-footer strong { color: var(--text-mid); }
 
-        .disclaimer-banner {
-            background: rgba(248,113,113,0.06);
-            border-bottom: 1px solid rgba(248,113,113,0.15);
-            padding: 7px 32px;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            font-size: 0.62rem; color: rgba(248,113,113,0.75);
-            letter-spacing: 0.08em; text-transform: uppercase;
-        }
-        .disclaimer-banner span { color: rgba(248,113,113,0.5); }
+<!-- ================================================================
+     [삽입 2] HERO SECTION
+     <header>...</header> 직후에 붙여넣기
+     ================================================================ -->
+<section id="hero" style="background:var(--bg-2); border-bottom:1px solid var(--border); padding:44px 32px 36px;">
+    <div class="container" style="max-width:1200px; margin:0 auto;">
+        <div class="hero-grid">
 
-        .card-score {
-            font-size:2.4rem; font-weight:700; line-height:1.1;
-            color:var(--text-hi); margin-bottom:6px;
-        }
-        .card-event-sub {
-            font-size:0.58rem; color:#4a6a88; letter-spacing:0.04em;
-            text-transform:uppercase; margin-bottom:2px;
-            overflow:hidden; text-overflow:ellipsis; white-space:normal;
-        }
-        .card-title {
-            font-size:0.76rem; color:#b8ccdf; line-height:1.6;
-            display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
-            line-clamp:3;
-            overflow:hidden; font-weight:500;
-            flex:1;
-        }
-        .card-meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
-        .card-vol { font-size:0.62rem; color:var(--text-mid); }
-        .card-price { font-size:0.9rem; color:var(--text-hi); font-weight:700; margin:4px 0 3px; letter-spacing:0.01em; }
-        .card-macro { font-size:0.6rem; color:var(--text-mid); }
-        .card-pm-link {
-            font-size:0.6rem; color:#4a7fa5; text-decoration:none;
-            letter-spacing:0.03em; opacity:0.8;
-        }
-        .card-pm-link:hover { color:#7ab3d4; opacity:1; }
+            <!-- 좌측: 서사 -->
+            <div class="hero-left">
+                <div style="font-size:0.62rem; letter-spacing:0.18em; color:var(--blue); text-transform:uppercase; margin-bottom:14px;">
+                    POLYMARKET CREDIBILITY ORACLE
+                </div>
 
-        /* ── OUTCOME PROBABILITY ROW ── */
-        .card-outcomes {
-            display:flex; align-items:center; gap:6px;
-            font-size:0.65rem; margin:5px 0 4px;
-            line-height:1.2;
-        }
-        .co-fav  { color:#b8ccdf; }
-        .co-fav strong { color:#d1dae8; }
-        .co-sep  { color:#3d5068; }
-        .co-und  { color:#5a7a9a; }
-        .co-extra{ color:#3d5068; margin-left:2px; }
+                <h2 style="font-family:var(--sans); font-size:2.4rem; font-weight:800; line-height:1.08; color:var(--text-hi); margin-bottom:16px; letter-spacing:0.01em;">
+                    Not every price<br>reflects <span style="color:var(--blue);">real consensus</span>.
+                </h2>
 
-        /* ── MARKET INSIGHT ── */
-        .insight-primary {
-            font-size:0.78rem; color:#b8ccdf; line-height:1.7;
-            margin-bottom:6px;
-        }
-        .insight-risk {
-            font-size:0.74rem; color:#c07a3a; line-height:1.5;
-        }
-        .insight-risk-label {
-            margin-right:4px; opacity:0.85;
-        }
+                <!-- Why 문장 (GPT 제안 반영) -->
+                <p style="font-size:0.82rem; color:var(--blue-dim); font-style:italic; margin-bottom:14px; line-height:1.6; max-width:500px;">
+                    Markets can appear confident — even when they are structurally weak.<br>
+                    Poly-Nexus reveals when that confidence is real.
+                </p>
 
-        /* ── FLAG BADGES on card ── */
-        .card-flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:0; }
-        .flag-badge {
-            font-size:0.5rem; padding:2px 6px; border-radius:2px;
-            font-weight:600; letter-spacing:0.07em; text-transform:uppercase;
-        }
-        .flag-contested  { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.25); }
-        .flag-correlated { background:rgba(251,146,60,0.12);  color:#fb923c; border:1px solid rgba(251,146,60,0.25); }
+                <p style="font-size:0.88rem; color:var(--text); line-height:1.7; max-width:520px; margin-bottom:20px;">
+                    A 30-minute pipeline that measures the structural integrity of Polymarket prices —
+                    detecting genuine consensus, price discovery in progress, or fragile signal.
+                </p>
 
-        .card-bars { margin-top:10px; display:flex; flex-direction:column; gap:4px; }
-        .card-bar-row { display:flex; align-items:center; gap:5px; }
-        .card-bar-key { font-size:0.5rem; color:#5a7a9a; width:24px; flex-shrink:0; }
-        .card-bar-bg  { flex:1; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
-        .card-bar-fill { height:100%; border-radius:2px; background:var(--blue); }
-        .bar-weak { background:#c0392b !important; opacity:0.85; }
-        .bar-liq { background:#60a5fa; }
-        .bar-eff { background:#34d399; }
-        .bar-ind { background:#a78bfa; }
-        .bar-conv{ background:#f472b6; }
+                <ul style="list-style:none; margin-bottom:28px; display:flex; flex-direction:column; gap:8px;">
+                    <li style="font-size:0.76rem; color:var(--text-mid); padding-left:14px; position:relative; line-height:1.5;">
+                        <span style="position:absolute; left:0; color:var(--blue-dim);">—</span>
+                        Measure real liquidity depth via live CLOB order book data
+                    </li>
+                    <li style="font-size:0.76rem; color:var(--text-mid); padding-left:14px; position:relative; line-height:1.5;">
+                        <span style="position:absolute; left:0; color:var(--blue-dim);">—</span>
+                        Detect macro correlation that distorts event-driven signals
+                    </li>
+                    <li style="font-size:0.76rem; color:var(--text-mid); padding-left:14px; position:relative; line-height:1.5;">
+                        <span style="position:absolute; left:0; color:var(--blue-dim);">—</span>
+                        Quantify consensus reliability with a single score (0 – 100)
+                    </li>
+                </ul>
 
-        .card-cat {
-            display:inline-block; font-size:0.5rem; padding:1px 5px;
-            border-radius:2px; background:var(--border); color:var(--text-dim);
-            letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px; color:#7a96b4;
-        }
-
-        .card-arrow {
-            position:absolute; top:12px; right:12px;
-            font-size:0.6rem; color:var(--text-dim);
-            opacity:0; transition:opacity 0.15s;
-        }
-        .event-card:hover .card-arrow { opacity:1; }
-
-        /* ── DETAIL PANEL ── */
-        .panel-overlay {
-            position:fixed; inset:0; background:rgba(10,15,24,0.6);
-            z-index:100; opacity:0; pointer-events:none;
-            transition:opacity 0.2s;
-        }
-        .panel-overlay.open { opacity:1; pointer-events:all; }
-
-        .detail-panel {
-            position:fixed; top:0; right:0; bottom:0; width:440px;
-            background:var(--bg-2); border-left:1px solid var(--border-hi);
-            z-index:101; transform:translateX(100%);
-            transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);
-            display:flex; flex-direction:column;
-            overflow:hidden;
-        }
-        .detail-panel.open { transform:translateX(0); }
-        @media(max-width:480px) { .detail-panel { width:100%; } }
-
-        .panel-header {
-            padding:20px 24px; border-bottom:1px solid var(--border);
-            display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
-            background:var(--bg-card);
-        }
-        .panel-close {
-            background:none; border:1px solid var(--border-hi); color:var(--text-mid);
-            padding:4px 10px; border-radius:4px; cursor:pointer; font-family:var(--mono);
-            font-size:0.7rem; flex-shrink:0; transition:color 0.15s, border-color 0.15s;
-        }
-        .panel-close:hover { color:var(--text-hi); border-color:var(--text-mid); }
-
-        .panel-score-row { display:flex; align-items:baseline; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
-        .panel-score { font-size:2.8rem; font-weight:700; color:var(--text-hi); line-height:1; }
-
-        /* state badge in panel */
-        .panel-badge {
-            display:inline-block; padding:4px 10px; border-radius:4px;
-            font-size:0.6rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
-            border:1px solid transparent;
-        }
-        .badge-converged   { color:#93c5fd; border-color:#1e3a5f; background:rgba(59,130,246,0.08); }
-        .badge-calibrating { color:#6ee7b7; border-color:rgba(52,211,153,0.25); background:rgba(52,211,153,0.06); }
-        .badge-fragile     { color:var(--text-dim); border-color:var(--border); }
-        .badge-initializing { color:rgba(71,85,105,0.7); border-color:rgba(71,85,105,0.3); font-style:italic; }
-
-        /* flag badges in panel */
-        .panel-flags { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
-        .pflag {
-            display:inline-flex; align-items:center; gap:4px;
-            padding:3px 8px; border-radius:3px;
-            font-size:0.6rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
-        }
-        .pflag-contested  { background:rgba(248,113,113,0.1); color:#f87171; border:1px solid rgba(248,113,113,0.2); }
-        .pflag-correlated { background:rgba(251,146,60,0.1);  color:#fb923c; border:1px solid rgba(251,146,60,0.2); }
-
-        .panel-event-sub { font-size:0.65rem; color:#4a6a88; letter-spacing:0.04em; text-transform:uppercase; margin-top:6px; }
-        .panel-title { font-size:0.88rem; color:var(--text-hi); line-height:1.5; font-weight:500; margin-top:4px; }
-
-        .panel-body { flex:1; overflow-y:auto; padding:20px 24px; }
-        .panel-body::-webkit-scrollbar { width:4px; }
-        .panel-body::-webkit-scrollbar-track { background:transparent; }
-        .panel-body::-webkit-scrollbar-thumb { background:var(--border-hi); border-radius:2px; }
-
-        .panel-section { margin-bottom:22px; }
-        .panel-section-label {
-            font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase;
-            color:#5a7a9a; margin-bottom:10px; font-weight:500;
-        }
-
-        /* Component bars in panel */
-        .panel-bars { display:flex; flex-direction:column; gap:8px; }
-        .panel-bar-row { display:flex; align-items:center; gap:10px; }
-        .panel-bar-name { font-size:0.65rem; color:#7a96b2; width:100px; flex-shrink:0; }
-        .panel-bar-bg { flex:1; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
-        .panel-bar-fill { height:100%; border-radius:3px; background:var(--blue); transition:width 0.6s cubic-bezier(0.4,0,0.2,1); }
-        .panel-bar-fill.bar-liq  { background:#60a5fa; }
-        .panel-bar-fill.bar-eff  { background:#34d399; }
-        .panel-bar-fill.bar-ind  { background:#a78bfa; }
-        .panel-bar-fill.bar-conv { background:#f472b6; }
-        .panel-bar-val { font-size:0.65rem; color:var(--text); width:32px; text-align:right; font-variant-numeric:tabular-nums; }
-
-        /* Outcomes in panel */
-        .panel-outcomes { display:flex; flex-direction:column; gap:7px; }
-        .outcome-row { display:flex; align-items:center; gap:10px; }
-        .outcome-name { font-size:0.68rem; color:var(--text-hi); flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        .outcome-bar-bg { width:90px; flex-shrink:0; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
-        .outcome-bar-fill { height:100%; border-radius:3px; background:var(--blue); opacity:0.75; }
-        .outcome-pct { font-size:0.68rem; color:var(--text); width:34px; text-align:right; font-variant-numeric:tabular-nums; flex-shrink:0; }
-        .outcome-row.top-outcome .outcome-name { color:#e2eaf4; font-weight:600; }
-        .outcome-row.top-outcome .outcome-bar-fill { opacity:1; }
-        .outcome-row.top-outcome .outcome-pct { color:#e2eaf4; font-weight:600; }
-
-        /* Stat grid in panel */
-        .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-        .stat-item { background:var(--bg-card); border:1px solid var(--border); border-radius:5px; padding:10px 14px; }
-        .stat-label { font-size:0.58rem; color:#5a7a9a; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
-        .stat-value { font-size:1.1rem; font-weight:700; color:var(--text-hi); font-variant-numeric:tabular-nums; }
-
-        /* Sparkline in panel */
-        .panel-sparkline { width:100%; height:60px; border-radius:4px; background:var(--bg-card); border:1px solid var(--border); display:block; }
-
-        /* Context note */
-        .context-note {
-            background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.15);
-            border-radius:5px; padding:12px 14px;
-            font-size:0.7rem; color:var(--text-mid); line-height:1.6;
-        }
-        .context-note strong { color:var(--text); }
-
-        /* Flag context box */
-        .flag-context {
-            background:rgba(30,48,80,0.4); border:1px solid var(--border);
-            border-radius:5px; padding:10px 14px; margin-top:8px;
-            font-size:0.68rem; color:var(--text-mid); line-height:1.55;
-        }
-        .flag-context .fc-label {
-            font-size:0.55rem; letter-spacing:0.1em; text-transform:uppercase;
-            margin-bottom:4px; font-weight:600;
-        }
-        .fc-contested  .fc-label { color:#f87171; }
-        .fc-correlated .fc-label { color:#fb923c; }
-
-        .panel-footer { padding:16px 24px; border-top:1px solid var(--border); background:var(--bg-card); }
-        .view-btn {
-            display:block; text-align:center; padding:10px;
-            background:var(--blue); color:#fff; border-radius:5px;
-            text-decoration:none; font-family:var(--mono);
-            font-size:0.72rem; font-weight:600; letter-spacing:0.08em;
-            transition:background 0.15s;
-        }
-        .view-btn:hover { background:var(--blue-dim); }
-
-        /* Empty state */
-        .empty-state { padding:20px; color:var(--text-dim); font-size:0.72rem; letter-spacing:0.06em; }
-
-        /* Footer */
-        footer {
-            padding:16px 32px; border-top:1px solid var(--border);
-            display:flex; justify-content:space-between;
-            font-size:0.65rem; color:var(--text-dim); background:var(--bg-2);
-        }
-    </style>
-</head>
-<body>
-
-<div class="topbar">
-    <div class="topbar-left">
-        <span><span class="live-dot"></span>SYSTEM ONLINE</span>
-        <span>ENGINE V5 // CONSENSUS TRACKING</span>
-    </div>
-    <span id="live-clock">--:--:-- UTC</span>
-</div>
-
-<div class="disclaimer-banner">
-    <span>⚠</span>
-    Poly-Nexus measures structural integrity of market consensus — NOT a prediction of outcomes or investment advice.
-    <span>⚠</span>
-</div>
-
-<header>
-    <div class="logo">
-        <h1>POLY<span>-NEXUS</span><span class="cursor"></span></h1>
-        <div class="logo-sub">// Prediction Market Consensus Oracle</div>
-        <div class="logo-tagline">An integrity layer for Polymarket — measuring how reliable market consensus actually is.</div>
-    </div>
-    <div class="header-meta">
-        <div>UPDATED <strong id="last-update">—</strong></div>
-        <div>ENGINE <strong>V5 // NEXUS SCORE™</strong></div>
-    </div>
-</header>
-
-<div class="container">
-
-    <!-- KPIs -->
-    <!-- KPI Row 1 — MARKET STATES -->
-    <div class="kpi-grid" style="margin-top:24px;">
-        <div class="kpi-card primary">
-            <div class="kpi-label">Total Markets</div>
-            <div class="kpi-value" id="total-count">—</div>
-            <div class="kpi-sub">TRACKED BY POLY-NEXUS</div>
-        </div>
-        <div class="kpi-card primary">
-            <div class="kpi-label">Integrity Index</div>
-            <div class="kpi-value" id="integrity-index">—</div>
-            <div class="kpi-sub" id="integrity-coverage">— / — markets · 80+ = High Integrity</div>
-            <div class="kpi-sub" style="margin-top:3px; color:#4a6a88; font-size:0.58rem;">Structural reliability of market prices · 0–100</div>
-        </div>
-        <div class="kpi-card k-converged">
-            <div class="kpi-label">Converged</div>
-            <div class="kpi-value" id="converged-count">—</div>
-            <div class="kpi-sub">CONSENSUS LOCKED</div>
-        </div>
-        <div class="kpi-card k-calibrating">
-            <div class="kpi-label">Calibrating</div>
-            <div class="kpi-value" id="calibrating-count">—</div>
-            <div class="kpi-sub">PRICE DISCOVERY</div>
-        </div>
-        <div class="kpi-card k-fragile-kpi">
-            <div class="kpi-label">Fragile</div>
-            <div class="kpi-value" id="fragile-count">—</div>
-            <div class="kpi-sub">STRUCTURAL WEAKNESS</div>
-        </div>
-    </div>
-
-    <!-- KPI Row 2 — MARKET SIGNALS -->
-    <div class="kpi-grid" style="margin-top:8px; grid-template-columns:repeat(2,1fr);">
-        <div class="kpi-card k-contested">
-            <div class="kpi-label">Contested</div>
-            <div class="kpi-value" id="contested-count">—</div>
-            <div class="kpi-sub">HIGH VOLATILITY FLAG</div>
-        </div>
-        <div class="kpi-card k-correlated">
-            <div class="kpi-label">Correlated</div>
-            <div class="kpi-value" id="correlated-count">—</div>
-            <div class="kpi-sub">MACRO DEPENDENCY FLAG</div>
-        </div>
-    </div>
-    <div class="kpi-flags-note">* Flags are independent overlays — a market may carry both simultaneously.</div>
-
-    <!-- Initializing status bar -->
-    <div class="kpi-init-bar">
-        INITIALIZING &nbsp;·&nbsp; <strong id="initializing-count">—</strong> markets &nbsp;·&nbsp; data accumulating · evaluation starts after ~1–2h
-        <span id="init-warning" style="color:#f97316; margin-left:8px;"></span>
-    </div>
-
-    <!-- MODEL VALIDATION — FORWARD TESTING PHASE (hidden until n≥30, expected mid-April 2026) -->
-    <div class="calib-section" id="model-validation-section" style="display:none">
-        <div class="calib-header">
-            <div class="calib-title">📊 MODEL VALIDATION — FORWARD TESTING PHASE</div>
-            <div class="calib-phase">Does Nexus Score predict real market outcomes?</div>
-        </div>
-
-        <div class="calib-progress-wrap">
-            <div class="calib-progress-label">
-                <span>Resolved markets: <span id="calib-n">—</span> / <strong id="calib-target">30</strong> required for significance</span>
-                <span id="calib-progress-pct">—% to significance</span>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <a href="#kpi-grid" style="background:var(--blue); color:#0f1720; padding:11px 24px; border-radius:5px; font-family:var(--mono); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-decoration:none;">
+                        VIEW LIVE SCORES →
+                    </a>
+                    <a href="#how-it-works" style="border:1px solid var(--border-hi); color:var(--text-mid); padding:11px 24px; border-radius:5px; font-family:var(--mono); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-decoration:none;">
+                        HOW V5 WORKS
+                    </a>
+                </div>
             </div>
-            <div class="calib-progress-bar">
-                <div class="calib-progress-fill" id="calib-progress-fill" style="width:0%"></div>
-            </div>
-        </div>
 
-        <div class="calib-rows" id="calib-rows">
-            <!-- JS로 렌더 -->
-        </div>
+            <!-- 우측: 라이브 패널 (기존 .kpi-card 클래스 재사용) -->
+            <div class="hero-right">
+                <div class="kpi-card" style="border-left-color:var(--blue-dim); padding:0; overflow:hidden;">
 
-        <div class="calib-early-data" id="calib-early-data" style="display:none">
-            <div class="calib-early-title">Early Data (n=<span id="calib-early-n">—</span>) — not yet statistically interpretable</div>
-            <div class="calib-early-metrics" id="calib-early-metrics"></div>
-        </div>
+                    <!-- 패널 헤더 -->
+                    <div style="display:flex; align-items:center; gap:8px; padding:12px 16px; border-bottom:1px solid var(--border); background:rgba(96,165,250,0.04);">
+                        <span class="live-dot"></span>
+                        <span style="font-size:0.62rem; letter-spacing:0.14em; color:var(--text-mid); font-weight:600; flex:1;">LIVE SYSTEM</span>
+                        <span style="font-size:0.58rem; color:var(--text-dim); letter-spacing:0.05em;">30-min cadence</span>
+                    </div>
 
-        <div class="calib-footer">
-            <strong>Methodology:</strong> Direction accuracy and Brier Score measured on Converged markets at resolution. &nbsp;|&nbsp;
-            <strong>Note:</strong> Sample size is still too small for statistical inference. &nbsp;|&nbsp;
-            Full metrics (Brier Score, Wilson CI, Calibration Curve) will publish at n≥30 — expected mid-April 2026.
-        </div>
-    </div>
+                    <!-- 수치 그리드 (기존 .kpi-value 재사용) -->
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border);">
+                        <div style="background:var(--bg-card); padding:16px;">
+                            <div class="kpi-value" id="hero-active" style="font-size:1.8rem;">149</div>
+                            <div class="kpi-label">Markets tracked</div>
+                        </div>
+                        <div style="background:var(--bg-card); padding:16px;">
+                            <div class="kpi-value" id="hero-snapshots" style="font-size:1.8rem;">51,885</div>
+                            <div class="kpi-label">Data points logged</div>
+                        </div>
+                        <div style="background:var(--bg-card); padding:16px;">
+                            <div class="kpi-value" id="hero-converged" style="font-size:1.8rem; color:var(--green);">29</div>
+                            <div class="kpi-label">Converged now</div>
+                        </div>
+                        <div style="background:var(--bg-card); padding:16px;">
+                            <div class="kpi-value" id="hero-judgments" style="font-size:1.8rem;">69</div>
+                            <div class="kpi-label">Convergence judgments</div>
+                        </div>
+                    </div>
 
-    <!-- Nexus Score Interpretation -->
-    <div style="display:flex; gap:20px; margin:14px 0 0; font-size:0.68rem; letter-spacing:0.05em; flex-wrap:wrap; align-items:center; padding:10px 14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:5px;">
-        <span style="color:var(--text-mid); text-transform:uppercase; letter-spacing:0.1em; font-size:0.6rem;">Nexus Score</span>
-        <span style="color:#34d399; font-weight:600;">&#9632; Converged</span>
-        <span style="color:#60a5fa; font-weight:600;">&#9632; Calibrating</span>
-        <span style="color:#fbbf24; font-weight:600;">&#9632; Fragile</span>
-        <span style="color:var(--text-dim); font-size:0.62rem; margin-left:4px;">— measures market structure reliability, not event probability</span>
-    </div>
-
-    <!-- Charts -->
-    <div class="chart-grid">
-        <div class="chart-card">
-            <h3>STATE DISTRIBUTION</h3>
-            <div class="chart-wrap"><canvas id="stateChart"></canvas></div>
-        </div>
-        <div class="chart-card">
-            <h3>NEXUS COMPONENT AVERAGE — ALL MARKETS</h3>
-            <div class="chart-wrap"><canvas id="radarChart"></canvas></div>
-        </div>
-    </div>
-
-    <!-- State-grouped event cards -->
-    <div id="state-groups"></div>
-
-</div>
-
-<!-- Detail Panel -->
-<div class="panel-overlay" id="overlay" onclick="closePanel()"></div>
-<div class="detail-panel" id="detail-panel">
-    <div class="panel-header">
-        <div style="flex:1">
-            <div class="panel-score-row">
-                <span class="panel-score" id="p-score">—</span>
-                <span class="panel-badge" id="p-badge">—</span>
-            </div>
-            <div class="panel-flags" id="p-flags"></div>
-            <div class="panel-event-sub" id="p-event-sub"></div>
-            <div class="panel-title" id="p-title">—</div>
-        </div>
-        <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
-    </div>
-    <div class="panel-body">
-        <div class="panel-section" id="p-outcomes-section" style="display:none">
-            <div class="panel-section-label">OUTCOMES</div>
-            <div class="panel-outcomes" id="p-outcomes"></div>
-        </div>
-        <div class="panel-section">
-            <div class="panel-section-label">INTEGRITY BREAKDOWN</div>
-            <div class="panel-bars" id="p-bars"></div>
-        </div>
-        <div class="panel-section">
-            <div class="panel-section-label">MARKET STATS</div>
-            <div class="stat-grid" id="p-stats"></div>
-        </div>
-        <div class="panel-section">
-            <div class="panel-section-label" style="display:flex;justify-content:space-between;align-items:center;">
-                <span>PRICE TREND</span>
-                <span id="p-trend-range" style="font-size:0.58rem;color:#4a6a88;letter-spacing:0.05em;font-weight:400;text-transform:none;">loading...</span>
-            </div>
-            <canvas class="panel-sparkline" id="p-sparkline" height="60"></canvas>
-        </div>
-        <div class="panel-section">
-            <div class="panel-section-label">STRUCTURAL ANALYSIS</div>
-            <div class="context-note" id="p-context"></div>
-            <div id="p-flag-context"></div>
-        </div>
-        <div class="panel-section" id="p-insight-section" style="display:none">
-            <div class="panel-section-label">MARKET INSIGHT</div>
-            <div class="insight-primary" id="p-insight-primary"></div>
-            <div class="insight-risk" id="p-insight-risk"></div>
-        </div>
-    </div>
-    <div class="panel-footer">
-        <a class="view-btn" id="p-link" href="#" target="_blank">VIEW ON POLYMARKET →</a>
-    </div>
-</div>
-
-<footer>
-    <span>POLY-NEXUS © 2026 // CONSENSUS ORACLE — NOT INVESTMENT ADVICE</span>
-    <span id="footer-clock"></span>
-</footer>
-
-<!-- Supabase 설정: CI가 매 배포마다 생성, git에는 올라가지 않음 -->
-<script src="./data/config.js"></script>
-
-<script>
-const DATA_URL = './data/latest_intelligence.json';
-
-// ── SUPABASE CONFIG: config.js에서 주입 (CI 생성, git 미포함) ──
-const _cfg          = window.POLY_NEXUS_CONFIG || {};
-const SUPABASE_URL  = _cfg.supabaseUrl      || '';
-const SUPABASE_ANON_KEY = _cfg.supabaseAnonKey || '';
-const USE_SUPABASE  = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
-
-let sbClient = null;
-if(USE_SUPABASE){
-    sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-}
-
-const MOCK = [
-    {id:"1", slug:"fed-rate-cut-march",    question:"Will the Fed cut rates at the March FOMC meeting?",         category:"Finance",     nexus_score:91.2, market_state:"Converged",   flags:[],                      macro_sensitivity:0.08, volume:14200000, sparkline:[{p:.55},{p:.58},{p:.61},{p:.60},{p:.63},{p:.62},{p:.65}], c1:93,c2:100,c3:88,c4:78},
-    {id:"2", slug:"trump-crypto-eo",       question:"Will Trump sign an executive order on crypto before March?", category:"Crypto",      nexus_score:87.6, market_state:"Converged",   flags:[],                      macro_sensitivity:0.12, volume:9800000,  sparkline:[{p:.72},{p:.74},{p:.71},{p:.75},{p:.78},{p:.76},{p:.79}], c1:87,c2:96,c3:82,c4:71},
-    {id:"3", slug:"ukraine-ceasefire",     question:"Will Ukraine and Russia reach a ceasefire by June 2026?",   category:"Geopolitics", nexus_score:83.4, market_state:"Converged",   flags:[],                      macro_sensitivity:0.06, volume:7400000,  sparkline:[{p:.31},{p:.33},{p:.35},{p:.34},{p:.36},{p:.37},{p:.36}], c1:82,c2:94,c3:91,c4:65},
-    {id:"4", slug:"apple-foldable-wwdc",   question:"Will Apple announce a foldable iPhone at WWDC 2026?",       category:"Tech",        nexus_score:78.1, market_state:"Calibrating", flags:[],                      macro_sensitivity:0.04, volume:5100000,  sparkline:[{p:.42},{p:.44},{p:.40},{p:.43},{p:.45},{p:.44},{p:.46}], c1:74,c2:91,c3:94,c4:58},
-    {id:"5", slug:"btc-120k-q1",           question:"Will BTC exceed $120k before end of Q1 2026?",              category:"Crypto",      nexus_score:66.2, market_state:"Calibrating", flags:["Correlated"],          macro_sensitivity:0.71, volume:22100000, sparkline:[{p:.48},{p:.52},{p:.49},{p:.55},{p:.51},{p:.53},{p:.50}], c1:98,c2:89,c3:41,c4:52},
-    {id:"6", slug:"democrat-senate-2026",  question:"Will the Democrats win the 2026 Senate Midterms?",          category:"Politics",    nexus_score:72.3, market_state:"Calibrating", flags:[],                      macro_sensitivity:0.03, volume:6700000,  sparkline:[{p:.44},{p:.45},{p:.43},{p:.46},{p:.44},{p:.45},{p:.44}], c1:77,c2:92,c3:96,c4:44},
-    {id:"7", slug:"musk-doge-july",        question:"Will Elon Musk still be at DOGE by July 2026?",             category:"Politics",    nexus_score:61.4, market_state:"Calibrating", flags:["Contested"],           macro_sensitivity:0.09, volume:4300000,  sparkline:[{p:.62},{p:.60},{p:.58},{p:.61},{p:.59},{p:.60},{p:.58}], c1:71,c2:88,c3:84,c4:38},
-    {id:"8", slug:"eth-5000-june",         question:"Will ETH reach $5000 before June 2026?",                    category:"Crypto",      nexus_score:48.8, market_state:"Calibrating", flags:["Correlated","Contested"],macro_sensitivity:0.82,volume:11500000, sparkline:[{p:.35},{p:.38},{p:.41},{p:.44},{p:.39},{p:.42},{p:.38}], c1:87,c2:84,c3:23,c4:30},
-    {id:"9", slug:"cpi-4pct-2026",         question:"Will inflation (CPI) exceed 4% in any month of 2026?",      category:"Finance",     nexus_score:55.1, market_state:"Calibrating", flags:["Correlated"],          macro_sensitivity:0.72, volume:2800000,  sparkline:[{p:.28},{p:.30},{p:.29},{p:.32},{p:.31},{p:.30},{p:.32}], c1:60,c2:86,c3:32,c4:51},
-    {id:"10",slug:"ai-lab-breach-2026",    question:"Will any major AI lab have a data breach in 2026?",         category:"Tech",        nexus_score:42.1, market_state:"Fragile",     flags:[],                      macro_sensitivity:0.01, volume:85000,    sparkline:[{p:.18},{p:.19},{p:.18},{p:.20},{p:.19},{p:.19},{p:.20}], c1:22,c2:86,c3:94,c4:11},
-];
-
-let stateInst=null, radarInst=null;
-let allData=[];
-
-// ── UTILS ──────────────────────────────────────────────────
-function tickClock(){
-    const n=new Date();
-    const t=[n.getUTCHours(),n.getUTCMinutes(),n.getUTCSeconds()].map(v=>String(v).padStart(2,'0')).join(':')+' UTC';
-    document.getElementById('live-clock').textContent=t;
-    const f=document.getElementById('footer-clock');
-    if(f) f.textContent=t;
-}
-setInterval(tickClock,1000); tickClock();
-
-function fmtVol(n){
-    if(n>=1e9) return '$'+(n/1e9).toFixed(2)+'B';
-    if(n>=1e6) return '$'+(n/1e6).toFixed(1)+'M';
-    if(n>=1e3) return '$'+(n/1e3).toFixed(0)+'K';
-    return '$'+n;
-}
-function animateCount(el,target,dec=0,ms=800){
-    if(!el) return;
-    const s=performance.now();
-    const step=now=>{
-        const p=Math.min((now-s)/ms,1),e=1-Math.pow(1-p,3);
-        el.textContent=(target*e).toFixed(dec);
-        if(p<1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-}
-function cleanQuestion(q){
-    if(!q) return '—';
-    return q;
-}
-function normBar(v){ return Math.min(Math.max(v||0,0),100).toFixed(1); }
-function spreadColor(sp){
-    if(sp==null) return '#3d5068';
-    if(sp>0.05) return '#f87171';
-    if(sp>0.02) return '#fbbf24';
-    return '#34d399';
-}
-function spreadLabel(sp, price){
-    if(sp!=null) return (sp*100).toFixed(2)+'%';
-    if(price!=null && (price>=0.99||price<=0.01)) return 'SETTLED';
-    return '—';
-}
-function hasVal(v){ return v!==null&&v!==undefined&&v!==''&&v!=='-'; }
-function fmtScore(v){ return hasVal(v)?(+v).toFixed(0):'—'; }
-function getFlags(d){ return Array.isArray(d.flags)?d.flags:[]; }
-
-// ── OUTCOME NAME EXTRACTION ───────────────────────────────
-// "Will Delcy Rodríguez be the leader of..." → "Delcy Rodríguez"
-// YES / NO → 그대로
-function shortOutcomeName(raw, maxLen=28){
-    if(!raw) return '?';
-    let name = raw.trim();
-    const u = name.toUpperCase();
-    if(u === 'YES') return 'YES';
-    if(u === 'NO')  return 'NO';
-    // "Will [SUBJECT] verb..." 패턴 → SUBJECT 추출
-    const willMatch = name.match(
-        /^(?:Will|Does|Is|Are|Did|Has|Can|Could|Would)\s+(.+?)\s+(?:be|win|become|get|stay|remain|take|leave|reach|exceed|pass|sign|buy|sell|lose|lead|run|serve|hold|join)/i
-    );
-    if(willMatch) name = willMatch[1].trim();
-    // "Team A vs Team B: Over/Under 217.5" → "Team A vs Team B"
-    const colonIdx = name.indexOf(': ');
-    if(colonIdx > 0) name = name.slice(0, colonIdx).trim();
-    // 물음표 제거
-    name = name.replace(/\?$/, '').trim();
-    if(name.length > maxLen) name = name.slice(0, maxLen - 1) + '…';
-    return name;
-}
-
-function renderOutcomes(d){
-    const outcomes = d.outcomes;
-    if(!outcomes || outcomes.length < 2) return '';
-    const sorted = [...outcomes].sort((a,b) => b.price - a.price);
-    const t1 = sorted[0], t2 = sorted[1];
-    const p1 = Math.round(t1.price * 100);
-    const p2 = Math.round(t2.price * 100);
-    const n1 = shortOutcomeName(t1.name);
-    const n2 = shortOutcomeName(t2.name);
-    // 이름이 너무 길거나 풀 문장이면 숨김
-    if(n1.length > 20 || n2.length > 20) return '';
-    const extra = sorted.length > 2 ? ` <span class="co-extra">+${sorted.length-2}</span>` : '';
-    return `<div class="card-outcomes">
-        <span class="co-fav"><strong>${p1}%</strong> ${n1}</span>
-        <span class="co-sep">·</span>
-        <span class="co-und">${n2} ${p2}%</span>${extra}
-    </div>`;
-}
-
-// ── RULE-BASED 2-LINE INSIGHT ──────────────────────────────
-function generateInsight(d){
-    const liq = d.c1 || 0, eff = d.c2 || 0, ind = d.c3 || 0, cnv = d.c4 || 0;
-    const state = d.market_state || '';
-    const flags = getFlags(d);
-    const price = d.current_price || 0;
-    const vol   = d.volume || 0;
-    const score = parseFloat(d.nexus_score) || 0;
-
-    const pillars = {Liquidity:liq, Efficiency:eff, Independence:ind, Convergence:cnv};
-    const valid = Object.entries(pillars).filter(([,v]) => v > 0);
-    const lowest  = valid.length ? valid.reduce((a,b) => a[1]<b[1]?a:b) : null;
-    const highest = valid.length ? valid.reduce((a,b) => a[1]>b[1]?a:b) : null;
-    const avg = valid.length ? valid.reduce((s,[,v])=>s+v,0)/valid.length : 0;
-
-    // outcomes top1
-    const outs = d.outcomes ? [...d.outcomes].sort((a,b)=>b.price-a.price) : [];
-    const topOut = outs[0];
-    const topPct = topOut ? Math.round(topOut.price*100) : Math.round(price*100);
-
-    let primary = '', risk = '';
-
-    // ── TENSION 감지 (가장 인사이트 강함) ──────────────────
-    if(liq >= 75 && cnv <= 45){
-        primary = `<strong>$${(vol/1e6).toFixed(1)}M</strong> volume but crowd hasn't converged — LIQ ${liq.toFixed(0)} vs CNV ${cnv.toFixed(0)} gap signals active repricing, not stability.`;
-    } else if(cnv >= 80 && liq <= 40){
-        primary = `Consensus has converged to <strong>${cnv.toFixed(0)}/100</strong> but capital depth is thin at LIQ ${liq.toFixed(0)} — a single large order could break the price.`;
-    } else if(ind <= 30 && vol > 500000){
-        primary = `Independence at <strong>${ind.toFixed(0)}/100</strong> — traders are moving together, not independently. Price may reflect correlated sentiment rather than true crowd wisdom.`;
-    } else if(eff <= 35 && eff > 0){
-        primary = `Efficiency <strong>${eff.toFixed(0)}/100</strong> — probability sum has drifted from 100%, indicating possible outcome imbalance or stale pricing.`;
-
-    // ── STATE-SPECIFIC ──────────────────────────────────────
-    } else if(state === 'Converged'){
-        if(lowest && lowest[1] >= 80){
-            primary = `All four pillars above 80 — LIQ ${liq.toFixed(0)} · EFF ${eff.toFixed(0)} · IND ${ind.toFixed(0)} · CNV ${cnv.toFixed(0)}. Structurally the strongest tier on this dashboard.`;
-        } else if(lowest){
-            primary = `Converged with one soft spot: <strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100. All other pillars clear threshold — this is the only remaining risk factor.`;
-        } else {
-            primary = `Structural consensus locked at score <strong>${score}</strong>. No pillar below threshold.`;
-        }
-    } else if(state === 'Calibrating'){
-        const gap = 80 - score;
-        if(gap <= 8){
-            primary = `<strong>${gap.toFixed(1)} pts</strong> from Converged threshold. ${cnv < 75 ? `Convergence (${cnv.toFixed(0)}/100) is the final blocker.` : `Liquidity (${liq.toFixed(0)}/100) needs marginal deepening.`}`;
-        } else if(cnv < 50){
-            primary = `Calibration phase — CNV at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't found equilibrium yet. Current pricing reflects active discovery, not settled consensus.`;
-        } else {
-            primary = `Score <strong>${score}</strong> with balanced pillars (avg ${avg.toFixed(0)}/100). Market is functional but hasn't matured enough to lock consensus.`;
-        }
-    } else if(state === 'Fragile'){
-        if(vol < 50000){
-            primary = `Near-zero activity — <strong>${(vol/1e3).toFixed(0)}K</strong> volume. Prices reflect initial positioning, not crowd intelligence. Structural scoring is not yet meaningful.`;
-        } else if(lowest){
-            primary = `Fragile primarily due to <strong>${lowest[0]}</strong> at ${lowest[1].toFixed(0)}/100. Needs sustained volume and tighter spreads before signals become reliable.`;
-        } else {
-            primary = `Structural weakness detected at score <strong>${score}</strong>. Data accumulation in progress.`;
-        }
-    } else {
-        primary = lowest
-            ? `<strong>${lowest[0]}</strong> (${lowest[1].toFixed(0)}/100) is the binding constraint — other pillars average ${avg.toFixed(0)}/100.`
-            : `Structural profile balanced — no single dominant weakness.`;
-    }
-
-    // ── RISK NOTE ───────────────────────────────────────────
-    if(flags.includes('Contested')){
-        risk = `Contested — YES/NO capital actively competing. Expect elevated repricing until one side dominates.`;
-    } else if(flags.includes('Correlated')){
-        risk = `Correlated — price coupled to macro assets. Check BTC/SPY on high-volatility days before trusting this signal.`;
-    } else if(topPct >= 88){
-        risk = `Near-certainty at <strong>${topPct}%</strong> — late-stage divergence risk if resolution is delayed or ambiguous.`;
-    } else if(topPct <= 12 && topPct > 0){
-        risk = `Near-zero at <strong>${topPct}%</strong> — small information shock could trigger outsized repricing.`;
-    } else if(topPct >= 45 && topPct <= 55 && state === 'Calibrating'){
-        risk = `Dead heat (~50%) — outcome is genuinely uncertain. Active discovery ongoing, no structural edge either way.`;
-    } else if(vol < 80000 && state !== 'Initializing'){
-        risk = `Thin market — <strong>${(vol/1e3).toFixed(0)}K</strong> volume means individual trades can move price materially.`;
-    }
-
-    return { primary, risk };
-}
-
-function barRow(key,cls,val,highlight=false){
-    if(!hasVal(val)){
-        return `<div class="card-bar-row"><span class="card-bar-key">${key}</span><div class="card-bar-bg"><div class="card-bar-fill" style="width:0%"></div></div><span class="card-bar-key" style="width:auto;color:#3d5068">—</span></div>`;
-    }
-    const hlStyle = highlight ? 'color:#e05a5a;font-weight:700;' : '';
-    const fillCls = highlight ? 'bar-weak' : cls;
-    return `<div class="card-bar-row"><span class="card-bar-key" style="${hlStyle}">${key}</span><div class="card-bar-bg"><div class="card-bar-fill ${fillCls}" style="width:${normBar(val)}%"></div></div></div>`;
-}
-
-// ── LIVE CALIBRATION TEST ──────────────────────────────────
-// Wilson Score Interval (단측 근사) — n 작을 때 CI 계산
-function wilsonCI(k, n, z=1.96) {
-    if (n === 0) return [0, 1];
-    const p = k / n;
-    const denom = 1 + z*z/n;
-    const center = (p + z*z/(2*n)) / denom;
-    const margin = (z * Math.sqrt(p*(1-p)/n + z*z/(4*n*n))) / denom;
-    return [Math.max(0, center - margin), Math.min(1, center + margin)];
-}
-
-function varianceLabel(rate) {
-    if (rate >= 0.75) return { text: 'Low Variance',  cls: 'low'  };
-    if (rate >= 0.45) return { text: 'Mid Variance',  cls: 'mid'  };
-    return                   { text: 'High Noise',    cls: 'high' };
-}
-
-// MOCK 트랙 레코드 (Supabase hc_track_record 없을 때 fallback)
-const MOCK_TRACK_RECORD = [
-    { state: 'Converged',   n: 7, stable: 6 },   // 6/7 price-stable at resolution
-    { state: 'Calibrating', n: 9, stable: 5 },   // 5/9
-    { state: 'Fragile',     n: 3, stable: 1 },   // 1/3
-];
-const CALIB_TARGET = 100;
-let totalMarketsCount = CALIB_TARGET; // get_dashboard_kpis에서 갱신됨
-
-async function loadTrackRecord() {
-    if (!USE_SUPABASE) return MOCK_TRACK_RECORD;
-    try {
-        // track_record: 실제 종료된 마켓의 direction_correct 기반 집계
-        const { data, error } = await sbClient
-            .from('track_record')
-            .select('market_state, direction_correct');
-
-        if (error || !data?.length) return MOCK_TRACK_RECORD;
-
-        const agg = {};
-        data.forEach(r => {
-            const s = r.market_state || 'Converged';
-            if (!agg[s]) agg[s] = { n: 0, stable: 0 };
-            agg[s].n++;
-            if (r.direction_correct === true) agg[s].stable++;
-        });
-        return ['Converged','Calibrating','Fragile'].map(s => ({
-            state:  s,
-            n:      agg[s]?.n      ?? 0,
-            stable: agg[s]?.stable ?? 0,
-        }));
-    } catch(e) {
-        console.warn('Track record fetch failed:', e);
-        return MOCK_TRACK_RECORD;
-    }
-}
-
-// Realtime subscription — hc_track_record 변경 시 자동 갱신
-function subscribeCalibration() {
-    if (!USE_SUPABASE) return;
-    sbClient.channel('calib_live')
-        .on('postgres_changes', {
-            event: '*',
-            schema: 'public',
-            table: 'convergence_log'
-        }, () => {
-            loadTrackRecord().then(renderCalibration);
-        })
-        .subscribe();
-}
-
-const SIGNIFICANCE_THRESHOLD = 30; // n≥30 → 통계 유의성
-
-function renderCalibration(rows) {
-    const totalN = rows.reduce((s, r) => s + r.n, 0);
-    const pct = Math.min(totalN / SIGNIFICANCE_THRESHOLD * 100, 100);
-    const significanceReached = totalN >= SIGNIFICANCE_THRESHOLD;
-
-    document.getElementById('calib-n').textContent = totalN;
-    document.getElementById('calib-target').textContent = SIGNIFICANCE_THRESHOLD;
-    document.getElementById('calib-progress-pct').textContent =
-        significanceReached ? '✓ Significance reached' : `${pct.toFixed(0)}% to significance`;
-
-    setTimeout(() => {
-        document.getElementById('calib-progress-fill').style.width = pct + '%';
-    }, 300);
-
-    const container = document.getElementById('calib-rows');
-
-    if (significanceReached) {
-        // n≥30: 정식 메트릭 표시
-        const stateConfig = {
-            'Converged':   { dot: 'converged',   barCls: 'converged' },
-            'Calibrating': { dot: 'calibrating', barCls: 'calibrating' },
-            'Fragile':     { dot: 'fragile',      barCls: 'fragile' },
-        };
-        container.innerHTML = rows.map(r => {
-            const cfg = stateConfig[r.state] || { dot: 'fragile', barCls: 'fragile' };
-            const rate = r.n > 0 ? r.stable / r.n : 0;
-            const vl = varianceLabel(rate);
-            const [ciLow, ciHigh] = wilsonCI(r.stable, r.n);
-            const barPct = (rate * 100).toFixed(0);
-            const nLabel = r.n > 0 ? `n=${r.n}` : 'n=0';
-            const stableLabel = r.n > 0 ? `${r.stable}/${r.n} direction correct` : 'awaiting data';
-            return `
-            <div class="calib-row">
-                <div class="calib-state-label">
-                    <div class="calib-dot ${cfg.dot}"></div>
-                    <div>
-                        <div>${r.state}</div>
-                        <div style="font-size:0.55rem;color:var(--text-dim);margin-top:2px">${nLabel} · ${stableLabel}</div>
+                    <!-- 패널 푸터 -->
+                    <div style="padding:10px 16px; border-top:1px solid var(--border);">
+                        <div class="kpi-flags-note">
+                            Since March 4, 2026 · 617 events tracked total
+                        </div>
+                        <div class="kpi-flags-note" style="margin-top:3px;">
+                            Supabase · Cloudflare R2 · GitHub Actions
+                        </div>
                     </div>
                 </div>
-                <div class="calib-bar-wrap">
-                    <div class="calib-bar-bg">
-                        <div class="calib-bar-fill ${cfg.barCls}" style="width:0%" data-target="${barPct}"></div>
+
+                <!-- 배지 (기존 .kpi-init-bar 스타일 참조) -->
+                <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+                    <span style="font-size:0.58rem; padding:3px 10px; border-radius:3px; background:rgba(52,211,153,0.1); color:var(--green); border:1px solid rgba(52,211,153,0.2); font-weight:600; letter-spacing:0.07em;">
+                        V5 VALIDATOR 6/6 PASS
+                    </span>
+                    <span style="font-size:0.58rem; padding:3px 10px; border-radius:3px; background:rgba(96,165,250,0.1); color:var(--blue); border:1px solid rgba(96,165,250,0.2); font-weight:600; letter-spacing:0.07em;">
+                        POLYMARKET CLOB API
+                    </span>
+                    <span style="font-size:0.58rem; padding:3px 10px; border-radius:3px; background:rgba(251,191,36,0.1); color:var(--amber); border:1px solid rgba(251,191,36,0.2); font-weight:600; letter-spacing:0.07em;">
+                        BUILDER PROGRAM
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- hero-grid CSS — 기존 <style> 끝에 추가 -->
+<style>
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+    align-items: center;
+}
+@media(max-width:1100px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-right { order: -1; }
+}
+</style>
+
+
+
+
+<!-- ================================================================
+     [삽입 3] HOW IT WORKS SECTION
+     <div id="state-groups"></div> 직후, <footer> 전에 붙여넣기
+     ================================================================ -->
+<section id="how-it-works" style="padding:56px 32px; background:var(--bg-2); border-top:1px solid var(--border);">
+    <div class="container">
+
+        <!-- 섹션 헤더 (기존 .section-head, .section-tag, .section-desc 재사용) -->
+        <div class="section-head">
+            <span>HOW POLY-NEXUS WORKS</span>
+            <span class="section-tag">V5 ALGORITHM · 4-PILLAR ENGINE</span>
+        </div>
+        <div class="section-desc">
+            A 30-minute data pipeline, purpose-built for Polymarket's prediction market structure.
+        </div>
+
+        <!-- 4단계 스텝 -->
+        <div style="display:flex; flex-direction:column; margin-bottom:32px;">
+
+            <!-- STEP 01 -->
+            <div style="display:grid; grid-template-columns:52px 1fr; gap:20px; padding:24px 0; border-bottom:1px solid var(--border);">
+                <div style="font-family:var(--mono); font-size:1.3rem; font-weight:700; color:var(--border-hi); padding-top:2px; line-height:1;">01</div>
+                <div>
+                    <div style="font-size:0.88rem; font-weight:600; color:var(--text-hi); letter-spacing:0.04em; margin-bottom:8px;">Data Collection</div>
+                    <p style="font-size:0.76rem; color:var(--text-mid); line-height:1.7; margin-bottom:12px;">
+                        Gamma API pulls 150+ active markets every 30 minutes.
+                        CLOB order book depth is fetched for the top 20 markets by volume —
+                        replacing volume-only proxies with real bid/ask liquidity.
+                        Macro signals (BTC, equities, rates) are captured for correlation analysis.
+                    </p>
+                    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">Polymarket γ-API</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">CLOB depth batch</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">yfinance macro</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">Pydantic validation</span>
                     </div>
                 </div>
-                <div class="calib-variance ${vl.cls}">${r.n > 0 ? vl.text : '—'}</div>
-                <div class="calib-ci">
-                    ${r.n >= 3
-                        ? `95% CI [${(ciLow*100).toFixed(0)}%–${(ciHigh*100).toFixed(0)}%]`
-                        : '<span style="color:#3d5068">CI: n too small</span>'}
-                </div>
-            </div>`;
-        }).join('');
-        setTimeout(() => {
-            container.querySelectorAll('.calib-bar-fill').forEach(el => {
-                el.style.width = el.dataset.target + '%';
-            });
-        }, 400);
-        document.getElementById('calib-early-data').style.display = 'none';
-    } else {
-        // n<30: 수집 중 상태 표시
-        container.innerHTML = `
-        <div style="padding:10px 0; color:var(--text-dim); font-size:0.65rem; line-height:1.8">
-            <div style="margin-bottom:6px">
-                <span style="color:#22c55e">●</span> Converged &nbsp;
-                <span style="color:#60a5fa">●</span> Calibrating &nbsp;
-                <span style="color:#64748b">●</span> Fragile
             </div>
-            <div>Full Direction Accuracy and Brier Score will unlock at n≥30.</div>
-            <div style="color:#3d5068; margin-top:4px">Expected: mid-April 2026 &nbsp;·&nbsp; 25+ resolutions scheduled for March 31</div>
-        </div>`;
 
-        // Early data (n>0이면 작게 표시)
-        if (totalN > 0) {
-            const converged = rows.find(r => r.state === 'Converged') || { n: 0, stable: 0 };
-            document.getElementById('calib-early-data').style.display = 'block';
-            document.getElementById('calib-early-n').textContent = totalN;
-            document.getElementById('calib-early-metrics').innerHTML = `
-                <span>Converged direction accuracy: ${converged.n > 0 ? converged.stable + '/' + converged.n : '—'}</span>
-                <span style="color:#3d5068; margin-left:12px">· statistically uninterpretable at this sample size</span>`;
-        } else {
-            document.getElementById('calib-early-data').style.display = 'none';
-        }
-    }
-}
-
-// ── STATE CONFIG ───────────────────────────────────────────
-const STATES = [
-    {
-        key: 'converged',
-        match: s => s === 'Converged',
-        label: 'CONVERGED',
-        tag: 'CONSENSUS LOCKED',
-        cardCls: 's-converged',
-        badgeCls: 'badge-converged',
-        badgeText: 'CONVERGED',
-        desc: 'These markets have locked in a stable price. Late-stage repricing risk is minimal — suitable for research, citation, and high-confidence position-taking.',
-        context: d => {
-            const subs = {Liquidity:d.c1||0, Efficiency:d.c2||0, Independence:d.c3||0, Convergence:d.c4||0};
-            const sorted = Object.entries(subs).sort((a,b)=>a[1]-b[1]);
-            const weakest = sorted[0];
-            const strongest = sorted[sorted.length-1];
-            const score = parseFloat(d.nexus_score)||0;
-            const vol = d.volume||0;
-            if(weakest[1]===0){
-                return `Structural data is still accumulating. Score <strong>${score}</strong> reflects available dimensions — full consensus profile will populate as observation history deepens.`;
-            }
-            if(weakest[1]<80){
-                const riskMap = {
-                    Liquidity:   `Liquidity at <strong>${weakest[1].toFixed(0)}/100</strong> is the binding constraint — capital depth is adequate but not deep. A large position or sudden news event could cause outsized price movement near resolution.`,
-                    Efficiency:  `Efficiency at <strong>${weakest[1].toFixed(0)}/100</strong> indicates mild probability drift — monitor for late-stage divergence as the market approaches resolution.`,
-                    Independence:`Independence at <strong>${weakest[1].toFixed(0)}/100</strong> shows residual macro correlation. Not disqualifying, but probability may temporarily distort on high-volatility BTC or equity days.`,
-                    Convergence: `Convergence at <strong>${weakest[1].toFixed(0)}/100</strong> — crowd agreement is still solidifying. Score will likely improve as the resolution date approaches and informed capital consolidates.`,
-                };
-                return `Consensus verified — <strong>${strongest[0]}</strong> is the strongest dimension at ${strongest[1].toFixed(0)}/100. ${riskMap[weakest[0]]}`;
-            }
-            if(vol>10e6){
-                return `Deep liquidity market — <strong>${(vol/1e6).toFixed(1)}M</strong> in volume provides robust price discovery. All four integrity dimensions above 85. High-volume Converged markets carry the strongest signal fidelity.`;
-            }
-            if((d.c3||0)>=99){
-                return `Independence score <strong>${(d.c3||0).toFixed(0)}/100</strong> — price movements are entirely event-driven with no detectable macro correlation. This is rare and reflects a market insulated from BTC/SPY noise.`;
-            }
-            if((d.c4||0)>=99){
-                return `Near-perfect convergence (<strong>${(d.c4||0).toFixed(0)}/100</strong>) — the market has fully absorbed available information and outcomes are stably priced. Low repricing risk ahead of resolution.`;
-            }
-            return `All four dimensions above threshold. Score <strong>${score}</strong> reflects balanced structural integrity — no single dimension is dominant or deficient. Appropriate for citation and research use.`;
-        },
-    },
-    {
-        key: 'calibrating',
-        match: s => s === 'Calibrating',
-        label: 'CALIBRATING',
-        tag: 'PRICE DISCOVERY',
-        cardCls: 's-calibrating',
-        badgeCls: 'badge-calibrating',
-        badgeText: 'CALIBRATING',
-        desc: 'Price discovery is ongoing. Consensus exists but has not stabilized yet. Monitor for transition to Converged before treating price as final.',
-        context: d => {
-            const cnv = d.c4||0;
-            const liq = d.c1||0;
-            const ind = d.c3||0;
-            const score = parseFloat(d.nexus_score)||0;
-            const macro = d.macro_sensitivity||0;
-            const flags = getFlags(d);
-            if(score>=75){
-                const gap=80-score;
-                return `Near Converged threshold — <strong>${gap.toFixed(1)} pts</strong> from consensus lock. ${cnv<75?`Convergence (${cnv.toFixed(0)}/100) is the primary blocker; a sustained price move toward resolution would push this over.`:`Liquidity (${liq.toFixed(0)}/100) is the limiting factor — volume depth needs to deepen slightly.`}`;
-            }
-            if(cnv<55){
-                return `Early calibration phase — convergence at <strong>${cnv.toFixed(0)}/100</strong> means the market hasn't yet found a stable equilibrium. Outcomes remain genuinely uncertain and are actively being repriced as new information arrives.`;
-            }
-            if(macro>0.3&&!flags.includes('Correlated')){
-                return `Mild macro correlation detected (β <strong>${macro.toFixed(2)}</strong>) — not yet at threshold for Correlated flag, but probability may temporarily shift on high-volatility days. Independence at ${ind.toFixed(0)}/100.`;
-            }
-            if(liq<65){
-                return `Liquidity at <strong>${liq.toFixed(0)}/100</strong> is below average — calibration is occurring but with limited capital depth. Score will improve as volume accumulates closer to resolution.`;
-            }
-            return `Functional market in active calibration. Macro sensitivity <strong>${macro.toFixed(2)}</strong> is within acceptable range — price movements are primarily event-driven. Monitor convergence trend for transition to Converged.`;
-        },
-    },
-    {
-        key: 'initializing',
-        match: s => s === 'Initializing',
-        label: 'INITIALIZING',
-        tag: 'DATA ACCUMULATING',
-        cardCls: 's-initializing',
-        badgeCls: 'badge-initializing',
-        badgeText: 'INITIALIZING',
-        desc: 'Observation history is insufficient for structural evaluation. Score and state will populate within 1–2 hours as data accumulates.',
-        context: d => `Data collection in progress. Nexus Score will be available once sufficient observation history has accumulated.`,
-    },
-    {
-        key: 'fragile',
-        match: s => s === 'Fragile' || (!['Converged','Calibrating','Initializing'].includes(s)),
-        label: 'FRAGILE',
-        tag: 'STRUCTURAL WEAKNESS',
-        cardCls: 's-fragile',
-        badgeCls: 'badge-fragile',
-        badgeText: 'FRAGILE',
-        desc: 'Market structure is weak. Low liquidity means a single large order could move this price significantly. Do not treat current price as reliable consensus.',
-        context: d => {
-            const vol = d.volume||0;
-            const liq = d.c1||0;
-            const eff = d.c2||0;
-            const cnv = d.c4||0;
-            const score = parseFloat(d.nexus_score)||0;
-            if(vol<10000){
-                return `Near-zero volume — crowd consensus has not yet formed. Current probabilities reflect initial positioning rather than genuine collective intelligence. Structural scoring is not yet meaningful.`;
-            }
-            if(eff>0&&eff<40){
-                return `Efficiency at <strong>${eff.toFixed(0)}/100</strong> — probability sum has diverged significantly from 100%, indicating possible outcome ambiguity or multi-outcome market structure. Structural scoring is unreliable until this resolves.`;
-            }
-            if(liq<30){
-                return `Extremely thin liquidity (${(vol/1e3).toFixed(0)}K volume, LIQ <strong>${liq.toFixed(0)}/100</strong>) — even small orders could move the price materially. Score ${score} is unreliable at this depth and may not reflect genuine market consensus.`;
-            }
-            return `Volume at <strong>${(vol/1e6).toFixed(2)}M</strong> provides some signal but insufficient depth for reliable consensus assessment. Efficiency ${eff.toFixed(0)}/100 and Convergence ${cnv.toFixed(0)}/100 suggest the market is forming but hasn't matured.`;
-        },
-    },
-];
-
-// ── FLAG CONTEXT ───────────────────────────────────────────
-const FLAG_CONTEXT = {
-    Contested: d => {
-        const beta = d.macro_sensitivity||0;
-        const cnv = d.c4||0;
-        return `YES and NO sides are actively competing — capital from both camps is flowing in simultaneously, causing elevated price volatility. Entropy is rising. This is not structural failure; it reflects genuine disagreement in crowd consensus. Monitor convergence (currently ${cnv.toFixed(0)}/100) for directional resolution.`;
-    },
-    Correlated: d => {
-        const beta = d.macro_sensitivity||0;
-        const ind = d.c3||0;
-        const cat = d.category||'';
-        if(beta>0.7){
-            return `Strong macro dependency detected — β <strong>${beta.toFixed(2)}</strong>. This market's probability is significantly co-moving with external assets (BTC/SPY/Rates). Independence at ${ind.toFixed(0)}/100. Interpret probability as sentiment-adjusted, not purely event-driven. ${cat==='Crypto'?'Expected for Crypto markets.':'Unusual for a '+cat+' market — may reflect a shared news cycle.'}`;
-        }
-        return `Macro correlation present — β <strong>${beta.toFixed(2)}</strong>. Price movements partially reflect external asset dynamics rather than pure event-specific information. Independence at ${ind.toFixed(0)}/100. Structural integrity is intact but consensus signal is mixed with macro noise.`;
-    },
-};
-
-function getState(s){
-    return STATES.find(st=>st.match(s))||STATES[2];
-}
-
-// ── KPIs ──────────────────────────────────────────────────
-function renderKPIs(data){
-    const total       = data.length;
-    const initializing= data.filter(d=>d.market_state==='Initializing').length;
-    const converged   = data.filter(d=>d.market_state==='Converged').length;
-    const calibrating = data.filter(d=>d.market_state==='Calibrating').length;
-    const fragile     = data.filter(d=>d.market_state==='Fragile'||
-                            (!['Converged','Calibrating','Initializing'].includes(d.market_state))).length;
-    const contested   = data.filter(d=>getFlags(d).includes('Contested')).length;
-    const correlated  = data.filter(d=>getFlags(d).includes('Correlated')).length;
-
-    // Integrity Index: mean across analyzed (non-Initializing) markets only
-    const analyzed = data.filter(d=>d.market_state!=='Initializing'&&d.nexus_score!=null);
-    const idx = analyzed.length
-        ? analyzed.reduce((a,d)=>a+(parseFloat(d.nexus_score)||0),0) / analyzed.length
-        : 0;
-
-    animateCount(document.getElementById('total-count'),      total,       0, 700);
-    animateCount(document.getElementById('integrity-index'),  idx,         1);
-    document.getElementById('integrity-coverage').textContent =
-        analyzed.length + ' / ' + total + ' markets';
-    animateCount(document.getElementById('converged-count'),   converged,   0, 700);
-    animateCount(document.getElementById('calibrating-count'), calibrating, 0, 700);
-    animateCount(document.getElementById('fragile-count'),     fragile,     0, 700);
-    animateCount(document.getElementById('contested-count'),   contested,   0, 700);
-    animateCount(document.getElementById('correlated-count'),  correlated,  0, 700);
-    animateCount(document.getElementById('initializing-count'),initializing,0, 700);
-
-    // Initializing 경고 (30% 이상이면 주황색)
-    const initWarn = document.getElementById('init-warning');
-    if(initWarn){
-        const ratio = total>0 ? initializing/total : 0;
-        initWarn.textContent = ratio>=0.3 ? '⚠ '+Math.round(ratio*100)+'% pending' : '';
-    }
-
-    document.getElementById('last-update').textContent=
-        new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
-}
-
-// ── CHARTS ────────────────────────────────────────────────
-function renderKPIsFromRPC(kpis, visibleCount){
-    totalMarketsCount = +kpis.total_markets || CALIB_TARGET;
-    // KPI는 전체 집계(RPC), 카드 수는 top5 필터링 후 실제 표시 수
-    animateCount(document.getElementById('total-count'),      +kpis.total_markets||0,      0, 700);
-    animateCount(document.getElementById('integrity-index'),  +kpis.avg_nexus_score||0,    1);
-    document.getElementById('integrity-coverage').textContent =
-        (+kpis.total_markets - (+kpis.initializing_count||0)) + ' / ' + (+kpis.total_markets||0) + ' markets';
-    animateCount(document.getElementById('converged-count'),   +kpis.converged_count||0,   0, 700);
-    animateCount(document.getElementById('calibrating-count'), +kpis.calibrating_count||0, 0, 700);
-    animateCount(document.getElementById('fragile-count'),     +kpis.fragile_count||0,     0, 700);
-    animateCount(document.getElementById('contested-count'),   +kpis.contested_count||0,   0, 700);
-    animateCount(document.getElementById('correlated-count'),  +kpis.correlated_count||0,  0, 700);
-    animateCount(document.getElementById('initializing-count'),+kpis.initializing_count||0,0, 700);
-    document.getElementById('last-update').textContent=
-        new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
-    const initWarn = document.getElementById('init-warning');
-    if(initWarn){
-        const total = +kpis.total_markets||1;
-        const ratio = (+kpis.initializing_count||0)/total;
-        initWarn.textContent = ratio>=0.3 ? '⚠ '+Math.round(ratio*100)+'% pending' : '';
-    }
-}
-
-function renderStateChart(data){
-    const counts={};
-    data.forEach(d=>{
-        if(d.market_state==='Initializing') return; // Initializing 제외
-        const label=getState(d.market_state).label;
-        counts[label]=(counts[label]||0)+1;
-    });
-    const colorMap={
-        'CONVERGED':          'rgba(52,211,153,0.70)',
-        'CALIBRATING':        'rgba(96,165,250,0.60)',
-        'FRAGILE':            'rgba(251,191,36,0.55)',
-    };
-    const borderMap={
-        'CONVERGED':          'rgba(52,211,153,0.5)',
-        'CALIBRATING':        'rgba(96,165,250,0.5)',
-        'FRAGILE':            'rgba(251,191,36,0.4)',
-    };
-    const labels=Object.keys(counts);
-    const ctx=document.getElementById('stateChart').getContext('2d');
-    if(stateInst) stateInst.destroy();
-    stateInst=new Chart(ctx,{
-        type:'doughnut',
-        data:{labels,datasets:[{
-            data:Object.values(counts),
-            backgroundColor:labels.map(l=>colorMap[l]||'rgba(40,55,75,0.6)'),
-            borderColor:labels.map(l=>borderMap[l]||'rgba(60,75,100,0.3)'),
-            borderWidth:1,
-            hoverOffset:6,
-        }]},
-        options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{
-            legend:{position:'right',labels:{
-                color:'#8fa3bc',
-                font:{family:"'JetBrains Mono',monospace",size:10},
-                boxWidth:10,boxHeight:10,padding:12,
-                usePointStyle:true,pointStyle:'rectRounded',
-            }},
-            tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
-                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
-                callbacks:{label:c=>`  ${c.label}: ${c.raw}`}
-            }
-        }}
-    });
-}
-
-
-function renderStateChartFromKPIs(kpis){
-    const counts={
-        'CONVERGED':   +kpis.converged_count   ||0,
-        'CALIBRATING': +kpis.calibrating_count ||0,
-        'FRAGILE':     +kpis.fragile_count      ||0,
-    };
-    const colorMap ={'CONVERGED':'rgba(52,211,153,0.70)','CALIBRATING':'rgba(96,165,250,0.60)','FRAGILE':'rgba(251,191,36,0.55)'};
-    const borderMap={'CONVERGED':'rgba(52,211,153,0.5)', 'CALIBRATING':'rgba(96,165,250,0.5)', 'FRAGILE':'rgba(251,191,36,0.4)'};
-    const labels=Object.keys(counts);
-    const ctx=document.getElementById('stateChart').getContext('2d');
-    if(stateInst) stateInst.destroy();
-    stateInst=new Chart(ctx,{
-        type:'doughnut',
-        data:{labels,datasets:[{
-            data:Object.values(counts),
-            backgroundColor:labels.map(l=>colorMap[l]),
-            borderColor:labels.map(l=>borderMap[l]),
-            borderWidth:1,hoverOffset:6,
-        }]},
-        options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{
-            legend:{position:'right',labels:{
-                color:'#8fa3bc',font:{family:"'JetBrains Mono',monospace",size:10},
-                boxWidth:10,boxHeight:10,padding:12,usePointStyle:true,pointStyle:'rectRounded',
-            }},
-            tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
-                titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
-                callbacks:{label:c=>`  ${c.label}: ${c.raw}`}
-            }
-        }}
-    });
-}
-
-function renderRadarChart(data){
-    const analyzed=data.filter(d=>d.market_state!=='Initializing'&&d.nexus_score!=null);
-    const n=analyzed.length||1;
-    const vals=['c1','c2','c3','c4'].map(k=>{
-        const vld=analyzed.filter(d=>d[k]!=null);
-        return vld.length?vld.reduce((s,d)=>s+d[k],0)/vld.length:0;
-    });
-    const ctx=document.getElementById('radarChart').getContext('2d');
-    if(radarInst) radarInst.destroy();
-    radarInst=new Chart(ctx,{
-        type:'radar',
-        data:{labels:['LIQUIDITY','EFFICIENCY','INDEPENDENCE','CONVERGENCE'],datasets:[{data:vals,
-            backgroundColor:'rgba(59,130,246,0.10)',
-            borderColor:'rgba(96,165,250,0.55)',
-            pointBackgroundColor:'rgba(96,165,250,0.9)',
-            pointBorderColor:'rgba(96,165,250,0.3)',
-            pointRadius:4,pointHoverRadius:5,borderWidth:1.5,
-        }]},
-        options:{responsive:true,maintainAspectRatio:false,
-            scales:{r:{
-                min:0,max:100,
-                ticks:{display:false},
-                grid:{color:'rgba(70,100,140,0.45)'},
-                angleLines:{color:'rgba(70,100,140,0.35)'},
-                pointLabels:{color:'#8fa3bc',font:{family:"'JetBrains Mono',monospace",size:10}},
-            }},
-            plugins:{legend:{display:false},
-                tooltip:{backgroundColor:'#1e2d42',borderColor:'#344d6a',borderWidth:1,titleColor:'#d1dae8',bodyColor:'#8fa3bc',
-                    titleFont:{family:"'JetBrains Mono',monospace",size:10},bodyFont:{family:"'JetBrains Mono',monospace",size:10},
-                    callbacks:{label:c=>` ${(+c.formattedValue).toFixed(1)}`}}}}
-    });
-}
-
-// ── SPARKLINE ─────────────────────────────────────────────
-function drawSparkline(canvas, pts, color='rgba(148,163,184,0.55)'){
-    if(!canvas||!pts||pts.length<2) return;
-    const ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height;
-    ctx.clearRect(0,0,W,H);
-    const vals=pts.map(d=>typeof d==='object'?d.p:+d);
-    const mn=Math.min(...vals),mx=Math.max(...vals),rng=mx-mn||0.01;
-    ctx.beginPath();
-    ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.lineJoin='round';
-    vals.forEach((v,i)=>{
-        const x=(i/(vals.length-1))*W,y=H-((v-mn)/rng)*(H-4)-2;
-        i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
-    });
-    ctx.stroke();
-}
-
-// ── STATE GROUPS ──────────────────────────────────────────
-function renderFlagBadges(flags){
-    if(!flags||!flags.length) return '';
-    return flags.map(f=>{
-        const cls=f==='Contested'?'flag-contested':'flag-correlated';
-        const icon=f==='Contested'?'🚩':'🔗';
-        return `<span class="flag-badge ${cls}">${icon} ${f}</span>`;
-    }).join('');
-}
-
-function renderStateGroups(data){
-    const container=document.getElementById('state-groups');
-    container.innerHTML='';
-
-    STATES.forEach(st=>{
-        // fragile is catch-all
-        const group=st.key==='fragile'
-            ? data.filter(d=>!STATES.slice(0,2).some(s2=>s2.match(d.market_state)))
-            : data.filter(d=>st.match(d.market_state));
-
-        if(!group.length && st.key !== 'calibrating') return;
-        if(st.key==='initializing') return;
-
-        const shown=group.sort((a,b)=>(b.nexus_score??-1)-(a.nexus_score??-1)).slice(0,5);
-
-        const wrap=document.createElement('div');
-        wrap.className='state-group';
-        const shCls=st.key==='calibrating'?'sh-calibrating':st.key==='fragile'?'sh-fragile':'';
-        wrap.innerHTML=`
-            <div class="section-head ${shCls}"><span>${st.label}</span><span class="section-tag">${st.tag} · ${group.length}</span></div>
-            ${st.key==='initializing'?'':"<div class=\"section-desc\">" + st.desc + "</div>"}
-            ${st.key==='converged'?`<div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:4px;padding:8px 12px;margin:8px 0 12px;font-size:0.72rem;color:#a7f3d0;">These markets carry the highest structural integrity — suitable for research, citation, and high-confidence position-taking.</div>`:''}
-            <div class="event-grid" id="grid-${st.key}"></div>
-        `;
-        container.appendChild(wrap);
-
-        const grid=document.getElementById(`grid-${st.key}`);
-        if(!group.length){
-            grid.innerHTML=`<div style="grid-column:1/-1;font-size:0.62rem;color:var(--text-dim);letter-spacing:0.06em;padding:12px 2px;">No markets currently in price discovery phase.</div>`;
-            return;
-        }
-        shown.forEach(d=>{
-            const flags=getFlags(d);
-            const card=document.createElement('div');
-            card.className=`event-card ${st.cardCls}`;
-            card.innerHTML=`
-                <span class="card-arrow">↗</span>
-                ${d.category?`<div class="card-cat">${d.category}</div>`:''}
-                <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;">
-                    <div class="card-score">${fmtScore(d.nexus_score)}</div>
-                    ${flags.length?`<div class="card-flags" style="margin-top:0;">${renderFlagBadges(flags)}</div>`:''}
+            <!-- STEP 02 -->
+            <div style="display:grid; grid-template-columns:52px 1fr; gap:20px; padding:24px 0; border-bottom:1px solid var(--border);">
+                <div style="font-family:var(--mono); font-size:1.3rem; font-weight:700; color:var(--border-hi); padding-top:2px; line-height:1;">02</div>
+                <div>
+                    <div style="font-size:0.88rem; font-weight:600; color:var(--text-hi); letter-spacing:0.04em; margin-bottom:4px;">4-Pillar Analysis Engine</div>
+                    <!-- GPT 제안: Step 2 요약 한 줄 -->
+                    <div style="font-size:0.72rem; color:var(--text-dim); font-style:italic; margin-bottom:12px;">
+                        A multi-factor engine that separates real consensus from noise.
+                    </div>
+                    <p style="font-size:0.76rem; color:var(--text-mid); line-height:1.7; margin-bottom:14px;">
+                        Each market is evaluated across four independent dimensions.
+                        Category-specific thresholds and hysteresis prevent false state transitions.
+                    </p>
+                    <!-- Pillars — 기존 .chart-card 스타일 참조, hex 대신 CSS 변수 사용 -->
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                        <div style="background:var(--bg-card); border:1px solid var(--border); border-left:2px solid var(--pillar-liq); border-radius:4px; padding:10px 12px;">
+                            <div style="font-size:0.68rem; font-weight:600; color:var(--pillar-liq); letter-spacing:0.06em; margin-bottom:4px;">Capital · 30pt</div>
+                            <div style="font-size:0.63rem; color:var(--text-dim); line-height:1.5; font-family:var(--mono);">CLOB depth → log₁₀(volume) fallback. Real liquidity, not nominal volume.</div>
+                        </div>
+                        <div style="background:var(--bg-card); border:1px solid var(--border); border-left:2px solid var(--pillar-eff); border-radius:4px; padding:10px 12px;">
+                            <div style="font-size:0.68rem; font-weight:600; color:var(--pillar-eff); letter-spacing:0.06em; margin-bottom:4px;">Efficiency · 25pt</div>
+                            <div style="font-size:0.63rem; color:var(--text-dim); line-height:1.5; font-family:var(--mono);">exp(-spread/0.03) × 1/(1+hist_vol×7). Spread quality × hourly volatility.</div>
+                        </div>
+                        <div style="background:var(--bg-card); border:1px solid var(--border); border-left:2px solid var(--pillar-ind); border-radius:4px; padding:10px 12px;">
+                            <div style="font-size:0.68rem; font-weight:600; color:var(--pillar-ind); letter-spacing:0.06em; margin-bottom:4px;">Independence · 15pt</div>
+                            <div style="font-size:0.63rem; color:var(--text-dim); line-height:1.5; font-family:var(--mono);">OLS regression (BTC/SPY/Rates). Penalizes markets driven by macro, not events.</div>
+                        </div>
+                        <div style="background:var(--bg-card); border:1px solid var(--border); border-left:2px solid var(--pillar-conv); border-radius:4px; padding:10px 12px;">
+                            <div style="font-size:0.68rem; font-weight:600; color:var(--pillar-conv); letter-spacing:0.06em; margin-bottom:4px;">Convergence · 30pt</div>
+                            <div style="font-size:0.63rem; color:var(--text-dim); line-height:1.5; font-family:var(--mono);">Normalized entropy decay × time-weighted stability. Genuine consensus lock.</div>
+                        </div>
+                    </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:6px;margin-top:-4px;margin-bottom:4px;">
-                    <div style="font-size:0.52rem;letter-spacing:0.1em;color:${st.key==='converged'?'#34d399':st.key==='calibrating'?'#60a5fa':'#fbbf24'}">${st.key==='converged'?'STRUCTURALLY TRUSTED':st.key==='calibrating'?'CALIBRATING':'FRAGILE'}</div>
-                    <div style="font-size:0.5rem;color:var(--text-dim);letter-spacing:0.04em;">INTEGRITY SCORE</div>
+            </div>
+
+            <!-- STEP 03 -->
+            <div style="display:grid; grid-template-columns:52px 1fr; gap:20px; padding:24px 0; border-bottom:1px solid var(--border);">
+                <div style="font-family:var(--mono); font-size:1.3rem; font-weight:700; color:var(--border-hi); padding-top:2px; line-height:1;">03</div>
+                <div>
+                    <div style="font-size:0.88rem; font-weight:600; color:var(--text-hi); letter-spacing:0.04em; margin-bottom:8px;">State Classification</div>
+                    <p style="font-size:0.76rem; color:var(--text-mid); line-height:1.7; margin-bottom:14px;">
+                        Nexus Score (0 – 100) maps to one of three states via category-specific thresholds,
+                        a 2-hour confirmation window, and hysteresis — preventing oscillation on borderline markets.
+                    </p>
+                    <!-- State 표시 (기존 카드 스타일 참조) -->
+                    <div style="display:flex; flex-direction:column; gap:6px;">
+                        <div style="display:flex; gap:12px; align-items:baseline; padding:8px 12px; background:var(--bg-card); border:1px solid rgba(52,211,153,0.25); border-radius:4px;">
+                            <span style="font-size:0.68rem; font-weight:600; color:var(--green); white-space:nowrap;">Converged</span>
+                            <span style="font-size:0.66rem; color:var(--text-dim); line-height:1.5;">Structural consensus locked. Score above threshold, volatility capped, liquidity and independence verified.</span>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items:baseline; padding:8px 12px; background:var(--bg-card); border:1px solid rgba(96,165,250,0.2); border-radius:4px;">
+                            <span style="font-size:0.68rem; font-weight:600; color:var(--blue); white-space:nowrap;">Calibrating</span>
+                            <span style="font-size:0.66rem; color:var(--text-dim); line-height:1.5;">Price discovery in progress. Market is functional but has not yet reached stable consensus.</span>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items:baseline; padding:8px 12px; background:var(--bg-card); border:1px solid rgba(251,191,36,0.2); border-radius:4px;">
+                            <span style="font-size:0.68rem; font-weight:600; color:var(--amber); white-space:nowrap;">Fragile</span>
+                            <span style="font-size:0.66rem; color:var(--text-dim); line-height:1.5;">Structural weakness detected. Low liquidity, high spread, or insufficient market depth.</span>
+                        </div>
+                    </div>
                 </div>
-                ${(()=>{ const et=d.event_title; const q=d.question; return et && et!==q && !q.toLowerCase().includes(et.toLowerCase()) ? `<div class="card-event-sub">${et}</div>` : ''; })()}
-                <div class="card-title">${cleanQuestion(d.question)}</div>
-                ${d.current_price!=null ? `<div class="card-price">${((d.current_price)*100)<0.5?'<1%':((d.current_price)*100)<10?((d.current_price)*100).toFixed(1)+'%':Math.round((d.current_price)*100)+'%'}</div>` : ''}
-                <div class="card-meta">
-                    <span class="card-vol">${fmtVol(d.volume||0)}</span>
-                    <a class="card-pm-link" href="https://polymarket.com/event/${d.slug||d.id||''}" target="_blank" onclick="event.stopPropagation()">↗ PM</a>
+            </div>
+
+            <!-- STEP 04 -->
+            <div style="display:grid; grid-template-columns:52px 1fr; gap:20px; padding:24px 0;">
+                <div style="font-family:var(--mono); font-size:1.3rem; font-weight:700; color:var(--border-hi); padding-top:2px; line-height:1;">04</div>
+                <div>
+                    <div style="font-size:0.88rem; font-weight:600; color:var(--text-hi); letter-spacing:0.04em; margin-bottom:8px;">Logging & Validation</div>
+                    <p style="font-size:0.76rem; color:var(--text-mid); line-height:1.7; margin-bottom:12px;">
+                        Every run updates Supabase via race-condition-safe UPSERT
+                        (markets_registry, event_log snapshots, convergence_log).
+                        Resolved markets feed the track_record table for ongoing Brier Score validation.
+                        Dead Man's Switch marks stale markets inactive within 6 hours.
+                    </p>
+                    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">Supabase markets_registry</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">Cloudflare R2 archive</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">Dead Man's Switch</span>
+                        <span style="font-size:0.58rem; padding:3px 8px; border-radius:3px; background:rgba(96,165,250,0.06); color:var(--text-dim); border:1px solid var(--border); letter-spacing:0.06em;">fcntl Fail-Fast lock</span>
+                    </div>
                 </div>
-                <div class="card-bars">
-                    ${barRow('LIQ','bar-liq',d.c1)}
-                    ${barRow('EFF','bar-eff',d.c2)}
-                    ${barRow('IND','bar-ind',d.c3)}
-                    ${barRow('CNV','bar-conv',d.c4)}
-                </div>
-            `;
-            card.addEventListener('click',()=>openPanel(d,st));
-            grid.appendChild(card);
-        });
-    });
-}
+            </div>
 
-// ── DETAIL PANEL ──────────────────────────────────────────
-function openPanel(d, st){
-    document.getElementById('p-score').textContent=d.nexus_score;
-
-    const badge=document.getElementById('p-badge');
-    badge.textContent=st.badgeText;
-    badge.className='panel-badge '+st.badgeCls;
-
-    // flags in panel header
-    const flags=getFlags(d);
-    const pflagsEl=document.getElementById('p-flags');
-    pflagsEl.innerHTML=flags.map(f=>{
-        const cls=f==='Contested'?'pflag-contested':'pflag-correlated';
-        const icon=f==='Contested'?'🚩':'🔗';
-        return `<span class="pflag ${cls}">${icon} ${f.toUpperCase()}</span>`;
-    }).join('');
-
-    // 이벤트 서브타이틀 (마켓 제목과 다를 때만 표시)
-    const evtSub = document.getElementById('p-event-sub');
-    if(d.event_title && d.event_title !== d.question && !d.question.toLowerCase().includes(d.event_title.toLowerCase())){
-        evtSub.textContent = d.event_title;
-        evtSub.style.display = 'block';
-    } else {
-        evtSub.style.display = 'none';
-    }
-    document.getElementById('p-title').textContent = cleanQuestion(d.question);
-
-    // Outcomes
-    const outSection = document.getElementById('p-outcomes-section');
-    const outEl = document.getElementById('p-outcomes');
-    const outcomes = Array.isArray(d.outcomes) ? d.outcomes.filter(o=>o&&o.name&&o.price!=null) : [];
-    if(outcomes.length >= 2){
-        outEl.innerHTML = outcomes.map(o=>{
-            const raw = (o.price||0)*100;
-            const barW = Math.min(raw, 100).toFixed(1);
-            const pctLabel = raw < 0.5 ? '<1%' : raw < 10 ? raw.toFixed(1)+'%' : Math.round(raw)+'%';
-            const label = o.name || '?';
-            const isTracked = o.is_tracked ? ' top-outcome' : '';
-            return `<div class="outcome-row${isTracked}">
-                <span class="outcome-name">${label}${o.is_tracked ? ' <span style="font-size:0.55rem;color:#4a9eff;letter-spacing:0.05em;margin-left:4px;">TRACKED</span>' : ''}</span>
-                <div class="outcome-bar-bg"><div class="outcome-bar-fill" style="width:${barW}%"></div></div>
-                <span class="outcome-pct">${pctLabel}</span>
-            </div>`;
-        }).join('');
-        outSection.style.display = 'block';
-    } else {
-        outSection.style.display = 'none';
-    }
-
-    // Component bars
-    document.getElementById('p-bars').innerHTML=[
-        {key:'LIQUIDITY',    val:d.c1, cls:'bar-liq'},
-        {key:'EFFICIENCY',   val:d.c2, cls:'bar-eff'},
-        {key:'INDEPENDENCE', val:d.c3, cls:'bar-ind'},
-        {key:'CONVERGENCE',  val:d.c4, cls:'bar-conv'},
-    ].map(b=>`
-        <div class="panel-bar-row">
-            <span class="panel-bar-name">${b.key}</span>
-            <div class="panel-bar-bg"><div class="panel-bar-fill ${b.cls}" style="width:${hasVal(b.val)?normBar(b.val):0}%"></div></div>
-            <span class="panel-bar-val" style="${!hasVal(b.val)?'color:#3d5068':''}">${fmtScore(b.val)}</span>
         </div>
-    `).join('');
 
-    // Stats
-    document.getElementById('p-stats').innerHTML=`
-        <div class="stat-item"><div class="stat-label">VOLUME</div><div class="stat-value">${fmtVol(d.volume||0)}</div></div>
-        <div class="stat-item"><div class="stat-label">CURRENT PRICE</div><div class="stat-value">${((d.current_price||0)*100).toFixed(1)}%</div></div>
-        <div class="stat-item"><div class="stat-label">SPREAD</div><div class="stat-value" style="color:${spreadColor(d.spread)}">${spreadLabel(d.spread, d.current_price)}</div></div>
-        <div class="stat-item"><div class="stat-label">RESOLUTION IN</div><div class="stat-value">${d.days_to_close!=null ? d.days_to_close+'d' : '—'}</div></div>
-    `;
+        <!-- 하단: Tech stack + Validation (기존 .kpi-card 재사용) -->
+        <div class="kpi-card" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:20px 24px;">
+            <div>
+                <div class="kpi-label" style="margin-bottom:8px;">TECH STACK</div>
+                <div style="font-size:0.68rem; color:var(--text-mid); line-height:1.8; font-family:var(--mono);">
+                    Python 3.10 · Pandas · NumPy · SciPy<br>
+                    Supabase · Cloudflare R2 · GitHub Actions<br>
+                    Chart.js · Supabase Realtime
+                </div>
+            </div>
+            <div>
+                <div class="kpi-label" style="margin-bottom:8px;">VALIDATION STATUS</div>
+                <div style="display:flex; flex-direction:column; gap:5px;">
+                    <span style="font-size:0.63rem; font-family:var(--mono); padding:3px 8px; border-radius:3px; background:rgba(52,211,153,0.08); color:var(--green); border:1px solid rgba(52,211,153,0.2);">
+                        Rule Enforcement R1–R3 · PASS
+                    </span>
+                    <span style="font-size:0.63rem; font-family:var(--mono); padding:3px 8px; border-radius:3px; background:rgba(52,211,153,0.08); color:var(--green); border:1px solid rgba(52,211,153,0.2);">
+                        State Stability B1–B3 · PASS
+                    </span>
+                    <span style="font-size:0.63rem; font-family:var(--mono); padding:3px 8px; border-radius:3px; background:rgba(251,191,36,0.06); color:var(--amber); border:1px solid rgba(251,191,36,0.2);">
+                        Brier Score · accumulating (n=<span id="hiw-resolved">12</span>/30)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Use case (GPT 제안) -->
+        <div style="text-align:center; margin-top:20px; font-size:0.7rem; color:var(--text-dim); letter-spacing:0.06em;">
+            Used to identify which Polymarket markets are structurally worth trusting — before the crowd does.
+        </div>
 
-    // Nexus Score Trend — event_log 최근 30 스냅샷 lazy query
-    const spCanvas=document.getElementById('p-sparkline');
-    spCanvas.width=spCanvas.offsetWidth||380;
-    spCanvas.getContext('2d').clearRect(0,0,spCanvas.width,spCanvas.height);
-    (async()=>{
-        try{
-            const {data,error}=await sbClient
-                .from('event_log')
-                .select('current_price,snapshot_at')
-                .eq('event_id', String(d.id))
-                .not('current_price','is',null)
-                .order('snapshot_at',{ascending:true})
-                .limit(30);
-            if(error||!data||data.length<2){
-                document.getElementById('p-trend-range').textContent='insufficient history';
-                return;
-            }
-            document.getElementById('p-trend-range').textContent=`${data.length} snapshots`;
-            const pts=data.map(r=>({p:+r.current_price}));
-            requestAnimationFrame(()=>drawSparkline(spCanvas,pts,'rgba(96,165,250,0.7)'));
-        }catch(e){ document.getElementById('p-trend-range').textContent='—'; }
-    })();
+    </div>
+</section>
 
-    // State context
-    document.getElementById('p-context').innerHTML=st.context(d);
 
-    // ── MARKET INSIGHT (rule-based) ──
-    const insight = generateInsight(d);
-    const insightSection = document.getElementById('p-insight-section');
-    if(insight.primary){
-        document.getElementById('p-insight-primary').innerHTML = insight.primary;
-        document.getElementById('p-insight-risk').innerHTML = insight.risk
-            ? `<span class="insight-risk-label">⚠</span> ${insight.risk}` : '';
-        document.getElementById('p-insight-risk').style.display = insight.risk ? 'block' : 'none';
-        insightSection.style.display = 'block';
-    } else {
-        insightSection.style.display = 'none';
-    }
 
-    // Flag context boxes
-    const fcEl=document.getElementById('p-flag-context');
-    fcEl.innerHTML=flags.map(f=>{
-        if(!FLAG_CONTEXT[f]) return '';
-        const cls=f==='Contested'?'fc-contested':'fc-correlated';
-        const icon=f==='Contested'?'🚩':'🔗';
-        return `<div class="flag-context ${cls}"><div class="fc-label">${icon} ${f} — FLAG ACTIVE</div>${FLAG_CONTEXT[f](d)}</div>`;
-    }).join('');
 
-    document.getElementById('p-link').href=`https://polymarket.com/event/${d.slug||d.id||''}`;
+<!-- ================================================================
+     [삽입 4] JS 수정 — index.html 내 기존 함수에 추가
+     ================================================================
 
-    document.getElementById('overlay').classList.add('open');
-    document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow='hidden';
-}
+  (A) renderKPIsFromRPC(kpis, visibleCount) 함수 끝부분에 추가:
 
-function closePanel(){
-    document.getElementById('overlay').classList.remove('open');
-    document.getElementById('detail-panel').classList.remove('open');
-    document.body.style.overflow='';
-}
+        // Hero panel 실시간 갱신
+        const heroActive    = document.getElementById('hero-active');
+        const heroConverged = document.getElementById('hero-converged');
+        if (heroActive)    heroActive.textContent    = (+kpis.total_markets   || 149).toLocaleString();
+        if (heroConverged) heroConverged.textContent = (+kpis.converged_count || 29).toLocaleString();
 
-document.addEventListener('keydown',e=>{if(e.key==='Escape') closePanel();});
+  ────────────────────────────────────────────────────────────────────
 
-// ── INIT ──────────────────────────────────────────────────
-function showLoading(on){
-    let el=document.getElementById('loading-bar');
-    if(!el){
-        el=document.createElement('div');
-        el.id='loading-bar';
-        el.style.cssText='position:fixed;top:0;left:0;height:2px;background:var(--blue);z-index:10000;transition:width 0.4s;width:0;';
-        document.body.prepend(el);
-    }
-    el.style.width=on?'60%':'100%';
-    if(!on) setTimeout(()=>{ el.style.opacity='0'; setTimeout(()=>el.remove(),300); },200);
-}
+  (B) renderKPIs(data) 함수 끝부분에 추가 (Supabase 미사용 fallback):
 
-async function loadFromSupabase(){
-    if(!sbClient) return null;
-    try{
-        // get_top_markets(): state별 top 5 (SECURITY DEFINER)
-        const {data, error}=await sbClient.rpc('get_top_markets');
-        if(error||!data||!data.length) return null;
+        const heroActive    = document.getElementById('hero-active');
+        const heroConverged = document.getElementById('hero-converged');
+        if (heroActive)    heroActive.textContent    = data.length.toLocaleString();
+        if (heroConverged) heroConverged.textContent = data.filter(d => d.market_state === 'Converged').length;
 
-        return data.map(r=>({
-            id:           r.event_id,
-            slug:         r.market_slug||r.event_id,
-            question:     r.title||r.market_slug||r.event_id,
-            event_title:  r.event_title||null,
-            category:     r.category||'',
-            nexus_score:  r.nexus_score,
-            market_state: (()=>{
-                if(r.nexus_score===null||r.nexus_score===undefined) return 'Initializing';
-                if(r.display_state) return r.display_state;
-                // display_state NULL 시 클라이언트 fallback 매핑
-                const s=r.market_state||'Fragile';
-                const sc=r.nexus_score||0;
-                if(s==='Converged') return 'Converged';
-                if(s==='Active'||s==='Macro-Driven'||s==='Volatile') return sc>=60?'Calibrating':'Fragile';
-                return 'Fragile';
-            })(),
-            flags:        Array.isArray(r.flags)?r.flags:[],
-            spread:       r.spread??null,
-            days_to_close: r.time_to_close_days??null,
-            close_time:   r.close_time||null,
-            volume:       r.volume||0,
-            current_price:r.current_price||0,
-            sparkline:    [],
-            c1: r.capital_score??null,
-            c2: r.stability_score??null,
-            c3: r.purity_score??null,
-            c4: r.convergence_score??null,
-            outcomes: (() => { try { return typeof r.outcomes === 'string' ? JSON.parse(r.outcomes) : (r.outcomes||[]); } catch(e){ return []; } })(),
-        }));
-    }catch(e){ console.warn('Supabase fetch failed:',e); return null; }
-}
+  ────────────────────────────────────────────────────────────────────
 
-async function loadKPIsFromSupabase(){
-    if(!sbClient) return null;
-    try{
-        const {data, error}=await sbClient.rpc('get_dashboard_kpis');
-        if(error||!data) return null;
-        return data;
-    }catch(e){ console.warn('KPI fetch failed:',e); return null; }
-}
+  (C) init() 함수 끝, setInterval(init,...) 전에 추가:
 
-async function init(){
-    showLoading(true);
-    let data=null;
+        // track_record resolved count → hiw-resolved
+        if (USE_SUPABASE && sbClient) {
+            sbClient
+                .from('track_record')
+                .select('id', { count: 'exact', head: true })
+                .then(({ count }) => {
+                    const el = document.getElementById('hiw-resolved');
+                    if (el && count != null) el.textContent = count;
+                })
+                .catch(() => {}); // 실패해도 기본값(12) 유지
+        }
 
-    // 1순위: Supabase RPC
-    if(USE_SUPABASE) data=await loadFromSupabase();
-
-    // 2순위: JSON 파일
-    if(!data){
-        try{
-            const r=await fetch(DATA_URL);
-            if(r.ok){
-                const raw=await r.json();
-                if(Array.isArray(raw)&&raw.length) data=raw;
-            }
-        }catch(_){}
-    }
-
-    // 3순위: MOCK
-    if(!data) data=MOCK;
-
-    showLoading(false);
-    const now = new Date();
-    allData = data.filter(d => {
-        if(!d.close_time) return true;
-        return new Date(d.close_time) > now;
-    });
-
-    // KPI: RPC로 전체 집계 (정확도 보장)
-    let kpis = null;
-    if(USE_SUPABASE){
-        kpis = await loadKPIsFromSupabase();
-        if(kpis) renderKPIsFromRPC(kpis, allData.length);
-        else renderKPIs(allData);
-    } else {
-        renderKPIs(allData);
-    }
-
-    loadTrackRecord().then(renderCalibration);
-    
-    if(kpis) renderStateChartFromKPIs(kpis);
-    else renderStateChart(data);
-    renderRadarChart(data);
-    renderStateGroups(data);
-}
-
-init();
-subscribeCalibration();
-setInterval(init,5*60*1000);
-</script>
-</body>
-</html>
+  ================================================================ -->

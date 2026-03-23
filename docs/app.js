@@ -18,15 +18,20 @@ const SC = {
 
 /* ── MOCK DATA ── */
 const MOCK_MARKETS = [
-    { event_id:'1', title:'Will Finland win Eurovision 2026?',                                           category:'Culture',  display_state:'Converged',   nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:null, market_slug:'eurovision-2026',   top_outcome_name:'Finland' },
-    { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?',                      category:'Politics', display_state:'Converged',   nexus_score:92.5, flags:[], current_price:0.805, volume:6729339,  time_to_close_days:null, market_slug:'seoul-election',    top_outcome_name:'Chong Won-oh' },
-    { event_id:'3', title:'Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?',category:'World',    display_state:'Converged',   nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election',   top_outcome_name:'Lula da Silva' },
-    { event_id:'4', title:'Will the US confirm that aliens exist before 2027?',                          category:'Culture',  display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, time_to_close_days:null, market_slug:'aliens-2027',       top_outcome_name:null },
-    { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?',             category:'Elections',display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, time_to_close_days:null, market_slug:'france-bardella',   top_outcome_name:'Jordan Bardella' },
-    { event_id:'6', title:'Will Jesus Christ return before 2027?',                                       category:'Culture',  display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, time_to_close_days:null, market_slug:'jesus-return',      top_outcome_name:null },
-    { event_id:'7', title:'Will Bayern Munich win the 2025–26 Bundesliga?',                              category:'Sports',   display_state:'Fragile',     nexus_score:59.9, flags:[], current_price:0.986, volume:1438859,  time_to_close_days:null, market_slug:'bundesliga-2026',   top_outcome_name:'Bayern Munich' },
-    { event_id:'8', title:'Will the US officially declare war on Iran by December 31, 2026?',            category:'World',    display_state:'Fragile',     nexus_score:58.9, flags:[], current_price:0.085, volume:3625028,  time_to_close_days:null, market_slug:'iran-war-2026',     top_outcome_name:null },
-    { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?',                   category:'Politics', display_state:'Fragile',     nexus_score:58.4, flags:[], current_price:0.370, volume:3755636,  time_to_close_days:null, market_slug:'kharg-island',      top_outcome_name:null },
+    { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland',
+      outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false},{name:'Greece',price:0.0715,is_tracked:false},{name:'Australia',price:0.051,is_tracked:false},{name:'Sweden',price:0.042,is_tracked:false},{name:'Israel',price:0.0415,is_tracked:false}]},
+    { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, time_to_close_days:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh',
+      outcomes:[{name:'Chong Won-oh',price:0.805,is_tracked:true},{name:'Oh Se-hoon',price:0.125,is_tracked:false},{name:'Park Ju-min',price:0.066,is_tracked:false},{name:'Jeon Hyun-heui',price:0.002,is_tracked:false}]},
+    { event_id:'3', title:'Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula da Silva',
+      outcomes:[{name:'Lula da Silva',price:0.415,is_tracked:true},{name:'Bolsonaro',price:0.21,is_tracked:false},{name:'Other',price:0.12,is_tracked:false}]},
+    { event_id:'4', title:'Will the US confirm that aliens exist before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, time_to_close_days:null, market_slug:'aliens-2027', top_outcome_name:null, outcomes:[] },
+    { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?', category:'Elections', display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, time_to_close_days:null, market_slug:'france-bardella', top_outcome_name:'Jordan Bardella',
+      outcomes:[{name:'Jordan Bardella',price:0.255,is_tracked:true},{name:'Marine Le Pen',price:0.18,is_tracked:false},{name:'Emmanuel Macron',price:0.12,is_tracked:false}]},
+    { event_id:'6', title:'Will Jesus Christ return before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, time_to_close_days:null, market_slug:'jesus-return', top_outcome_name:null, outcomes:[] },
+    { event_id:'7', title:'Will Bayern Munich win the 2025–26 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, time_to_close_days:null, market_slug:'bundesliga-2026', top_outcome_name:'Bayern Munich',
+      outcomes:[{name:'Bayern Munich',price:0.986,is_tracked:true},{name:'Other',price:0.008,is_tracked:false}]},
+    { event_id:'8', title:'Will the US officially declare war on Iran by December 31, 2026?', category:'World', display_state:'Fragile', nexus_score:58.9, flags:[], current_price:0.085, volume:3625028, time_to_close_days:null, market_slug:'iran-war-2026', top_outcome_name:null, outcomes:[] },
+    { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, time_to_close_days:null, market_slug:'kharg-island', top_outcome_name:null, outcomes:[] },
 ];
 const MOCK_KPIS = { total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34, contested_count:8, correlated_count:12 };
 
@@ -36,6 +41,14 @@ function fmtVol(n) {
     if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
     if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
     return '$' + Math.round(n);
+}
+function fmtOutcomePct(p) {
+    if (p == null || p === 0) return '<1%';
+    const pct = p * 100;
+    if (pct < 1)   return '<1%';
+    if (pct >= 99) return '>99%';
+    if (pct >= 10) return Math.round(pct) + '%';
+    return pct.toFixed(1) + '%';
 }
 function fmtCents(p) {
     if (p == null) return '—';
@@ -263,6 +276,38 @@ function openPanel(m) {
     ).join('');
 
     eid('sp-context').innerHTML = buildContext(m);
+
+    // Outcomes 렌더링
+    const outWrap = eid('sp-outcomes');
+    const outSection = eid('sp-outcomes-section');
+    const outcomes = m.outcomes;
+    if (outWrap && outSection && Array.isArray(outcomes) && outcomes.length > 0) {
+        outSection.style.display = 'block';
+        const sorted = [...outcomes].sort((a, b) => (b.price || 0) - (a.price || 0));
+        outWrap.innerHTML = sorted.map(o => {
+            const pct = fmtOutcomePct(o.price);
+            const barW = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
+            const isTracked = o.is_tracked === true;
+            return `
+                <div class="sp-outcome-row ${isTracked ? 'sp-outcome-tracked' : ''}">
+                    <div class="sp-outcome-name">
+                        ${isTracked ? '<span class="sp-tracked-dot"></span>' : ''}
+                        ${o.name || '—'}
+                        ${isTracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
+                    </div>
+                    <div class="sp-outcome-bar-wrap">
+                        <div class="sp-outcome-bar-bg">
+                            <div class="sp-outcome-bar-fill ${isTracked ? 'bar-tracked' : 'bar-other'}"
+                                 style="width:${barW}%"></div>
+                        </div>
+                    </div>
+                    <div class="sp-outcome-pct ${isTracked ? 'pct-tracked' : ''}">${pct}</div>
+                </div>
+            `;
+        }).join('');
+    } else if (outSection) {
+        outSection.style.display = 'none';
+    }
 
     const link = eid('sp-link');
     link.href = m.market_slug ? `https://polymarket.com/event/${m.market_slug}` : 'https://polymarket.com';

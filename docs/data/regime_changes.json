@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T21:01:58.305185Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 67.9,
+      "macro_sensitivity": 0.28
+    }
+  },
+  {
+    "timestamp": "2026-03-23T21:01:58.305185Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
     "timestamp": "2026-03-23T20:31:49.991434Z",
     "market_id": "241666",
     "question": "Will Gold (GC) hit __ by end of March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 41.9,
       "macro_sensitivity": 0.35
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:01:23.000719Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 28.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:01:23.000719Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.4
     }
   }
 ]

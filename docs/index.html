@@ -152,7 +152,7 @@
             <div class="locked-label">
                 <strong id="locked-count">137</strong> more markets tracked
             </div>
-            <div class="locked-sub">Full dataset · NXS pillar scores · Historical trends</div>
+            <div class="locked-sub">More visibility coming as the data deepens</div>
         </div>
     </div>
 </section>
@@ -174,48 +174,25 @@
             <div class="hiw-step">
                 <div class="hiw-num">01</div>
                 <div>
-                    <div class="hiw-title">Market Data Collection</div>
+                    <div class="hiw-title">Continuous Data Collection</div>
                     <p class="hiw-body">
                         Active Polymarket events are fetched and validated continuously.
-                        For top markets by volume, live order book depth is retrieved
-                        directly — capturing real bid/ask liquidity, not nominal volume.
-                        Macro signals are tracked for correlation analysis.
+                        For each market, real liquidity depth and macro market signals
+                        are captured — not just nominal trading volume.
                     </p>
-                    <div class="hiw-tags">
-                        <span class="hiw-tag">Polymarket API</span>
-                        <span class="hiw-tag">CLOB order book</span>
-                        <span class="hiw-tag">Macro signals</span>
-                        <span class="hiw-tag">Pydantic validation</span>
-                    </div>
                 </div>
             </div>
 
             <div class="hiw-step">
                 <div class="hiw-num">02</div>
                 <div>
-                    <div class="hiw-title">4-Dimension NXS Scoring</div>
+                    <div class="hiw-title">Structural Integrity Scoring</div>
                     <p class="hiw-body">
-                        Each market is scored across four independent structural dimensions.
-                        The composite NXS score (0–100) measures integrity — not probability.
+                        Each market is evaluated across multiple structural dimensions
+                        and assigned a NXS score from 0 to 100.
+                        This measures the reliability of the market's price signal —
+                        not the probability of any outcome.
                     </p>
-                    <div class="pillar-grid">
-                        <div class="pcell" style="border-left:2px solid rgba(200,151,58,0.5);">
-                            <div class="pcell-name" style="color:var(--amber-text);">Capital</div>
-                            <div class="pcell-desc">Depth and quality of market liquidity</div>
-                        </div>
-                        <div class="pcell" style="border-left:2px solid rgba(58,143,160,0.5);">
-                            <div class="pcell-name" style="color:var(--cyan-text);">Efficiency</div>
-                            <div class="pcell-desc">Spread tightness and price stability</div>
-                        </div>
-                        <div class="pcell" style="border-left:2px solid rgba(74,74,88,0.6);">
-                            <div class="pcell-name" style="color:var(--slate-text);">Independence</div>
-                            <div class="pcell-desc">Insulation from macro market movements</div>
-                        </div>
-                        <div class="pcell" style="border-left:2px solid rgba(200,151,58,0.3);">
-                            <div class="pcell-name" style="color:var(--amber-dim);">Convergence</div>
-                            <div class="pcell-desc">Consensus lock-in strength over time</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -224,8 +201,7 @@
                 <div>
                     <div class="hiw-title">State Classification</div>
                     <p class="hiw-body">
-                        NXS maps each market to a structural state using category-specific thresholds,
-                        a confirmation window, and hysteresis to prevent false transitions.
+                        Each market is classified into one of three structural states.
                     </p>
                     <div class="state-legend">
                         <div class="sl-row sl-c">
@@ -326,7 +302,7 @@
     </div>
     <div class="footer-right">
         <span class="footer-clock" id="footer-clock"></span>
-        <a href="mailto:contact@polynexus.io" class="contact-link">Platform Integration →</a>
+        <span class="contact-link-text">Platform Integration</span>
     </div>
 </footer>
 

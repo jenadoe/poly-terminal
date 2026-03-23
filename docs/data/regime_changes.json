@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T12:01:26.973546Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T12:01:26.973546Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T11:43:45.131650Z",
     "market_id": "178011",
     "question": "Which countries will join the Board of Peace by March 31?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 65.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T04:01:45.922218Z",
-    "market_id": "34051",
-    "question": "Netanyahu out by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 41.0,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-22T03:01:33.985591Z",
-    "market_id": "267102",
-    "question": "Kharg Island no longer under Iranian control by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
       "macro_sensitivity": 0.0
     }
   }

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-23T17:31:40.292601Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 48.8,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-23T17:01:42.109195Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 81.4,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-23T01:31:25.546195Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

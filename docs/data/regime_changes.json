@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-23T15:01:34.549675Z",
+    "market_id": "106193",
+    "question": "Republican Senate seats after the 2026 midterm elections?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 46.5,
+      "macro_sensitivity": 0.35
+    }
+  },
+  {
+    "timestamp": "2026-03-23T15:01:34.549675Z",
+    "market_id": "101772",
+    "question": "Fed Decision in June?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T15:01:34.549675Z",
+    "market_id": "236943",
+    "question": "Iran military action against ___ by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 0.29
+    }
+  },
+  {
+    "timestamp": "2026-03-23T15:01:34.549675Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.3,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-23T14:31:40.254712Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.9,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-22T16:31:28.635460Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T16:31:28.635460Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 79.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T16:31:28.635460Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 33.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T16:01:29.164930Z",
-    "market_id": "143443",
-    "question": "Venezuela leader end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 33.3,
-      "macro_sensitivity": 0.0
     }
   }
 ]

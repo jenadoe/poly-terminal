@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T20:01:34.679758Z",
+    "market_id": "86357",
+    "question": "LoL: LCK 2026 Season Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.9,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
+    "timestamp": "2026-03-23T20:01:34.679758Z",
+    "market_id": "107420",
+    "question": "Slovenian Parliamentary Election Winner",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T19:31:33.961628Z",
     "market_id": "214405",
     "question": "Predict.fun FDV above ___ one day after launch?",
@@ -524,28 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 81.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T12:01:26.973546Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T12:01:26.973546Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
       "macro_sensitivity": 0.0
     }
   }

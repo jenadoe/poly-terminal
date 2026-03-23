@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-23T05:01:23.140139Z",
+    "market_id": "131586",
+    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 81.4,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-23T01:31:25.546195Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 83.1,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T22:31:14.536067Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 52.5,
-      "macro_sensitivity": 0.15
     }
   }
 ]

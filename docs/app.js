@@ -305,14 +305,6 @@ function openPanel(m) {
         ? `https://polymarket.com/event/${m.market_slug}`
         : 'https://polymarket.com';
 
-    // Pillar bars — locked in free tier
-    ['cap', 'eff', 'ind', 'conv'].forEach(k => {
-        const bar = el(`pb-${k}`);
-        const val = el(`pv-${k}`);
-        if (bar) bar.style.width = '0%';
-        if (val) val.textContent = '—';
-    });
-
     // Sparkline
     const sp = el('p-sparkline');
     const tr = el('p-trend-range');

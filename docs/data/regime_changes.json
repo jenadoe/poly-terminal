@@ -1,5 +1,93 @@
 [
   {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "267102",
+    "question": "Kharg Island no longer under Iranian control by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 48.5,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.0,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 26.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-23T11:31:26.186613Z",
+    "market_id": "51456",
+    "question": "How many Fed rate cuts in 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 65.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T09:31:18.970003Z",
     "market_id": "57096",
     "question": "California Governor Election Winner",
@@ -458,94 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 69.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T02:01:22.258563Z",
-    "market_id": "34051",
-    "question": "Netanyahu out by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 39.3,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-22T02:01:22.258563Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 58.0,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-22T01:31:14.665669Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.8,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-22T01:01:16.739892Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 69.0,
-      "macro_sensitivity": 0.13
-    }
-  },
-  {
-    "timestamp": "2026-03-22T01:01:16.739892Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 57.5,
-      "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-22T01:01:16.739892Z",
-    "market_id": "118172",
-    "question": "Will Trump acquire Greenland before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 52.1,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-22T01:01:16.739892Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 84.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T00:01:16.666961Z",
-    "market_id": "203716",
-    "question": "Pro Football: 2027 NFC Champion ",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 79.2,
       "macro_sensitivity": 0.0
     }
   }

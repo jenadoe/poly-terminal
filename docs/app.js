@@ -223,8 +223,15 @@ function renderMarkets(markets) {
         `;
         col.appendChild(head);
 
-        // Market rows
-        group.forEach(m => col.appendChild(buildRow(m)));
+        // Market rows — empty state placeholder if none
+        if (group.length === 0) {
+            const empty = document.createElement('div');
+            empty.className = 'col-empty';
+            empty.textContent = 'No markets in this state';
+            col.appendChild(empty);
+        } else {
+            group.forEach(m => col.appendChild(buildRow(m)));
+        }
     });
 
     renderLockedRows();

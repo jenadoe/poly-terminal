@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-23T17:01:42.109195Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 43.8,
+      "macro_sensitivity": 0.4
+    }
+  },
+  {
+    "timestamp": "2026-03-23T17:01:42.109195Z",
+    "market_id": "248032",
+    "question": "Will the Iranian regime fall by April 30?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.1,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-23T17:01:42.109195Z",
+    "market_id": "237260",
+    "question": "Will Crude Oil (CL) hit__ by end of March?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 22.5,
+      "macro_sensitivity": 0.3
+    }
+  },
+  {
+    "timestamp": "2026-03-23T17:01:42.109195Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 49.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-23T16:31:37.294844Z",
     "market_id": "106193",
     "question": "Republican Senate seats after the 2026 midterm elections?",
@@ -502,50 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T01:31:25.546195Z",
-    "market_id": "131586",
-    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.16
-    }
-  },
-  {
-    "timestamp": "2026-03-23T00:01:25.621900Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T23:31:28.405776Z",
-    "market_id": "149589",
-    "question": "Which party will gain most seats in Russian Parliamentary Election?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 81.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T21:01:27.206370Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 41.6,
       "macro_sensitivity": 0.0
     }
   }

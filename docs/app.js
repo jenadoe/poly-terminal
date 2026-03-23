@@ -18,20 +18,20 @@ const SC = {
 
 /* ── MOCK DATA ── */
 const MOCK_MARKETS = [
-    { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland',
-      outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false},{name:'Greece',price:0.0715,is_tracked:false},{name:'Australia',price:0.051,is_tracked:false},{name:'Sweden',price:0.042,is_tracked:false},{name:'Israel',price:0.0415,is_tracked:false}]},
-    { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, time_to_close_days:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh',
+    { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland', stable_hours:51,
+      outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false},{name:'Greece',price:0.0715,is_tracked:false},{name:'Australia',price:0.051,is_tracked:false}]},
+    { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, time_to_close_days:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh', stable_hours:362,
       outcomes:[{name:'Chong Won-oh',price:0.805,is_tracked:true},{name:'Oh Se-hoon',price:0.125,is_tracked:false},{name:'Park Ju-min',price:0.066,is_tracked:false},{name:'Jeon Hyun-heui',price:0.002,is_tracked:false}]},
-    { event_id:'3', title:'Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula da Silva',
+    { event_id:'3', title:'Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula da Silva', stable_hours:51,
       outcomes:[{name:'Lula da Silva',price:0.415,is_tracked:true},{name:'Bolsonaro',price:0.21,is_tracked:false},{name:'Other',price:0.12,is_tracked:false}]},
-    { event_id:'4', title:'Will the US confirm that aliens exist before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, time_to_close_days:null, market_slug:'aliens-2027', top_outcome_name:null, outcomes:[] },
-    { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?', category:'Elections', display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, time_to_close_days:null, market_slug:'france-bardella', top_outcome_name:'Jordan Bardella',
+    { event_id:'4', title:'Will the US confirm that aliens exist before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, time_to_close_days:null, market_slug:'aliens-2027', top_outcome_name:null, stable_hours:null, outcomes:[] },
+    { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?', category:'Elections', display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, time_to_close_days:null, market_slug:'france-bardella', top_outcome_name:'Jordan Bardella', stable_hours:null,
       outcomes:[{name:'Jordan Bardella',price:0.255,is_tracked:true},{name:'Marine Le Pen',price:0.18,is_tracked:false},{name:'Emmanuel Macron',price:0.12,is_tracked:false}]},
-    { event_id:'6', title:'Will Jesus Christ return before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, time_to_close_days:null, market_slug:'jesus-return', top_outcome_name:null, outcomes:[] },
-    { event_id:'7', title:'Will Bayern Munich win the 2025–26 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, time_to_close_days:null, market_slug:'bundesliga-2026', top_outcome_name:'Bayern Munich',
+    { event_id:'6', title:'Will Jesus Christ return before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, time_to_close_days:null, market_slug:'jesus-return', top_outcome_name:null, stable_hours:null, outcomes:[] },
+    { event_id:'7', title:'Will Bayern Munich win the 2025–26 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, time_to_close_days:null, market_slug:'bundesliga-2026', top_outcome_name:'Bayern Munich', stable_hours:null,
       outcomes:[{name:'Bayern Munich',price:0.986,is_tracked:true},{name:'Other',price:0.008,is_tracked:false}]},
-    { event_id:'8', title:'Will the US officially declare war on Iran by December 31, 2026?', category:'World', display_state:'Fragile', nexus_score:58.9, flags:[], current_price:0.085, volume:3625028, time_to_close_days:null, market_slug:'iran-war-2026', top_outcome_name:null, outcomes:[] },
-    { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, time_to_close_days:null, market_slug:'kharg-island', top_outcome_name:null, outcomes:[] },
+    { event_id:'8', title:'Will the US officially declare war on Iran by December 31, 2026?', category:'World', display_state:'Fragile', nexus_score:58.9, flags:[], current_price:0.085, volume:3625028, time_to_close_days:null, market_slug:'iran-war-2026', top_outcome_name:null, stable_hours:null, outcomes:[] },
+    { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, time_to_close_days:null, market_slug:'kharg-island', top_outcome_name:null, stable_hours:null, outcomes:[] },
 ];
 const MOCK_KPIS = { total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34, contested_count:8, correlated_count:12 };
 
@@ -42,6 +42,14 @@ function fmtVol(n) {
     if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
     return '$' + Math.round(n);
 }
+function fmtStableHours(h) {
+    if (!h || h <= 0) return null;
+    if (h < 24) return Math.round(h) + 'h';
+    const days = Math.floor(h / 24);
+    const rem  = Math.round(h % 24);
+    return rem > 0 ? `${days}d ${rem}h` : `${days}d`;
+}
+
 function fmtOutcomePct(p) {
     if (p == null || p === 0) return '<1%';
     const pct = p * 100;
@@ -156,6 +164,10 @@ function buildRow(m) {
         return `<span class="mkt-flag ${cls}">${f}</span>`;
     }).join('');
 
+    const stableLabel = (state === 'Converged' && m.stable_hours)
+        ? `<span class="stable-badge">✓ STABLE ${fmtStableHours(m.stable_hours)}</span>`
+        : '';
+
     row.innerHTML = `
         <div class="mkt-inner">
             <div class="mkt-top">
@@ -176,7 +188,10 @@ function buildRow(m) {
                 <div class="pillar-bar"><div class="pillar-fill" style="width:${pw[3]}%"></div></div>
             </div>
             <div class="mkt-bottom">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                    ${stableLabel}
                     <div class="mkt-vol">vol. ${fmtVol(m.volume || 0)}</div>
+                </div>
                 ${flagsHTML}
             </div>
         </div>

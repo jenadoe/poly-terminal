@@ -568,6 +568,18 @@ body::after {
     font-variant-numeric: tabular-nums;
 }
 .r-fragile .mkt-price { color: var(--text); font-size: 13px; }
+.stable-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber-text);
+    background: var(--amber-pale);
+    border: 1px solid var(--amber-line);
+    padding: 2px 7px;
+    white-space: nowrap;
+}
+
 .mkt-vol {
     font-size: 11px;
     color: var(--text-dim);

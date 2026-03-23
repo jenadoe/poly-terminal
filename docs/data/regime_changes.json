@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T16:31:37.294844Z",
+    "market_id": "106193",
+    "question": "Republican Senate seats after the 2026 midterm elections?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T16:31:37.294844Z",
+    "market_id": "86357",
+    "question": "LoL: LCK 2026 Season Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.31
+    }
+  },
+  {
     "timestamp": "2026-03-23T16:01:34.067816Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 41.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T21:01:27.206370Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 81.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T20:31:33.566280Z",
-    "market_id": "107420",
-    "question": "Slovenian Parliamentary Election Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 51.8,
       "macro_sensitivity": 0.0
     }
   }

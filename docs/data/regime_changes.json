@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-23T00:01:25.621900Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-22T23:31:28.405776Z",
     "market_id": "149589",
     "question": "Which party will gain most seats in Russian Parliamentary Election?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 66.4,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-21T20:31:23.138006Z",
-    "market_id": "57096",
-    "question": "California Governor Election Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.8,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -75,11 +75,14 @@ function eid(id) { return document.getElementById(id); }
 /* ── CLOCK ── */
 function tickClock() {
     const d = new Date();
-    const t = [d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()]
-        .map(v => String(v).padStart(2,'0')).join(':') + ' UTC';
+    const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const tzName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const short = new Intl.DateTimeFormat([], { timeZoneName: 'short' })
+        .formatToParts(d).find(p => p.type === 'timeZoneName')?.value || '';
+    const display = `${timeStr} ${short}`;
     const c = eid('live-clock'), f = eid('footer-clock');
-    if (c) c.textContent = t;
-    if (f) f.textContent = t;
+    if (c) c.textContent = display;
+    if (f) f.textContent = display;
 }
 setInterval(tickClock, 1000);
 tickClock();
@@ -118,7 +121,15 @@ function renderKPIs(k) {
     }
 
     const lu = eid('last-update');
-    if (lu) lu.textContent = new Date().toISOString().replace('T',' ').slice(0,16) + ' UTC';
+    if (lu) {
+        const now = new Date();
+        const short = new Intl.DateTimeFormat([], { timeZoneName: 'short' })
+            .formatToParts(now).find(p => p.type === 'timeZoneName')?.value || '';
+        lu.textContent = now.toLocaleString([], {
+            month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit'
+        }) + ' ' + short;
+    }
 
     const lk = eid('locked-count'), tt = eid('total-tracked');
     if (lk) lk.textContent = Math.max(0, tot - 9);
@@ -162,10 +173,7 @@ function buildRow(m) {
                 <div class="pillar-bar"><div class="pillar-fill" style="width:${pw[3]}%"></div></div>
             </div>
             <div class="mkt-bottom">
-                <div>
-                    <div class="mkt-price">${fmtCents(m.current_price)}${outName ? `<span style="font-size:10px;color:var(--text-dim);font-weight:400;margin-left:6px;">${outName}</span>` : ''}</div>
-                    <div class="mkt-vol">${fmtVol(m.volume || 0)}</div>
-                </div>
+                    <div class="mkt-vol">vol. ${fmtVol(m.volume || 0)}</div>
                 ${flagsHTML}
             </div>
         </div>

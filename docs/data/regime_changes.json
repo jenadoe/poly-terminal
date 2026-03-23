@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T20:31:49.991434Z",
+    "market_id": "241666",
+    "question": "Will Gold (GC) hit __ by end of March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 43.5,
+      "macro_sensitivity": 0.29
+    }
+  },
+  {
+    "timestamp": "2026-03-23T20:31:49.991434Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.1,
+      "macro_sensitivity": 0.14
+    }
+  },
+  {
     "timestamp": "2026-03-23T20:01:34.679758Z",
     "market_id": "86357",
     "question": "LoL: LCK 2026 Season Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.4
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:01:23.000719Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.0,
-      "macro_sensitivity": 1.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T12:31:29.738476Z",
-    "market_id": "200782",
-    "question": "MLS Cup Winner 2026",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 81.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

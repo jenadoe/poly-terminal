@@ -4,249 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLY-NEXUS // Market Integrity Oracle</title>
-    <meta name="description" content="Real-time structural integrity scoring for Polymarket prediction markets. Know which prices to trust.">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Real-time structural integrity scoring for Polymarket prediction markets.">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════
-     TOPBAR
-════════════════════════════════════════════════ -->
+<!-- TOPBAR -->
 <div class="topbar">
     <div class="topbar-left">
-        <span class="pulse-wrap">
-            <span class="pulse-dot"></span>
-            SYSTEM ONLINE
-        </span>
-        <span>ENGINE V6 // INTEGRITY SCORING</span>
+        <span><span class="pulse-dot"></span>SYSTEM ONLINE</span>
+        <span>INTEGRITY ENGINE V6</span>
     </div>
     <span class="topbar-right" id="live-clock">--:--:-- UTC</span>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     DISCLAIMER
-════════════════════════════════════════════════ -->
+<!-- DISCLAIMER -->
 <div class="disclaimer">
-    ⚠ &nbsp; Poly-Nexus measures structural integrity of market consensus — not a prediction of outcomes or investment advice. &nbsp; ⚠
+    Poly-Nexus measures structural integrity of market consensus — not a prediction of outcomes or investment advice
 </div>
 
-<!-- ══════════════════════════════════════════════
-     HEADER
-════════════════════════════════════════════════ -->
+<!-- HEADER -->
 <header class="site-header">
     <div>
-        <div class="logo-mark">
-            POLY<span>-NEXUS</span><span class="logo-cursor"></span>
-        </div>
+        <div class="logo">POLY<span>-NEXUS</span><span class="logo-cursor"></span></div>
         <div class="logo-sub">// Market Integrity Oracle</div>
     </div>
-    <div class="header-meta">
+    <div class="header-right">
         <div>UPDATED <strong id="last-update">—</strong></div>
-        <div>ENGINE <strong>V6 // NEXUS SCORE™</strong></div>
+        <div>ENGINE <strong>V6 · NXS SCORE™</strong></div>
     </div>
 </header>
 
-<!-- ══════════════════════════════════════════════
-     SECTION 1 — HERO
-════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
 <section id="hero">
-    <div class="hero-grid">
+    <div>
+        <div class="hero-tag">Real-time market integrity scoring</div>
+        <h1 class="hero-headline">
+            Not every price<br>reflects <span class="hl">real consensus</span>.
+        </h1>
+        <div class="hero-rule"></div>
+        <p class="hero-body">
+            A production-grade engine that continuously measures the structural
+            reliability of Polymarket prediction markets — scoring liquidity depth,
+            signal independence, and consensus stability in real time.
+        </p>
+        <p class="hero-note">
+            Markets can appear confident even when they are structurally weak.
+            Poly-Nexus reveals when that confidence is real.
+        </p>
+        <div class="hero-ctas">
+            <a href="#matrix" class="btn btn-primary">VIEW INTEGRITY MATRIX</a>
+            <a href="#hiw" class="btn btn-ghost">HOW IT WORKS</a>
+        </div>
+    </div>
 
-        <div class="hero-left">
-            <div class="hero-eyebrow">Real-time market integrity scoring</div>
-            <h1 class="hero-headline">
-                Not every price<br>reflects <span class="accent">real consensus</span>.
-            </h1>
-            <div class="hero-divider"></div>
-            <p class="hero-body">
-                A production-grade engine that continuously measures the structural
-                reliability of Polymarket prediction markets — scoring liquidity depth,
-                signal independence, and consensus stability in real time.
-            </p>
-            <p class="hero-why">
-                Markets can appear confident even when they are structurally weak.
-                Poly-Nexus reveals when that confidence is real.
-            </p>
-            <div class="hero-ctas">
-                <a href="#live-markets" class="btn btn-primary">VIEW LIVE MARKETS</a>
-                <a href="#how-it-works" class="btn btn-ghost">HOW IT WORKS</a>
+    <div class="hero-panel">
+        <div class="panel-head">
+            <span class="pulse-dot"></span>
+            <span class="flex1">LIVE SYSTEM</span>
+            <span>Updated continuously</span>
+        </div>
+        <div class="panel-stats">
+            <div class="pstat">
+                <div class="pstat-num" id="hero-active">149</div>
+                <div class="pstat-label">Markets tracked</div>
+            </div>
+            <div class="pstat">
+                <div class="pstat-num">51,894</div>
+                <div class="pstat-label">Data points</div>
+            </div>
+            <div class="pstat">
+                <div class="pstat-num amber" id="hero-converged">29</div>
+                <div class="pstat-label">Integrity locked</div>
+            </div>
+            <div class="pstat">
+                <div class="pstat-num">69</div>
+                <div class="pstat-label">NXS judgments</div>
             </div>
         </div>
-
-        <div class="hero-right">
-            <div class="live-panel">
-                <div class="live-panel-head">
-                    <span class="pulse-dot"></span>
-                    <span class="live-panel-title">LIVE SYSTEM</span>
-                    <span class="live-cadence">30-min cadence</span>
-                </div>
-                <div class="live-stats">
-                    <div class="live-stat">
-                        <div class="live-num" id="hero-active">149</div>
-                        <div class="live-label">Markets tracked</div>
-                    </div>
-                    <div class="live-stat">
-                        <div class="live-num">51,894</div>
-                        <div class="live-label">Data points logged</div>
-                    </div>
-                    <div class="live-stat">
-                        <div class="live-num green" id="hero-converged">29</div>
-                        <div class="live-label">Integrity locked</div>
-                    </div>
-                    <div class="live-stat">
-                        <div class="live-num">69</div>
-                        <div class="live-label">Judgments issued</div>
-                    </div>
-                </div>
-                <div class="live-footer">
-                    <div class="live-footer-line">617 events tracked · Since March 2026</div>
-                    <div class="live-footer-line">Updated every 30 minutes · 24/7 uptime</div>
-                </div>
-            </div>
-            <div class="hero-badges">
-                <span class="hero-badge badge-green">LIVE · 30-MIN UPDATES</span>
-                <span class="hero-badge badge-blue">149 MARKETS TRACKED</span>
-            </div>
+        <div class="panel-foot">
+            <div>617 events tracked · Since March 2026</div>
+            <div>Structural scoring · Not outcome prediction</div>
         </div>
-
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     SECTION 2 — MARKET HEALTH
-════════════════════════════════════════════════ -->
-<section id="market-health" class="section">
-    <div class="section-inner">
-
-        <div class="section-head">
-            <div>
-                <div class="section-eyebrow">Ecosystem overview</div>
-                <div class="section-title">Market Health</div>
-                <div class="section-desc">Real-time structural state of active Polymarket events.</div>
+<!-- ══════════════════════════════════
+     HEALTH BAR
+══════════════════════════════════ -->
+<div id="health">
+    <div class="health-inner">
+        <div class="health-label">Market health</div>
+        <div class="health-kpis">
+            <div class="hkpi">
+                <span class="hkpi-num amber" id="kpi-converged">—</span>
+                <span class="hkpi-label">Converged</span>
+            </div>
+            <div class="hkpi">
+                <span class="hkpi-num cyan" id="kpi-calibrating">—</span>
+                <span class="hkpi-label">Calibrating</span>
+            </div>
+            <div class="hkpi">
+                <span class="hkpi-num slate" id="kpi-fragile">—</span>
+                <span class="hkpi-label">Fragile</span>
+            </div>
+            <div class="hkpi">
+                <span class="hkpi-num" id="kpi-total">—</span>
+                <span class="hkpi-label">Total tracked</span>
             </div>
         </div>
-
-        <div class="kpi-grid">
-            <div class="kpi-cell">
-                <div class="kpi-label">Total Markets</div>
-                <div class="kpi-num" id="kpi-total">—</div>
-                <div class="kpi-sub">TRACKED BY POLY-NEXUS</div>
-            </div>
-            <div class="kpi-cell k-converged">
-                <div class="kpi-label">Converged</div>
-                <div class="kpi-num green" id="kpi-converged">—</div>
-                <div class="kpi-sub">CONSENSUS LOCKED</div>
-            </div>
-            <div class="kpi-cell k-calibrating">
-                <div class="kpi-label">Calibrating</div>
-                <div class="kpi-num blue" id="kpi-calibrating">—</div>
-                <div class="kpi-sub">PRICE DISCOVERY</div>
-            </div>
-            <div class="kpi-cell k-fragile">
-                <div class="kpi-label">Fragile</div>
-                <div class="kpi-num amber" id="kpi-fragile">—</div>
-                <div class="kpi-sub">STRUCTURAL WEAKNESS</div>
-            </div>
-            <div class="kpi-cell">
-                <div class="kpi-label" style="margin-bottom:10px;">State distribution</div>
-                <div class="kpi-chart-wrap">
-                    <canvas id="stateChart"></canvas>
-                </div>
-            </div>
-        </div>
-
         <div class="health-interp" id="health-interp">
-            <strong>Loading market analysis...</strong>
+            <strong>Loading...</strong>
         </div>
+    </div>
+</div>
 
-        <div class="flags-row">
-            <div class="flag-card">
-                <div class="flag-dot contested"></div>
-                <div>
-                    <div class="flag-name">CONTESTED</div>
-                    <div class="flag-desc">High volatility · active repricing</div>
-                </div>
-                <div class="flag-count" id="kpi-contested">—</div>
-            </div>
-            <div class="flag-card">
-                <div class="flag-dot correlated"></div>
-                <div>
-                    <div class="flag-name">CORRELATED</div>
-                    <div class="flag-desc">Macro-linked · signal distortion risk</div>
-                </div>
-                <div class="flag-count" id="kpi-correlated">—</div>
-            </div>
+<!-- ══════════════════════════════════
+     STATE MATRIX
+══════════════════════════════════ -->
+<section id="matrix">
+    <div class="matrix-header">
+        <div class="matrix-title">Integrity State Matrix · Showing top markets by structural state</div>
+        <div class="matrix-access">
+            <strong id="shown-count">9</strong> / <strong id="total-tracked">149</strong> markets shown
         </div>
+    </div>
 
+    <!-- 3-column state grid -->
+    <div class="state-matrix">
+        <div class="state-col" id="col-Converged"></div>
+        <div class="state-col" id="col-Calibrating"></div>
+        <div class="state-col" id="col-Fragile"></div>
+    </div>
+
+    <!-- Locked rows -->
+    <div class="locked-wrap">
+        <div class="locked-rows">
+            <div id="locked-rows-inner"></div>
+        </div>
+        <div class="locked-overlay">
+            <div class="locked-label">
+                <strong id="locked-count">137</strong> more markets tracked
+            </div>
+            <div class="locked-sub">Full dataset · NXS pillar scores · Historical trends</div>
+        </div>
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     SECTION 3 — LIVE MARKETS
-════════════════════════════════════════════════ -->
-<section id="live-markets" class="section">
-    <div class="section-inner">
-
-        <div class="section-head">
-            <div>
-                <div class="section-eyebrow">Live market explorer</div>
-                <div class="section-title">Market Integrity Scores</div>
-                <div class="section-desc">
-                    Top-rated markets by structural state. Click any market for structural analysis.
-                </div>
-            </div>
-            <div class="access-badge">
-                Showing <strong id="shown-count">9</strong> of <strong id="total-tracked">149</strong> tracked markets
-            </div>
+<!-- ══════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════ -->
+<section id="hiw">
+    <div class="hiw-inner">
+        <div class="section-eyebrow">Methodology</div>
+        <div class="section-title">How It Works</div>
+        <div class="section-desc">
+            A continuously running pipeline measuring structural integrity of prediction market prices —
+            not their outcomes.
         </div>
 
-        <!-- State groups populated by app.js -->
-        <div id="state-groups"></div>
+        <div class="hiw-steps">
 
-        <!-- Locked rows -->
-        <div class="locked-section">
-            <div class="locked-grid" id="locked-grid"></div>
-            <div class="locked-overlay">
-                <div class="locked-text">
-                    <strong id="locked-count">137</strong>
-                    more markets tracked
-                </div>
-                <div class="locked-sub">Full dataset · Pillar scores · Historical trends · API access</div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     SECTION 4 — HOW IT WORKS
-════════════════════════════════════════════════ -->
-<section id="how-it-works" class="section">
-    <div class="section-inner">
-
-        <div>
-            <div class="section-eyebrow">Methodology</div>
-            <div class="section-title">How It Works</div>
-            <div class="section-desc">
-                A continuously running pipeline measuring structural integrity of prediction market prices —
-                not their outcomes.
-            </div>
-        </div>
-
-        <div class="hiw-list">
-
-            <div class="hiw-item">
+            <div class="hiw-step">
                 <div class="hiw-num">01</div>
                 <div>
                     <div class="hiw-title">Market Data Collection</div>
                     <p class="hiw-body">
-                        Every 30 minutes, active Polymarket events are fetched and validated.
-                        For top markets by volume, live order book depth is retrieved directly from
-                        the CLOB API — capturing real bid/ask liquidity rather than nominal volume.
-                        Macro signals (BTC, SPY, rates) are tracked for correlation analysis.
+                        Active Polymarket events are fetched and validated continuously.
+                        For top markets by volume, live order book depth is retrieved
+                        directly — capturing real bid/ask liquidity, not nominal volume.
+                        Macro signals are tracked for correlation analysis.
                     </p>
                     <div class="hiw-tags">
                         <span class="hiw-tag">Polymarket API</span>
@@ -257,56 +188,55 @@
                 </div>
             </div>
 
-            <div class="hiw-item">
+            <div class="hiw-step">
                 <div class="hiw-num">02</div>
                 <div>
-                    <div class="hiw-title">4-Dimension Integrity Scoring</div>
+                    <div class="hiw-title">4-Dimension NXS Scoring</div>
                     <p class="hiw-body">
-                        Each market is scored across four independent dimensions that together determine
-                        whether a price reflects genuine crowd consensus or structural noise.
+                        Each market is scored across four independent structural dimensions.
+                        The composite NXS score (0–100) measures integrity — not probability.
                     </p>
-                    <div class="pillar-cards">
-                        <div class="pillar-card" style="border-left:2px solid #378ADD;">
-                            <div class="pillar-card-name" style="color:#378ADD;">Capital</div>
-                            <div class="pillar-card-desc">Depth and quality of market liquidity</div>
+                    <div class="pillar-grid">
+                        <div class="pcell" style="border-left:2px solid rgba(200,151,58,0.5);">
+                            <div class="pcell-name" style="color:var(--amber-text);">Capital</div>
+                            <div class="pcell-desc">Depth and quality of market liquidity</div>
                         </div>
-                        <div class="pillar-card" style="border-left:2px solid #1D9E75;">
-                            <div class="pillar-card-name" style="color:#1D9E75;">Efficiency</div>
-                            <div class="pillar-card-desc">Spread tightness and price stability</div>
+                        <div class="pcell" style="border-left:2px solid rgba(58,143,160,0.5);">
+                            <div class="pcell-name" style="color:var(--cyan-text);">Efficiency</div>
+                            <div class="pcell-desc">Spread tightness and price stability</div>
                         </div>
-                        <div class="pillar-card" style="border-left:2px solid #a78bfa;">
-                            <div class="pillar-card-name" style="color:#a78bfa;">Independence</div>
-                            <div class="pillar-card-desc">Insulation from macro market movements</div>
+                        <div class="pcell" style="border-left:2px solid rgba(74,74,88,0.6);">
+                            <div class="pcell-name" style="color:var(--slate-text);">Independence</div>
+                            <div class="pcell-desc">Insulation from macro market movements</div>
                         </div>
-                        <div class="pillar-card" style="border-left:2px solid #f472b6;">
-                            <div class="pillar-card-name" style="color:#f472b6;">Convergence</div>
-                            <div class="pillar-card-desc">Consensus lock-in strength over time</div>
+                        <div class="pcell" style="border-left:2px solid rgba(200,151,58,0.3);">
+                            <div class="pcell-name" style="color:var(--amber-dim);">Convergence</div>
+                            <div class="pcell-desc">Consensus lock-in strength over time</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="hiw-item">
+            <div class="hiw-step">
                 <div class="hiw-num">03</div>
                 <div>
                     <div class="hiw-title">State Classification</div>
                     <p class="hiw-body">
-                        The Nexus Score (0–100) maps each market to a structural state using
-                        category-specific thresholds, a confirmation window, and hysteresis to
-                        prevent false transitions.
+                        NXS maps each market to a structural state using category-specific thresholds,
+                        a confirmation window, and hysteresis to prevent false transitions.
                     </p>
-                    <div class="state-rows">
-                        <div class="state-row sr-converged">
-                            <span class="state-row-name">Converged</span>
-                            <span class="state-row-desc">Structural consensus locked. Reliable pricing signal.</span>
+                    <div class="state-legend">
+                        <div class="sl-row sl-c">
+                            <span class="sl-name">Converged</span>
+                            <span class="sl-desc">Structural consensus locked. Reliable pricing signal.</span>
                         </div>
-                        <div class="state-row sr-calibrating">
-                            <span class="state-row-name">Calibrating</span>
-                            <span class="state-row-desc">Price discovery in progress. Consensus still forming.</span>
+                        <div class="sl-row sl-a">
+                            <span class="sl-name">Calibrating</span>
+                            <span class="sl-desc">Price discovery in progress. Consensus still forming.</span>
                         </div>
-                        <div class="state-row sr-fragile">
-                            <span class="state-row-name">Fragile</span>
-                            <span class="state-row-desc">Structural weakness detected. Treat price signal with caution.</span>
+                        <div class="sl-row sl-f">
+                            <span class="sl-name">Fragile</span>
+                            <span class="sl-desc">Structural weakness detected. Price signal unreliable.</span>
                         </div>
                     </div>
                 </div>
@@ -316,90 +246,83 @@
     </div>
 </section>
 
-<!-- System Credibility 섹션 제거 — 소비자용 대시보드에 부적절 -->
-
-<!-- ══════════════════════════════════════════════
-     DETAIL PANEL
-════════════════════════════════════════════════ -->
+<!-- DETAIL PANEL -->
 <div class="overlay" id="overlay" onclick="closePanel()"></div>
-
 <div class="side-panel" id="side-panel">
-    <div class="panel-head">
-        <div style="flex:1">
-            <div class="panel-score-row">
-                <span class="panel-score" id="p-score">—</span>
-                <span class="panel-state-badge" id="p-badge">—</span>
+    <div class="sp-head">
+        <div style="flex:1;">
+            <div class="sp-score-row">
+                <span class="sp-score" id="sp-score">—</span>
+                <div>
+                    <div class="sp-score-unit">NXS / 100</div>
+                    <span class="sp-state-badge" id="sp-badge">—</span>
+                </div>
             </div>
-            <div class="panel-flags" id="p-flags"></div>
-            <div class="panel-cat" id="p-cat"></div>
-            <div class="panel-title" id="p-title">—</div>
+            <div class="sp-flags" id="sp-flags"></div>
+            <div class="sp-cat" id="sp-cat"></div>
+            <div class="sp-title" id="sp-title">—</div>
         </div>
-        <button class="panel-close" onclick="closePanel()">✕ CLOSE</button>
+        <button class="sp-close" onclick="closePanel()">✕ CLOSE</button>
     </div>
 
-    <div class="panel-body">
+    <div class="sp-body">
 
-        <div class="panel-section">
-            <div class="panel-section-label">Market stats</div>
-            <div class="stats-grid">
-                <div class="stat-cell">
-                    <div class="stat-label">Market price</div>
-                    <div class="stat-value" id="p-price">—</div>
+        <div class="sp-section">
+            <div class="sp-section-label">Market stats</div>
+            <div class="sp-stats">
+                <div class="sp-stat">
+                    <div class="sp-stat-label">Market price</div>
+                    <div class="sp-stat-val" id="sp-price">—</div>
                 </div>
-                <div class="stat-cell">
-                    <div class="stat-label">Volume</div>
-                    <div class="stat-value" id="p-vol">—</div>
+                <div class="sp-stat">
+                    <div class="sp-stat-label">Volume</div>
+                    <div class="sp-stat-val" id="sp-vol">—</div>
                 </div>
-                <div class="stat-cell">
-                    <div class="stat-label">Closes in</div>
-                    <div class="stat-value" id="p-close">—</div>
+                <div class="sp-stat">
+                    <div class="sp-stat-label">Closes in</div>
+                    <div class="sp-stat-val" id="sp-close">—</div>
                 </div>
-                <div class="stat-cell">
-                    <div class="stat-label">Integrity score</div>
-                    <div class="stat-value" id="p-score2">—</div>
+                <div class="sp-stat">
+                    <div class="sp-stat-label">NXS score</div>
+                    <div class="sp-stat-val" id="sp-score2">—</div>
                 </div>
             </div>
         </div>
 
-        <div class="panel-section">
-            <div class="sparkline-label">
-                <span class="panel-section-label" style="margin-bottom:0;">Price trend</span>
-                <span id="p-trend-range">loading...</span>
+        <div class="sp-section sp-sparkline-wrap">
+            <div class="sp-sparkline-row">
+                <div class="sp-section-label" style="margin-bottom:0;">Price trend</div>
+                <span id="sp-trend-range">—</span>
             </div>
-            <canvas class="sparkline-canvas" id="p-sparkline" height="60"></canvas>
+            <canvas class="sp-canvas" id="sp-canvas" height="52"></canvas>
         </div>
 
-        <div class="panel-section">
-            <div class="panel-section-label">Structural analysis</div>
-            <div class="context-box" id="p-context">Loading...</div>
+        <div class="sp-section">
+            <div class="sp-section-label">Structural analysis</div>
+            <div class="sp-context" id="sp-context">Loading...</div>
         </div>
 
     </div>
 
-    <div class="panel-footer">
-        <a class="pm-link" id="p-link" href="https://polymarket.com" target="_blank" rel="noopener">
+    <div class="sp-foot">
+        <a class="sp-pm-link" id="sp-link" href="https://polymarket.com" target="_blank" rel="noopener">
             VIEW ON POLYMARKET →
         </a>
     </div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
-        <div>
-            <div>POLY-NEXUS © 2026 // MARKET INTEGRITY ORACLE</div>
-            <div>Not investment advice · Not a prediction tool · Structural integrity scoring only</div>
-        </div>
+    <div class="footer-copy">
+        <div>POLY-NEXUS © 2026 // MARKET INTEGRITY ORACLE</div>
+        <div>Not investment advice · Structural integrity scoring only</div>
+    </div>
     <div class="footer-right">
         <span class="footer-clock" id="footer-clock"></span>
-        <a href="mailto:contact@polynexus.io" class="contact-link">
-            PLATFORM INTEGRATION INQUIRY →
-        </a>
+        <a href="mailto:contact@polynexus.io" class="contact-link">Platform Integration →</a>
     </div>
 </footer>
 
-<!-- Supabase config (CI-generated) -->
 <script src="./data/config.js"></script>
 <script src="app.js"></script>
 

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-23T12:31:29.738476Z",
+    "market_id": "200782",
+    "question": "MLS Cup Winner 2026",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 81.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T12:01:26.973546Z",
     "market_id": "246219",
     "question": "Who will be confirmed as Fed Chair?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 47.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T05:31:41.188371Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.3,
       "macro_sensitivity": 0.0
     }
   }

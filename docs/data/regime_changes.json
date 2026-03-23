@@ -1,5 +1,71 @@
 [
   {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "139182",
+    "question": "2026 Women's Wimbledon Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 45.3,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 41.9,
+      "macro_sensitivity": 0.35
+    }
+  },
+  {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "236840",
+    "question": "US x Iran ceasefire by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 28.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "57711",
+    "question": "Largest Company end of June?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.4
+    }
+  },
+  {
+    "timestamp": "2026-03-23T13:01:23.000719Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 50.0,
+      "macro_sensitivity": 1.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T12:31:29.738476Z",
     "market_id": "200782",
     "question": "MLS Cup Winner 2026",
@@ -480,72 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 60.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T10:01:31.312525Z",
-    "market_id": "63766",
-    "question": "Paris Mayoral Election",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T08:31:24.450296Z",
-    "market_id": "34051",
-    "question": "Netanyahu out by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 40.0,
-      "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-22T08:31:24.450296Z",
-    "market_id": "101772",
-    "question": "Fed Decision in June?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T08:01:28.229968Z",
-    "market_id": "273112",
-    "question": "Bitcoin above ___ on March 22?",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T08:01:28.229968Z",
-    "market_id": "143669",
-    "question": "US strike on Cuba by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-22T07:31:33.993450Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
       "macro_sensitivity": 0.0
     }
   }

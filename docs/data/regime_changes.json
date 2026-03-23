@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-23T01:31:25.546195Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-23T01:31:25.546195Z",
+    "market_id": "131586",
+    "question": "Jeffrey Epstein confirmed to be alive before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.16
+    }
+  },
+  {
     "timestamp": "2026-03-23T00:01:25.621900Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.5,
       "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-21T22:01:21.430710Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-21T20:31:23.138006Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.4,
-      "macro_sensitivity": 0.03
     }
   }
 ]

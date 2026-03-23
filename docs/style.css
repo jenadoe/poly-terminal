@@ -836,6 +836,19 @@ body::after {
 }
 .sp-outcome-pct.pct-tracked { color: var(--amber-text); font-weight: 600; }
 
+.outcomes-toggle {
+    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    border-top: 1px solid var(--border);
+    transition: color 0.13s;
+}
+.outcomes-toggle:hover { color: var(--amber-text); }
+
 .sp-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .sp-stat {
     background: var(--bg-card); border: 1px solid var(--border);
@@ -889,12 +902,6 @@ footer {
 .footer-copy { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
 .footer-right { display: flex; align-items: center; gap: 16px; }
 .footer-clock { font-size: 10px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
-.contact-link-text {
-    font-size: 11px; color: var(--text-dim);
-    padding: 8px 16px; border: 1px solid var(--border);
-    letter-spacing: 0.06em; text-transform: uppercase;
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
     .health-inner { flex-wrap: wrap; gap: 12px; }

@@ -310,27 +310,47 @@ function openPanel(m) {
     if (outWrap && outSection && Array.isArray(outcomes) && outcomes.length > 0) {
         outSection.style.display = 'block';
         const sorted = [...outcomes].sort((a, b) => (b.price || 0) - (a.price || 0));
-        outWrap.innerHTML = sorted.map(o => {
-            const pct = fmtOutcomePct(o.price);
-            const barW = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
-            const isTracked = o.is_tracked === true;
-            return `
-                <div class="sp-outcome-row ${isTracked ? 'sp-outcome-tracked' : ''}">
-                    <div class="sp-outcome-name">
-                        ${isTracked ? '<span class="sp-tracked-dot"></span>' : ''}
-                        ${o.name || '—'}
-                        ${isTracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
-                    </div>
-                    <div class="sp-outcome-bar-wrap">
-                        <div class="sp-outcome-bar-bg">
-                            <div class="sp-outcome-bar-fill ${isTracked ? 'bar-tracked' : 'bar-other'}"
-                                 style="width:${barW}%"></div>
+        const LIMIT = 10;
+        let expanded = false;
+
+        function renderOutcomes(all) {
+            const visible = expanded ? all : all.slice(0, LIMIT);
+            const remaining = all.length - LIMIT;
+            outWrap.innerHTML = visible.map(o => {
+                const pct = fmtOutcomePct(o.price);
+                const barW = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
+                const isTracked = o.is_tracked === true;
+                return `
+                    <div class="sp-outcome-row ${isTracked ? 'sp-outcome-tracked' : ''}">
+                        <div class="sp-outcome-name">
+                            ${isTracked ? '<span class="sp-tracked-dot"></span>' : ''}
+                            ${o.name || '—'}
+                            ${isTracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
                         </div>
+                        <div class="sp-outcome-bar-wrap">
+                            <div class="sp-outcome-bar-bg">
+                                <div class="sp-outcome-bar-fill ${isTracked ? 'bar-tracked' : 'bar-other'}"
+                                     style="width:${barW}%"></div>
+                            </div>
+                        </div>
+                        <div class="sp-outcome-pct ${isTracked ? 'pct-tracked' : ''}">${pct}</div>
                     </div>
-                    <div class="sp-outcome-pct ${isTracked ? 'pct-tracked' : ''}">${pct}</div>
-                </div>
-            `;
-        }).join('');
+                `;
+            }).join('');
+
+            if (all.length > LIMIT) {
+                const toggle = document.createElement('div');
+                toggle.className = 'outcomes-toggle';
+                toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
+                toggle.addEventListener('click', () => {
+                    expanded = !expanded;
+                    renderOutcomes(all);
+                });
+                outWrap.appendChild(toggle);
+            }
+        }
+
+        renderOutcomes(sorted);
     } else if (outSection) {
         outSection.style.display = 'none';
     }

@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-24T11:01:12.678966Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 90.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T11:01:12.678966Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 46.0,
+      "macro_sensitivity": 0.21
+    }
+  },
+  {
+    "timestamp": "2026-03-24T11:01:12.678966Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.34
+    }
+  },
+  {
+    "timestamp": "2026-03-24T11:01:12.678966Z",
+    "market_id": "80066",
+    "question": "Backpack FDV above ___ one day after launch?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 51.0,
+      "macro_sensitivity": 0.1
+    }
+  },
+  {
     "timestamp": "2026-03-24T10:31:11.215060Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 51.3,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-24T01:01:33.423775Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.4,
-      "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-24T01:01:33.423775Z",
-    "market_id": "34044",
-    "question": "Will China invade Taiwan by end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 85.2,
-      "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-24T00:31:36.987469Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-24T00:31:36.987469Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.5,
-      "macro_sensitivity": 0.06
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-24T10:01:13.628832Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 34.9,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
     "timestamp": "2026-03-24T09:31:08.595537Z",
     "market_id": "191798",
     "question": " Iran agrees to end enrichment of uranium by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 39.7,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T23:31:27.684636Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.4,
-      "macro_sensitivity": 0.07
     }
   }
 ]

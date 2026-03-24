@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-24T07:31:37.650262Z",
+    "market_id": "241666",
+    "question": "Will Gold (GC) hit __ by end of March?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T07:01:31.575037Z",
     "market_id": "80029",
     "question": "2026 Gyeonggi Province Gubernatorial Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T19:31:33.961628Z",
-    "market_id": "214405",
-    "question": "Predict.fun FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 64.6,
-      "macro_sensitivity": 0.27
     }
   }
 ]

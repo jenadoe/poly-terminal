@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T21:31:22.136473Z",
+    "market_id": "200782",
+    "question": "MLS Cup Winner 2026",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 63.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T21:31:22.136473Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T21:01:20.263735Z",
     "market_id": "278377",
     "question": "Elon Musk # tweets March 20 - March 27, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 45.9,
       "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-24T12:31:11.880927Z",
-    "market_id": "46859",
-    "question": "Will Trump visit China by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.2,
-      "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-24T12:31:11.880927Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 52.9,
-      "macro_sensitivity": 0.02
     }
   }
 ]

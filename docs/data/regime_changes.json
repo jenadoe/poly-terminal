@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T14:31:21.415459Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
+    "timestamp": "2026-03-24T14:31:21.415459Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T14:01:20.478507Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 83.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T07:01:31.575037Z",
-    "market_id": "278377",
-    "question": "Elon Musk # tweets March 20 - March 27, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T07:01:31.575037Z",
-    "market_id": "215193",
-    "question": "Will the U.S. invade Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
-      "macro_sensitivity": 0.09
     }
   }
 ]

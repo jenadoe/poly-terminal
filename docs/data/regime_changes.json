@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T11:31:13.811761Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 44.9,
+      "macro_sensitivity": 0.32
+    }
+  },
+  {
+    "timestamp": "2026-03-24T11:31:13.811761Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 55.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T11:01:12.678966Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -524,28 +546,6 @@
     "to_regime": "Macro-Driven",
     "metrics_snapshot": {
       "nexus_score": 36.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-24T01:31:31.387221Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 42.7,
-      "macro_sensitivity": 0.43
-    }
-  },
-  {
-    "timestamp": "2026-03-24T01:31:31.387221Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 51.3,
       "macro_sensitivity": 0.17
     }
   }

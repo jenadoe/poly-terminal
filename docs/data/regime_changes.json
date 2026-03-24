@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T08:31:09.520862Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.6,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-24T08:31:09.520862Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 48.1,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-24T08:01:49.185371Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 47.6,
       "macro_sensitivity": 0.22
-    }
-  },
-  {
-    "timestamp": "2026-03-23T20:31:49.991434Z",
-    "market_id": "241666",
-    "question": "Will Gold (GC) hit __ by end of March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 43.5,
-      "macro_sensitivity": 0.29
-    }
-  },
-  {
-    "timestamp": "2026-03-23T20:31:49.991434Z",
-    "market_id": "57711",
-    "question": "Largest Company end of June?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
-      "macro_sensitivity": 0.14
     }
   }
 ]

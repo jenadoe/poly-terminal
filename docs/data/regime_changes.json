@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T09:01:17.479412Z",
+    "market_id": "241666",
+    "question": "Will Gold (GC) hit __ by end of March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T09:01:17.479412Z",
+    "market_id": "106193",
+    "question": "Republican Senate seats after the 2026 midterm elections?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T09:01:17.479412Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T08:31:09.520862Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 37.9,
       "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-23T23:01:53.201029Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.4,
-      "macro_sensitivity": 0.1
-    }
-  },
-  {
-    "timestamp": "2026-03-23T21:01:58.305185Z",
-    "market_id": "237598",
-    "question": "Iran leader end of 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 67.9,
-      "macro_sensitivity": 0.28
-    }
-  },
-  {
-    "timestamp": "2026-03-23T21:01:58.305185Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.6,
-      "macro_sensitivity": 0.22
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T23:31:22.290491Z",
+    "market_id": "57705",
+    "question": "Which company has best AI model end of June?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.7,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-24T23:31:22.290491Z",
+    "market_id": "149812",
+    "question": "Human moon landing in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 86.1,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-24T23:31:22.290491Z",
+    "market_id": "79039",
+    "question": "Largest Company end of March?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 85.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T23:01:19.506145Z",
     "market_id": "267102",
     "question": "Kharg Island no longer under Iranian control by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.6,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "119671",
-    "question": "Puffpaw FDV above ___ one day after launch?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.4,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "46859",
-    "question": "Will Trump visit China by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.8,
-      "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "89519",
-    "question": "What price will Ethereum hit in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 76.6,
-      "macro_sensitivity": 0.0
     }
   }
 ]

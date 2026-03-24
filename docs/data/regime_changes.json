@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T16:01:11.121370Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.6,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-24T16:01:11.121370Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 85.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T16:01:11.121370Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 33.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T15:31:16.269082Z",
     "market_id": "159954",
     "question": "What will the Fed rate be at the end of 2026?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 71.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T10:31:11.215060Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 29.2,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-24T10:31:11.215060Z",
-    "market_id": "191798",
-    "question": " Iran agrees to end enrichment of uranium by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 52.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T10:01:13.628832Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 34.9,
-      "macro_sensitivity": 0.26
     }
   }
 ]

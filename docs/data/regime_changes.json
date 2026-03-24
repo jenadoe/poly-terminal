@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T08:01:49.185371Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 46.2,
+      "macro_sensitivity": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-03-24T08:01:49.185371Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 67.6,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
     "timestamp": "2026-03-24T07:31:37.650262Z",
     "market_id": "241666",
     "question": "Will Gold (GC) hit __ by end of March?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 80.1,
       "macro_sensitivity": 0.14
-    }
-  },
-  {
-    "timestamp": "2026-03-23T20:01:34.679758Z",
-    "market_id": "86357",
-    "question": "LoL: LCK 2026 Season Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.9,
-      "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-23T20:01:34.679758Z",
-    "market_id": "107420",
-    "question": "Slovenian Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 52.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T04:31:35.779020Z",
+    "market_id": "34436",
+    "question": "Augusta National Invitational - Winner ",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T04:31:35.779020Z",
+    "market_id": "143642",
+    "question": "US strike on Mexico by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 66.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T04:01:38.305241Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T16:31:37.294844Z",
-    "market_id": "86357",
-    "question": "LoL: LCK 2026 Season Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
-      "macro_sensitivity": 0.31
-    }
-  },
-  {
-    "timestamp": "2026-03-23T16:01:34.067816Z",
-    "market_id": "159954",
-    "question": "What will the Fed rate be at the end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 57.5,
-      "macro_sensitivity": 0.27
     }
   }
 ]

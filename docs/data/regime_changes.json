@@ -1,5 +1,82 @@
 [
   {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 48.1,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 80.3,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 84.2,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.8,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "199763",
+    "question": "Next UK Prime Minister in 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "33699",
+    "question": "French Ligue 1 Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T13:31:16.162244Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.4,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-24T13:01:14.830595Z",
     "market_id": "215193",
     "question": "Will the U.S. invade Iran by March 31?",
@@ -470,83 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 70.0,
       "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-24T06:01:39.048456Z",
-    "market_id": "208170",
-    "question": "March Inflation US - Annual",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T06:01:39.048456Z",
-    "market_id": "27830",
-    "question": "2026 NBA Champion",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 41.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T05:31:39.932423Z",
-    "market_id": "80029",
-    "question": "2026 Gyeonggi Province Gubernatorial Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 82.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T05:31:39.932423Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 47.8,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-24T05:31:39.932423Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 71.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T05:31:39.932423Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 41.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T05:31:39.932423Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
     }
   }
 ]

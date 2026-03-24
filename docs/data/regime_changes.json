@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-24T07:01:31.575037Z",
+    "market_id": "80029",
+    "question": "2026 Gyeonggi Province Gubernatorial Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.2,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T07:01:31.575037Z",
+    "market_id": "278377",
+    "question": "Elon Musk # tweets March 20 - March 27, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 46.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T07:01:31.575037Z",
+    "market_id": "215193",
+    "question": "Will the U.S. invade Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 46.9,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
+    "timestamp": "2026-03-24T07:01:31.575037Z",
+    "market_id": "86832",
+    "question": "Which companies will be acquired before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 65.4,
+      "macro_sensitivity": 0.26
+    }
+  },
+  {
     "timestamp": "2026-03-24T06:31:39.819390Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 64.6,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-23T19:31:33.961628Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 49.3,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T19:31:33.961628Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 53.0,
-      "macro_sensitivity": 0.09
-    }
-  },
-  {
-    "timestamp": "2026-03-23T19:31:33.961628Z",
-    "market_id": "86832",
-    "question": "Which companies will be acquired before 2027?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 68.3,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-23T19:31:33.961628Z",
-    "market_id": "33509",
-    "question": "La Liga Winner ",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 65.9,
-      "macro_sensitivity": 0.0
     }
   }
 ]

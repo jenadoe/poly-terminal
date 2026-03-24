@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T09:31:08.595537Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 48.2,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-24T09:31:08.595537Z",
+    "market_id": "153719",
+    "question": "Will Satoshi move any Bitcoin in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 68.3,
+      "macro_sensitivity": 0.53
+    }
+  },
+  {
+    "timestamp": "2026-03-24T09:31:08.595537Z",
+    "market_id": "108633",
+    "question": "Will the Iranian regime fall by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 37.7,
+      "macro_sensitivity": 0.09
+    }
+  },
+  {
     "timestamp": "2026-03-24T09:01:17.479412Z",
     "market_id": "241666",
     "question": "Will Gold (GC) hit __ by end of March?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 49.4,
       "macro_sensitivity": 0.07
-    }
-  },
-  {
-    "timestamp": "2026-03-23T23:01:53.201029Z",
-    "market_id": "178011",
-    "question": "Which countries will join the Board of Peace by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T23:01:53.201029Z",
-    "market_id": "237598",
-    "question": "Iran leader end of 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 70.2,
-      "macro_sensitivity": 0.11
-    }
-  },
-  {
-    "timestamp": "2026-03-23T23:01:53.201029Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 37.9,
-      "macro_sensitivity": 0.1
     }
   }
 ]

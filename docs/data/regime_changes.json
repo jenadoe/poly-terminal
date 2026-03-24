@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-24T23:01:19.506145Z",
+    "market_id": "267102",
+    "question": "Kharg Island no longer under Iranian control by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 42.1,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
     "timestamp": "2026-03-24T22:31:17.237607Z",
     "market_id": "191798",
     "question": " Iran agrees to end enrichment of uranium by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 76.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "32754",
-    "question": "NBA MVP ",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.9,
-      "macro_sensitivity": 0.08
     }
   }
 ]

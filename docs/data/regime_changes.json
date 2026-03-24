@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-24T18:31:14.888669Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T17:31:10.849438Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.0,
       "macro_sensitivity": 0.21
-    }
-  },
-  {
-    "timestamp": "2026-03-24T11:01:12.678966Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.34
     }
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T00:01:41.050177Z",
+    "market_id": "191798",
+    "question": " Iran agrees to end enrichment of uranium by March 31?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 47.8,
+      "macro_sensitivity": 0.18
+    }
+  },
+  {
+    "timestamp": "2026-03-24T00:01:41.050177Z",
+    "market_id": "79039",
+    "question": "Largest Company end of March?",
+    "from_regime": "Converged",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-24T00:01:41.050177Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 39.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-23T23:31:27.684636Z",
     "market_id": "191798",
     "question": " Iran agrees to end enrichment of uranium by March 31?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.9,
       "macro_sensitivity": 0.51
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:31:33.467863Z",
-    "market_id": "214405",
-    "question": "Predict.fun FDV above ___ one day after launch?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.0,
-      "macro_sensitivity": 0.53
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:31:33.467863Z",
-    "market_id": "30828",
-    "question": "Xi Jinping out before 2027?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.24
-    }
-  },
-  {
-    "timestamp": "2026-03-23T13:31:33.467863Z",
-    "market_id": "34050",
-    "question": "Russia x Ukraine ceasefire by end of 2026?",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 58.1,
-      "macro_sensitivity": 0.56
     }
   }
 ]

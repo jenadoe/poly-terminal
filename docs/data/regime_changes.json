@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-24T04:01:38.305241Z",
+    "market_id": "258891",
+    "question": "Military action against Iran ends on...?",
+    "from_regime": "Volatile",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 44.2,
+      "macro_sensitivity": 0.32
+    }
+  },
+  {
+    "timestamp": "2026-03-24T04:01:38.305241Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.1,
+      "macro_sensitivity": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-03-24T04:01:38.305241Z",
+    "market_id": "119671",
+    "question": "Puffpaw FDV above ___ one day after launch?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.52
+    }
+  },
+  {
     "timestamp": "2026-03-24T03:01:35.358174Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.5,
       "macro_sensitivity": 0.27
-    }
-  },
-  {
-    "timestamp": "2026-03-23T16:01:34.067816Z",
-    "market_id": "107420",
-    "question": "Slovenian Parliamentary Election Winner",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.1,
-      "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-23T16:01:34.067816Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 49.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-23T15:31:41.841300Z",
-    "market_id": "139182",
-    "question": "2026 Women's Wimbledon Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 79.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-24T06:31:39.819390Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 52.5,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
+    "timestamp": "2026-03-24T06:31:39.819390Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.23
+    }
+  },
+  {
     "timestamp": "2026-03-24T06:01:39.048456Z",
     "market_id": "208170",
     "question": "March Inflation US - Annual",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 65.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-23T18:31:40.306564Z",
-    "market_id": "258891",
-    "question": "Military action against Iran ends on...?",
-    "from_regime": "Volatile",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 44.4,
-      "macro_sensitivity": 0.36
-    }
-  },
-  {
-    "timestamp": "2026-03-23T18:31:40.306564Z",
-    "market_id": "238474",
-    "question": "What price will Bitcoin hit in March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 61.7,
       "macro_sensitivity": 0.0
     }
   }

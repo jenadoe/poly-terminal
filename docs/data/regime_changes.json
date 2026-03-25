@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T03:31:33.987119Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 50.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T03:01:27.746416Z",
     "market_id": "226988",
     "question": "Elon Musk musk # tweets in April 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 62.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:31:16.162244Z",
-    "market_id": "108633",
-    "question": "Will the Iranian regime fall by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 46.4,
-      "macro_sensitivity": 0.08
     }
   }
 ]

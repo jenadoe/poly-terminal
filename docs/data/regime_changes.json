@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-25T18:02:01.141989Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.16
+    }
+  },
+  {
+    "timestamp": "2026-03-25T18:02:01.141989Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 88.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-25T18:02:01.141989Z",
+    "market_id": "33507",
+    "question": "English Premier League Winner ",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 89.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T17:02:04.708333Z",
     "market_id": "259755",
     "question": "US escorts commercial ship through Hormuz by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 42.0,
       "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-25T00:01:22.973298Z",
-    "market_id": "278377",
-    "question": "Elon Musk # tweets March 20 - March 27, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T23:31:22.290491Z",
-    "market_id": "57705",
-    "question": "Which company has best AI model end of June?",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 66.7,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-24T23:31:22.290491Z",
-    "market_id": "149812",
-    "question": "Human moon landing in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 86.1,
-      "macro_sensitivity": 0.09
     }
   }
 ]

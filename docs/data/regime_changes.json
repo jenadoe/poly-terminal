@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T16:02:02.541788Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.1,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-03-25T15:31:53.530524Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -535,17 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 56.5,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T21:31:22.136473Z",
-    "market_id": "200782",
-    "question": "MLS Cup Winner 2026",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 63.2,
       "macro_sensitivity": 0.0
     }
   }

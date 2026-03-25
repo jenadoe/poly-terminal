@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T20:01:58.807258Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
     "timestamp": "2026-03-25T18:32:02.005613Z",
     "market_id": "52166",
     "question": "Where will Trump and Putin meet next?",
@@ -535,17 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 77.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T03:01:27.746416Z",
-    "market_id": "34038",
-    "question": "Next Prime Minister of Hungary",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 85.8,
       "macro_sensitivity": 0.0
     }
   }

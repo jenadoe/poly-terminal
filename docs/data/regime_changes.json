@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T12:01:48.959633Z",
+    "market_id": "184873",
+    "question": "Elon Musk musk # tweets in March 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 60.4,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-03-25T11:01:50.003365Z",
     "market_id": "236943",
     "question": "Iran military action against ___ by March 31?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 53.7,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:31:16.269082Z",
-    "market_id": "236992",
-    "question": "Trump announces end of military operations against Iran by ...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

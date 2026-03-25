@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-25T14:01:51.547317Z",
+    "market_id": "237598",
+    "question": "Iran leader end of 2026?",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.22
+    }
+  },
+  {
+    "timestamp": "2026-03-25T14:01:51.547317Z",
+    "market_id": "236884",
+    "question": "Iran x Israel/US conflict ends by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 48.1,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
+    "timestamp": "2026-03-25T14:01:51.547317Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 57.7,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-25T13:31:42.324061Z",
     "market_id": "259755",
     "question": "US escorts commercial ship through Hormuz by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.6,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-24T19:01:25.599810Z",
-    "market_id": "80066",
-    "question": "Backpack FDV above ___ one day after launch?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 52.1,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-24T18:31:14.888669Z",
-    "market_id": "33507",
-    "question": "English Premier League Winner ",
-    "from_regime": "Converged",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 62.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T17:31:10.849438Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.26
     }
   }
 ]

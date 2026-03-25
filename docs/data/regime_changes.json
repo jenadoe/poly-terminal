@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T08:31:49.149765Z",
+    "market_id": "259755",
+    "question": "US escorts commercial ship through Hormuz by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.9,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T08:01:41.095097Z",
     "market_id": "278377",
     "question": "Elon Musk # tweets March 20 - March 27, 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.1,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-24T14:31:21.415459Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.23
     }
   }
 ]

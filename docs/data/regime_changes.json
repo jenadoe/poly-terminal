@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-25T15:31:53.530524Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 59.8,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-25T15:31:53.530524Z",
+    "market_id": "143443",
+    "question": "Venezuela leader end of 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 34.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T14:31:57.317091Z",
     "market_id": "291733",
     "question": "Elon Musk # tweets March 24 - March 31, 2026?",
@@ -524,28 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 63.2,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T21:31:22.136473Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 83.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T21:01:20.263735Z",
-    "market_id": "278377",
-    "question": "Elon Musk # tweets March 20 - March 27, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.1,
       "macro_sensitivity": 0.0
     }
   }

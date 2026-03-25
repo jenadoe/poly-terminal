@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T09:31:49.260836Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 51.0,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-25T09:01:45.432394Z",
     "market_id": "79926",
     "question": "How many different countries will Israel strike in 2026?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.0,
       "macro_sensitivity": 0.01
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:01:32.650503Z",
-    "market_id": "106614",
-    "question": "Hungary Parliamentary Election Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 88.5,
-      "macro_sensitivity": 0.0
     }
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T09:01:45.432394Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.1,
+      "macro_sensitivity": 0.03
+    }
+  },
+  {
     "timestamp": "2026-03-25T08:31:49.149765Z",
     "market_id": "259755",
     "question": "US escorts commercial ship through Hormuz by...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 88.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:01:32.650503Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.1,
-      "macro_sensitivity": 0.2
     }
   }
 ]

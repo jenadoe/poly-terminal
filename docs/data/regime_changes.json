@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-25T10:31:49.366293Z",
+    "market_id": "259755",
+    "question": "US escorts commercial ship through Hormuz by...?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 52.3,
+      "macro_sensitivity": 0.25
+    }
+  },
+  {
+    "timestamp": "2026-03-25T10:31:49.366293Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 62.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-25T10:31:49.366293Z",
+    "market_id": "79926",
+    "question": "How many different countries will Israel strike in 2026?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 63.0,
+      "macro_sensitivity": 0.15
+    }
+  },
+  {
     "timestamp": "2026-03-25T10:01:46.236497Z",
     "market_id": "139182",
     "question": "2026 Women's Wimbledon Winner",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 74.8,
       "macro_sensitivity": 0.03
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:01:32.650503Z",
-    "market_id": "31889",
-    "question": "Texas Republican Senate Primary Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 86.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:01:32.650503Z",
-    "market_id": "236992",
-    "question": "Trump announces end of military operations against Iran by ...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 48.4,
-      "macro_sensitivity": 0.16
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:01:32.650503Z",
-    "market_id": "237260",
-    "question": "Will Crude Oil (CL) hit__ by end of March?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 27.7,
-      "macro_sensitivity": 0.25
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-25T18:32:02.005613Z",
+    "market_id": "52166",
+    "question": "Where will Trump and Putin meet next?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.5,
+      "macro_sensitivity": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-03-25T18:32:02.005613Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 58.1,
+      "macro_sensitivity": 0.13
+    }
+  },
+  {
     "timestamp": "2026-03-25T18:02:01.141989Z",
     "market_id": "52166",
     "question": "Where will Trump and Putin meet next?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 85.8,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T02:01:22.416178Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 42.8,
-      "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-25T01:01:23.315461Z",
-    "market_id": "267102",
-    "question": "Kharg Island no longer under Iranian control by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 42.0,
-      "macro_sensitivity": 0.17
     }
   }
 ]

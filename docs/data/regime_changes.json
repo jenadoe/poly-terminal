@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T00:01:22.973298Z",
+    "market_id": "278377",
+    "question": "Elon Musk # tweets March 20 - March 27, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 44.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-24T23:31:22.290491Z",
     "market_id": "57705",
     "question": "Which company has best AI model end of June?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 50.9,
       "macro_sensitivity": 0.18
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "153719",
-    "question": "Will Satoshi move any Bitcoin in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 80.6,
-      "macro_sensitivity": 0.01
     }
   }
 ]

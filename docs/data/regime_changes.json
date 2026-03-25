@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-25T20:31:57.784658Z",
+    "market_id": "57096",
+    "question": "California Governor Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 59.2,
+      "macro_sensitivity": 0.05
+    }
+  },
+  {
+    "timestamp": "2026-03-25T20:31:57.784658Z",
+    "market_id": "73969",
+    "question": "Trump out as President before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 64.4,
+      "macro_sensitivity": 0.01
+    }
+  },
+  {
     "timestamp": "2026-03-25T20:01:58.807258Z",
     "market_id": "73969",
     "question": "Trump out as President before 2027?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 58.1,
       "macro_sensitivity": 0.35
-    }
-  },
-  {
-    "timestamp": "2026-03-25T03:31:33.987119Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 50.9,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T03:01:27.746416Z",
-    "market_id": "226988",
-    "question": "Elon Musk musk # tweets in April 2026?",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 77.0,
-      "macro_sensitivity": 0.0
     }
   }
 ]

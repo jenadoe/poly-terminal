@@ -7,7 +7,12 @@
 const _cfg = window.POLY_NEXUS_CONFIG || {};
 const USE_SB = !!(_cfg.supabaseUrl && _cfg.supabaseAnonKey);
 let sb = null;
-if (USE_SB) sb = supabase.createClient(_cfg.supabaseUrl, _cfg.supabaseAnonKey);
+
+if (USE_SB) {
+    sb = supabase.createClient(_cfg.supabaseUrl, _cfg.supabaseAnonKey);
+} else {
+    console.error("[SYSTEM ERROR] config.js 로드 실패 또는 Supabase 설정 누락. Mock 데이터를 사용합니다.");
+}
 
 /* ── STATE CONFIG ── */
 const SC = {
@@ -17,7 +22,7 @@ const SC = {
 };
 
 /* ── MOCK DATA (Supabase 미연결 시 fallback) ── */
-const MOCK_MARKETS = [
+const MOCK_MARKETS =[
     { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:52, close_time:null, market_slug:'eurovision-winner-2026', top_outcome_name:'Finland', stable_hours:51,
       outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false},{name:'Greece',price:0.0715,is_tracked:false},{name:'Australia',price:0.051,is_tracked:false}]},
     { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, time_to_close_days:null, close_time:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh', stable_hours:362,
@@ -40,22 +45,31 @@ const MOCK_MARKETS = [
 const MOCK_KPIS = { total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34, contested_count:8, correlated_count:12 };
 
 /* ── UTILS ── */
+// XSS 방어용 HTML Escape 함수
+function escapeHtml(str) {
+    if (str == null) return '—';
+    return String(str).replace(/[&<>'"]/g, tag => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+    }[tag] || tag));
+}
+
 function fmtVol(n) {
-    if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
-    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
-    return '$' + Math.round(n);
+    const val = parseFloat(n) || 0;
+    if (val >= 1e9) return '$' + (val/1e9).toFixed(2) + 'B';
+    if (val >= 1e6) return '$' + (val/1e6).toFixed(1) + 'M';
+    if (val >= 1e3) return '$' + (val/1e3).toFixed(0) + 'K';
+    return '$' + Math.round(val);
 }
 
 function fmtStableHours(h) {
-    if (!h || h <= 0) return null;
-    if (h < 24) return Math.round(h) + 'h';
-    const days = Math.floor(h / 24);
-    const rem  = Math.round(h % 24);
+    const val = parseFloat(h) || 0;
+    if (val <= 0) return null;
+    if (val < 24) return Math.round(val) + 'h';
+    const days = Math.floor(val / 24);
+    const rem  = Math.round(val % 24);
     return rem > 0 ? `${days}d ${rem}h` : `${days}d`;
 }
 
-/* [FIX A] close_time ISO 파싱 → "Xd Yh" 실시간 계산 */
 function closesIn(closeTimeISO, fallbackDays) {
     if (closeTimeISO) {
         try {
@@ -68,13 +82,14 @@ function closesIn(closeTimeISO, fallbackDays) {
             return `${totalH}h`;
         } catch (_) {}
     }
-    if (fallbackDays != null) return `~${fallbackDays}d`;
+    if (fallbackDays != null) return `~${parseFloat(fallbackDays) || 0}d`;
     return null;
 }
 
 function fmtOutcomePct(p) {
-    if (p == null || p === 0) return '<1%';
-    const pct = p * 100;
+    const val = parseFloat(p) || 0;
+    if (val === 0) return '<1%';
+    const pct = val * 100;
     if (pct < 1)   return '<1%';
     if (pct >= 99) return '>99%';
     if (pct >= 10) return Math.round(pct) + '%';
@@ -82,8 +97,9 @@ function fmtOutcomePct(p) {
 }
 
 function fmtCents(p) {
-    if (p == null) return '—';
-    const c = Math.round(p * 100);
+    const val = parseFloat(p);
+    if (isNaN(val)) return '—';
+    const c = Math.round(val * 100);
     if (c >= 99) return '>99¢';
     if (c < 1)   return '<1¢';
     return c + '¢';
@@ -93,16 +109,17 @@ function animCount(el, target, ms) {
     if (!el) return;
     ms = ms || 700;
     const s = performance.now();
+    const targetVal = parseFloat(target) || 0;
     const run = now => {
         const p = Math.min((now - s) / ms, 1);
         const e = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * e);
+        el.textContent = Math.round(targetVal * e);
         if (p < 1) requestAnimationFrame(run);
     };
     requestAnimationFrame(run);
 }
 
-function getFlags(d) { return Array.isArray(d.flags) ? d.flags : []; }
+function getFlags(d) { return Array.isArray(d.flags) ? d.flags :[]; }
 function eid(id) { return document.getElementById(id); }
 
 /* ── CLOCK ── */
@@ -123,8 +140,8 @@ tickClock();
 
 /* ── PILLAR WIDTHS ── */
 function pillarWidths(score) {
-    const base = score / 100;
-    return [
+    const base = (parseFloat(score) || 0) / 100;
+    return[
         Math.round(Math.min(base * 1.05 + Math.random() * 0.08, 1) * 100),
         Math.round(Math.min(base * 0.98 + Math.random() * 0.06, 1) * 100),
         Math.round(Math.min(base * 1.02 + Math.random() * 0.07, 1) * 100),
@@ -141,10 +158,10 @@ function renderKPIs(k) {
     animCount(eid('hero-active'),     k.total_markets     || 149);
     animCount(eid('hero-converged'),  k.converged_count   || 29);
 
-    const tot = k.total_markets || 1;
-    const cv  = k.converged_count || 0;
-    const ca  = k.calibrating_count || 0;
-    const fr  = k.fragile_count || 0;
+    const tot = parseFloat(k.total_markets) || 1;
+    const cv  = parseFloat(k.converged_count) || 0;
+    const ca  = parseFloat(k.calibrating_count) || 0;
+    const fr  = parseFloat(k.fragile_count) || 0;
 
     const interp = eid('health-interp');
     if (interp) {
@@ -177,7 +194,6 @@ function buildRow(m) {
     const flags = getFlags(m);
     const pw    = pillarWidths(score);
 
-    /* [FIX A] Closes in 실시간 계산 */
     const closeStr = closesIn(m.close_time, m.time_to_close_days);
 
     const stableLabel = (state === 'Converged' && m.stable_hours)
@@ -186,7 +202,7 @@ function buildRow(m) {
 
     const flagsHTML = flags.map(f => {
         const cls = f === 'Contested' ? 'mf-contested' : 'mf-correlated';
-        return `<span class="mkt-flag ${cls}">${f}</span>`;
+        return `<span class="mkt-flag ${cls}">${escapeHtml(f)}</span>`;
     }).join('');
 
     const row = document.createElement('div');
@@ -195,8 +211,8 @@ function buildRow(m) {
         <div class="mkt-inner">
             <div class="mkt-top">
                 <div style="min-width:0;flex:1;">
-                    <div class="mkt-category">${m.category || ''}</div>
-                    <div class="mkt-title">${m.title || '—'}</div>
+                    <div class="mkt-category">${escapeHtml(m.category)}</div>
+                    <div class="mkt-title">${escapeHtml(m.title)}</div>
                 </div>
                 <div class="nxs-block">
                     <span class="nxs-label">NXS</span>
@@ -214,9 +230,9 @@ function buildRow(m) {
                 <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
                     ${stableLabel}
                     ${flagsHTML}
-                    ${closeStr ? `<div class="mkt-vol">Closes in <strong>${closeStr}</strong></div>` : ''}
+                    ${closeStr ? `<div class="mkt-vol">Closes in <strong>${escapeHtml(closeStr)}</strong></div>` : ''}
                 </div>
-                <div class="mkt-vol">vol. ${fmtVol(m.volume || 0)}</div>
+                <div class="mkt-vol">vol. ${fmtVol(m.volume)}</div>
             </div>
         </div>`;
 
@@ -270,7 +286,7 @@ function renderLockedRows() {
 
 /* ── CONTEXT ── */
 function buildContext(m) {
-    const s = m.display_state, score = parseFloat(m.nexus_score) || 0, vol = m.volume || 0;
+    const s = m.display_state, score = parseFloat(m.nexus_score) || 0, vol = parseFloat(m.volume) || 0;
     if (s === 'Converged')
         return `NXS <strong>${score.toFixed(1)}</strong> — structural consensus verified. ` +
                (vol > 10e6 ? `Deep market (${fmtVol(vol)}) supports reliable signal.` : `Price reflects genuine crowd consensus.`);
@@ -288,14 +304,17 @@ function buildContext(m) {
 function drawSparkline(canvas, vals) {
     if (!canvas || !vals || vals.length < 2) return;
 
-    /* [FIX C] canvas 픽셀 해상도를 실제 렌더 크기에 맞게 설정 */
     const W = canvas.offsetWidth  || 380;
     const H = canvas.offsetHeight || 52;
-    canvas.width  = W;
-    canvas.height = H;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width  = W * dpr;
+    canvas.height = H * dpr;
 
     const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
     ctx.clearRect(0, 0, W, H);
+    
     const mn = Math.min(...vals), mx = Math.max(...vals), rng = mx - mn || 0.01;
 
     /* fill */
@@ -329,13 +348,12 @@ function openPanel(m) {
     const cfg   = SC[state] || SC.Fragile;
     const flags = getFlags(m);
 
-    /* [FIX A] Closes in 실시간 계산 */
     const closeStr = closesIn(m.close_time, m.time_to_close_days);
 
     eid('sp-score').textContent  = Math.round(score);
     eid('sp-score2').textContent = score.toFixed(1);
     eid('sp-price').textContent  = fmtCents(m.current_price);
-    eid('sp-vol').textContent    = fmtVol(m.volume || 0);
+    eid('sp-vol').textContent    = fmtVol(m.volume);
     eid('sp-close').textContent  = closeStr || '—';
 
     const badge = eid('sp-badge');
@@ -347,18 +365,17 @@ function openPanel(m) {
     eid('sp-title').textContent = m.title || '—';
 
     eid('sp-flags').innerHTML = flags.map(f =>
-        `<span class="sp-flag ${f === 'Contested' ? 'spf-c' : 'spf-r'}">${f}</span>`
+        `<span class="sp-flag ${f === 'Contested' ? 'spf-c' : 'spf-r'}">${escapeHtml(f)}</span>`
     ).join('');
 
     eid('sp-context').innerHTML = buildContext(m);
 
-    /* [FIX D + E] Outcomes */
+    /* Outcomes 렌더링 */
     renderPanelOutcomes(m);
 
     const link = eid('sp-link');
-    link.href = m.market_slug ? `https://polymarket.com/event/${m.market_slug}` : 'https://polymarket.com';
+    link.href = m.market_slug ? `https://polymarket.com/event/${escapeHtml(m.market_slug)}` : 'https://polymarket.com';
 
-    /* [FIX C] Sparkline */
     const sp = eid('sp-canvas'), tr = eid('sp-trend-range');
     if (sp) {
         sp.width  = sp.offsetWidth  || 380;
@@ -374,8 +391,8 @@ function openPanel(m) {
             .not('current_price', 'is', null)
             .order('snapshot_at', { ascending: true })
             .limit(48)
-            .then(({ data }) => {
-                if (!data || data.length < 2) {
+            .then(({ data, error }) => {
+                if (error || !data || data.length < 2) {
                     if (tr) tr.textContent = 'insufficient history';
                     return;
                 }
@@ -383,17 +400,15 @@ function openPanel(m) {
                 const last  = new Date(data[data.length - 1].snapshot_at);
                 const fmt   = d => d.toLocaleDateString('en-GB', { month: 'short', day: 'numeric' });
                 if (tr) tr.textContent = `${fmt(first)} – ${fmt(last)}`;
-                /* [FIX C] 패널이 열린 후 레이아웃 확정 시점에 그리기 */
                 requestAnimationFrame(() => {
-                    if (sp) drawSparkline(sp, data.map(r => r.current_price));
+                    if (sp) drawSparkline(sp, data.map(r => parseFloat(r.current_price) || 0));
                 });
             })
             .catch(() => { if (tr) tr.textContent = '—'; });
     } else {
-        /* fallback: sparkline 배열 */
         if (m.sparkline && m.sparkline.length >= 2) {
             requestAnimationFrame(() => {
-                if (sp) drawSparkline(sp, m.sparkline.map(p => p.p));
+                if (sp) drawSparkline(sp, m.sparkline.map(p => parseFloat(p.p) || 0));
             });
             if (tr) tr.textContent = `${m.sparkline.length} snapshots`;
         } else {
@@ -406,7 +421,7 @@ function openPanel(m) {
     document.body.style.overflow = 'hidden';
 }
 
-/* ── [FIX D + E] Outcomes 렌더 ── */
+/* ── Outcomes 렌더 (토글 버그 수정 및 CSS 제어 방식 적용) ── */
 function renderPanelOutcomes(m) {
     const outWrap    = eid('sp-outcomes');
     const outSection = eid('sp-outcomes-section');
@@ -414,17 +429,16 @@ function renderPanelOutcomes(m) {
 
     let outcomes = Array.isArray(m.outcomes) ? [...m.outcomes] : [];
 
-    /* [FIX D] outcome이 1개(YES만 있는 바이너리 마켓): NO 자동 생성 */
     if (outcomes.length === 1 && outcomes[0].is_tracked) {
-        const yesP = outcomes[0].price || 0;
+        const yesP = parseFloat(outcomes[0].price) || 0;
         outcomes.push({ name: 'No', price: Math.max(0, 1 - yesP), is_tracked: false });
     }
 
-    /* [FIX D] outcomes 자체가 없으면 current_price로 Yes/No 추정 */
     if (outcomes.length === 0 && m.current_price != null) {
-        outcomes = [
-            { name: 'Yes', price: m.current_price,                  is_tracked: true  },
-            { name: 'No',  price: Math.max(0, 1 - m.current_price), is_tracked: false },
+        const cp = parseFloat(m.current_price) || 0;
+        outcomes =[
+            { name: 'Yes', price: cp,                  is_tracked: true  },
+            { name: 'No',  price: Math.max(0, 1 - cp), is_tracked: false },
         ];
     }
 
@@ -435,50 +449,55 @@ function renderPanelOutcomes(m) {
 
     outSection.style.display = '';
 
-    /* [FIX E] 가격 내림차순 정렬 */
-    const sorted = outcomes.sort((a, b) => (b.price || 0) - (a.price || 0));
+    const sorted = outcomes.sort((a, b) => (parseFloat(b.price) || 0) - (parseFloat(a.price) || 0));
     const LIMIT  = 10;
-    let expanded = false;
 
-    function renderOutcomes(all) {
-        const visible   = expanded ? all : all.slice(0, LIMIT);
-        const remaining = all.length - LIMIT;
+    // DOM 재생성 방지: 모든 항목을 한 번에 렌더링하되 10위 밖은 CSS로 숨김 처리
+    const outcomesHTML = sorted.map((o, index) => {
+        const pct     = fmtOutcomePct(o.price);
+        const barW    = Math.min(Math.max((parseFloat(o.price) || 0) * 100, 0.5), 100).toFixed(1);
+        const tracked = o.is_tracked === true;
+        const isHidden = index >= LIMIT ? 'style="display: none;" class="outcome-hidden"' : '';
 
-        outWrap.innerHTML = visible.map(o => {
-            const pct     = fmtOutcomePct(o.price);
-            const barW    = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
-            const tracked = o.is_tracked === true;
-            return `
-                <div class="sp-outcome-row ${tracked ? 'sp-outcome-tracked' : ''}">
-                    <div class="sp-outcome-name">
-                        ${tracked ? '<span class="sp-tracked-dot"></span>' : ''}
-                        ${o.name || '—'}
-                        ${tracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
+        return `
+            <div class="sp-outcome-row ${tracked ? 'sp-outcome-tracked' : ''}" ${isHidden}>
+                <div class="sp-outcome-name">
+                    ${tracked ? '<span class="sp-tracked-dot"></span>' : ''}
+                    ${escapeHtml(o.name)}
+                    ${tracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
+                </div>
+                <div class="sp-outcome-bar-wrap">
+                    <div class="sp-outcome-bar-bg">
+                        <div class="sp-outcome-bar-fill ${tracked ? 'bar-tracked' : 'bar-other'}"
+                             style="width:${barW}%"></div>
                     </div>
-                    <div class="sp-outcome-bar-wrap">
-                        <div class="sp-outcome-bar-bg">
-                            <div class="sp-outcome-bar-fill ${tracked ? 'bar-tracked' : 'bar-other'}"
-                                 style="width:${barW}%"></div>
-                        </div>
-                    </div>
-                    <div class="sp-outcome-pct ${tracked ? 'pct-tracked' : ''}">${pct}</div>
-                </div>`;
-        }).join('');
+                </div>
+                <div class="sp-outcome-pct ${tracked ? 'pct-tracked' : ''}">${pct}</div>
+            </div>`;
+    }).join('');
 
-        /* [FIX B] Expand/collapse — innerHTML 재작성 후 새로 append */
-        if (all.length > LIMIT) {
-            const toggle = document.createElement('div');
-            toggle.className = 'outcomes-toggle';
-            toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
-            toggle.addEventListener('click', () => {
-                expanded = !expanded;
-                renderOutcomes(all);
+    outWrap.innerHTML = outcomesHTML;
+
+    // 토글 버튼 로직
+    if (sorted.length > LIMIT) {
+        const remaining = sorted.length - LIMIT;
+        const toggle = document.createElement('div');
+        toggle.className = 'outcomes-toggle';
+        toggle.textContent = `+${remaining} more`;
+
+        let expanded = false;
+        toggle.addEventListener('click', () => {
+            expanded = !expanded;
+            const hiddenRows = outWrap.querySelectorAll('.outcome-hidden');
+            hiddenRows.forEach(row => {
+                // CSS grid 레이아웃을 유지하기 위해 grid로 복구
+                row.style.display = expanded ? 'grid' : 'none';
             });
-            outWrap.appendChild(toggle);
-        }
-    }
+            toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
+        });
 
-    renderOutcomes(sorted);
+        outWrap.appendChild(toggle);
+    }
 }
 
 function closePanel() {
@@ -488,23 +507,35 @@ function closePanel() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
 
-/* ── DATA ── */
+/* ── DATA FETCHING ── */
 async function loadKPIs() {
     if (!USE_SB || !sb) return MOCK_KPIS;
     try {
         const { data, error } = await sb.rpc('get_dashboard_kpis');
-        if (error || !data) return MOCK_KPIS;
-        return data;
-    } catch (_) { return MOCK_KPIS; }
+        if (error) {
+            console.error("[DB ERROR] get_dashboard_kpis 실패:", error);
+            return MOCK_KPIS;
+        }
+        return data || MOCK_KPIS;
+    } catch (err) { 
+        console.error("[FETCH ERROR] KPI 로드 실패:", err);
+        return MOCK_KPIS; 
+    }
 }
 
 async function loadMarkets() {
     if (!USE_SB || !sb) return MOCK_MARKETS;
     try {
         const { data, error } = await sb.rpc('get_public_markets');
-        if (error || !data || !data.length) return MOCK_MARKETS;
-        return data;
-    } catch (_) { return MOCK_MARKETS; }
+        if (error) {
+            console.error("[DB ERROR] get_public_markets 실패:", error);
+            return MOCK_MARKETS;
+        }
+        return (data && data.length) ? data : MOCK_MARKETS;
+    } catch (err) { 
+        console.error("[FETCH ERROR] Markets 로드 실패:", err);
+        return MOCK_MARKETS; 
+    }
 }
 
 async function init() {
@@ -516,8 +547,13 @@ async function init() {
 init();
 setInterval(init, 5 * 60 * 1000);
 
+/* ── REALTIME SUBSCRIPTION (Debounce 적용) ── */
+let updateTimeout;
 if (USE_SB && sb) {
     sb.channel('mkt_watch')
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'markets_registry' }, () => init())
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'markets_registry' }, () => {
+            clearTimeout(updateTimeout);
+            updateTimeout = setTimeout(() => init(), 1000); // 1초 디바운스 처리
+        })
         .subscribe();
 }

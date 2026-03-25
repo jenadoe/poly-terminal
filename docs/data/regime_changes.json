@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-25T03:01:27.746416Z",
+    "market_id": "226988",
+    "question": "Elon Musk musk # tweets in April 2026?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 77.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-25T03:01:27.746416Z",
+    "market_id": "34038",
+    "question": "Next Prime Minister of Hungary",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 85.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T02:01:22.416178Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.4,
       "macro_sensitivity": 0.08
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "215193",
-    "question": "Will the U.S. invade Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 52.9,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:01:14.830595Z",
-    "market_id": "106520",
-    "question": "Peru Presidential Election Winner",
-    "from_regime": "Active",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.4,
-      "macro_sensitivity": 0.27
     }
   }
 ]

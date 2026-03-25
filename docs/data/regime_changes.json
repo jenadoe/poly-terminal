@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T21:31:49.728451Z",
+    "market_id": "236992",
+    "question": "Trump announces end of military operations against Iran by ...?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 54.7,
+      "macro_sensitivity": 0.02
+    }
+  },
+  {
     "timestamp": "2026-03-25T21:02:03.481663Z",
     "market_id": "291733",
     "question": "Elon Musk # tweets March 24 - March 31, 2026?",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 72.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T05:01:18.939047Z",
-    "market_id": "139894",
-    "question": "Jerome Powell out as Fed Chair by...?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 44.8,
       "macro_sensitivity": 0.0
     }
   }

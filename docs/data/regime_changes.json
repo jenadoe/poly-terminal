@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-25T05:01:18.939047Z",
+    "market_id": "139894",
+    "question": "Jerome Powell out as Fed Chair by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 44.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-25T04:01:20.615957Z",
     "market_id": "33699",
     "question": "French Ligue 1 Winner ",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 52.8,
       "macro_sensitivity": 0.05
-    }
-  },
-  {
-    "timestamp": "2026-03-24T13:31:16.162244Z",
-    "market_id": "199763",
-    "question": "Next UK Prime Minister in 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.24
     }
   }
 ]

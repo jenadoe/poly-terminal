@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-25T12:31:52.142359Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 74.9,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-25T12:31:52.142359Z",
+    "market_id": "45018",
+    "question": "Maine Democratic Senate Primary Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 86.9,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
     "timestamp": "2026-03-25T12:01:48.959633Z",
     "market_id": "184873",
     "question": "Elon Musk musk # tweets in March 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 60.5,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:31:16.269082Z",
-    "market_id": "257216",
-    "question": "Elon Musk # tweets March 17 - March 24, 2026?",
-    "from_regime": "Volatile",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 43.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-24T15:31:16.269082Z",
-    "market_id": "215193",
-    "question": "Will the U.S. invade Iran by March 31?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 53.7,
-      "macro_sensitivity": 0.01
     }
   }
 ]

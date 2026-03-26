@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-26T08:01:29.574092Z",
+    "market_id": "101772",
+    "question": "Fed Decision in June?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 85.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T06:01:24.395435Z",
     "market_id": "258891",
     "question": "Military action against Iran ends on...?",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 30.6,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T14:01:51.547317Z",
-    "market_id": "237598",
-    "question": "Iran leader end of 2026?",
-    "from_regime": "Converged",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 70.0,
-      "macro_sensitivity": 0.22
     }
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-26T03:01:31.551948Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 75.3,
+      "macro_sensitivity": 0.06
+    }
+  },
+  {
+    "timestamp": "2026-03-26T03:01:31.551948Z",
+    "market_id": "106614",
+    "question": "Hungary Parliamentary Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 34.8,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T02:31:30.077805Z",
     "market_id": "291733",
     "question": "Elon Musk # tweets March 24 - March 31, 2026?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 46.2,
       "macro_sensitivity": 0.4
-    }
-  },
-  {
-    "timestamp": "2026-03-25T13:01:51.865819Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 28.5,
-      "macro_sensitivity": 0.19
-    }
-  },
-  {
-    "timestamp": "2026-03-25T13:01:51.865819Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 73.4,
-      "macro_sensitivity": 0.0
     }
   }
 ]

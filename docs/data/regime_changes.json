@@ -1,5 +1,49 @@
 [
   {
+    "timestamp": "2026-03-26T01:31:31.021851Z",
+    "market_id": "31889",
+    "question": "Texas Republican Senate Primary Winner",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 66.9,
+      "macro_sensitivity": 0.27
+    }
+  },
+  {
+    "timestamp": "2026-03-26T01:31:31.021851Z",
+    "market_id": "236992",
+    "question": "Trump announces end of military operations against Iran by ...?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 52.0,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
+    "timestamp": "2026-03-26T01:31:31.021851Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 69.4,
+      "macro_sensitivity": 0.04
+    }
+  },
+  {
+    "timestamp": "2026-03-26T01:31:31.021851Z",
+    "market_id": "211821",
+    "question": "Will France, UK, or Germany strike Iran by March 31?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.3,
+      "macro_sensitivity": 0.12
+    }
+  },
+  {
     "timestamp": "2026-03-26T01:01:27.342807Z",
     "market_id": "106614",
     "question": "Hungary Parliamentary Election Winner",
@@ -503,50 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 74.9,
       "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-25T12:31:52.142359Z",
-    "market_id": "45018",
-    "question": "Maine Democratic Senate Primary Winner",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 86.9,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-25T12:01:48.959633Z",
-    "market_id": "184873",
-    "question": "Elon Musk musk # tweets in March 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.4,
-      "macro_sensitivity": 0.04
-    }
-  },
-  {
-    "timestamp": "2026-03-25T11:01:50.003365Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 60.7,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T11:01:50.003365Z",
-    "market_id": "238474",
-    "question": "What price will Bitcoin hit in March?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 38.1,
-      "macro_sensitivity": 0.0
     }
   }
 ]

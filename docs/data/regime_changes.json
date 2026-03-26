@@ -1,5 +1,38 @@
 [
   {
+    "timestamp": "2026-03-26T00:01:51.534968Z",
+    "market_id": "291733",
+    "question": "Elon Musk # tweets March 24 - March 31, 2026?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 45.1,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-26T00:01:51.534968Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 82.4,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-26T00:01:51.534968Z",
+    "market_id": "30828",
+    "question": "Xi Jinping out before 2027?",
+    "from_regime": "Macro-Driven",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 85.2,
+      "macro_sensitivity": 0.07
+    }
+  },
+  {
     "timestamp": "2026-03-25T23:01:50.491530Z",
     "market_id": "255195",
     "question": "Iran leadership change by...?",
@@ -514,39 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 63.0,
       "macro_sensitivity": 0.15
-    }
-  },
-  {
-    "timestamp": "2026-03-25T10:01:46.236497Z",
-    "market_id": "139182",
-    "question": "2026 Women's Wimbledon Winner",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 63.3,
-      "macro_sensitivity": 0.38
-    }
-  },
-  {
-    "timestamp": "2026-03-25T09:31:49.260836Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 51.0,
-      "macro_sensitivity": 0.02
-    }
-  },
-  {
-    "timestamp": "2026-03-25T09:01:45.432394Z",
-    "market_id": "79926",
-    "question": "How many different countries will Israel strike in 2026?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 69.1,
-      "macro_sensitivity": 0.03
     }
   }
 ]

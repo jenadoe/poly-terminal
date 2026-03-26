@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-26T08:31:30.231074Z",
+    "market_id": "238099",
+    "question": "Will another country strike Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 47.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-26T08:31:30.231074Z",
+    "market_id": "27830",
+    "question": "2026 NBA Champion",
+    "from_regime": "Active",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 40.6,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T08:01:29.574092Z",
     "market_id": "101772",
     "question": "Fed Decision in June?",
@@ -524,28 +546,6 @@
     "to_regime": "Converged",
     "metrics_snapshot": {
       "nexus_score": 80.1,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T14:31:57.317091Z",
-    "market_id": "236992",
-    "question": "Trump announces end of military operations against Iran by ...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 50.6,
-      "macro_sensitivity": 0.23
-    }
-  },
-  {
-    "timestamp": "2026-03-25T14:31:57.317091Z",
-    "market_id": "236840",
-    "question": "US x Iran ceasefire by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 30.6,
       "macro_sensitivity": 0.0
     }
   }

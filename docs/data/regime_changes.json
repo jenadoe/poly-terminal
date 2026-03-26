@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-26T02:01:31.077271Z",
+    "market_id": "106520",
+    "question": "Peru Presidential Election Winner",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 62.5,
+      "macro_sensitivity": 0.19
+    }
+  },
+  {
     "timestamp": "2026-03-26T01:31:31.021851Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 79.2,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T12:31:52.142359Z",
-    "market_id": "246219",
-    "question": "Who will be confirmed as Fed Chair?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Active",
-    "metrics_snapshot": {
-      "nexus_score": 74.9,
-      "macro_sensitivity": 0.04
     }
   }
 ]

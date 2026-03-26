@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-26T11:31:43.039878Z",
+    "market_id": "159954",
+    "question": "What will the Fed rate be at the end of 2026?",
+    "from_regime": "Active",
+    "to_regime": "Converged",
+    "metrics_snapshot": {
+      "nexus_score": 83.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-26T11:31:43.039878Z",
+    "market_id": "238474",
+    "question": "What price will Bitcoin hit in March?",
+    "from_regime": "Low Confidence",
+    "to_regime": "Active",
+    "metrics_snapshot": {
+      "nexus_score": 61.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T11:02:28.001240Z",
     "market_id": "255195",
     "question": "Iran leadership change by...?",
@@ -525,28 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 45.0,
       "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T17:02:04.708333Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 47.0,
-      "macro_sensitivity": 0.17
-    }
-  },
-  {
-    "timestamp": "2026-03-25T16:31:57.792915Z",
-    "market_id": "236943",
-    "question": "Iran military action against ___ by March 31?",
-    "from_regime": "Active",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 47.9,
-      "macro_sensitivity": 0.15
     }
   }
 ]

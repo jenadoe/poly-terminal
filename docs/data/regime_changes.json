@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-26T02:31:30.077805Z",
+    "market_id": "291733",
+    "question": "Elon Musk # tweets March 24 - March 31, 2026?",
+    "from_regime": "Volatile",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 49.3,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T02:01:31.077271Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -535,17 +546,6 @@
     "to_regime": "Active",
     "metrics_snapshot": {
       "nexus_score": 73.4,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T13:01:51.865819Z",
-    "market_id": "33699",
-    "question": "French Ligue 1 Winner ",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 79.2,
       "macro_sensitivity": 0.0
     }
   }

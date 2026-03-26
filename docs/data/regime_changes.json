@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-26T05:01:27.493603Z",
+    "market_id": "246219",
+    "question": "Who will be confirmed as Fed Chair?",
+    "from_regime": "Active",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.31
+    }
+  },
+  {
     "timestamp": "2026-03-26T04:01:29.297067Z",
     "market_id": "106520",
     "question": "Peru Presidential Election Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 57.7,
       "macro_sensitivity": 0.2
-    }
-  },
-  {
-    "timestamp": "2026-03-25T13:31:42.324061Z",
-    "market_id": "259755",
-    "question": "US escorts commercial ship through Hormuz by...?",
-    "from_regime": "Macro-Driven",
-    "to_regime": "Low Confidence",
-    "metrics_snapshot": {
-      "nexus_score": 59.9,
-      "macro_sensitivity": 0.09
     }
   }
 ]

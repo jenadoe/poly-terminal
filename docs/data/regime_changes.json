@@ -1,5 +1,16 @@
 [
   {
+    "timestamp": "2026-03-26T03:31:30.225287Z",
+    "market_id": "32228",
+    "question": "Balance of Power: 2026 Midterms",
+    "from_regime": "Converged",
+    "to_regime": "Macro-Driven",
+    "metrics_snapshot": {
+      "nexus_score": 70.0,
+      "macro_sensitivity": 0.2
+    }
+  },
+  {
     "timestamp": "2026-03-26T03:01:31.551948Z",
     "market_id": "31889",
     "question": "Texas Republican Senate Primary Winner",
@@ -536,17 +547,6 @@
     "metrics_snapshot": {
       "nexus_score": 75.1,
       "macro_sensitivity": 0.06
-    }
-  },
-  {
-    "timestamp": "2026-03-25T13:01:51.865819Z",
-    "market_id": "238099",
-    "question": "Will another country strike Iran by...?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Macro-Driven",
-    "metrics_snapshot": {
-      "nexus_score": 46.2,
-      "macro_sensitivity": 0.4
     }
   }
 ]

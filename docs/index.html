@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="poly-nexus-worker-url" content="https://poly-terminal.bokjujuju.workers.dev">
     <title>POLY-NEXUS // Market Integrity Oracle</title>
     <meta name="description" content="Real-time structural integrity scoring for Polymarket prediction markets.">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -68,7 +69,7 @@
         </div>
         <div class="panel-stats">
             <div class="pstat">
-                <div class="pstat-num" id="hero-active">149</div>
+                <div class="pstat-num" id="hero-active">--</div>
                 <div class="pstat-label">Markets tracked</div>
             </div>
             <div class="pstat">
@@ -76,7 +77,7 @@
                 <div class="pstat-label">Data points</div>
             </div>
             <div class="pstat">
-                <div class="pstat-num amber" id="hero-converged">29</div>
+                <div class="pstat-num amber" id="hero-converged">--</div>
                 <div class="pstat-label">Integrity locked</div>
             </div>
             <div class="pstat">
@@ -85,7 +86,7 @@
             </div>
         </div>
         <div class="panel-foot">
-            <div>Sample dashboard - live market state feed</div>
+            <div>Live dashboard - worker-fed market state</div>
             <div>Structural scoring - not outcome prediction</div>
         </div>
     </div>
@@ -125,7 +126,7 @@
     <div class="matrix-header">
         <div class="matrix-title">Integrity State Matrix - Showing top markets by structural state</div>
         <div class="matrix-access">
-            <strong id="shown-count">9</strong> / <strong id="total-tracked">149</strong> markets shown
+            <strong id="shown-count">9</strong> / <strong id="total-tracked">--</strong> markets shown
         </div>
     </div>
 
@@ -141,7 +142,7 @@
         </div>
         <div class="locked-overlay">
             <div class="locked-label">
-                <strong id="locked-count">137</strong> more markets tracked
+                <strong id="locked-count">--</strong> more markets tracked
             </div>
             <div class="locked-sub">More visibility coming as the data deepens</div>
         </div>
@@ -295,3 +296,5 @@
 
 </body>
 </html>
+
+

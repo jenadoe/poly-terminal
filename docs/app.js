@@ -5,7 +5,8 @@
 
 /* CONFIG */
 const _cfg = window.POLY_NEXUS_CONFIG || {};
-const WORKER_URL = (_cfg.workerUrl || _cfg.apiBaseUrl || '').replace(/\/$/, '');
+const WORKER_META = document.querySelector('meta[name="poly-nexus-worker-url"]')?.content?.trim() || '';
+const WORKER_URL = (_cfg.workerUrl || _cfg.apiBaseUrl || WORKER_META || '').replace(/\/$/, '');
 const DASHBOARD_ENDPOINT = _cfg.dashboardEndpoint || (WORKER_URL ? `${WORKER_URL}/dashboard` : '');
 const MARKET_DETAIL_ENDPOINT = _cfg.marketDetailEndpoint || (WORKER_URL ? `${WORKER_URL}/market` : '');
 let DASHBOARD_CACHE = null;
@@ -183,8 +184,8 @@ function renderKPIs(k) {
     animCount(eid('kpi-converged'),  k.converged_count   || 0);
     animCount(eid('kpi-calibrating'),k.calibrating_count || 0);
     animCount(eid('kpi-fragile'),    k.fragile_count     || 0);
-    animCount(eid('hero-active'),    k.total_markets     || 149);
-    animCount(eid('hero-converged'), k.converged_count   || 29);
+    animCount(eid('hero-active'),    k.total_markets     || 0);
+    animCount(eid('hero-converged'), k.converged_count   || 0);
 
     const tot = k.total_markets || 1;
     const cv  = k.converged_count || 0;
@@ -500,3 +501,5 @@ async function init() {
 
 init();
 setInterval(init, 5 * 60 * 1000);
+
+

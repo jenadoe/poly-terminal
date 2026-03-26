@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-03-26T09:31:33.347435Z",
+    "market_id": "160366",
+    "question": "Will the US officially declare war on Iran by...?",
+    "from_regime": "Active",
+    "to_regime": "Volatile",
+    "metrics_snapshot": {
+      "nexus_score": 50.7,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-03-26T09:31:33.347435Z",
+    "market_id": "45915",
+    "question": "Brazil Presidential Election",
+    "from_regime": "Converged",
+    "to_regime": "Low Confidence",
+    "metrics_snapshot": {
+      "nexus_score": 59.0,
+      "macro_sensitivity": 0.0
+    }
+  },
+  {
     "timestamp": "2026-03-26T08:31:30.231074Z",
     "market_id": "238099",
     "question": "Will another country strike Iran by...?",
@@ -524,28 +546,6 @@
     "to_regime": "Low Confidence",
     "metrics_snapshot": {
       "nexus_score": 34.0,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T14:31:57.317091Z",
-    "market_id": "291733",
-    "question": "Elon Musk # tweets March 24 - March 31, 2026?",
-    "from_regime": "Low Confidence",
-    "to_regime": "Volatile",
-    "metrics_snapshot": {
-      "nexus_score": 44.6,
-      "macro_sensitivity": 0.0
-    }
-  },
-  {
-    "timestamp": "2026-03-25T14:31:57.317091Z",
-    "market_id": "139182",
-    "question": "2026 Women's Wimbledon Winner",
-    "from_regime": "Active",
-    "to_regime": "Converged",
-    "metrics_snapshot": {
-      "nexus_score": 80.1,
       "macro_sensitivity": 0.0
     }
   }

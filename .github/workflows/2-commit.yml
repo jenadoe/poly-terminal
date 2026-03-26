@@ -40,7 +40,7 @@ jobs:
           cd private-brain
           mkdir -p data_output/api/v1/events
           mkdir -p data_output/audit_logs
-          echo "Copying data assets..."
+          echo "Copying private data assets..."
           if [ -f ../temp_data/active_events.json ]; then
             cp -f ../temp_data/active_events.json data_output/
           fi

@@ -1,9 +1,9 @@
 /* ============================================================
-   POLY-NEXUS ??app.js
-   State Matrix · Amber/Slate · Terminal UI
+   POLY-NEXUS ? app.js
+   State Matrix ? Amber/Slate ? Terminal UI
    ============================================================ */
 
-/* ?�?� CONFIG ?�?� */
+/* ?? CONFIG ?? */
 const _cfg = window.POLY_NEXUS_CONFIG || {};
 const WORKER_URL = (_cfg.workerUrl || _cfg.apiBaseUrl || '').replace(/\/$/, '');
 const DASHBOARD_ENDPOINT = _cfg.dashboardEndpoint || (WORKER_URL ? `${WORKER_URL}/dashboard` : '');
@@ -12,33 +12,33 @@ let DASHBOARD_CACHE = null;
 const MARKET_DETAIL_CACHE = new Map();
 let ACTIVE_PANEL_EVENT_ID = null;
 
-/* ?�?� STATE CONFIG ?�?� */
+/* ?? STATE CONFIG ?? */
 const SC = {
     Converged:   { col: 'ch-converged',   row: 'r-converged',   badge: 'ssb-c', label: 'Converged',   desc: 'Structural consensus locked' },
     Calibrating: { col: 'ch-calibrating', row: 'r-calibrating', badge: 'ssb-a', label: 'Calibrating', desc: 'Price discovery in progress' },
     Fragile:     { col: 'ch-fragile',     row: 'r-fragile',     badge: 'ssb-f', label: 'Fragile',     desc: 'Structural weakness detected' },
 };
 
-/* ?�?� MOCK DATA ?�?� */
+/* ?? MOCK DATA ?? */
 const MOCK_MARKETS = [
     { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland', stable_hours:51,
       outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false},{name:'Greece',price:0.0715,is_tracked:false},{name:'Australia',price:0.051,is_tracked:false}]},
     { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, time_to_close_days:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh', stable_hours:362,
       outcomes:[{name:'Chong Won-oh',price:0.805,is_tracked:true},{name:'Oh Se-hoon',price:0.125,is_tracked:false},{name:'Park Ju-min',price:0.066,is_tracked:false},{name:'Jeon Hyun-heui',price:0.002,is_tracked:false}]},
-    { event_id:'3', title:'Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula da Silva', stable_hours:51,
+    { event_id:'3', title:'Will Luiz In?cio Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula da Silva', stable_hours:51,
       outcomes:[{name:'Lula da Silva',price:0.415,is_tracked:true},{name:'Bolsonaro',price:0.21,is_tracked:false},{name:'Other',price:0.12,is_tracked:false}]},
     { event_id:'4', title:'Will the US confirm that aliens exist before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, time_to_close_days:null, market_slug:'aliens-2027', top_outcome_name:null, stable_hours:null, outcomes:[] },
     { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?', category:'Elections', display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, time_to_close_days:null, market_slug:'france-bardella', top_outcome_name:'Jordan Bardella', stable_hours:null,
       outcomes:[{name:'Jordan Bardella',price:0.255,is_tracked:true},{name:'Marine Le Pen',price:0.18,is_tracked:false},{name:'Emmanuel Macron',price:0.12,is_tracked:false}]},
     { event_id:'6', title:'Will Jesus Christ return before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, time_to_close_days:null, market_slug:'jesus-return', top_outcome_name:null, stable_hours:null, outcomes:[] },
-    { event_id:'7', title:'Will Bayern Munich win the 2025??6 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, time_to_close_days:null, market_slug:'bundesliga-2026', top_outcome_name:'Bayern Munich', stable_hours:null,
+    { event_id:'7', title:'Will Bayern Munich win the 2025?26 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, time_to_close_days:null, market_slug:'bundesliga-2026', top_outcome_name:'Bayern Munich', stable_hours:null,
       outcomes:[{name:'Bayern Munich',price:0.986,is_tracked:true},{name:'Other',price:0.008,is_tracked:false}]},
     { event_id:'8', title:'Will the US officially declare war on Iran by December 31, 2026?', category:'World', display_state:'Fragile', nexus_score:58.9, flags:[], current_price:0.085, volume:3625028, time_to_close_days:null, market_slug:'iran-war-2026', top_outcome_name:null, stable_hours:null, outcomes:[] },
     { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, time_to_close_days:null, market_slug:'kharg-island', top_outcome_name:null, stable_hours:null, outcomes:[] },
 ];
 const MOCK_KPIS = { total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34, contested_count:8, correlated_count:12 };
 
-/* ?�?� UTILS ?�?� */
+/* ?? UTILS ?? */
 function fmtVol(n) {
     if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
     if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
@@ -52,7 +52,6 @@ function fmtStableHours(h) {
     const rem  = Math.round(h % 24);
     return rem > 0 ? `${days}d ${rem}h` : `${days}d`;
 }
-
 function fmtOutcomePct(p) {
     if (p == null || p === 0) return '<1%';
     const pct = p * 100;
@@ -62,11 +61,11 @@ function fmtOutcomePct(p) {
     return pct.toFixed(1) + '%';
 }
 function fmtCents(p) {
-    if (p == null) return '??;
+    if (p == null) return '?';
     const c = Math.round(p * 100);
-    if (c >= 99) return '>99¢';
-    if (c < 1)   return '<1¢';
-    return c + '¢';
+    if (c >= 99) return '>99?';
+    if (c < 1)   return '<1?';
+    return c + '?';
 }
 function animCount(el, target, ms) {
     if (!el) return;
@@ -84,7 +83,7 @@ function getFlags(d) { return Array.isArray(d.flags) ? d.flags : []; }
 function eid(id) { return document.getElementById(id); }
 function mapState(raw) {
     if (raw === 'Converged') return 'Converged';
-    if (raw === 'Low Confidence') return 'Fragile';
+    if (raw === 'Fragile' || raw === 'Low Confidence') return 'Fragile';
     return 'Calibrating';
 }
 function mapRemoteMarket(m) {
@@ -92,7 +91,7 @@ function mapRemoteMarket(m) {
         ? m.sparkline.map(pt => pt && typeof pt.p === 'number' ? pt.p : null).filter(v => v != null)
         : [];
     return {
-        event_id: String(m.id || ''),
+        event_id: String(m.id || m.event_id || ''),
         title: m.question || m.title || 'Untitled market',
         category: m.category || 'Uncategorized',
         display_state: mapState(m.market_state || m.display_state),
@@ -100,7 +99,7 @@ function mapRemoteMarket(m) {
         flags: Array.isArray(m.flags) ? m.flags : [],
         current_price: typeof m.current_price === 'number' ? m.current_price : null,
         volume: typeof m.volume === 'number' ? m.volume : 0,
-        time_to_close_days: m.time_to_close_days ?? null,
+        time_to_close_days: typeof m.time_to_close_days === 'number' ? m.time_to_close_days : null,
         market_slug: m.slug || m.market_slug || '',
         top_outcome_name: m.top_outcome_name || null,
         stable_hours: typeof m.stable_hours === 'number' ? m.stable_hours : null,
@@ -138,7 +137,6 @@ function deriveKPIs(markets) {
         correlated_count: markets.filter(m => getFlags(m).includes('Correlated')).length,
     };
 }
-
 async function loadMarketDetail(eventId) {
     const key = String(eventId || '').trim();
     if (!key || !MARKET_DETAIL_ENDPOINT) return null;
@@ -150,71 +148,8 @@ async function loadMarketDetail(eventId) {
     MARKET_DETAIL_CACHE.set(key, market);
     return market;
 }
-function renderPanelOutcomes(outcomes) {
-    const outWrap = eid('sp-outcomes');
-    const outSection = eid('sp-outcomes-section');
-    if (!outWrap || !outSection) return;
-    if (!Array.isArray(outcomes) || outcomes.length === 0) {
-        outSection.style.display = 'none';
-        outWrap.innerHTML = '';
-        return;
-    }
-    outSection.style.display = 'block';
-    const sorted = [...outcomes].sort((a, b) => (b.price || 0) - (a.price || 0));
-    const LIMIT = 10;
-    let expanded = false;
-    function renderOutcomes(all) {
-        const visible = expanded ? all : all.slice(0, LIMIT);
-        const remaining = all.length - LIMIT;
-        outWrap.innerHTML = visible.map(o => {
-            const pct = fmtOutcomePct(o.price);
-            const barW = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
-            const isTracked = o.is_tracked === true;
-            return `
-                <div class="sp-outcome-row ${isTracked ? 'sp-outcome-tracked' : ''}">
-                    <div class="sp-outcome-name">
-                        ${isTracked ? '<span class="sp-tracked-dot"></span>' : ''}
-                        ${o.name || 'Unknown'}
-                        ${isTracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
-                    </div>
-                    <div class="sp-outcome-bar-wrap">
-                        <div class="sp-outcome-bar-bg">
-                            <div class="sp-outcome-bar-fill ${isTracked ? 'bar-tracked' : 'bar-other'}" style="width:${barW}%"></div>
-                        </div>
-                    </div>
-                    <div class="sp-outcome-pct ${isTracked ? 'pct-tracked' : ''}">${pct}</div>
-                </div>
-            `;
-        }).join('');
-        if (all.length > LIMIT) {
-            const toggle = document.createElement('div');
-            toggle.className = 'outcomes-toggle';
-            toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
-            toggle.addEventListener('click', () => {
-                expanded = !expanded;
-                renderOutcomes(all);
-            });
-            outWrap.appendChild(toggle);
-        }
-    }
-    renderOutcomes(sorted);
-}
-function renderPanelSparkline(m) {
-    const sp = eid('sp-canvas');
-    const tr = eid('sp-trend-range');
-    if (sp) {
-        sp.width = sp.offsetWidth || 380;
-        sp.getContext('2d').clearRect(0, 0, sp.width, sp.height);
-    }
-    if (Array.isArray(m.sparkline) && m.sparkline.length >= 2) {
-        if (tr) tr.textContent = `${m.sparkline.length} points`;
-        if (sp) drawSparkline(sp, m.sparkline);
-    } else if (tr) {
-        tr.textContent = 'sample only';
-    }
-}
 
-/* ?�?� CLOCK ?�?� */
+/* ?? CLOCK ?? */
 function tickClock() {
     const d = new Date();
     const timeStr = d.toLocaleTimeString('en-GB', {
@@ -231,7 +166,7 @@ function tickClock() {
 setInterval(tickClock, 1000);
 tickClock();
 
-/* ?�?� PILLAR WIDTHS (simulated, proportional to score) ?�?� */
+/* ?? PILLAR WIDTHS (simulated, proportional to score) ?? */
 function pillarWidths(score) {
     const base = score / 100;
     return [
@@ -242,7 +177,7 @@ function pillarWidths(score) {
     ].map(v => Math.max(10, Math.min(v, 98)));
 }
 
-/* ?�?� RENDER KPIs ?�?� */
+/* ?? RENDER KPIs ?? */
 function renderKPIs(k) {
     animCount(eid('kpi-total'),      k.total_markets     || 0);
     animCount(eid('kpi-converged'),  k.converged_count   || 0);
@@ -259,8 +194,8 @@ function renderKPIs(k) {
     const interp = eid('health-interp');
     if (interp) {
         interp.innerHTML =
-            `<strong>${Math.round(cv/tot*100)}%</strong> of markets show structural lock · ` +
-            `<strong>${ca}</strong> in price discovery · ` +
+            `<strong>${Math.round(cv/tot*100)}%</strong> of markets show structural lock ? ` +
+            `<strong>${ca}</strong> in price discovery ? ` +
             `<strong>${fr}</strong> below reliability threshold`;
     }
 
@@ -281,14 +216,13 @@ function renderKPIs(k) {
     if (tt) tt.textContent = tot;
 }
 
-/* ?�?� BUILD MARKET ROW ?�?� */
+/* ?? BUILD MARKET ROW ?? */
 function buildRow(m) {
     const state = m.display_state || 'Fragile';
     const cfg   = SC[state] || SC.Fragile;
     const score = parseFloat(m.nexus_score) || 0;
     const flags = getFlags(m);
     const pw    = pillarWidths(score);
-    const outName = m.top_outcome_name;
 
     const row = document.createElement('div');
     row.className = `mkt-row ${cfg.row}`;
@@ -299,7 +233,7 @@ function buildRow(m) {
     }).join('');
 
     const stableLabel = (state === 'Converged' && m.stable_hours)
-        ? `<span class="stable-badge">??STABLE ${fmtStableHours(m.stable_hours)}</span>`
+        ? `<span class="stable-badge">? STABLE ${fmtStableHours(m.stable_hours)}</span>`
         : '';
 
     row.innerHTML = `
@@ -307,7 +241,7 @@ function buildRow(m) {
             <div class="mkt-top">
                 <div style="min-width:0;flex:1;">
                     <div class="mkt-category">${m.category || ''}</div>
-                    <div class="mkt-title">${m.title || '??}</div>
+                    <div class="mkt-title">${m.title || '?'}</div>
                 </div>
                 <div class="nxs-block">
                     <span class="nxs-label">NXS</span>
@@ -335,7 +269,7 @@ function buildRow(m) {
     return row;
 }
 
-/* ?�?� RENDER MARKETS ?�?� */
+/* ?? RENDER MARKETS ?? */
 function renderMarkets(markets) {
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
@@ -347,7 +281,6 @@ function renderMarkets(markets) {
         const group = markets.filter(m => m.display_state === state);
         const cfg = SC[state];
 
-        // Column header
         const head = document.createElement('div');
         head.className = `col-head ${cfg.col}`;
         head.innerHTML = `
@@ -357,7 +290,6 @@ function renderMarkets(markets) {
         `;
         col.appendChild(head);
 
-        // Market rows ??empty state placeholder if none
         if (group.length === 0) {
             const empty = document.createElement('div');
             empty.className = 'col-empty';
@@ -370,7 +302,6 @@ function renderMarkets(markets) {
 
     renderLockedRows();
 }
-
 function renderLockedRows() {
     const wrap = eid('locked-rows-inner');
     if (!wrap) return;
@@ -382,23 +313,23 @@ function renderLockedRows() {
     }
 }
 
-/* ?�?� CONTEXT ?�?� */
+/* ?? CONTEXT ?? */
 function buildContext(m) {
     const s = m.display_state, score = parseFloat(m.nexus_score) || 0, vol = m.volume || 0;
     if (s === 'Converged')
-        return `NXS <strong>${score.toFixed(1)}</strong> ??structural consensus verified. ` +
+        return `NXS <strong>${score.toFixed(1)}</strong> ? structural consensus verified. ` +
                (vol > 10e6 ? `Deep market ($${(vol/1e6).toFixed(0)}M) supports reliable signal.` : `Price reflects genuine crowd consensus.`);
     if (s === 'Calibrating') {
         const gap = (80 - score).toFixed(1);
-        return `NXS <strong>${score.toFixed(1)}</strong> ??price discovery in progress. ` +
+        return `NXS <strong>${score.toFixed(1)}</strong> ? price discovery in progress. ` +
                (parseFloat(gap) < 10 ? `${gap} pts from Converged threshold.` : `Consensus has not yet stabilized.`);
     }
-    return `NXS <strong>${score.toFixed(1)}</strong> ??structural weakness detected. ` +
+    return `NXS <strong>${score.toFixed(1)}</strong> ? structural weakness detected. ` +
            (vol < 100000 ? `Very thin liquidity.` : `Depth or efficiency below threshold.`) +
            ` Treat price signal with caution.`;
 }
 
-/* ?�?� SPARKLINE ?�?� */
+/* ?? SPARKLINE ?? */
 function drawSparkline(canvas, vals) {
     if (!canvas || !vals || vals.length < 2) return;
     const ctx = canvas.getContext('2d');
@@ -416,8 +347,70 @@ function drawSparkline(canvas, vals) {
     });
     ctx.stroke();
 }
+function renderPanelOutcomes(outcomes) {
+    const outWrap = eid('sp-outcomes');
+    const outSection = eid('sp-outcomes-section');
+    if (!outWrap || !outSection) return;
+    if (!Array.isArray(outcomes) || outcomes.length === 0) {
+        outSection.style.display = 'none';
+        outWrap.innerHTML = '';
+        return;
+    }
+    outSection.style.display = 'block';
+    const sorted = [...outcomes].sort((a, b) => (b.price || 0) - (a.price || 0));
+    const LIMIT = 10;
+    let expanded = false;
+    function renderOutcomes(all) {
+        const visible = expanded ? all : all.slice(0, LIMIT);
+        const remaining = all.length - LIMIT;
+        outWrap.innerHTML = visible.map(o => {
+            const pct = fmtOutcomePct(o.price);
+            const barW = Math.min(Math.max((o.price || 0) * 100, 0.5), 100).toFixed(1);
+            const isTracked = o.is_tracked === true;
+            return `
+                <div class="sp-outcome-row ${isTracked ? 'sp-outcome-tracked' : ''}">
+                    <div class="sp-outcome-name">
+                        ${isTracked ? '<span class="sp-tracked-dot"></span>' : ''}
+                        ${o.name || '?'}
+                        ${isTracked ? '<span class="sp-tracked-label">tracked</span>' : ''}
+                    </div>
+                    <div class="sp-outcome-bar-wrap">
+                        <div class="sp-outcome-bar-bg">
+                            <div class="sp-outcome-bar-fill ${isTracked ? 'bar-tracked' : 'bar-other'}" style="width:${barW}%"></div>
+                        </div>
+                    </div>
+                    <div class="sp-outcome-pct ${isTracked ? 'pct-tracked' : ''}">${pct}</div>
+                </div>
+            `;
+        }).join('');
+        if (all.length > LIMIT) {
+            const toggle = document.createElement('div');
+            toggle.className = 'outcomes-toggle';
+            toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
+            toggle.addEventListener('click', () => {
+                expanded = !expanded;
+                renderOutcomes(all);
+            });
+            outWrap.appendChild(toggle);
+        }
+    }
+    renderOutcomes(sorted);
+}
+function renderPanelSparkline(m) {
+    const sp = eid('sp-canvas'), tr = eid('sp-trend-range');
+    if (sp) {
+        sp.width = sp.offsetWidth || 380;
+        sp.getContext('2d').clearRect(0,0,sp.width,sp.height);
+    }
+    if (Array.isArray(m.sparkline) && m.sparkline.length >= 2) {
+        if (tr) tr.textContent = `${m.sparkline.length} points`;
+        if (sp) drawSparkline(sp, m.sparkline);
+    } else if (tr) {
+        tr.textContent = 'sample only';
+    }
+}
 
-/* ?�?� PANEL ?�?� */
+/* ?? PANEL ?? */
 async function openPanel(m) {
     ACTIVE_PANEL_EVENT_ID = String(m.event_id || '');
     const score = parseFloat(m.nexus_score) || 0;
@@ -429,7 +422,7 @@ async function openPanel(m) {
     eid('sp-score2').textContent = score.toFixed(1);
     eid('sp-price').textContent  = fmtCents(m.current_price);
     eid('sp-vol').textContent    = fmtVol(m.volume || 0);
-    eid('sp-close').textContent  = m.time_to_close_days != null ? m.time_to_close_days + 'd' : '--';
+    eid('sp-close').textContent  = m.time_to_close_days != null ? m.time_to_close_days + 'd' : '?';
 
     const badge = eid('sp-badge');
     badge.textContent = state;
@@ -437,7 +430,7 @@ async function openPanel(m) {
 
     const catEl = eid('sp-cat');
     if (catEl) catEl.textContent = m.category || '';
-    eid('sp-title').textContent = m.title || 'Untitled market';
+    eid('sp-title').textContent = m.title || '?';
 
     eid('sp-flags').innerHTML = flags.map(f =>
         `<span class="sp-flag ${f === 'Contested' ? 'spf-c' : 'spf-r'}">${f}</span>`
@@ -445,7 +438,6 @@ async function openPanel(m) {
 
     eid('sp-context').innerHTML = buildContext(m);
     renderPanelOutcomes(m.outcomes || []);
-
     const link = eid('sp-link');
     link.href = m.market_slug ? `https://polymarket.com/event/${m.market_slug}` : 'https://polymarket.com';
     renderPanelSparkline(m);
@@ -460,12 +452,12 @@ async function openPanel(m) {
         if (!detail || ACTIVE_PANEL_EVENT_ID !== String(detail.event_id || '')) return;
         const merged = { ...m, ...detail };
         eid('sp-score2').textContent = (parseFloat(merged.nexus_score) || 0).toFixed(1);
-        eid('sp-price').textContent = fmtCents(merged.current_price);
-        eid('sp-vol').textContent = fmtVol(merged.volume || 0);
-        eid('sp-close').textContent = merged.time_to_close_days != null ? merged.time_to_close_days + 'd' : '--';
+        eid('sp-price').textContent  = fmtCents(merged.current_price);
+        eid('sp-vol').textContent    = fmtVol(merged.volume || 0);
+        eid('sp-close').textContent  = merged.time_to_close_days != null ? merged.time_to_close_days + 'd' : '?';
         if (catEl) catEl.textContent = merged.category || '';
-        eid('sp-title').textContent = merged.title || 'Untitled market';
-        eid('sp-context').innerHTML = buildContext(merged);
+        eid('sp-title').textContent  = merged.title || '?';
+        eid('sp-context').innerHTML  = buildContext(merged);
         renderPanelOutcomes(merged.outcomes || []);
         link.href = merged.market_slug ? `https://polymarket.com/event/${merged.market_slug}` : 'https://polymarket.com';
         renderPanelSparkline(merged);
@@ -474,17 +466,15 @@ async function openPanel(m) {
         if (tr && (!Array.isArray(m.sparkline) || m.sparkline.length < 2)) tr.textContent = 'detail unavailable';
     }
 }
-
 function closePanel() {
     ACTIVE_PANEL_EVENT_ID = null;
-
     eid('overlay').classList.remove('open');
     eid('side-panel').classList.remove('open');
     document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
 
-/* ?�?� DATA ?�?� */
+/* ?? DATA ?? */
 async function loadKPIs() {
     try {
         const payload = await loadDashboardData();
@@ -501,7 +491,6 @@ async function loadMarkets() {
         return MOCK_MARKETS;
     }
 }
-
 async function init() {
     DASHBOARD_CACHE = null;
     const [kpis, markets] = await Promise.all([loadKPIs(), loadMarkets()]);

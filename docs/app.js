@@ -1,24 +1,17 @@
 /* ============================================================
    POLY-NEXUS — app.js
-   Worker API 엔드포인트: /api/markets, /api/kpis, /api/sparkline/:id
-   RPC 반환 필드 매핑 수정: nexus_score(string→float), stable_hours(string→float)
-   버그 수정: closes-in 실시간 계산, outcomes 표시, expand, sparkline
+   Worker API: /api/markets, /api/kpis, /api/sparkline/:id
    ============================================================ */
 
-/* ── WORKER API 베이스 URL ─────────────────────────────────────
-   index.html에서 window.POLY_NEXUS_API = 'https://...' 로 설정됨
-   config.js 의존 없음 */
 const API_BASE = (window.POLY_NEXUS_API || '').replace(/\/$/, '');
 const HAS_API  = !!API_BASE;
 
-/* ── 상태 설정 ── */
 const SC = {
     Converged:   { col: 'ch-converged',   row: 'r-converged',   badge: 'ssb-c', label: 'Converged',   desc: 'Structural consensus locked' },
     Calibrating: { col: 'ch-calibrating', row: 'r-calibrating', badge: 'ssb-a', label: 'Calibrating', desc: 'Price discovery in progress' },
     Fragile:     { col: 'ch-fragile',     row: 'r-fragile',     badge: 'ssb-f', label: 'Fragile',     desc: 'Structural weakness detected' },
 };
 
-/* ── MOCK (API 실패 시 폴백) ── */
 const MOCK_MARKETS = [
     { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, close_time:null, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland', stable_hours:51,
       outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false}]},
@@ -39,7 +32,10 @@ const MOCK_MARKETS = [
     { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, close_time:null, time_to_close_days:null, market_slug:'kharg-island',
       outcomes:[{name:'Yes',price:0.370,is_tracked:true},{name:'No',price:0.630,is_tracked:false}]},
 ];
-const MOCK_KPIS = { total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34, contested_count:8, correlated_count:12 };
+const MOCK_KPIS = {
+    total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34,
+    contested_count:8, correlated_count:12, data_points:0, judgments:0,
+};
 
 /* ── UTILS ── */
 function fmtVol(n) {
@@ -48,6 +44,13 @@ function fmtVol(n) {
     if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
     if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
     return '$' + Math.round(n);
+}
+
+function fmtNum(n) {
+    n = Number(n) || 0;
+    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return Math.round(n/1e3) + 'K';
+    return String(n);
 }
 
 function fmtStableHours(h) {
@@ -69,16 +72,15 @@ function fmtOutcomePct(p) {
     return pct.toFixed(1) + '%';
 }
 
+// [FIX] ¢ 기호 사용
 function fmtCents(p) {
     if (p == null) return '--';
     const c = Math.round(parseFloat(p) * 100);
-    if (c >= 99) return '>99c';
-    if (c < 1)   return '<1c';
-    return c + 'c';
+    if (c >= 99) return '>99\u00A2';
+    if (c < 1)   return '<1\u00A2';
+    return c + '\u00A2';
 }
 
-/* close_time(ISO timestamp) 기준 실시간 계산
-   없으면 time_to_close_days(정수) fallback */
 function calcClosesIn(closeTime, daysToClose) {
     if (closeTime) {
         const diff = new Date(closeTime) - Date.now();
@@ -97,6 +99,8 @@ function calcClosesIn(closeTime, daysToClose) {
 
 function animCount(el, target, ms) {
     if (!el) return;
+    // 숫자가 아닌 포맷(예: "51.2K")은 애니 없이 바로 표시
+    if (typeof target === 'string') { el.textContent = target; return; }
     ms = ms || 700;
     const s = performance.now();
     const run = now => {
@@ -111,25 +115,23 @@ function animCount(el, target, ms) {
 function getFlags(d) { return Array.isArray(d.flags) ? d.flags : []; }
 function eid(id) { return document.getElementById(id); }
 
-/* ── RPC 응답 정규화
-   get_public_markets()은 nexus_score, stable_hours를 numeric → JSON string으로 반환
-   여기서 전부 float로 강제 변환 */
+/* RPC 응답 정규화 — nexus_score, stable_hours는 numeric → JSON string으로 직렬화됨 */
 function normalizeMarket(m) {
     return {
-        event_id:         String(m.event_id || ''),
-        title:            m.title || '--',
-        category:         m.category || '',
-        display_state:    m.display_state || m.market_state || 'Calibrating',
-        nexus_score:      parseFloat(m.nexus_score) || 0,
-        flags:            Array.isArray(m.flags) ? m.flags : [],
-        current_price:    m.current_price != null ? parseFloat(m.current_price) : null,
-        volume:           Number(m.volume) || 0,
-        close_time:       m.close_time || null,
+        event_id:           String(m.event_id || ''),
+        title:              m.title || '--',
+        category:           m.category || '',
+        display_state:      m.display_state || m.market_state || 'Calibrating',
+        nexus_score:        parseFloat(m.nexus_score) || 0,
+        flags:              Array.isArray(m.flags) ? m.flags : [],
+        current_price:      m.current_price != null ? parseFloat(m.current_price) : null,
+        volume:             Number(m.volume) || 0,
+        close_time:         m.close_time || null,
         time_to_close_days: m.time_to_close_days != null ? parseFloat(m.time_to_close_days) : null,
-        market_slug:      m.market_slug || m.slug || '',
-        top_outcome_name: m.top_outcome_name || null,
-        stable_hours:     m.stable_hours != null ? parseFloat(m.stable_hours) : null,
-        outcomes:         Array.isArray(m.outcomes) ? m.outcomes : [],
+        market_slug:        m.market_slug || m.slug || '',
+        top_outcome_name:   m.top_outcome_name || null,
+        stable_hours:       m.stable_hours != null ? parseFloat(m.stable_hours) : null,
+        outcomes:           Array.isArray(m.outcomes) ? m.outcomes : [],
     };
 }
 
@@ -162,18 +164,28 @@ function pillarWidths(score) {
 
 /* ── RENDER KPIs ── */
 function renderKPIs(k) {
+    // Health bar
     animCount(eid('kpi-total'),       k.total_markets     || 0);
     animCount(eid('kpi-converged'),   k.converged_count   || 0);
     animCount(eid('kpi-calibrating'), k.calibrating_count || 0);
     animCount(eid('kpi-fragile'),     k.fragile_count     || 0);
-    animCount(eid('hero-active'),     k.total_markets     || 0);
-    animCount(eid('hero-converged'),  k.converged_count   || 0);
 
+    // Hero panel — live data
+    animCount(eid('hero-active'),     k.total_markets    || 0);
+    animCount(eid('hero-converged'),  k.converged_count  || 0);
+
+    // Hero panel — data_points, judgments (fmtNum으로 포맷)
+    const dpEl = eid('hero-datapoints');
+    if (dpEl) dpEl.textContent = k.data_points ? fmtNum(k.data_points) : '--';
+
+    const jEl = eid('hero-judgments');
+    if (jEl) jEl.textContent = k.judgments != null ? k.judgments : '--';
+
+    // 헬스 설명
     const tot = k.total_markets || 1;
     const cv  = k.converged_count || 0;
     const ca  = k.calibrating_count || 0;
     const fr  = k.fragile_count || 0;
-
     const interp = eid('health-interp');
     if (interp) {
         interp.innerHTML =
@@ -182,6 +194,7 @@ function renderKPIs(k) {
             `<strong>${fr}</strong> below reliability threshold`;
     }
 
+    // 업데이트 시간
     const lu = eid('last-update');
     if (lu) {
         const now = new Date();
@@ -194,9 +207,10 @@ function renderKPIs(k) {
         }) + ' ' + short;
     }
 
+    // locked count
     const lk = eid('locked-count'), tt = eid('total-tracked');
-    if (lk) lk.textContent = Math.max(0, tot - 9);
-    if (tt) tt.textContent = tot;
+    if (lk) lk.textContent = Math.max(0, (k.total_markets || 0) - 9);
+    if (tt) tt.textContent = k.total_markets || '--';
 }
 
 /* ── BUILD MARKET ROW ── */
@@ -334,13 +348,12 @@ function drawSparkline(canvas, vals) {
     ctx.stroke();
 }
 
-/* ── OUTCOMES 렌더링 ── */
+/* ── OUTCOMES ── */
 function renderOutcomesInPanel(outcomes, currentPrice) {
     const outWrap    = eid('sp-outcomes');
     const outSection = eid('sp-outcomes-section');
     if (!outWrap || !outSection) return;
 
-    // outcomes 있는 경우
     if (Array.isArray(outcomes) && outcomes.length > 0) {
         outSection.style.display = 'block';
         const sorted  = [...outcomes].sort((a, b) => (parseFloat(b.price) || 0) - (parseFloat(a.price) || 0));
@@ -352,7 +365,6 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
             const remaining = all.length - LIMIT;
             outWrap.innerHTML = visible.map(o => {
                 const price = parseFloat(o.price) || 0;
-                const pct   = fmtOutcomePct(price);
                 const barW  = Math.min(Math.max(price * 100, 0.5), 100).toFixed(1);
                 const isT   = o.is_tracked === true;
                 return `
@@ -366,7 +378,7 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
                             <div class="sp-outcome-bar-fill ${isT ? 'bar-tracked' : 'bar-other'}"
                                  style="width:${barW}%"></div>
                         </div>
-                        <div class="sp-outcome-pct ${isT ? 'pct-tracked' : ''}">${pct}</div>
+                        <div class="sp-outcome-pct ${isT ? 'pct-tracked' : ''}">${fmtOutcomePct(price)}</div>
                     </div>
                 `;
             }).join('');
@@ -375,10 +387,7 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
                 const toggle = document.createElement('div');
                 toggle.className = 'outcomes-toggle';
                 toggle.textContent = expanded ? 'show less' : `+${remaining} more`;
-                toggle.addEventListener('click', () => {
-                    expanded = !expanded;
-                    render(all);
-                });
+                toggle.addEventListener('click', () => { expanded = !expanded; render(all); });
                 outWrap.appendChild(toggle);
             }
         }
@@ -386,11 +395,11 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
         return;
     }
 
-    // outcomes 없지만 current_price 있으면 Yes/No 이진 폴백
+    // outcomes 없으면 current_price로 Yes/No 폴백
     if (currentPrice != null) {
         outSection.style.display = 'block';
         const yesP = parseFloat(currentPrice);
-        const noP  = 1 - yesP;
+        const noP  = Math.max(0, 1 - yesP);
         const yesW = Math.min(Math.max(yesP * 100, 0.5), 100).toFixed(1);
         const noW  = Math.min(Math.max(noP * 100, 0.5), 100).toFixed(1);
         outWrap.innerHTML = `
@@ -444,7 +453,6 @@ function openPanel(m) {
     ).join('');
 
     eid('sp-context').innerHTML = buildContext(m);
-
     renderOutcomesInPanel(m.outcomes, m.current_price);
 
     const link = eid('sp-link');
@@ -452,7 +460,7 @@ function openPanel(m) {
         ? `https://polymarket.com/event/${m.market_slug}`
         : 'https://polymarket.com';
 
-    // ── Sparkline ─────────────────────────────────────────────
+    // Sparkline
     const sp = eid('sp-canvas');
     const tr = eid('sp-trend-range');
     if (sp) {
@@ -465,15 +473,10 @@ function openPanel(m) {
         fetch(`${API_BASE}/api/sparkline/${encodeURIComponent(String(m.event_id))}`)
             .then(r => r.ok ? r.json() : [])
             .then(data => {
-                // Worker 반환: [{current_price, snapshot_at}, ...]
-                // 또는 [{t, p}, ...] 형식
                 const vals = Array.isArray(data)
                     ? data.map(row => parseFloat(row.current_price ?? row.p) || 0).filter(v => v > 0)
                     : [];
-                if (vals.length < 2) {
-                    if (tr) tr.textContent = 'insufficient history';
-                    return;
-                }
+                if (vals.length < 2) { if (tr) tr.textContent = 'insufficient history'; return; }
                 if (tr) tr.textContent = `${vals.length} snapshots`;
                 if (sp) drawSparkline(sp, vals);
             })
@@ -501,7 +504,8 @@ async function loadKPIs() {
         const res = await fetch(`${API_BASE}/api/kpis`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        return (data && typeof data === 'object' && !data.error) ? data : MOCK_KPIS;
+        if (!data || data.error) return MOCK_KPIS;
+        return data;
     } catch (e) {
         console.warn('[Poly-Nexus] KPIs fetch failed:', e.message);
         return MOCK_KPIS;
@@ -530,5 +534,4 @@ async function init() {
 }
 
 init();
-// 5분 폴링
 setInterval(init, 5 * 60 * 1000);

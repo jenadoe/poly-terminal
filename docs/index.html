@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="poly-nexus-worker-url" content="https://poly-terminal.bokjujuju.workers.dev">
     <title>POLY-NEXUS // Market Integrity Oracle</title>
     <meta name="description" content="Real-time structural integrity scoring for Polymarket prediction markets.">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!--
+        Worker URL — 비밀 아님. 공개 프록시 엔드포인트. 안전하게 커밋 가능.
+        Supabase URL/Key는 CF Worker Secrets에만 존재, 브라우저에 절대 미노출.
+    -->
+    <script>
+        window.POLY_NEXUS_API = 'https://poly-terminal.bokjujuju.workers.dev';
+    </script>
 </head>
 <body>
 
@@ -291,10 +298,8 @@
     </div>
 </footer>
 
-<script src="./data/config.js"></script>
+<!-- config.js 참조 완전 제거. Worker URL은 위 <script> 블록에서 설정. -->
 <script src="app.js"></script>
 
 </body>
 </html>
-
-

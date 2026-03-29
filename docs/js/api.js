@@ -19,13 +19,40 @@ function normalizeMarket(m) {
     };
 }
 
+function normalizeKPIs(k) {
+    const freshness =
+        k && k.freshness && typeof k.freshness === 'object'
+            ? {
+                status: k.freshness.status || 'unknown',
+                stale_since_minutes:
+                    k.freshness.stale_since_minutes != null
+                        ? Number(k.freshness.stale_since_minutes)
+                        : null,
+            }
+            : null;
+
+    return {
+        total_markets: Number(k.total_markets) || 0,
+        converged_count: Number(k.converged_count) || 0,
+        calibrating_count: Number(k.calibrating_count) || 0,
+        fragile_count: Number(k.fragile_count) || 0,
+        judgments_v6:
+            k.judgments_v6 != null
+                ? Number(k.judgments_v6)
+                : null,
+        as_of: k.as_of || k.pipeline_completed_at || null,
+        schema_version: k.schema_version || null,
+        freshness,
+    };
+}
+
 async function loadKPIs() {
     if (!HAS_API) throw new Error('Worker URL is not configured');
     const res = await fetch(`${API_BASE}/api/kpis`);
     if (!res.ok) throw new Error(`KPIs HTTP ${res.status}`);
     const data = await res.json();
     if (!data || data.error) throw new Error('KPIs payload invalid');
-    return data;
+    return normalizeKPIs(data);
 }
 
 async function loadMarkets() {

@@ -1,5 +1,38 @@
 /* MAIN */
 
+function formatAsOf(ts) {
+    if (!ts) return '--';
+    const d = new Date(ts);
+    if (Number.isNaN(d.getTime())) return '--';
+    const short = new Intl.DateTimeFormat('en', { timeZoneName: 'short' })
+        .formatToParts(d)
+        .find(p => p.type === 'timeZoneName')?.value || '';
+    return d.toLocaleString('en-GB', {
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+    }) + ' ' + short;
+}
+
+function renderFreshness(k) {
+    const el = eid('hero-freshness');
+    if (!el) return;
+
+    const status = k.freshness?.status;
+    if (status === 'stale') {
+        const mins = k.freshness?.stale_since_minutes;
+        el.textContent = mins != null ? `${mins}m` : 'STALE';
+        return;
+    }
+    if (status === 'fresh') {
+        el.textContent = 'LIVE';
+        return;
+    }
+    el.textContent = k.as_of ? formatAsOf(k.as_of) : '--';
+}
+
 function renderKPIs(k) {
     animCount(eid('kpi-total'), k.total_markets || 0);
     animCount(eid('kpi-converged'), k.converged_count || 0);
@@ -9,11 +42,10 @@ function renderKPIs(k) {
     animCount(eid('hero-active'), k.total_markets || 0);
     animCount(eid('hero-converged'), k.converged_count || 0);
 
-    const dpEl = eid('hero-datapoints');
-    if (dpEl) dpEl.textContent = k.data_points ? fmtNum(k.data_points) : '--';
-
     const jEl = eid('hero-judgments');
-    if (jEl) jEl.textContent = k.judgments != null ? k.judgments : '--';
+    if (jEl) jEl.textContent = k.judgments_v6 != null ? k.judgments_v6 : '--';
+
+    renderFreshness(k);
 
     const total = k.total_markets || 1;
     const converged = k.converged_count || 0;
@@ -28,19 +60,7 @@ function renderKPIs(k) {
     }
 
     const lu = eid('last-update');
-    if (lu) {
-        const now = new Date();
-        const short = new Intl.DateTimeFormat('en', { timeZoneName: 'short' })
-            .formatToParts(now)
-            .find(p => p.type === 'timeZoneName')?.value || '';
-        lu.textContent = now.toLocaleString('en-GB', {
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false,
-        }) + ' ' + short;
-    }
+    if (lu) lu.textContent = formatAsOf(k.as_of);
 
     const locked = eid('locked-count');
     const tracked = eid('total-tracked');
@@ -56,7 +76,7 @@ function renderKPIUnavailable(message) {
         'kpi-fragile',
         'hero-active',
         'hero-converged',
-        'hero-datapoints',
+        'hero-freshness',
         'hero-judgments',
         'last-update',
         'locked-count',

@@ -35,6 +35,11 @@ jobs:
           token: ${{ secrets.TOKEN1 }}
           path: private-brain
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
       - name: Push Assets to Private
         run: |
           cd private-brain
@@ -57,11 +62,20 @@ jobs:
           if [ -f ../temp_data/completed_ids.json ]; then
             cp -f ../temp_data/completed_ids.json data_output/
           fi
+          if [ -d case_studies/active ] && find case_studies/active -maxdepth 1 -name '*.md' | grep -q .; then
+            echo "Generating Builder Program evidence snapshots..."
+            python scripts/build_bp_evidence.py
+          else
+            echo "No active case studies found. Skipping BP evidence generation."
+          fi
           if [ -f data_output/active_markets.json ]; then rm data_output/active_markets.json; fi
           if [ -f data_output/history_storage.json ]; then rm data_output/history_storage.json; fi
           git config --global user.name "Poly-Nexus Bot"
           git config --global user.email "bot@polynexus.com"
           git add data_output/
+          if [ -d bp/evidence ]; then
+            git add bp/evidence/
+          fi
           if git diff --staged --quiet; then
             echo "No private changes."
           else

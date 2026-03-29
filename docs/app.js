@@ -1,10 +1,11 @@
 /* ============================================================
-   POLY-NEXUS — app.js
+   POLY-NEXUS app.js
    Worker API: /api/markets, /api/kpis, /api/sparkline/:id
    ============================================================ */
 
 const API_BASE = (window.POLY_NEXUS_API || '').replace(/\/$/, '');
 const HAS_API  = !!API_BASE;
+let sparklineRequestToken = 0;
 
 const SC = {
     Converged:   { col: 'ch-converged',   row: 'r-converged',   badge: 'ssb-c', label: 'Converged',   desc: 'Structural consensus locked' },
@@ -12,32 +13,7 @@ const SC = {
     Fragile:     { col: 'ch-fragile',     row: 'r-fragile',     badge: 'ssb-f', label: 'Fragile',     desc: 'Structural weakness detected' },
 };
 
-const MOCK_MARKETS = [
-    { event_id:'1', title:'Will Finland win Eurovision 2026?', category:'Culture', display_state:'Converged', nexus_score:92.6, flags:[], current_price:0.376, volume:28353653, close_time:null, time_to_close_days:null, market_slug:'eurovision-2026', top_outcome_name:'Finland', stable_hours:51,
-      outcomes:[{name:'Finland',price:0.376,is_tracked:true},{name:'Denmark',price:0.128,is_tracked:false},{name:'France',price:0.125,is_tracked:false}]},
-    { event_id:'2', title:'Will Chong Won-oh win the 2026 Seoul Mayoral Election?', category:'Politics', display_state:'Converged', nexus_score:92.5, flags:[], current_price:0.805, volume:6729339, close_time:null, time_to_close_days:null, market_slug:'seoul-election', top_outcome_name:'Chong Won-oh', stable_hours:362,
-      outcomes:[{name:'Chong Won-oh',price:0.805,is_tracked:true},{name:'Oh Se-hoon',price:0.125,is_tracked:false}]},
-    { event_id:'3', title:'Will Lula da Silva win the 2026 Brazilian presidential election?', category:'World', display_state:'Converged', nexus_score:91.1, flags:[], current_price:0.415, volume:28220794, close_time:null, time_to_close_days:null, market_slug:'brazil-election', top_outcome_name:'Lula', stable_hours:51,
-      outcomes:[{name:'Lula da Silva',price:0.415,is_tracked:true},{name:'Bolsonaro',price:0.21,is_tracked:false}]},
-    { event_id:'4', title:'Will the US confirm that aliens exist before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:94.8, flags:[], current_price:0.165, volume:19493974, close_time:null, time_to_close_days:null, market_slug:'aliens-2027',
-      outcomes:[{name:'Yes',price:0.165,is_tracked:true},{name:'No',price:0.835,is_tracked:false}]},
-    { event_id:'5', title:'Will Jordan Bardella win the 2027 French presidential election?', category:'Elections', display_state:'Calibrating', nexus_score:93.3, flags:[], current_price:0.255, volume:17283026, close_time:null, time_to_close_days:null, market_slug:'france-bardella',
-      outcomes:[{name:'Jordan Bardella',price:0.255,is_tracked:true},{name:'Marine Le Pen',price:0.18,is_tracked:false}]},
-    { event_id:'6', title:'Will Jesus Christ return before 2027?', category:'Culture', display_state:'Calibrating', nexus_score:93.1, flags:[], current_price:0.038, volume:48150520, close_time:null, time_to_close_days:null, market_slug:'jesus-return',
-      outcomes:[{name:'Yes',price:0.038,is_tracked:true},{name:'No',price:0.962,is_tracked:false}]},
-    { event_id:'7', title:'Will Bayern Munich win the 2025-26 Bundesliga?', category:'Sports', display_state:'Fragile', nexus_score:59.9, flags:[], current_price:0.986, volume:1438859, close_time:null, time_to_close_days:null, market_slug:'bundesliga-2026',
-      outcomes:[{name:'Bayern Munich',price:0.986,is_tracked:true},{name:'Bayer Leverkusen',price:0.008,is_tracked:false}]},
-    { event_id:'8', title:'Will the US officially declare war on Iran by Dec 31, 2026?', category:'World', display_state:'Fragile', nexus_score:58.9, flags:[], current_price:0.085, volume:3625028, close_time:null, time_to_close_days:null, market_slug:'iran-war-2026',
-      outcomes:[{name:'Yes',price:0.085,is_tracked:true},{name:'No',price:0.915,is_tracked:false}]},
-    { event_id:'9', title:'Kharg Island no longer under Iranian control by April 30?', category:'Politics', display_state:'Fragile', nexus_score:58.4, flags:[], current_price:0.370, volume:3755636, close_time:null, time_to_close_days:null, market_slug:'kharg-island',
-      outcomes:[{name:'Yes',price:0.370,is_tracked:true},{name:'No',price:0.630,is_tracked:false}]},
-];
-const MOCK_KPIS = {
-    total_markets:149, converged_count:29, calibrating_count:83, fragile_count:34,
-    contested_count:8, correlated_count:12, data_points:0, judgments:0,
-};
-
-/* ── UTILS ── */
+/* UTILS */
 function fmtVol(n) {
     n = Number(n) || 0;
     if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
@@ -72,7 +48,7 @@ function fmtOutcomePct(p) {
     return pct.toFixed(1) + '%';
 }
 
-// [FIX] ¢ 기호 사용
+// [FIX] Use the cents symbol consistently.
 function fmtCents(p) {
     if (p == null) return '--';
     const c = Math.round(parseFloat(p) * 100);
@@ -99,7 +75,8 @@ function calcClosesIn(closeTime, daysToClose) {
 
 function animCount(el, target, ms) {
     if (!el) return;
-    // 숫자가 아닌 포맷(예: "51.2K")은 애니 없이 바로 표시
+    // If the target is already formatted text (for example "51.2K"),
+    // render it directly instead of animating as a number.
     if (typeof target === 'string') { el.textContent = target; return; }
     ms = ms || 700;
     const s = performance.now();
@@ -115,7 +92,22 @@ function animCount(el, target, ms) {
 function getFlags(d) { return Array.isArray(d.flags) ? d.flags : []; }
 function eid(id) { return document.getElementById(id); }
 
-/* RPC 응답 정규화 — nexus_score, stable_hours는 numeric → JSON string으로 직렬화됨 */
+function setRuntimeStatus(kind, message) {
+    const banner = eid('runtime-banner');
+    const pill = eid('runtime-pill');
+    const msg = eid('runtime-message');
+    if (!banner || !pill || !msg) return;
+
+    banner.hidden = false;
+    banner.className = `runtime-banner rs-${kind}`;
+    pill.textContent =
+        kind === 'live' ? 'LIVE DATA'
+      : kind === 'loading' ? 'CONNECTING'
+      : 'LIVE DATA UNAVAILABLE';
+    msg.textContent = message;
+}
+
+/* Normalize RPC payloads. Numeric fields may arrive as strings. */
 function normalizeMarket(m) {
     return {
         event_id:           String(m.event_id || ''),
@@ -135,7 +127,7 @@ function normalizeMarket(m) {
     };
 }
 
-/* ── CLOCK ── */
+/* CLOCK */
 function tickClock() {
     const d = new Date();
     const timeStr = d.toLocaleTimeString('en-GB', {
@@ -151,18 +143,33 @@ function tickClock() {
 setInterval(tickClock, 1000);
 tickClock();
 
-/* ── PILLAR WIDTHS ── */
-function pillarWidths(score) {
-    const base = score / 100;
-    return [
-        Math.round(Math.min(base * 1.05 + Math.random() * 0.08, 1) * 100),
-        Math.round(Math.min(base * 0.98 + Math.random() * 0.06, 1) * 100),
-        Math.round(Math.min(base * 1.02 + Math.random() * 0.07, 1) * 100),
-        Math.round(Math.min(base * 0.95 + Math.random() * 0.09, 1) * 100),
-    ].map(v => Math.max(10, Math.min(v, 98)));
+/* PILLAR WIDTHS */
+function pillarWidths(market) {
+    // The public dashboard does not receive the true backend pillar sub-scores yet.
+    // Keep the 4-bar visual as a future premium-surface affordance, but drive it from
+    // real public fields instead of randomness so the card never invents movement.
+    const score = Number(market.nexus_score) || 0;
+    const volume = Number(market.volume) || 0;
+    const stableHours = Number(market.stable_hours) || 0;
+    const flags = getFlags(market);
+    const outcomes = Array.isArray(market.outcomes) ? market.outcomes : [];
+    const trackedPrice = market.current_price != null ? parseFloat(market.current_price) : null;
+
+    const capitalDepth = Math.max(12, Math.min(98, Math.round((Math.log10(Math.max(volume, 1)) / 8) * 100)));
+    const marketEfficiency = Math.max(12, Math.min(98, Math.round(score)));
+    const independencePenalty = (flags.includes('Correlated') ? 18 : 0) + (flags.includes('Contested') ? 28 : 0);
+    const infoIndependence = Math.max(12, Math.min(98, 92 - independencePenalty));
+
+    let convergenceBase = score;
+    if (stableHours > 0) convergenceBase = Math.min(98, convergenceBase + Math.min(stableHours / 3, 18));
+    if (trackedPrice != null) convergenceBase -= Math.abs(0.5 - trackedPrice) * 18;
+    if (outcomes.length > 2) convergenceBase -= Math.min((outcomes.length - 2) * 4, 12);
+    const convergenceStability = Math.max(12, Math.min(98, Math.round(convergenceBase)));
+
+    return [capitalDepth, marketEfficiency, infoIndependence, convergenceStability];
 }
 
-/* ── RENDER KPIs ── */
+/* RENDER KPIs */
 function renderKPIs(k) {
     // Health bar
     animCount(eid('kpi-total'),       k.total_markets     || 0);
@@ -170,18 +177,18 @@ function renderKPIs(k) {
     animCount(eid('kpi-calibrating'), k.calibrating_count || 0);
     animCount(eid('kpi-fragile'),     k.fragile_count     || 0);
 
-    // Hero panel — live data
+    // Hero panel live data
     animCount(eid('hero-active'),     k.total_markets    || 0);
     animCount(eid('hero-converged'),  k.converged_count  || 0);
 
-    // Hero panel — data_points, judgments (fmtNum으로 포맷)
+    // Hero panel data_points and judgments
     const dpEl = eid('hero-datapoints');
     if (dpEl) dpEl.textContent = k.data_points ? fmtNum(k.data_points) : '--';
 
     const jEl = eid('hero-judgments');
     if (jEl) jEl.textContent = k.judgments != null ? k.judgments : '--';
 
-    // 헬스 설명
+    // Health summary
     const tot = k.total_markets || 1;
     const cv  = k.converged_count || 0;
     const ca  = k.calibrating_count || 0;
@@ -194,7 +201,7 @@ function renderKPIs(k) {
             `<strong>${fr}</strong> below reliability threshold`;
     }
 
-    // 업데이트 시간
+    // Update time
     const lu = eid('last-update');
     if (lu) {
         const now = new Date();
@@ -213,13 +220,26 @@ function renderKPIs(k) {
     if (tt) tt.textContent = k.total_markets || '--';
 }
 
-/* ── BUILD MARKET ROW ── */
+function renderKPIUnavailable(message) {
+    ['kpi-total', 'kpi-converged', 'kpi-calibrating', 'kpi-fragile',
+     'hero-active', 'hero-converged', 'hero-datapoints', 'hero-judgments',
+     'last-update', 'locked-count', 'total-tracked'
+    ].forEach(id => {
+        const el = eid(id);
+        if (el) el.textContent = '--';
+    });
+
+    const interp = eid('health-interp');
+    if (interp) interp.innerHTML = `<strong>Live data unavailable.</strong> ${message}`;
+}
+
+/* BUILD MARKET ROW */
 function buildRow(m) {
     const state = m.display_state || 'Fragile';
     const cfg   = SC[state] || SC.Fragile;
     const score = m.nexus_score || 0;
     const flags = getFlags(m);
-    const pw    = pillarWidths(score);
+    const pw    = pillarWidths(m);
 
     const row = document.createElement('div');
     row.className = `mkt-row ${cfg.row}`;
@@ -266,10 +286,11 @@ function buildRow(m) {
     return row;
 }
 
-/* ── RENDER MARKETS ── */
-function renderMarkets(markets) {
+/* RENDER MARKETS */
+function renderMarkets(markets, emptyMessage) {
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
+    const blankText = emptyMessage || 'No markets in this state';
 
     ['Converged', 'Calibrating', 'Fragile'].forEach(state => {
         const col = eid(`col-${state}`);
@@ -290,7 +311,7 @@ function renderMarkets(markets) {
         if (group.length === 0) {
             const empty = document.createElement('div');
             empty.className = 'col-empty';
-            empty.textContent = 'No markets in this state';
+            empty.textContent = blankText;
             col.appendChild(empty);
         } else {
             group.forEach(m => col.appendChild(buildRow(m)));
@@ -311,7 +332,7 @@ function renderLockedRows() {
     }
 }
 
-/* ── CONTEXT ── */
+/* CONTEXT */
 function buildContext(m) {
     const s     = m.display_state;
     const score = m.nexus_score || 0;
@@ -329,7 +350,7 @@ function buildContext(m) {
            ` Treat price signal with caution.`;
 }
 
-/* ── SPARKLINE ── */
+/* SPARKLINE */
 function drawSparkline(canvas, vals) {
     if (!canvas || !vals || vals.length < 2) return;
     const ctx = canvas.getContext('2d');
@@ -348,7 +369,7 @@ function drawSparkline(canvas, vals) {
     ctx.stroke();
 }
 
-/* ── OUTCOMES ── */
+/* OUTCOMES */
 function renderOutcomesInPanel(outcomes, currentPrice) {
     const outWrap    = eid('sp-outcomes');
     const outSection = eid('sp-outcomes-section');
@@ -395,7 +416,7 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
         return;
     }
 
-    // outcomes 없으면 current_price로 Yes/No 폴백
+    // If outcomes are missing, fall back to a simple Yes/No view from current_price.
     if (currentPrice != null) {
         outSection.style.display = 'block';
         const yesP = parseFloat(currentPrice);
@@ -427,8 +448,9 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
     outSection.style.display = 'none';
 }
 
-/* ── PANEL ── */
+/* PANEL */
 function openPanel(m) {
+    const requestToken = ++sparklineRequestToken;
     const score = m.nexus_score || 0;
     const state = m.display_state || 'Fragile';
     const cfg   = SC[state] || SC.Fragile;
@@ -473,6 +495,7 @@ function openPanel(m) {
         fetch(`${API_BASE}/api/sparkline/${encodeURIComponent(String(m.event_id))}`)
             .then(r => r.ok ? r.json() : [])
             .then(data => {
+                if (requestToken !== sparklineRequestToken) return;
                 const vals = Array.isArray(data)
                     ? data.map(row => parseFloat(row.current_price ?? row.p) || 0).filter(v => v > 0)
                     : [];
@@ -480,9 +503,12 @@ function openPanel(m) {
                 if (tr) tr.textContent = `${vals.length} snapshots`;
                 if (sp) drawSparkline(sp, vals);
             })
-            .catch(() => { if (tr) tr.textContent = '--'; });
+            .catch(() => {
+                if (requestToken !== sparklineRequestToken) return;
+                if (tr) tr.textContent = 'history unavailable';
+            });
     } else {
-        if (tr) tr.textContent = '--';
+        if (tr) tr.textContent = 'history unavailable';
     }
 
     eid('overlay').classList.add('open');
@@ -491,46 +517,58 @@ function openPanel(m) {
 }
 
 function closePanel() {
+    sparklineRequestToken += 1;
     eid('overlay').classList.remove('open');
     eid('side-panel').classList.remove('open');
     document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
 
-/* ── DATA FETCHING ── */
+/* DATA FETCHING */
 async function loadKPIs() {
-    if (!HAS_API) return MOCK_KPIS;
-    try {
-        const res = await fetch(`${API_BASE}/api/kpis`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        if (!data || data.error) return MOCK_KPIS;
-        return data;
-    } catch (e) {
-        console.warn('[Poly-Nexus] KPIs fetch failed:', e.message);
-        return MOCK_KPIS;
-    }
+    if (!HAS_API) throw new Error('Worker URL is not configured');
+    const res = await fetch(`${API_BASE}/api/kpis`);
+    if (!res.ok) throw new Error(`KPIs HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data || data.error) throw new Error('KPIs payload invalid');
+    return data;
 }
 
 async function loadMarkets() {
-    if (!HAS_API) return MOCK_MARKETS;
-    try {
-        const res = await fetch(`${API_BASE}/api/markets`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        if (!Array.isArray(data) || data.length === 0) return MOCK_MARKETS;
-        return data.map(normalizeMarket);
-    } catch (e) {
-        console.warn('[Poly-Nexus] Markets fetch failed:', e.message);
-        return MOCK_MARKETS;
-    }
+    if (!HAS_API) throw new Error('Worker URL is not configured');
+    const res = await fetch(`${API_BASE}/api/markets`);
+    if (!res.ok) throw new Error(`Markets HTTP ${res.status}`);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error('Markets payload invalid');
+    return data.map(normalizeMarket);
 }
 
-/* ── INIT ── */
+/* INIT */
 async function init() {
-    const [kpis, markets] = await Promise.all([loadKPIs(), loadMarkets()]);
-    renderKPIs(kpis);
-    renderMarkets(markets);
+    setRuntimeStatus('loading', 'Connecting to live worker...');
+
+    const [kpisResult, marketsResult] = await Promise.allSettled([loadKPIs(), loadMarkets()]);
+
+    if (kpisResult.status === 'fulfilled') {
+        renderKPIs(kpisResult.value);
+    } else {
+        console.warn('[Poly-Nexus] KPIs fetch failed:', kpisResult.reason?.message || kpisResult.reason);
+        renderKPIUnavailable('The dashboard could not refresh KPI data from the worker.');
+    }
+
+    if (marketsResult.status === 'fulfilled') {
+        renderMarkets(marketsResult.value);
+    } else {
+        console.warn('[Poly-Nexus] Markets fetch failed:', marketsResult.reason?.message || marketsResult.reason);
+        renderMarkets([], 'Live market data unavailable');
+    }
+
+    if (kpisResult.status === 'fulfilled' && marketsResult.status === 'fulfilled') {
+        setRuntimeStatus('live', `Worker connected - ${marketsResult.value.length} public markets loaded`);
+        return;
+    }
+
+    setRuntimeStatus('error', 'Worker unreachable or response invalid. No mock data is being shown.');
 }
 
 init();

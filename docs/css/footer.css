@@ -1,0 +1,12 @@
+/* FOOTER */
+footer {
+    padding: 24px 28px;
+    border-top: 1px solid var(--border);
+    background: var(--bg-surface);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
+.footer-right { display: flex; align-items: center; gap: 16px; }
+.footer-clock { font-size: 10px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+/* RESPONSIVE */

@@ -187,6 +187,11 @@ body::after {
     border-color: var(--amber-line);
     background: var(--amber-pale);
 }
+.runtime-banner.rs-degraded .runtime-pill {
+    color: #E8C57E;
+    border-color: rgba(232,197,126,0.3);
+    background: rgba(232,197,126,0.08);
+}
 .runtime-banner.rs-error .runtime-pill {
     color: #E48E8E;
     border-color: rgba(200,68,68,0.28);

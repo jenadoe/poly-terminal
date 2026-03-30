@@ -3,24 +3,24 @@
 function buildContext(m) {
     const state = m.display_state;
     const score = m.nexus_score || 0;
-    const vol = m.volume || 0;
+    const reason = summarizeMarketReason(m);
+    const flagText = getFlags(m).length ? ` Flags: <strong>${getFlags(m).join(', ')}</strong>.` : '';
+    const stableText = state === 'Converged' && m.stable_hours
+        ? ` Stable for <strong>${fmtStableHours(m.stable_hours)}</strong>.`
+        : '';
 
     if (state === 'Converged') {
-        return `NXS <strong>${score.toFixed(1)}</strong> - structural consensus verified. ` +
-            (vol > 10e6
-                ? `Deep market ($${(vol / 1e6).toFixed(0)}M) supports reliable signal.`
-                : 'Price reflects genuine crowd consensus.');
+        return `<strong>Current read:</strong> ${reason} ` +
+            `NXS <strong>${score.toFixed(1)}</strong>.${stableText}${flagText}`;
     }
 
     if (state === 'Calibrating') {
-        const gap = (80 - score).toFixed(1);
-        return `NXS <strong>${score.toFixed(1)}</strong> - price discovery in progress. ` +
-            (parseFloat(gap) < 10 ? `${gap} pts from Converged threshold.` : 'Consensus has not yet stabilized.');
+        return `<strong>Current read:</strong> ${reason} ` +
+            `NXS <strong>${score.toFixed(1)}</strong> signals an active interpretation state.${flagText}`;
     }
 
-    return `NXS <strong>${score.toFixed(1)}</strong> - structural weakness detected. ` +
-        (vol < 100000 ? 'Very thin liquidity.' : 'Depth or efficiency below threshold.') +
-        ' Treat price signal with caution.';
+    return `<strong>Current read:</strong> ${reason} ` +
+        `NXS <strong>${score.toFixed(1)}</strong> indicates structural caution.${flagText}`;
 }
 
 function drawSparkline(canvas, vals) {

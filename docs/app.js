@@ -23,7 +23,7 @@ function renderFreshness(k) {
     const status = k.freshness?.status;
     if (status === 'stale') {
         const mins = k.freshness?.stale_since_minutes;
-        el.textContent = mins != null ? `${mins}m` : 'STALE';
+        el.textContent = mins != null ? `DELAYED ${mins}m` : 'DELAYED';
         return;
     }
     if (status === 'fresh') {
@@ -40,7 +40,7 @@ function renderKPIs(k) {
     animCount(eid('kpi-fragile'), k.fragile_count || 0);
 
     animCount(eid('hero-active'), k.total_markets || 0);
-    animCount(eid('hero-converged'), k.converged_count || 0);
+    animCount(eid('hero-converged'), k.fragile_count || 0);
 
     const jEl = eid('hero-judgments');
     if (jEl) jEl.textContent = k.judgments_v6 != null ? k.judgments_v6 : '--';
@@ -62,9 +62,7 @@ function renderKPIs(k) {
     const lu = eid('last-update');
     if (lu) lu.textContent = formatAsOf(k.as_of);
 
-    const locked = eid('locked-count');
     const tracked = eid('total-tracked');
-    if (locked) locked.textContent = Math.max(0, (k.total_markets || 0) - 9);
     if (tracked) tracked.textContent = k.total_markets || '--';
 }
 
@@ -111,6 +109,11 @@ async function init() {
 
     if (kpisResult.status === 'fulfilled' && marketsResult.status === 'fulfilled') {
         setRuntimeStatus('live', `Worker connected - ${marketsResult.value.length} public markets loaded`);
+        return;
+    }
+
+    if (kpisResult.status === 'fulfilled' || marketsResult.status === 'fulfilled') {
+        setRuntimeStatus('degraded', 'Public worker reachable, but part of the dashboard is delayed or unavailable.');
         return;
     }
 

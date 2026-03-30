@@ -39,6 +39,7 @@ function buildRow(m) {
         const cls = f === 'Contested' ? 'mf-contested' : 'mf-correlated';
         return `<span class="mkt-flag ${cls}">${f}</span>`;
     }).join('');
+    const reason = summarizeMarketReason(m);
 
     const stableLabel = (state === 'Converged' && m.stable_hours)
         ? `<span class="stable-badge">&#10003; STABLE ${fmtStableHours(m.stable_hours)}</span>`
@@ -63,6 +64,7 @@ function buildRow(m) {
                 <div class="pillar-bar"><div class="pillar-fill" style="width:${pw[2]}%"></div></div>
                 <div class="pillar-bar"><div class="pillar-fill" style="width:${pw[3]}%"></div></div>
             </div>
+            <div class="mkt-reason">${reason}</div>
             <div class="mkt-bottom">
                 <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
                     ${stableLabel}
@@ -80,6 +82,9 @@ function buildRow(m) {
 function renderMarkets(markets, emptyMessage) {
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
+    const totalTracked = Number(eid('total-tracked')?.textContent || 0);
+    const locked = eid('locked-count');
+    if (locked) locked.textContent = totalTracked > 0 ? Math.max(0, totalTracked - markets.length) : '--';
     const blankText = emptyMessage || 'No markets in this state';
 
     ['Converged', 'Calibrating', 'Fragile'].forEach(state => {

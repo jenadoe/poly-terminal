@@ -406,11 +406,21 @@
 .r-calibrating .pillar-fill { background: var(--cyan); }
 .r-fragile     .pillar-fill { background: var(--slate); }
 
+.mkt-reason {
+    font-size: 10px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin-bottom: 10px;
+    min-height: 31px;
+}
+.r-fragile .mkt-reason { color: var(--text); }
+
 /* Bottom row */
 .mkt-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 .mkt-price {
     font-size: 15px;

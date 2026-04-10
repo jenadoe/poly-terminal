@@ -7,6 +7,11 @@ footer {
     flex-wrap: wrap; gap: 16px;
 }
 .footer-copy { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 .footer-contact {
     font-size: 10px;
     color: var(--text-faint);
@@ -16,6 +21,24 @@ footer {
 }
 .footer-contact:hover,
 .footer-contact:focus-visible {
+    color: var(--amber);
+}
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    color: var(--text-faint);
+    transition: color 160ms ease;
+}
+.footer-social svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+.footer-social:hover,
+.footer-social:focus-visible {
     color: var(--amber);
 }
 .footer-right { display: flex; align-items: center; gap: 16px; }

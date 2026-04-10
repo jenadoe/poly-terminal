@@ -107,6 +107,7 @@ function renderKPIs(k) {
 
     const tracked = eid('total-tracked');
     if (tracked) tracked.textContent = k.total_markets || '--';
+    if (typeof syncLockedCount === 'function') syncLockedCount();
 
     setHeroPanelStatus(getHeroPanelKind(k));
 }
@@ -142,21 +143,33 @@ function renderKPIUnavailable(message) {
 async function init() {
     setRuntimeStatus('loading', 'Connecting to live worker...');
 
-    const [kpisResult, marketsResult] = await Promise.allSettled([loadKPIs(), loadMarkets()]);
+    const settle = promise =>
+        promise.then(
+            value => ({ status: 'fulfilled', value }),
+            reason => ({ status: 'rejected', reason })
+        );
 
-    if (kpisResult.status === 'fulfilled') {
-        renderKPIs(kpisResult.value);
-    } else {
-        console.warn('[Poly-Nexus] KPIs fetch failed:', kpisResult.reason?.message || kpisResult.reason);
-        renderKPIUnavailable('The dashboard could not refresh KPI data from the worker.');
-    }
+    const kpisResultPromise = settle(loadKPIs()).then(result => {
+        if (result.status === 'fulfilled') {
+            renderKPIs(result.value);
+        } else {
+            console.warn('[Poly-Nexus] KPIs fetch failed:', result.reason?.message || result.reason);
+            renderKPIUnavailable('The dashboard could not refresh KPI data from the worker.');
+        }
+        return result;
+    });
 
-    if (marketsResult.status === 'fulfilled') {
-        renderMarkets(marketsResult.value);
-    } else {
-        console.warn('[Poly-Nexus] Markets fetch failed:', marketsResult.reason?.message || marketsResult.reason);
-        renderMarkets([], 'Live market data unavailable');
-    }
+    const marketsResultPromise = settle(loadMarkets()).then(result => {
+        if (result.status === 'fulfilled') {
+            renderMarkets(result.value);
+        } else {
+            console.warn('[Poly-Nexus] Markets fetch failed:', result.reason?.message || result.reason);
+            renderMarkets([], 'Live market data unavailable');
+        }
+        return result;
+    });
+
+    const [kpisResult, marketsResult] = await Promise.all([kpisResultPromise, marketsResultPromise]);
 
     const runtimeKind = getRuntimeStatusDecision(kpisResult, marketsResult);
     if (runtimeKind === 'live') {

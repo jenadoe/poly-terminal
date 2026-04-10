@@ -65,7 +65,7 @@ function animCount(el, target, ms) {
         return;
     }
 
-    ms = ms || 700;
+    ms = ms || 240;
     const start = performance.now();
     const run = now => {
         const p = Math.min((now - start) / ms, 1);

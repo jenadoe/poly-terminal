@@ -79,9 +79,7 @@ function buildRow(m) {
 function renderMarkets(markets, emptyMessage) {
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
-    const totalTracked = Number(eid('total-tracked')?.textContent || 0);
-    const locked = eid('locked-count');
-    if (locked) locked.textContent = totalTracked > 0 ? Math.max(0, totalTracked - markets.length) : '--';
+    syncLockedCount();
     const blankText = emptyMessage || 'No markets in this state';
 
     ['Converged', 'Calibrating', 'Fragile'].forEach(state => {
@@ -112,6 +110,19 @@ function renderMarkets(markets, emptyMessage) {
     });
 
     renderLockedRows();
+}
+
+function syncLockedCount() {
+    const shownRaw = eid('shown-count')?.textContent || '';
+    const totalTrackedRaw = eid('total-tracked')?.textContent || '';
+    const shownCount = /^\d+$/.test(String(shownRaw)) ? Number(shownRaw) : null;
+    const totalTracked = /^\d+$/.test(String(totalTrackedRaw)) ? Number(totalTrackedRaw) : null;
+    const locked = eid('locked-count');
+    if (!locked) return;
+    locked.textContent =
+        totalTracked != null && shownCount != null
+            ? Math.max(0, totalTracked - shownCount)
+            : '--';
 }
 
 function renderLockedRows() {

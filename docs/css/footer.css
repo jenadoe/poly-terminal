@@ -7,6 +7,17 @@ footer {
     flex-wrap: wrap; gap: 16px;
 }
 .footer-copy { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
+.footer-contact {
+    font-size: 10px;
+    color: var(--text-faint);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+.footer-contact:hover,
+.footer-contact:focus-visible {
+    color: var(--amber);
+}
 .footer-right { display: flex; align-items: center; gap: 16px; }
 .footer-clock { font-size: 10px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
 /* RESPONSIVE */

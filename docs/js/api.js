@@ -37,16 +37,16 @@ function normalizeKPIs(k) {
         calibrating_count: Number(k.calibrating_count) || 0,
         fragile_count: Number(k.fragile_count) || 0,
         evaluated_markets:
-            k.judgments_v6 != null
-                ? Number(k.judgments_v6)
+            k.evaluated_markets != null
+                ? Number(k.evaluated_markets)
                 : null,
         tracked_snapshots:
             k.tracked_snapshots != null
                 ? Number(k.tracked_snapshots)
                 : null,
         avg_snapshots:
-            k.avg_history_depth != null
-                ? Number(k.avg_history_depth)
+            k.avg_snapshots != null
+                ? Number(k.avg_snapshots)
                 : null,
         as_of: k.as_of || k.pipeline_completed_at || null,
         freshness,

@@ -8,20 +8,20 @@
     max-width: 1200px; margin: 0 auto;
 }
 .section-eyebrow {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--text-dim);
     margin-bottom: 5px;
 }
 .section-title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
     color: var(--text-hi);
     margin-bottom: 8px;
 }
 .section-desc {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text);
     line-height: 1.75;
     max-width: 560px;
@@ -37,17 +37,17 @@
 }
 .hiw-step:last-child { border-bottom: none; }
 .hiw-num {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
     color: var(--text-faint);
     font-variant-numeric: tabular-nums;
     padding-top: 2px;
 }
-.hiw-title { font-size: 15px; font-weight: 600; color: var(--text-hi); margin-bottom: 8px; }
-.hiw-body  { font-size: 13px; color: var(--text); line-height: 1.75; margin-bottom: 12px; }
+.hiw-title { font-size: 16px; font-weight: 600; color: var(--text-hi); margin-bottom: 8px; }
+.hiw-body  { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 12px; }
 .hiw-tags  { display: flex; gap: 6px; flex-wrap: wrap; }
 .hiw-tag {
-    font-size: 10px; padding: 3px 9px;
+    font-size: 11px; padding: 3px 9px;
     background: var(--bg-card); color: var(--text-dim);
     border: 1px solid var(--border); letter-spacing: 0.06em;
 }
@@ -58,8 +58,8 @@
     background: var(--bg-card); border: 1px solid var(--border);
     padding: 10px 14px;
 }
-.pcell-name { font-size: 12px; font-weight: 600; margin-bottom: 3px; }
-.pcell-desc { font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+.pcell-name { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.pcell-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
 .state-legend { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
 .sl-row {
     display: flex; gap: 12px; align-items: baseline;
@@ -70,9 +70,9 @@
 .sl-row.sl-c { border-left-color: var(--amber); }
 .sl-row.sl-a { border-left-color: var(--cyan); }
 .sl-row.sl-f { border-left-color: var(--slate); }
-.sl-name { font-size: 12px; font-weight: 600; min-width: 90px; }
+.sl-name { font-size: 13px; font-weight: 600; min-width: 90px; }
 .sl-c .sl-name { color: var(--amber-text); }
 .sl-a .sl-name { color: var(--cyan-text); }
 .sl-f .sl-name { color: var(--slate-text); }
-.sl-desc { font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+.sl-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
 

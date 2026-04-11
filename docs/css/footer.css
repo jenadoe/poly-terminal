@@ -6,14 +6,14 @@ footer {
     display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 16px;
 }
-.footer-copy { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
+.footer-copy { font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; line-height: 2; }
 .footer-links {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 .footer-contact {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--text-faint);
     letter-spacing: 0.06em;
     text-decoration: none;
@@ -42,5 +42,5 @@ footer {
     color: var(--amber);
 }
 .footer-right { display: flex; align-items: center; gap: 16px; }
-.footer-clock { font-size: 10px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+.footer-clock { font-size: 11px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
 /* RESPONSIVE */

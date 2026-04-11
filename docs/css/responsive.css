@@ -10,7 +10,7 @@
     #hero { padding: 36px 16px 32px; }
     #hiw  { padding: 36px 16px; }
     .matrix-header, .state-matrix, .locked-wrap { padding-left: 16px; padding-right: 16px; }
-    .hero-headline { font-size: 30px; }
+    .hero-headline { font-size: 32px; }
     .hiw-step { grid-template-columns: 36px 1fr; gap: 14px; }
     .mkt-bottom { flex-direction: column; align-items: flex-start; }
 }

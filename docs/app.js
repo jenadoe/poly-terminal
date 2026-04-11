@@ -36,7 +36,7 @@ function getFreshnessStatus(k) {
 }
 
 function getHeroPanelKind(k) {
-    if (k.tracked_snapshots == null || k.avg_history_depth == null) return 'partial';
+    if (k.tracked_snapshots == null || k.avg_snapshots == null) return 'partial';
     return getFreshnessStatus(k) === 'stale' ? 'stale' : 'live';
 }
 
@@ -93,8 +93,8 @@ function renderKPIs(k) {
     animCount(eid('kpi-fragile'), k.fragile_count || 0);
     animCount(eid('hero-total-markets'), k.total_markets || 0);
     renderMetric(eid('hero-tracked-snapshots'), k.tracked_snapshots, value => fmtNum(value).toUpperCase());
-    renderMetric(eid('hero-history-depth'), k.avg_history_depth);
-    animCount(eid('hero-judgments'), k.judgments_v6 || 0);
+    renderMetric(eid('hero-avg-snapshots'), k.avg_snapshots);
+    animCount(eid('hero-evaluated-markets'), k.evaluated_markets || 0);
 
     const total = k.total_markets || 1;
     const converged = k.converged_count || 0;
@@ -120,8 +120,8 @@ function renderKPIUnavailable(message) {
         'kpi-fragile',
         'hero-total-markets',
         'hero-tracked-snapshots',
-        'hero-history-depth',
-        'hero-judgments',
+        'hero-avg-snapshots',
+        'hero-evaluated-markets',
         'last-update',
         'locked-count',
         'total-tracked',
@@ -141,7 +141,7 @@ function renderKPIUnavailable(message) {
 }
 
 async function init() {
-    setRuntimeStatus('loading', 'Connecting to live worker...');
+    setRuntimeStatus('loading', 'Connecting to live service...');
 
     const settle = promise =>
         promise.then(
@@ -153,8 +153,8 @@ async function init() {
         if (result.status === 'fulfilled') {
             renderKPIs(result.value);
         } else {
-            console.warn('[Poly-Nexus] KPIs fetch failed:', result.reason?.message || result.reason);
-            renderKPIUnavailable('The dashboard could not refresh KPI data from the worker.');
+            console.warn('[Strata] KPIs fetch failed:', result.reason?.message || result.reason);
+            renderKPIUnavailable('The dashboard could not refresh KPI data from the live service.');
         }
         return result;
     });
@@ -163,7 +163,7 @@ async function init() {
         if (result.status === 'fulfilled') {
             renderMarkets(result.value);
         } else {
-            console.warn('[Poly-Nexus] Markets fetch failed:', result.reason?.message || result.reason);
+            console.warn('[Strata] Markets fetch failed:', result.reason?.message || result.reason);
             renderMarkets([], 'Live market data unavailable');
         }
         return result;
@@ -173,7 +173,7 @@ async function init() {
 
     const runtimeKind = getRuntimeStatusDecision(kpisResult, marketsResult);
     if (runtimeKind === 'live') {
-        setRuntimeStatus('live', `Worker connected - ${marketsResult.value.length} public markets loaded`);
+        setRuntimeStatus('live', `Live service connected - ${marketsResult.value.length} public markets loaded`);
         return;
     }
 
@@ -185,13 +185,13 @@ async function init() {
             ? kpisResult.value.freshness?.stale_since_minutes
             : null;
         const message = freshness === 'stale'
-            ? `Public worker reachable, but KPI data is stale${staleMinutes != null ? ` (${staleMinutes} minutes old)` : ''}.`
-            : 'Public worker reachable, but part of the dashboard is delayed or unavailable.';
+            ? `Public service reachable, but KPI data is stale${staleMinutes != null ? ` (${staleMinutes} minutes old)` : ''}.`
+            : 'Public service reachable, but part of the dashboard is delayed or unavailable.';
         setRuntimeStatus('degraded', message);
         return;
     }
 
-    setRuntimeStatus('error', 'Worker unreachable or response invalid. No mock data is being shown.');
+    setRuntimeStatus('error', 'Live service unreachable or response invalid. No mock data is being shown.');
 }
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {

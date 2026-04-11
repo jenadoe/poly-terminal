@@ -1,9 +1,5 @@
 /**
- * Poly-Nexus Chart Visualization Library
- * 
- * Note: This library only visualizes processed results.
- * Historical data is NOT stored on the server - charts are generated
- * client-side from current snapshot data only.
+ * Strata chart visualization helpers.
  */
 
 // Chart.js configuration for dark theme

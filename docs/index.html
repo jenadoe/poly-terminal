@@ -9,13 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!--
-        Worker URL — 비밀 아님. 공개 프록시 엔드포인트. 안전하게 커밋 가능.
-        Supabase URL/Key는 CF Worker Secrets에만 존재, 브라우저에 절대 미노출.
-    -->
-    <!-- Canonical public deployment is Vercel. -->
+
     <script>
-        window.POLY_NEXUS_API = '/api';
+        window.STRATA_API = '/api';
     </script>
 </head>
 <body>
@@ -41,7 +37,7 @@
     </div>
     <div class="header-right">
         <div>UPDATED <strong id="last-update">--</strong></div>
-        <div>ENGINE <strong>V6 / STRUCTURAL SCORE</strong></div>
+        <div>ENGINE <strong>STRUCTURAL READ</strong></div>
     </div>
 </header>
 
@@ -80,15 +76,15 @@
             </div>
             <div class="hero-kpi">
                 <div class="hero-kpi-value" id="hero-tracked-snapshots">--</div>
-                <div class="hero-kpi-label">Active snapshots</div>
+                <div class="hero-kpi-label">Tracked snapshots</div>
             </div>
             <div class="hero-kpi">
-                <div class="hero-kpi-value" id="hero-history-depth">--</div>
-                <div class="hero-kpi-label">Avg active depth</div>
+                <div class="hero-kpi-value" id="hero-avg-snapshots">--</div>
+                <div class="hero-kpi-label">Avg snapshots</div>
             </div>
             <div class="hero-kpi">
-                <div class="hero-kpi-value" id="hero-judgments">--</div>
-                <div class="hero-kpi-label">Judgments logged</div>
+                <div class="hero-kpi-value" id="hero-evaluated-markets">--</div>
+                <div class="hero-kpi-label">Evaluated markets</div>
             </div>
         </div>
     </div>
@@ -301,7 +297,6 @@
     </div>
 </footer>
 
-<!-- config.js 참조 완전 제거. Worker URL은 위 <script> 블록에서 설정. -->
 <script src="js/state.js"></script>
 <script src="js/formatters.js"></script>
 <script src="js/runtime.js"></script>
@@ -312,3 +307,4 @@
 
 </body>
 </html>
+

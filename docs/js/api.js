@@ -36,7 +36,7 @@ function normalizeKPIs(k) {
         converged_count: Number(k.converged_count) || 0,
         calibrating_count: Number(k.calibrating_count) || 0,
         fragile_count: Number(k.fragile_count) || 0,
-        judgments_v6:
+        evaluated_markets:
             k.judgments_v6 != null
                 ? Number(k.judgments_v6)
                 : null,
@@ -44,18 +44,17 @@ function normalizeKPIs(k) {
             k.tracked_snapshots != null
                 ? Number(k.tracked_snapshots)
                 : null,
-        avg_history_depth:
+        avg_snapshots:
             k.avg_history_depth != null
                 ? Number(k.avg_history_depth)
                 : null,
         as_of: k.as_of || k.pipeline_completed_at || null,
-        schema_version: k.schema_version || null,
         freshness,
     };
 }
 
 async function loadKPIs() {
-    if (!HAS_API) throw new Error('Worker URL is not configured');
+    if (!HAS_API) throw new Error('Public API is not configured');
     const res = await fetch(`${API_BASE}/kpis`);
     if (!res.ok) throw new Error(`KPIs HTTP ${res.status}`);
     const data = await res.json();
@@ -64,7 +63,7 @@ async function loadKPIs() {
 }
 
 async function loadMarkets() {
-    if (!HAS_API) throw new Error('Worker URL is not configured');
+    if (!HAS_API) throw new Error('Public API is not configured');
     const res = await fetch(`${API_BASE}/markets`);
     if (!res.ok) throw new Error(`Markets HTTP ${res.status}`);
     const data = await res.json();

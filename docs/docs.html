@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs - Strata</title>
+    <meta name="description" content="Public documentation for Strata, including product overview, dashboard interpretation, public data boundary, and terms.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --bg-color: #06080d;
+            --bg-panel: #10141d;
+            --bg-panel-soft: #161c27;
+            --text-main: #d9e2f2;
+            --text-muted: #95a0b5;
+            --text-faint: #6f7b90;
+            --border: #273043;
+            --accent: #e2b56d;
+            --accent-soft: rgba(226, 181, 109, 0.12);
+            --link: #8cc7ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top, rgba(226, 181, 109, 0.08), transparent 35%),
+                linear-gradient(180deg, #06080d 0%, #0b1018 100%);
+            color: var(--text-main);
+            font-family: "JetBrains Mono", "Consolas", "Monaco", monospace;
+            line-height: 1.7;
+            padding: 24px;
+        }
+
+        .shell {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .hero,
+        .section,
+        .nav-card {
+            border: 1px solid var(--border);
+            background: var(--bg-panel);
+            border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+        }
+
+        .hero {
+            padding: 32px;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .nav-card {
+            display: block;
+            padding: 18px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+        }
+
+        .nav-card:hover,
+        .nav-card:focus-visible {
+            border-color: var(--accent);
+            background: var(--bg-panel-soft);
+            transform: translateY(-2px);
+        }
+
+        .nav-title {
+            color: var(--text-main);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+
+        .nav-body {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .section {
+            padding: 28px 28px 22px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 20px;
+        }
+
+        h3 {
+            margin: 18px 0 10px;
+            font-size: 15px;
+            color: var(--accent);
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 0 0 14px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        .note {
+            margin-top: 12px;
+            padding: 14px 16px;
+            background: var(--accent-soft);
+            border: 1px solid rgba(226, 181, 109, 0.24);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 13px;
+        }
+
+        .pill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .pill {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .pill strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+        }
+
+        .pill span {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .links a,
+        .back-link {
+            color: var(--link);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .links a:hover,
+        .links a:focus-visible,
+        .back-link:hover,
+        .back-link:focus-visible {
+            text-decoration: underline;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-top: 24px;
+            padding: 10px 4px 0;
+            color: var(--text-faint);
+            font-size: 12px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+
+            .hero,
+            .section {
+                padding: 22px 20px 18px;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <section class="hero">
+            <div class="eyebrow">Docs</div>
+            <h1>Public documentation for reading Strata.</h1>
+            <p class="hero-copy">
+                This page explains what Strata is, how to read the public dashboard,
+                and where the public information boundary sits. It is a product guide,
+                not a technical specification.
+            </p>
+        </section>
+
+        <div class="nav-grid">
+            <a class="nav-card" href="#what-is-strata">
+                <div class="nav-title">What Is Strata</div>
+                <div class="nav-body">A short definition of the product and what role it serves.</div>
+            </a>
+            <a class="nav-card" href="#dashboard-guide">
+                <div class="nav-title">Dashboard Guide</div>
+                <div class="nav-body">How to interpret public states and summary panels.</div>
+            </a>
+            <a class="nav-card" href="#public-boundary">
+                <div class="nav-title">Public Boundary</div>
+                <div class="nav-body">What this public surface is designed to show, and what it is not.</div>
+            </a>
+            <a class="nav-card" href="#faq">
+                <div class="nav-title">FAQ</div>
+                <div class="nav-body">Short answers to the most common questions about the public surface.</div>
+            </a>
+        </div>
+
+        <section class="section" id="what-is-strata">
+            <h2>What Is Strata</h2>
+            <p>
+                Strata is a public market-confidence layer for prediction market prices.
+                It is designed to help users read whether a market looks structurally
+                reliable, still forming, or fragile under current market conditions.
+            </p>
+            <p>
+                The public dashboard is built to support interpretation. It gives a
+                limited, read-only view of market-confidence signals and public-facing
+                states so that users can understand the surface at a glance.
+            </p>
+            <p>
+                Strata does not predict outcomes, guarantee correctness, or provide
+                trading advice. It is a public interpretation layer for market structure.
+            </p>
+        </section>
+
+        <section class="section" id="dashboard-guide">
+            <h2>How to Read the Dashboard</h2>
+            <p>
+                The dashboard is meant to answer a simple question: how much structural
+                trust should be placed in a market price right now?
+            </p>
+            <div class="pill-list">
+                <div class="pill">
+                    <strong>Converged</strong>
+                    <span>The public read suggests a price signal that looks comparatively stable.</span>
+                </div>
+                <div class="pill">
+                    <strong>Calibrating</strong>
+                    <span>The market still appears to be forming or repricing.</span>
+                </div>
+                <div class="pill">
+                    <strong>Fragile</strong>
+                    <span>The public read suggests caution when interpreting the current price.</span>
+                </div>
+            </div>
+            <h3>Structural Snapshot</h3>
+            <ul>
+                <li><strong>Markets tracked</strong> shows the number of markets currently represented on the public surface.</li>
+                <li><strong>Active snapshots</strong> summarizes recent public snapshot activity across the surface.</li>
+                <li><strong>Avg active depth</strong> gives a high-level sense of recent public context across tracked markets.</li>
+                <li><strong>Judgments logged</strong> shows the number of public judgments visible on the surface.</li>
+            </ul>
+            <div class="note">
+                These labels are designed to help with interpretation. They should not be read as guarantees, predictions, or investment recommendations.
+            </div>
+        </section>
+
+        <section class="section" id="public-boundary">
+            <h2>Public Data Boundary</h2>
+            <p>
+                Strata's public surface is intentionally limited. It focuses on selected
+                summaries, public-facing labels, and product interpretation.
+            </p>
+            <ul>
+                <li>The public site provides a read-only surface.</li>
+                <li>The public site is designed to communicate market-confidence context in a concise public format.</li>
+                <li>The public site should be read as a product surface, not as a technical specification.</li>
+            </ul>
+            <p>
+                This boundary keeps the public product understandable and focused on interpretation.
+            </p>
+        </section>
+
+        <section class="section" id="faq">
+            <h2>FAQ</h2>
+            <h3>Does Strata predict outcomes?</h3>
+            <p>No. Strata is designed to help interpret market confidence, not to predict whether an outcome will happen.</p>
+
+            <h3>Is this trading advice?</h3>
+            <p>No. The public surface is informational and interpretive only.</p>
+
+            <h3>Does the dashboard show everything Strata tracks?</h3>
+            <p>No. The dashboard is a limited public view intended for public interpretation.</p>
+
+            <h3>Should the public dashboard be treated as a final proof of market truth?</h3>
+            <p>No. The public surface is meant to help users read market structure, not to certify any market as guaranteed truth.</p>
+
+            <div class="links">
+                <a href="./terms.html">Terms of Use</a>
+                <a href="./index.html">Back to Dashboard</a>
+                <a href="mailto:contact@strata-labs.xyz">Contact</a>
+            </div>
+        </section>
+
+        <div class="footer">
+            <div>STRATA // Public docs</div>
+            <a class="back-link" href="./index.html">Return to dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

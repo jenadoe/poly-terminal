@@ -1,5 +1,8 @@
 /* MATRIX */
 
+const MARKET_RENDER_BATCH = 18;
+let marketRenderToken = 0;
+
 function pillarWidths(market) {
     // The public dashboard does not receive true backend pillar sub-scores yet.
     // Keep the 4-bar visual for a future premium surface, but derive it from
@@ -76,34 +79,86 @@ function buildRow(m) {
     return row;
 }
 
+function groupMarketsByState(markets) {
+    const grouped = {
+        Converged: [],
+        Calibrating: [],
+        Fragile: [],
+    };
+
+    markets.forEach(market => {
+        const state = market.display_state || 'Calibrating';
+        if (!grouped[state]) return;
+        grouped[state].push(market);
+    });
+
+    return grouped;
+}
+
+function buildColumnHead(state, count) {
+    const cfg = SC[state];
+    const head = document.createElement('div');
+    head.className = `col-head ${cfg.col}`;
+    appendElement(head, 'span', `${count} shown`, 'col-count');
+    appendElement(head, 'div', state, `col-state cs-${state.toLowerCase()}`);
+    appendElement(head, 'div', cfg.desc, 'col-desc');
+    return head;
+}
+
+function appendMarketBatch(col, group, startIndex, token) {
+    if (!col || token !== marketRenderToken) return;
+
+    const endIndex = Math.min(startIndex + MARKET_RENDER_BATCH, group.length);
+    const frag = document.createDocumentFragment();
+    for (let i = startIndex; i < endIndex; i += 1) {
+        frag.appendChild(buildRow(group[i]));
+    }
+    col.appendChild(frag);
+
+    if (endIndex < group.length) {
+        requestAnimationFrame(() => appendMarketBatch(col, group, endIndex, token));
+    }
+}
+
 function renderMarkets(markets, emptyMessage) {
+    const token = ++marketRenderToken;
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
     syncLockedCount();
     const blankText = emptyMessage || 'No markets in this state';
+    const grouped = groupMarketsByState(markets);
 
     ['Converged', 'Calibrating', 'Fragile'].forEach(state => {
         const col = eid(`col-${state}`);
         if (!col) return;
         col.innerHTML = '';
-
-        const group = markets.filter(m => (m.display_state || 'Calibrating') === state);
-        const cfg = SC[state];
-
-        const head = document.createElement('div');
-        head.className = `col-head ${cfg.col}`;
-        appendElement(head, 'span', `${group.length} shown`, 'col-count');
-        appendElement(head, 'div', state, `col-state cs-${state.toLowerCase()}`);
-        appendElement(head, 'div', cfg.desc, 'col-desc');
-        col.appendChild(head);
+        const group = grouped[state];
+        const frag = document.createDocumentFragment();
+        frag.appendChild(buildColumnHead(state, group.length));
 
         if (group.length === 0) {
             const empty = document.createElement('div');
             empty.className = 'col-empty';
             empty.textContent = blankText;
-            col.appendChild(empty);
+            frag.appendChild(empty);
         } else {
-            group.forEach(m => col.appendChild(buildRow(m)));
+            const placeholder = document.createElement('div');
+            placeholder.className = 'col-loading';
+            placeholder.textContent = 'Loading markets...';
+            frag.appendChild(placeholder);
+        }
+
+        col.appendChild(frag);
+
+        if (group.length > 0) {
+            const placeholder = col.querySelector('.col-loading');
+            requestAnimationFrame(() => {
+                if (token !== marketRenderToken || !col.isConnected) return;
+                if (placeholder && placeholder.parentNode === col) {
+                    col.removeChild(placeholder);
+                }
+                appendMarketBatch(col, group, 0, token);
+            });
         }
     });
 

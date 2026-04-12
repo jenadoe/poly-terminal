@@ -248,3 +248,11 @@ function closePanel() {
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closePanel();
 });
+
+if (typeof document !== 'undefined') {
+    const overlay = document.getElementById('overlay');
+    if (overlay) overlay.addEventListener('click', closePanel);
+
+    const closeBtn = document.getElementById('sp-close');
+    if (closeBtn) closeBtn.addEventListener('click', closePanel);
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docs - Strata</title>
     <meta name="description" content="Public documentation for Strata. Learn how to interpret market states, read the dashboard, and use the public surface.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -122,7 +123,7 @@
         <div class="sb-foot">
             <a href="./terms.html">Terms of Use</a>
             <a href="mailto:contact@strata-labs.xyz">contact@strata-labs.xyz</a>
-            <a href="/"><- Back to dashboard</a>
+            <a href="/">Back to dashboard</a>
         </div>
     </aside>
     <main class="content" id="content">
@@ -278,65 +279,17 @@
             </div>
             <div class="pb">
                 <div class="faq-list">
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Does Strata predict whether an outcome will happen?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. Strata is designed to help interpret the public market surface, not to predict which outcome will resolve.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this trading or investment advice?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public surface is informational and interpretive only.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">A market looks confident but shows Fragile. How should I read that?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Read the state label as the posture for interpretation. A high price can still deserve more caution if the public surface suggests a weaker read.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How should I read the status indicators on the dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Use them as a simple signal for whether the public surface looks current, delayed, partial, or unavailable.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I need an account to use the public dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public dashboard is designed to be readable without sign-in.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Where can I read the legal terms?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">The public <a href="./terms.html">Terms of Use</a> are available separately.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Does Strata predict whether an outcome will happen?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. Strata is designed to help interpret the public market surface, not to predict which outcome will resolve.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Is this trading or investment advice?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public surface is informational and interpretive only.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">A market looks confident but shows Fragile. How should I read that?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Read the state label as the posture for interpretation. A high price can still deserve more caution if the public surface suggests a weaker read.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">How should I read the status indicators on the dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Use them as a simple signal for whether the public surface looks current, delayed, partial, or unavailable.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Do I need an account to use the public dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public dashboard is designed to be readable without sign-in.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Where can I read the legal terms?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">The public <a href="./terms.html">Terms of Use</a> are available separately.</div></div></div>
                 </div>
             </div>
         </div>
     </main>
 </div>
-<script>
-    const TABS = [
-        { id: "what-is-strata", label: "What Is Strata", num: "01" },
-        { id: "reading-states", label: "Reading States", num: "02" },
-        { id: "snapshot-panel", label: "Snapshot Panel", num: "03" },
-        { id: "interpretation", label: "Interpretation", num: "04" },
-        { id: "faq", label: "FAQ", num: "05" }
-    ];
-    const sbNav = document.getElementById("sb-nav");
-    const mobInner = document.getElementById("mob-tabs-inner");
-    TABS.forEach((t) => {
-        const btn = document.createElement("button");
-        btn.className = "nav-btn";
-        btn.dataset.id = t.id;
-        btn.innerHTML = `<span class="nav-num">${t.num}</span>${t.label}`;
-        btn.addEventListener("click", () => go(t.id));
-        sbNav.appendChild(btn);
-        const mob = document.createElement("button");
-        mob.className = "mob-tab";
-        mob.dataset.id = t.id;
-        mob.textContent = t.label;
-        mob.addEventListener("click", () => go(t.id));
-        mobInner.appendChild(mob);
-    });
-    function go(id) {
-        document.querySelectorAll(".page").forEach((p) => p.classList.toggle("active", p.dataset.page === id));
-        document.querySelectorAll(".nav-btn").forEach((b) => b.classList.toggle("active", b.dataset.id === id));
-        document.querySelectorAll(".mob-tab").forEach((b) => b.classList.toggle("active", b.dataset.id === id));
-        const tab = TABS.find((t) => t.id === id);
-        if (tab) document.getElementById("tb-current").textContent = tab.label;
-        document.getElementById("content").scrollTop = 0;
-        history.replaceState(null, "", "#" + id);
-    }
-    const hash = location.hash.replace("#", "");
-    go(TABS.find((t) => t.id === hash) ? hash : TABS[0].id);
-    function toggleFaq(btn) {
-        const item = btn.closest(".faq-item");
-        const open = item.classList.contains("open");
-        document.querySelectorAll(".faq-item.open").forEach((el) => {
-            el.classList.remove("open");
-            el.querySelector(".faq-a").style.maxHeight = null;
-        });
-        if (!open) {
-            item.classList.add("open");
-            const body = item.querySelector(".faq-a");
-            body.style.maxHeight = body.scrollHeight + "px";
-        }
-    }
-</script>
+<script src="docs.js"></script>
 </body>
 </html>

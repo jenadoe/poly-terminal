@@ -92,11 +92,9 @@ function renderMarkets(markets, emptyMessage) {
 
         const head = document.createElement('div');
         head.className = `col-head ${cfg.col}`;
-        head.innerHTML = `
-            <span class="col-count">${group.length} shown</span>
-            <div class="col-state cs-${state.toLowerCase()}">${state}</div>
-            <div class="col-desc">${cfg.desc}</div>
-        `;
+        appendElement(head, 'span', `${group.length} shown`, 'col-count');
+        appendElement(head, 'div', state, `col-state cs-${state.toLowerCase()}`);
+        appendElement(head, 'div', cfg.desc, 'col-desc');
         col.appendChild(head);
 
         if (group.length === 0) {

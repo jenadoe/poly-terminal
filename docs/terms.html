@@ -4,51 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Strata</title>
+    <meta name="description" content="Terms of Use for the Strata public dashboard and documentation.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent-blue: #58a6ff;
-            --border: #30363d;
+            --bg: #050508;
+            --card: #101018;
+            --amber: #c8973a;
+            --amber-soft: rgba(200, 151, 58, 0.08);
+            --text-hi: #e8ecf0;
+            --text: #9aaabf;
+            --text-dim: #677487;
+            --border: rgba(255, 255, 255, 0.07);
+            --border-hi: rgba(255, 255, 255, 0.12);
+            --mono: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Consolas', 'Monaco', monospace;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--mono);
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 3px);
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 40px;
+            padding: 0 28px;
+            display: flex;
+            align-items: center;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        .topbar a {
+            color: var(--text-dim);
+            text-decoration: none;
+        }
+
+        .topbar a:hover {
+            color: var(--amber);
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
+            max-width: 820px;
+            margin: 32px auto 56px;
+            padding: 32px;
+            background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 30px;
         }
 
         h1 {
-            color: var(--text-main);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
+            color: var(--text-hi);
             margin-top: 0;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-hi);
+            font-size: 28px;
         }
 
         h2 {
-            color: var(--text-main);
+            color: var(--text-hi);
             margin-top: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
 
         h3 {
-            color: var(--text-main);
-            margin-top: 25px;
+            color: var(--amber);
+            margin-top: 24px;
             margin-bottom: 10px;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         p {
@@ -56,17 +108,43 @@
         }
 
         strong {
-            color: var(--accent-blue);
-            font-weight: 600;
+            color: var(--text-hi);
         }
 
         ul, ol {
-            margin-bottom: 15px;
-            padding-left: 30px;
+            margin: 0 0 15px;
+            padding-left: 28px;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+        }
+
+        li::marker {
+            color: var(--amber);
+        }
+
+        a {
+            color: var(--amber);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            color: var(--text-dim);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            padding: 16px 18px;
+            margin-bottom: 24px;
+            background: var(--amber-soft);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--amber);
         }
 
         .back-link {
@@ -76,141 +154,139 @@
             border-top: 1px solid var(--border);
         }
 
-        .back-link a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
+        @media (max-width: 720px) {
+            .topbar {
+                padding: 0 18px;
+            }
 
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-
-        .last-updated {
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 20px;
+            .container {
+                margin: 20px;
+                padding: 24px 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="topbar">
+        <a href="./docs.html">Docs</a>
+        <span style="margin:0 12px; color: var(--text-dim);">/</span>
+        <a href="./index.html">Dashboard</a>
+    </div>
+
     <div class="container">
         <h1>Terms of Use - Strata</h1>
-        <p class="last-updated">Last Updated: January 2026</p>
+        <p class="last-updated">Last Updated: April 12, 2026</p>
+
+        <p class="lead">These terms govern the public Strata dashboard and documentation. Strata is a market-confidence layer for interpreting public market prices. It is not an outcome prediction product, trading system, brokerage, or investment advisory service.</p>
 
         <h2>1. Acceptance of Terms</h2>
-        <p>By accessing and using Strata ("the Service"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the Service.</p>
+        <p>By accessing or using Strata, you agree to these Terms of Use. If you do not agree, do not use the Service.</p>
 
         <h2>2. Description of Service</h2>
-        <p>Strata is a <strong>risk analysis and market structure research tool</strong> designed for:</p>
+        <p>Strata is a public interpretation surface for prediction market prices. It is designed to help users read whether a public market price appears structurally steadier, still calibrating, or more fragile than it first looks.</p>
         <ul>
-            <li>Researchers studying prediction market dynamics</li>
-            <li>Risk managers analyzing liquidity risks</li>
-            <li>Analysts distinguishing between macro-beta flows and idiosyncratic alpha</li>
+            <li>Researchers studying market structure and public price formation</li>
+            <li>Analysts who want more context around a quoted market price</li>
+            <li>Readers using the public dashboard for informational and interpretive purposes</li>
+        </ul>
+        <p><strong>Strata is not:</strong></p>
+        <ul>
+            <li>An outcome prediction engine</li>
+            <li>A trading, betting, or investment recommendation service</li>
+            <li>A guarantee that any market price, signal, or label is correct</li>
         </ul>
 
-        <p><strong>This tool is NOT:</strong></p>
+        <h2>3. Informational Use Only</h2>
+        <p>The Service is provided for informational and interpretive purposes only. Nothing on Strata is financial advice, investment advice, legal advice, betting advice, or a solicitation to trade or wager.</p>
+        <p>You remain solely responsible for any decisions you make using public market information, including information displayed by Strata.</p>
+
+        <h2>4. Public Surface and Proprietary Systems</h2>
+        <p>Strata may display public-facing summaries, labels, and visualizations, but the underlying infrastructure, private research workflows, data transformations, archives, and non-public artifacts remain proprietary.</p>
+
+        <h3>4.1 Public Surface Boundary</h3>
         <ul>
-            <li>A trading platform</li>
-            <li>A betting recommendation service</li>
-            <li>A financial advisory tool</li>
+            <li>The dashboard and docs are limited public presentation layers</li>
+            <li>Internal research artifacts, detailed event exports, archives, and non-public model outputs are not part of the public license</li>
+            <li>Access to the public surface does not grant rights to any internal dataset or private system design</li>
         </ul>
 
-        <h2>3. Proprietary Data and Algorithms</h2>
-
-        <h3>3.1 Strata Score Methodology</h3>
+        <h3>4.2 Restrictions</h3>
         <ul>
-            <li>The Strata Score calculation methodology is <strong>proprietary and confidential</strong></li>
-            <li>You may view the results but may <strong>NOT</strong> reverse engineer the scoring methodology</li>
-            <li>Copying, recreating, or replicating the scoring methodology is <strong>prohibited</strong></li>
+            <li>You may not attempt to reverse engineer non-public scoring logic, extraction methods, or internal system behavior</li>
+            <li>You may not scrape or republish the Service in a way that recreates a competing public surface or substitutes for the Service itself</li>
+            <li>You may not attempt to access endpoints, datasets, or artifacts that are not intentionally exposed for public use</li>
         </ul>
 
-        <h3>3.2 Proprietary Database</h3>
-        <ul>
-            <li>Strata maintains a proprietary time-series database</li>
-            <li>Historical data is <strong>not available for export</strong> without explicit permission</li>
-            <li>Raw data points, calculation intermediates, and full historical records are <strong>confidential</strong></li>
-        </ul>
-
-        <h3>3.3 Data Usage Restrictions</h3>
-        <p><strong>Permitted:</strong> Viewing results, research purposes, academic citation (with attribution)</p>
+        <h2>5. Permitted Public Use</h2>
+        <p><strong>Permitted:</strong> reading the dashboard, using the public docs, and citing the public surface with clear attribution.</p>
         <p><strong>Prohibited:</strong></p>
         <ul>
-            <li>Creating competing products using our data/metrics</li>
-            <li>Reverse engineering algorithms</li>
-            <li>Redistributing data without attribution</li>
-            <li>Commercial use without written consent</li>
+            <li>Using the Service to facilitate illegal gambling, unlawful betting, or unlawful market manipulation</li>
+            <li>Automated abuse, denial-of-service behavior, or attempts to bypass access, origin, or rate controls</li>
+            <li>Misrepresenting Strata as giving personalized advice or certainty about future outcomes</li>
         </ul>
 
-        <h2>4. Intellectual Property</h2>
-        <p>All content, algorithms, data structures, and methodologies are the exclusive property of Strata Research. This includes:</p>
+        <h2>6. Intellectual Property</h2>
+        <p>All Service content, branding, interface design, non-public methods, and associated materials are owned by Strata or its licensors, except where third-party rights apply to linked external content.</p>
         <ul>
-            <li>Strata Score methodology</li>
-            <li>Beta calculation methods</li>
-            <li>Regime classification system</li>
-            <li>Proprietary time-series database</li>
-            <li>User interface design</li>
+            <li>The Strata name, brand, and public interface design</li>
+            <li>Non-public scoring, monitoring, and archival workflows</li>
+            <li>Documentation, copy, graphics, and presentation materials published as part of the Service</li>
         </ul>
 
-        <h2>5. Legal Compliance</h2>
-
-        <h3>5.1 Regulations</h3>
-        <p>Strata complies with applicable regulations regarding gambling promotion:</p>
+        <h2>7. Accuracy and Availability</h2>
+        <p>The Service may be incomplete, delayed, stale, interrupted, or incorrect. Public states and metrics are interpretation aids, not promises. Markets can change quickly, and Strata may lag or fail to reflect current conditions.</p>
         <ul>
-            <li><strong>Does NOT</strong> facilitate betting or gambling</li>
-            <li><strong>Does NOT</strong> provide trading signals or recommendations</li>
-            <li><strong>Does NOT</strong> encourage gambling activities</li>
-            <li>Provides <strong>risk analysis</strong> metrics for research purposes only</li>
+            <li>We do not guarantee uninterrupted access to the Service</li>
+            <li>We do not guarantee the accuracy, completeness, or timeliness of any displayed metric or label</li>
+            <li>We may modify, suspend, or remove parts of the Service at any time</li>
         </ul>
 
-        <h3>5.2 International Compliance</h3>
-        <p>Users are responsible for ensuring their use of the Service complies with local laws and regulations.</p>
-
-        <h2>6. Disclaimer of Warranties</h2>
-        <p>THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. Strata Research:</p>
+        <h2>8. Disclaimer of Warranties</h2>
+        <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</p>
         <ul>
-            <li>Does not guarantee the accuracy of metrics</li>
-            <li>Does not warrant that the Service will be uninterrupted or error-free</li>
-            <li>Does not provide financial, trading, or betting advice</li>
+            <li>We do not warrant that the Service will be uninterrupted, error-free, secure, or fit for a particular purpose</li>
+            <li>We do not warrant that public metrics or labels are complete or accurate</li>
+            <li>We do not provide financial, trading, betting, or investment advice</li>
         </ul>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>Strata Research shall not be liable for:</p>
+        <h2>9. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Strata will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, data, goodwill, or opportunity arising from your use of the Service.</p>
         <ul>
-            <li>Any losses resulting from use of the Service</li>
-            <li>Decisions made based on Strata Score or related metrics</li>
-            <li>Inaccuracies in data or calculations</li>
-            <li>Interruptions in service availability</li>
+            <li>Any losses resulting from decisions made using the Service</li>
+            <li>Any market, trading, wagering, or research outcomes tied to your interpretation of public labels or metrics</li>
+            <li>Any interruption, delay, stale data, or data omission in the public surface</li>
         </ul>
 
-        <h2>8. Prohibited Uses</h2>
-        <p>You may NOT:</p>
+        <h2>10. Prohibited Uses</h2>
+        <p>You may not:</p>
         <ol>
             <li>Use the Service to facilitate illegal gambling or betting activities</li>
-            <li>Reverse engineer or copy our algorithms</li>
-            <li>Create competing products using our data</li>
-            <li>Use the Service in violation of any applicable laws</li>
-            <li>Attempt to gain unauthorized access to proprietary databases</li>
+            <li>Attempt to reverse engineer or bypass non-public system boundaries</li>
+            <li>Attempt to gain unauthorized access to internal datasets, archives, credentials, or infrastructure</li>
+            <li>Use the Service in violation of applicable law</li>
+            <li>Interfere with or disrupt the Service or its supporting infrastructure</li>
         </ol>
 
-        <h2>9. Data Privacy</h2>
+        <h2>11. Privacy</h2>
         <ul>
-            <li>Strata does not collect personal information</li>
-            <li>Usage analytics may be collected anonymously</li>
-            <li>No user accounts or registration required</li>
+            <li>The public dashboard is designed to be readable without account creation</li>
+            <li>Basic operational logs and anonymous analytics may be collected to operate, secure, and improve the Service</li>
+            <li>If you contact us directly, you may provide personal information in that communication</li>
         </ul>
 
-        <h2>10. Modifications to Terms</h2>
-        <p>Strata Research reserves the right to modify these Terms at any time. Continued use of the Service constitutes acceptance of modified terms.</p>
+        <h2>12. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. Continued use of the Service after updated Terms are posted means you accept the revised Terms.</p>
 
-        <h2>11. Contact</h2>
-        <p>For questions regarding these Terms, please contact Strata Research.</p>
+        <h2>13. Contact</h2>
+        <p>For questions about these Terms, contact <a href="mailto:contact@strata-labs.xyz">contact@strata-labs.xyz</a>.</p>
 
         <hr style="border: 1px solid var(--border); margin: 30px 0;">
 
-        <p><strong>By using Strata, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</strong></p>
+        <p><strong>By using Strata, you acknowledge that you have read, understood, and agree to these Terms of Use.</strong></p>
 
         <div class="back-link">
-            <a href="./index.html">← Back to Strata</a>
+            <a href="./index.html">Back to Strata</a>
         </div>
     </div>
 </body>

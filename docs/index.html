@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STRATA | Structural Confidence for Market Prices</title>
     <meta name="description" content="Real-time structural confidence for Polymarket. See which market prices look reliable, which are still calibrating, and which deserve caution.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-
-    <script>
-        window.STRATA_API = '/api';
-    </script>
 </head>
 <body>
 
@@ -213,7 +209,7 @@
 </section>
 
 <!-- DETAIL PANEL -->
-<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="overlay" id="overlay"></div>
 <div class="side-panel" id="side-panel">
     <div class="sp-head">
         <div style="flex:1;">
@@ -228,7 +224,7 @@
             <div class="sp-cat" id="sp-cat"></div>
             <div class="sp-title" id="sp-title">--</div>
         </div>
-        <button class="sp-close" onclick="closePanel()">X CLOSE</button>
+        <button class="sp-close" id="sp-close" type="button">X CLOSE</button>
     </div>
 
     <div class="sp-body">

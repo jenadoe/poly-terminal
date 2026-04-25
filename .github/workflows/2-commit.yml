@@ -79,6 +79,10 @@ jobs:
           if [ -f ../temp_data/completed_ids.json ]; then
             cp -f ../temp_data/completed_ids.json data_output/
           fi
+          if [ -d ../temp_data/enterprise_runtime/tight_churn_receipts ] && find ../temp_data/enterprise_runtime/tight_churn_receipts -type f -name '*.json' | grep -q .; then
+            mkdir -p data_output/enterprise_runtime/tight_churn_receipts
+            cp -rf ../temp_data/enterprise_runtime/tight_churn_receipts/* data_output/enterprise_runtime/tight_churn_receipts/
+          fi
           if [ -d case_studies/active ] && find case_studies/active -maxdepth 1 -name '*.md' | grep -q .; then
             echo "Generating Builder Program evidence snapshots..."
             python scripts/build_bp_evidence.py

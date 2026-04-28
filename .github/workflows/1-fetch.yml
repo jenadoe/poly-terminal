@@ -58,6 +58,8 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          PNEXUS_TIGHT_CHURN_TRADE_SAMPLE_ENABLE: "1"
+          PNEXUS_TIGHT_CHURN_TRADE_SAMPLE_ROW_LIMIT: "50"
         run: |
           cd private-brain
           python main.py
@@ -66,5 +68,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nexus-data
-          path: private-brain/data_output/
+          path: |
+            private-brain/data_output/active_events.json
+            private-brain/data_output/api/
+            private-brain/data_output/audit_logs/
+            private-brain/data_output/regime_changes.json
+            private-brain/data_output/completed_ids.json
           retention-days: 1

@@ -175,7 +175,7 @@ function openPanel(m) {
     eid('sp-score2').textContent = parseFloat(score).toFixed(1);
     eid('sp-price').textContent = fmtCents(m.current_price);
     eid('sp-vol').textContent = fmtVol(m.volume || 0);
-    eid('sp-close').textContent = calcClosesIn(m.close_time, m.time_to_close_days);
+    eid('sp-closes-in').textContent = calcClosesIn(m.close_time, m.time_to_close_days);
 
     const badge = eid('sp-badge');
     badge.textContent = state;
@@ -253,6 +253,6 @@ if (typeof document !== 'undefined') {
     const overlay = document.getElementById('overlay');
     if (overlay) overlay.addEventListener('click', closePanel);
 
-    const closeBtn = document.getElementById('sp-close');
+    const closeBtn = document.getElementById('sp-panel-close');
     if (closeBtn) closeBtn.addEventListener('click', closePanel);
 }

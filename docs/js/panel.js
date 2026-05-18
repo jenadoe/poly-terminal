@@ -164,22 +164,66 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
     outSection.style.display = 'none';
 }
 
+function citationStatusCopy(status) {
+    const copy = {
+        SAFE_TO_CITE: 'Use this price with standard attribution.',
+        CITE_WITH_CONTEXT: 'Cite only if you add the caveat shown below.',
+        REVIEW_FIRST: 'Check the market rules and source details before quoting this price.',
+        DO_NOT_CITE_STANDALONE: 'Do not quote this market price in published copy.',
+    };
+    return copy[status] || '';
+}
+
+function renderCitationSurface(m) {
+    const section = eid('sp-citation-section');
+    const card = eid('sp-citation-card');
+    const statusEl = eid('sp-citation-status');
+    const copyEl = eid('sp-citation-copy');
+    const reasonsEl = eid('sp-citation-reasons');
+    if (!section || !card || !statusEl || !copyEl || !reasonsEl) return;
+
+    if (!m.citation_status) {
+        section.style.display = 'none';
+        return;
+    }
+
+    section.style.display = 'block';
+    card.className = `sp-citation-card ${citationStatusClass(m.citation_status)}`;
+    statusEl.textContent = formatCitationStatus(m.citation_status);
+    copyEl.textContent = citationStatusCopy(m.citation_status);
+    clearChildren(reasonsEl);
+
+    const reasons = Array.isArray(m.citation_overlay_reasons)
+        ? m.citation_overlay_reasons.map(formatCitationReason).filter(Boolean)
+        : [];
+    reasons.forEach(reason => {
+        appendElement(reasonsEl, 'div', reason, 'sp-citation-reason');
+    });
+}
+
 function openPanel(m) {
     const requestToken = ++sparklineRequestToken;
     const score = m.nexus_score || 0;
     const state = m.display_state || 'Fragile';
     const cfg = SC[state] || SC.Fragile;
     const flags = getFlags(m);
+    const quoteMode = Boolean(m.citation_status);
 
-    eid('sp-score').textContent = Math.round(score);
-    eid('sp-score2').textContent = parseFloat(score).toFixed(1);
+    eid('sp-score').textContent = quoteMode ? fmtCents(m.current_price) : Math.round(score);
+    const scoreUnit = eid('sp-score-unit');
+    if (scoreUnit) scoreUnit.textContent = quoteMode ? 'Market price' : 'Score / 100';
+    const score2Label = eid('sp-score2-label');
+    if (score2Label) score2Label.textContent = quoteMode ? 'Diagnostic score' : 'Score';
+    eid('sp-score2').textContent = quoteMode ? 'Hidden' : parseFloat(score).toFixed(1);
     eid('sp-price').textContent = fmtCents(m.current_price);
     eid('sp-vol').textContent = fmtVol(m.volume || 0);
     eid('sp-closes-in').textContent = calcClosesIn(m.close_time, m.time_to_close_days);
 
     const badge = eid('sp-badge');
-    badge.textContent = state;
-    badge.className = `sp-state-badge ${cfg.badge}`;
+    badge.textContent = quoteMode ? formatCitationStatus(m.citation_status) : state;
+    badge.className = quoteMode
+        ? `sp-state-badge ${citationStatusClass(m.citation_status)}`
+        : `sp-state-badge ${cfg.badge}`;
 
     const catEl = eid('sp-cat');
     if (catEl) catEl.textContent = m.category || '';
@@ -198,6 +242,7 @@ function openPanel(m) {
 
     renderContext(eid('sp-context'), buildContext(m));
     renderOutcomesInPanel(m.outcomes, m.current_price);
+    renderCitationSurface(m);
 
     const link = eid('sp-link');
     link.href = m.market_slug ? `https://polymarket.com/event/${m.market_slug}` : 'https://polymarket.com';

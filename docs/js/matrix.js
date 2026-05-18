@@ -3,6 +3,32 @@
 const MARKET_RENDER_BATCH = 18;
 let marketRenderToken = 0;
 
+const QS_COLUMNS = {
+    SAFE_TO_CITE: {
+        col: 'ch-quote-safe',
+        label: 'Quote ready',
+        desc: 'Use with standard attribution',
+    },
+    CITE_WITH_CONTEXT: {
+        col: 'ch-quote-context',
+        label: 'Add context',
+        desc: 'Include caveat before citing',
+    },
+    REVIEW_FIRST: {
+        col: 'ch-quote-review',
+        label: 'Verify first',
+        desc: 'Check details before quoting',
+    },
+    DO_NOT_CITE_STANDALONE: {
+        col: 'ch-quote-stop',
+        label: 'Do not quote',
+        desc: 'Avoid using this price',
+    },
+};
+
+const STATE_COLUMNS = ['Converged', 'Calibrating', 'Fragile'];
+const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'CITE_WITH_CONTEXT', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
+
 function pillarWidths(market) {
     // The public dashboard does not receive true backend pillar sub-scores yet.
     // Keep the 4-bar visual for a future premium surface, but derive it from
@@ -46,16 +72,24 @@ function buildRow(m) {
     appendElement(titleWrap, 'div', m.title || '?', 'mkt-title');
 
     const nxsBlock = appendElement(top, 'div', null, 'nxs-block');
-    appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
-    appendElement(nxsBlock, 'div', Math.round(score), 'nxs-num');
-    appendElement(nxsBlock, 'span', '/ 100', 'nxs-unit');
+    if (m.citation_status) {
+        appendElement(nxsBlock, 'span', 'Odds', 'nxs-label');
+        appendElement(nxsBlock, 'div', fmtCents(m.current_price), 'nxs-num quote-odds');
+        appendElement(nxsBlock, 'span', formatCitationStatus(m.citation_status), `nxs-unit ${citationStatusClass(m.citation_status)}`);
+    } else {
+        appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
+        appendElement(nxsBlock, 'div', Math.round(score), 'nxs-num');
+        appendElement(nxsBlock, 'span', '/ 100', 'nxs-unit');
+    }
 
-    const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
-    pw.forEach(width => {
-        const bar = appendElement(pillars, 'div', null, 'pillar-bar');
-        const fill = appendElement(bar, 'div', null, 'pillar-fill');
-        fill.style.width = `${width}%`;
-    });
+    if (!m.citation_status) {
+        const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
+        pw.forEach(width => {
+            const bar = appendElement(pillars, 'div', null, 'pillar-bar');
+            const fill = appendElement(bar, 'div', null, 'pillar-fill');
+            fill.style.width = `${width}%`;
+        });
+    }
 
     const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
     const meta = appendElement(bottom, 'div');
@@ -66,6 +100,14 @@ function buildRow(m) {
 
     if (state === 'Converged' && m.stable_hours) {
         appendElement(meta, 'span', `✓ STABLE ${fmtStableHours(m.stable_hours)}`, 'stable-badge');
+    }
+    if (m.citation_status) {
+        appendElement(
+            meta,
+            'span',
+            formatCitationStatus(m.citation_status),
+            `quote-badge ${citationStatusClass(m.citation_status)}`
+        );
     }
     appendElement(meta, 'div', `vol. ${fmtVol(m.volume || 0)}`, 'mkt-vol');
 
@@ -80,11 +122,7 @@ function buildRow(m) {
 }
 
 function groupMarketsByState(markets) {
-    const grouped = {
-        Converged: [],
-        Calibrating: [],
-        Fragile: [],
-    };
+    const grouped = Object.fromEntries(STATE_COLUMNS.map(state => [state, []]));
 
     markets.forEach(market => {
         const state = market.display_state || 'Calibrating';
@@ -95,12 +133,37 @@ function groupMarketsByState(markets) {
     return grouped;
 }
 
-function buildColumnHead(state, count) {
-    const cfg = SC[state];
+function groupMarketsByCitationStatus(markets) {
+    const grouped = Object.fromEntries(QUOTE_COLUMNS.map(status => [status, []]));
+
+    markets.forEach(market => {
+        if (!grouped[market.citation_status]) return;
+        grouped[market.citation_status].push(market);
+    });
+
+    return grouped;
+}
+
+function hasCitationSurface(markets) {
+    return markets.some(market => market.citation_status);
+}
+
+function columnConfig(mode, key) {
+    if (mode === 'quote') return QS_COLUMNS[key];
+    return SC[key];
+}
+
+function columnLabel(mode, key) {
+    if (mode === 'quote') return QS_COLUMNS[key].label;
+    return key;
+}
+
+function buildColumnHead(mode, key, count) {
+    const cfg = columnConfig(mode, key);
     const head = document.createElement('div');
     head.className = `col-head ${cfg.col}`;
     appendElement(head, 'span', `${count} shown`, 'col-count');
-    appendElement(head, 'div', state, `col-state cs-${state.toLowerCase()}`);
+    appendElement(head, 'div', columnLabel(mode, key), `col-state ${mode === 'quote' ? citationStatusClass(key) : `cs-${key.toLowerCase()}`}`);
     appendElement(head, 'div', cfg.desc, 'col-desc');
     return head;
 }
@@ -122,19 +185,32 @@ function appendMarketBatch(col, group, startIndex, token) {
 
 function renderMarkets(markets, emptyMessage) {
     const token = ++marketRenderToken;
+    const mode = hasCitationSurface(markets) ? 'quote' : 'state';
+    const matrix = eid('state-matrix');
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
     syncLockedCount();
-    const blankText = emptyMessage || 'No markets in this state';
-    const grouped = groupMarketsByState(markets);
+    renderQuoteSafetySummary(markets);
+    const blankText = emptyMessage || (mode === 'quote' ? 'No markets in this citation status' : 'No markets in this state');
+    const grouped = mode === 'quote' ? groupMarketsByCitationStatus(markets) : groupMarketsByState(markets);
+    const columns = mode === 'quote' ? QUOTE_COLUMNS : STATE_COLUMNS;
+    const title = eid('matrix-title');
+    if (title) {
+        title.textContent = mode === 'quote'
+            ? 'Quote Safety Board - highest-priority public markets by citation status'
+            : 'Integrity State Matrix - highest-priority public markets by structural state';
+    }
+    if (!matrix) return;
+    matrix.innerHTML = '';
+    matrix.className = `state-matrix ${mode === 'quote' ? 'quote-matrix' : 'state-mode'}`;
 
-    ['Converged', 'Calibrating', 'Fragile'].forEach(state => {
-        const col = eid(`col-${state}`);
-        if (!col) return;
-        col.innerHTML = '';
-        const group = grouped[state];
+    columns.forEach(key => {
+        const col = document.createElement('div');
+        col.className = 'state-col';
+        matrix.appendChild(col);
+        const group = grouped[key];
         const frag = document.createDocumentFragment();
-        frag.appendChild(buildColumnHead(state, group.length));
+        frag.appendChild(buildColumnHead(mode, key, group.length));
 
         if (group.length === 0) {
             const empty = document.createElement('div');
@@ -163,6 +239,38 @@ function renderMarkets(markets, emptyMessage) {
     });
 
     renderLockedRows();
+}
+
+function renderQuoteSafetySummary(markets) {
+    const section = eid('quote-safety-summary');
+    if (!section) return;
+    const withCitation = markets.filter(market => market.citation_status);
+    if (!withCitation.length) {
+        section.style.display = 'none';
+        return;
+    }
+
+    const counts = {
+        SAFE_TO_CITE: 0,
+        CITE_WITH_CONTEXT: 0,
+        REVIEW_FIRST: 0,
+        DO_NOT_CITE_STANDALONE: 0,
+    };
+    withCitation.forEach(market => {
+        if (counts[market.citation_status] != null) counts[market.citation_status] += 1;
+    });
+
+    section.style.display = 'block';
+    const fields = [
+        ['qs-safe', counts.SAFE_TO_CITE],
+        ['qs-context', counts.CITE_WITH_CONTEXT],
+        ['qs-review', counts.REVIEW_FIRST],
+        ['qs-stop', counts.DO_NOT_CITE_STANDALONE],
+    ];
+    fields.forEach(([id, count]) => {
+        const el = eid(id);
+        if (el) el.textContent = count;
+    });
 }
 
 function syncLockedCount() {

@@ -48,6 +48,10 @@
 .ssb-c { color: var(--amber-text); border-color: var(--amber-line); background: var(--amber-pale); }
 .ssb-a { color: var(--cyan-text);  border-color: var(--cyan-line);  background: var(--cyan-pale); }
 .ssb-f { color: var(--slate-text); border-color: var(--slate-line); background: var(--slate-pale); }
+.sp-state-badge.quote-safe { color: var(--amber-text); border-color: var(--amber-line); background: var(--amber-pale); }
+.sp-state-badge.quote-context { color: var(--cyan-text); border-color: var(--cyan-line); background: var(--cyan-pale); }
+.sp-state-badge.quote-review { color: #E8C57E; border-color: rgba(232,197,126,0.3); background: rgba(232,197,126,0.08); }
+.sp-state-badge.quote-stop { color: #E48E8E; border-color: rgba(200,68,68,0.28); background: rgba(200,68,68,0.08); }
 .sp-flags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
 .sp-flag { font-size: 10px; font-weight: 600; padding: 2px 7px; letter-spacing: 0.07em; text-transform: uppercase; }
 .spf-c { color: #C44; border: 1px solid rgba(200,68,68,0.2); }
@@ -163,6 +167,54 @@
     line-height: 1.7;
 }
 .sp-context strong { color: var(--text-hi); }
+
+.sp-citation-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+}
+.sp-citation-card.quote-safe {
+    background: var(--amber-pale);
+    border-color: var(--amber-line);
+}
+.sp-citation-card.quote-context {
+    background: var(--cyan-pale);
+    border-color: var(--cyan-line);
+}
+.sp-citation-card.quote-review {
+    background: rgba(232,197,126,0.08);
+    border-color: rgba(232,197,126,0.3);
+}
+.sp-citation-card.quote-stop {
+    background: rgba(200,68,68,0.08);
+    border-color: rgba(200,68,68,0.28);
+}
+.sp-citation-status {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-hi);
+    margin-bottom: 7px;
+}
+.sp-citation-copy {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.6;
+}
+.sp-citation-reasons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sp-citation-reason {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+}
 
 .sp-foot {
     padding: 14px 20px;

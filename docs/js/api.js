@@ -1,6 +1,13 @@
 /* API */
 
 function normalizeMarket(m) {
+    const citationStatus = m.citation_status || m.quote_status || null;
+    const citationReasons = Array.isArray(m.citation_overlay_reasons)
+        ? m.citation_overlay_reasons
+        : Array.isArray(m.quote_reasons)
+            ? m.quote_reasons
+            : [];
+
     return {
         event_id: String(m.event_id || ''),
         title: m.title || '--',
@@ -16,6 +23,9 @@ function normalizeMarket(m) {
         top_outcome_name: m.top_outcome_name || null,
         stable_hours: m.stable_hours != null ? parseFloat(m.stable_hours) : null,
         outcomes: Array.isArray(m.outcomes) ? m.outcomes : [],
+        citation_status: citationStatus,
+        citation_overlay_reasons: citationReasons,
+        core_gate_status: m.core_gate_status || null,
     };
 }
 

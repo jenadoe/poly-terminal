@@ -42,6 +42,34 @@ function fmtCents(p) {
     return c + '\u00A2';
 }
 
+function formatCitationStatus(status) {
+    const labels = {
+        SAFE_TO_CITE: 'Quote ready',
+        CITE_WITH_CONTEXT: 'Add context',
+        REVIEW_FIRST: 'Verify first',
+        DO_NOT_CITE_STANDALONE: 'Do not quote',
+    };
+    return labels[status] || '';
+}
+
+function citationStatusClass(status) {
+    const classes = {
+        SAFE_TO_CITE: 'quote-safe',
+        CITE_WITH_CONTEXT: 'quote-context',
+        REVIEW_FIRST: 'quote-review',
+        DO_NOT_CITE_STANDALONE: 'quote-stop',
+    };
+    return classes[status] || 'quote-unknown';
+}
+
+function formatCitationReason(reason) {
+    if (!reason) return '';
+    if (reason === 'private_valuation_review_overlay') {
+        return 'Private valuation review overlay';
+    }
+    return String(reason);
+}
+
 function calcClosesIn(closeTime, daysToClose) {
     if (closeTime) {
         const diff = new Date(closeTime) - Date.now();

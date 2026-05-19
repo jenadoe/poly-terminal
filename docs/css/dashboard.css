@@ -315,6 +315,7 @@
 
 /* State column */
 .state-col { display: flex; flex-direction: column; }
+.quote-matrix .state-col { min-width: 0; }
 
 /* Column header: the dominant visual signal */
 .col-head {
@@ -393,6 +394,10 @@
     position: relative;
     overflow: hidden;
 }
+.quote-matrix .mkt-row {
+    min-height: 154px;
+    display: flex;
+}
 .mkt-row:last-child { margin-bottom: 0; }
 .mkt-row:hover { border-color: var(--border-hi); }
 
@@ -446,6 +451,11 @@
 }
 
 .mkt-inner { padding: 14px 14px 12px 18px; }
+.quote-matrix .mkt-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 .mkt-top {
     display: flex;
@@ -454,6 +464,7 @@
     gap: 10px;
     margin-bottom: 8px;
 }
+.quote-matrix .mkt-top { min-height: 72px; }
 .mkt-category {
     font-size: 10px;
     letter-spacing: 0.14em;
@@ -558,6 +569,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+}
+.quote-matrix .mkt-bottom {
+    min-height: 34px;
+    margin-top: auto;
 }
 .mkt-price {
     font-size: 16px;

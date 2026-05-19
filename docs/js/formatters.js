@@ -44,10 +44,10 @@ function fmtCents(p) {
 
 function formatCitationStatus(status) {
     const labels = {
-        SAFE_TO_CITE: 'Quote ready',
-        CITE_WITH_CONTEXT: 'Add context',
-        REVIEW_FIRST: 'Verify first',
-        DO_NOT_CITE_STANDALONE: 'Do not quote',
+        SAFE_TO_CITE: 'Ready',
+        CITE_WITH_CONTEXT: 'Context Required',
+        REVIEW_FIRST: 'Review Recommended',
+        DO_NOT_CITE_STANDALONE: 'Not Standalone',
     };
     return labels[status] || '';
 }

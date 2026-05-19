@@ -166,10 +166,10 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
 
 function citationStatusCopy(status) {
     const copy = {
-        SAFE_TO_CITE: 'Use this price with standard attribution.',
-        CITE_WITH_CONTEXT: 'Cite only if you add the caveat shown below.',
-        REVIEW_FIRST: 'Check the market rules and source details before quoting this price.',
-        DO_NOT_CITE_STANDALONE: 'Do not quote this market price in published copy.',
+        SAFE_TO_CITE: 'Standard source attribution is enough.',
+        CITE_WITH_CONTEXT: 'Do not show this price without context.',
+        REVIEW_FIRST: 'Secondary review is recommended before showing this price.',
+        DO_NOT_CITE_STANDALONE: 'Do not show this price by itself.',
     };
     return copy[status] || '';
 }
@@ -193,9 +193,12 @@ function renderCitationSurface(m) {
     copyEl.textContent = citationStatusCopy(m.citation_status);
     clearChildren(reasonsEl);
 
-    const reasons = Array.isArray(m.citation_overlay_reasons)
-        ? m.citation_overlay_reasons.map(formatCitationReason).filter(Boolean)
-        : [];
+    const rawReasons = Array.isArray(m.citation_overlay_reasons)
+        ? m.citation_overlay_reasons
+        : Array.isArray(m.quote_reasons)
+            ? m.quote_reasons
+            : [];
+    const reasons = rawReasons.map(formatCitationReason).filter(Boolean);
     reasons.forEach(reason => {
         appendElement(reasonsEl, 'div', reason, 'sp-citation-reason');
     });

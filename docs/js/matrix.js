@@ -6,23 +6,23 @@ let marketRenderToken = 0;
 const QS_COLUMNS = {
     SAFE_TO_CITE: {
         col: 'ch-quote-safe',
-        label: 'Quote ready',
-        desc: 'Use with standard attribution',
+        label: 'Ready',
+        desc: 'Standard attribution is enough',
     },
     CITE_WITH_CONTEXT: {
         col: 'ch-quote-context',
-        label: 'Add context',
-        desc: 'Include caveat before citing',
+        label: 'Context Required',
+        desc: 'Do not show without context',
     },
     REVIEW_FIRST: {
         col: 'ch-quote-review',
-        label: 'Verify first',
-        desc: 'Check details before quoting',
+        label: 'Review Recommended',
+        desc: 'Secondary review advised',
     },
     DO_NOT_CITE_STANDALONE: {
         col: 'ch-quote-stop',
-        label: 'Do not quote',
-        desc: 'Avoid using this price',
+        label: 'Not Standalone',
+        desc: 'Do not show by itself',
     },
 };
 
@@ -60,9 +60,12 @@ function buildRow(m) {
     const score = m.nexus_score || 0;
     const flags = getFlags(m);
     const pw = pillarWidths(m);
+    const rowClass = m.citation_status
+        ? `r-${citationStatusClass(m.citation_status)}`
+        : cfg.row;
 
     const row = document.createElement('div');
-    row.className = `mkt-row ${cfg.row}`;
+    row.className = `mkt-row ${rowClass}`;
     const inner = appendElement(row, 'div', null, 'mkt-inner');
     const top = appendElement(inner, 'div', null, 'mkt-top');
     const titleWrap = appendElement(top, 'div');
@@ -187,6 +190,8 @@ function renderMarkets(markets, emptyMessage) {
     const token = ++marketRenderToken;
     const mode = hasCitationSurface(markets) ? 'quote' : 'state';
     const matrix = eid('state-matrix');
+    const health = eid('health');
+    if (health) health.style.display = mode === 'quote' ? 'none' : 'block';
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
     syncLockedCount();
@@ -197,7 +202,7 @@ function renderMarkets(markets, emptyMessage) {
     const title = eid('matrix-title');
     if (title) {
         title.textContent = mode === 'quote'
-            ? 'Quote Safety Board - highest-priority public markets by citation status'
+            ? 'Reference Safety Board - highest-priority public markets by status'
             : 'Integrity State Matrix - highest-priority public markets by structural state';
     }
     if (!matrix) return;

@@ -251,7 +251,7 @@ function renderMarkets(markets, emptyMessage) {
         }
     });
 
-    renderLockedRows();
+    renderLockedRows(mode);
 }
 
 function renderQuoteSafetySummary(markets) {
@@ -304,11 +304,34 @@ function syncLockedCount() {
             : '--';
 }
 
-function renderLockedRows() {
+function renderLockedRows(mode = 'state') {
     const wrap = eid('locked-rows-inner');
     if (!wrap) return;
     wrap.innerHTML = '';
-    const ghosts = [
+    const quoteMode = mode === 'quote';
+    const ghosts = quoteMode ? [
+        {
+            citation_status: 'SAFE_TO_CITE',
+            price: 0.42,
+            vol: '$8.7M',
+            cat: 'MARKET',
+            title: 'Additional reference-ready market',
+        },
+        {
+            citation_status: 'REVIEW_FIRST',
+            price: 0.61,
+            vol: '$2.4M',
+            cat: 'POLITICS',
+            title: 'Additional review-recommended market',
+        },
+        {
+            citation_status: 'DO_NOT_CITE_STANDALONE',
+            price: 0.74,
+            vol: '$940K',
+            cat: 'WORLD',
+            title: 'Additional not-standalone market',
+        },
+    ] : [
         {
             state: 'Converged',
             score: 87,
@@ -337,9 +360,10 @@ function renderLockedRows() {
 
     ghosts.forEach(ghost => {
         const cfg = SC[ghost.state] || SC.Fragile;
+        const statusClass = ghost.citation_status ? citationStatusClass(ghost.citation_status) : null;
 
         const row = document.createElement('div');
-        row.className = `locked-row mkt-row ${cfg.row}`;
+        row.className = `locked-row mkt-row ${statusClass ? `r-${statusClass}` : cfg.row}`;
 
         const inner = appendElement(row, 'div', null, 'mkt-inner');
 
@@ -351,19 +375,30 @@ function renderLockedRows() {
         appendElement(titleWrap, 'div', ghost.title, 'mkt-title');
 
         const nxs = appendElement(top, 'div', null, 'nxs-block');
-        appendElement(nxs, 'span', 'Score', 'nxs-label');
-        appendElement(nxs, 'div', ghost.score, 'nxs-num');
-        appendElement(nxs, 'span', '/ 100', 'nxs-unit');
+        if (ghost.citation_status) {
+            appendElement(nxs, 'span', 'Odds', 'nxs-label');
+            appendElement(nxs, 'div', fmtCents(ghost.price), 'nxs-num quote-odds');
+            appendElement(nxs, 'span', formatCitationStatus(ghost.citation_status), `nxs-unit ${statusClass}`);
+        } else {
+            appendElement(nxs, 'span', 'Score', 'nxs-label');
+            appendElement(nxs, 'div', ghost.score, 'nxs-num');
+            appendElement(nxs, 'span', '/ 100', 'nxs-unit');
+        }
 
-        const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
-        ghost.pillars.forEach(width => {
-            const bar = appendElement(pillars, 'div', null, 'pillar-bar');
-            const fill = appendElement(bar, 'div', null, 'pillar-fill');
-            fill.style.width = `${width}%`;
-        });
+        if (!ghost.citation_status) {
+            const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
+            ghost.pillars.forEach(width => {
+                const bar = appendElement(pillars, 'div', null, 'pillar-bar');
+                const fill = appendElement(bar, 'div', null, 'pillar-fill');
+                fill.style.width = `${width}%`;
+            });
+        }
 
         const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
         const meta = appendElement(bottom, 'div');
+        if (ghost.citation_status) {
+            appendElement(meta, 'span', formatCitationStatus(ghost.citation_status), `quote-badge ${statusClass}`);
+        }
         appendElement(meta, 'div', `vol. ${ghost.vol}`, 'mkt-vol');
 
         wrap.appendChild(row);

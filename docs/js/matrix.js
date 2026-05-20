@@ -9,11 +9,6 @@ const QS_COLUMNS = {
         label: 'Ready',
         desc: 'Standard attribution is enough',
     },
-    CITE_WITH_CONTEXT: {
-        col: 'ch-quote-context',
-        label: 'Context Required',
-        desc: 'Do not show without context',
-    },
     REVIEW_FIRST: {
         col: 'ch-quote-review',
         label: 'Review Recommended',
@@ -27,7 +22,11 @@ const QS_COLUMNS = {
 };
 
 const STATE_COLUMNS = ['Converged', 'Calibrating', 'Fragile'];
-const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'CITE_WITH_CONTEXT', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
+const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
+
+function displayCitationGroup(status) {
+    return status === 'CITE_WITH_CONTEXT' ? 'SAFE_TO_CITE' : status;
+}
 
 function pillarWidths(market) {
     // The public dashboard does not receive true backend pillar sub-scores yet.
@@ -61,7 +60,7 @@ function buildRow(m) {
     const flags = getFlags(m);
     const pw = pillarWidths(m);
     const rowClass = m.citation_status
-        ? `r-${citationStatusClass(m.citation_status)}`
+        ? `r-${citationStatusClass(displayCitationGroup(m.citation_status))}`
         : cfg.row;
 
     const row = document.createElement('div');
@@ -78,7 +77,12 @@ function buildRow(m) {
     if (m.citation_status) {
         appendElement(nxsBlock, 'span', 'Odds', 'nxs-label');
         appendElement(nxsBlock, 'div', fmtCents(m.current_price), 'nxs-num quote-odds');
-        appendElement(nxsBlock, 'span', formatCitationStatus(m.citation_status), `nxs-unit ${citationStatusClass(m.citation_status)}`);
+        appendElement(
+            nxsBlock,
+            'span',
+            formatCitationStatus(displayCitationGroup(m.citation_status)),
+            `nxs-unit ${citationStatusClass(displayCitationGroup(m.citation_status))}`
+        );
     } else {
         appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
         appendElement(nxsBlock, 'div', Math.round(score), 'nxs-num');
@@ -108,9 +112,12 @@ function buildRow(m) {
         appendElement(
             meta,
             'span',
-            formatCitationStatus(m.citation_status),
-            `quote-badge ${citationStatusClass(m.citation_status)}`
+            formatCitationStatus(displayCitationGroup(m.citation_status)),
+            `quote-badge ${citationStatusClass(displayCitationGroup(m.citation_status))}`
         );
+        if (m.citation_status === 'CITE_WITH_CONTEXT') {
+            appendElement(meta, 'span', formatCitationStatus(m.citation_status), 'quote-badge quote-context');
+        }
     }
     appendElement(meta, 'div', `vol. ${fmtVol(m.volume || 0)}`, 'mkt-vol');
 
@@ -140,8 +147,9 @@ function groupMarketsByCitationStatus(markets) {
     const grouped = Object.fromEntries(QUOTE_COLUMNS.map(status => [status, []]));
 
     markets.forEach(market => {
-        if (!grouped[market.citation_status]) return;
-        grouped[market.citation_status].push(market);
+        const group = displayCitationGroup(market.citation_status);
+        if (!grouped[group]) return;
+        grouped[group].push(market);
     });
 
     return grouped;
@@ -262,6 +270,11 @@ function renderQuoteSafetySummary(markets) {
         DO_NOT_CITE_STANDALONE: 0,
     };
     withCitation.forEach(market => {
+        if (market.citation_status === 'CITE_WITH_CONTEXT') {
+            counts.SAFE_TO_CITE += 1;
+            counts.CITE_WITH_CONTEXT += 1;
+            return;
+        }
         if (counts[market.citation_status] != null) counts[market.citation_status] += 1;
     });
 

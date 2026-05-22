@@ -1,12 +1,24 @@
 /* API */
 
 function normalizeMarket(m) {
-    const citationStatus = m.citation_status || m.quote_status || null;
+    const referenceToCitation = {
+        READY: 'SAFE_TO_CITE',
+        CONTEXT_REQUIRED: 'CITE_WITH_CONTEXT',
+        REVIEW_RECOMMENDED: 'REVIEW_FIRST',
+        NOT_STANDALONE: 'DO_NOT_CITE_STANDALONE',
+    };
+    const citationStatus =
+        m.citation_status ||
+        m.quote_status ||
+        referenceToCitation[m.reference_status] ||
+        null;
     const citationReasons = Array.isArray(m.citation_overlay_reasons)
         ? m.citation_overlay_reasons
         : Array.isArray(m.quote_reasons)
             ? m.quote_reasons
-            : [];
+            : Array.isArray(m.reference_reasons)
+                ? m.reference_reasons
+                : [];
 
     return {
         event_id: String(m.event_id || ''),
@@ -25,6 +37,9 @@ function normalizeMarket(m) {
         outcomes: Array.isArray(m.outcomes) ? m.outcomes : [],
         citation_status: citationStatus,
         citation_overlay_reasons: citationReasons,
+        reference_status: m.reference_status || null,
+        reference_label: m.reference_label || null,
+        reference_action: m.reference_action || null,
         core_gate_status: m.core_gate_status || null,
     };
 }

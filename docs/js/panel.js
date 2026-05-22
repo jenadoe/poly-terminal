@@ -7,8 +7,25 @@ function buildContext(m) {
     const reason = summarizeMarketReason(m);
     const flags = getFlags(m);
 
+    if (m.citation_status) {
+        const rawReasons = Array.isArray(m.citation_overlay_reasons)
+            ? m.citation_overlay_reasons
+            : Array.isArray(m.quote_reasons)
+                ? m.quote_reasons
+                : [];
+        const reasons = rawReasons.map(formatCitationReason).filter(Boolean);
+        fragments.push({ tag: 'strong', text: 'Reference guidance:' });
+        fragments.push({ text: ` ${citationStatusCopy(m.citation_status)}` });
+        if (reasons.length) {
+            fragments.push({ text: ' ' });
+            fragments.push({ tag: 'strong', text: reasons.slice(0, 2).join(' / ') });
+            fragments.push({ text: '.' });
+        }
+        return fragments;
+    }
+
     fragments.push({ tag: 'strong', text: 'Current read:' });
-    fragments.push({ text: ` ${reason} Score ` });
+    fragments.push({ text: ` ${reason} Diagnostic ` });
     fragments.push({ tag: 'strong', text: score.toFixed(1) });
 
     if (state === 'Converged') {
@@ -214,9 +231,9 @@ function openPanel(m) {
 
     eid('sp-score').textContent = quoteMode ? fmtCents(m.current_price) : Math.round(score);
     const scoreUnit = eid('sp-score-unit');
-    if (scoreUnit) scoreUnit.textContent = quoteMode ? 'Market price' : 'Score / 100';
+    if (scoreUnit) scoreUnit.textContent = quoteMode ? 'Market price' : 'Diagnostic read';
     const score2Label = eid('sp-score2-label');
-    if (score2Label) score2Label.textContent = quoteMode ? 'Diagnostic score' : 'Score';
+    if (score2Label) score2Label.textContent = quoteMode ? 'Diagnostics' : 'Diagnostic';
     eid('sp-score2').textContent = quoteMode ? 'Hidden' : parseFloat(score).toFixed(1);
     eid('sp-price').textContent = fmtCents(m.current_price);
     eid('sp-vol').textContent = fmtVol(m.volume || 0);

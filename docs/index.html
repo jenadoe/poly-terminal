@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRATA | Structural Confidence for Market Prices</title>
-    <meta name="description" content="Real-time structural confidence for Polymarket. See which market prices look reliable, which are still calibrating, and which deserve caution.">
+    <title>STRATA | Reference Safety for Market Prices</title>
+    <meta name="description" content="Reference-safety layer for Polymarket prices. See whether market prices are ready, require context, warrant review, or should not stand alone.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,18 +29,18 @@
 
 <!-- DISCLAIMER -->
 <div class="disclaimer">
-    Strata measures market structure, liquidity quality, and consensus stability. It does not predict outcomes and is not investment advice.
+    Strata assesses reference safety for market prices. It does not predict outcomes, validate odds, or provide trading or investment advice.
 </div>
 
 <!-- HEADER -->
 <header class="site-header">
     <div>
         <div class="logo">STRATA<span class="logo-cursor"></span></div>
-        <div class="logo-sub">// Structural Confidence for Market Prices</div>
+        <div class="logo-sub">// Reference Safety for Market Prices</div>
     </div>
     <div class="header-right">
         <div>UPDATED <strong id="last-update">--</strong></div>
-        <div>ENGINE <strong>STRUCTURAL READ</strong></div>
+        <div>ENGINE <strong>REFERENCE SAFETY</strong></div>
     </div>
 </header>
 
@@ -48,28 +48,28 @@
 <section id="hero">
 <div class="hero-inner">
     <div>
-        <div class="hero-tag">Market-confidence layer for Polymarket</div>
+        <div class="hero-tag">Reference-safety layer for Polymarket</div>
         <h1 class="hero-headline">
-            Not every price<br>reflects <span class="hl">real consensus</span>
+            Not every price<br>should stand <span class="hl">on its own</span>
         </h1>
         <div class="hero-rule"></div>
         <p class="hero-body">
-            Strata reads whether a Polymarket price looks structurally reliable,
-            still calibrating, or too fragile to take at face value. It is built
-            as a public market-confidence layer, not an outcome prediction product.
+            Strata helps humans, dashboards, and AI systems decide how a
+            Polymarket price should be referenced, contextualized, reviewed, or
+            withheld from standalone use.
         </p>
         <p class="hero-note">
-            Structural scoring for market confidence, not outcome prediction.
+            Reference guidance only. Not outcome prediction, odds validation, or a trading signal.
         </p>
         <div class="hero-ctas">
-            <a href="#matrix" class="btn btn-primary">VIEW MARKET STATES</a>
+            <a href="#matrix" class="btn btn-primary">VIEW REFERENCE STATUS</a>
             <a href="#hiw" class="btn btn-ghost">HOW IT WORKS</a>
         </div>
     </div>
 
     <div class="hero-panel">
         <div class="panel-head">
-            <span class="flex1">STRUCTURAL SNAPSHOT</span>
+            <span class="flex1">REFERENCE SNAPSHOT</span>
             <span class="panel-status" id="hero-panel-status">--</span>
         </div>
         <div class="hero-kpi-grid">
@@ -97,19 +97,19 @@
 <!-- HEALTH BAR -->
 <div id="health">
     <div class="health-inner">
-        <div class="health-label">Market health</div>
+        <div class="health-label">Reference surface</div>
         <div class="health-kpis">
             <div class="hkpi">
                 <span class="hkpi-num amber" id="kpi-converged">--</span>
-                <span class="hkpi-label">Converged</span>
+                <span class="hkpi-label">Stable read</span>
             </div>
             <div class="hkpi">
                 <span class="hkpi-num cyan" id="kpi-calibrating">--</span>
-                <span class="hkpi-label">Calibrating</span>
+                <span class="hkpi-label">Forming</span>
             </div>
             <div class="hkpi">
                 <span class="hkpi-num slate" id="kpi-fragile">--</span>
-                <span class="hkpi-label">Fragile</span>
+                <span class="hkpi-label">Caution</span>
             </div>
             <div class="hkpi">
                 <span class="hkpi-num" id="kpi-total">--</span>
@@ -153,7 +153,7 @@
 <!-- STATE MATRIX -->
 <section id="matrix">
     <div class="matrix-header">
-        <div class="matrix-title" id="matrix-title">Integrity State Matrix - highest-priority public markets by structural state</div>
+        <div class="matrix-title" id="matrix-title">Reference Status Matrix - sampled public markets by reference status</div>
         <div class="matrix-access">
             <strong id="shown-count">--</strong> / <strong id="total-tracked">--</strong> markets shown
         </div>
@@ -180,20 +180,20 @@
         <div class="section-eyebrow">Methodology</div>
         <div class="section-title">How Strata Works</div>
         <div class="section-desc">
-            A continuously running system that measures whether a market price looks
-            structurally reliable, not whether the outcome itself will happen.
-            Snapshot depth refers to the current active monitoring window, not full historical lifetime.
+            A continuously running system that assesses how a market price should
+            be handled when it appears in research, dashboards, generated output,
+            or public summaries.
         </div>
 
         <div class="hiw-steps">
             <div class="hiw-step">
                 <div class="hiw-num">01</div>
                 <div>
-                    <div class="hiw-title">Continuous Data Collection</div>
+                    <div class="hiw-title">Continuous Market Monitoring</div>
                     <p class="hiw-body">
                         Active Polymarket markets are collected continuously. For each one,
-                        Strata tracks liquidity depth, participation shape, and supporting
-                        market context, not just headline volume.
+                        Strata tracks public market structure, liquidity shape, wording, and
+                        reference-sensitive context.
                     </p>
                 </div>
             </div>
@@ -201,11 +201,11 @@
             <div class="hiw-step">
                 <div class="hiw-num">02</div>
                 <div>
-                    <div class="hiw-title">Structural Integrity Scoring</div>
+                    <div class="hiw-title">Reference-Safety Assessment</div>
                     <p class="hiw-body">
-                        Each market receives a structural score from 0 to 100 based on how
-                        trustworthy its current price signal appears under real trading
-                        conditions.
+                        Each market receives a reference status that describes whether the
+                        price can appear normally, needs context, warrants review, or should
+                        not be presented alone.
                     </p>
                 </div>
             </div>
@@ -213,24 +213,23 @@
             <div class="hiw-step">
                 <div class="hiw-num">03</div>
                 <div>
-                    <div class="hiw-title">State Classification</div>
+                    <div class="hiw-title">Downstream Handling</div>
                     <p class="hiw-body">
-                        Markets are grouped into clear structural states so you can see
-                        which signals look stable, which are still forming, and which
-                        deserve caution.
+                        Labels are designed for quick scanning by humans and simple routing
+                        by AI agents or product surfaces.
                     </p>
                     <div class="state-legend">
                         <div class="sl-row sl-c">
-                            <span class="sl-name">Converged</span>
-                            <span class="sl-desc">Stable market structure. Price signal looks reliable.</span>
+                            <span class="sl-name">Ready</span>
+                            <span class="sl-desc">Standard source attribution is enough.</span>
                         </div>
                         <div class="sl-row sl-a">
-                            <span class="sl-name">Calibrating</span>
-                            <span class="sl-desc">Consensus is still forming. Price discovery remains active.</span>
+                            <span class="sl-name">Review Recommended</span>
+                            <span class="sl-desc">Secondary review is advised before downstream use.</span>
                         </div>
                         <div class="sl-row sl-f">
-                            <span class="sl-name">Fragile</span>
-                            <span class="sl-desc">Structural weakness detected. Price confidence needs caution.</span>
+                            <span class="sl-name">Not Standalone</span>
+                            <span class="sl-desc">Do not present the price by itself.</span>
                         </div>
                     </div>
                 </div>
@@ -247,7 +246,7 @@
             <div class="sp-score-row">
                 <span class="sp-score" id="sp-score">--</span>
                 <div>
-                    <div class="sp-score-unit" id="sp-score-unit">Score / 100</div>
+                    <div class="sp-score-unit" id="sp-score-unit">Market price</div>
                     <span class="sp-state-badge" id="sp-badge">--</span>
                 </div>
             </div>
@@ -280,7 +279,7 @@
                     <div class="sp-stat-val" id="sp-closes-in">--</div>
                 </div>
                 <div class="sp-stat">
-                    <div class="sp-stat-label" id="sp-score2-label">Score</div>
+                    <div class="sp-stat-label" id="sp-score2-label">Diagnostics</div>
                     <div class="sp-stat-val" id="sp-score2">--</div>
                 </div>
             </div>
@@ -304,7 +303,7 @@
         </div>
 
         <div class="sp-section">
-            <div class="sp-section-label">Current read</div>
+            <div class="sp-section-label">Reference note</div>
             <div class="sp-context" id="sp-context">Loading...</div>
         </div>
     </div>
@@ -319,8 +318,8 @@
 <!-- FOOTER -->
 <footer>
     <div class="footer-copy">
-        <div>STRATA (C) 2026 // MARKET CONFIDENCE LAYER</div>
-        <div>Not investment advice - Structural integrity scoring only</div>
+        <div>STRATA (C) 2026 // REFERENCE SAFETY LAYER</div>
+        <div>Not prediction, odds validation, trading advice, or investment advice</div>
     </div>
     <div class="footer-center">
         <a class="footer-contact" href="./terms.html">Terms of Use</a>

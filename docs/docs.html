@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docs - Strata</title>
-    <meta name="description" content="Public documentation for Strata. Learn how to interpret market states, read the dashboard, and use the public surface.">
+    <meta name="description" content="Public documentation for Strata. Learn how to read reference-safety statuses, use the dashboard, and understand product boundaries.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -131,28 +131,28 @@
             <div class="ph">
                 <div class="ph-eye">01 - Introduction</div>
                 <div class="ph-title">What Is Strata</div>
-                <div class="ph-desc">A public market-confidence layer for prediction market prices. Built to help people read the surface more carefully, not to predict outcomes.</div>
+                <div class="ph-desc">A reference-safety layer for prediction-market prices. Built to help humans and AI systems decide how market prices should be referenced, contextualized, reviewed, or withheld from standalone use.</div>
             </div>
             <div class="pb">
                 <div class="quote">
-                    <div class="quote-text">"Not every price reflects real consensus."</div>
+                    <div class="quote-text">"Not every market price should stand on its own."</div>
                     <div class="quote-attr">Strata - core premise</div>
                 </div>
                 <div class="doc-h2">The problem</div>
-                <p class="doc-p">Prediction market prices are easy to quote and easy to over-read. The same number can sit on top of very different public conditions, and those conditions matter when someone decides how much confidence to place in that price.</p>
-                <p class="doc-p">Strata exists to make that read more legible. It helps users distinguish between prices that look comparatively steady, prices that are still forming, and prices that deserve more caution.</p>
-                <p class="doc-p">The key question is not <strong>"will this happen?"</strong> It is <strong>"how should this price be read right now?"</strong></p>
+                <p class="doc-p">Prediction market prices are easy to surface and easy to over-read. The same number can sit on top of very different sourcing conditions, and those conditions matter when a price appears in a dashboard, report, generated answer, or public summary.</p>
+                <p class="doc-p">Strata exists to make the handling posture more legible. It helps users distinguish between prices that can be referenced normally, prices that require context, prices that warrant secondary review, and prices that should not appear alone.</p>
+                <p class="doc-p">The key question is not <strong>"will this happen?"</strong> It is <strong>"how should this price be handled downstream?"</strong></p>
                 <div class="doc-h2">What Strata helps with</div>
-                <p class="doc-p">Strata adds context to the public market surface through state labels, summary fields, and interpretation cues that help readers understand how much structural confidence to place in a price.</p>
-                <div class="callout"><strong>Important distinction.</strong> Structural confidence is not the same thing as outcome prediction. A market can look steadier or weaker without answering which side will resolve.</div>
+                <p class="doc-p">Strata adds reference-safety status, compact reason tags, and handling guidance to the public market surface. The labels are designed for scanning by humans and for simple routing by AI agents or product integrations.</p>
+                <div class="callout"><strong>Important distinction.</strong> Reference safety is not the same thing as outcome prediction. A market price can be usable, contextual, or restricted without saying whether the outcome will resolve.</div>
                 <div class="doc-h2">What Strata is and is not</div>
                 <div class="grid-2">
                     <div class="card good">
                         <div class="card-label">Strata is</div>
-                        <div class="list-row">A market-confidence layer</div>
-                        <div class="list-row">A public interpretation surface</div>
-                        <div class="list-row">A structural reading tool</div>
-                        <div class="list-row">A way to add context to prices</div>
+                        <div class="list-row">A reference-safety layer</div>
+                        <div class="list-row">A public handling guide for market prices</div>
+                        <div class="list-row">A compact routing surface for AI and dashboards</div>
+                        <div class="list-row">A way to keep context attached to sensitive prices</div>
                     </div>
                     <div class="card bad">
                         <div class="card-label">Strata is not</div>
@@ -163,53 +163,62 @@
                     </div>
                 </div>
                 <div class="doc-h2">Why this matters</div>
-                <p class="doc-p">When people cite market prices in public, they often treat the number as if it explains itself. That can be too simple. Strata is meant to make the public surface more readable so users can interpret prices with more care.</p>
-                <p class="doc-p">A price and a strong signal are related, but they are not the same thing. This docs hub exists to explain that difference in plain language.</p>
+                <p class="doc-p">When market prices move across tools, they are often stripped of the context that makes them understandable. Strata is meant to keep that handling layer visible before a number is reused.</p>
+                <p class="doc-p">A price and a responsible downstream reference are related, but they are not the same thing. This docs hub explains that difference in plain language.</p>
             </div>
         </div>
 
-        <div class="page" data-page="reading-states" data-label="Reading States">
+        <div class="page" data-page="reading-states" data-label="Reference Status">
             <div class="ph">
                 <div class="ph-eye">02 - Dashboard</div>
-                <div class="ph-title">Reading Market States</div>
-                <div class="ph-desc">Each tracked market is shown through a public state. These labels are meant to help interpretation, not replace judgment.</div>
+                <div class="ph-title">Reading Reference Status</div>
+                <div class="ph-desc">Each tracked market is shown through a reference-safety status. These labels describe downstream handling, not outcome probability.</div>
             </div>
             <div class="pb">
-                <div class="doc-h2">The three public states</div>
+                <div class="doc-h2">The public reference statuses</div>
                 <div class="state-list">
                     <div class="state c">
-                        <div class="state-top"><div class="state-label">Converged</div><div class="state-tag">A comparatively steady public read</div></div>
-                        <div class="state-body">The current price appears more settled relative to the rest of the surface. This is the strongest public read shown on the dashboard, but it should still be interpreted as context, not certainty.</div>
+                        <div class="state-top"><div class="state-label">Ready</div><div class="state-tag">Standard source attribution is enough</div></div>
+                        <div class="state-body">The current price can be referenced with normal source attribution on the public surface. This is a handling status, not a claim that the market is correct.</div>
                         <div class="state-pts">
-                            <div class="state-pt">A Converged read does not mean the implied outcome will happen.</div>
-                            <div class="state-pt">It means the price signal currently looks more settled than the alternatives.</div>
-                            <div class="state-pt">Markets can move out of this state as public conditions change.</div>
+                            <div class="state-pt">Ready does not mean the implied outcome will happen.</div>
+                            <div class="state-pt">It means standard attribution is enough for ordinary reference use.</div>
+                            <div class="state-pt">Markets can move out of this status as public conditions change.</div>
                         </div>
                     </div>
                     <div class="state a">
-                        <div class="state-top"><div class="state-label">Calibrating</div><div class="state-tag">The public read is still forming</div></div>
-                        <div class="state-body">The market is still finding its footing. The price may already be useful, but the surface suggests that interpretation should remain more provisional.</div>
+                        <div class="state-top"><div class="state-label">Context Required</div><div class="state-tag">Do not separate the price from its context</div></div>
+                        <div class="state-body">The price may appear only when the relevant context is carried with it. On the dashboard this is shown as a tag on a Ready row when the status is present in the public sample.</div>
                         <div class="state-pts">
-                            <div class="state-pt">This is not automatically a bad state.</div>
-                            <div class="state-pt">It often reflects an active market that is still settling.</div>
-                            <div class="state-pt">Calibrating reads can strengthen or weaken as the surface evolves.</div>
+                            <div class="state-pt">Context Required is not a warning that the market is wrong.</div>
+                            <div class="state-pt">It means the price should not be surfaced without the accompanying context.</div>
+                            <div class="state-pt">AI integrations should carry the context field with the price.</div>
                         </div>
                     </div>
                     <div class="state f">
-                        <div class="state-top"><div class="state-label">Fragile</div><div class="state-tag">Interpret with more caution</div></div>
-                        <div class="state-body">The current price should be read more carefully. A Fragile label means the public surface suggests a weaker or less settled read than other markets.</div>
+                        <div class="state-top"><div class="state-label">Review Recommended</div><div class="state-tag">Secondary review is advised</div></div>
+                        <div class="state-body">The market has conditions that warrant additional scrutiny before the price is reused downstream. Strata is flagging the handling posture, not assigning a reviewer.</div>
                         <div class="state-pts">
-                            <div class="state-pt">Fragile does not mean the price is false.</div>
-                            <div class="state-pt">It means the public read deserves less structural confidence.</div>
-                            <div class="state-pt">High prices can still appear in Fragile markets.</div>
+                            <div class="state-pt">Review Recommended does not mean the price is false.</div>
+                            <div class="state-pt">It means autonomous or standalone reuse should be treated carefully.</div>
+                            <div class="state-pt">High prices can still receive this status.</div>
+                        </div>
+                    </div>
+                    <div class="state f">
+                        <div class="state-top"><div class="state-label">Not Standalone</div><div class="state-tag">Do not present the price by itself</div></div>
+                        <div class="state-body">The price should not appear as an isolated reference. Substantial additional context is required if the market is discussed at all.</div>
+                        <div class="state-pts">
+                            <div class="state-pt">This is a downstream-use restriction, not a market ban.</div>
+                            <div class="state-pt">The status helps prevent stripped or misleading use of a headline price.</div>
+                            <div class="state-pt">Agents should not output the price as a standalone figure.</div>
                         </div>
                     </div>
                 </div>
                 <div class="doc-h2">How to use the labels</div>
                 <div class="concept-list">
-                    <div class="concept"><div class="concept-q">State and direction are separate</div><div class="concept-a">A market can point strongly in one direction and still deserve caution. The state label describes how the public read should be interpreted, not which side will resolve.</div></div>
-                    <div class="concept"><div class="concept-q">State is a current read</div><div class="concept-a">These labels describe how the market appears on the current public surface. They should be read as current context, not permanent tags.</div></div>
-                    <div class="concept"><div class="concept-q">Stronger is not the same as certain</div><div class="concept-a">Even the strongest public read remains a market interpretation, not a guarantee. The docs are here to help users read the surface with the right posture.</div></div>
+                    <div class="concept"><div class="concept-q">Status and outcome are separate</div><div class="concept-a">A market can point strongly in one direction and still require context or review. The status describes downstream handling, not which side will resolve.</div></div>
+                    <div class="concept"><div class="concept-q">Status is current</div><div class="concept-a">These labels describe the current public surface. They should be read as time-sensitive guidance, not permanent tags.</div></div>
+                    <div class="concept"><div class="concept-q">Ready is not certainty</div><div class="concept-a">Even the strongest handling status remains a reference-safety assessment, not a guarantee about the market outcome.</div></div>
                 </div>
             </div>
         </div>
@@ -229,12 +238,12 @@
                             <tr><td>Markets tracked</td><td>The number of markets currently represented on the dashboard.</td></tr>
                             <tr><td>Tracked snapshots</td><td>The total number of recent snapshots currently contributing to the dashboard view.</td></tr>
                             <tr><td>Avg snapshots</td><td>The average number of snapshots currently informing each market on the dashboard.</td></tr>
-                            <tr><td>Evaluated markets</td><td>The number of markets that have already received a structural evaluation on the public surface so far.</td></tr>
+                            <tr><td>Evaluated markets</td><td>The number of markets that have already received a public reference-safety assessment.</td></tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="doc-h2">State distribution</div>
-                <p class="doc-p">The health summary below the hero panel shows how the current public view is distributed across Converged, Calibrating, and Fragile. This helps users read the surface not only market by market, but also as a broader snapshot.</p>
+                <p class="doc-p">The reference-safety summary below the hero panel shows how the current public sample is distributed across Ready, Review Recommended, and Not Standalone, with Context Required shown as an additional handling tag when present.</p>
                 <div class="doc-h2">Status indicators</div>
                 <div class="status-list">
                     <div class="status"><div class="status-key">Current</div><div class="status-val">The public surface is available and appears current.</div></div>
@@ -242,7 +251,7 @@
                     <div class="status"><div class="status-key">Partial</div><div class="status-val">Some pieces of the public surface are unavailable or incomplete.</div></div>
                     <div class="status"><div class="status-key">Unavailable</div><div class="status-val">The public data view cannot currently be displayed.</div></div>
                 </div>
-                <div class="callout alt"><strong>How to use this panel.</strong> Treat the snapshot panel as context for reading the surface. It helps users interpret what they are seeing without reducing the dashboard to a single number.</div>
+                <div class="callout alt"><strong>How to use this panel.</strong> Treat the snapshot panel as context for reading the surface. It helps users understand what they are seeing without reducing the dashboard to a single number.</div>
             </div>
         </div>
 
@@ -250,22 +259,22 @@
             <div class="ph">
                 <div class="ph-eye">04 - Interpretation</div>
                 <div class="ph-title">How to Think About the Surface</div>
-                <div class="ph-desc">This section explains the public interpretation goal behind Strata and how to approach the dashboard with the right posture.</div>
+                <div class="ph-desc">This section explains the public reference-safety goal behind Strata and how to approach the dashboard with the right posture.</div>
             </div>
             <div class="pb">
                 <div class="doc-h2">The public interpretation goal</div>
-                <p class="doc-p">Strata is meant to help users separate two questions that often get blurred together: <strong>what direction the market points</strong> and <strong>how stable that public read looks right now</strong>.</p>
+                <p class="doc-p">Strata is meant to help users separate two questions that often get blurred together: <strong>what direction the market points</strong> and <strong>whether the current price can be responsibly reused downstream</strong>.</p>
                 <p class="doc-p">Those are related questions, but they are not the same. This docs page exists to make that distinction clearer for anyone reading the public dashboard.</p>
                 <div class="quote">
-                    <div class="quote-text">"The public surface is there to help interpret a price more carefully, not to turn a price into a promise."</div>
+                    <div class="quote-text">"The public surface is there to guide responsible reference, not to turn a price into a promise."</div>
                     <div class="quote-attr">Strata - interpretation principle</div>
                 </div>
                 <div class="doc-h2">Useful ways to read the surface</div>
                 <div class="concept-list">
-                    <div class="concept"><div class="concept-q">Read the state before the number</div><div class="concept-a">The state label provides the right posture for interpretation. A price by itself can look more decisive than the surrounding surface really supports.</div></div>
-                    <div class="concept"><div class="concept-q">Use the dashboard as context</div><div class="concept-a">The dashboard is most useful when it is read as a context layer. It helps frame the signal rather than reduce the entire market to a single headline price.</div></div>
-                    <div class="concept"><div class="concept-q">Keep confidence and correctness separate</div><div class="concept-a">A price can look structurally stronger or weaker without answering whether that price will ultimately resolve in the expected direction.</div></div>
-                    <div class="concept"><div class="concept-q">Prefer interpretation over overreach</div><div class="concept-a">The public surface is designed to help users read markets carefully. It should not be treated as a substitute for judgment.</div></div>
+                    <div class="concept"><div class="concept-q">Read the status before the number</div><div class="concept-a">The reference status provides the handling posture. A price by itself can look more reusable than the surrounding surface supports.</div></div>
+                    <div class="concept"><div class="concept-q">Keep context with the price</div><div class="concept-a">When Context Required appears, the relevant context should travel with the price in generated, displayed, or exported output.</div></div>
+                    <div class="concept"><div class="concept-q">Keep reference safety and correctness separate</div><div class="concept-a">A price can be ready, contextual, or restricted without answering whether the market will resolve in the expected direction.</div></div>
+                    <div class="concept"><div class="concept-q">Prefer handling guidance over overreach</div><div class="concept-a">The public surface is designed to help users handle market prices carefully. It should not be treated as a substitute for judgment.</div></div>
                 </div>
                 <div class="callout alt"><strong>Best use of this page.</strong> Read it as a guide to interpreting the dashboard, then return to the live surface with that frame in mind.</div>
             </div>
@@ -280,8 +289,8 @@
             <div class="pb">
                 <div class="faq-list">
                     <div class="faq-item"><button class="faq-q" type="button">Does Strata predict whether an outcome will happen?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. Strata is designed to help interpret the public market surface, not to predict which outcome will resolve.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" type="button">Is this trading or investment advice?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public surface is informational and interpretive only.</div></div></div>
-                    <div class="faq-item"><button class="faq-q" type="button">A market looks confident but shows Fragile. How should I read that?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Read the state label as the posture for interpretation. A high price can still deserve more caution if the public surface suggests a weaker read.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Is this trading or investment advice?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public surface is informational only. It does not recommend trades, positions, wagers, or investments.</div></div></div>
+                    <div class="faq-item"><button class="faq-q" type="button">Does Ready mean Strata thinks the outcome will happen?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. Ready means the price can be referenced with standard attribution on the current public surface. It is not an outcome forecast or odds validation.</div></div></div>
                     <div class="faq-item"><button class="faq-q" type="button">How should I read the status indicators on the dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">Use them as a simple signal for whether the public surface looks current, delayed, partial, or unavailable.</div></div></div>
                     <div class="faq-item"><button class="faq-q" type="button">Do I need an account to use the public dashboard?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">No. The public dashboard is designed to be readable without sign-in.</div></div></div>
                     <div class="faq-item"><button class="faq-q" type="button">Where can I read the legal terms?<span class="faq-arr">></span></button><div class="faq-a"><div class="faq-a-in">The public <a href="./terms.html">Terms of Use</a> are available separately.</div></div></div>

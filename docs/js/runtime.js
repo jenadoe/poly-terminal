@@ -35,21 +35,21 @@ function summarizeMarketReason(market) {
     const flags = getFlags(market);
 
     if (state === 'Converged') {
-        if (stableHours >= 24) return `Stable for ${fmtStableHours(stableHours)} with price support.`;
-        if (volume >= 1e7) return 'High participation and steady pricing support this read.';
-        return 'Price signal looks stable with no active warning flags.';
+        if (stableHours >= 24) return `Stable for ${fmtStableHours(stableHours)} with public market support.`;
+        if (volume >= 1e7) return 'High participation and steady pricing support this reference read.';
+        return 'No active warning flags are visible in the current public read.';
     }
 
     if (state === 'Calibrating') {
         if (flags.includes('Contested')) return 'Consensus is still forming under active disagreement.';
-        if (score >= 70) return 'Price looks close to stable, but not yet fully locked.';
-        return 'Price discovery is still active and confidence is still forming.';
+        if (score >= 70) return 'The public read is close to settled, but still forming.';
+        return 'Price discovery is still active; reference posture may change.';
     }
 
-    if (flags.includes('Contested')) return 'Contested signal, confidence can diverge from the headline price.';
+    if (flags.includes('Contested')) return 'Contested market conditions can make the headline price easy to over-read.';
     if (volume < 1e5) return 'Thin liquidity makes this price easy to over-read.';
-    if (score < 40) return 'Structural weakness remains high relative to the current price.';
-    return 'This market still needs caution before being read at face value.';
+    if (score < 40) return 'Current public structure does not support standalone use.';
+    return 'This market still needs caution before the price is referenced at face value.';
 }
 
 function setRuntimeStatus(kind, message) {

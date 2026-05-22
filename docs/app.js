@@ -79,11 +79,11 @@ function renderHealthInterpretation(total, converged, calibrating, fragile) {
     if (!interp) return;
     clearChildren(interp);
     appendElement(interp, 'strong', `${Math.round((converged / total) * 100)}%`);
-    appendText(interp, ' of markets show structural lock - ');
+    appendText(interp, ' of markets show stable public structure - ');
     appendElement(interp, 'strong', calibrating);
-    appendText(interp, ' in price discovery - ');
+    appendText(interp, ' still forming - ');
     appendElement(interp, 'strong', fragile);
-    appendText(interp, ' below reliability threshold');
+    appendText(interp, ' flagged for cautious reference');
 }
 
 function renderKPIs(k) {

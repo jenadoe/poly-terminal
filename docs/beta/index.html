@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata | Reference Preview</title>
+    <meta name="description" content="An early-access reference-safety preview for high-visibility Polymarket prices.">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/press-sample.css">
+</head>
+<body>
+    <div class="access-gate" id="access-gate">
+        <div class="access-card">
+            <div class="sample-eyebrow">Early-access preview</div>
+            <h1>Strata Reference Preview</h1>
+            <p>
+                This invite-only preview uses public-safe sample data only. Enter
+                the access code from your outreach note to view the reference cards.
+            </p>
+            <form id="access-form">
+                <input id="access-code" type="password" autocomplete="off" placeholder="Access code">
+                <button class="sample-btn sample-btn-primary" type="submit">Unlock</button>
+            </form>
+            <div class="access-error" id="access-error"></div>
+            <a class="access-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20access">Request access</a>
+        </div>
+    </div>
+
+    <div class="topbar">
+        <div class="topbar-left">
+            <a class="topbar-link" href="/">Dashboard</a>
+            <span>/</span>
+            <a class="topbar-link" href="/docs.html">Docs</a>
+            <span>/</span>
+            <span>Reference Preview</span>
+        </div>
+        <span class="topbar-right" id="sample-clock">--:--:--</span>
+    </div>
+
+    <div class="disclaimer">
+        Strata provides reference-safety guidance only. It does not predict outcomes, validate odds, or provide trading or investment advice.
+    </div>
+
+    <header class="sample-header">
+        <div>
+            <div class="logo">STRATA<span class="logo-cursor"></span></div>
+            <div class="logo-sub">// Reference Preview</div>
+        </div>
+        <div class="header-right">
+            <div>SAMPLE <strong>PUBLIC SAFE</strong></div>
+            <div>STATUS <strong id="sample-status">LOADING</strong></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sample-hero">
+            <div class="sample-hero-copy">
+                <div class="sample-eyebrow">Reference-safety sample for Polymarket prices</div>
+                <h1>High-visibility Polymarket markets sorted by reference readiness.</h1>
+                <p>
+                    This preview shows public-safe market prices that are ready for normal reference,
+                    require added context, need further review, or should not appear as standalone
+                    figures. Access is invite-limited while the preview is being reviewed.
+                </p>
+                <div class="sample-actions">
+                    <a class="sample-btn sample-btn-primary" href="#reference-cards">View watchlist</a>
+                    <a class="sample-btn sample-btn-ghost" href="#feedback">Feedback questions</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sample-strip">
+            <div class="strip-card">
+                <span id="metric-markets">--</span>
+                <label>Markets in sample</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-ready">--</span>
+                <label>Ready</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-context">--</span>
+                <label>Context required</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-review">--</span>
+                <label>Review recommended</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-stop">--</span>
+                <label>Not standalone</label>
+            </div>
+        </section>
+
+        <section class="sample-section" id="reference-cards">
+            <div class="section-head">
+                <div>
+                    <div class="sample-eyebrow">Reference watchlist</div>
+                    <h2>Current public-safe markets</h2>
+                </div>
+                <div class="section-note">Sorted by status and volume from the public-safe <code>/api/markets</code> payload.</div>
+            </div>
+            <div class="cards-grid" id="cards-grid">
+                <div class="loading-card">Loading reference watchlist...</div>
+            </div>
+        </section>
+
+        <section class="sample-section sample-two-col">
+            <div class="method-card">
+                <div class="sample-eyebrow">Methodology note</div>
+                <h2>What the labels mean</h2>
+                <p>
+                    Strata evaluates reference posture based on public market structure,
+                    market wording, resolution sensitivity, and context risk. The status describes
+                    whether a price can stand on its own or needs additional framing.
+                </p>
+                <ul>
+                    <li><strong>Ready:</strong> standard source attribution is enough. This is not a claim that the odds are correct.</li>
+                    <li><strong>Context Required:</strong> the price should appear only with the stated context.</li>
+                    <li><strong>Review Recommended:</strong> the market needs extra scrutiny before the price is treated as a standalone reference.</li>
+                    <li><strong>Not Standalone:</strong> do not present the price by itself.</li>
+                </ul>
+            </div>
+            <div class="method-card">
+                <div class="sample-eyebrow">API example</div>
+                <h2>Machine-readable payload</h2>
+                <pre id="api-example">{
+  "reference_status": "REVIEW_RECOMMENDED",
+  "reference_label": "Review Recommended",
+  "reference_action": "Secondary review is recommended before this price is referenced.",
+  "reference_reasons": [
+    "Resolution or source details need checking before this price is referenced."
+  ],
+  "disclaimer": "Reference status reflects context risk, not predictive accuracy or market quality."
+}</pre>
+            </div>
+        </section>
+
+        <section class="sample-section outreach-card" id="feedback">
+            <div>
+                <div class="sample-eyebrow">Feedback ask</div>
+                <h2>Three things we want reviewers to judge</h2>
+                <p>
+                    We are testing whether this format fits real reference, research, dashboard,
+                    and AI-output workflows. Useful feedback is specific and operational.
+                </p>
+                <ol class="feedback-list">
+                    <li>Did the status match how you would handle this market price?</li>
+                    <li>Was the suggested reference text usable, too cautious, or too generic?</li>
+                    <li>Which market or workflow would you want Strata to cover next?</li>
+                </ol>
+            </div>
+            <a class="sample-btn sample-btn-primary" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20feedback&body=1.%20Did%20the%20status%20match%20your%20handling%20of%20the%20market%3F%0A%0A2.%20Was%20the%20suggested%20reference%20text%20usable%2C%20too%20cautious%2C%20or%20too%20generic%3F%0A%0A3.%20Which%20market%20or%20workflow%20would%20you%20want%20Strata%20to%20cover%20next%3F%0A">Send answers</a>
+        </section>
+    </main>
+
+    <footer class="sample-footer">
+        <div>STRATA (C) 2026 // REFERENCE SAFETY LAYER</div>
+        <div>
+            <a href="/terms.html">Terms</a>
+            <a href="/docs.html">Docs</a>
+            <a href="/">Dashboard</a>
+        </div>
+    </footer>
+
+    <script src="/js/formatters.js"></script>
+    <script src="/js/press-sample.js"></script>
+</body>
+</html>

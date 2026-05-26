@@ -1,9 +1,7 @@
 const API_URL = '/api/markets';
 const ACCESS_STORAGE_KEY = 'strata_reference_preview_access_v1';
-const ACCESS_PARAM = 'access';
 const ALLOWED_ACCESS_HASHES = new Set([
-    '10d480a8004917707cc1ce31e791e670f926f2307f4e15ea6f253a17cdd78585',
-    'b188b5e84422a326da511edcf9d3735344a3581790deb4611ff56ee2644462bb',
+    '74ccad3c203721244abc930593e9652060fc0438355d712bf5dad7396718c51e',
 ]);
 const STATUS_CLASS = {
     READY: 'status-ready',
@@ -66,29 +64,16 @@ function unlockSample() {
     if (gate) gate.classList.add('is-unlocked');
 }
 
-function cleanAccessParam() {
-    const url = new URL(window.location.href);
-    if (!url.searchParams.has(ACCESS_PARAM)) return;
-    url.searchParams.delete(ACCESS_PARAM);
-    window.history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
-}
-
 async function initAccessGate() {
     document.body.classList.add('sample-locked');
-    const params = new URLSearchParams(window.location.search);
-    const urlCode = params.get(ACCESS_PARAM);
     const storedCode = window.localStorage.getItem(ACCESS_STORAGE_KEY);
-    const initialCode = urlCode || storedCode;
 
-    if (await isAllowedCode(initialCode)) {
-        if (urlCode) window.localStorage.setItem(ACCESS_STORAGE_KEY, urlCode.trim());
-        cleanAccessParam();
+    if (await isAllowedCode(storedCode)) {
         unlockSample();
         loadSample();
         return;
     }
 
-    cleanAccessParam();
     const form = sampleEid('access-form');
     const input = sampleEid('access-code');
     const error = sampleEid('access-error');

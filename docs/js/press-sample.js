@@ -154,6 +154,8 @@ function displayPrice(market) {
 }
 
 function suggestedReference(market) {
+    if (market.reference_line) return market.reference_line;
+
     const title = market.title || 'this Polymarket market';
     const price = displayPrice(market);
     const label = referenceLabel(market);
@@ -176,6 +178,20 @@ function suggestedReference(market) {
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;
+}
+
+function panelReferenceOutput(market, handling) {
+    if (market.reference_status === 'NOT_STANDALONE') {
+        return 'No standalone citation generated for this status. Use only inside a broader explanation.';
+    }
+    return suggestedReference(market);
+}
+
+function panelCopyText(market, handling, output) {
+    if (market.reference_status === 'NOT_STANDALONE') {
+        return handling || output;
+    }
+    return output;
 }
 
 function copyText(text, button) {
@@ -226,7 +242,9 @@ function openBetaPanel(market) {
     if (!panel || !overlay) return;
 
     const reasons = reasonText(market);
-    const copy = suggestedReference(market);
+    const handling = statusAction(market);
+    const output = panelReferenceOutput(market, handling);
+    const copy = panelCopyText(market, handling, output);
     const statusClass = STATUS_CLASS[market.reference_status] || '';
     const status = sampleEid('bp-status');
 
@@ -240,11 +258,16 @@ function openBetaPanel(market) {
     sampleEid('bp-volume').textContent = fmtVol(market.volume || 0);
     sampleEid('bp-close-time').textContent = closeText(market);
     sampleEid('bp-event').textContent = shortEventId(market.event_id);
-    sampleEid('bp-guidance').textContent = statusAction(market);
+    sampleEid('bp-guidance').textContent = handling;
     sampleEid('bp-copy-label').textContent = market.reference_status === 'NOT_STANDALONE'
-        ? 'Handling note'
-        : 'Reference line';
-    sampleEid('bp-copy-text').textContent = copy;
+        ? 'Reference Output'
+        : 'Suggested Reference';
+    sampleEid('bp-copy-text').textContent = output;
+
+    const outputSection = sampleEid('bp-output-section');
+    if (outputSection) {
+        outputSection.classList.toggle('beta-panel-output-locked', market.reference_status === 'NOT_STANDALONE');
+    }
 
     const reasonsWrap = sampleEid('bp-reasons');
     if (reasonsWrap) {
@@ -258,7 +281,7 @@ function openBetaPanel(market) {
 
     const copyBtn = sampleEid('bp-copy');
     if (copyBtn) {
-        copyBtn.textContent = market.reference_status === 'NOT_STANDALONE' ? 'Copy note' : 'Copy line';
+        copyBtn.textContent = market.reference_status === 'NOT_STANDALONE' ? 'Copy handling note' : 'Copy reference';
         copyBtn.onclick = () => copyText(copy, copyBtn);
     }
 

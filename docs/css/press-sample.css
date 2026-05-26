@@ -773,6 +773,27 @@ body.sample-locked {
     border-top: 1px solid var(--border);
 }
 
+.beta-panel-block {
+    margin-bottom: 14px;
+    padding: 14px !important;
+    border: 1px solid var(--border) !important;
+    background: rgba(255,255,255,0.018);
+}
+
+.beta-panel-guidance {
+    border-top: 2px solid var(--amber-line) !important;
+    background: linear-gradient(180deg, rgba(232,197,126,0.075), rgba(255,255,255,0.018));
+}
+
+.beta-panel-note {
+    border-top: 1px solid var(--border-hi) !important;
+}
+
+.beta-panel-output-locked {
+    border-top: 2px solid #C44 !important;
+    background: linear-gradient(180deg, rgba(204,68,68,0.08), rgba(255,255,255,0.018));
+}
+
 .beta-panel-body p {
     color: var(--text-hi);
     font-size: 13px;
@@ -851,11 +872,16 @@ body.sample-locked {
 
 .beta-panel-copy {
     padding: 12px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--border);
-    color: var(--text);
+    background: rgba(0,0,0,0.22);
+    border: 1px solid rgba(232,197,126,0.28);
+    color: var(--text-hi);
     font-size: 13px;
     line-height: 1.7;
+}
+
+.beta-panel-output-locked .beta-panel-copy {
+    border-color: rgba(228,142,142,0.32);
+    color: var(--text);
 }
 
 .beta-panel-foot {

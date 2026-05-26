@@ -131,12 +131,25 @@ function shortEventId(id) {
 }
 
 function closeText(market) {
-    if (typeof calcClosesIn === 'function') {
-        return calcClosesIn(market.close_time);
-    }
     if (!market.close_time) return '--';
     const close = new Date(market.close_time);
     if (Number.isNaN(close.getTime())) return '--';
+    const diff = close.getTime() - Date.now();
+    if (diff <= 0) return 'Closed';
+    const days = Math.floor(diff / 86400000);
+    const isEndOfYear = close.getUTCMonth() === 11 && close.getUTCDate() === 31;
+    if (isEndOfYear && days >= 90) return `End ${close.getUTCFullYear()}`;
+    if (days >= 180) {
+        return close.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            timeZone: 'UTC',
+        });
+    }
+    if (typeof calcClosesIn === 'function') {
+        return calcClosesIn(market.close_time);
+    }
     return close.toISOString().slice(0, 10);
 }
 

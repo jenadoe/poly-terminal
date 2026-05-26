@@ -302,6 +302,92 @@ body.sample-locked {
     border-top-color: rgba(200,68,68,0.36);
 }
 
+.ready-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ready-row {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(360px, 0.9fr) auto;
+    gap: 14px;
+    align-items: center;
+    padding: 13px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--cyan);
+}
+
+.ready-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    color: var(--text-dim);
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.ready-title {
+    overflow: hidden;
+    color: var(--text-hi);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ready-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.ready-stats div {
+    min-width: 0;
+    padding: 7px 8px;
+    background: rgba(255,255,255,0.018);
+}
+
+.ready-stats span {
+    display: block;
+    color: var(--text-dim);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.ready-stats strong {
+    display: block;
+    overflow: hidden;
+    color: var(--text-hi);
+    font-size: 11px;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ready-stats div:last-child strong {
+    color: var(--cyan-text);
+}
+
+.ready-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.ready-actions .sample-btn {
+    min-height: 34px;
+    padding: 8px 10px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
 .reference-card {
     min-height: 398px;
     display: flex;
@@ -551,6 +637,13 @@ body.sample-locked {
     }
     .cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ready-row {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+    .ready-actions {
+        justify-content: flex-start;
     }
 }
 

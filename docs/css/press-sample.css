@@ -1,5 +1,5 @@
 main {
-    max-width: 1180px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 28px 64px;
 }
@@ -107,7 +107,8 @@ body.sample-locked {
 
 .sample-hero {
     display: block;
-    padding: 54px 0 34px;
+    padding: 44px 0 30px;
+    border-bottom: 1px solid var(--border);
 }
 
 .sample-eyebrow {
@@ -125,8 +126,8 @@ body.sample-locked {
 }
 
 .sample-hero h1 {
-    max-width: 880px;
-    font-size: 38px;
+    max-width: 840px;
+    font-size: 34px;
     margin-bottom: 16px;
 }
 
@@ -186,9 +187,8 @@ body.sample-locked {
 .sample-strip {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin-bottom: 42px;
+    margin-bottom: 34px;
 }
 
 .strip-card {
@@ -263,7 +263,7 @@ body.sample-locked {
     align-items: flex-end;
     justify-content: space-between;
     gap: 20px;
-    padding: 16px 0 12px;
+    padding: 18px 0 12px;
     border-top: 1px solid var(--border);
 }
 
@@ -303,7 +303,7 @@ body.sample-locked {
 }
 
 .reference-card {
-    min-height: 334px;
+    min-height: 318px;
     display: flex;
     flex-direction: column;
     border-top: 2px solid var(--border-hi);
@@ -329,7 +329,7 @@ body.sample-locked {
     text-transform: uppercase;
 }
 .card-title {
-    min-height: 44px;
+    min-height: 46px;
     color: var(--text-hi);
     font-size: 14px;
     line-height: 1.55;
@@ -344,7 +344,7 @@ body.sample-locked {
 }
 .card-price {
     color: var(--text-hi);
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
 }
 .status-pill {
@@ -404,7 +404,7 @@ body.sample-locked {
     margin-right: 7px;
 }
 .reference-copy {
-    min-height: 86px;
+    min-height: 96px;
     padding: 10px 11px;
     color: var(--text);
     background: rgba(255,255,255,0.02);
@@ -436,7 +436,7 @@ body.sample-locked {
     gap: 12px;
 }
 .method-card {
-    padding: 22px;
+    padding: 20px;
 }
 .method-card ul {
     margin: 16px 0 0;

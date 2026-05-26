@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strata | Reference Preview</title>
-    <meta name="description" content="An early-access reference-safety preview for high-visibility Polymarket prices.">
+    <meta name="description" content="An early-access reference-safety briefing for high-visibility Polymarket prices.">
     <meta name="robots" content="noindex,nofollow,noarchive">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -18,10 +18,10 @@
     <div class="access-gate" id="access-gate">
         <div class="access-card">
             <div class="sample-eyebrow">Early-access preview</div>
-            <h1>Strata Reference Preview</h1>
+            <h1>Strata Beta Access</h1>
             <p>
-                This invite-only preview uses public-safe sample data only. Enter
-                the access code from your outreach note to view the reference cards.
+                Enter the access code from your outreach note to view the current
+                reference-safety briefing.
             </p>
             <form id="access-form">
                 <input id="access-code" type="password" autocomplete="off" placeholder="Access code">
@@ -38,7 +38,7 @@
             <span>/</span>
             <a class="topbar-link" href="/docs.html">Docs</a>
             <span>/</span>
-            <span>Reference Preview</span>
+            <span>Beta Access</span>
         </div>
         <span class="topbar-right" id="sample-clock">--:--:--</span>
     </div>
@@ -50,7 +50,7 @@
     <header class="sample-header">
         <div>
             <div class="logo">STRATA<span class="logo-cursor"></span></div>
-            <div class="logo-sub">// Reference Preview</div>
+            <div class="logo-sub">// Beta Briefing</div>
         </div>
         <div class="header-right">
             <div>SAMPLE <strong>PUBLIC SAFE</strong></div>
@@ -61,15 +61,15 @@
     <main>
         <section class="sample-hero">
             <div class="sample-hero-copy">
-                <div class="sample-eyebrow">Reference-safety sample for Polymarket prices</div>
-                <h1>High-visibility Polymarket markets sorted by reference readiness.</h1>
+                <div class="sample-eyebrow">Beta briefing for Polymarket prices</div>
+                <h1>High-visibility markets organized by reference posture.</h1>
                 <p>
-                    This preview shows public-safe market prices that are ready for normal reference,
-                    require added context, need further review, or should not appear as standalone
-                    figures. Access is invite-limited while the preview is being reviewed.
+                    This briefing highlights which market prices can stand on their own,
+                    which need added context, and which should not be treated as isolated
+                    references. It is designed as a compact review surface, not a market terminal.
                 </p>
                 <div class="sample-actions">
-                    <a class="sample-btn sample-btn-primary" href="#reference-cards">View watchlist</a>
+                    <a class="sample-btn sample-btn-primary" href="#reference-cards">View briefing</a>
                     <a class="sample-btn sample-btn-ghost" href="#feedback">Feedback questions</a>
                 </div>
             </div>
@@ -101,13 +101,13 @@
         <section class="sample-section" id="reference-cards">
             <div class="section-head">
                 <div>
-                    <div class="sample-eyebrow">Reference watchlist</div>
-                    <h2>Current public-safe markets</h2>
+                    <div class="sample-eyebrow">Market briefing</div>
+                    <h2>Current reference posture</h2>
                 </div>
-                <div class="section-note">Sorted by status and volume from the public-safe <code>/api/markets</code> payload.</div>
+                <div class="section-note">Sorted by status and market visibility.</div>
             </div>
             <div class="cards-grid" id="cards-grid">
-                <div class="loading-card">Loading reference watchlist...</div>
+                <div class="loading-card">Loading reference briefing...</div>
             </div>
         </section>
 
@@ -128,17 +128,18 @@
                 </ul>
             </div>
             <div class="method-card">
-                <div class="sample-eyebrow">API example</div>
-                <h2>Machine-readable payload</h2>
-                <pre id="api-example">{
-  "reference_status": "REVIEW_RECOMMENDED",
-  "reference_label": "Review Recommended",
-  "reference_action": "Secondary review is recommended before this price is referenced.",
-  "reference_reasons": [
-    "Resolution or source details need checking before this price is referenced."
-  ],
-  "disclaimer": "Reference status reflects context risk, not predictive accuracy or market quality."
-}</pre>
+                <div class="sample-eyebrow">Boundary note</div>
+                <h2>What this does not mean</h2>
+                <p>
+                    A Strata label is not a forecast, endorsement, odds validation,
+                    or investment recommendation. It only describes whether the market
+                    price needs additional framing before it appears in another surface.
+                </p>
+                <ul>
+                    <li>No raw trades, wallets, or participant identifiers are shown.</li>
+                    <li>No numeric rating is used as a public-facing claim.</li>
+                    <li>No label should be interpreted as trading or outcome guidance.</li>
+                </ul>
             </div>
         </section>
 

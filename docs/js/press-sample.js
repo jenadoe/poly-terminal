@@ -304,7 +304,7 @@ function renderCards(markets) {
     if (!markets.length) {
         const empty = document.createElement('div');
         empty.className = 'loading-card';
-        empty.textContent = 'No public reference-safety sample is available right now.';
+        empty.textContent = 'No reference briefing is available right now.';
         grid.appendChild(empty);
         return;
     }
@@ -346,20 +346,6 @@ function renderCards(markets) {
     });
 }
 
-function renderApiExample(markets) {
-    const el = sampleEid('api-example');
-    if (!el || !markets.length) return;
-    const market = markets.find(item => item.reference_status === 'REVIEW_RECOMMENDED') || markets[0];
-    el.textContent = JSON.stringify({
-        event_id: market.event_id,
-        reference_status: market.reference_status,
-        reference_label: market.reference_label,
-        reference_action: market.reference_action,
-        reference_reasons: market.reference_reasons,
-        disclaimer: 'Reference status reflects context risk, not predictive accuracy or market quality.',
-    }, null, 2);
-}
-
 async function loadSample() {
     try {
         const res = await fetch(API_URL);
@@ -370,13 +356,12 @@ async function loadSample() {
             : [];
         renderMetrics(markets);
         renderCards(markets);
-        renderApiExample(markets);
         setSampleStatus('LIVE');
     } catch (err) {
         setSampleStatus('UNAVAILABLE');
         const grid = sampleEid('cards-grid');
         if (grid) {
-            grid.innerHTML = '<div class="loading-card">Reference sample unavailable. Try again shortly.</div>';
+            grid.innerHTML = '<div class="loading-card">Reference briefing unavailable. Try again shortly.</div>';
         }
     }
 }

@@ -149,14 +149,18 @@ function statusAction(market) {
     return 'Review the reference posture before use.';
 }
 
+function displayPrice(market) {
+    return fmtOutcomePct(market.current_price);
+}
+
 function suggestedReference(market) {
     const title = market.title || 'this Polymarket market';
-    const price = fmtCents(market.current_price);
+    const price = displayPrice(market);
     const label = referenceLabel(market);
     const reasons = reasonText(market).join(' ');
 
     if (market.reference_status === 'READY') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}: standard source attribution is sufficient for ordinary reference use. This does not mean the odds are correct or predictive.`;
+        return `Polymarket currently prices "${title}" at ${price}.`;
     }
 
     if (market.reference_status === 'CONTEXT_REQUIRED') {
@@ -229,116 +233,9 @@ function marketUrl(market) {
         : 'https://polymarket.com';
 }
 
-function buildCard(market) {
-    const card = document.createElement('article');
-    card.className = `reference-card ${STATUS_CLASS[market.reference_status] || ''}`;
-
-    const top = document.createElement('div');
-    top.className = 'card-top';
-    card.appendChild(top);
-
-    const meta = document.createElement('div');
-    meta.className = 'card-meta';
-    meta.innerHTML = `<span>${market.category || 'Market'}</span><span>${shortEventId(market.event_id)}</span>`;
-    top.appendChild(meta);
-
-    const title = document.createElement('div');
-    title.className = 'card-title';
-    title.textContent = market.title || '--';
-    top.appendChild(title);
-
-    const priceRow = document.createElement('div');
-    priceRow.className = 'card-price-row';
-    top.appendChild(priceRow);
-
-    const price = document.createElement('div');
-    price.className = 'card-price';
-    price.textContent = fmtCents(market.current_price);
-    priceRow.appendChild(price);
-
-    const status = document.createElement('div');
-    status.className = 'status-pill';
-    status.textContent = referenceLabel(market);
-    priceRow.appendChild(status);
-
-    const details = document.createElement('div');
-    details.className = 'card-detail-grid';
-    details.innerHTML = `
-        <div><span>Volume</span><strong>${fmtVol(market.volume || 0)}</strong></div>
-        <div><span>Close</span><strong>${closeText(market)}</strong></div>
-        <div><span>Category</span><strong>${market.category || 'Market'}</strong></div>
-    `;
-    top.appendChild(details);
-
-    const body = document.createElement('div');
-    body.className = 'card-body';
-    card.appendChild(body);
-
-    const reasonsWrap = document.createElement('div');
-    reasonsWrap.innerHTML = '<div class="card-section-label">Reference guidance</div>';
-    const action = document.createElement('div');
-    action.className = 'action-note';
-    action.textContent = statusAction(market);
-    reasonsWrap.appendChild(action);
-    const reasonLabel = document.createElement('div');
-    reasonLabel.className = 'card-section-label card-section-label-nested';
-    reasonLabel.textContent = 'Reason';
-    reasonsWrap.appendChild(reasonLabel);
-    const list = document.createElement('div');
-    list.className = 'reason-list';
-    reasonText(market).forEach(reason => {
-        const item = document.createElement('div');
-        item.className = 'reason-item';
-        item.textContent = reason;
-        list.appendChild(item);
-    });
-    reasonsWrap.appendChild(list);
-    body.appendChild(reasonsWrap);
-
-    let copy = null;
-    if (market.reference_status === 'NOT_STANDALONE') {
-        const warningWrap = document.createElement('div');
-        warningWrap.innerHTML = '<div class="card-section-label">Handling note</div>';
-        copy = document.createElement('div');
-        copy.className = 'reference-copy';
-        copy.textContent = suggestedReference(market);
-        warningWrap.appendChild(copy);
-        body.appendChild(warningWrap);
-    } else {
-        const copyWrap = document.createElement('div');
-        copyWrap.innerHTML = '<div class="card-section-label">Suggested reference text</div>';
-        copy = document.createElement('div');
-        copy.className = 'reference-copy';
-        copy.textContent = suggestedReference(market);
-        copyWrap.appendChild(copy);
-        body.appendChild(copyWrap);
-    }
-
-    const actions = document.createElement('div');
-    actions.className = 'card-actions';
-    body.appendChild(actions);
-
-    const copyBtn = document.createElement('button');
-    copyBtn.type = 'button';
-    copyBtn.className = 'sample-btn sample-btn-primary';
-    copyBtn.textContent = market.reference_status === 'NOT_STANDALONE' ? 'Copy note' : 'Copy text';
-    copyBtn.addEventListener('click', () => copyText(copy.textContent, copyBtn));
-    actions.appendChild(copyBtn);
-
-    const link = document.createElement('a');
-    link.className = 'sample-btn sample-btn-ghost';
-    link.href = marketUrl(market);
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = 'Polymarket';
-    actions.appendChild(link);
-
-    return card;
-}
-
 function buildReadyRow(market) {
     const row = document.createElement('article');
-    row.className = 'ready-row status-ready';
+    row.className = `ready-row ${STATUS_CLASS[market.reference_status] || ''}`;
 
     const title = document.createElement('div');
     title.className = 'ready-main';
@@ -354,12 +251,24 @@ function buildReadyRow(market) {
     const stats = document.createElement('div');
     stats.className = 'ready-stats';
     stats.innerHTML = `
-        <div><span>Price</span><strong>${fmtCents(market.current_price)}</strong></div>
+        <div><span>Price</span><strong>${displayPrice(market)}</strong></div>
         <div><span>Volume</span><strong>${fmtVol(market.volume || 0)}</strong></div>
         <div><span>Close</span><strong>${closeText(market)}</strong></div>
-        <div><span>Status</span><strong>Ready</strong></div>
+        <div><span>Status</span><strong>${referenceLabel(market)}</strong></div>
     `;
     row.appendChild(stats);
+
+    if (market.reference_status !== 'READY') {
+        const note = document.createElement('div');
+        note.className = 'ready-note';
+        const reasons = reasonText(market).join(' ');
+        note.innerHTML = `
+            <span>${market.reference_status === 'NOT_STANDALONE' ? 'Handling note' : 'Guidance'}</span>
+            <strong>${statusAction(market)}</strong>
+            <em>${reasons}</em>
+        `;
+        row.appendChild(note);
+    }
 
     const actions = document.createElement('div');
     actions.className = 'ready-actions';
@@ -368,9 +277,9 @@ function buildReadyRow(market) {
     const copyBtn = document.createElement('button');
     copyBtn.type = 'button';
     copyBtn.className = 'sample-btn sample-btn-primary';
-    copyBtn.textContent = 'Copy line';
+    copyBtn.textContent = market.reference_status === 'NOT_STANDALONE' ? 'Copy note' : 'Copy line';
     copyBtn.addEventListener('click', () => copyText(
-        `Polymarket currently prices "${market.title || 'this market'}" at ${fmtCents(market.current_price)}.`,
+        suggestedReference(market),
         copyBtn
     ));
     actions.appendChild(copyBtn);
@@ -426,9 +335,9 @@ function renderCards(markets) {
         wrap.appendChild(head);
 
         const cards = document.createElement('div');
-        cards.className = group.compact ? 'ready-list' : 'cards-grid';
+        cards.className = 'ready-list';
         groupMarkets.forEach(market => {
-            cards.appendChild(group.compact ? buildReadyRow(market) : buildCard(market));
+            cards.appendChild(buildReadyRow(market));
         });
         wrap.appendChild(cards);
         grid.appendChild(wrap);

@@ -225,6 +225,12 @@ function renderMetrics(markets) {
         const el = sampleEid(id);
         if (el) el.textContent = value;
     });
+    const note = sampleEid('briefing-note');
+    if (note) {
+        note.textContent = counts.CONTEXT_REQUIRED
+            ? 'Sorted by status and market visibility.'
+            : 'No Context Required markets are present in the current top-volume briefing.';
+    }
 }
 
 function marketUrl(market) {
@@ -236,6 +242,7 @@ function marketUrl(market) {
 function buildReadyRow(market) {
     const row = document.createElement('article');
     row.className = `ready-row ${STATUS_CLASS[market.reference_status] || ''}`;
+    row.tabIndex = 0;
 
     const title = document.createElement('div');
     title.className = 'ready-main';
@@ -258,17 +265,15 @@ function buildReadyRow(market) {
     `;
     row.appendChild(stats);
 
-    if (market.reference_status !== 'READY') {
-        const note = document.createElement('div');
-        note.className = 'ready-note';
-        const reasons = reasonText(market).join(' ');
-        note.innerHTML = `
-            <span>${market.reference_status === 'NOT_STANDALONE' ? 'Handling note' : 'Guidance'}</span>
-            <strong>${statusAction(market)}</strong>
-            <em>${reasons}</em>
-        `;
-        row.appendChild(note);
-    }
+    const note = document.createElement('div');
+    note.className = 'ready-note';
+    const reasons = reasonText(market).join(' ');
+    note.innerHTML = `
+        <span>${market.reference_status === 'NOT_STANDALONE' ? 'Handling note' : 'Guidance'}</span>
+        <strong>${statusAction(market)}</strong>
+        <em>${reasons}</em>
+    `;
+    row.appendChild(note);
 
     const actions = document.createElement('div');
     actions.className = 'ready-actions';
@@ -291,6 +296,17 @@ function buildReadyRow(market) {
     link.rel = 'noopener';
     link.textContent = 'Polymarket';
     actions.appendChild(link);
+
+    const toggle = event => {
+        if (event.target.closest('button, a')) return;
+        row.classList.toggle('is-open');
+    };
+    row.addEventListener('click', toggle);
+    row.addEventListener('keydown', event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        row.classList.toggle('is-open');
+    });
 
     return row;
 }

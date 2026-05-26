@@ -204,6 +204,18 @@ body.sample-locked {
     line-height: 1;
     margin-bottom: 8px;
 }
+.strip-ready span {
+    color: var(--cyan-text);
+}
+.strip-context span {
+    color: var(--cyan-text);
+}
+.strip-review span {
+    color: #E8C57E;
+}
+.strip-stop span {
+    color: #E48E8E;
+}
 .strip-card label {
     color: var(--text-dim);
     font-size: 10px;
@@ -317,6 +329,14 @@ body.sample-locked {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-left: 2px solid var(--cyan);
+    cursor: pointer;
+    transition: border-color 120ms ease, background 120ms ease;
+}
+
+.ready-row:hover,
+.ready-row:focus-visible {
+    background: rgba(255,255,255,0.028);
+    outline: none;
 }
 
 .ready-row.status-review {
@@ -325,6 +345,10 @@ body.sample-locked {
 
 .ready-row.status-stop {
     border-left-color: #C44;
+}
+
+.ready-row.status-context {
+    border-left-color: var(--cyan);
 }
 
 .ready-meta {
@@ -408,9 +432,14 @@ body.sample-locked {
 
 .ready-note {
     grid-column: 1 / -1;
+    display: none;
     padding: 11px 12px;
     background: rgba(255,255,255,0.018);
     border: 1px solid var(--border);
+}
+
+.ready-row.is-open .ready-note {
+    display: block;
 }
 
 .ready-note span {

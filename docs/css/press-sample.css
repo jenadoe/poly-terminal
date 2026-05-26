@@ -106,10 +106,7 @@ body.sample-locked {
 }
 
 .sample-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 44px;
-    align-items: stretch;
+    display: block;
     padding: 54px 0 34px;
 }
 
@@ -128,7 +125,7 @@ body.sample-locked {
 }
 
 .sample-hero h1 {
-    max-width: 720px;
+    max-width: 880px;
     font-size: 38px;
     margin-bottom: 16px;
 }
@@ -142,7 +139,7 @@ body.sample-locked {
 }
 
 .sample-hero p {
-    max-width: 650px;
+    max-width: 820px;
 }
 
 .sample-actions {
@@ -178,36 +175,12 @@ body.sample-locked {
 .sample-btn-primary:hover { background: var(--amber-text); }
 .sample-btn-ghost:hover { color: var(--text-hi); border-color: var(--amber-line); }
 
-.sample-brief,
 .method-card,
 .outreach-card,
 .reference-card,
 .loading-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-}
-
-.sample-brief {
-    align-self: end;
-}
-
-.brief-row {
-    padding: 18px 18px 16px;
-    border-bottom: 1px solid var(--border);
-}
-.brief-row:last-child { border-bottom: 0; }
-.brief-row span {
-    display: block;
-    color: var(--text-dim);
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-}
-.brief-row strong {
-    color: var(--text-hi);
-    font-size: 13px;
-    line-height: 1.55;
 }
 
 .sample-strip {
@@ -271,6 +244,62 @@ body.sample-locked {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
+}
+
+#cards-grid {
+    display: block;
+}
+
+.status-group {
+    margin-bottom: 32px;
+}
+
+.status-group:last-child {
+    margin-bottom: 0;
+}
+
+.status-group-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 0 12px;
+    border-top: 1px solid var(--border);
+}
+
+.status-group-head h3 {
+    color: var(--text-hi);
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.status-group-head p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.status-group-head span {
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.status-group.status-ready .status-group-head {
+    border-top-color: var(--cyan-line);
+}
+.status-group.status-context .status-group-head {
+    border-top-color: var(--cyan-line);
+}
+.status-group.status-review .status-group-head {
+    border-top-color: rgba(232,197,126,0.36);
+}
+.status-group.status-stop .status-group-head {
+    border-top-color: rgba(200,68,68,0.36);
 }
 
 .reference-card {

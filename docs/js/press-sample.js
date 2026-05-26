@@ -11,6 +11,32 @@ const STATUS_CLASS = {
     REVIEW_RECOMMENDED: 'status-review',
     NOT_STANDALONE: 'status-stop',
 };
+const GROUPS = [
+    {
+        status: 'READY',
+        title: 'Reference Ready Watchlist',
+        note: 'High-visibility markets where standard source attribution is enough.',
+        limit: 25,
+    },
+    {
+        status: 'CONTEXT_REQUIRED',
+        title: 'Context Required',
+        note: 'Markets whose price should appear only with the stated context.',
+        limit: 10,
+    },
+    {
+        status: 'REVIEW_RECOMMENDED',
+        title: 'Review Recommended',
+        note: 'Markets that need extra scrutiny before being used as standalone references.',
+        limit: 10,
+    },
+    {
+        status: 'NOT_STANDALONE',
+        title: 'Not Standalone',
+        note: 'Markets that should not appear as isolated price references.',
+        limit: 6,
+    },
+];
 
 function sampleEid(id) {
     return document.getElementById(id);
@@ -282,8 +308,41 @@ function renderCards(markets) {
         grid.appendChild(empty);
         return;
     }
-    markets.slice(0, 12).forEach(market => {
-        grid.appendChild(buildCard(market));
+
+    const byStatus = markets.reduce((acc, market) => {
+        if (!acc[market.reference_status]) acc[market.reference_status] = [];
+        acc[market.reference_status].push(market);
+        return acc;
+    }, {});
+
+    GROUPS.forEach(group => {
+        const groupMarkets = (byStatus[group.status] || [])
+            .slice()
+            .sort((a, b) => Number(b.volume || 0) - Number(a.volume || 0))
+            .slice(0, group.limit);
+        if (!groupMarkets.length) return;
+
+        const wrap = document.createElement('section');
+        wrap.className = `status-group ${STATUS_CLASS[group.status] || ''}`;
+
+        const head = document.createElement('div');
+        head.className = 'status-group-head';
+        head.innerHTML = `
+            <div>
+                <h3>${group.title}</h3>
+                <p>${group.note}</p>
+            </div>
+            <span>${groupMarkets.length} shown</span>
+        `;
+        wrap.appendChild(head);
+
+        const cards = document.createElement('div');
+        cards.className = 'cards-grid';
+        groupMarkets.forEach(market => {
+            cards.appendChild(buildCard(market));
+        });
+        wrap.appendChild(cards);
+        grid.appendChild(wrap);
     });
 }
 

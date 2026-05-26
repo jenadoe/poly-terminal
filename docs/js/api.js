@@ -93,5 +93,8 @@ async function loadMarkets() {
     if (!res.ok) throw new Error(`Markets HTTP ${res.status}`);
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error('Markets payload invalid');
-    return data.map(normalizeMarket);
+    return data
+        .map(normalizeMarket)
+        .sort((a, b) => Number(b.volume || 0) - Number(a.volume || 0))
+        .slice(0, 9);
 }

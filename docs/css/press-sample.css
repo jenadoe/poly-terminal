@@ -303,7 +303,7 @@ body.sample-locked {
 }
 
 .reference-card {
-    min-height: 318px;
+    min-height: 398px;
     display: flex;
     flex-direction: column;
     border-top: 2px solid var(--border-hi);
@@ -374,6 +374,41 @@ body.sample-locked {
     background: rgba(200,68,68,0.08);
 }
 
+.card-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 14px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.card-detail-grid div {
+    min-width: 0;
+    padding: 8px 9px;
+    background: rgba(255,255,255,0.018);
+}
+
+.card-detail-grid span {
+    display: block;
+    color: var(--text-dim);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.card-detail-grid strong {
+    display: block;
+    overflow: hidden;
+    color: var(--text-hi);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .card-body {
     padding: 15px 17px 17px;
     display: flex;
@@ -387,6 +422,14 @@ body.sample-locked {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 6px;
+}
+.card-section-label-nested {
+    margin-top: 10px;
+}
+.action-note {
+    color: var(--text-hi);
+    font-size: 12px;
+    line-height: 1.65;
 }
 .reason-list {
     display: flex;

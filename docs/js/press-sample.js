@@ -16,25 +16,25 @@ const GROUPS = [
         status: 'READY',
         title: 'Reference Ready Watchlist',
         note: 'High-visibility markets where standard source attribution is enough.',
-        limit: 25,
+        limit: 50,
     },
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
         note: 'Markets whose price should appear only with the stated context.',
-        limit: 10,
+        limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
         note: 'Markets that need extra scrutiny before being used as standalone references.',
-        limit: 10,
+        limit: 50,
     },
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
         note: 'Markets that should not appear as isolated price references.',
-        limit: 6,
+        limit: 50,
     },
 ];
 
@@ -138,6 +138,31 @@ function reasonText(market) {
     return ['Reference-safety status is available for this market.'];
 }
 
+function shortEventId(id) {
+    if (!id) return '--';
+    const value = String(id);
+    return value.length > 10 ? `${value.slice(0, 6)}...${value.slice(-4)}` : value;
+}
+
+function closeText(market) {
+    if (typeof calcClosesIn === 'function') {
+        return calcClosesIn(market.close_time);
+    }
+    if (!market.close_time) return '--';
+    const close = new Date(market.close_time);
+    if (Number.isNaN(close.getTime())) return '--';
+    return close.toISOString().slice(0, 10);
+}
+
+function statusAction(market) {
+    if (market.reference_action) return market.reference_action;
+    if (market.reference_status === 'READY') return 'Standard source attribution is enough.';
+    if (market.reference_status === 'CONTEXT_REQUIRED') return 'Keep the stated context with the price.';
+    if (market.reference_status === 'REVIEW_RECOMMENDED') return 'Review before using as a standalone reference.';
+    if (market.reference_status === 'NOT_STANDALONE') return 'Do not present this price by itself.';
+    return 'Review the reference posture before use.';
+}
+
 function suggestedReference(market) {
     const title = market.title || 'this Polymarket market';
     const price = fmtCents(market.current_price);
@@ -228,7 +253,7 @@ function buildCard(market) {
 
     const meta = document.createElement('div');
     meta.className = 'card-meta';
-    meta.innerHTML = `<span>${market.category || 'Market'}</span><span>vol. ${fmtVol(market.volume || 0)}</span>`;
+    meta.innerHTML = `<span>${market.category || 'Market'}</span><span>${shortEventId(market.event_id)}</span>`;
     top.appendChild(meta);
 
     const title = document.createElement('div');
@@ -250,12 +275,29 @@ function buildCard(market) {
     status.textContent = referenceLabel(market);
     priceRow.appendChild(status);
 
+    const details = document.createElement('div');
+    details.className = 'card-detail-grid';
+    details.innerHTML = `
+        <div><span>Volume</span><strong>${fmtVol(market.volume || 0)}</strong></div>
+        <div><span>Close</span><strong>${closeText(market)}</strong></div>
+        <div><span>Category</span><strong>${market.category || 'Market'}</strong></div>
+    `;
+    top.appendChild(details);
+
     const body = document.createElement('div');
     body.className = 'card-body';
     card.appendChild(body);
 
     const reasonsWrap = document.createElement('div');
-    reasonsWrap.innerHTML = '<div class="card-section-label">Reason</div>';
+    reasonsWrap.innerHTML = '<div class="card-section-label">Reference guidance</div>';
+    const action = document.createElement('div');
+    action.className = 'action-note';
+    action.textContent = statusAction(market);
+    reasonsWrap.appendChild(action);
+    const reasonLabel = document.createElement('div');
+    reasonLabel.className = 'card-section-label card-section-label-nested';
+    reasonLabel.textContent = 'Reason';
+    reasonsWrap.appendChild(reasonLabel);
     const list = document.createElement('div');
     list.className = 'reason-list';
     reasonText(market).forEach(reason => {

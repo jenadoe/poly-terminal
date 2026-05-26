@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strata | Reference Preview</title>
+    <title>Strata | Beta Access</title>
     <meta name="description" content="An early-access reference-safety briefing for high-visibility Polymarket prices.">
     <meta name="robots" content="noindex,nofollow,noarchive">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
@@ -28,7 +28,7 @@
                 <button class="sample-btn sample-btn-primary" type="submit">Unlock</button>
             </form>
             <div class="access-error" id="access-error"></div>
-            <a class="access-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20access">Request access</a>
+            <div class="access-contact">contact@strata-labs.xyz</div>
         </div>
     </div>
 
@@ -75,18 +75,15 @@
             </div>
         </section>
 
-        <section class="sample-strip">
-            <div class="strip-card">
-                <span id="metric-markets">--</span>
-                <label>Markets in sample</label>
+        <section class="sample-strip beta-board-summary">
+            <div class="board-summary-title">
+                <div class="sample-eyebrow">Reference safety board</div>
+                <strong>Reference status for market prices</strong>
+                <span><b id="metric-markets">--</b> markets in this beta briefing</span>
             </div>
             <div class="strip-card strip-ready">
                 <span id="metric-ready">--</span>
                 <label>Ready</label>
-            </div>
-            <div class="strip-card strip-context">
-                <span id="metric-context">--</span>
-                <label>Context required</label>
             </div>
             <div class="strip-card strip-review">
                 <span id="metric-review">--</span>
@@ -95,6 +92,10 @@
             <div class="strip-card strip-stop">
                 <span id="metric-stop">--</span>
                 <label>Not standalone</label>
+            </div>
+            <div class="strip-card strip-context strip-context-box">
+                <span id="metric-context">--</span>
+                <label>With Context</label>
             </div>
         </section>
 
@@ -157,9 +158,55 @@
                     <li>Which market or workflow would you want Strata to cover next?</li>
                 </ol>
             </div>
-            <a class="sample-btn sample-btn-primary" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20feedback&body=1.%20Did%20the%20status%20match%20your%20handling%20of%20the%20market%3F%0A%0A2.%20Was%20the%20suggested%20reference%20text%20usable%2C%20too%20cautious%2C%20or%20too%20generic%3F%0A%0A3.%20Which%20market%20or%20workflow%20would%20you%20want%20Strata%20to%20cover%20next%3F%0A">Send answers</a>
+            <div class="feedback-contact">
+                Send notes to <strong>contact@strata-labs.xyz</strong>
+            </div>
         </section>
     </main>
+
+    <div class="beta-overlay" id="beta-overlay"></div>
+    <aside class="beta-panel" id="beta-panel" aria-hidden="true">
+        <div class="beta-panel-head">
+            <div>
+                <div class="sample-eyebrow" id="bp-category">Market</div>
+                <h2 id="bp-title">--</h2>
+            </div>
+            <button class="beta-panel-close" id="bp-close" type="button">X CLOSE</button>
+        </div>
+        <div class="beta-panel-body">
+            <div class="beta-panel-price-row">
+                <div>
+                    <span>Price</span>
+                    <strong id="bp-price">--</strong>
+                </div>
+                <div>
+                    <span>Status</span>
+                    <strong id="bp-status">--</strong>
+                </div>
+            </div>
+            <div class="beta-panel-stats">
+                <div><span>Volume</span><strong id="bp-volume">--</strong></div>
+                <div><span>Close</span><strong id="bp-close-time">--</strong></div>
+                <div><span>Event</span><strong id="bp-event">--</strong></div>
+            </div>
+            <section>
+                <div class="card-section-label">Reference guidance</div>
+                <p id="bp-guidance">--</p>
+            </section>
+            <section>
+                <div class="card-section-label">Reason</div>
+                <div id="bp-reasons" class="beta-panel-reasons"></div>
+            </section>
+            <section>
+                <div class="card-section-label" id="bp-copy-label">Reference line</div>
+                <div class="beta-panel-copy" id="bp-copy-text">--</div>
+            </section>
+        </div>
+        <div class="beta-panel-foot">
+            <button class="sample-btn sample-btn-primary" id="bp-copy" type="button">Copy line</button>
+            <a class="sample-btn sample-btn-ghost" id="bp-link" href="https://polymarket.com" target="_blank" rel="noopener">Polymarket</a>
+        </div>
+    </aside>
 
     <footer class="sample-footer">
         <div>STRATA (C) 2026 // REFERENCE SAFETY LAYER</div>

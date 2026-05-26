@@ -209,6 +209,68 @@ function copyText(text, button) {
     document.body.removeChild(area);
 }
 
+function closeBetaPanel() {
+    const panel = sampleEid('beta-panel');
+    const overlay = sampleEid('beta-overlay');
+    if (panel) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+    }
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function openBetaPanel(market) {
+    const panel = sampleEid('beta-panel');
+    const overlay = sampleEid('beta-overlay');
+    if (!panel || !overlay) return;
+
+    const reasons = reasonText(market);
+    const copy = suggestedReference(market);
+    const statusClass = STATUS_CLASS[market.reference_status] || '';
+    const status = sampleEid('bp-status');
+
+    sampleEid('bp-category').textContent = `${market.category || 'Market'} / ${shortEventId(market.event_id)}`;
+    sampleEid('bp-title').textContent = market.title || '--';
+    sampleEid('bp-price').textContent = displayPrice(market);
+    if (status) {
+        status.textContent = referenceLabel(market);
+        status.className = statusClass;
+    }
+    sampleEid('bp-volume').textContent = fmtVol(market.volume || 0);
+    sampleEid('bp-close-time').textContent = closeText(market);
+    sampleEid('bp-event').textContent = shortEventId(market.event_id);
+    sampleEid('bp-guidance').textContent = statusAction(market);
+    sampleEid('bp-copy-label').textContent = market.reference_status === 'NOT_STANDALONE'
+        ? 'Handling note'
+        : 'Reference line';
+    sampleEid('bp-copy-text').textContent = copy;
+
+    const reasonsWrap = sampleEid('bp-reasons');
+    if (reasonsWrap) {
+        reasonsWrap.innerHTML = '';
+        reasons.forEach(reason => {
+            const item = document.createElement('div');
+            item.textContent = reason;
+            reasonsWrap.appendChild(item);
+        });
+    }
+
+    const copyBtn = sampleEid('bp-copy');
+    if (copyBtn) {
+        copyBtn.textContent = market.reference_status === 'NOT_STANDALONE' ? 'Copy note' : 'Copy line';
+        copyBtn.onclick = () => copyText(copy, copyBtn);
+    }
+
+    const link = sampleEid('bp-link');
+    if (link) link.href = marketUrl(market);
+
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
 function renderMetrics(markets) {
     const counts = markets.reduce((acc, market) => {
         acc[market.reference_status] = (acc[market.reference_status] || 0) + 1;
@@ -265,16 +327,6 @@ function buildReadyRow(market) {
     `;
     row.appendChild(stats);
 
-    const note = document.createElement('div');
-    note.className = 'ready-note';
-    const reasons = reasonText(market).join(' ');
-    note.innerHTML = `
-        <span>${market.reference_status === 'NOT_STANDALONE' ? 'Handling note' : 'Guidance'}</span>
-        <strong>${statusAction(market)}</strong>
-        <em>${reasons}</em>
-    `;
-    row.appendChild(note);
-
     const actions = document.createElement('div');
     actions.className = 'ready-actions';
     row.appendChild(actions);
@@ -297,15 +349,15 @@ function buildReadyRow(market) {
     link.textContent = 'Polymarket';
     actions.appendChild(link);
 
-    const toggle = event => {
+    const open = event => {
         if (event.target.closest('button, a')) return;
-        row.classList.toggle('is-open');
+        openBetaPanel(market);
     };
-    row.addEventListener('click', toggle);
+    row.addEventListener('click', open);
     row.addEventListener('keydown', event => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();
-        row.classList.toggle('is-open');
+        openBetaPanel(market);
     });
 
     return row;
@@ -383,3 +435,11 @@ async function loadSample() {
 setInterval(tickSampleClock, 1000);
 tickSampleClock();
 initAccessGate();
+
+const betaOverlay = sampleEid('beta-overlay');
+if (betaOverlay) betaOverlay.addEventListener('click', closeBetaPanel);
+const betaClose = sampleEid('bp-close');
+if (betaClose) betaClose.addEventListener('click', closeBetaPanel);
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeBetaPanel();
+});

@@ -1,5 +1,5 @@
 const API_URL = '/api/markets';
-const ACCESS_STORAGE_KEY = 'strata_press_sample_access_v1';
+const ACCESS_STORAGE_KEY = 'strata_reference_preview_access_v1';
 const ACCESS_PARAM = 'access';
 const ALLOWED_ACCESS_HASHES = new Set([
     '10d480a8004917707cc1ce31e791e670f926f2307f4e15ea6f253a17cdd78585',
@@ -119,19 +119,19 @@ function suggestedReference(market) {
     const reasons = reasonText(market).join(' ');
 
     if (market.reference_status === 'READY') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}, meaning standard source attribution is enough for ordinary reference use.`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}: standard source attribution is sufficient for ordinary reference use. This does not mean the odds are correct or predictive.`;
     }
 
     if (market.reference_status === 'CONTEXT_REQUIRED') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}; if the price is referenced, include the relevant context: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. If this price appears in downstream output, include the context near the price: ${reasons}`;
     }
 
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}; secondary review is recommended before treating the price as ready for downstream use. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Treat the price as requiring additional review before it is used as a standalone reference. Reason: ${reasons}`;
     }
 
     if (market.reference_status === 'NOT_STANDALONE') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}; do not present this price by itself. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not present this price by itself; it needs substantial surrounding context. Reason: ${reasons}`;
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;
@@ -176,6 +176,7 @@ function renderMetrics(markets) {
     const fields = [
         ['metric-markets', markets.length],
         ['metric-ready', counts.READY || 0],
+        ['metric-context', counts.CONTEXT_REQUIRED || 0],
         ['metric-review', counts.REVIEW_RECOMMENDED || 0],
         ['metric-stop', counts.NOT_STANDALONE || 0],
     ];
@@ -296,6 +297,7 @@ function renderApiExample(markets) {
         reference_label: market.reference_label,
         reference_action: market.reference_action,
         reference_reasons: market.reference_reasons,
+        disclaimer: 'Reference status reflects context risk, not predictive accuracy or market quality.',
     }, null, 2);
 }
 

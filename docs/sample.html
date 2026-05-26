@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strata | Press Reference Desk</title>
-    <meta name="description" content="A sample reference-safety desk for Polymarket prices, built for journalists, researchers, and AI workflows.">
+    <title>Strata | Reference Preview</title>
+    <meta name="description" content="An early-access reference-safety preview for Polymarket prices, built for journalists, researchers, and AI workflows.">
     <meta name="robots" content="noindex,nofollow,noarchive">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -17,18 +17,18 @@
 <body>
     <div class="access-gate" id="access-gate">
         <div class="access-card">
-            <div class="sample-eyebrow">Private sample</div>
-            <h1>Press Reference Desk</h1>
+            <div class="sample-eyebrow">Early-access preview</div>
+            <h1>Strata Reference Preview</h1>
             <p>
-                This Strata sample is shared only with invited reviewers. Enter the
-                access code from your outreach note to view the reference cards.
+                This invite-only preview uses public-safe sample data only. Enter
+                the access code from your outreach note to view the reference cards.
             </p>
             <form id="access-form">
                 <input id="access-code" type="password" autocomplete="off" placeholder="Access code">
                 <button class="sample-btn sample-btn-primary" type="submit">Unlock</button>
             </form>
             <div class="access-error" id="access-error"></div>
-            <a class="access-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20Press%20Reference%20Desk%20access">Request access</a>
+            <a class="access-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20access">Request access</a>
         </div>
     </div>
 
@@ -38,7 +38,7 @@
             <span>/</span>
             <a class="topbar-link" href="./docs.html">Docs</a>
             <span>/</span>
-            <span>Press Reference Desk</span>
+            <span>Reference Preview</span>
         </div>
         <span class="topbar-right" id="sample-clock">--:--:--</span>
     </div>
@@ -50,7 +50,7 @@
     <header class="sample-header">
         <div>
             <div class="logo">STRATA<span class="logo-cursor"></span></div>
-            <div class="logo-sub">// Press Reference Desk</div>
+            <div class="logo-sub">// Reference Preview</div>
         </div>
         <div class="header-right">
             <div>SAMPLE <strong>PUBLIC SAFE</strong></div>
@@ -61,21 +61,22 @@
     <main>
         <section class="sample-hero">
             <div class="sample-hero-copy">
-                <div class="sample-eyebrow">Reference sample for Polymarket prices</div>
-                <h1>Before a market price appears in copy, check how it should travel.</h1>
+                <div class="sample-eyebrow">Reference-safety sample for Polymarket prices</div>
+                <h1>Check how a Polymarket price should be referenced before it reaches users.</h1>
                 <p>
-                    This desk turns Strata's public reference-safety API into a journalist-friendly
+                    This preview turns Strata's public-safe reference feed into a practical
                     sample: market price, status, plain-English reason, and suggested reference text.
+                    It is invite-limited for feedback, not a secure private data room.
                 </p>
                 <div class="sample-actions">
                     <a class="sample-btn sample-btn-primary" href="#reference-cards">View sample cards</a>
-                    <a class="sample-btn sample-btn-ghost" href="mailto:contact@strata-labs.xyz?subject=Strata%20Press%20Reference%20Desk%20feedback">Send feedback</a>
+                    <a class="sample-btn sample-btn-ghost" href="#feedback">Feedback questions</a>
                 </div>
             </div>
             <aside class="sample-brief">
                 <div class="brief-row">
                     <span>Use case</span>
-                    <strong>Pre-publication reference check</strong>
+                    <strong>Downstream reference check</strong>
                 </div>
                 <div class="brief-row">
                     <span>Audience</span>
@@ -84,6 +85,10 @@
                 <div class="brief-row">
                     <span>Data boundary</span>
                     <strong>No raw trades, wallets, or private artifacts</strong>
+                </div>
+                <div class="brief-row">
+                    <span>Access model</span>
+                    <strong>Invite-limited preview, public-safe data</strong>
                 </div>
             </aside>
         </section>
@@ -96,6 +101,10 @@
             <div class="strip-card">
                 <span id="metric-ready">--</span>
                 <label>Ready</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-context">--</span>
+                <label>Context required</label>
             </div>
             <div class="strip-card">
                 <span id="metric-review">--</span>
@@ -126,13 +135,14 @@
                 <h2>What the labels mean</h2>
                 <p>
                     Strata evaluates reference posture based on public market structure,
-                    wording, resolution sensitivity, and context risk. The status tells a
-                    downstream user how carefully a Polymarket price should be handled.
+                    market wording, resolution sensitivity, and context risk. The status tells a
+                    downstream user how a Polymarket price should be handled before it is shown,
+                    summarized, cited, or passed into generated output.
                 </p>
                 <ul>
-                    <li><strong>Ready:</strong> standard source attribution is enough.</li>
-                    <li><strong>Context Required:</strong> the price should travel with the stated context.</li>
-                    <li><strong>Review Recommended:</strong> secondary review is advised before downstream use.</li>
+                    <li><strong>Ready:</strong> standard source attribution is enough. This is not a claim that the odds are correct.</li>
+                    <li><strong>Context Required:</strong> the price should appear only with the stated context.</li>
+                    <li><strong>Review Recommended:</strong> the market needs extra scrutiny before downstream use.</li>
                     <li><strong>Not Standalone:</strong> do not present the price by itself.</li>
                 </ul>
             </div>
@@ -145,23 +155,27 @@
   "reference_action": "Secondary review is recommended before this price is referenced.",
   "reference_reasons": [
     "Resolution or source details need checking before this price is referenced."
-  ]
+  ],
+  "disclaimer": "Reference status reflects context risk, not predictive accuracy or market quality."
 }</pre>
             </div>
         </section>
 
-        <section class="sample-section outreach-card">
+        <section class="sample-section outreach-card" id="feedback">
             <div>
                 <div class="sample-eyebrow">Feedback ask</div>
-                <h2>Would this reduce hesitation when referencing Polymarket prices?</h2>
+                <h2>Three things we want reviewers to judge</h2>
                 <p>
-                    We are testing whether this format fits real editorial, research, and
-                    AI-output workflows. Useful feedback is specific: confusing labels,
-                    missing reasons, unsuitable reference text, or markets you would want
-                    covered before publication.
+                    We are testing whether this format fits real editorial, research, dashboard,
+                    and AI-output workflows. Useful feedback is specific and operational.
                 </p>
+                <ol class="feedback-list">
+                    <li>Did the status match how you would handle this market price?</li>
+                    <li>Was the suggested reference text usable, too cautious, or too generic?</li>
+                    <li>Which market or workflow would you want Strata to cover next?</li>
+                </ol>
             </div>
-            <a class="sample-btn sample-btn-primary" href="mailto:contact@strata-labs.xyz?subject=Strata%20reference%20sample%20feedback">Send feedback</a>
+            <a class="sample-btn sample-btn-primary" href="mailto:contact@strata-labs.xyz?subject=Strata%20Reference%20Preview%20feedback&body=1.%20Did%20the%20status%20match%20your%20handling%20of%20the%20market%3F%0A%0A2.%20Was%20the%20suggested%20reference%20text%20usable%2C%20too%20cautious%2C%20or%20too%20generic%3F%0A%0A3.%20Which%20market%20or%20workflow%20would%20you%20want%20Strata%20to%20cover%20next%3F%0A">Send answers</a>
         </section>
     </main>
 

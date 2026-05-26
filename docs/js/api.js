@@ -96,5 +96,17 @@ async function loadMarkets() {
     return data
         .map(normalizeMarket)
         .sort((a, b) => Number(b.volume || 0) - Number(a.volume || 0))
-        .slice(0, 9);
+        .filter((() => {
+            const counts = new Map();
+            const groupForCitationStatus = status => (
+                status === 'CITE_WITH_CONTEXT' ? 'SAFE_TO_CITE' : status
+            );
+            return market => {
+                const group = groupForCitationStatus(market.citation_status || 'UNKNOWN');
+                const count = counts.get(group) || 0;
+                if (count >= 3) return false;
+                counts.set(group, count + 1);
+                return true;
+            };
+        })());
 }

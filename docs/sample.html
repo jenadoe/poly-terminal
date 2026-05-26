@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata | Press Reference Desk</title>
+    <meta name="description" content="A sample reference-safety desk for Polymarket prices, built for journalists, researchers, and AI workflows.">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/press-sample.css">
+</head>
+<body>
+    <div class="access-gate" id="access-gate">
+        <div class="access-card">
+            <div class="sample-eyebrow">Private sample</div>
+            <h1>Press Reference Desk</h1>
+            <p>
+                This Strata sample is shared only with invited reviewers. Enter the
+                access code from your outreach note to view the reference cards.
+            </p>
+            <form id="access-form">
+                <input id="access-code" type="password" autocomplete="off" placeholder="Access code">
+                <button class="sample-btn sample-btn-primary" type="submit">Unlock</button>
+            </form>
+            <div class="access-error" id="access-error"></div>
+            <a class="access-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20Press%20Reference%20Desk%20access">Request access</a>
+        </div>
+    </div>
+
+    <div class="topbar">
+        <div class="topbar-left">
+            <a class="topbar-link" href="/">Dashboard</a>
+            <span>/</span>
+            <a class="topbar-link" href="./docs.html">Docs</a>
+            <span>/</span>
+            <span>Press Reference Desk</span>
+        </div>
+        <span class="topbar-right" id="sample-clock">--:--:--</span>
+    </div>
+
+    <div class="disclaimer">
+        Strata provides reference-safety guidance only. It does not predict outcomes, validate odds, or provide trading or investment advice.
+    </div>
+
+    <header class="sample-header">
+        <div>
+            <div class="logo">STRATA<span class="logo-cursor"></span></div>
+            <div class="logo-sub">// Press Reference Desk</div>
+        </div>
+        <div class="header-right">
+            <div>SAMPLE <strong>PUBLIC SAFE</strong></div>
+            <div>STATUS <strong id="sample-status">LOADING</strong></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sample-hero">
+            <div class="sample-hero-copy">
+                <div class="sample-eyebrow">Reference sample for Polymarket prices</div>
+                <h1>Before a market price appears in copy, check how it should travel.</h1>
+                <p>
+                    This desk turns Strata's public reference-safety API into a journalist-friendly
+                    sample: market price, status, plain-English reason, and suggested reference text.
+                </p>
+                <div class="sample-actions">
+                    <a class="sample-btn sample-btn-primary" href="#reference-cards">View sample cards</a>
+                    <a class="sample-btn sample-btn-ghost" href="mailto:contact@strata-labs.xyz?subject=Strata%20Press%20Reference%20Desk%20feedback">Send feedback</a>
+                </div>
+            </div>
+            <aside class="sample-brief">
+                <div class="brief-row">
+                    <span>Use case</span>
+                    <strong>Pre-publication reference check</strong>
+                </div>
+                <div class="brief-row">
+                    <span>Audience</span>
+                    <strong>Journalists, researchers, AI teams</strong>
+                </div>
+                <div class="brief-row">
+                    <span>Data boundary</span>
+                    <strong>No raw trades, wallets, or private artifacts</strong>
+                </div>
+            </aside>
+        </section>
+
+        <section class="sample-strip">
+            <div class="strip-card">
+                <span id="metric-markets">--</span>
+                <label>Markets in sample</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-ready">--</span>
+                <label>Ready</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-review">--</span>
+                <label>Review recommended</label>
+            </div>
+            <div class="strip-card">
+                <span id="metric-stop">--</span>
+                <label>Not standalone</label>
+            </div>
+        </section>
+
+        <section class="sample-section" id="reference-cards">
+            <div class="section-head">
+                <div>
+                    <div class="sample-eyebrow">Reference cards</div>
+                    <h2>Current public sample</h2>
+                </div>
+                <div class="section-note">Generated from the public-safe <code>/api/markets</code> payload.</div>
+            </div>
+            <div class="cards-grid" id="cards-grid">
+                <div class="loading-card">Loading reference cards...</div>
+            </div>
+        </section>
+
+        <section class="sample-section sample-two-col">
+            <div class="method-card">
+                <div class="sample-eyebrow">Methodology note</div>
+                <h2>What the labels mean</h2>
+                <p>
+                    Strata evaluates reference posture based on public market structure,
+                    wording, resolution sensitivity, and context risk. The status tells a
+                    downstream user how carefully a Polymarket price should be handled.
+                </p>
+                <ul>
+                    <li><strong>Ready:</strong> standard source attribution is enough.</li>
+                    <li><strong>Context Required:</strong> the price should travel with the stated context.</li>
+                    <li><strong>Review Recommended:</strong> secondary review is advised before downstream use.</li>
+                    <li><strong>Not Standalone:</strong> do not present the price by itself.</li>
+                </ul>
+            </div>
+            <div class="method-card">
+                <div class="sample-eyebrow">API example</div>
+                <h2>Machine-readable payload</h2>
+                <pre id="api-example">{
+  "reference_status": "REVIEW_RECOMMENDED",
+  "reference_label": "Review Recommended",
+  "reference_action": "Secondary review is recommended before this price is referenced.",
+  "reference_reasons": [
+    "Resolution or source details need checking before this price is referenced."
+  ]
+}</pre>
+            </div>
+        </section>
+
+        <section class="sample-section outreach-card">
+            <div>
+                <div class="sample-eyebrow">Feedback ask</div>
+                <h2>Would this reduce hesitation when referencing Polymarket prices?</h2>
+                <p>
+                    We are testing whether this format fits real editorial, research, and
+                    AI-output workflows. Useful feedback is specific: confusing labels,
+                    missing reasons, unsuitable reference text, or markets you would want
+                    covered before publication.
+                </p>
+            </div>
+            <a class="sample-btn sample-btn-primary" href="mailto:contact@strata-labs.xyz?subject=Strata%20reference%20sample%20feedback">Send feedback</a>
+        </section>
+    </main>
+
+    <footer class="sample-footer">
+        <div>STRATA (C) 2026 // REFERENCE SAFETY LAYER</div>
+        <div>
+            <a href="./terms.html">Terms</a>
+            <a href="./docs.html">Docs</a>
+            <a href="/">Dashboard</a>
+        </div>
+    </footer>
+
+    <script src="js/formatters.js"></script>
+    <script src="js/press-sample.js"></script>
+</body>
+</html>

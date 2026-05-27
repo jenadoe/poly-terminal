@@ -55,9 +55,11 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
           cd private-brain
           mkdir -p data_output/api/v1/events
@@ -94,6 +96,25 @@ jobs:
             python scripts/build_proof_archive.py
           else
             echo "Proof archive script or active_events.json missing. Skipping proof archive build."
+          fi
+          if [ -f scripts/publish_cl_r2_public_reference_snapshot_v0.py ] && [ -f scripts/verify_public_reference_snapshot_parity_v0.py ]; then
+            echo "Publishing CL/R2 public reference snapshot..."
+            python scripts/publish_cl_r2_public_reference_snapshot_v0.py \
+              --limit 50 \
+              --public-markets-url "https://www.strata-labs.xyz/api/markets?pipeline_publish=${{ github.run_id }}" \
+              --out-json "../temp_data/cl_r2_public_reference_snapshot_v0.json" \
+              --out-md "../temp_data/cl_r2_public_reference_snapshot_v0.md" \
+              --publish
+            echo "Verifying public reference snapshot parity..."
+            python scripts/verify_public_reference_snapshot_parity_v0.py \
+              --public-markets-url "https://www.strata-labs.xyz/api/markets?pipeline_verify=${{ github.run_id }}" \
+              --min-rows 40 \
+              --max-age-hours 2 \
+              --out-json "../temp_data/public_reference_snapshot_parity_v0.json" \
+              --out-md "../temp_data/public_reference_snapshot_parity_v0.md"
+          else
+            echo "CL/R2 public reference snapshot scripts missing. Failing snapshot publish."
+            exit 1
           fi
           if [ -f data_output/active_markets.json ]; then rm data_output/active_markets.json; fi
           if [ -f data_output/history_storage.json ]; then rm data_output/history_storage.json; fi

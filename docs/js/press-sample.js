@@ -13,29 +13,68 @@ const GROUPS = [
     {
         status: 'READY',
         title: 'Ready for Reference',
-        note: 'Standard source attribution is enough. Ready does not mean the probability is correct or predictive.',
+        note: 'Cite with standard source attribution. Ready does not mean the market price is correct or predictive.',
         limit: 50,
         compact: true,
     },
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
-        note: 'Markets whose price should appear only with the stated context.',
+        note: 'Cite only when the stated context stays attached to the price.',
         limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
-        note: 'Markets that need extra scrutiny before being used as standalone references.',
+        note: 'Check wording, resolution source, or timing before citing.',
         limit: 50,
     },
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
-        note: 'Markets that should not appear as isolated price references.',
+        note: 'Do not present the price by itself; use only inside broader explanation.',
         limit: 50,
     },
 ];
+
+const REASON_CHIP_COPY = {
+    long_horizon: {
+        label: 'long horizon',
+        title: 'The event resolves far enough out that timing should be named when this price is referenced.',
+    },
+    election_market: {
+        label: 'election market',
+        title: 'Election markets should be framed as market pricing, not polling or an official forecast.',
+    },
+    resolution_review: {
+        label: 'resolution source',
+        title: 'The resolving source or criteria should be checked before the price is reused.',
+    },
+    wording_context: {
+        label: 'wording context',
+        title: 'The market wording may lose important conditions when the price is quoted alone.',
+    },
+    near_term: {
+        label: 'near term',
+        title: 'The market resolves soon, so timestamp and late information may matter.',
+    },
+    geopolitical_interpretation: {
+        label: 'geopolitical context',
+        title: 'Political or geopolitical context can materially change how the price reads.',
+    },
+    secondary_review: {
+        label: 'secondary review',
+        title: 'This market has public characteristics that warrant an extra check before standalone use.',
+    },
+    standard_reference: {
+        label: 'standard reference',
+        title: 'Ordinary source attribution is enough for this reference use case.',
+    },
+    event_definition: {
+        label: 'event definition',
+        title: 'The event definition or source interpretation should travel with the price.',
+    },
+};
 
 function sampleEid(id) {
     return document.getElementById(id);
@@ -122,6 +161,42 @@ function reasonText(market) {
     if (reasons.length) return reasons;
     if (market.reference_action) return [market.reference_action];
     return ['Reference-safety status is available for this market.'];
+}
+
+function reasonChipForMarket(market) {
+    const codes = Array.isArray(market.reference_reason_codes)
+        ? market.reference_reason_codes.filter(Boolean)
+        : [];
+    const preferred = codes.find(code => REASON_CHIP_COPY[code]);
+    if (preferred) return REASON_CHIP_COPY[preferred];
+    if (market.reference_status === 'READY') {
+        return {
+            label: 'standard reference',
+            title: 'Ordinary source attribution is enough for this reference use case.',
+        };
+    }
+    if (market.reference_status === 'CONTEXT_REQUIRED') {
+        return {
+            label: 'context needed',
+            title: 'The price should be cited only with the stated context attached.',
+        };
+    }
+    if (market.reference_status === 'REVIEW_RECOMMENDED') {
+        return {
+            label: 'check before use',
+            title: 'Review wording, resolution source, or timing before citing.',
+        };
+    }
+    if (market.reference_status === 'NOT_STANDALONE') {
+        return {
+            label: 'not standalone',
+            title: 'Do not present this price by itself.',
+        };
+    }
+    return {
+        label: 'reference status',
+        title: 'Reference-safety status is available for this market.',
+    };
 }
 
 function shortEventId(id) {
@@ -273,8 +348,8 @@ function openBetaPanel(market) {
     sampleEid('bp-event').textContent = shortEventId(market.event_id);
     sampleEid('bp-guidance').textContent = handling;
     sampleEid('bp-copy-label').textContent = market.reference_status === 'NOT_STANDALONE'
-        ? 'Reference Output'
-        : 'Suggested Reference';
+        ? 'Reference output'
+        : 'Suggested reference framing';
     sampleEid('bp-copy-text').textContent = output;
 
     const outputSection = sampleEid('bp-output-section');
@@ -352,6 +427,13 @@ function buildReadyRow(market) {
         <div class="ready-title">${market.title || '--'}</div>
     `;
     row.appendChild(title);
+
+    const reasonChip = reasonChipForMarket(market);
+    const chip = document.createElement('span');
+    chip.className = 'reason-chip';
+    chip.textContent = reasonChip.label;
+    chip.title = reasonChip.title;
+    title.appendChild(chip);
 
     const stats = document.createElement('div');
     stats.className = 'ready-stats';

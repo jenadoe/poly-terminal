@@ -12,7 +12,7 @@ const STATUS_CLASS = {
 const GROUPS = [
     {
         status: 'READY',
-        title: 'Clean Signal',
+        title: 'Clean Reference',
         note: 'Usable as a clean market-sentiment reference with standard source attribution.',
         limit: 50,
         compact: true,
@@ -32,7 +32,7 @@ const GROUPS = [
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
-        note: 'Do not use the price as an isolated market-sentiment signal.',
+        note: 'Do not use the price as an isolated market-sentiment reference.',
         limit: 50,
     },
 ];
@@ -40,7 +40,7 @@ const GROUPS = [
 const REASON_CHIP_COPY = {
     long_horizon: {
         label: 'long horizon',
-        title: 'The event resolves far enough out that timing should travel with the signal.',
+        title: 'The event resolves far enough out that timing should travel with the reference.',
     },
     election_market: {
         label: 'election market',
@@ -48,7 +48,7 @@ const REASON_CHIP_COPY = {
     },
     resolution_review: {
         label: 'resolution source',
-        title: 'The resolving source or criteria should be checked before the signal is reused.',
+        title: 'The resolving source or criteria should be checked before the reference is reused.',
     },
     wording_context: {
         label: 'wording context',
@@ -164,7 +164,7 @@ function reasonText(market) {
         : [];
     if (reasons.length) return reasons;
     if (market.reference_action) return [market.reference_action];
-    return ['Market-signal status is available for this market.'];
+    return ['Reference-usability status is available for this market.'];
 }
 
 function reasonChipForMarket(market) {
@@ -182,24 +182,24 @@ function reasonChipForMarket(market) {
     if (market.reference_status === 'CONTEXT_REQUIRED') {
         return {
             label: 'context needed',
-            title: 'Use this as a signal only with the stated context attached.',
+            title: 'Reuse this price only with the stated context attached.',
         };
     }
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
         return {
             label: 'check before use',
-            title: 'Review wording, resolution source, or timing before reusing the signal.',
+            title: 'Review wording, resolution source, or timing before reusing the reference.',
         };
     }
     if (market.reference_status === 'NOT_STANDALONE') {
         return {
             label: 'not standalone',
-            title: 'Do not use this price as an isolated signal.',
+            title: 'Do not use this price as an isolated reference.',
         };
     }
     return {
-        label: 'signal status',
-        title: 'Market-signal status is available for this market.',
+        label: 'reference status',
+        title: 'Reference-usability status is available for this market.',
     };
 }
 
@@ -237,8 +237,8 @@ function statusAction(market) {
     if (market.reference_status === 'READY') return 'Clean market-sentiment reference with standard source attribution.';
     if (market.reference_status === 'CONTEXT_REQUIRED') return 'Keep the stated context with the price.';
     if (market.reference_status === 'REVIEW_RECOMMENDED') return 'Review before using as a standalone market-sentiment reference.';
-    if (market.reference_status === 'NOT_STANDALONE') return 'Do not use this price as an isolated signal.';
-    return 'Review the signal posture before use.';
+    if (market.reference_status === 'NOT_STANDALONE') return 'Do not use this price as an isolated reference.';
+    return 'Review the reference posture before use.';
 }
 
 function displayPrice(market) {
@@ -266,7 +266,7 @@ function suggestedReference(market) {
     }
 
     if (market.reference_status === 'NOT_STANDALONE') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not use this price as an isolated sentiment signal; it needs substantial surrounding context. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not use this price as an isolated market-sentiment reference; it needs substantial surrounding context. Reason: ${reasons}`;
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;
@@ -274,7 +274,7 @@ function suggestedReference(market) {
 
 function panelReferenceOutput(market, handling) {
     if (market.reference_status === 'NOT_STANDALONE') {
-        return 'No standalone signal line generated for this status. Use only inside a broader explanation.';
+        return 'No standalone reference line generated for this status. Use only inside a broader explanation.';
     }
     return suggestedReference(market);
 }

@@ -54,6 +54,10 @@ const REASON_CHIP_COPY = {
         label: 'wording context',
         title: 'The market wording may lose important conditions when the price is quoted alone.',
     },
+    option_context: {
+        label: 'option context',
+        title: 'The specific candidate, team, bucket, or outcome should be named with this price.',
+    },
     near_term: {
         label: 'near term',
         title: 'The market resolves soon, so timestamp and late information may matter.',

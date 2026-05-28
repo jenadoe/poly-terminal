@@ -20,13 +20,13 @@ const GROUPS = [
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
-        note: 'Usable as a sentiment reference when the stated option, wording, or timing context stays attached.',
+        note: 'Still usable as a sentiment reference when the missing option, wording, timing, or resolution context stays attached.',
         limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
-        note: 'Potentially useful, but check wording, resolution source, timing, or sensitivity before reuse.',
+        note: 'Potentially useful, but check structure, wording, resolution source, timing, or sensitivity before reuse.',
         limit: 50,
     },
     {
@@ -404,9 +404,9 @@ function renderMetrics(markets) {
     });
     const note = sampleEid('briefing-note');
     if (note) {
-        note.textContent = counts.CONTEXT_REQUIRED
-            ? 'Sorted by status and market visibility.'
-            : 'No Context Required markets are present in the current top-volume briefing.';
+        note.textContent = counts.READY <= 3
+            ? 'Ready is intentionally rare; most flagged markets need option, wording, timing, or resolution context before reuse.'
+            : 'Sorted by status and market visibility.';
     }
 }
 

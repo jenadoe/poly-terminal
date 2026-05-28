@@ -536,7 +536,12 @@ function renderCards(markets) {
 
 async function loadSample() {
     try {
-        const res = await fetch(API_URL);
+        const accessCode = window.localStorage.getItem(ACCESS_STORAGE_KEY) || '';
+        const res = await fetch(API_URL, {
+            headers: {
+                'x-strata-beta-code': accessCode,
+            },
+        });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         const markets = Array.isArray(data)

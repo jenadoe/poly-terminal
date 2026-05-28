@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strata | Beta Access</title>
-    <meta name="description" content="An early-access reference-safety briefing for high-visibility Polymarket prices.">
+    <meta name="description" content="An early-access market-sentiment reference briefing for high-visibility Polymarket prices.">
     <meta name="robots" content="noindex,nofollow,noarchive">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -20,7 +20,7 @@
             <div class="sample-eyebrow">Early-access preview</div>
             <h1>Strata Beta Access</h1>
             <p>
-                Enter your reviewer code to view the current reference-safety
+                Enter your reviewer code to view the current market-sentiment
                 briefing. Invite links do not unlock access by themselves.
             </p>
             <form id="access-form">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="disclaimer">
-        Strata provides reference-safety guidance only. It does not predict outcomes, validate odds, or provide trading or investment advice.
+        Strata checks whether a Polymarket price is structurally usable as a market-sentiment reference. It does not predict outcomes, validate odds, or provide trading or investment advice.
     </div>
 
     <header class="sample-header">
@@ -62,11 +62,12 @@
         <section class="sample-hero">
             <div class="sample-hero-copy">
                 <div class="sample-eyebrow">Beta briefing for Polymarket prices</div>
-                <h1>High-visibility markets organized by reference posture.</h1>
+                <h1>High-visibility markets organized by signal usability.</h1>
                 <p>
-                    This briefing highlights which market prices can stand on their own,
-                    which need added context, and which should not be treated as isolated
-                    references. It is designed as a compact review surface, not a market terminal.
+                    This briefing highlights which Polymarket prices can be used as clean
+                    market-sentiment references, which need added context, and which should
+                    not be treated as standalone signals. It is a compact review surface,
+                    not a market terminal.
                 </p>
                 <div class="sample-actions">
                     <a class="sample-btn sample-btn-primary" href="#reference-cards">View briefing</a>
@@ -77,8 +78,8 @@
 
         <section class="sample-strip beta-board-summary">
             <div class="board-summary-title">
-                <div class="sample-eyebrow">Reference safety board</div>
-                <strong>Reference status for market prices</strong>
+                <div class="sample-eyebrow">Market signal board</div>
+                <strong>Signal usability for market prices</strong>
                 <span><b id="metric-markets">--</b> markets in this beta briefing</span>
             </div>
             <div class="strip-card strip-ready">
@@ -99,13 +100,13 @@
             </div>
         </section>
 
-        <section class="beta-frame-note" aria-label="How to read Strata reference-safety labels">
+        <section class="beta-frame-note" aria-label="How to read Strata market-signal labels">
             <strong>How to read this board</strong>
             <p>
-                These labels describe how a Polymarket price should be referenced, not whether
-                the market price is correct or predictive. Ready is intentionally strict: markets
-                move out of Ready when wording, timing, resolution source, or context should
-                travel with the price.
+                These labels describe whether a Polymarket price is structurally clean enough
+                to reuse as a market-sentiment reference. Ready is intentionally rare: it means
+                the price can stand on its own as a clean signal, not that the odds are correct
+                or predictive.
             </p>
         </section>
 
@@ -113,7 +114,7 @@
             <div class="section-head">
                 <div>
                     <div class="sample-eyebrow">Market briefing</div>
-                    <h2>Current reference posture</h2>
+                    <h2>Current signal posture</h2>
                 </div>
                 <div class="section-note" id="briefing-note">Sorted by status and market visibility.</div>
             </div>
@@ -127,15 +128,15 @@
                 <div class="sample-eyebrow">Methodology note</div>
                 <h2>What the labels mean</h2>
                 <p>
-                    Strata evaluates reference posture based on public market structure,
-                    market wording, resolution sensitivity, and context risk. The status describes
-                    whether a price can stand on its own or needs additional framing.
+                    Strata evaluates whether a market price can be used as a crowd-sentiment
+                    reference based on public market structure, wording, resolution sensitivity,
+                    option context, and timing risk.
                 </p>
                 <ul>
-                    <li><strong>Ready:</strong> cite with standard source attribution. This is not a claim that the market price is correct.</li>
-                    <li><strong>Context Required:</strong> cite only with the stated context attached to the price.</li>
-                    <li><strong>Review Recommended:</strong> check wording, resolution source, or timing before citing.</li>
-                    <li><strong>Not Standalone:</strong> do not present the price by itself; use only inside broader explanation.</li>
+                    <li><strong>Ready:</strong> clean market-sentiment reference with standard source attribution.</li>
+                    <li><strong>Context Required:</strong> usable as a sentiment reference only when the stated option, wording, or timing context stays attached.</li>
+                    <li><strong>Review Recommended:</strong> potentially useful, but review wording, resolution source, timing, or sensitivity before reuse.</li>
+                    <li><strong>Not Standalone:</strong> do not use the price as an isolated sentiment signal.</li>
                 </ul>
             </div>
             <div class="method-card">
@@ -144,7 +145,8 @@
                 <p>
                     A Strata label is not a forecast, endorsement, odds validation,
                     or investment recommendation. It only describes whether the market
-                    price needs additional framing before it appears in another surface.
+                    price can be reused as a market-sentiment reference without losing
+                    important structure or context.
                 </p>
                 <ul>
                     <li>No raw trades, wallets, or participant identifiers are shown.</li>

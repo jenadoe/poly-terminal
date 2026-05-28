@@ -12,27 +12,27 @@ const STATUS_CLASS = {
 const GROUPS = [
     {
         status: 'READY',
-        title: 'Ready for Reference',
-        note: 'Cite with standard source attribution. Ready does not mean the market price is correct or predictive.',
+        title: 'Clean Signal',
+        note: 'Usable as a clean market-sentiment reference with standard source attribution.',
         limit: 50,
         compact: true,
     },
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
-        note: 'Cite only when the stated context stays attached to the price.',
+        note: 'Usable as a sentiment reference when the stated option, wording, or timing context stays attached.',
         limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
-        note: 'Check wording, resolution source, or timing before citing.',
+        note: 'Potentially useful, but check wording, resolution source, timing, or sensitivity before reuse.',
         limit: 50,
     },
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
-        note: 'Do not present the price by itself; use only inside broader explanation.',
+        note: 'Do not use the price as an isolated market-sentiment signal.',
         limit: 50,
     },
 ];
@@ -40,15 +40,15 @@ const GROUPS = [
 const REASON_CHIP_COPY = {
     long_horizon: {
         label: 'long horizon',
-        title: 'The event resolves far enough out that timing should be named when this price is referenced.',
+        title: 'The event resolves far enough out that timing should travel with the signal.',
     },
     election_market: {
         label: 'election market',
-        title: 'Election markets should be framed as market pricing, not polling or an official forecast.',
+        title: 'Election markets should be framed as market sentiment, not polling or an official forecast.',
     },
     resolution_review: {
         label: 'resolution source',
-        title: 'The resolving source or criteria should be checked before the price is reused.',
+        title: 'The resolving source or criteria should be checked before the signal is reused.',
     },
     wording_context: {
         label: 'wording context',
@@ -72,7 +72,7 @@ const REASON_CHIP_COPY = {
     },
     standard_reference: {
         label: 'standard reference',
-        title: 'Ordinary source attribution is enough for this reference use case.',
+        title: 'Ordinary source attribution is enough for this market-sentiment reference.',
     },
     event_definition: {
         label: 'event definition',
@@ -164,7 +164,7 @@ function reasonText(market) {
         : [];
     if (reasons.length) return reasons;
     if (market.reference_action) return [market.reference_action];
-    return ['Reference-safety status is available for this market.'];
+    return ['Market-signal status is available for this market.'];
 }
 
 function reasonChipForMarket(market) {
@@ -176,30 +176,30 @@ function reasonChipForMarket(market) {
     if (market.reference_status === 'READY') {
         return {
             label: 'standard reference',
-            title: 'Ordinary source attribution is enough for this reference use case.',
+            title: 'Ordinary source attribution is enough for this market-sentiment reference.',
         };
     }
     if (market.reference_status === 'CONTEXT_REQUIRED') {
         return {
             label: 'context needed',
-            title: 'The price should be cited only with the stated context attached.',
+            title: 'Use this as a signal only with the stated context attached.',
         };
     }
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
         return {
             label: 'check before use',
-            title: 'Review wording, resolution source, or timing before citing.',
+            title: 'Review wording, resolution source, or timing before reusing the signal.',
         };
     }
     if (market.reference_status === 'NOT_STANDALONE') {
         return {
             label: 'not standalone',
-            title: 'Do not present this price by itself.',
+            title: 'Do not use this price as an isolated signal.',
         };
     }
     return {
-        label: 'reference status',
-        title: 'Reference-safety status is available for this market.',
+        label: 'signal status',
+        title: 'Market-signal status is available for this market.',
     };
 }
 
@@ -234,11 +234,11 @@ function closeText(market) {
 
 function statusAction(market) {
     if (market.reference_action) return market.reference_action;
-    if (market.reference_status === 'READY') return 'Standard source attribution is enough.';
+    if (market.reference_status === 'READY') return 'Clean market-sentiment reference with standard source attribution.';
     if (market.reference_status === 'CONTEXT_REQUIRED') return 'Keep the stated context with the price.';
-    if (market.reference_status === 'REVIEW_RECOMMENDED') return 'Review before using as a standalone reference.';
-    if (market.reference_status === 'NOT_STANDALONE') return 'Do not present this price by itself.';
-    return 'Review the reference posture before use.';
+    if (market.reference_status === 'REVIEW_RECOMMENDED') return 'Review before using as a standalone market-sentiment reference.';
+    if (market.reference_status === 'NOT_STANDALONE') return 'Do not use this price as an isolated signal.';
+    return 'Review the signal posture before use.';
 }
 
 function displayPrice(market) {
@@ -262,11 +262,11 @@ function suggestedReference(market) {
     }
 
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Treat the price as requiring additional review before it is used as a standalone reference. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Treat the price as requiring additional review before it is used as a standalone market-sentiment reference. Reason: ${reasons}`;
     }
 
     if (market.reference_status === 'NOT_STANDALONE') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not present this price by itself; it needs substantial surrounding context. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not use this price as an isolated sentiment signal; it needs substantial surrounding context. Reason: ${reasons}`;
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;
@@ -274,7 +274,7 @@ function suggestedReference(market) {
 
 function panelReferenceOutput(market, handling) {
     if (market.reference_status === 'NOT_STANDALONE') {
-        return 'No standalone citation generated for this status. Use only inside a broader explanation.';
+        return 'No standalone signal line generated for this status. Use only inside a broader explanation.';
     }
     return suggestedReference(market);
 }

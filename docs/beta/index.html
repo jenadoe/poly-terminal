@@ -13,6 +13,76 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/press-sample.css">
+    <style>
+        .beta-frame-note {
+            grid-template-columns: minmax(190px, 0.56fr) minmax(0, 1.44fr);
+            gap: 18px;
+            align-items: stretch;
+            padding: 14px;
+            border-color: rgba(232,197,126,0.2);
+            background: linear-gradient(90deg, rgba(232,197,126,0.08), rgba(104,206,236,0.025)), rgba(255,255,255,0.016);
+        }
+        .frame-note-kicker {
+            min-height: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(232,197,126,0.18);
+            background: rgba(0,0,0,0.18);
+        }
+        .frame-note-kicker span {
+            display: block;
+            margin-bottom: 11px;
+            color: var(--amber-text);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            line-height: 1.35;
+            text-transform: uppercase;
+        }
+        .frame-note-kicker strong {
+            display: block;
+            color: var(--text-hi);
+            font-size: 15px;
+            line-height: 1.45;
+        }
+        .frame-note-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
+        }
+        .frame-note-grid article {
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid var(--border);
+            background: rgba(4,5,8,0.34);
+        }
+        .frame-note-grid article span {
+            display: inline-flex;
+            margin-bottom: 10px;
+            color: var(--cyan-text);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        .frame-note-grid article strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--text-hi);
+            font-size: 12px;
+            line-height: 1.45;
+        }
+        .frame-note-grid article p {
+            color: var(--text);
+            font-size: 11px;
+            line-height: 1.65;
+            margin: 0;
+        }
+        @media (max-width: 980px) {
+            .beta-frame-note,
+            .frame-note-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="access-gate" id="access-gate">
@@ -100,20 +170,27 @@
         </section>
 
         <section class="beta-frame-note" aria-label="How to read Strata reference-usability labels">
-            <strong>How to read this board</strong>
-            <p>
-                These labels describe whether a Polymarket price is structurally clean enough
-                to reuse as a market-sentiment reference. Ready is intentionally rare: it means
-                the price can stand on its own as a clean reference, not that the odds are correct
-                or predictive.
-            </p>
-            <p>
-                Most non-Ready markets are not bad or unusable. They are flagged because the
-                price may depend on a specific option, candidate, team, bucket, timing window,
-                or resolution rule that can disappear when the market title is quoted alone.
-                Context Required means the reference may still be useful when that missing context
-                travels with it.
-            </p>
+            <div class="frame-note-kicker">
+                <span>Read the board</span>
+                <strong>Reference usability, not odds validation.</strong>
+            </div>
+            <div class="frame-note-grid">
+                <article>
+                    <span>01</span>
+                    <strong>Ready is intentionally rare</strong>
+                    <p>A Ready price can stand alone as a clean market-sentiment reference. It does not mean the odds are correct or predictive.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <strong>Non-Ready does not mean bad</strong>
+                    <p>Most prices simply need the named option, timing window, wording, or resolution context carried with them.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <strong>Use the status as handling guidance</strong>
+                    <p>Attach context, review first, or avoid standalone reuse depending on the label shown for the market.</p>
+                </article>
+            </div>
         </section>
 
         <section class="sample-section" id="reference-cards">

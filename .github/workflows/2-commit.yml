@@ -62,6 +62,19 @@ jobs:
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
           cd private-brain
+          if [ -z "${SUPABASE_SERVICE_KEY:-}" ]; then
+            echo "SUPABASE_SERVICE_KEY is required for private snapshot RPC reads."
+            exit 1
+          fi
+          if grep -R -n -E '^(<<<<<<<|=======|>>>>>>>)' scripts/publish_cl_r2_public_reference_snapshot_v0.py scripts/verify_public_reference_snapshot_parity_v0.py; then
+            echo "Merge conflict marker found in CL/R2 snapshot scripts."
+            exit 1
+          fi
+          python -m py_compile scripts/publish_cl_r2_public_reference_snapshot_v0.py scripts/verify_public_reference_snapshot_parity_v0.py
+          git config --global http.postBuffer 524288000
+          git config --global http.version HTTP/1.1
+          git config --global http.lowSpeedLimit 1000
+          git config --global http.lowSpeedTime 300
           mkdir -p data_output/api/v1/events
           mkdir -p data_output/audit_logs
           echo "Copying private data assets..."
@@ -132,7 +145,17 @@ jobs:
           else
             git commit -m "Update Data Assets & Audit [$(date)]"
             git pull --rebase -X theirs origin main
-            git push
+            for attempt in 1 2 3; do
+              if git push; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "git push failed after 3 attempts."
+                exit 1
+              fi
+              echo "git push failed; retrying in $((attempt * 15)) seconds..."
+              sleep $((attempt * 15))
+            done
           fi
 
       - name: Checkout Public Face

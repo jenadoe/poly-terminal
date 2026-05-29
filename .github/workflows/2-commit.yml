@@ -61,7 +61,6 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
           cd private-brain
           if [ -z "${SUPABASE_SERVICE_KEY:-}" ] && [ -n "${SUPABASE_SERVICE_ROLE_KEY:-}" ]; then
@@ -75,8 +74,8 @@ jobs:
             echo "STRATA_BETA_CODE is required for beta-gated public market parity checks."
             exit 1
           fi
-          if [ -z "${R2_ACCOUNT_ID:-}" ] || [ -z "${R2_ACCESS_KEY_ID:-}" ] || [ -z "${R2_SECRET_ACCESS_KEY:-}" ] || [ -z "${R2_BUCKET:-}" ]; then
-            echo "R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, and R2_BUCKET are required for CL/R2 snapshot publish."
+          if [ -z "${R2_ACCOUNT_ID:-}" ] || [ -z "${R2_ACCESS_KEY_ID:-}" ] || [ -z "${R2_SECRET_ACCESS_KEY:-}" ]; then
+            echo "R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, and R2_SECRET_ACCESS_KEY are required for CL/R2 snapshot publish."
             exit 1
           fi
           if grep -R -n -E '^(<<<<<<<|=======|>>>>>>>)' scripts/publish_cl_r2_public_reference_snapshot_v0.py scripts/verify_public_reference_snapshot_parity_v0.py; then

@@ -7,25 +7,38 @@ const QS_COLUMNS = {
     SAFE_TO_CITE: {
         col: 'ch-quote-safe',
         label: 'Ready',
-        desc: 'Standard attribution is enough',
+        action: 'Cite with source',
+        desc: 'Use directly with a Polymarket link',
+    },
+    CITE_WITH_CONTEXT: {
+        col: 'ch-quote-context',
+        label: 'Context Required',
+        action: 'Attach context',
+        desc: 'Keep option, wording, timing, or rule details attached',
     },
     REVIEW_FIRST: {
         col: 'ch-quote-review',
         label: 'Review Recommended',
-        desc: 'Secondary review advised',
+        action: 'Check rules first',
+        desc: 'Inspect wording, resolution criteria, timing, or sensitivity',
     },
     DO_NOT_CITE_STANDALONE: {
         col: 'ch-quote-stop',
         label: 'Not Standalone',
-        desc: 'Do not show by itself',
+        action: 'Do not quote alone',
+        desc: 'Use only with broader explanation or full market context',
     },
 };
 
 const STATE_COLUMNS = ['Converged', 'Calibrating', 'Fragile'];
-const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
+const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'CITE_WITH_CONTEXT', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
 
 function displayCitationGroup(status) {
-    return status === 'CITE_WITH_CONTEXT' ? 'SAFE_TO_CITE' : status;
+    return status || 'UNKNOWN';
+}
+
+function citationAction(status) {
+    return QS_COLUMNS[displayCitationGroup(status)]?.action || 'Review handling';
 }
 
 function pillarWidths(market) {
@@ -72,6 +85,14 @@ function buildRow(m) {
     titleWrap.style.flex = '1';
     appendElement(titleWrap, 'div', m.category || '', 'mkt-category');
     appendElement(titleWrap, 'div', m.title || '?', 'mkt-title');
+    if (m.citation_status) {
+        appendElement(
+            titleWrap,
+            'div',
+            `${citationAction(m.citation_status)}: ${formatCitationStatus(m.citation_status)}`,
+            `quote-action-line ${citationStatusClass(m.citation_status)}`
+        );
+    }
 
     const nxsBlock = appendElement(top, 'div', null, 'nxs-block');
     if (m.citation_status) {
@@ -80,8 +101,8 @@ function buildRow(m) {
         appendElement(
             nxsBlock,
             'span',
-            formatCitationStatus(displayCitationGroup(m.citation_status)),
-            `nxs-unit ${citationStatusClass(displayCitationGroup(m.citation_status))}`
+            formatCitationStatus(m.citation_status),
+            `nxs-unit ${citationStatusClass(m.citation_status)}`
         );
     } else {
         appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
@@ -112,12 +133,9 @@ function buildRow(m) {
         appendElement(
             meta,
             'span',
-            formatCitationStatus(displayCitationGroup(m.citation_status)),
-            `quote-badge ${citationStatusClass(displayCitationGroup(m.citation_status))}`
+            citationAction(m.citation_status),
+            `quote-badge ${citationStatusClass(m.citation_status)}`
         );
-        if (m.citation_status === 'CITE_WITH_CONTEXT') {
-            appendElement(meta, 'span', formatCitationStatus(m.citation_status), 'quote-badge quote-context');
-        }
     }
     appendElement(meta, 'div', `vol. ${fmtVol(m.volume || 0)}`, 'mkt-vol');
 
@@ -175,6 +193,9 @@ function buildColumnHead(mode, key, count) {
     head.className = `col-head ${cfg.col}`;
     appendElement(head, 'span', `${count} shown`, 'col-count');
     appendElement(head, 'div', columnLabel(mode, key), `col-state ${mode === 'quote' ? citationStatusClass(key) : `cs-${key.toLowerCase()}`}`);
+    if (mode === 'quote' && cfg.action) {
+        appendElement(head, 'div', cfg.action, `col-action ${citationStatusClass(key)}`);
+    }
     appendElement(head, 'div', cfg.desc, 'col-desc');
     return head;
 }
@@ -196,21 +217,21 @@ function appendMarketBatch(col, group, startIndex, token) {
 
 function renderMarkets(markets, emptyMessage) {
     const token = ++marketRenderToken;
-    const mode = hasCitationSurface(markets) ? 'quote' : 'state';
+    const mode = markets.length > 0 && !hasCitationSurface(markets) ? 'state' : 'quote';
     const matrix = eid('state-matrix');
     const health = eid('health');
     if (health) health.style.display = mode === 'quote' ? 'none' : 'block';
     const shown = eid('shown-count');
     if (shown) shown.textContent = markets.length;
     syncLockedCount();
-    renderQuoteSafetySummary(markets);
+    renderQuoteSafetySummary(markets, mode);
     const blankText = emptyMessage || (mode === 'quote' ? 'No markets in this citation status' : 'No markets in this state');
     const grouped = mode === 'quote' ? groupMarketsByCitationStatus(markets) : groupMarketsByState(markets);
     const columns = mode === 'quote' ? QUOTE_COLUMNS : STATE_COLUMNS;
     const title = eid('matrix-title');
     if (title) {
         title.textContent = mode === 'quote'
-            ? 'Reference Safety Board - highest-priority public markets by status'
+            ? 'Reference Safety Board - highest-priority public markets by status action'
             : 'Integrity State Matrix - highest-priority public markets by structural state';
     }
     if (!matrix) return;
@@ -254,14 +275,14 @@ function renderMarkets(markets, emptyMessage) {
     renderLockedRows(mode);
 }
 
-function renderQuoteSafetySummary(markets) {
+function renderQuoteSafetySummary(markets, mode = 'quote') {
     const section = eid('quote-safety-summary');
     if (!section) return;
-    const withCitation = markets.filter(market => market.citation_status);
-    if (!withCitation.length) {
+    if (mode !== 'quote') {
         section.style.display = 'none';
         return;
     }
+    const withCitation = markets.filter(market => market.citation_status);
 
     const counts = {
         SAFE_TO_CITE: 0,
@@ -270,11 +291,6 @@ function renderQuoteSafetySummary(markets) {
         DO_NOT_CITE_STANDALONE: 0,
     };
     withCitation.forEach(market => {
-        if (market.citation_status === 'CITE_WITH_CONTEXT') {
-            counts.SAFE_TO_CITE += 1;
-            counts.CITE_WITH_CONTEXT += 1;
-            return;
-        }
         if (counts[market.citation_status] != null) counts[market.citation_status] += 1;
     });
 
@@ -316,6 +332,13 @@ function renderLockedRows(mode = 'state') {
             vol: '$8.7M',
             cat: 'MARKET',
             title: 'Additional reference-ready market',
+        },
+        {
+            citation_status: 'CITE_WITH_CONTEXT',
+            price: 0.58,
+            vol: '$3.1M',
+            cat: 'POLICY',
+            title: 'Additional context-required market',
         },
         {
             citation_status: 'REVIEW_FIRST',
@@ -373,6 +396,14 @@ function renderLockedRows(mode = 'state') {
         titleWrap.style.flex = '1';
         appendElement(titleWrap, 'div', ghost.cat, 'mkt-category');
         appendElement(titleWrap, 'div', ghost.title, 'mkt-title');
+        if (ghost.citation_status) {
+            appendElement(
+                titleWrap,
+                'div',
+                `${citationAction(ghost.citation_status)}: ${formatCitationStatus(ghost.citation_status)}`,
+                `quote-action-line ${statusClass}`
+            );
+        }
 
         const nxs = appendElement(top, 'div', null, 'nxs-block');
         if (ghost.citation_status) {
@@ -397,7 +428,7 @@ function renderLockedRows(mode = 'state') {
         const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
         const meta = appendElement(bottom, 'div');
         if (ghost.citation_status) {
-            appendElement(meta, 'span', formatCitationStatus(ghost.citation_status), `quote-badge ${statusClass}`);
+            appendElement(meta, 'span', citationAction(ghost.citation_status), `quote-badge ${statusClass}`);
         }
         appendElement(meta, 'div', `vol. ${ghost.vol}`, 'mkt-vol');
 

@@ -183,10 +183,10 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
 
 function citationStatusCopy(status) {
     const copy = {
-        SAFE_TO_CITE: 'Standard source attribution is enough.',
-        CITE_WITH_CONTEXT: 'Do not show this price without context.',
-        REVIEW_FIRST: 'Secondary review is recommended before showing this price.',
-        DO_NOT_CITE_STANDALONE: 'Do not show this price by itself.',
+        SAFE_TO_CITE: 'Cite directly with a Polymarket link. Add a timestamp if the price appears in a report or briefing.',
+        CITE_WITH_CONTEXT: 'Attach the specific option, wording, timing, or resolution detail before quoting this price.',
+        REVIEW_FIRST: 'Review market rules, resolution criteria, timing, or sensitivity before reusing this price.',
+        DO_NOT_CITE_STANDALONE: 'Do not quote the price alone. Use only with full market wording or broader explanation.',
     };
     return copy[status] || '';
 }

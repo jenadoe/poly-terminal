@@ -94,8 +94,8 @@
 </div>
 </section>
 
-<!-- HEALTH BAR -->
-<div id="health">
+<!-- HEALTH BAR (legacy structural diagnostics fallback only) -->
+<div id="health" style="display:none;">
     <div class="health-inner">
         <div class="health-label">Reference surface</div>
         <div class="health-kpis">
@@ -123,29 +123,34 @@
 </div>
 
 <!-- REFERENCE SAFETY SUMMARY -->
-<section id="quote-safety-summary" style="display:none;">
+<section id="quote-safety-summary">
     <div class="quote-summary-inner">
         <div>
             <div class="section-eyebrow">Reference safety board</div>
             <div class="quote-summary-title">Reference status for market prices</div>
+            <div class="quote-summary-note">Follow the status action: cite with source, attach context, review first, or avoid standalone reuse.</div>
         </div>
         <div class="quote-summary-grid">
             <div class="quote-summary-item quote-safe">
                 <span id="qs-safe">0</span>
                 <label>Ready</label>
+                <small>Cite with source</small>
+            </div>
+            <div class="quote-summary-item quote-context">
+                <span id="qs-context">0</span>
+                <label>Context Required</label>
+                <small>Attach context</small>
             </div>
             <div class="quote-summary-item quote-review">
                 <span id="qs-review">0</span>
                 <label>Review Recommended</label>
+                <small>Check rules first</small>
             </div>
             <div class="quote-summary-item quote-stop">
                 <span id="qs-stop">0</span>
                 <label>Not Standalone</label>
+                <small>Do not quote alone</small>
             </div>
-        </div>
-        <div class="quote-summary-tag quote-context">
-            <span id="qs-context">0</span>
-            <label>With Context</label>
         </div>
     </div>
 </section>
@@ -153,7 +158,7 @@
 <!-- STATE MATRIX -->
 <section id="matrix">
     <div class="matrix-header">
-        <div class="matrix-title" id="matrix-title">Reference Status Matrix - sampled public markets by reference status</div>
+        <div class="matrix-title" id="matrix-title">Reference Safety Board - highest-priority public markets by status action</div>
         <div class="matrix-access">
             <strong id="shown-count">--</strong> / <strong id="total-tracked">--</strong> markets shown
         </div>
@@ -203,9 +208,9 @@
                 <div>
                     <div class="hiw-title">Reference-Safety Assessment</div>
                     <p class="hiw-body">
-                        Each market receives a reference status that describes whether the
-                        price can appear normally, needs context, warrants review, or should
-                        not be presented alone.
+                        Each market receives a reference status with a concrete next action:
+                        cite with source, attach context, review first, or avoid standalone
+                        reuse.
                     </p>
                 </div>
             </div>
@@ -221,15 +226,19 @@
                     <div class="state-legend">
                         <div class="sl-row sl-c">
                             <span class="sl-name">Ready</span>
-                            <span class="sl-desc">Standard source attribution is enough.</span>
+                            <span class="sl-desc">Cite with source.</span>
+                        </div>
+                        <div class="sl-row sl-context">
+                            <span class="sl-name">Context Required</span>
+                            <span class="sl-desc">Attach option, wording, timing, or rule context.</span>
                         </div>
                         <div class="sl-row sl-a">
                             <span class="sl-name">Review Recommended</span>
-                            <span class="sl-desc">Secondary review is advised before downstream use.</span>
+                            <span class="sl-desc">Check rules, timing, or sensitivity first.</span>
                         </div>
                         <div class="sl-row sl-f">
                             <span class="sl-name">Not Standalone</span>
-                            <span class="sl-desc">Do not present the price by itself.</span>
+                            <span class="sl-desc">Do not quote the price alone.</span>
                         </div>
                     </div>
                 </div>
@@ -285,8 +294,8 @@
             </div>
         </div>
 
-        <div class="sp-section" id="sp-citation-section" style="display:none;">
-            <div class="sp-section-label">Reference guidance</div>
+            <div class="sp-section" id="sp-citation-section" style="display:none;">
+            <div class="sp-section-label">How to use this price as a reference</div>
             <div class="sp-citation-card" id="sp-citation-card">
                 <div class="sp-citation-status" id="sp-citation-status">--</div>
                 <div class="sp-citation-copy" id="sp-citation-copy">--</div>

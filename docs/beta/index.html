@@ -154,18 +154,22 @@
             <div class="strip-card strip-ready">
                 <span id="metric-ready">--</span>
                 <label>Ready</label>
+                <small>Cite with source</small>
             </div>
             <div class="strip-card strip-review">
                 <span id="metric-review">--</span>
                 <label>Review recommended</label>
+                <small>Check rules first</small>
             </div>
             <div class="strip-card strip-stop">
                 <span id="metric-stop">--</span>
                 <label>Not standalone</label>
+                <small>Do not quote alone</small>
             </div>
             <div class="strip-card strip-context strip-context-box">
                 <span id="metric-context">--</span>
                 <label>Context required</label>
+                <small>Attach context</small>
             </div>
         </section>
 
@@ -187,8 +191,8 @@
                 </article>
                 <article>
                     <span>03</span>
-                    <strong>Use the status as handling guidance</strong>
-                    <p>Attach context, review first, or avoid standalone reuse depending on the label shown for the market.</p>
+                    <strong>Follow the next action</strong>
+                    <p>Each label maps to a handling step: cite with source, attach context, review first, or avoid standalone reuse.</p>
                 </article>
             </div>
         </section>
@@ -216,10 +220,10 @@
                     option context, and timing risk.
                 </p>
                 <ul>
-                    <li><strong>Ready:</strong> clean market-sentiment reference with standard source attribution.</li>
-                    <li><strong>Context Required:</strong> attach the named option, wording, timing, or resolution context before reusing.</li>
-                    <li><strong>Review Recommended:</strong> potentially useful, but review wording, resolution source, timing, or sensitivity before reuse.</li>
-                    <li><strong>Not Standalone:</strong> do not use the price as an isolated market-sentiment reference.</li>
+                    <li><strong>Ready - Cite with source:</strong> use the price directly with a Polymarket link and timestamp/source context.</li>
+                    <li><strong>Context Required - Attach context:</strong> keep the specific option, wording, timing, or resolution detail beside the price.</li>
+                    <li><strong>Review Recommended - Check rules first:</strong> inspect market rules, resolution criteria, timing, or sensitivity before reuse.</li>
+                    <li><strong>Not Standalone - Do not quote alone:</strong> use only with full market wording or surrounding explanation.</li>
                 </ul>
             </div>
             <div class="method-card">
@@ -284,13 +288,13 @@
                 <div><span>Close</span><strong id="bp-close-time">--</strong></div>
                 <div><span>Event</span><strong id="bp-event">--</strong></div>
             </div>
+            <section class="beta-panel-block beta-panel-guidance">
+                <div class="card-section-label">How to use this price as a reference</div>
+                <p id="bp-guidance">--</p>
+            </section>
             <section class="beta-panel-block beta-panel-note">
                 <div class="card-section-label">Why this status</div>
                 <div id="bp-reasons" class="beta-panel-reasons"></div>
-            </section>
-            <section class="beta-panel-block beta-panel-guidance">
-                <div class="card-section-label">Reference guidance</div>
-                <p id="bp-guidance">--</p>
             </section>
             <section class="beta-panel-block" id="bp-output-section">
                 <div class="card-section-label" id="bp-copy-label">Suggested reference framing</div>

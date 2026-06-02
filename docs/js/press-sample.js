@@ -9,29 +9,55 @@ const STATUS_CLASS = {
     REVIEW_RECOMMENDED: 'status-review',
     NOT_STANDALONE: 'status-stop',
 };
+const STATUS_ACTION_COPY = {
+    READY: {
+        subtitle: 'Cite with source',
+        row: 'Ready to cite',
+        panel: 'Cite directly with a Polymarket link. Add a timestamp if the price appears in a report or briefing.',
+    },
+    CONTEXT_REQUIRED: {
+        subtitle: 'Attach context',
+        row: 'Add context',
+        panel: 'Attach the specific option, wording, timing, or resolution detail before quoting this price.',
+    },
+    REVIEW_RECOMMENDED: {
+        subtitle: 'Check rules first',
+        row: 'Review first',
+        panel: 'Review market rules, resolution criteria, timing, or sensitivity before reusing this price.',
+    },
+    NOT_STANDALONE: {
+        subtitle: 'Do not quote alone',
+        row: 'Avoid standalone',
+        panel: 'Do not quote the price alone. Use only with full market wording or broader explanation.',
+    },
+};
 const GROUPS = [
     {
         status: 'READY',
-        title: 'Clean Reference',
-        note: 'Usable as a clean market-sentiment reference with standard source attribution.',
+        title: 'Ready',
+        action: STATUS_ACTION_COPY.READY.subtitle,
+        note: 'Use directly as a market-sentiment reference with Polymarket as the source.',
         limit: 50,
         compact: true,
     },
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
-        note: 'Still usable as a sentiment reference when the option, wording, timing, or resolution context stays attached.',
+        action: STATUS_ACTION_COPY.CONTEXT_REQUIRED.subtitle,
+        note: 'Still usable when the option, wording, timing, or resolution context stays attached.',
         limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
-        note: 'Potentially useful, but check structure, wording, resolution source, timing, or sensitivity before reuse.',
+        action: STATUS_ACTION_COPY.REVIEW_RECOMMENDED.subtitle,
+        note: 'Check structure, wording, resolution source, timing, or sensitivity before reuse.',
         limit: 50,
     },
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
+        action: STATUS_ACTION_COPY.NOT_STANDALONE.subtitle,
         note: 'Do not use the price as an isolated market-sentiment reference.',
         limit: 50,
     },
@@ -49,6 +75,10 @@ const REASON_CHIP_COPY = {
     resolution_review: {
         label: 'resolution source',
         title: 'The resolving source or criteria should be checked before the reference is reused.',
+    },
+    disclosure_oracle_review: {
+        label: 'oracle review',
+        title: 'Check disclosure timing, public reporting, on-chain evidence, or oracle/review state before reuse.',
     },
     wording_context: {
         label: 'wording context',
@@ -77,6 +107,18 @@ const REASON_CHIP_COPY = {
     event_definition: {
         label: 'event definition',
         title: 'The event definition or source interpretation should travel with the price.',
+    },
+    option_set_context: {
+        label: 'option set',
+        title: 'The option set or location/meeting context should stay visible with the price.',
+    },
+    extreme_price: {
+        label: 'extreme price',
+        title: 'Near-0% or near-100% prices should not be presented as odds validation.',
+    },
+    thin_volume: {
+        label: 'thin volume',
+        title: 'Lower public volume should not be framed as broad market consensus.',
     },
 };
 
@@ -158,6 +200,22 @@ function referenceLabel(market) {
     }[market.reference_status] || 'Reference Status';
 }
 
+function statusActionCopy(status) {
+    return STATUS_ACTION_COPY[status] || {
+        subtitle: 'Review handling',
+        row: 'Review handling',
+        panel: 'Review the reference posture before use.',
+    };
+}
+
+function statusActionSubtitle(market) {
+    return statusActionCopy(market.reference_status).subtitle;
+}
+
+function rowActionPhrase(market) {
+    return statusActionCopy(market.reference_status).row;
+}
+
 function reasonText(market) {
     const reasons = Array.isArray(market.reference_reasons)
         ? market.reference_reasons.filter(Boolean)
@@ -233,12 +291,10 @@ function closeText(market) {
 }
 
 function statusAction(market) {
-    if (market.reference_action) return market.reference_action;
-    if (market.reference_status === 'READY') return 'Clean market-sentiment reference with standard source attribution.';
-    if (market.reference_status === 'CONTEXT_REQUIRED') return 'Keep the stated context with the price.';
-    if (market.reference_status === 'REVIEW_RECOMMENDED') return 'Review before using as a standalone market-sentiment reference.';
-    if (market.reference_status === 'NOT_STANDALONE') return 'Do not use this price as an isolated reference.';
-    return 'Review the reference posture before use.';
+    const lead = statusActionCopy(market.reference_status).panel;
+    const detail = String(market.reference_action || '').trim();
+    if (!detail || detail === lead) return lead;
+    return `${lead} ${detail}`;
 }
 
 function displayPrice(market) {
@@ -405,8 +461,8 @@ function renderMetrics(markets) {
     const note = sampleEid('briefing-note');
     if (note) {
         note.textContent = counts.READY <= 3
-            ? 'Ready is strict: non-Ready markets usually need option, wording, timing, or resolution context to travel with the price.'
-            : 'Sorted by status and market visibility.';
+            ? 'Follow the row action: cite with source, attach context, review first, or avoid standalone reuse.'
+            : 'Sorted by status and market visibility with row-level handling actions.';
     }
 }
 
@@ -438,6 +494,11 @@ function buildReadyRow(market) {
     chip.textContent = reasonChip.label;
     chip.title = reasonChip.title;
     title.appendChild(chip);
+
+    const actionLine = document.createElement('div');
+    actionLine.className = 'ready-action-line';
+    actionLine.textContent = `${rowActionPhrase(market)}: ${statusActionSubtitle(market)}`;
+    title.appendChild(actionLine);
 
     const stats = document.createElement('div');
     stats.className = 'ready-stats';
@@ -517,7 +578,7 @@ function renderCards(markets) {
         head.className = 'status-group-head';
         head.innerHTML = `
             <div>
-                <h3>${group.title}</h3>
+                <h3>${group.title}<small>${group.action}</small></h3>
                 <p>${group.note}</p>
             </div>
             <span>${groupMarkets.length} shown</span>

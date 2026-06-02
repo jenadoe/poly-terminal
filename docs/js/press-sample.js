@@ -20,7 +20,7 @@ const GROUPS = [
     {
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
-        note: 'Still usable as a sentiment reference when the missing option, wording, timing, or resolution context stays attached.',
+        note: 'Still usable as a sentiment reference when the option, wording, timing, or resolution context stays attached.',
         limit: 50,
     },
     {
@@ -56,7 +56,7 @@ const REASON_CHIP_COPY = {
     },
     option_context: {
         label: 'option context',
-        title: 'The specific candidate, team, bucket, or outcome should be named with this price.',
+        title: 'The specific candidate, team, bucket, or outcome should stay attached to this price.',
     },
     near_term: {
         label: 'near term',
@@ -405,7 +405,7 @@ function renderMetrics(markets) {
     const note = sampleEid('briefing-note');
     if (note) {
         note.textContent = counts.READY <= 3
-            ? 'Ready is intentionally rare; most flagged markets need option, wording, timing, or resolution context before reuse.'
+            ? 'Ready is strict: non-Ready markets usually need option, wording, timing, or resolution context to travel with the price.'
             : 'Sorted by status and market visibility.';
     }
 }

@@ -89,21 +89,11 @@ async function loadKPIs() {
 
 async function loadMarkets() {
     if (!HAS_API) throw new Error('Public API is not configured');
-    const res = await fetch(`${API_BASE}/markets`);
+    const res = await fetch(`${API_BASE}/public-sample`);
     if (!res.ok) throw new Error(`Markets HTTP ${res.status}`);
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error('Markets payload invalid');
     return data
         .map(normalizeMarket)
-        .sort((a, b) => Number(b.volume || 0) - Number(a.volume || 0))
-        .filter((() => {
-            const counts = new Map();
-            return market => {
-                const group = market.citation_status || 'UNKNOWN';
-                const count = counts.get(group) || 0;
-                if (count >= 3) return false;
-                counts.set(group, count + 1);
-                return true;
-            };
-        })());
+        .sort((a, b) => Number(b.volume || 0) - Number(a.volume || 0));
 }

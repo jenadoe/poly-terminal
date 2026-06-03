@@ -1087,6 +1087,33 @@ body.sample-locked {
     margin-right: 7px;
 }
 
+.beta-panel-checklist {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.beta-panel-checklist li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.beta-panel-checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--cyan-line);
+    background: var(--cyan-pale);
+}
+
 .beta-panel-copy {
     padding: 12px;
     background: rgba(0,0,0,0.22);

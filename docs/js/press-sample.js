@@ -96,6 +96,14 @@ const REASON_CHIP_COPY = {
         label: 'geopolitical context',
         title: 'Political or geopolitical context can materially change how the price reads.',
     },
+    public_health_reporting: {
+        label: 'public health source',
+        title: 'Public-health reporting source, case definitions, or data timing should be checked.',
+    },
+    threshold_definition: {
+        label: 'threshold definition',
+        title: 'The threshold or boundary condition should stay visible with the price.',
+    },
     secondary_review: {
         label: 'secondary review',
         title: 'This market has public characteristics that warrant an extra check before standalone use.',
@@ -297,6 +305,51 @@ function statusAction(market) {
     return `${lead} ${detail}`;
 }
 
+function checklistItemsForMarket(market) {
+    const status = market.reference_status;
+    const codes = Array.isArray(market.reference_reason_codes)
+        ? market.reference_reason_codes.filter(Boolean)
+        : [];
+    const items = [];
+    const add = item => {
+        if (item && !items.includes(item)) items.push(item);
+    };
+
+    if (status === 'READY') {
+        add('Cite Polymarket as the source');
+        add('Include timestamp when used in a report');
+        return items;
+    }
+
+    if (status === 'CONTEXT_REQUIRED') {
+        add('Keep the selected option or threshold visible');
+        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Include close timing or timestamp');
+        if (codes.includes('resolution_review') || codes.includes('event_definition')) add('Carry the key resolution detail');
+        add('Use the suggested reference framing');
+        return items;
+    }
+
+    if (status === 'REVIEW_RECOMMENDED') {
+        add('Inspect market wording and selected option');
+        if (codes.includes('resolution_review') || codes.includes('disclosure_oracle_review')) add('Check resolution criteria and source');
+        if (codes.includes('public_health_reporting')) add('Check official reporting source and case definition');
+        if (codes.includes('threshold_definition') || codes.includes('event_definition')) add('Verify threshold or event definition');
+        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Confirm close timing and timestamp');
+        if (codes.includes('election_market') || codes.includes('geopolitical_interpretation')) add('Frame as market pricing, not polling or outcome validation');
+        return items;
+    }
+
+    if (status === 'NOT_STANDALONE') {
+        add('Do not quote the price alone');
+        add('Include full market wording and selected option');
+        add('Use broader explanation or primary market context');
+        return items;
+    }
+
+    add('Review the reference posture before reuse');
+    return items;
+}
+
 function displayPrice(market) {
     return fmtOutcomePct(market.current_price);
 }
@@ -424,6 +477,16 @@ function openBetaPanel(market) {
             const item = document.createElement('div');
             item.textContent = reason;
             reasonsWrap.appendChild(item);
+        });
+    }
+
+    const checklistWrap = sampleEid('bp-checklist');
+    if (checklistWrap) {
+        checklistWrap.innerHTML = '';
+        checklistItemsForMarket(market).forEach(item => {
+            const node = document.createElement('li');
+            node.textContent = item;
+            checklistWrap.appendChild(node);
         });
     }
 

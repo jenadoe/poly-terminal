@@ -173,7 +173,7 @@ async function init() {
 
     const runtimeKind = getRuntimeStatusDecision(kpisResult, marketsResult);
     if (runtimeKind === 'live') {
-        setRuntimeStatus('live', `Live service connected - ${marketsResult.value.length} public markets loaded`);
+        setRuntimeStatus('live', `Live service connected - ${marketsResult.value.length} public sample markets loaded`);
         return;
     }
 

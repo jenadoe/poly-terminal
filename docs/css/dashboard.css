@@ -382,11 +382,11 @@
     margin-left: 12px;
 }
 .quote-matrix .col-head {
-    height: 104px;
+    min-height: 112px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow: visible;
 }
 .quote-matrix .col-state.quote-safe,
 .quote-matrix .col-state.quote-context,
@@ -406,6 +406,7 @@
     margin-bottom: 7px;
     padding: 3px 7px;
     border: 1px solid var(--border-hi);
+    min-height: 18px;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -414,6 +415,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: inline-flex;
+    align-items: center;
 }
 .col-action.quote-safe {
     color: var(--green-text);

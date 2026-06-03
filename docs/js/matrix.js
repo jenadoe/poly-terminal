@@ -85,14 +85,6 @@ function buildRow(m) {
     titleWrap.style.flex = '1';
     appendElement(titleWrap, 'div', m.category || '', 'mkt-category');
     appendElement(titleWrap, 'div', m.title || '?', 'mkt-title');
-    if (m.citation_status) {
-        appendElement(
-            titleWrap,
-            'div',
-            `${citationAction(m.citation_status)}: ${formatCitationStatus(m.citation_status)}`,
-            `quote-action-line ${citationStatusClass(m.citation_status)}`
-        );
-    }
 
     const nxsBlock = appendElement(top, 'div', null, 'nxs-block');
     if (m.citation_status) {
@@ -129,14 +121,7 @@ function buildRow(m) {
     if (state === 'Converged' && m.stable_hours) {
         appendElement(meta, 'span', `✓ STABLE ${fmtStableHours(m.stable_hours)}`, 'stable-badge');
     }
-    if (m.citation_status) {
-        appendElement(
-            meta,
-            'span',
-            citationAction(m.citation_status),
-            `quote-badge ${citationStatusClass(m.citation_status)}`
-        );
-    }
+    if (m.citation_status) meta.classList.add('quote-meta-compact');
     appendElement(meta, 'div', `vol. ${fmtVol(m.volume || 0)}`, 'mkt-vol');
 
     const flagsWrap = appendElement(bottom, 'div');
@@ -396,14 +381,6 @@ function renderLockedRows(mode = 'state') {
         titleWrap.style.flex = '1';
         appendElement(titleWrap, 'div', ghost.cat, 'mkt-category');
         appendElement(titleWrap, 'div', ghost.title, 'mkt-title');
-        if (ghost.citation_status) {
-            appendElement(
-                titleWrap,
-                'div',
-                `${citationAction(ghost.citation_status)}: ${formatCitationStatus(ghost.citation_status)}`,
-                `quote-action-line ${statusClass}`
-            );
-        }
 
         const nxs = appendElement(top, 'div', null, 'nxs-block');
         if (ghost.citation_status) {
@@ -427,9 +404,7 @@ function renderLockedRows(mode = 'state') {
 
         const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
         const meta = appendElement(bottom, 'div');
-        if (ghost.citation_status) {
-            appendElement(meta, 'span', citationAction(ghost.citation_status), `quote-badge ${statusClass}`);
-        }
+        if (ghost.citation_status) meta.classList.add('quote-meta-compact');
         appendElement(meta, 'div', `vol. ${ghost.vol}`, 'mkt-vol');
 
         wrap.appendChild(row);

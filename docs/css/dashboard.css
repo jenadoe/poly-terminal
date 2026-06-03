@@ -387,12 +387,22 @@
     flex-direction: column;
     justify-content: flex-start;
     overflow: visible;
+    position: relative;
+}
+.quote-matrix .col-count {
+    float: none;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    margin-left: 0;
+    line-height: 1;
 }
 .quote-matrix .col-state.quote-safe,
 .quote-matrix .col-state.quote-context,
 .quote-matrix .col-state.quote-review,
 .quote-matrix .col-state.quote-stop {
     padding: 0;
+    padding-right: 72px;
     border: 0;
     background: transparent;
 }
@@ -413,8 +423,6 @@
     line-height: 1.25;
     text-transform: uppercase;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: inline-flex;
     align-items: center;
 }
@@ -531,8 +539,8 @@
     margin-bottom: 8px;
 }
 .quote-matrix .mkt-top {
-    height: 76px;
-    min-height: 76px;
+    height: 92px;
+    min-height: 92px;
     margin-bottom: 8px;
     overflow: hidden;
 }
@@ -552,6 +560,10 @@
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.quote-matrix .mkt-title {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
 }
 .quote-action-line {
     width: fit-content;
@@ -662,6 +674,9 @@
     min-height: 32px;
     margin-top: auto;
     overflow: hidden;
+}
+.quote-matrix .quote-meta-compact {
+    min-width: 0;
 }
 .mkt-price {
     font-size: 16px;

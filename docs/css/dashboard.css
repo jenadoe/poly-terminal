@@ -382,7 +382,11 @@
     margin-left: 12px;
 }
 .quote-matrix .col-head {
-    min-height: 104px;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 .quote-matrix .col-state.quote-safe,
 .quote-matrix .col-state.quote-context,
@@ -398,6 +402,7 @@
 .quote-matrix .col-state.quote-stop { color: #E48E8E; }
 .col-action {
     width: fit-content;
+    max-width: 100%;
     margin-bottom: 7px;
     padding: 3px 7px;
     border: 1px solid var(--border-hi);
@@ -406,6 +411,9 @@
     letter-spacing: 0.1em;
     line-height: 1.25;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .col-action.quote-safe {
     color: var(--green-text);
@@ -449,7 +457,7 @@
     overflow: hidden;
 }
 .quote-matrix .mkt-row {
-    min-height: 154px;
+    height: 154px;
     display: flex;
 }
 .mkt-row:last-child { margin-bottom: 0; }
@@ -509,6 +517,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .mkt-top {
@@ -518,7 +527,12 @@
     gap: 10px;
     margin-bottom: 8px;
 }
-.quote-matrix .mkt-top { min-height: 72px; }
+.quote-matrix .mkt-top {
+    height: 76px;
+    min-height: 76px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
 .mkt-category {
     font-size: 10px;
     letter-spacing: 0.14em;
@@ -545,6 +559,9 @@
     letter-spacing: 0.08em;
     line-height: 1.35;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .quote-action-line.quote-safe { color: var(--green-text); }
 .quote-action-line.quote-context { color: var(--cyan-text); }
@@ -639,8 +656,9 @@
     gap: 10px;
 }
 .quote-matrix .mkt-bottom {
-    min-height: 34px;
+    min-height: 32px;
     margin-top: auto;
+    overflow: hidden;
 }
 .mkt-price {
     font-size: 16px;
@@ -667,6 +685,9 @@
     text-transform: uppercase;
     padding: 2px 7px;
     white-space: nowrap;
+    max-width: 132px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .quote-safe {
     color: var(--green-text);

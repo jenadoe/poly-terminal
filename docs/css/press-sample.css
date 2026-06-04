@@ -1000,6 +1000,16 @@ body.sample-locked {
     background: linear-gradient(180deg, rgba(232,197,126,0.075), rgba(255,255,255,0.018));
 }
 
+.beta-panel-context-block {
+    border-top: 2px solid var(--cyan-line) !important;
+    background: linear-gradient(180deg, rgba(104,206,236,0.055), rgba(255,255,255,0.018));
+}
+
+.beta-panel-risk-block {
+    border-top: 2px solid rgba(232,197,126,0.34) !important;
+    background: linear-gradient(180deg, rgba(232,197,126,0.055), rgba(255,255,255,0.018));
+}
+
 .beta-panel-note {
     border-top: 1px solid var(--border-hi) !important;
 }
@@ -1013,6 +1023,10 @@ body.sample-locked {
     color: var(--text-hi);
     font-size: 13px;
     line-height: 1.65;
+}
+
+.beta-panel-risk-block p {
+    color: var(--text);
 }
 
 .beta-panel-price-row,
@@ -1112,6 +1126,25 @@ body.sample-locked {
     height: 7px;
     border: 1px solid var(--cyan-line);
     background: var(--cyan-pale);
+}
+
+.beta-panel-context-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.beta-panel-context-list li {
+    min-width: 0;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    color: var(--text-hi);
+    background: rgba(0,0,0,0.18);
+    font-size: 12px;
+    line-height: 1.45;
 }
 
 .beta-panel-copy {

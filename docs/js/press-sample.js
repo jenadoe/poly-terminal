@@ -13,22 +13,22 @@ const STATUS_ACTION_COPY = {
     READY: {
         subtitle: 'Cite with source',
         row: 'Ready to cite',
-        panel: 'Cite directly with a Polymarket link. Add a timestamp if the price appears in a report or briefing.',
+        panel: 'Cite with Polymarket as the source and keep an as-of date. This is not odds approval.',
     },
     CONTEXT_REQUIRED: {
-        subtitle: 'Attach context',
+        subtitle: 'Attach exact context',
         row: 'Add context',
-        panel: 'Attach the specific option, wording, timing, or resolution detail before quoting this price.',
+        panel: 'Use the price only with the option, wording, threshold, timing, or rule detail that changes how it reads.',
     },
     REVIEW_RECOMMENDED: {
-        subtitle: 'Check rules first',
+        subtitle: 'Check rules/source first',
         row: 'Review first',
-        panel: 'Review market rules, resolution criteria, timing, or sensitivity before reusing this price.',
+        panel: 'Check the market wording, selected option, resolution source, timing, and sensitivity before reuse.',
     },
     NOT_STANDALONE: {
-        subtitle: 'Do not quote alone',
+        subtitle: 'Use full explanation',
         row: 'Avoid standalone',
-        panel: 'Do not quote the price alone. Use only with full market wording or broader explanation.',
+        panel: 'Do not quote the price as an isolated number. Use full wording plus resolution context or broader explanation.',
     },
 };
 const GROUPS = [
@@ -36,7 +36,7 @@ const GROUPS = [
         status: 'READY',
         title: 'Ready',
         action: STATUS_ACTION_COPY.READY.subtitle,
-        note: 'Use directly as a market-sentiment reference with Polymarket as the source.',
+        note: 'Use as a Polymarket reference with source and as-of date. This is not odds approval.',
         limit: 50,
         compact: true,
     },
@@ -44,21 +44,21 @@ const GROUPS = [
         status: 'CONTEXT_REQUIRED',
         title: 'Context Required',
         action: STATUS_ACTION_COPY.CONTEXT_REQUIRED.subtitle,
-        note: 'Still usable when the option, wording, timing, or resolution context stays attached.',
+        note: 'Usable when the exact option, wording, timing, threshold, or rule context stays attached.',
         limit: 50,
     },
     {
         status: 'REVIEW_RECOMMENDED',
         title: 'Review Recommended',
         action: STATUS_ACTION_COPY.REVIEW_RECOMMENDED.subtitle,
-        note: 'Check structure, wording, resolution source, timing, or sensitivity before reuse.',
+        note: 'Check wording, selected option, resolution source, timing, or sensitivity before reuse.',
         limit: 50,
     },
     {
         status: 'NOT_STANDALONE',
         title: 'Not Standalone',
         action: STATUS_ACTION_COPY.NOT_STANDALONE.subtitle,
-        note: 'Do not use the price as an isolated market-sentiment reference.',
+        note: 'Do not use the price as an isolated reference. Keep full wording and explanation attached.',
         limit: 50,
     },
 ];
@@ -70,7 +70,7 @@ const REASON_CHIP_COPY = {
     },
     election_market: {
         label: 'election market',
-        title: 'Election markets should be framed as market sentiment, not polling or an official forecast.',
+        title: 'Election markets should be framed as Polymarket pricing, not polling or an official forecast.',
     },
     resolution_review: {
         label: 'resolution source',
@@ -110,7 +110,7 @@ const REASON_CHIP_COPY = {
     },
     standard_reference: {
         label: 'standard reference',
-        title: 'Ordinary source attribution is enough for this market-sentiment reference.',
+        title: 'Ordinary source attribution is enough for this Polymarket reference.',
     },
     event_definition: {
         label: 'event definition',
@@ -242,7 +242,7 @@ function reasonChipForMarket(market) {
     if (market.reference_status === 'READY') {
         return {
             label: 'standard reference',
-            title: 'Ordinary source attribution is enough for this market-sentiment reference.',
+            title: 'Ordinary source attribution is enough for this Polymarket reference.',
         };
     }
     if (market.reference_status === 'CONTEXT_REQUIRED') {
@@ -298,34 +298,249 @@ function closeText(market) {
     return close.toISOString().slice(0, 10);
 }
 
+function codesForMarket(market) {
+    return Array.isArray(market.reference_reason_codes)
+        ? market.reference_reason_codes.filter(Boolean)
+        : [];
+}
+
+function topicForMarket(market) {
+    return market.selected_outcome_question || market.title || 'this Polymarket market';
+}
+
+function asOfDateText() {
+    return new Date().toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+    });
+}
+
+function absoluteDateText(value) {
+    if (!value) return '';
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        timeZone: 'UTC',
+    });
+}
+
+function reportedVolumePhrase(market) {
+    const volume = Number(market.volume || 0);
+    return volume > 0 ? `, with ${fmtVol(volume)} in reported Polymarket volume` : '';
+}
+
+function addUnique(list, item) {
+    if (item && !list.includes(item)) list.push(item);
+}
+
+function contextItemsForMarket(market) {
+    const codes = codesForMarket(market);
+    const items = [];
+    const topic = topicForMarket(market);
+    const selected = String(market.selected_outcome_label || '').trim();
+    const parent = String(market.parent_title || '').trim();
+
+    if (market.reference_status === 'READY') {
+        return [
+            'Polymarket source link',
+            'As-of date',
+            'Exact market question',
+        ];
+    }
+
+    if (selected && !topic.toLowerCase().includes(selected.toLowerCase())) {
+        addUnique(items, `Selected option: ${selected}`);
+    }
+    if (parent && parent !== topic && parent !== market.title) {
+        addUnique(items, `Parent market: ${parent}`);
+    }
+    if (codes.includes('threshold_definition')) {
+        addUnique(items, 'Exact threshold or boundary condition');
+    }
+    if (codes.includes('option_context') || codes.includes('option_set_context')) {
+        addUnique(items, 'Specific candidate, team, option, bucket, or option set');
+    }
+    if (codes.includes('long_horizon') || codes.includes('near_term') || market.close_time) {
+        addUnique(items, 'Deadline or close date plus as-of date');
+    }
+    if (codes.includes('resolution_review') || codes.includes('event_definition')) {
+        addUnique(items, 'Resolution source, rule, or event definition');
+    }
+    if (codes.includes('disclosure_oracle_review')) {
+        addUnique(items, 'Disclosure timing, reporting source, on-chain evidence, or oracle review state');
+    }
+    if (codes.includes('public_health_reporting')) {
+        addUnique(items, 'Public-health reporting source, case definition, and data timing');
+    }
+    if (codes.includes('election_market')) {
+        addUnique(items, 'Market-pricing framing, not polling or official forecast language');
+    }
+    if (codes.includes('geopolitical_interpretation')) {
+        addUnique(items, 'Political or geopolitical wording and settlement context');
+    }
+
+    if (!items.length) {
+        addUnique(items, 'Polymarket source link and as-of date');
+        addUnique(items, 'Exact market question');
+    }
+
+    return items.slice(0, 6);
+}
+
+function contextSummaryForMarket(market) {
+    const codes = codesForMarket(market);
+    if (codes.includes('threshold_definition')) return 'the exact threshold, boundary, and deadline';
+    if (codes.includes('option_context') || codes.includes('option_set_context')) return 'the specific option or option set';
+    if (codes.includes('public_health_reporting')) return 'the reporting source, case definition, and timing';
+    if (codes.includes('disclosure_oracle_review')) return 'the disclosure, reporting, and review-state context';
+    if (codes.includes('resolution_review') || codes.includes('event_definition')) return 'the resolution source and event definition';
+    if (codes.includes('geopolitical_interpretation')) return 'the geopolitical wording and settlement context';
+    if (codes.includes('election_market')) return 'the election-market framing';
+    if (codes.includes('long_horizon') || codes.includes('near_term')) return 'the close date and as-of date';
+    return 'the exact market question and Polymarket source';
+}
+
+function reasonItemsForMarket(market) {
+    const codes = codesForMarket(market);
+    const items = [];
+    const add = item => addUnique(items, item);
+    const topic = topicForMarket(market);
+
+    if (codes.includes('standard_reference')) {
+        add('The priced outcome is clear enough to cite with ordinary Polymarket attribution.');
+    }
+    if (codes.includes('threshold_definition')) {
+        add('The market depends on an exact threshold or boundary condition that should stay in the sentence.');
+    }
+    if (codes.includes('option_context')) {
+        add('The specific priced option should stay attached to the percentage.');
+    }
+    if (codes.includes('option_set_context')) {
+        add('The option set or surrounding market context can change how this price reads.');
+    }
+    if (codes.includes('wording_context')) {
+        add('The headline can lose important conditions when shortened.');
+    }
+    if (codes.includes('resolution_review')) {
+        add('The resolving source or criteria should be checked before standalone reuse.');
+    }
+    if (codes.includes('event_definition')) {
+        add('The event definition or official source may be narrower than a casual reading of the title.');
+    }
+    if (codes.includes('disclosure_oracle_review')) {
+        add('Disclosure timing, public reporting, on-chain evidence, or oracle review state may affect reuse.');
+    }
+    if (codes.includes('public_health_reporting')) {
+        add('Public-health source, case definition, and reporting timing should remain visible.');
+    }
+    if (codes.includes('election_market')) {
+        add('Election markets should be framed as Polymarket pricing, not polling or an official forecast.');
+    }
+    if (codes.includes('geopolitical_interpretation')) {
+        add('Political or geopolitical wording can change how a standalone percentage is understood.');
+    }
+    if (codes.includes('long_horizon')) {
+        add('The close date is far enough away that the time horizon should travel with the reference.');
+    }
+    if (codes.includes('near_term')) {
+        add('The market resolves soon, so an as-of date and late information matter.');
+    }
+    if (codes.includes('extreme_price')) {
+        add('Near-0% or near-100% prices should not be written as certainty or validation.');
+    }
+    if (codes.includes('thin_volume')) {
+        add('Lower reported volume should not be framed as broad consensus.');
+    }
+
+    if (items.length) return items;
+
+    const fallback = reasonText(market);
+    if (fallback.length) return fallback;
+    return [`Review how "${topic}" would read if the price were separated from the full Polymarket question.`];
+}
+
+function riskNoteForMarket(market) {
+    const codes = codesForMarket(market);
+    const topic = topicForMarket(market);
+    const status = market.reference_status;
+
+    if (status === 'READY') {
+        return 'The main risk is turning a point-in-time Polymarket price into an accuracy claim or forecast. Keep the source and as-of date visible.';
+    }
+    if (status === 'NOT_STANDALONE' && codes.includes('geopolitical_interpretation')) {
+        return 'A standalone percentage can read like a broad geopolitical signal even when settlement depends on narrower wording or rules.';
+    }
+    if (codes.includes('threshold_definition')) {
+        return `Without the threshold, boundary, or deadline, readers may treat "${topic}" as a broader market view than the contract actually asks.`;
+    }
+    if (codes.includes('option_context') || codes.includes('option_set_context')) {
+        return 'If the selected option or option set drops away, the percentage can attach to the wrong candidate, team, bucket, or event.';
+    }
+    if (codes.includes('public_health_reporting')) {
+        return 'Without source and case-definition context, the price can read like a public-health conclusion rather than a market reference.';
+    }
+    if (codes.includes('disclosure_oracle_review')) {
+        return 'Disclosure timing, reporting, on-chain evidence, or oracle review state may change how the market resolves.';
+    }
+    if (codes.includes('geopolitical_interpretation')) {
+        return 'A standalone percentage can read like a broad geopolitical signal even when settlement depends on narrower wording or rules.';
+    }
+    if (codes.includes('election_market')) {
+        return 'Readers may mistake market pricing for polling, official forecasting, or outcome validation unless the Polymarket framing stays visible.';
+    }
+    if (codes.includes('resolution_review') || codes.includes('event_definition')) {
+        return 'The market may settle according to a rule or source that differs from a casual reading of the headline.';
+    }
+    if (codes.includes('extreme_price')) {
+        return 'Near-0% or near-100% pricing can sound final if it is quoted without source, timing, and resolution context.';
+    }
+    return 'The number can lose meaning if the exact market wording, source, and timing are removed.';
+}
+
+function nextActionForMarket(market) {
+    const status = market.reference_status;
+    const summary = contextSummaryForMarket(market);
+    if (status === 'READY') {
+        return 'Cite with Polymarket as the source and include an as-of date. Do not present Ready as odds approval.';
+    }
+    if (status === 'CONTEXT_REQUIRED') {
+        return `Use the price only with ${summary} attached. The sentence should carry that context, not add it as an afterthought.`;
+    }
+    if (status === 'REVIEW_RECOMMENDED') {
+        return `Check ${summary} before citing. Treat the price as Polymarket market pricing, not polling, forecast, or validation.`;
+    }
+    if (status === 'NOT_STANDALONE') {
+        return `Do not use the price as an isolated percentage. If discussed, keep the full question visible and explain ${summary}.`;
+    }
+    return statusActionCopy(status).panel;
+}
+
 function statusAction(market) {
-    const lead = statusActionCopy(market.reference_status).panel;
-    const detail = String(market.reference_action || '').trim();
-    if (!detail || detail === lead) return lead;
-    return `${lead} ${detail}`;
+    return nextActionForMarket(market);
 }
 
 function checklistItemsForMarket(market) {
     const status = market.reference_status;
-    const codes = Array.isArray(market.reference_reason_codes)
-        ? market.reference_reason_codes.filter(Boolean)
-        : [];
+    const codes = codesForMarket(market);
     const items = [];
-    const add = item => {
-        if (item && !items.includes(item)) items.push(item);
-    };
+    const add = item => addUnique(items, item);
 
     if (status === 'READY') {
         add('Cite Polymarket as the source');
-        add('Include timestamp when used in a report');
+        add('Include an as-of date in reports or briefings');
+        add('Avoid forecast, accuracy, or validation language');
         return items;
     }
 
     if (status === 'CONTEXT_REQUIRED') {
-        add('Keep the selected option or threshold visible');
-        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Include close timing or timestamp');
+        add('Keep the exact selected option, threshold, or condition visible');
+        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Include close date and as-of date');
         if (codes.includes('resolution_review') || codes.includes('event_definition')) add('Carry the key resolution detail');
-        add('Use the suggested reference framing');
+        add('Use a sentence that already includes the missing context');
         return items;
     }
 
@@ -334,7 +549,7 @@ function checklistItemsForMarket(market) {
         if (codes.includes('resolution_review') || codes.includes('disclosure_oracle_review')) add('Check resolution criteria and source');
         if (codes.includes('public_health_reporting')) add('Check official reporting source and case definition');
         if (codes.includes('threshold_definition') || codes.includes('event_definition')) add('Verify threshold or event definition');
-        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Confirm close timing and timestamp');
+        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Confirm close date and as-of date');
         if (codes.includes('election_market') || codes.includes('geopolitical_interpretation')) add('Frame as market pricing, not polling or outcome validation');
         return items;
     }
@@ -355,27 +570,26 @@ function displayPrice(market) {
 }
 
 function suggestedReference(market) {
-    if (market.reference_line) return market.reference_line;
-
-    const title = market.title || 'this Polymarket market';
+    const title = topicForMarket(market);
     const price = displayPrice(market);
     const label = referenceLabel(market);
-    const reasons = reasonText(market).join(' ');
+    const volume = reportedVolumePhrase(market);
+    const base = `As of ${asOfDateText()}, Polymarket prices "${title}" at ${price}${volume}.`;
 
     if (market.reference_status === 'READY') {
-        return `Polymarket currently prices "${title}" at ${price}.`;
+        return `${base} Cite Polymarket as the source; this is not odds validation.`;
     }
 
     if (market.reference_status === 'CONTEXT_REQUIRED') {
-        return `Polymarket currently prices "${title}" at ${price}. Reuse this as a market-sentiment reference only with the relevant context near the price: ${reasons}`;
+        return `${base} Keep ${contextSummaryForMarket(market)} with the price.`;
     }
 
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
-        return `Polymarket currently prices "${title}" at ${price}. Review the market wording, resolution criteria, timing, or sensitivity before using it as a standalone market-sentiment reference. Reason: ${reasons}`;
+        return `${base} Review ${contextSummaryForMarket(market)} before citing as a standalone reference.`;
     }
 
     if (market.reference_status === 'NOT_STANDALONE') {
-        return `Polymarket currently prices "${title}" at ${price}. Do not use this price as an isolated market-sentiment reference; it needs substantial surrounding context. Reason: ${reasons}`;
+        return `No standalone reference sentence is recommended. If discussed, keep the full Polymarket question visible: ${base} Add resolution context rather than using the number alone.`;
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;
@@ -383,14 +597,14 @@ function suggestedReference(market) {
 
 function panelReferenceOutput(market, handling) {
     if (market.reference_status === 'NOT_STANDALONE') {
-        return 'No standalone reference line generated for this status. Use only inside a broader explanation.';
+        return suggestedReference(market);
     }
     return suggestedReference(market);
 }
 
 function panelCopyText(market, handling, output) {
     if (market.reference_status === 'NOT_STANDALONE') {
-        return handling || output;
+        return output || handling;
     }
     return output;
 }
@@ -442,7 +656,7 @@ function openBetaPanel(market) {
     const overlay = sampleEid('beta-overlay');
     if (!panel || !overlay) return;
 
-    const reasons = reasonText(market);
+    const reasons = reasonItemsForMarket(market);
     const handling = statusAction(market);
     const output = panelReferenceOutput(market, handling);
     const copy = panelCopyText(market, handling, output);
@@ -462,12 +676,25 @@ function openBetaPanel(market) {
     sampleEid('bp-guidance').textContent = handling;
     sampleEid('bp-copy-label').textContent = market.reference_status === 'NOT_STANDALONE'
         ? 'Reference output'
-        : 'Suggested reference framing';
+        : 'Suggested reference sentence';
     sampleEid('bp-copy-text').textContent = output;
+
+    const risk = sampleEid('bp-risk');
+    if (risk) risk.textContent = riskNoteForMarket(market);
 
     const outputSection = sampleEid('bp-output-section');
     if (outputSection) {
         outputSection.classList.toggle('beta-panel-output-locked', market.reference_status === 'NOT_STANDALONE');
+    }
+
+    const contextWrap = sampleEid('bp-context');
+    if (contextWrap) {
+        contextWrap.innerHTML = '';
+        contextItemsForMarket(market).forEach(item => {
+            const node = document.createElement('li');
+            node.textContent = item;
+            contextWrap.appendChild(node);
+        });
     }
 
     const reasonsWrap = sampleEid('bp-reasons');

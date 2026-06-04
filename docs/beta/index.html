@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strata | Beta Access</title>
-    <meta name="description" content="An early-access market-sentiment reference briefing for high-visibility Polymarket prices.">
+    <meta name="description" content="An early-access reference-handling briefing for high-visibility Polymarket prices.">
     <meta name="robots" content="noindex,nofollow,noarchive">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -90,7 +90,7 @@
             <div class="sample-eyebrow">Early-access preview</div>
             <h1>Strata Beta Access</h1>
             <p>
-                Enter your reviewer code to view the current market-sentiment
+                Enter your reviewer code to view the current reference-handling
                 briefing. Invite links do not unlock access by themselves.
             </p>
             <form id="access-form">
@@ -112,7 +112,7 @@
     </div>
 
     <div class="disclaimer">
-        Strata checks whether a Polymarket price is structurally usable as a market-sentiment reference. It does not predict outcomes, validate odds, or provide trading or investment advice.
+        Strata surfaces how a Polymarket price should be referenced. It does not predict outcomes, validate odds, or provide trading or investment advice.
     </div>
 
     <header class="sample-header">
@@ -132,8 +132,8 @@
                 <div class="sample-eyebrow">Beta briefing for Polymarket prices</div>
                 <h1>High-visibility Polymarket prices organized by reference usability.</h1>
                 <p>
-                    This briefing highlights which Polymarket prices can be used as clean
-                    market-sentiment references, which need added context, and which should
+                    This briefing shows which Polymarket prices can be cited with
+                    standard attribution, which need context attached, and which should
                     not be treated as standalone references. It is a compact review surface,
                     not a market terminal.
                 </p>
@@ -187,7 +187,7 @@
                 <article>
                     <span>02</span>
                     <strong>Non-Ready does not mean bad</strong>
-                    <p>Many Polymarket markets include the needed option or rule context. Strata checks whether that context survives outside Polymarket.</p>
+                    <p>Many Polymarket markets include the needed option or rule context. Strata surfaces whether that context is preserved when the price is reused.</p>
                 </article>
                 <article>
                     <span>03</span>
@@ -215,7 +215,7 @@
                 <div class="sample-eyebrow">Methodology note</div>
                 <h2>What the labels mean</h2>
                 <p>
-                    Strata evaluates whether a market price can be used as a crowd-sentiment
+                    Strata evaluates how a market price should be handled as a Polymarket
                     reference based on public market structure, wording, resolution sensitivity,
                     option context, and timing risk.
                 </p>
@@ -238,7 +238,7 @@
                 <p>
                     A Strata label is not a forecast, endorsement, odds validation,
                     or investment recommendation. It only describes whether the market
-                    price can be reused as a market-sentiment reference without losing
+                    price can be reused as a Polymarket reference without losing
                     important structure or context.
                 </p>
                 <ul>
@@ -254,13 +254,14 @@
                 <div class="sample-eyebrow">Feedback ask</div>
                 <h2>Three things we want reviewers to judge</h2>
                 <p>
-                    We are testing whether this format fits real reference, research, dashboard,
-                    and AI-output workflows. Useful feedback is specific and operational.
+                    We are testing whether this format fits real writing, research, dashboard,
+                    and AI-output workflows. Useful feedback is tied to a sentence you would
+                    publish or withhold.
                 </p>
                 <ol class="feedback-list">
-                    <li>Did the status match how you would handle this market price?</li>
-                    <li>Was the suggested reference text usable, too cautious, or too generic?</li>
-                    <li>Which market or workflow would you want Strata to cover next?</li>
+                    <li>If you were writing about this market now, would the status change your sentence?</li>
+                    <li>Was the suggested reference text publishable, too cautious, or still missing context?</li>
+                    <li>Which market or repeated workflow would you want Strata to cover next?</li>
                 </ol>
             </div>
             <div class="feedback-contact">
@@ -295,11 +296,19 @@
                 <div><span>Event</span><strong id="bp-event">--</strong></div>
             </div>
             <section class="beta-panel-block beta-panel-guidance">
-                <div class="card-section-label">How to use this price as a reference</div>
+                <div class="card-section-label">Next action</div>
                 <p id="bp-guidance">--</p>
             </section>
+            <section class="beta-panel-block beta-panel-context-block">
+                <div class="card-section-label">Context to attach</div>
+                <ul id="bp-context" class="beta-panel-context-list"></ul>
+            </section>
+            <section class="beta-panel-block beta-panel-risk-block">
+                <div class="card-section-label">What can go wrong if quoted alone</div>
+                <p id="bp-risk">--</p>
+            </section>
             <section class="beta-panel-block beta-panel-checklist-block">
-                <div class="card-section-label">Reference handling checklist</div>
+                <div class="card-section-label">Before publishing</div>
                 <ul id="bp-checklist" class="beta-panel-checklist"></ul>
             </section>
             <section class="beta-panel-block beta-panel-note">
@@ -307,7 +316,7 @@
                 <div id="bp-reasons" class="beta-panel-reasons"></div>
             </section>
             <section class="beta-panel-block" id="bp-output-section">
-                <div class="card-section-label" id="bp-copy-label">Suggested reference framing</div>
+                <div class="card-section-label" id="bp-copy-label">Suggested reference sentence</div>
                 <div class="beta-panel-copy" id="bp-copy-text">--</div>
             </section>
         </div>
@@ -318,7 +327,7 @@
     </aside>
 
     <footer class="sample-footer">
-        <div>STRATA (C) 2026 // MARKET-SENTIMENT REFERENCE LAYER</div>
+        <div>STRATA (C) 2026 // REFERENCE HANDLING LAYER</div>
         <div>
             <a href="/terms.html">Terms</a>
         </div>

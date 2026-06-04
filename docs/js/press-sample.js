@@ -367,15 +367,15 @@ function suggestedReference(market) {
     }
 
     if (market.reference_status === 'CONTEXT_REQUIRED') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. If this price appears in downstream output, include the context near the price: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Reuse this as a market-sentiment reference only with the relevant context near the price: ${reasons}`;
     }
 
     if (market.reference_status === 'REVIEW_RECOMMENDED') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Treat the price as requiring additional review before it is used as a standalone market-sentiment reference. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Review the market wording, resolution criteria, timing, or sensitivity before using it as a standalone market-sentiment reference. Reason: ${reasons}`;
     }
 
     if (market.reference_status === 'NOT_STANDALONE') {
-        return `Polymarket currently prices "${title}" at ${price}. Strata marks this market ${label}. Do not use this price as an isolated market-sentiment reference; it needs substantial surrounding context. Reason: ${reasons}`;
+        return `Polymarket currently prices "${title}" at ${price}. Do not use this price as an isolated market-sentiment reference; it needs substantial surrounding context. Reason: ${reasons}`;
     }
 
     return `Polymarket currently prices "${title}" at ${price}. Strata reference status: ${label}.`;

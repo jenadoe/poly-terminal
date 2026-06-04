@@ -11,7 +11,9 @@ const SENSITIVE_CODES = new Set([
   'disclosure_oracle_review',
   'election_market',
   'threshold_definition',
+  'not_standalone',
 ]);
+const READY_CONTEXT_CODES = new Set(['near_term', 'thin_volume']);
 const PRIVATE_LEAKAGE_TERMS = [
   'core_gate_policy',
   'proposition_audit',
@@ -131,9 +133,12 @@ function auditRows(rows) {
       if (!line.includes('polymarket')) {
         addIssue(issues, 'error', 'ready_line_missing_polymarket_source', row, 'Ready reference line does not cite Polymarket');
       }
-      const nonStandard = codes.filter(code => code !== 'standard_reference');
-      if (nonStandard.length) {
-        addIssue(warnings, 'warning', 'ready_nonstandard_reason_codes', row, `Ready row has non-standard codes: ${nonStandard.join(', ')}`);
+      if (!codes.includes('standard_reference')) {
+        addIssue(warnings, 'warning', 'ready_missing_standard_reference_code', row, 'Ready row should include standard_reference');
+      }
+      const unexpected = codes.filter(code => code !== 'standard_reference' && !READY_CONTEXT_CODES.has(code));
+      if (unexpected.length) {
+        addIssue(warnings, 'warning', 'ready_unexpected_reason_codes', row, `Ready row has unexpected codes: ${unexpected.join(', ')}`);
       }
     }
 

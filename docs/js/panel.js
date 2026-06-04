@@ -183,7 +183,7 @@ function renderOutcomesInPanel(outcomes, currentPrice) {
 
 function citationStatusCopy(status) {
     const copy = {
-        SAFE_TO_CITE: 'Cite directly with a Polymarket link. Add a timestamp if the price appears in a report or briefing.',
+        SAFE_TO_CITE: 'Cite as a Polymarket reference with source link and as-of date. Do not present Ready as odds approval.',
         CITE_WITH_CONTEXT: 'Attach the specific option, wording, timing, or resolution detail before quoting this price.',
         REVIEW_FIRST: 'Review market rules, resolution criteria, timing, or sensitivity before reusing this price.',
         DO_NOT_CITE_STANDALONE: 'Do not quote the price alone. Use only with full market wording or broader explanation.',

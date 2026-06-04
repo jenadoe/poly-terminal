@@ -13,7 +13,7 @@ const STATUS_ACTION_COPY = {
     READY: {
         subtitle: 'Cite with source',
         row: 'Ready to cite',
-        panel: 'Cite with Polymarket as the source and keep an as-of date. This is not odds approval.',
+        panel: 'Cite as a Polymarket reference with source and as-of date. This is not odds approval.',
     },
     CONTEXT_REQUIRED: {
         subtitle: 'Attach exact context',

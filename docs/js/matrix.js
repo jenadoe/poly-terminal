@@ -8,7 +8,7 @@ const QS_COLUMNS = {
         col: 'ch-quote-safe',
         label: 'Ready',
         action: 'Cite with source',
-        desc: 'Use directly with a Polymarket link',
+        desc: 'Use as a Polymarket reference with source and as-of date',
     },
     CITE_WITH_CONTEXT: {
         col: 'ch-quote-context',

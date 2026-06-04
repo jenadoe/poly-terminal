@@ -190,6 +190,9 @@ jobs:
           node scripts/audit-public-reference-surface.mjs \
             --url=https://www.strata-labs.xyz/api/markets \
             --beta-code "$STRATA_BETA_CODE"
+          node scripts/audit-reference-routing-expectations.mjs \
+            --url=https://www.strata-labs.xyz/api/markets?pipeline_expectations=${{ github.run_id }} \
+            --beta-code "$STRATA_BETA_CODE"
 
       - name: Push Public Dashboard Only
         run: |

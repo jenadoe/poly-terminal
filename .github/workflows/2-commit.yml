@@ -177,6 +177,20 @@ jobs:
         with:
           path: public-face
 
+      - name: Audit Public Reference Surface
+        env:
+          STRATA_BETA_CODE: ${{ secrets.STRATA_BETA_CODE }}
+        run: |
+          cd public-face
+          node scripts/audit-public-reference-surface.mjs
+          if [ -z "${STRATA_BETA_CODE:-}" ]; then
+            echo "STRATA_BETA_CODE is required for beta-gated reference surface audit."
+            exit 1
+          fi
+          node scripts/audit-public-reference-surface.mjs \
+            --url=https://www.strata-labs.xyz/api/markets \
+            --beta-code "$STRATA_BETA_CODE"
+
       - name: Push Public Dashboard Only
         run: |
           cd public-face

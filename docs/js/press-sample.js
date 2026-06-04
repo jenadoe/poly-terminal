@@ -411,7 +411,7 @@ function reasonItemsForMarket(market) {
     const topic = topicForMarket(market);
 
     if (codes.includes('standard_reference')) {
-        add('The priced outcome is clear enough to cite with ordinary Polymarket attribution.');
+        add('The priced outcome is visible enough for ordinary Polymarket attribution.');
     }
     if (codes.includes('threshold_definition')) {
         add('The market depends on an exact threshold or boundary condition that should stay in the sentence.');
@@ -505,7 +505,7 @@ function nextActionForMarket(market) {
     const status = market.reference_status;
     const summary = contextSummaryForMarket(market);
     if (status === 'READY') {
-        return 'Cite with Polymarket as the source and include an as-of date. Do not present Ready as odds approval.';
+        return 'Cite as a Polymarket reference with the source and an as-of date. Do not present Ready as odds approval.';
     }
     if (status === 'CONTEXT_REQUIRED') {
         return `Use the price only with ${summary} attached. The sentence should carry that context, not add it as an afterthought.`;
@@ -577,7 +577,7 @@ function suggestedReference(market) {
     const base = `As of ${asOfDateText()}, Polymarket prices "${title}" at ${price}${volume}.`;
 
     if (market.reference_status === 'READY') {
-        return `${base} Cite Polymarket as the source; this is not odds validation.`;
+        return `${base} Cite as a Polymarket reference; this is not odds validation.`;
     }
 
     if (market.reference_status === 'CONTEXT_REQUIRED') {

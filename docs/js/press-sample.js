@@ -183,7 +183,6 @@ async function initAccessGate() {
 
 function tickSampleClock() {
     const el = sampleEid('sample-clock');
-    const updated = sampleEid('sample-updated');
     const now = new Date();
     const offsetMinutes = -now.getTimezoneOffset();
     const sign = offsetMinutes >= 0 ? '+' : '-';
@@ -199,16 +198,30 @@ function tickSampleClock() {
         second: '2-digit',
         hour12: false,
     });
-    const updatedText = `${now.toLocaleDateString('en-GB', {
+    if (el) el.textContent = `${timeText} ${offset}`;
+}
+
+function setSampleUpdated(value = new Date()) {
+    const updated = sampleEid('sample-updated');
+    if (!updated) return;
+    const d = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(d.getTime())) return;
+    const offsetMinutes = -d.getTimezoneOffset();
+    const sign = offsetMinutes >= 0 ? '+' : '-';
+    const absOffset = Math.abs(offsetMinutes);
+    const hours = Math.floor(absOffset / 60);
+    const minutes = absOffset % 60;
+    const offset = minutes
+        ? `GMT${sign}${hours}:${String(minutes).padStart(2, '0')}`
+        : `GMT${sign}${hours}`;
+    updated.textContent = `${d.toLocaleDateString('en-GB', {
         day: '2-digit',
         month: '2-digit',
-    })}, ${now.toLocaleTimeString('en-GB', {
+    })}, ${d.toLocaleTimeString('en-GB', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: false,
     })} ${offset}`;
-    if (el) el.textContent = `${timeText} ${offset}`;
-    if (updated) updated.textContent = updatedText;
 }
 
 function referenceLabel(market) {
@@ -819,7 +832,7 @@ function updateBriefingNote(markets) {
 
 function applyMarketSearch() {
     const markets = filteredMarkets();
-    renderMetrics(markets);
+    renderMetrics(allMarkets);
     renderCards(markets);
 }
 
@@ -973,6 +986,7 @@ async function loadSample({ unlockOnSuccess = false } = {}) {
             throw err;
         }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        setSampleUpdated(res.headers.get('X-Strata-Data-Generated-At') || res.headers.get('Date') || new Date());
         const data = await res.json();
         const markets = Array.isArray(data)
             ? data.filter(market => market && market.reference_status)
@@ -1000,7 +1014,6 @@ async function loadSample({ unlockOnSuccess = false } = {}) {
 function initMarketSearch() {
     const form = sampleEid('market-search-form');
     const input = sampleEid('market-search');
-    const clear = sampleEid('market-search-clear');
     if (form) {
         form.addEventListener('submit', event => {
             event.preventDefault();
@@ -1011,14 +1024,6 @@ function initMarketSearch() {
     if (input) {
         input.addEventListener('input', () => {
             activeMarketSearch = input.value;
-            applyMarketSearch();
-        });
-    }
-    if (clear && input) {
-        clear.addEventListener('click', () => {
-            input.value = '';
-            activeMarketSearch = '';
-            input.focus();
             applyMarketSearch();
         });
     }

@@ -161,13 +161,6 @@ body.sample-locked {
     max-width: 920px;
 }
 
-.sample-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 26px;
-}
-
 .sample-btn {
     display: inline-flex;
     align-items: center;
@@ -436,7 +429,7 @@ body.sample-locked {
 
 .market-search-control {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
     align-items: stretch;
     border: 0;
     background: rgba(0,0,0,0.2);
@@ -457,26 +450,6 @@ body.sample-locked {
 .market-search input::placeholder {
     color: var(--text-dim);
     letter-spacing: 0.02em;
-}
-
-.market-search button {
-    border: 0;
-    border-left: 1px solid var(--border);
-    background: transparent;
-    color: var(--text-dim);
-    font-family: var(--mono);
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    padding: 0 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.market-search button:hover,
-.market-search button:focus-visible {
-    color: var(--amber-text);
-    outline: none;
 }
 
 .cards-grid {

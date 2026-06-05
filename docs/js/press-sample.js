@@ -783,7 +783,7 @@ function renderMetrics(markets) {
     });
     const marketsLabel = sampleEid('metric-markets-label');
     if (marketsLabel) {
-        marketsLabel.textContent = normalizeSearchText(activeMarketSearch) ? 'matches' : 'markets';
+        marketsLabel.textContent = 'markets';
     }
     updateBriefingNote(markets);
 }

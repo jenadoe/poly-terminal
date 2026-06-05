@@ -205,9 +205,11 @@
                 </div>
                 <div class="briefing-tools">
                     <form class="market-search" id="market-search-form" role="search">
-                        <label class="sr-only" for="market-search">Search markets</label>
-                        <input id="market-search" type="search" autocomplete="off" placeholder="Search markets" />
-                        <button id="market-search-clear" type="button" aria-label="Clear search">X</button>
+                        <label for="market-search">Find market</label>
+                        <div class="market-search-control">
+                            <input id="market-search" type="search" autocomplete="off" placeholder="Trump, Fed, Bitcoin" />
+                            <button id="market-search-clear" type="button" aria-label="Clear search">Clear</button>
+                        </div>
                     </form>
                     <div class="section-note" id="briefing-note">Sorted by status and market visibility.</div>
                 </div>
@@ -273,8 +275,9 @@
                 </ol>
             </div>
             <a class="feedback-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20beta%20feedback">
-                <span>Send beta notes</span>
+                <span>Feedback inbox</span>
                 <strong>contact@strata-labs.xyz</strong>
+                <small>Send notes by email</small>
             </a>
         </section>
     </main>

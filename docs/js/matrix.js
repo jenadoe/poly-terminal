@@ -30,7 +30,6 @@ const QS_COLUMNS = {
     },
 };
 
-const STATE_COLUMNS = ['Converged', 'Calibrating', 'Fragile'];
 const QUOTE_COLUMNS = ['SAFE_TO_CITE', 'CITE_WITH_CONTEXT', 'REVIEW_FIRST', 'DO_NOT_CITE_STANDALONE'];
 
 function displayCitationGroup(status) {
@@ -42,13 +41,8 @@ function citationAction(status) {
 }
 
 function buildRow(m) {
-    const state = m.display_state || 'Fragile';
-    const cfg = SC[state] || SC.Fragile;
-    const score = m.nexus_score || 0;
     const flags = getFlags(m);
-    const rowClass = m.citation_status
-        ? `r-${citationStatusClass(displayCitationGroup(m.citation_status))}`
-        : cfg.row;
+    const rowClass = `r-${citationStatusClass(displayCitationGroup(m.citation_status))}`;
 
     const row = document.createElement('div');
     row.className = `mkt-row ${rowClass}`;
@@ -61,20 +55,14 @@ function buildRow(m) {
     appendElement(titleWrap, 'div', m.title || '?', 'mkt-title');
 
     const nxsBlock = appendElement(top, 'div', null, 'nxs-block');
-    if (m.citation_status) {
-        appendElement(nxsBlock, 'span', 'Odds', 'nxs-label');
-        appendElement(nxsBlock, 'div', fmtCents(m.current_price), 'nxs-num quote-odds');
-        appendElement(
-            nxsBlock,
-            'span',
-            formatCitationStatus(m.citation_status),
-            `nxs-unit ${citationStatusClass(m.citation_status)}`
-        );
-    } else {
-        appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
-        appendElement(nxsBlock, 'div', Math.round(score), 'nxs-num');
-        appendElement(nxsBlock, 'span', '/ 100', 'nxs-unit');
-    }
+    appendElement(nxsBlock, 'span', 'Odds', 'nxs-label');
+    appendElement(nxsBlock, 'div', fmtCents(m.current_price), 'nxs-num quote-odds');
+    appendElement(
+        nxsBlock,
+        'span',
+        formatCitationStatus(m.citation_status),
+        `nxs-unit ${citationStatusClass(m.citation_status)}`
+    );
 
     const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
     const meta = appendElement(bottom, 'div');
@@ -83,10 +71,7 @@ function buildRow(m) {
     meta.style.gap = '8px';
     meta.style.flexWrap = 'wrap';
 
-    if (state === 'Converged' && m.stable_hours) {
-        appendElement(meta, 'span', `✓ STABLE ${fmtStableHours(m.stable_hours)}`, 'stable-badge');
-    }
-    if (m.citation_status) meta.classList.add('quote-meta-compact');
+    meta.classList.add('quote-meta-compact');
     appendElement(meta, 'div', `vol. ${fmtVol(m.volume || 0)}`, 'mkt-vol');
 
     const flagsWrap = appendElement(bottom, 'div');
@@ -97,18 +82,6 @@ function buildRow(m) {
 
     row.addEventListener('click', () => openPanel(m));
     return row;
-}
-
-function groupMarketsByState(markets) {
-    const grouped = Object.fromEntries(STATE_COLUMNS.map(state => [state, []]));
-
-    markets.forEach(market => {
-        const state = market.display_state || 'Calibrating';
-        if (!grouped[state]) return;
-        grouped[state].push(market);
-    });
-
-    return grouped;
 }
 
 function groupMarketsByCitationStatus(markets) {
@@ -127,23 +100,21 @@ function hasCitationSurface(markets) {
     return markets.some(market => market.citation_status);
 }
 
-function columnConfig(mode, key) {
-    if (mode === 'quote') return QS_COLUMNS[key];
-    return SC[key];
+function columnConfig(key) {
+    return QS_COLUMNS[key];
 }
 
-function columnLabel(mode, key) {
-    if (mode === 'quote') return QS_COLUMNS[key].label;
-    return key;
+function columnLabel(key) {
+    return QS_COLUMNS[key].label;
 }
 
-function buildColumnHead(mode, key, count) {
-    const cfg = columnConfig(mode, key);
+function buildColumnHead(key, count) {
+    const cfg = columnConfig(key);
     const head = document.createElement('div');
     head.className = `col-head ${cfg.col}`;
     appendElement(head, 'span', `${count} shown`, 'col-count');
-    appendElement(head, 'div', columnLabel(mode, key), `col-state ${mode === 'quote' ? citationStatusClass(key) : `cs-${key.toLowerCase()}`}`);
-    if (mode === 'quote' && cfg.action) {
+    appendElement(head, 'div', columnLabel(key), `col-state ${citationStatusClass(key)}`);
+    if (cfg.action) {
         appendElement(head, 'div', cfg.action, `col-action ${citationStatusClass(key)}`);
     }
     appendElement(head, 'div', cfg.desc, 'col-desc');
@@ -167,26 +138,31 @@ function appendMarketBatch(col, group, startIndex, token) {
 
 function renderMarkets(markets, emptyMessage) {
     const token = ++marketRenderToken;
-    const mode = markets.length > 0 && !hasCitationSurface(markets) ? 'state' : 'quote';
+    const citationMarkets = markets.filter(market => market.citation_status);
+    if (markets.length > 0 && !citationMarkets.length) {
+        console.warn('[Strata] Public markets did not include reference status fields.');
+    }
     const matrix = eid('state-matrix');
     const health = eid('health');
-    if (health) health.style.display = mode === 'quote' ? 'none' : 'block';
+    if (health) health.style.display = 'none';
     const shown = eid('shown-count');
-    if (shown) shown.textContent = markets.length;
+    if (shown) shown.textContent = citationMarkets.length;
     syncLockedCount();
-    renderQuoteSafetySummary(markets, mode);
-    const blankText = emptyMessage || (mode === 'quote' ? 'No markets in this citation status' : 'No markets in this state');
-    const grouped = mode === 'quote' ? groupMarketsByCitationStatus(markets) : groupMarketsByState(markets);
-    const columns = mode === 'quote' ? QUOTE_COLUMNS : STATE_COLUMNS;
+    renderQuoteSafetySummary(citationMarkets, 'quote');
+    const blankText = emptyMessage || (
+        markets.length > 0 && !citationMarkets.length
+            ? 'Reference status unavailable'
+            : 'No markets in this citation status'
+    );
+    const grouped = groupMarketsByCitationStatus(citationMarkets);
+    const columns = QUOTE_COLUMNS;
     const title = eid('matrix-title');
     if (title) {
-        title.textContent = mode === 'quote'
-            ? 'Reference Safety Board - highest-priority public markets by status action'
-            : 'Integrity State Matrix - highest-priority public markets by structural state';
+        title.textContent = 'Reference Safety Board - highest-priority public markets by status action';
     }
     if (!matrix) return;
     matrix.innerHTML = '';
-    matrix.className = `state-matrix ${mode === 'quote' ? 'quote-matrix' : 'state-mode'}`;
+    matrix.className = 'state-matrix quote-matrix';
 
     columns.forEach(key => {
         const col = document.createElement('div');
@@ -194,7 +170,7 @@ function renderMarkets(markets, emptyMessage) {
         matrix.appendChild(col);
         const group = grouped[key];
         const frag = document.createDocumentFragment();
-        frag.appendChild(buildColumnHead(mode, key, group.length));
+        frag.appendChild(buildColumnHead(key, group.length));
 
         if (group.length === 0) {
             const empty = document.createElement('div');
@@ -222,7 +198,7 @@ function renderMarkets(markets, emptyMessage) {
         }
     });
 
-    renderLockedRows(mode);
+    renderLockedRows('quote');
 }
 
 function renderQuoteSafetySummary(markets, mode = 'quote') {
@@ -270,12 +246,11 @@ function syncLockedCount() {
             : '--';
 }
 
-function renderLockedRows(mode = 'state') {
+function renderLockedRows() {
     const wrap = eid('locked-rows-inner');
     if (!wrap) return;
     wrap.innerHTML = '';
-    const quoteMode = mode === 'quote';
-    const ghosts = quoteMode ? [
+    const ghosts = [
         {
             citation_status: 'SAFE_TO_CITE',
             price: 0.42,
@@ -304,36 +279,13 @@ function renderLockedRows(mode = 'state') {
             cat: 'WORLD',
             title: 'Additional not-standalone market',
         },
-    ] : [
-        {
-            state: 'Converged',
-            score: 87,
-            vol: '$4.2M',
-            cat: 'POLITICS',
-            title: 'Will the Fed cut rates before Q3 2026?',
-        },
-        {
-            state: 'Calibrating',
-            score: 61,
-            vol: '$1.8M',
-            cat: 'CRYPTO',
-            title: 'BTC above $120K before end of 2026?',
-        },
-        {
-            state: 'Fragile',
-            score: 28,
-            vol: '$390K',
-            cat: 'GEOPOLITICS',
-            title: 'Ceasefire agreement reached by June 2026?',
-        },
     ];
 
     ghosts.forEach(ghost => {
-        const cfg = SC[ghost.state] || SC.Fragile;
-        const statusClass = ghost.citation_status ? citationStatusClass(ghost.citation_status) : null;
+        const statusClass = citationStatusClass(ghost.citation_status);
 
         const row = document.createElement('div');
-        row.className = `locked-row mkt-row ${statusClass ? `r-${statusClass}` : cfg.row}`;
+        row.className = `locked-row mkt-row r-${statusClass}`;
 
         const inner = appendElement(row, 'div', null, 'mkt-inner');
 
@@ -345,19 +297,13 @@ function renderLockedRows(mode = 'state') {
         appendElement(titleWrap, 'div', ghost.title, 'mkt-title');
 
         const nxs = appendElement(top, 'div', null, 'nxs-block');
-        if (ghost.citation_status) {
-            appendElement(nxs, 'span', 'Odds', 'nxs-label');
-            appendElement(nxs, 'div', fmtCents(ghost.price), 'nxs-num quote-odds');
-            appendElement(nxs, 'span', formatCitationStatus(ghost.citation_status), `nxs-unit ${statusClass}`);
-        } else {
-            appendElement(nxs, 'span', 'Score', 'nxs-label');
-            appendElement(nxs, 'div', ghost.score, 'nxs-num');
-            appendElement(nxs, 'span', '/ 100', 'nxs-unit');
-        }
+        appendElement(nxs, 'span', 'Odds', 'nxs-label');
+        appendElement(nxs, 'div', fmtCents(ghost.price), 'nxs-num quote-odds');
+        appendElement(nxs, 'span', formatCitationStatus(ghost.citation_status), `nxs-unit ${statusClass}`);
 
         const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
         const meta = appendElement(bottom, 'div');
-        if (ghost.citation_status) meta.classList.add('quote-meta-compact');
+        meta.classList.add('quote-meta-compact');
         appendElement(meta, 'div', `vol. ${ghost.vol}`, 'mkt-vol');
 
         wrap.appendChild(row);

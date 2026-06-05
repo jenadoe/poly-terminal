@@ -218,7 +218,7 @@ body.sample-locked {
     text-transform: uppercase;
 }
 .board-summary-title b {
-    color: var(--cyan-text);
+    color: var(--text-hi);
     font-size: 13px;
 }
 .strip-card span {

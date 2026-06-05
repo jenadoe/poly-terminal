@@ -3,6 +3,8 @@ const ACCESS_STORAGE_KEY = 'strata_reference_preview_access_v1';
 const ALLOWED_ACCESS_HASHES = new Set([
     '74ccad3c203721244abc930593e9652060fc0438355d712bf5dad7396718c51e',
 ]);
+let allMarkets = [];
+let activeMarketSearch = '';
 const STATUS_CLASS = {
     READY: 'status-ready',
     CONTEXT_REQUIRED: 'status-context',
@@ -749,12 +751,59 @@ function renderMetrics(markets) {
         const el = sampleEid(id);
         if (el) el.textContent = value;
     });
-    const note = sampleEid('briefing-note');
-    if (note) {
-        note.textContent = counts.READY <= 3
-            ? 'Follow the row action: cite with source, attach context, review first, or avoid standalone reuse.'
-            : 'Sorted by status and market visibility with row-level handling actions.';
+    const marketsLabel = sampleEid('metric-markets-label');
+    if (marketsLabel) {
+        marketsLabel.textContent = normalizeSearchText(activeMarketSearch) ? 'matches' : 'markets';
     }
+    updateBriefingNote(markets);
+}
+
+function normalizeSearchText(value) {
+    return String(value || '').trim().toLowerCase();
+}
+
+function searchableMarketText(market) {
+    return [
+        market.event_id,
+        market.title,
+        market.parent_title,
+        market.selected_outcome_label,
+        market.selected_outcome_question,
+        market.category,
+        market.market_slug,
+        market.reference_status,
+        market.reference_label,
+        market.reference_action,
+        market.reference_line,
+        ...(Array.isArray(market.reference_reason_codes) ? market.reference_reason_codes : []),
+        ...(Array.isArray(market.reference_reasons) ? market.reference_reasons : []),
+    ].filter(Boolean).join(' ').toLowerCase();
+}
+
+function filteredMarkets() {
+    const query = normalizeSearchText(activeMarketSearch);
+    if (!query) return allMarkets;
+    return allMarkets.filter(market => searchableMarketText(market).includes(query));
+}
+
+function updateBriefingNote(markets) {
+    const note = sampleEid('briefing-note');
+    if (!note) return;
+    const query = normalizeSearchText(activeMarketSearch);
+    if (query) {
+        const countText = markets.length === 1 ? '1 matching market' : `${markets.length} matching markets`;
+        note.textContent = `${countText} across statuses for "${query}".`;
+        return;
+    }
+    note.textContent = markets.filter(market => market.reference_status === 'READY').length <= 3
+        ? 'Follow the row action: cite with source, attach context, review first, or avoid standalone reuse.'
+        : 'Sorted by status and market visibility with row-level handling actions.';
+}
+
+function applyMarketSearch() {
+    const markets = filteredMarkets();
+    renderMetrics(markets);
+    renderCards(markets);
 }
 
 function marketUrl(market) {
@@ -844,7 +893,9 @@ function renderCards(markets) {
     if (!markets.length) {
         const empty = document.createElement('div');
         empty.className = 'loading-card';
-        empty.textContent = 'No reference briefing is available right now.';
+        empty.textContent = normalizeSearchText(activeMarketSearch)
+            ? 'No markets match this search.'
+            : 'No reference briefing is available right now.';
         grid.appendChild(empty);
         return;
     }
@@ -899,8 +950,8 @@ async function loadSample() {
         const markets = Array.isArray(data)
             ? data.filter(market => market && market.reference_status)
             : [];
-        renderMetrics(markets);
-        renderCards(markets);
+        allMarkets = markets;
+        applyMarketSearch();
         setSampleStatus('LIVE');
     } catch (err) {
         setSampleStatus('UNAVAILABLE');
@@ -911,9 +962,33 @@ async function loadSample() {
     }
 }
 
+function initMarketSearch() {
+    const form = sampleEid('market-search-form');
+    const input = sampleEid('market-search');
+    const clear = sampleEid('market-search-clear');
+    if (form) {
+        form.addEventListener('submit', event => event.preventDefault());
+    }
+    if (input) {
+        input.addEventListener('input', () => {
+            activeMarketSearch = input.value;
+            applyMarketSearch();
+        });
+    }
+    if (clear && input) {
+        clear.addEventListener('click', () => {
+            input.value = '';
+            activeMarketSearch = '';
+            input.focus();
+            applyMarketSearch();
+        });
+    }
+}
+
 setInterval(tickSampleClock, 1000);
 tickSampleClock();
 initAccessGate();
+initMarketSearch();
 
 const betaOverlay = sampleEid('beta-overlay');
 if (betaOverlay) betaOverlay.addEventListener('click', closeBetaPanel);

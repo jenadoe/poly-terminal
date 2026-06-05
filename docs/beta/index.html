@@ -148,7 +148,7 @@
             <div class="board-summary-title">
                 <div class="sample-eyebrow">Reference usability board</div>
                 <strong>Reference usability for market prices</strong>
-                <span><b id="metric-markets">--</b> markets in this beta briefing</span>
+                <span><b id="metric-markets">--</b> <span id="metric-markets-label">markets</span> in this beta briefing</span>
                 <em style="display:block;max-width:260px;margin-top:10px;color:var(--text);font-size:11px;font-style:normal;line-height:1.55;letter-spacing:0;text-transform:none;">Ready means cite with source. Non-Ready means option, timing, wording, resolution, or belief-contamination context should travel with the price.</em>
             </div>
             <div class="strip-card strip-ready">
@@ -203,7 +203,14 @@
                     <div class="sample-eyebrow">Market briefing</div>
                     <h2>Current reference posture</h2>
                 </div>
-                <div class="section-note" id="briefing-note">Sorted by status and market visibility.</div>
+                <div class="briefing-tools">
+                    <form class="market-search" id="market-search-form" role="search">
+                        <label class="sr-only" for="market-search">Search markets</label>
+                        <input id="market-search" type="search" autocomplete="off" placeholder="Search markets" />
+                        <button id="market-search-clear" type="button" aria-label="Clear search">X</button>
+                    </form>
+                    <div class="section-note" id="briefing-note">Sorted by status and market visibility.</div>
+                </div>
             </div>
             <div class="cards-grid" id="cards-grid">
                 <div class="loading-card">Loading reference briefing...</div>
@@ -265,9 +272,10 @@
                     <li>Was the suggested reference text publishable, too cautious, or still missing context?</li>
                 </ol>
             </div>
-            <div class="feedback-contact">
-                Send notes to <strong>contact@strata-labs.xyz</strong>
-            </div>
+            <a class="feedback-contact" href="mailto:contact@strata-labs.xyz?subject=Strata%20beta%20feedback">
+                <span>Send beta notes</span>
+                <strong>contact@strata-labs.xyz</strong>
+            </a>
         </section>
     </main>
 

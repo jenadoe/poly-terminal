@@ -683,13 +683,20 @@ function openBetaPanel(market) {
         status.textContent = referenceLabel(market);
         status.className = statusClass;
     }
+    const referenceCard = sampleEid('bp-reference-card');
+    if (referenceCard) {
+        referenceCard.className = `beta-panel-reference-card ${statusClass}`.trim();
+    }
+    const referenceStatus = sampleEid('bp-reference-status');
+    if (referenceStatus) {
+        referenceStatus.textContent = referenceLabel(market);
+        referenceStatus.className = `beta-panel-reference-status ${statusClass}`.trim();
+    }
     sampleEid('bp-volume').textContent = fmtVol(market.volume || 0);
     sampleEid('bp-close-time').textContent = closeText(market);
     sampleEid('bp-event').textContent = shortEventId(market.event_id);
     sampleEid('bp-guidance').textContent = handling;
-    sampleEid('bp-copy-label').textContent = market.reference_status === 'NOT_STANDALONE'
-        ? 'Reference output'
-        : 'Suggested reference sentence';
+    sampleEid('bp-copy-label').textContent = 'Suggested reference';
     sampleEid('bp-copy-text').textContent = output;
 
     const risk = sampleEid('bp-risk');

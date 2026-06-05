@@ -299,44 +299,53 @@
             <button class="beta-panel-close" id="bp-close" type="button">X CLOSE</button>
         </div>
         <div class="beta-panel-body">
-            <div class="beta-panel-price-row">
-                <div>
-                    <span>Price</span>
-                    <strong id="bp-price">--</strong>
+            <section class="beta-panel-section beta-panel-market-section">
+                <div class="card-section-label">Market stats</div>
+                <div class="beta-panel-price-row">
+                    <div>
+                        <span>Market price</span>
+                        <strong id="bp-price">--</strong>
+                    </div>
+                    <div>
+                        <span>Status</span>
+                        <strong id="bp-status">--</strong>
+                    </div>
                 </div>
-                <div>
-                    <span>Status</span>
-                    <strong id="bp-status">--</strong>
+                <div class="beta-panel-stats">
+                    <div><span>Volume</span><strong id="bp-volume">--</strong></div>
+                    <div><span>Closes in</span><strong id="bp-close-time">--</strong></div>
+                    <div><span>Event ID</span><strong id="bp-event">--</strong></div>
                 </div>
-            </div>
-            <div class="beta-panel-stats">
-                <div><span>Volume</span><strong id="bp-volume">--</strong></div>
-                <div><span>Close</span><strong id="bp-close-time">--</strong></div>
-                <div><span>Event</span><strong id="bp-event">--</strong></div>
-            </div>
-            <section class="beta-panel-block beta-panel-guidance">
-                <div class="card-section-label">Next action</div>
-                <p id="bp-guidance">--</p>
+            </section>
+            <section class="beta-panel-section">
+                <div class="card-section-label">Reference handling</div>
+                <div class="beta-panel-reference-card" id="bp-reference-card">
+                    <div class="beta-panel-reference-status" id="bp-reference-status">--</div>
+                    <div class="beta-panel-reference-block">
+                        <div class="beta-panel-mini-label">Next action</div>
+                        <p id="bp-guidance">--</p>
+                    </div>
+                    <div class="beta-panel-reference-block">
+                        <div class="beta-panel-mini-label">Why this status</div>
+                        <div id="bp-reasons" class="beta-panel-reasons"></div>
+                    </div>
+                    <div class="beta-panel-reference-block" id="bp-output-section">
+                        <div class="beta-panel-mini-label" id="bp-copy-label">Suggested reference</div>
+                        <div class="beta-panel-copy" id="bp-copy-text">--</div>
+                    </div>
+                    <div class="beta-panel-reference-block">
+                        <div class="beta-panel-mini-label">Checklist</div>
+                        <ul id="bp-checklist" class="beta-panel-checklist"></ul>
+                    </div>
+                </div>
             </section>
             <section class="beta-panel-block beta-panel-context-block">
                 <div class="card-section-label">Context to attach</div>
                 <ul id="bp-context" class="beta-panel-context-list"></ul>
             </section>
             <section class="beta-panel-block beta-panel-risk-block">
-                <div class="card-section-label">What can go wrong if quoted alone</div>
+                <div class="card-section-label">Standalone risk</div>
                 <p id="bp-risk">--</p>
-            </section>
-            <section class="beta-panel-block beta-panel-checklist-block">
-                <div class="card-section-label">Before publishing</div>
-                <ul id="bp-checklist" class="beta-panel-checklist"></ul>
-            </section>
-            <section class="beta-panel-block beta-panel-note">
-                <div class="card-section-label">Why this status</div>
-                <div id="bp-reasons" class="beta-panel-reasons"></div>
-            </section>
-            <section class="beta-panel-block" id="bp-output-section">
-                <div class="card-section-label" id="bp-copy-label">Suggested reference sentence</div>
-                <div class="beta-panel-copy" id="bp-copy-text">--</div>
             </section>
         </div>
         <div class="beta-panel-foot">

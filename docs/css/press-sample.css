@@ -1131,6 +1131,10 @@ body.sample-locked {
     border-top: 1px solid var(--border);
 }
 
+.beta-panel-section {
+    margin-bottom: 18px;
+}
+
 .beta-panel-block {
     margin-bottom: 14px;
     padding: 14px !important;
@@ -1153,10 +1157,6 @@ body.sample-locked {
     background: linear-gradient(180deg, rgba(232,197,126,0.055), rgba(255,255,255,0.018));
 }
 
-.beta-panel-note {
-    border-top: 1px solid var(--border-hi) !important;
-}
-
 .beta-panel-output-locked {
     border-top: 2px solid #C44 !important;
     background: linear-gradient(180deg, rgba(204,68,68,0.08), rgba(255,255,255,0.018));
@@ -1170,6 +1170,11 @@ body.sample-locked {
 
 .beta-panel-risk-block p {
     color: var(--text);
+}
+
+.beta-panel-market-section {
+    padding-top: 0 !important;
+    border-top: 0 !important;
 }
 
 .beta-panel-price-row,
@@ -1224,6 +1229,73 @@ body.sample-locked {
 }
 #bp-status.status-stop {
     color: #E48E8E;
+}
+
+.beta-panel-reference-card {
+    padding: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.018);
+}
+
+.beta-panel-reference-card.status-ready {
+    background: var(--green-pale);
+    border-color: var(--green-line);
+}
+
+.beta-panel-reference-card.status-context {
+    background: var(--cyan-pale);
+    border-color: var(--cyan-line);
+}
+
+.beta-panel-reference-card.status-review {
+    background: rgba(232,197,126,0.08);
+    border-color: rgba(232,197,126,0.3);
+}
+
+.beta-panel-reference-card.status-stop {
+    background: rgba(200,68,68,0.08);
+    border-color: rgba(200,68,68,0.28);
+}
+
+.beta-panel-reference-status {
+    color: var(--text-hi);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.beta-panel-reference-status.status-ready {
+    color: var(--green-text);
+}
+
+.beta-panel-reference-status.status-context {
+    color: var(--cyan-text);
+}
+
+.beta-panel-reference-status.status-review {
+    color: #E8C57E;
+}
+
+.beta-panel-reference-status.status-stop {
+    color: #E48E8E;
+}
+
+.beta-panel-reference-block {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.beta-panel-mini-label {
+    margin-bottom: 6px;
+    color: var(--text-dim);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    text-transform: uppercase;
 }
 
 .beta-panel-reasons {

@@ -89,6 +89,12 @@ body.sample-locked {
     margin-bottom: 8px;
 }
 
+.access-error a {
+    color: var(--text-hi);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-hi);
+}
+
 .access-contact {
     color: var(--text-dim);
     font-size: 11px;
@@ -652,6 +658,22 @@ body.sample-locked {
     letter-spacing: 0.08em;
     line-height: 1.35;
     text-transform: uppercase;
+}
+
+.ready-details-hint {
+    width: fit-content;
+    margin-top: 7px;
+    color: var(--text-dim);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.ready-row:hover .ready-details-hint,
+.ready-row:focus-visible .ready-details-hint {
+    color: var(--text-hi);
 }
 
 .ready-row.status-ready .ready-action-line {

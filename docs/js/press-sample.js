@@ -184,7 +184,9 @@ async function initAccessGate() {
                 loadSample();
                 return;
             }
-            if (error) error.textContent = 'Access code not recognized.';
+            if (error) {
+                error.innerHTML = 'Access code not recognized. Email <a href="mailto:contact@strata-labs.xyz?subject=Strata%20beta%20access">contact@strata-labs.xyz</a>.';
+            }
         });
     }
 }
@@ -840,6 +842,11 @@ function buildReadyRow(market) {
     actionLine.textContent = `${rowActionPhrase(market)}: ${statusActionSubtitle(market)}`;
     title.appendChild(actionLine);
 
+    const detailHint = document.createElement('div');
+    detailHint.className = 'ready-details-hint';
+    detailHint.textContent = 'Open details';
+    title.appendChild(detailHint);
+
     const stats = document.createElement('div');
     stats.className = 'ready-stats';
     stats.innerHTML = `
@@ -967,7 +974,11 @@ function initMarketSearch() {
     const input = sampleEid('market-search');
     const clear = sampleEid('market-search-clear');
     if (form) {
-        form.addEventListener('submit', event => event.preventDefault());
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            activeMarketSearch = input ? input.value : activeMarketSearch;
+            applyMarketSearch();
+        });
     }
     if (input) {
         input.addEventListener('input', () => {

@@ -234,7 +234,7 @@ function openPanel(m) {
     if (scoreUnit) scoreUnit.textContent = quoteMode ? 'Market price' : 'Diagnostic read';
     const score2Label = eid('sp-score2-label');
     if (score2Label) score2Label.textContent = quoteMode ? 'Diagnostics' : 'Diagnostic';
-    eid('sp-score2').textContent = quoteMode ? 'Hidden' : parseFloat(score).toFixed(1);
+    eid('sp-score2').textContent = quoteMode ? '--' : parseFloat(score).toFixed(1);
     eid('sp-price').textContent = fmtCents(m.current_price);
     eid('sp-vol').textContent = fmtVol(m.volume || 0);
     eid('sp-closes-in').textContent = calcClosesIn(m.close_time, m.time_to_close_days);

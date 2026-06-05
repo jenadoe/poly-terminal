@@ -45,6 +45,7 @@
     /* Borders */
     --border:      rgba(255,255,255,0.055);
     --border-hi:   rgba(255,255,255,0.1);
+    --border-dashed: rgba(255,255,255,0.18);
 
     /* Fonts */
     --mono: 'JetBrains Mono', 'Courier New', monospace;

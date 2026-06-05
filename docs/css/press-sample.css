@@ -376,9 +376,9 @@ body.sample-locked {
 
 .section-head {
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 24px;
     margin-bottom: 18px;
 }
 
@@ -400,17 +400,18 @@ body.sample-locked {
 }
 
 .briefing-tools {
-    min-width: min(100%, 520px);
-    display: grid;
-    gap: 10px;
-    justify-items: end;
+    width: min(100%, 430px);
+    flex: 0 1 430px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .market-search {
-    width: min(100%, 520px);
+    width: 100%;
     display: grid;
-    gap: 8px;
-    padding: 12px;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: stretch;
+    padding: 0;
     border: 1px solid var(--border-hi);
     background: rgba(255,255,255,0.014);
 }
@@ -421,6 +422,10 @@ body.sample-locked {
 }
 
 .market-search label {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    border-right: 1px solid var(--border);
     color: var(--amber-text);
     font-size: 10px;
     font-weight: 700;
@@ -433,13 +438,13 @@ body.sample-locked {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: stretch;
-    border: 1px solid var(--border);
+    border: 0;
     background: rgba(0,0,0,0.2);
 }
 
 .market-search input {
     min-width: 0;
-    min-height: 42px;
+    min-height: 40px;
     padding: 10px 12px;
     border: 0;
     outline: none;

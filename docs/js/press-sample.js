@@ -814,7 +814,7 @@ function updateBriefingNote(markets) {
     }
     note.textContent = markets.filter(market => market.reference_status === 'READY').length <= 3
         ? 'Follow the row action: cite with source, attach context, review first, or avoid standalone reuse.'
-        : 'Sorted by status and market visibility with row-level handling actions.';
+        : '';
 }
 
 function applyMarketSearch() {

@@ -5,7 +5,7 @@ market price should be handled before it is reused in a report, dashboard,
 generated answer, or public summary.
 
 Strata does not predict outcomes, validate odds, provide a trading signal, or
-certify that a market is true.
+approve a market as true.
 
 ## Public Statuses
 
@@ -27,3 +27,19 @@ belief-contamination risk.
 
 These are reference-routing inputs only. They are not market-quality validation
 or proof that the displayed probability is correct.
+
+## How To Read The Routing
+
+Ready is the narrow case: the reusable line carries enough public context for
+ordinary source-and-as-of citation.
+
+Context Required means the missing piece should travel beside the price. Common
+examples are the selected option, threshold, timing, wording, or resolution
+detail.
+
+Review Recommended means the apparent public-belief read may be shaped by
+confirmation timing, rule interpretation, oracle review, sensitivity, or event
+semantics. The price may still be useful, but it should be checked before reuse.
+
+Not Standalone means the number should not be reused as an isolated reference.
+It can still be discussed with full market wording or broader explanation.

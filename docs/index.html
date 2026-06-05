@@ -194,24 +194,39 @@
             <div class="hiw-step">
                 <div class="hiw-num">01</div>
                 <div>
-                    <div class="hiw-title">Continuous Market Monitoring</div>
+                    <div class="hiw-title">Collect Public Market Context</div>
                     <p class="hiw-body">
-                        Active Polymarket markets are collected continuously. For each one,
-                        Strata tracks public market structure, liquidity shape, wording, and
-                        reference-sensitive context.
+                        Active Polymarket markets are collected with public-safe context:
+                        the selected option, market wording, close timing, thresholds,
+                        resolution-source language, category, and public volume.
                     </p>
+                    <div class="hiw-tags">
+                        <span class="hiw-tag">selected option</span>
+                        <span class="hiw-tag">wording</span>
+                        <span class="hiw-tag">timing</span>
+                        <span class="hiw-tag">thresholds</span>
+                        <span class="hiw-tag">resolution source</span>
+                    </div>
                 </div>
             </div>
 
             <div class="hiw-step">
                 <div class="hiw-num">02</div>
                 <div>
-                    <div class="hiw-title">Reference-Safety Assessment</div>
+                    <div class="hiw-title">Route Reference Handling</div>
                     <p class="hiw-body">
-                        Each market receives a reference status with a concrete next action:
-                        cite with source, attach context, review first, or avoid standalone
-                        reuse.
+                        Strata checks whether the price can survive reuse without losing
+                        context that changes how it reads. Disclosure timing, oracle or
+                        resolution review, public-health reporting, geopolitical sensitivity,
+                        and belief-contamination risks can move a price out of Ready.
                     </p>
+                    <div class="hiw-tags">
+                        <span class="hiw-tag">disclosure timing</span>
+                        <span class="hiw-tag">oracle review</span>
+                        <span class="hiw-tag">public-health context</span>
+                        <span class="hiw-tag">geopolitical sensitivity</span>
+                        <span class="hiw-tag">belief contamination</span>
+                    </div>
                 </div>
             </div>
 
@@ -220,8 +235,9 @@
                 <div>
                     <div class="hiw-title">Downstream Handling</div>
                     <p class="hiw-body">
-                        Labels are designed for quick scanning by humans and simple routing
-                        by AI agents or product surfaces.
+                        Each market receives a concrete next action for citation and reuse.
+                        The status is reference guidance only; it is not outcome prediction,
+                        odds validation, market approval, or a trading signal.
                     </p>
                     <div class="state-legend">
                         <div class="sl-row sl-c">

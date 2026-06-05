@@ -44,6 +44,30 @@ const REQUIRED_FIXTURE_EXPECTATIONS = [
     exact_status: 'READY',
     required_codes: ['standard_reference'],
   },
+  {
+    event_id: '91942',
+    name: 'Public-health threshold row must route to review',
+    min_status: 'REVIEW_RECOMMENDED',
+    required_codes: ['public_health_reporting', 'threshold_definition'],
+  },
+  {
+    event_id: '16167',
+    name: 'Disclosure/oracle-review row must route to review',
+    min_status: 'REVIEW_RECOMMENDED',
+    required_codes: ['disclosure_oracle_review'],
+  },
+  {
+    event_id: '89502',
+    name: 'Bitcoin threshold row must keep threshold context attached',
+    min_status: 'CONTEXT_REQUIRED',
+    required_codes: ['threshold_definition'],
+  },
+  {
+    event_id: '246219',
+    name: 'Fed Chair extreme-price row must route to review',
+    min_status: 'REVIEW_RECOMMENDED',
+    required_codes: ['extreme_price'],
+  },
 ];
 
 function argValue(name) {

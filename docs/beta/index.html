@@ -77,7 +77,14 @@
             margin: 0;
         }
         @media (max-width: 980px) {
-            .beta-frame-note,
+            .beta-frame-note {
+                grid-template-columns: 1fr;
+            }
+            .frame-note-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 680px) {
             .frame-note-grid {
                 grid-template-columns: 1fr;
             }

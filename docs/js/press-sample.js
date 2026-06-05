@@ -1,8 +1,5 @@
 const API_URL = '/api/markets';
 const ACCESS_STORAGE_KEY = 'strata_reference_preview_access_v1';
-const ALLOWED_ACCESS_HASHES = new Set([
-    '74ccad3c203721244abc930593e9652060fc0438355d712bf5dad7396718c51e',
-]);
 let allMarkets = [];
 let activeMarketSearch = '';
 const STATUS_CLASS = {
@@ -141,34 +138,28 @@ function setSampleStatus(text) {
     if (el) el.textContent = text;
 }
 
-async function sha256Hex(input) {
-    const bytes = new TextEncoder().encode(String(input || '').trim());
-    const digest = await crypto.subtle.digest('SHA-256', bytes);
-    return Array.from(new Uint8Array(digest))
-        .map(byte => byte.toString(16).padStart(2, '0'))
-        .join('');
-}
-
-async function isAllowedCode(code) {
-    if (!code) return false;
-    return ALLOWED_ACCESS_HASHES.has(await sha256Hex(code));
-}
-
 function unlockSample() {
     document.body.classList.remove('sample-locked');
     const gate = sampleEid('access-gate');
     if (gate) gate.classList.add('is-unlocked');
 }
 
-async function initAccessGate() {
+function lockSample() {
     document.body.classList.add('sample-locked');
-    const storedCode = window.localStorage.getItem(ACCESS_STORAGE_KEY);
+    const gate = sampleEid('access-gate');
+    if (gate) gate.classList.remove('is-unlocked');
+}
 
-    if (await isAllowedCode(storedCode)) {
-        unlockSample();
-        loadSample();
-        return;
+function showAccessError() {
+    const error = sampleEid('access-error');
+    if (error) {
+        error.innerHTML = 'Access code not recognized. Email <a href="mailto:contact@strata-labs.xyz?subject=Strata%20beta%20access">contact@strata-labs.xyz</a>.';
     }
+}
+
+async function initAccessGate() {
+    lockSample();
+    const storedCode = window.localStorage.getItem(ACCESS_STORAGE_KEY);
 
     const form = sampleEid('access-form');
     const input = sampleEid('access-code');
@@ -177,18 +168,17 @@ async function initAccessGate() {
         form.addEventListener('submit', async event => {
             event.preventDefault();
             const code = input.value.trim();
-            if (await isAllowedCode(code)) {
-                window.localStorage.setItem(ACCESS_STORAGE_KEY, code);
-                if (error) error.textContent = '';
-                unlockSample();
-                loadSample();
+            if (!code) {
+                showAccessError();
                 return;
             }
-            if (error) {
-                error.innerHTML = 'Access code not recognized. Email <a href="mailto:contact@strata-labs.xyz?subject=Strata%20beta%20access">contact@strata-labs.xyz</a>.';
-            }
+            window.localStorage.setItem(ACCESS_STORAGE_KEY, code);
+            if (error) error.textContent = '';
+            loadSample({ unlockOnSuccess: true });
         });
     }
+
+    if (storedCode) loadSample({ unlockOnSuccess: true });
 }
 
 function tickSampleClock() {
@@ -944,7 +934,7 @@ function renderCards(markets) {
     });
 }
 
-async function loadSample() {
+async function loadSample({ unlockOnSuccess = false } = {}) {
     try {
         const accessCode = window.localStorage.getItem(ACCESS_STORAGE_KEY) || '';
         const res = await fetch(API_URL, {
@@ -952,15 +942,28 @@ async function loadSample() {
                 'x-strata-beta-code': accessCode,
             },
         });
+        if (res.status === 401 || res.status === 403) {
+            const err = new Error(`HTTP ${res.status}`);
+            err.code = 'ACCESS_DENIED';
+            throw err;
+        }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         const markets = Array.isArray(data)
             ? data.filter(market => market && market.reference_status)
             : [];
         allMarkets = markets;
+        if (unlockOnSuccess) unlockSample();
         applyMarketSearch();
         setSampleStatus('LIVE');
     } catch (err) {
+        if (err && err.code === 'ACCESS_DENIED') {
+            window.localStorage.removeItem(ACCESS_STORAGE_KEY);
+            lockSample();
+            setSampleStatus('LOCKED');
+            showAccessError();
+            return;
+        }
         setSampleStatus('UNAVAILABLE');
         const grid = sampleEid('cards-grid');
         if (grid) {

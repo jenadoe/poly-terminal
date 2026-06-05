@@ -19,8 +19,8 @@ const QS_COLUMNS = {
     REVIEW_FIRST: {
         col: 'ch-quote-review',
         label: 'Review Recommended',
-        action: 'Check rules first',
-        desc: 'Inspect wording, resolution criteria, timing, or sensitivity',
+        action: 'Check belief read',
+        desc: 'Inspect wording, confirmation timing, resolution criteria, or sensitivity',
     },
     DO_NOT_CITE_STANDALONE: {
         col: 'ch-quote-stop',

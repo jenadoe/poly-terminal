@@ -510,19 +510,6 @@
 }
 .mkt-row.r-fragile:hover { border-color: var(--border-hi); }
 
-/* Calibrating pulse on left bar */
-.mkt-row.r-calibrating::before {
-    animation: cal-pulse 2.8s ease-in-out infinite;
-}
-.mkt-row.r-quote-context::before,
-.mkt-row.r-quote-review::before {
-    animation: cal-pulse 3.4s ease-in-out infinite;
-}
-@keyframes cal-pulse {
-    0%,100% { opacity: 1; }
-    50%      { opacity: 0.4; }
-}
-
 .mkt-inner { padding: 14px 14px 12px 18px; }
 .quote-matrix .mkt-inner {
     width: 100%;
@@ -755,10 +742,13 @@
 }
 #locked-rows-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 12px;
 }
 @media (max-width: 1000px) {
+    #locked-rows-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
     #locked-rows-inner { grid-template-columns: 1fr; }
 }
 .locked-row {

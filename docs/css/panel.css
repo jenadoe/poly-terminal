@@ -48,7 +48,7 @@
 .ssb-c { color: var(--amber-text); border-color: var(--amber-line); background: var(--amber-pale); }
 .ssb-a { color: var(--cyan-text);  border-color: var(--cyan-line);  background: var(--cyan-pale); }
 .ssb-f { color: var(--slate-text); border-color: var(--slate-line); background: var(--slate-pale); }
-.sp-state-badge.quote-safe { color: var(--cyan-text); border-color: var(--cyan-line); background: var(--cyan-pale); }
+.sp-state-badge.quote-safe { color: var(--green-text); border-color: var(--green-line); background: var(--green-pale); }
 .sp-state-badge.quote-context { color: var(--cyan-text); border-color: var(--cyan-line); background: var(--cyan-pale); }
 .sp-state-badge.quote-review { color: #E8C57E; border-color: rgba(232,197,126,0.3); background: rgba(232,197,126,0.08); }
 .sp-state-badge.quote-stop { color: #E48E8E; border-color: rgba(200,68,68,0.28); background: rgba(200,68,68,0.08); }
@@ -174,8 +174,8 @@
     padding: 12px 14px;
 }
 .sp-citation-card.quote-safe {
-    background: var(--cyan-pale);
-    border-color: var(--cyan-line);
+    background: var(--green-pale);
+    border-color: var(--green-line);
 }
 .sp-citation-card.quote-context {
     background: var(--cyan-pale);

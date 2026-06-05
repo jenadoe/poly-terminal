@@ -21,9 +21,9 @@ const STATUS_ACTION_COPY = {
         panel: 'Use the price only with the option, wording, threshold, timing, or rule detail that changes how it reads.',
     },
     REVIEW_RECOMMENDED: {
-        subtitle: 'Check rules/source first',
+        subtitle: 'Check belief contamination',
         row: 'Review first',
-        panel: 'Check the market wording, selected option, resolution source, timing, and sensitivity before reuse.',
+        panel: 'Check whether the price is a clean public-belief reference or is shaped by wording, confirmation timing, resolution source, or sensitivity.',
     },
     NOT_STANDALONE: {
         subtitle: 'Use full explanation',
@@ -77,8 +77,8 @@ const REASON_CHIP_COPY = {
         title: 'The resolving source or criteria should be checked before the reference is reused.',
     },
     disclosure_oracle_review: {
-        label: 'oracle review',
-        title: 'Check disclosure timing, public reporting, on-chain evidence, or oracle/review state before reuse.',
+        label: 'belief contamination',
+        title: 'Check whether confirmation timing, rule interpretation, on-chain evidence, or oracle review is contaminating the public-belief read.',
     },
     wording_context: {
         label: 'wording context',
@@ -371,7 +371,7 @@ function contextItemsForMarket(market) {
         addUnique(items, 'Resolution source, rule, or event definition');
     }
     if (codes.includes('disclosure_oracle_review')) {
-        addUnique(items, 'Disclosure timing, reporting source, on-chain evidence, or oracle review state');
+        addUnique(items, 'Confirmation timing, rule interpretation, on-chain evidence, or oracle review state');
     }
     if (codes.includes('public_health_reporting')) {
         addUnique(items, 'Public-health reporting source, case definition, and data timing');
@@ -396,7 +396,7 @@ function contextSummaryForMarket(market) {
     if (codes.includes('threshold_definition')) return 'the exact threshold, boundary, and deadline';
     if (codes.includes('option_context') || codes.includes('option_set_context')) return 'the specific option or option set';
     if (codes.includes('public_health_reporting')) return 'the reporting source, case definition, and timing';
-    if (codes.includes('disclosure_oracle_review')) return 'the disclosure, reporting, and review-state context';
+    if (codes.includes('disclosure_oracle_review')) return 'the confirmation timing, rule-interpretation, and review-state context';
     if (codes.includes('resolution_review') || codes.includes('event_definition')) return 'the resolution source and event definition';
     if (codes.includes('geopolitical_interpretation')) return 'the geopolitical wording and settlement context';
     if (codes.includes('election_market')) return 'the election-market framing';
@@ -426,13 +426,13 @@ function reasonItemsForMarket(market) {
         add('The headline can lose important conditions when shortened.');
     }
     if (codes.includes('resolution_review')) {
-        add('The resolving source or criteria should be checked before standalone reuse.');
+        add('The resolving source or criteria should be checked before treating the price as public consensus.');
     }
     if (codes.includes('event_definition')) {
         add('The event definition or official source may be narrower than a casual reading of the title.');
     }
     if (codes.includes('disclosure_oracle_review')) {
-        add('Disclosure timing, public reporting, on-chain evidence, or oracle review state may affect reuse.');
+        add('Confirmation timing, rule interpretation, on-chain evidence, or oracle review state may mean the price is not a clean public-belief read.');
     }
     if (codes.includes('public_health_reporting')) {
         add('Public-health source, case definition, and reporting timing should remain visible.');
@@ -484,7 +484,7 @@ function riskNoteForMarket(market) {
         return 'Without source and case-definition context, the price can read like a public-health conclusion rather than a market reference.';
     }
     if (codes.includes('disclosure_oracle_review')) {
-        return 'Disclosure timing, reporting, on-chain evidence, or oracle review state may change how the market resolves.';
+        return 'The price may reflect confirmation timing, rule interpretation, on-chain evidence, or oracle mechanics rather than clean public belief.';
     }
     if (codes.includes('geopolitical_interpretation')) {
         return 'A standalone percentage can read like a broad geopolitical signal even when settlement depends on narrower wording or rules.';
@@ -546,7 +546,8 @@ function checklistItemsForMarket(market) {
 
     if (status === 'REVIEW_RECOMMENDED') {
         add('Inspect market wording and selected option');
-        if (codes.includes('resolution_review') || codes.includes('disclosure_oracle_review')) add('Check resolution criteria and source');
+        if (codes.includes('disclosure_oracle_review')) add('Check whether confirmation timing or oracle mechanics contaminate the public-belief read');
+        if (codes.includes('resolution_review')) add('Check resolution criteria and source');
         if (codes.includes('public_health_reporting')) add('Check official reporting source and case definition');
         if (codes.includes('threshold_definition') || codes.includes('event_definition')) add('Verify threshold or event definition');
         if (codes.includes('long_horizon') || codes.includes('near_term')) add('Confirm close date and as-of date');

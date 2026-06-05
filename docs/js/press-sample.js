@@ -183,14 +183,32 @@ async function initAccessGate() {
 
 function tickSampleClock() {
     const el = sampleEid('sample-clock');
-    if (!el) return;
+    const updated = sampleEid('sample-updated');
     const now = new Date();
-    el.textContent = now.toLocaleTimeString('en-GB', {
+    const offsetMinutes = -now.getTimezoneOffset();
+    const sign = offsetMinutes >= 0 ? '+' : '-';
+    const absOffset = Math.abs(offsetMinutes);
+    const hours = Math.floor(absOffset / 60);
+    const minutes = absOffset % 60;
+    const offset = minutes
+        ? `GMT${sign}${hours}:${String(minutes).padStart(2, '0')}`
+        : `GMT${sign}${hours}`;
+    const timeText = now.toLocaleTimeString('en-GB', {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false,
     });
+    const updatedText = `${now.toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: '2-digit',
+    })}, ${now.toLocaleTimeString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+    })} ${offset}`;
+    if (el) el.textContent = `${timeText} ${offset}`;
+    if (updated) updated.textContent = updatedText;
 }
 
 function referenceLabel(market) {

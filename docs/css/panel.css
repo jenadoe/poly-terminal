@@ -197,13 +197,26 @@
     color: var(--text-hi);
     margin-bottom: 7px;
 }
+.sp-citation-block {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+}
+.sp-mini-label {
+    margin-bottom: 6px;
+    color: var(--text-dim);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
 .sp-citation-copy {
     font-size: 12px;
     color: var(--text);
     line-height: 1.6;
 }
 .sp-citation-reasons {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -212,8 +225,29 @@
     font-size: 11px;
     color: var(--text-dim);
     line-height: 1.5;
-    padding-top: 6px;
-    border-top: 1px solid var(--border);
+}
+.sp-reference-line {
+    padding: 10px 11px;
+    color: var(--text);
+    background: rgba(0,0,0,0.18);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    line-height: 1.6;
+}
+.sp-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sp-checklist-item {
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.55;
+}
+.sp-checklist-item::before {
+    content: ".";
+    color: var(--amber-dim);
+    margin-right: 7px;
 }
 
 .sp-foot {

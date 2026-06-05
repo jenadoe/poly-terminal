@@ -382,7 +382,7 @@
     margin-left: 12px;
 }
 .quote-matrix .col-head {
-    min-height: 112px;
+    height: 136px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

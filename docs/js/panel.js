@@ -191,12 +191,130 @@ function citationStatusCopy(status) {
     return copy[status] || '';
 }
 
+function referenceStatusFromCitation(status) {
+    const statuses = {
+        SAFE_TO_CITE: 'READY',
+        CITE_WITH_CONTEXT: 'CONTEXT_REQUIRED',
+        REVIEW_FIRST: 'REVIEW_RECOMMENDED',
+        DO_NOT_CITE_STANDALONE: 'NOT_STANDALONE',
+    };
+    return statuses[status] || '';
+}
+
+function panelCodes(market) {
+    return Array.isArray(market.reference_reason_codes)
+        ? market.reference_reason_codes.filter(Boolean)
+        : [];
+}
+
+function panelTopic(market) {
+    return market.selected_outcome_question || market.title || 'this Polymarket market';
+}
+
+function panelContextSummary(market) {
+    const codes = panelCodes(market);
+    if (codes.includes('threshold_definition')) return 'the exact threshold, boundary, and deadline';
+    if (codes.includes('option_context') || codes.includes('option_set_context')) return 'the specific option or option set';
+    if (codes.includes('public_health_reporting')) return 'the reporting source, case definition, and timing';
+    if (codes.includes('disclosure_oracle_review')) return 'the confirmation timing, rule-interpretation, and review-state context';
+    if (codes.includes('resolution_review') || codes.includes('event_definition')) return 'the resolution source and event definition';
+    if (codes.includes('geopolitical_interpretation')) return 'the geopolitical wording and settlement context';
+    if (codes.includes('election_market')) return 'the election-market framing';
+    if (codes.includes('long_horizon') || codes.includes('near_term')) return 'the close date and as-of date';
+    return 'the exact market question and Polymarket source';
+}
+
+function panelNextAction(market) {
+    const status = market.reference_status || referenceStatusFromCitation(market.citation_status);
+    const summary = panelContextSummary(market);
+    if (market.reference_action) return market.reference_action;
+    if (status === 'READY') return 'Cite as a Polymarket reference with the source and an as-of date. Do not present Ready as odds approval.';
+    if (status === 'CONTEXT_REQUIRED') return `Use the price only with ${summary} attached.`;
+    if (status === 'REVIEW_RECOMMENDED') return `Check ${summary} before citing. Treat the price as market pricing, not polling, forecast, or validation.`;
+    if (status === 'NOT_STANDALONE') return `Do not use the price as an isolated percentage. If discussed, keep the full question visible and explain ${summary}.`;
+    return citationStatusCopy(market.citation_status);
+}
+
+function panelReasonItems(market) {
+    const explicit = Array.isArray(market.reference_reasons)
+        ? market.reference_reasons.filter(Boolean)
+        : [];
+    if (explicit.length) return explicit.slice(0, 4);
+
+    const rawReasons = Array.isArray(market.citation_overlay_reasons)
+        ? market.citation_overlay_reasons
+        : Array.isArray(market.quote_reasons)
+            ? market.quote_reasons
+            : [];
+    const formatted = rawReasons.map(formatCitationReason).filter(Boolean);
+    if (formatted.length) return formatted.slice(0, 4);
+
+    return [`Review how "${panelTopic(market)}" would read if the price were separated from the full Polymarket question.`];
+}
+
+function panelChecklistItems(market) {
+    const status = market.reference_status || referenceStatusFromCitation(market.citation_status);
+    const codes = panelCodes(market);
+    const items = [];
+    const add = item => {
+        if (item && !items.includes(item)) items.push(item);
+    };
+
+    if (status === 'READY') {
+        add('Cite Polymarket as the source');
+        add('Include an as-of date');
+        add('Avoid forecast, accuracy, or validation language');
+        return items;
+    }
+
+    if (status === 'CONTEXT_REQUIRED') {
+        add('Keep the exact selected option, threshold, wording, or condition visible');
+        if (codes.includes('long_horizon') || codes.includes('near_term')) add('Include close date and as-of date');
+        if (codes.includes('resolution_review') || codes.includes('event_definition')) add('Carry the key resolution detail');
+        add('Use a sentence that already includes the missing context');
+        return items;
+    }
+
+    if (status === 'REVIEW_RECOMMENDED') {
+        add('Inspect market wording and selected option');
+        if (codes.includes('disclosure_oracle_review')) add('Check confirmation timing, rule interpretation, or oracle mechanics');
+        if (codes.includes('resolution_review')) add('Check resolution criteria and source');
+        if (codes.includes('threshold_definition') || codes.includes('event_definition')) add('Verify threshold or event definition');
+        if (codes.includes('election_market') || codes.includes('geopolitical_interpretation')) add('Frame as market pricing, not polling or outcome validation');
+        return items;
+    }
+
+    if (status === 'NOT_STANDALONE') {
+        add('Do not quote the price alone');
+        add('Include full market wording and selected option');
+        add('Use broader explanation or primary market context');
+        return items;
+    }
+
+    add('Review the reference posture before reuse');
+    return items;
+}
+
+function panelSuggestedReference(market) {
+    if (market.reference_line) return market.reference_line;
+    const topic = panelTopic(market);
+    const price = fmtOutcomePct(market.current_price);
+    const volume = Number(market.volume || 0) > 0 ? ` with ${fmtVol(market.volume)} in public volume` : '';
+    const status = market.reference_status || referenceStatusFromCitation(market.citation_status);
+    if (status === 'NOT_STANDALONE') {
+        return `No standalone citation generated for "${topic}"; use full market wording and surrounding context.`;
+    }
+    return `Polymarket prices "${topic}" at ${price}${volume ? ` (${volume.trim()})` : ''}.`;
+}
+
 function renderCitationSurface(m) {
     const section = eid('sp-citation-section');
     const card = eid('sp-citation-card');
     const statusEl = eid('sp-citation-status');
     const copyEl = eid('sp-citation-copy');
     const reasonsEl = eid('sp-citation-reasons');
+    const referenceLineEl = eid('sp-reference-line');
+    const checklistEl = eid('sp-checklist');
     if (!section || !card || !statusEl || !copyEl || !reasonsEl) return;
 
     if (!m.citation_status) {
@@ -207,18 +325,20 @@ function renderCitationSurface(m) {
     section.style.display = 'block';
     card.className = `sp-citation-card ${citationStatusClass(m.citation_status)}`;
     statusEl.textContent = formatCitationStatus(m.citation_status);
-    copyEl.textContent = citationStatusCopy(m.citation_status);
+    copyEl.textContent = panelNextAction(m);
     clearChildren(reasonsEl);
 
-    const rawReasons = Array.isArray(m.citation_overlay_reasons)
-        ? m.citation_overlay_reasons
-        : Array.isArray(m.quote_reasons)
-            ? m.quote_reasons
-            : [];
-    const reasons = rawReasons.map(formatCitationReason).filter(Boolean);
-    reasons.forEach(reason => {
+    panelReasonItems(m).forEach(reason => {
         appendElement(reasonsEl, 'div', reason, 'sp-citation-reason');
     });
+
+    if (referenceLineEl) referenceLineEl.textContent = panelSuggestedReference(m);
+    if (checklistEl) {
+        clearChildren(checklistEl);
+        panelChecklistItems(m).forEach(item => {
+            appendElement(checklistEl, 'div', item, 'sp-checklist-item');
+        });
+    }
 }
 
 function openPanel(m) {

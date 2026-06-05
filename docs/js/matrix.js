@@ -41,37 +41,11 @@ function citationAction(status) {
     return QS_COLUMNS[displayCitationGroup(status)]?.action || 'Review handling';
 }
 
-function pillarWidths(market) {
-    // The public dashboard does not receive true backend pillar sub-scores yet.
-    // Keep the 4-bar visual for a future premium surface, but derive it from
-    // real public fields instead of randomness.
-    const score = Number(market.nexus_score) || 0;
-    const volume = Number(market.volume) || 0;
-    const stableHours = Number(market.stable_hours) || 0;
-    const flags = getFlags(market);
-    const outcomes = Array.isArray(market.outcomes) ? market.outcomes : [];
-    const trackedPrice = market.current_price != null ? parseFloat(market.current_price) : null;
-
-    const capitalDepth = Math.max(12, Math.min(98, Math.round((Math.log10(Math.max(volume, 1)) / 8) * 100)));
-    const marketEfficiency = Math.max(12, Math.min(98, Math.round(score)));
-    const independencePenalty = (flags.includes('Correlated') ? 18 : 0) + (flags.includes('Contested') ? 28 : 0);
-    const infoIndependence = Math.max(12, Math.min(98, 92 - independencePenalty));
-
-    let convergenceBase = score;
-    if (stableHours > 0) convergenceBase = Math.min(98, convergenceBase + Math.min(stableHours / 3, 18));
-    if (trackedPrice != null) convergenceBase -= Math.abs(0.5 - trackedPrice) * 18;
-    if (outcomes.length > 2) convergenceBase -= Math.min((outcomes.length - 2) * 4, 12);
-    const convergenceStability = Math.max(12, Math.min(98, Math.round(convergenceBase)));
-
-    return [capitalDepth, marketEfficiency, infoIndependence, convergenceStability];
-}
-
 function buildRow(m) {
     const state = m.display_state || 'Fragile';
     const cfg = SC[state] || SC.Fragile;
     const score = m.nexus_score || 0;
     const flags = getFlags(m);
-    const pw = pillarWidths(m);
     const rowClass = m.citation_status
         ? `r-${citationStatusClass(displayCitationGroup(m.citation_status))}`
         : cfg.row;
@@ -100,15 +74,6 @@ function buildRow(m) {
         appendElement(nxsBlock, 'span', 'Score', 'nxs-label');
         appendElement(nxsBlock, 'div', Math.round(score), 'nxs-num');
         appendElement(nxsBlock, 'span', '/ 100', 'nxs-unit');
-    }
-
-    if (!m.citation_status) {
-        const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
-        pw.forEach(width => {
-            const bar = appendElement(pillars, 'div', null, 'pillar-bar');
-            const fill = appendElement(bar, 'div', null, 'pillar-fill');
-            fill.style.width = `${width}%`;
-        });
     }
 
     const bottom = appendElement(inner, 'div', null, 'mkt-bottom');
@@ -346,7 +311,6 @@ function renderLockedRows(mode = 'state') {
             vol: '$4.2M',
             cat: 'POLITICS',
             title: 'Will the Fed cut rates before Q3 2026?',
-            pillars: [72, 85, 61, 78],
         },
         {
             state: 'Calibrating',
@@ -354,7 +318,6 @@ function renderLockedRows(mode = 'state') {
             vol: '$1.8M',
             cat: 'CRYPTO',
             title: 'BTC above $120K before end of 2026?',
-            pillars: [64, 58, 52, 66],
         },
         {
             state: 'Fragile',
@@ -362,7 +325,6 @@ function renderLockedRows(mode = 'state') {
             vol: '$390K',
             cat: 'GEOPOLITICS',
             title: 'Ceasefire agreement reached by June 2026?',
-            pillars: [34, 27, 49, 22],
         },
     ];
 
@@ -391,15 +353,6 @@ function renderLockedRows(mode = 'state') {
             appendElement(nxs, 'span', 'Score', 'nxs-label');
             appendElement(nxs, 'div', ghost.score, 'nxs-num');
             appendElement(nxs, 'span', '/ 100', 'nxs-unit');
-        }
-
-        if (!ghost.citation_status) {
-            const pillars = appendElement(inner, 'div', null, 'mkt-pillars');
-            ghost.pillars.forEach(width => {
-                const bar = appendElement(pillars, 'div', null, 'pillar-bar');
-                const fill = appendElement(bar, 'div', null, 'pillar-fill');
-                fill.style.width = `${width}%`;
-            });
         }
 
         const bottom = appendElement(inner, 'div', null, 'mkt-bottom');

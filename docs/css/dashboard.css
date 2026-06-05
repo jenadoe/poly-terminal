@@ -628,28 +628,6 @@
 .r-calibrating .nxs-unit { color: var(--cyan-dim); }
 .r-fragile     .nxs-unit { color: var(--text-faint); }
 
-/* 4-pillar mini bars */
-.mkt-pillars {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 8px;
-}
-.pillar-bar {
-    flex: 1;
-    height: 3px;
-    background: var(--border-hi);
-    position: relative;
-    overflow: hidden;
-}
-.pillar-fill {
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    transition: width 0.6s ease;
-}
-.r-converged   .pillar-fill { background: var(--amber); }
-.r-calibrating .pillar-fill { background: var(--cyan); }
-.r-fragile     .pillar-fill { background: var(--slate); }
-
 /* Bottom row */
 .mkt-bottom {
     display: flex;

@@ -2,7 +2,7 @@
 
 const TABS = [
     { id: 'what-is-strata', label: 'What Is Strata', num: '01' },
-    { id: 'reading-states', label: 'Reading States', num: '02' },
+    { id: 'reading-states', label: 'Reference Status', num: '02' },
     { id: 'snapshot-panel', label: 'Snapshot Panel', num: '03' },
     { id: 'interpretation', label: 'Interpretation', num: '04' },
     { id: 'faq', label: 'FAQ', num: '05' },

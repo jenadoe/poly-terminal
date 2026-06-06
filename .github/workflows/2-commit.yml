@@ -123,17 +123,18 @@ jobs:
             echo "Proof archive script or active_events.json missing. Skipping proof archive build."
           fi
           if [ -f scripts/publish_cl_r2_public_reference_snapshot_v0.py ] && [ -f scripts/verify_public_reference_snapshot_parity_v0.py ]; then
+            STRATA_PUBLIC_MARKETS_API="https://poly-terminal.bokjujuju.workers.dev/api/markets"
             echo "Publishing CL/R2 public reference snapshot..."
             python scripts/publish_cl_r2_public_reference_snapshot_v0.py \
               --limit 50 \
-              --public-markets-url "https://www.strata-labs.xyz/api/markets?pipeline_publish=${{ github.run_id }}" \
+              --public-markets-url "${STRATA_PUBLIC_MARKETS_API}?pipeline_publish=${{ github.run_id }}" \
               --public-markets-beta-code "$STRATA_BETA_CODE" \
               --out-json "../temp_data/cl_r2_public_reference_snapshot_v0.json" \
               --out-md "../temp_data/cl_r2_public_reference_snapshot_v0.md" \
               --publish
             echo "Verifying public reference snapshot parity..."
             python scripts/verify_public_reference_snapshot_parity_v0.py \
-              --public-markets-url "https://www.strata-labs.xyz/api/markets?pipeline_verify=${{ github.run_id }}" \
+              --public-markets-url "${STRATA_PUBLIC_MARKETS_API}?pipeline_verify=${{ github.run_id }}" \
               --public-markets-beta-code "$STRATA_BETA_CODE" \
               --min-rows 40 \
               --max-age-hours 2 \
@@ -188,10 +189,10 @@ jobs:
             exit 1
           fi
           node scripts/audit-public-reference-surface.mjs \
-            --url=https://www.strata-labs.xyz/api/markets \
+            --url=https://poly-terminal.bokjujuju.workers.dev/api/markets \
             --beta-code "$STRATA_BETA_CODE"
           node scripts/audit-reference-routing-expectations.mjs \
-            --url=https://www.strata-labs.xyz/api/markets?pipeline_expectations=${{ github.run_id }} \
+            --url=https://poly-terminal.bokjujuju.workers.dev/api/markets?pipeline_expectations=${{ github.run_id }} \
             --beta-code "$STRATA_BETA_CODE"
 
       - name: Push Public Dashboard Only
